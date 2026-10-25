@@ -27,7 +27,7 @@ EMAIL = "Leongjezvier@gmail.com"
 GOOGLE_PROFILE = "https://share.google/pcY4Ywtr5iTrQpRfk"
 # Add Facebook / Instagram / Carousell / directory profile URLs here as you create them.
 SAME_AS = [GOOGLE_PROFILE]
-LANGUAGES = ["English", "Chinese"]   # OWNER TO CONFIRM (add Malay/Hokkien etc. if spoken)
+LANGUAGES = ["English"]   # OWNER TO CONFIRM: add "Chinese", "Malay" etc. if spoken
 
 DESCRIPTION = ("24/7 emergency locksmith in Singapore since 1998, led by Uncle Thomas — a US-trained safesmith. "
                "Door lockouts, digital lock opening and installation, safe opening, car lockouts, lock and "
