@@ -10,7 +10,7 @@ A fast, mobile-first, SEO-optimised website for **Uncle Thomas Locksmith** (Sing
 | `script.js` | Minimal JS (footer year) |
 | `robots.txt` | Tells search engines to index the site |
 | `sitemap.xml` | Helps Google discover pages |
-| `assets/logo.png` | **You must add this** — your logo (see `assets/README.txt`) |
+| `assets/logo.jpg` | **You must add this** — your logo (see `assets/README.txt`) |
 
 ## 🔑 Business details baked in
 - **Phone / WhatsApp:** 9224 9224
@@ -29,7 +29,7 @@ A fast, mobile-first, SEO-optimised website for **Uncle Thomas Locksmith** (Sing
 - Mobile-first, fast static site (great Core Web Vitals)
 
 ## ✅ Before going live — update these
-1. Add your real `assets/logo.png`.
+1. Add your real `assets/logo.jpg`.
 2. Replace the 3 placeholder reviews with real Google reviews.
 3. If you register a different domain, find-and-replace `unclethomaslocksmith.sg`
    in `index.html`, `sitemap.xml`, and `robots.txt`.
