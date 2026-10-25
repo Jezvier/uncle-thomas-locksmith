@@ -445,7 +445,7 @@ def build_home(x):
         hero_art = hero_photo
     town_links = "".join(f'<a href="~/areas/{t["slug"]}/">{t["name"]}</a>' for t in x["areas"].TOWNS)
     guide_cards = "".join(f'<a class="card" href="~/guides/{g["slug"]}/"><h3>{g["h1"]}</h3><p>{g["card"]}</p><span class="more">Read the guide →</span></a>'
-                          for g in x["guides"].GUIDES)
+                          for g in x["guides"].GUIDES[:4])
     body = f"""
 <section class="hero">
   <div class="container hero-inner">
@@ -545,6 +545,7 @@ def build_home(x):
     <h2 class="section-title">Helpful Guides</h2>
     <p class="section-lead">Quick answers for when something goes wrong with a lock.</p>
     <div class="grid g4">{guide_cards}</div>
+    <p style="text-align:center;margin-top:24px"><a href="~/guides/" class="btn btn-outline">See all guides</a></p>
   </div>
 </section>
 
