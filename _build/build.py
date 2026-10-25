@@ -71,7 +71,7 @@ T = {
             bottom="Singapore · 24/7 Emergency Locksmith", wa_link=C.WA_LINK, other_lang="中文"),
  "zh": dict(topbar_long=f"24小时紧急锁匠 · 全岛服务 · 自{C.FOUNDED}年",
             topbar_short=f"24小时 · 全岛 · 自{C.FOUNDED}年",
-            call=f"致电 {C.PHONE}", wa="WhatsApp 联系", call_now="立即致电", wa_short="WhatsApp",
+            call=f"致电 {C.PHONE}", wa="WhatsApp", call_now="立即致电", wa_short="WhatsApp",
             skip="跳到内容", menu_open="打开菜单", home="首页", services="服务（英文）", more="更多",
             prices="价格", areas="服务地区", guides="指南", about="关于 Uncle Thomas",
             hotline="24小时热线", email="电邮", hours="营业时间", hours_v="全天24小时，全年无休（包括公共假期）",
@@ -287,7 +287,7 @@ def header_html(path, lang="en", alt_path=None):
     for label, p in NAV[lang]:
         cur = ' aria-current="page"' if path == p or (path.startswith(p) and p not in ("", "zh/")) else ""
         nav.append(f'<a href="~/{p}"{cur}>{label}</a>')
-    svc = "".join(f'<li><a href="~/{s["path"]}">{s["short"]}</a></li>' for s in content.SERVICES)
+    svc = "".join(f'<li><a href="~/{s["path"]}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
     switch = f' · <a class="lang-switch" href="~/{alt_path}" hreflang="{"zh-SG" if lang == "en" else "en-SG"}">{t["other_lang"]}</a>' if alt_path is not None else ""
     home = "~/zh/" if lang == "zh" else "~/"
     zh_items = ('<li><a href="~/zh/">中文首页</a></li><li><a href="~/zh/emergency-locksmith/">紧急开锁</a></li>'
@@ -323,7 +323,7 @@ def header_html(path, lang="en", alt_path=None):
 
 def footer_html(lang="en"):
     t = T[lang]
-    svc = "".join(f'<li><a href="~/{s["path"]}">{s["short"]}</a></li>' for s in content.SERVICES)
+    svc = "".join(f'<li><a href="~/{s["path"]}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
     towns = "".join(f'<li><a href="~/areas/{a["slug"]}/">Locksmith {a["name"]}</a></li>' for a in areas.TOWNS[:8])
     gd = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["short"]}</a></li>' for g in guides.GUIDES[:6])
     email = (f'<li><span class="lbl">{t["email"]}:</span> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></li>'
