@@ -138,6 +138,21 @@ a { color: inherit; text-decoration: none; }
 .reviews-cta { text-align: center; margin-top: 30px; }
 .reviews-note { text-align: center; color: var(--grey); font-size: .8rem; margin-top: 14px; }
 
+/* ===== PRICING ===== */
+.price-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius); box-shadow: var(--shadow); }
+.price-table { width: 100%; border-collapse: collapse; background: var(--white); min-width: 320px; }
+.price-table thead th { background: var(--navy); color: var(--white); text-align: left; padding: 14px 18px; font-size: .95rem; }
+.price-table thead th:last-child { text-align: right; }
+.price-table tbody td { padding: 14px 18px; border-top: 1px solid var(--grey-light); color: var(--navy); font-size: .95rem; }
+.price-table tbody td:last-child { text-align: right; font-weight: 700; color: var(--yellow); white-space: nowrap; }
+.price-table tbody tr:nth-child(even) { background: var(--yellow-soft); }
+.price-footnote { text-align: center; color: var(--grey); font-size: .9rem; margin-top: 18px; }
+.price-footnote a { color: var(--navy); font-weight: 700; text-decoration: underline; }
+
+/* ===== SHIFU TEASER ===== */
+.shifu-inner { text-align: center; }
+.shifu-cta { margin-top: 10px; }
+
 /* ===== FAQ ===== */
 .faq { background: var(--white); border: 1px solid var(--grey-light); border-radius: var(--radius); padding: 0; margin-bottom: 12px; box-shadow: var(--shadow); overflow: hidden; }
 .faq summary { padding: 18px 22px; font-weight: 700; color: var(--navy); cursor: pointer; list-style: none; position: relative; }
@@ -145,6 +160,16 @@ a { color: inherit; text-decoration: none; }
 .faq summary::after { content: '+'; position: absolute; right: 22px; font-size: 1.4rem; color: var(--yellow); transition: transform .2s; }
 .faq[open] summary::after { transform: rotate(45deg); }
 .faq p { padding: 0 22px 18px; color: var(--grey); }
+
+/* ===== ABOUT PAGE ===== */
+.about-hero { background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-light) 100%); padding-bottom: 40px; }
+.about-hero h1 { font-size: clamp(1.7rem, 5.5vw, 2.6rem); color: var(--navy); margin-top: 10px; }
+.breadcrumb { font-size: .85rem; color: var(--navy-light); font-weight: 600; }
+.breadcrumb a { color: var(--navy); text-decoration: underline; }
+.breadcrumb span { margin: 0 4px; }
+.about-body h2 { font-size: clamp(1.25rem, 4vw, 1.6rem); color: var(--navy); margin: 28px 0 10px; }
+.about-body p { color: var(--grey); margin-bottom: 8px; }
+.about-body .hero-cta { margin-top: 32px; flex-wrap: wrap; }
 
 /* ===== CONTACT ===== */
 .contact { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); }

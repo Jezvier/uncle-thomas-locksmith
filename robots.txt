@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://unclethomaslocksmith.sg/sitemap.xml
+Sitemap: https://thomaslocksmith.sg/sitemap.xml
