@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://unclethomaslocksmith.sg/sitemap.xml
