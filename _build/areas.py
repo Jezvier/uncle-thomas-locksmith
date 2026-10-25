@@ -148,7 +148,8 @@ def build(x):
         jobs = "".join(f"<li>{j}</li>" for j in t["jobs"])
         near = [TOWN_BY_SLUG[s] for s in t["nearby"] if s in TOWN_BY_SLUG]
         near_html = ", ".join(f'<a href="~/areas/{m["slug"]}/">{m["name"]}</a>' for m in near)
-        svc_links = "".join(f'<li><a href="~/{s["path"]}">{s["short"]} in {n}</a> — from {C.price(s["path"])}</li>'
+        svc_links = "".join(f'<li><a href="~/{s["path"]}">{s["short"]} in {n}</a> — '
+                            + (f'from {C.price(s["path"])}' if C.price(s["path"]) else "quote on request") + '</li>'
                             for s in content.SERVICES)
         faqs = [
             (f"Do you have a locksmith in {n} right now?", f"Yes. Uncle Thomas Locksmith works 24/7 across {n} and the rest of Singapore. Call or WhatsApp {{PHONE}} and we set off as soon as you call."),

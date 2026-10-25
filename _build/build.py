@@ -5,18 +5,21 @@ Uncle Thomas Locksmith — static site generator.
 HOW TO USE
   python3 _build/build.py
 
-It regenerates every .html page, styles.css, sitemap.xml, robots.txt,
-llms.txt and site.webmanifest in the repo root from:
-  _build/config.py   business facts, prices, domain (edit here first)
+It regenerates every .html page, sitemap.xml, robots.txt, llms.txt,
+site.webmanifest, script.js and _headers in the repo root from:
+  _build/config.py   business facts, prices, domain, reviews, photos (edit here first)
   _build/content.py  page text for home, services, prices, about
   _build/areas.py    town pages
+  _build/brands.py   digital lock brand pages
   _build/guides.py   guide articles
-  _build/styles.css  the stylesheet
+  _build/zh.py       Chinese pages
+  _build/styles.css  the stylesheet (inlined into every page for speed)
 
 Do NOT hand-edit the generated .html files — edits are overwritten on the
 next build. (Folders starting with "_" are not published by GitHub Pages.)
+Requires Python 3 and Pillow (pip install pillow) only if you add photos.
 """
-import json, os, re, shutil, sys, html
+import json, os, re, sys, html
 from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -24,10 +27,11 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
 import config as C
-import content, areas, guides
+import content, areas, guides, brands, zh
 
 TODAY = date.today().isoformat()
 PAGES = []          # (path, priority) for sitemap
+CSS = ""            # minified stylesheet, inlined into every page
 
 
 def esc(s):
@@ -52,9 +56,37 @@ def fill(s, prefix):
     return s
 
 
+# ---------- UI strings (English / Chinese) ----------
+T = {
+ "en": dict(topbar_long=f"24/7 Emergency Locksmith · Islandwide Singapore · Since {C.FOUNDED}",
+            topbar_short=f"24/7 · Islandwide · Since {C.FOUNDED}",
+            call=f"Call {C.PHONE}", wa="WhatsApp Us", call_now="Call Now", wa_short="WhatsApp",
+            skip="Skip to content", menu_open="Open menu", home="Home", services="Services", more="More",
+            prices="Prices", areas="Areas we serve", guides="Guides", about="About Uncle Thomas",
+            hotline="24/7 hotline", email="Email", hours="Hours", hours_v="24 hours, 7 days, incl. public holidays",
+            coverage="Coverage", coverage_v="Islandwide Singapore", google="★ Find us on Google",
+            f_services="Services", f_areas="Areas", f_guides="Guides", all_areas="All areas →",
+            cta_title="Need a Locksmith Right Now?",
+            cta_lead="Call or WhatsApp Uncle Thomas — 24/7, islandwide. We set off as soon as you call.",
+            bottom="Singapore · 24/7 Emergency Locksmith", wa_link=C.WA_LINK, other_lang="中文"),
+ "zh": dict(topbar_long=f"24小时紧急锁匠 · 全岛服务 · 自{C.FOUNDED}年",
+            topbar_short=f"24小时 · 全岛 · 自{C.FOUNDED}年",
+            call=f"致电 {C.PHONE}", wa="WhatsApp 联系", call_now="立即致电", wa_short="WhatsApp",
+            skip="跳到内容", menu_open="打开菜单", home="首页", services="服务（英文）", more="更多",
+            prices="价格", areas="服务地区", guides="指南", about="关于 Uncle Thomas",
+            hotline="24小时热线", email="电邮", hours="营业时间", hours_v="全天24小时，全年无休（包括公共假期）",
+            coverage="服务范围", coverage_v="新加坡全岛", google="★ 在 Google 上找到我们",
+            f_services="服务", f_areas="地区", f_guides="指南", all_areas="所有地区 →",
+            cta_title="现在需要锁匠吗？",
+            cta_lead="致电或 WhatsApp Uncle Thomas — 24小时，全岛服务。接到电话立即出发。",
+            bottom="新加坡 · 24小时紧急锁匠", wa_link=C.WA_LINK_ZH, other_lang="English"),
+}
+
+
 # ---------- shared schema pieces ----------
 BUSINESS_ID = C.SITE + "/#business"
 PERSON_ID = C.SITE + "/about/#uncle-thomas"
+ALL_DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 
 def business_node(full=False):
@@ -66,19 +98,18 @@ def business_node(full=False):
         "telephone": C.PHONE_E164,
         "image": C.SITE + "/assets/img/logo-640.jpg",
         "logo": C.SITE + "/assets/img/logo-640.jpg",
-        "priceRange": "S$" + str(min(p[2] for p in C.PRICES if isinstance(p[2], int))) + "+",
+        "priceRange": C.PRICE_RANGE,
         "address": {"@type": "PostalAddress", "addressLocality": "Singapore", "addressCountry": "SG"},
         "areaServed": {"@type": "Country", "name": "Singapore"},
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "00:00", "closes": "23:59"},
+        "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ALL_DAYS,
+                                      "opens": "00:00", "closes": "23:59"},
     }
+    if C.UEN:
+        node["taxID"] = C.UEN
     if full:
         node.update({
             "description": C.DESCRIPTION,
             "slogan": C.SLOGAN,
-            "email": C.EMAIL,
             "foundingDate": str(C.FOUNDED),
             "founder": {"@id": PERSON_ID},
             "knowsAbout": ["Emergency lockout", "Digital lock opening", "Digital lock installation",
@@ -89,11 +120,15 @@ def business_node(full=False):
             "hasOfferCatalog": offer_catalog(),
             "contactPoint": {"@type": "ContactPoint", "telephone": C.PHONE_E164, "contactType": "customer service",
                              "areaServed": "SG", "availableLanguage": C.LANGUAGES,
-                             "hoursAvailable": {"@type": "OpeningHoursSpecification",
-                                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                             "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ALL_DAYS,
                                                 "opens": "00:00", "closes": "23:59"}},
             "sameAs": C.SAME_AS,
         })
+        if C.EMAIL:
+            node["email"] = C.EMAIL
+        imgs = [photo_schema(k) for k in C.PHOTOS if photo_schema(k)]
+        if imgs:
+            node["photo"] = imgs
     return node
 
 
@@ -110,15 +145,16 @@ def offer_catalog():
 
 
 def person_node():
-    return {
+    node = {
         "@type": "Person", "@id": PERSON_ID, "name": "Uncle Thomas",
         "jobTitle": "Master Locksmith & Safesmith",
         "description": "Singapore locksmith since 1998. Trained in safesmithing in the United States; has opened safes on ships and in Thailand, Malaysia, China and Hong Kong.",
         "knowsAbout": ["Locksmithing", "Safesmithing", "Safe opening", "Digital locks"],
         "worksFor": {"@id": BUSINESS_ID},
         "url": C.SITE + "/about/",
-        "image": C.SITE + "/assets/img/logo-640.jpg",
+        "image": (photo_schema("about_portrait") or {}).get("contentUrl", C.SITE + "/assets/img/logo-640.jpg"),
     }
+    return node
 
 
 def breadcrumb_node(crumbs):
@@ -128,7 +164,7 @@ def breadcrumb_node(crumbs):
 
 def faq_node(faqs):
     return {"@type": "FAQPage", "mainEntity": [
-        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}} for q, a in faqs]}
+        {"@type": "Question", "name": strip_tags(q), "acceptedAnswer": {"@type": "Answer", "text": strip_tags(a)}} for q, a in faqs]}
 
 
 def strip_tags(s):
@@ -138,30 +174,89 @@ def strip_tags(s):
     return html.unescape(re.sub(r"\s+", " ", s)).strip()
 
 
+# ---------- photos ----------
+PHOTO_DIR = os.path.join(ROOT, "assets", "photos")
+PHOTO_OUT = os.path.join(ROOT, "assets", "img", "photos")
+_photo_cache = {}
+
+
+def _prepare_photo(key):
+    """Make 400/800px WebP + JPG versions of a configured photo. Returns dict or None."""
+    if key in _photo_cache:
+        return _photo_cache[key]
+    fname, alt, caption = C.PHOTOS.get(key, (None, "", ""))
+    info = None
+    if fname:
+        src = os.path.join(PHOTO_DIR, fname)
+        if not os.path.exists(src):
+            print(f"  ! Photo for '{key}' not found: assets/photos/{fname} (slot hidden)")
+        else:
+            try:
+                from PIL import Image, ImageOps
+            except ImportError:
+                sys.exit("Pillow is needed for photos: pip install pillow")
+            os.makedirs(PHOTO_OUT, exist_ok=True)
+            stem = re.sub(r"[^a-z0-9]+", "-", os.path.splitext(fname)[0].lower()).strip("-")
+            im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+            outs = {}
+            for w in (400, 800):
+                h = round(im.height * w / im.width)
+                r = im.resize((w, h), Image.LANCZOS)
+                r.save(os.path.join(PHOTO_OUT, f"{stem}-{w}.webp"), quality=78, method=6)
+                outs[w] = h
+            im.resize((800, outs[800]), Image.LANCZOS).save(os.path.join(PHOTO_OUT, f"{stem}-800.jpg"), quality=80, optimize=True, progressive=True)
+            info = dict(stem=stem, w=800, h=outs[800], alt=alt, caption=caption)
+    _photo_cache[key] = info
+    return info
+
+
+def photo(key, eager=False, cls="photo"):
+    """<figure> for a configured real photo, or a hidden FILL comment if none yet."""
+    p = _prepare_photo(key)
+    if not p:
+        alt = C.PHOTOS.get(key, (None, key, ""))[1]
+        return f'<!-- FILL: real photo for slot "{key}" ({alt}). Add it in _build/config.py → PHOTOS. -->'
+    load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    base = f'~/assets/img/photos/{p["stem"]}'
+    return (f'<figure class="{cls}"><picture><source type="image/webp" srcset="{base}-400.webp 400w, {base}-800.webp 800w" '
+            f'sizes="(min-width: 860px) 780px, 100vw"><img src="{base}-800.jpg" alt="{esc(p["alt"])}" width="{p["w"]}" '
+            f'height="{p["h"]}" {load}></picture><figcaption>{esc(p["caption"])}</figcaption></figure>')
+
+
+def photo_schema(key):
+    p = _prepare_photo(key)
+    if not p:
+        return None
+    return {"@type": "ImageObject", "contentUrl": f'{C.SITE}/assets/img/photos/{p["stem"]}-800.jpg',
+            "caption": p["caption"], "description": p["alt"], "width": p["w"], "height": p["h"]}
+
+
 # ---------- HTML building blocks ----------
 WA_ICON = "💬"
 PHONE_ICON = "📞"
 
 
-def cta_buttons(size="btn-lg", center=False, wa_text="WhatsApp Us"):
+def cta_buttons(size="btn-lg", center=False, wa_text=None, lang="en", pos="hero"):
+    t = T[lang]
+    wa_text = wa_text or t["wa"]
     return (f'<div class="cta-row{" center" if center else ""}">'
-            f'<a href="tel:{C.PHONE_E164}" class="btn btn-call {size}">{PHONE_ICON} Call {C.PHONE}</a>'
-            f'<a href="{C.WA_LINK}" class="btn btn-wa {size}" target="_blank" rel="noopener">{WA_ICON} {wa_text}</a></div>')
+            f'<a href="tel:{C.PHONE_E164}" class="btn btn-call {size}" data-pos="{pos}">{PHONE_ICON} {t["call"]}</a>'
+            f'<a href="{t["wa_link"]}" class="btn btn-wa {size}" target="_blank" rel="noopener" data-pos="{pos}">{WA_ICON} {wa_text}</a></div>')
 
 
 def faq_html(faqs, title="Frequently Asked Questions"):
     out = [f'<h2 class="section-title">{title}</h2><div style="margin-top:28px">']
     for q, a in faqs:
-        out.append(f'<details class="faq"><summary>{esc(q)}</summary><div class="faq-a"><p>{a}</p></div></details>')
+        out.append(f'<details class="faq"><summary>{q}</summary><div class="faq-a"><p>{a}</p></div></details>')
     out.append("</div>")
     return "".join(out)
 
 
-def cta_band(title="Need a Locksmith Right Now?", lead=None):
-    lead = lead or f"Call or WhatsApp Uncle Thomas — 24/7, islandwide. We set off as soon as you call."
+def cta_band(title=None, lead=None, lang="en"):
+    t = T[lang]
     return (f'<section class="section cta-band"><div class="container narrow">'
-            f'<h2 class="section-title">{title}</h2><p class="section-lead">{lead}</p>'
-            f'{cta_buttons(center=True, wa_text="WhatsApp " + C.PHONE)}</div></section>')
+            f'<h2 class="section-title">{title or t["cta_title"]}</h2><p class="section-lead">{lead or t["cta_lead"]}</p>'
+            f'{cta_buttons(center=True, wa_text=("WhatsApp " + C.PHONE) if lang == "en" else None, lang=lang, pos="cta_band")}</div></section>')
 
 
 def breadcrumb_html(crumbs):
@@ -174,99 +269,133 @@ def breadcrumb_html(crumbs):
     return f'<nav class="breadcrumb" aria-label="Breadcrumb"><ol>{"".join(items)}</ol></nav>'
 
 
-def page_hero(crumbs, h1, sub, badges=None):
+def page_hero(crumbs, h1, sub, badges=None, lang="en"):
     b = ""
     if badges:
         b = '<ul class="badges">' + "".join(f"<li>{x}</li>" for x in badges) + "</ul>"
     return (f'<section class="page-hero"><div class="container">{breadcrumb_html(crumbs)}'
-            f'<h1>{h1}</h1><p class="hero-sub">{sub}</p>{cta_buttons()}{b}</div></section>')
+            f'<h1>{h1}</h1><p class="hero-sub">{sub}</p>{cta_buttons(lang=lang)}{b}</div></section>')
 
 
-NAV = [("Services", "services/"), ("Prices", "prices/"), ("Areas", "areas/"),
-       ("Guides", "guides/"), ("About", "about/")]
+NAV = {"en": [("Services", "services/"), ("Prices", "prices/"), ("Areas", "areas/"), ("Guides", "guides/"), ("About", "about/")],
+       "zh": [("首页", "zh/"), ("紧急开锁", "zh/emergency-locksmith/"), ("价格", "prices/"), ("关于", "about/")]}
 
 
-def header_html(path):
+def header_html(path, lang="en", alt_path=None):
+    t = T[lang]
     nav = []
-    for label, p in NAV:
-        cur = ' aria-current="page"' if path == p or (path.startswith(p) and p != "") else ""
+    for label, p in NAV[lang]:
+        cur = ' aria-current="page"' if path == p or (path.startswith(p) and p not in ("", "zh/")) else ""
         nav.append(f'<a href="~/{p}"{cur}>{label}</a>')
     svc = "".join(f'<li><a href="~/{s["path"]}">{s["short"]}</a></li>' for s in content.SERVICES)
-    return f'''<a class="skip" href="#main">Skip to content</a>
-<div class="topbar"><span class="long">24/7 Emergency Locksmith · Islandwide Singapore · Since {C.FOUNDED}</span><span class="short">24/7 · Islandwide · Since {C.FOUNDED}</span></div>
+    switch = f' · <a class="lang-switch" href="~/{alt_path}" hreflang="{"zh-SG" if lang == "en" else "en-SG"}">{t["other_lang"]}</a>' if alt_path is not None else ""
+    home = "~/zh/" if lang == "zh" else "~/"
+    zh_items = ('<li><a href="~/zh/">中文首页</a></li><li><a href="~/zh/emergency-locksmith/">紧急开锁</a></li>'
+                if lang == "zh" else "")
+    return f'''<a class="skip" href="#main">{t["skip"]}</a>
+<div class="topbar"><span class="long">{t["topbar_long"]}</span><span class="short">{t["topbar_short"]}</span>{switch}</div>
 <header class="header">
   <div class="container header-inner">
-    <a href="~/" class="brand" aria-label="{C.NAME} — home">
+    <a href="{home}" class="brand" aria-label="{C.NAME} — {t["home"]}">
       <picture><source srcset="~/assets/img/logo-112.webp" type="image/webp"><img src="~/assets/img/logo-112.png" alt="{C.NAME} logo" width="52" height="52"></picture>
       <span class="brand-text"><strong>Uncle Thomas</strong><small>Locksmith · Since {C.FOUNDED}</small></span>
     </a>
     <nav class="nav" aria-label="Main">{"".join(nav)}</nav>
-    <a href="tel:{C.PHONE_E164}" class="btn btn-call header-call">{PHONE_ICON} {C.PHONE}</a>
-    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+    <a href="tel:{C.PHONE_E164}" class="btn btn-call header-call" data-pos="header">{PHONE_ICON} {C.PHONE}</a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="{t["menu_open"]}">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
   </div>
   <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
     <ul>
-      <li><a href="~/">Home</a></li>
-      <li class="sub">Services</li>{svc}
-      <li class="sub">More</li>
-      <li><a href="~/prices/">Prices</a></li>
-      <li><a href="~/areas/">Areas we serve</a></li>
-      <li><a href="~/guides/">Guides</a></li>
-      <li><a href="~/about/">About Uncle Thomas</a></li>
+      <li><a href="~/">{"English home" if lang == "zh" else t["home"]}</a></li>{zh_items}
+      <li class="sub">{t["services"]}</li>{svc}
+      <li class="sub">{t["more"]}</li>
+      <li><a href="~/prices/">{t["prices"]}</a></li>
+      <li><a href="~/areas/">{t["areas"]}</a></li>
+      <li><a href="~/guides/">{t["guides"]}</a></li>
+      <li><a href="~/about/">{t["about"]}</a></li>
+      {'<li><a href="~/zh/" hreflang="zh-SG">中文 (Chinese)</a></li>' if lang == "en" else ""}
     </ul>
   </nav>
 </header>'''
 
 
-def footer_html():
+def footer_html(lang="en"):
+    t = T[lang]
     svc = "".join(f'<li><a href="~/{s["path"]}">{s["short"]}</a></li>' for s in content.SERVICES)
-    towns = "".join(f'<li><a href="~/areas/{t["slug"]}/">Locksmith {t["name"]}</a></li>' for t in areas.TOWNS[:8])
-    gd = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["short"]}</a></li>' for g in guides.GUIDES)
+    towns = "".join(f'<li><a href="~/areas/{a["slug"]}/">Locksmith {a["name"]}</a></li>' for a in areas.TOWNS[:8])
+    gd = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["short"]}</a></li>' for g in guides.GUIDES[:6])
+    email = (f'<li><span class="lbl">{t["email"]}:</span> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></li>'
+             if C.EMAIL else "<!-- FILL: business email in _build/config.py -->")
+    uen = f' · UEN {C.UEN}' if C.UEN else "<!-- FILL: ACRA UEN in _build/config.py -->"
     return f'''<footer class="footer">
   <div class="container footer-grid">
     <div>
       <div class="footer-brand"><img src="~/assets/img/logo-112.webp" alt="" width="48" height="48" loading="lazy"><div><strong>{C.NAME}</strong><br>{C.SLOGAN}</div></div>
-      <p><strong style="color:#fff">24/7 hotline:</strong> <a href="tel:{C.PHONE_E164}">{C.PHONE}</a><br>
-      <strong style="color:#fff">WhatsApp:</strong> <a href="{C.WA_LINK}" target="_blank" rel="noopener">{C.PHONE}</a><br>
-      <strong style="color:#fff">Email:</strong> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a><br>
-      <strong style="color:#fff">Hours:</strong> 24 hours, 7 days, incl. public holidays<br>
-      <strong style="color:#fff">Coverage:</strong> Islandwide Singapore</p>
-      <p style="margin-top:10px"><a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">★ Find us on Google</a></p>
+      <ul class="contact-list">
+        <li><span class="lbl">{t["hotline"]}:</span> <a href="tel:{C.PHONE_E164}" data-pos="footer">{C.PHONE}</a></li>
+        <li><span class="lbl">WhatsApp:</span> <a href="{t["wa_link"]}" target="_blank" rel="noopener" data-pos="footer">{C.PHONE}</a></li>
+        {email}
+        <li><span class="lbl">{t["hours"]}:</span> {t["hours_v"]}</li>
+        <li><span class="lbl">{t["coverage"]}:</span> {t["coverage_v"]}</li>
+        <li><a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">{t["google"]}</a></li>
+      </ul>
     </div>
-    <div><h2>Services</h2><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></div>
-    <div><h2>Areas</h2><ul>{towns}<li><a href="~/areas/">All areas →</a></li></ul></div>
-    <div><h2>Guides</h2><ul>{gd}<li><a href="~/about/">About Uncle Thomas</a></li></ul></div>
+    <div><h2>{t["f_services"]}</h2><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></div>
+    <div><h2>{t["f_areas"]}</h2><ul>{towns}<li><a href="~/areas/">{t["all_areas"]}</a></li></ul></div>
+    <div><h2>{t["f_guides"]}</h2><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><div class="container">© <span data-year>{date.today().year}</span> {C.NAME} · Singapore · 24/7 Emergency Locksmith</div></div>
+  <div class="footer-bottom"><div class="container">© <span data-year>{date.today().year}</span> {C.NAME}{uen} · {t["bottom"]}</div></div>
 </footer>
 <div class="mobile-bar">
-  <a href="tel:{C.PHONE_E164}" class="mobile-btn mobile-call">{PHONE_ICON} Call Now</a>
-  <a href="{C.WA_LINK}" class="mobile-btn mobile-wa" target="_blank" rel="noopener">{WA_ICON} WhatsApp</a>
+  <a href="tel:{C.PHONE_E164}" class="mobile-btn mobile-call" data-pos="mobile_bar">{PHONE_ICON} {t["call_now"]}</a>
+  <a href="{t["wa_link"]}" class="mobile-btn mobile-wa" target="_blank" rel="noopener" data-pos="mobile_bar">{WA_ICON} {t["wa_short"]}</a>
 </div>'''
 
 
-def render(path, title, desc, body, schema_nodes, og_type="website", preload_img=None, priority="0.7"):
+def analytics_head():
+    if not C.GA4_ID:
+        return "<!-- FILL: Google Analytics 4 ID (GA4_ID in _build/config.py). Analytics is off until set. -->"
+    gid = C.GA4_ID
+    # gtag is defined immediately (events queue in dataLayer) but the library
+    # loads ~1.5s after the page has finished loading, so it never slows LCP.
+    return (f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}"
+            f"gtag('js',new Date());gtag('config','{gid}');"
+            f"addEventListener('load',function(){{setTimeout(function(){{var s=document.createElement('script');"
+            f"s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id={gid}';document.head.appendChild(s)}},1500)}});</script>")
+
+
+def render(path, title, desc, body, schema_nodes, og_type="website", preload_img=None, priority="0.7",
+           lang="en", alternates=None):
+    """alternates: {"en-SG": path, "zh-SG": path} for pages that have a translation."""
     assert len(title) <= 65, f"Title too long ({len(title)}): {title}"
     assert len(desc) <= 160, f"Description too long ({len(desc)}) on {path}"
     prefix = rel_prefix(path)
     url = abs_url(path)
     graph = {"@context": "https://schema.org", "@graph": schema_nodes}
     pre = f'\n<link rel="preload" as="image" href="~/{preload_img}" type="image/webp" fetchpriority="high">' if preload_img else ""
+    hreflang, alt_path = "", None
+    if alternates:
+        hreflang = "".join(f'\n<link rel="alternate" hreflang="{k}" href="{abs_url(v)}">' for k, v in alternates.items())
+        hreflang += f'\n<link rel="alternate" hreflang="x-default" href="{abs_url(alternates["en-SG"])}">'
+        alt_path = alternates["zh-SG"] if lang == "en" else alternates["en-SG"]
+    html_lang = "zh-SG" if lang == "zh" else "en-SG"
+    og_locale = "zh_SG" if lang == "zh" else "en_SG"
+    css = CSS.replace("url('assets/", "url('~/assets/")
     doc = f'''<!DOCTYPE html>
-<html lang="en-SG">
+<html lang="{html_lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{url}">
+<link rel="canonical" href="{url}">{hreflang}
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="theme-color" content="#d3a80c">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{C.NAME}">
-<meta property="og:locale" content="en_SG">
+<meta property="og:locale" content="{og_locale}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
@@ -285,15 +414,16 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 <link rel="manifest" href="~/site.webmanifest">
 <link rel="preload" href="~/assets/fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="~/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>{pre}
-<link rel="stylesheet" href="~/styles.css?v={C.ASSET_VERSION}">
+<style>{css}</style>
+{analytics_head()}
 <script type="application/ld+json">{json.dumps(graph, ensure_ascii=False, separators=(",", ":"))}</script>
 </head>
 <body>
-{header_html(path)}
+{header_html(path, lang, alt_path)}
 <main id="main">
 {body}
 </main>
-{footer_html()}
+{footer_html(lang)}
 <script src="~/script.js?v={C.ASSET_VERSION}" defer></script>
 </body>
 </html>
@@ -303,12 +433,12 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write(doc)
-    PAGES.append((path, priority))
+    PAGES.append((path, priority, alternates))
 
 
-def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="WebPage"):
+def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="WebPage", lang="en-SG"):
     nodes = [{"@type": page_type, "@id": abs_url(path) + "#webpage", "url": abs_url(path), "name": title,
-              "description": desc, "inLanguage": "en-SG", "isPartOf": {"@id": C.SITE + "/#website"},
+              "description": desc, "inLanguage": lang, "isPartOf": {"@id": C.SITE + "/#website"},
               "about": {"@id": BUSINESS_ID}, "breadcrumb": {"@id": abs_url(path) + "#breadcrumb"},
               "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/assets/img/og.jpg"}}]
     bc = breadcrumb_node(crumbs); bc["@id"] = abs_url(path) + "#breadcrumb"
@@ -317,64 +447,116 @@ def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="Web
     if faqs:
         nodes.append(faq_node(faqs))
     if extra:
-        nodes.extend(extra)
+        nodes.extend(e for e in extra if e)
     return nodes
 
 
-# ---------- build ----------
-def main():
-    ctx = dict(C=C, render=render, page_schema=page_schema, page_hero=page_hero, cta_buttons=cta_buttons,
-               cta_band=cta_band, faq_html=faq_html, business_node=business_node, person_node=person_node,
-               breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
-               areas=areas, guides=guides, content=content, abs_url=abs_url, BUSINESS_ID=BUSINESS_ID,
-               PERSON_ID=PERSON_ID)
-    content.build(ctx)
-    areas.build(ctx)
-    guides.build(ctx)
-
-    # stylesheet + script
-    css = open(os.path.join(HERE, "styles.css"), encoding="utf-8").read()
-    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)          # strip comments
+def minify_css(css):
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
     css = re.sub(r"\s+", " ", css)
     css = re.sub(r"\s*([{}:;,>])\s*", r"\1", css).replace(";}", "}")
-    with open(os.path.join(ROOT, "styles.css"), "w", encoding="utf-8") as f:
-        f.write("/* Generated from _build/styles.css - edit that file, then run python3 _build/build.py */\n" + css.strip() + "\n")
-    with open(os.path.join(ROOT, "script.js"), "w") as f:
-        f.write("""// Uncle Thomas Locksmith — tiny JS (mobile menu + footer year)
+    # restore spaces needed inside media queries ("and(" is invalid)
+    css = css.replace("and(", "and (")
+    return css.strip()
+
+
+SCRIPT_JS = """// Uncle Thomas Locksmith — tiny JS: mobile menu, footer year, call/WhatsApp click tracking
 (function () {
   var b = document.querySelector('.menu-btn'), m = document.getElementById('mobile-menu');
   if (b && m) b.addEventListener('click', function () {
     var open = m.classList.toggle('open');
     b.setAttribute('aria-expanded', open ? 'true' : 'false');
-    b.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   });
   var y = document.querySelector('[data-year]');
   if (y) y.textContent = new Date().getFullYear();
+  // GA4 events: call_click / whatsapp_click, labelled by page and button position
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || typeof window.gtag !== 'function') return;
+    var h = a.getAttribute('href'), ev = null;
+    if (h.indexOf('tel:') === 0) ev = 'call_click';
+    else if (h.indexOf('wa.me') !== -1) ev = 'whatsapp_click';
+    if (!ev) return;
+    window.gtag('event', ev, {
+      page_label: document.title,
+      page_path: location.pathname,
+      link_position: a.getAttribute('data-pos') || 'inline',
+      transport_type: 'beacon'
+    });
+  });
 })();
-""")
+"""
+
+HEADERS = """# Cache rules for Netlify / Cloudflare Pages (GitHub Pages ignores this file).
+# Assets never change in place: if you replace an image or font, give it a new file name.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/favicon.ico
+  Cache-Control: public, max-age=604800
+
+/script.js
+  Cache-Control: public, max-age=604800
+
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+"""
+
+
+# ---------- build ----------
+def main():
+    global CSS
+    CSS = minify_css(open(os.path.join(HERE, "styles.css"), encoding="utf-8").read())
+    ctx = dict(C=C, render=render, page_schema=page_schema, page_hero=page_hero, cta_buttons=cta_buttons,
+               cta_band=cta_band, faq_html=faq_html, business_node=business_node, person_node=person_node,
+               breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
+               areas=areas, guides=guides, content=content, brands=brands, abs_url=abs_url,
+               BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema,
+               breadcrumb_html=breadcrumb_html)
+    content.build(ctx)
+    brands.build(ctx)
+    areas.build(ctx)
+    guides.build(ctx)
+    zh.build(ctx)
+
+    old_css = os.path.join(ROOT, "styles.css")
+    if os.path.exists(old_css):
+        os.remove(old_css)          # CSS is now inlined into each page
+    with open(os.path.join(ROOT, "script.js"), "w") as f:
+        f.write(SCRIPT_JS)
+    with open(os.path.join(ROOT, "_headers"), "w") as f:
+        f.write(HEADERS)
 
     # 404 page (GitHub Pages serves /404.html)
     four = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     four = re.sub(r"<main id=\"main\">.*</main>", f'''<main id="main"><section class="page-hero"><div class="container narrow">
 <h1>Page not found</h1><p class="hero-sub">Sorry, that page doesn't exist. If you're locked out, don't worry — call or WhatsApp Uncle Thomas now, 24/7.</p>
-{cta_buttons()}<p style="margin-top:22px"><a href="./">← Back to the homepage</a></p></div></section></main>''', four, flags=re.S)
+{cta_buttons(pos="404")}<p style="margin-top:22px"><a href="./">← Back to the homepage</a></p></div></section></main>''', four, flags=re.S)
     four = re.sub(r"<title>.*?</title>", f"<title>Page Not Found | {C.NAME}</title>", four)
     four = four.replace('content="index, follow, max-image-preview:large"', 'content="noindex"')
-    four = re.sub(r'<link rel="canonical"[^>]*>\n', "", four)
-    # make relative links work from any URL depth: rewrite to site-root-relative using base path
+    four = re.sub(r'<link rel="canonical"[^>]*>', "", four)
+    four = re.sub(r'<link rel="alternate" hreflang[^>]*>', "", four)
+    four = re.sub(r'<script type="application/ld\+json">.*?</script>', "", four, flags=re.S)
     four = four.replace("<head>", "<head>\n<base href=\"" + C.BASE_PATH + "\">", 1)
     with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as f:
         f.write(four)
 
-    # sitemap
-    urls = "\n".join(f"  <url><loc>{abs_url(p)}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority></url>"
-                     for p, pr in PAGES)
+    # sitemap (with hreflang alternates)
+    entries = []
+    for p, pr, alts in PAGES:
+        x = ""
+        if alts:
+            x = "".join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{abs_url(v)}"/>' for k, v in alts.items())
+            x += f'<xhtml:link rel="alternate" hreflang="x-default" href="{abs_url(alts["en-SG"])}"/>'
+        entries.append(f"  <url><loc>{abs_url(p)}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority>{x}</url>")
     with open(os.path.join(ROOT, "sitemap.xml"), "w") as f:
-        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n')
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(entries) + "\n</urlset>\n")
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {C.SITE}/sitemap.xml\n")
 
-    # manifest
     with open(os.path.join(ROOT, "site.webmanifest"), "w") as f:
         json.dump({"name": C.NAME, "short_name": "Uncle Thomas", "start_url": "./", "display": "standalone",
                    "background_color": "#ffffff", "theme_color": "#d3a80c",
@@ -387,12 +569,21 @@ def main():
              f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas (US-trained safesmith), with a small team.",
              "- Verifies proof of residence or ownership before opening any door, car or safe.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
-             "- Does NOT offer key duplication or lock repair.", "", "## Prices (from)"]
+             "- Does NOT offer key duplication or lock repair."]
+    if C.UEN:
+        lines.append(f"- UEN: {C.UEN}")
+    if C.EMAIL:
+        lines.append(f"- Email: {C.EMAIL}")
+    lines += ["", "## Prices (from)"]
     for label, p, price, note in C.PRICES:
         lines.append(f"- {label}: {'S$' + str(price) if isinstance(price, int) else price}")
-    lines += ["", "## Pages"]
-    for p, _ in PAGES:
-        lines.append(f"- {abs_url(p)}")
+    groups = [("Main pages", lambda p: p.count("/") <= 1 and not p.startswith(("areas", "guides", "zh"))),
+              ("Digital lock brands", lambda p: p.startswith("digital-lock-opening/") and p.count("/") == 2),
+              ("Areas", lambda p: p.startswith("areas")),
+              ("Guides", lambda p: p.startswith("guides")),
+              ("Chinese (中文)", lambda p: p.startswith("zh"))]
+    for name, test in groups:
+        lines += ["", f"## {name}"] + [f"- {abs_url(p)}" for p, _, _ in PAGES if test(p)]
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
 

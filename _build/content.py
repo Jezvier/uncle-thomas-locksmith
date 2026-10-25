@@ -22,6 +22,7 @@ dict(
  path="emergency-locksmith/", short="Emergency lockout", icon="🚪",
  card="Locked out of your HDB, condo, house or office? We get you back in — damage-free wherever possible.",
  title="Emergency Locksmith Singapore 24/7 | Lockouts from S$80",
+ title_exp="Emergency Locksmith Singapore 24/7 | Trusted Since 1998",
  desc="Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. HDB, condo, landed & office lockouts islandwide, from S$80. Call 9224 9224.",
  h1="24/7 Emergency Locksmith in Singapore",
  sub="Locked out of your home or office? Call Uncle Thomas — day or night, weekends and public holidays. We set off as soon as you call and open your door damage-free wherever possible.",
@@ -70,6 +71,7 @@ dict(
  path="digital-lock-opening/", short="Digital lock opening", icon="🔐",
  card="Flat battery, forgotten PIN or faulty keypad? We open all digital lock brands, 24/7.",
  title="Digital Lock Opening Singapore 24/7 | All Brands from S$150",
+ title_exp="Digital Lock Opening Singapore 24/7 | All Brands, Since 1998",
  desc="Locked out by your digital lock? Flat battery, forgotten PIN or faulty keypad — Uncle Thomas opens all brands, 24/7 islandwide. From S$150. Call 9224 9224.",
  h1="Digital Lock Won't Open? 24/7 Digital Lock Opening",
  sub="Flat battery, forgotten PIN, dead keypad or a lock that just won't respond — Uncle Thomas has developed his own damage-free techniques for opening digital locks of every brand.",
@@ -89,6 +91,7 @@ dict(
 <h2>Every brand, including</h2>
 <ul class="tags">""" + "".join(f"<li>{b}</li>" for b in C.DIGITAL_LOCK_BRANDS) + """<li>and more</li></ul>
 <p>Main door locks, gate locks, rim locks and mortise digital locks — on HDB flats, condos, landed homes and offices.</p>
+{BRAND_LINKS}
 
 <h2>Uncle Thomas's own digital lock techniques</h2>
 <p>As Singapore homes moved from keys to keypads, Uncle Thomas kept learning. Over the years he has worked out his own damage-free ways to open faulty and locked digital locks — so in most cases you get back in <em>without</em> having to buy a new lock. Where a lock is truly beyond saving, we tell you honestly and can <a href="~/digital-lock-installation/">install a new one</a> on the spot.</p>
@@ -113,6 +116,7 @@ dict(
  path="digital-lock-installation/", short="Digital lock installation", icon="📲",
  card="Neat, correct installation for HDB main doors, gates, condos and offices — with a no-expiry warranty.",
  title="Digital Lock Installation Singapore | HDB, Condo & Office",
+ title_exp="Digital Lock Installation Singapore | No-Expiry Warranty",
  desc="Professional digital lock installation for HDB doors & gates, condos and offices. All brands, labour from S$120, warranty with no expiry. Call 9224 9224.",
  h1="Digital Lock Installation in Singapore",
  sub="Thinking of going keyless? Uncle Thomas installs digital locks of every brand on HDB main doors and gates, condo doors and offices — fitted properly, set up with you, and covered by a warranty that never expires.",
@@ -157,6 +161,7 @@ dict(
  path="safe-opening/", short="Safe opening", icon="🗄️",
  card="Forgotten combination or faulty safe? Opened by a US-trained safesmith who has worked on ships and across Asia.",
  title="Safe Opening Singapore | US-Trained Safesmith | Uncle Thomas",
+ title_exp="Safe Opening Singapore | US-Trained Safesmith Since 1998",
  desc="Forgot your safe combination or lost the key? Uncle Thomas is a US-trained safesmith who has opened safes on ships and across Asia. Call 9224 9224.",
  h1="Safe Opening in Singapore by a US-Trained Safesmith",
  sub="Forgotten combination, lost key, flat battery or a jammed safe — Uncle Thomas trained in safesmithing in the United States and has opened safes for multinational companies, on ships and across Asia.",
@@ -202,6 +207,7 @@ dict(
  path="car-locksmith/", short="Car lockout", icon="🚗",
  card="Keys locked in the car? Non-destructive car unlocking for all makes and models, 24/7.",
  title="Car Locksmith Singapore 24/7 | Car Lockout from S$100",
+ title_exp="Car Locksmith Singapore 24/7 | Non-Destructive · Since 1998",
  desc="Keys locked in your car? Uncle Thomas unlocks all makes and models without damage, 24/7 islandwide. Car lockout from S$100. Call or WhatsApp 9224 9224.",
  h1="Car Locksmith Singapore — Keys Locked in the Car?",
  sub="Keys locked inside, or the remote stopped working? Uncle Thomas opens cars of all makes and models with non-destructive tools — no broken windows, no scratched doors.",
@@ -236,6 +242,7 @@ dict(
  path="lock-replacement/", short="Lock replacement", icon="🔧",
  card="Main door, gate, room and toilet door locks replaced with quality hardware — warranty with no expiry.",
  title="Door & Gate Lock Replacement Singapore | HDB from S$100",
+ title_exp="Door & Gate Lock Replacement Singapore | No-Expiry Warranty",
  desc="Main door, HDB gate, room and toilet door lock replacement islandwide. Quality hardware, no-expiry warranty, from S$100. Uncle Thomas Locksmith, 9224 9224.",
  h1="Door & Gate Lock Replacement in Singapore",
  sub="Lost your keys, moved into a new home, or have a lock that's worn out? Uncle Thomas replaces main door, gate and room door locks with quality hardware — and every replacement has a warranty that never expires.",
@@ -280,6 +287,7 @@ dict(
  path="letterbox-lock-replacement/", short="Letterbox lock", icon="📮",
  card="Lost your letterbox key? We open and replace HDB and condo letterbox locks.",
  title="Letterbox Lock Replacement Singapore | HDB from S$60",
+ title_exp="Letterbox Lock Replacement Singapore | Since 1998",
  desc="Lost your HDB or condo letterbox key? Uncle Thomas opens and replaces letterbox locks islandwide, from S$60, with a no-expiry warranty. Call 9224 9224.",
  h1="Letterbox Lock Replacement in Singapore",
  sub="Lost the key to your HDB or condo letterbox, or the lock is broken? We open it and fit a new lock with new keys — quickly, with proof of residence checked first.",
@@ -317,6 +325,7 @@ dict(
  path="commercial-locksmith/", short="Commercial locksmith", icon="🏢",
  card="Offices, shops, warehouses and vessels — door, glass door, shutter, cabinet and safe locks.",
  title="Commercial Locksmith Singapore | Office & Shop Locks 24/7",
+ title_exp="Commercial Locksmith Singapore 24/7 | Since 1998",
  desc="Commercial locksmith for offices, shops and warehouses in Singapore — lockouts, lock changes, digital access and safes, 24/7. Uncle Thomas, 9224 9224.",
  h1="Commercial Locksmith for Offices & Shops in Singapore",
  sub="Locked out of the office before opening time? Staff left with keys? Uncle Thomas and his team handle commercial lockouts, lock changes, digital access and safes — 24/7, with minimal disruption to your business.",
@@ -371,7 +380,7 @@ def service_cards(with_price=True):
     out = []
     for s in SERVICES:
         pr = C.price(s["path"])
-        tag = f'<span class="from">From {pr}</span>' if with_price and pr.startswith("S$") else ""
+        tag = f'<span class="from">From {pr}</span>' if with_price and pr else '<span class="from">Quote on request</span>'
         out.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{s["icon"]}</span>'
                    f'<h3>{s["short"]}</h3><p>{s["card"]}</p>{tag}</a>')
     return "".join(out)
@@ -401,8 +410,39 @@ HOME_FAQS = [
 ]
 
 
+def reviews_html(C_):
+    """Reviews section — only rendered when real reviews exist in config.REVIEWS."""
+    revs = [r for r in C_.REVIEWS if r.get("text")][:3]
+    if not revs:
+        return "<!-- FILL: real Google reviews in _build/config.py -> REVIEWS. Section hidden until then. -->"
+    cards = "".join(
+        f'<figure class="card review"><div class="stars" aria-hidden="true">★★★★★</div>'
+        f'<blockquote>“{r["text"]}”</blockquote><figcaption class="who">— {r["name"]}, {r["estate"]} · {r["month"]}</figcaption></figure>'
+        for r in revs)
+    return f"""<section class="section" id="reviews">
+  <div class="container review-cta">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <p class="section-lead">Real reviews from Singapore customers on Google.</p>
+    <div class="grid g3 reviews-grid">{cards}</div>
+    <a href="{C_.GOOGLE_PROFILE}" class="btn btn-outline" target="_blank" rel="noopener">⭐ Read all our Google reviews</a>
+  </div>
+</section>"""
+
+
+def pick_title(s_or_titles):
+    """Choose the title per config.TITLE_STYLE."""
+    keep, exp = s_or_titles
+    return exp if C.TITLE_STYLE.upper().startswith("LEAD") else keep
+
+
 def build_home(x):
     C_ = x["C"]
+    hero_photo = x["photo"]("hero", eager=True, cls="photo hero-photo")
+    if hero_photo.startswith("<!--"):
+        hero_art = (hero_photo + '<picture><source srcset="~/assets/img/logo-320.webp 320w, ~/assets/img/logo-640.webp 640w" sizes="340px" type="image/webp">'
+                    '<img src="~/assets/img/logo-640.jpg" alt="Uncle Thomas Locksmith mascot holding a key" width="340" height="340" fetchpriority="high"></picture>')
+    else:
+        hero_art = hero_photo
     town_links = "".join(f'<a href="~/areas/{t["slug"]}/">{t["name"]}</a>' for t in x["areas"].TOWNS)
     guide_cards = "".join(f'<a class="card" href="~/guides/{g["slug"]}/"><h3>{g["h1"]}</h3><p>{g["card"]}</p><span class="more">Read the guide →</span></a>'
                           for g in x["guides"].GUIDES)
@@ -416,10 +456,7 @@ def build_home(x):
       {x["cta_buttons"]()}
       <ul class="badges"><li>24/7 incl. public holidays</li><li>Islandwide</li><li>US-trained safesmith</li><li>ID verified</li><li>No-expiry warranty</li></ul>
     </div>
-    <div class="hero-art">
-      <picture><source srcset="~/assets/img/logo-320.webp 320w, ~/assets/img/logo-640.webp 640w" sizes="340px" type="image/webp">
-      <img src="~/assets/img/logo-640.jpg" alt="Uncle Thomas Locksmith mascot holding a key" width="340" height="340" fetchpriority="high"></picture>
-    </div>
+    <div class="hero-art">{hero_art}</div>
   </div>
 </section>
 
@@ -501,14 +538,7 @@ def build_home(x):
   </div>
 </section>
 
-<section class="section" id="reviews">
-  <div class="container review-cta">
-    <h2 class="section-title">What Our Customers Say</h2>
-    <p class="section-lead">Read real reviews from Singapore customers on Google — and if we've helped you, we'd be grateful for yours.</p>
-    <a href="{C_.GOOGLE_PROFILE}" class="btn btn-outline" target="_blank" rel="noopener">⭐ Read our Google reviews</a>
-    <!-- OWNER TO FILL: add 3 real Google reviews here (first name, estate, month/year) once available -->
-  </div>
-</section>
+{reviews_html(C_)}
 
 <section class="section section-alt" id="guides">
   <div class="container">
@@ -523,7 +553,8 @@ def build_home(x):
 </section>
 {x["cta_band"]()}
 """
-    title = "24/7 Locksmith Singapore from S$80 | Uncle Thomas Since 1998"
+    title = pick_title(("24/7 Locksmith Singapore from S$80 | Uncle Thomas Since 1998",
+                        "24/7 Locksmith Singapore | Since 1998 · US-Trained Safesmith"))
     desc = "Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. Doors, digital locks, safes & cars, islandwide. From S$80. Call 9224 9224."
     biz = x["business_node"](full=True)
     nodes = [
@@ -534,7 +565,8 @@ def build_home(x):
          "primaryImageOfPage": {"@type": "ImageObject", "url": C_.SITE + "/assets/img/og.jpg"}},
         biz, x["person_node"](), x["faq_node"](HOME_FAQS),
     ]
-    x["render"]("", title, desc, body, nodes, preload_img="assets/img/logo-320.webp", priority="1.0")
+    x["render"]("", title, desc, body, nodes, preload_img=None if hero_photo.startswith("<figure") else "assets/img/logo-320.webp",
+                priority="1.0", alternates={"en-SG": "", "zh-SG": "zh/"})
 
 
 # ======================================================================
@@ -559,7 +591,7 @@ def build_services(x):
     for s in SERVICES:
         crumbs = [("Home", ""), ("Services", "services/"), (s["short"], s["path"])]
         body = (x["page_hero"](crumbs, s["h1"], s["sub"], s["badges"]) +
-                f'<section class="section"><div class="container narrow prose">{s["body"]}</div></section>' +
+                f'<section class="section"><div class="container narrow prose">{s["body"]}{x["photo"](s["path"])}</div></section>' +
                 f'<section class="section section-alt"><div class="container narrow">{x["faq_html"](s["faqs"])}</div></section>' +
                 x["cta_band"]() + related_html(s["path"]))
         pr = C_.price(s["path"])
@@ -567,11 +599,16 @@ def build_services(x):
                "serviceType": s["short"], "description": s["desc"], "provider": {"@id": x["BUSINESS_ID"]},
                "areaServed": {"@type": "Country", "name": "Singapore"}, "url": C_.SITE + "/" + s["path"],
                "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}}
-        if pr.startswith("S$"):
+        if pr:
             svc["offers"] = {"@type": "Offer", "priceCurrency": "SGD",
                              "priceSpecification": {"@type": "PriceSpecification", "minPrice": int(pr[2:]), "priceCurrency": "SGD"}}
-        nodes = x["page_schema"](s["path"], s["title"], s["desc"], crumbs, faqs=s["faqs"], extra=[svc])
-        x["render"](s["path"], s["title"], s["desc"], body, nodes, priority="0.9")
+        img = x["photo_schema"](s["path"])
+        if img:
+            svc["image"] = img
+        title = pick_title((s["title"], s.get("title_exp", s["title"])))
+        nodes = x["page_schema"](s["path"], title, s["desc"], crumbs, faqs=s["faqs"], extra=[svc])
+        alts = {"en-SG": s["path"], "zh-SG": "zh/emergency-locksmith/"} if s["path"] == "emergency-locksmith/" else None
+        x["render"](s["path"], title, s["desc"], body, nodes, priority="0.9", alternates=alts)
 
 
 # ======================================================================
@@ -629,7 +666,7 @@ def build_about(x):
             f"From apprentice in {C_.FOUNDED} to US-trained safesmith — the story behind Uncle Thomas Locksmith.",
             [f"Since {C_.FOUNDED}", "US-trained safesmith", "Leads a small team"]) +
             f'''<section class="section"><div class="container narrow prose">
-<!-- OWNER TO FILL: real photo of Uncle Thomas (and team/van). Add as assets/img/uncle-thomas.webp and place here. -->
+{x["photo"]("about_portrait")}
 <h2>From apprentice to master locksmith</h2>
 <p>Uncle Thomas started in {C_.FOUNDED} as an apprentice under his uncle, learning the trade the traditional way — one lock, one door, one customer at a time. Years of hands-on work across Singapore's HDB flats, condos, shophouses and offices built the foundation he still relies on today.</p>
 <h2>Trained in safesmithing in the United States</h2>
@@ -649,8 +686,10 @@ def build_about(x):
 <li><strong>Specialists</strong> — we focus on opening doors, digital locks and safes, and on lock replacement and installation. We don't do lock repairs or key duplication.</li>
 </ul>
 <p>See all our <a href="~/services/">locksmith services</a>.</p>
+<div class="photo-grid">{x["photo"]("about_van")}{x["photo"]("about_tools")}</div>
 </div></section>''' + x["cta_band"]("Talk to Uncle Thomas", "Locked out, or planning a lock change? Call or WhatsApp — 24/7, islandwide."))
-    nodes = x["page_schema"]("about/", title, desc, crumbs, page_type="AboutPage", extra=[x["person_node"]()])
+    imgs = [x["photo_schema"](k) for k in ("about_portrait", "about_van", "about_tools")]
+    nodes = x["page_schema"]("about/", title, desc, crumbs, page_type="AboutPage", extra=[x["person_node"]()] + imgs)
     nodes[0]["mainEntity"] = {"@id": x["PERSON_ID"]}
     x["render"]("about/", title, desc, body, nodes, priority="0.7")
 
@@ -663,6 +702,11 @@ def build(x):
     for s in SERVICES:
         s["body"] = (s["body"].replace("{ID_POLICY}", ID_POLICY).replace("{WARRANTY}", WARRANTY)
                      .replace("{NO_REPAIR}", NO_REPAIR))
+    brand_links = "".join(f'<li><a href="~/digital-lock-opening/{b["slug"]}/">{b["name"]} digital lock</a></li>'
+                          for b in x["brands"].BRANDS)
+    for s in SERVICES:
+        s["body"] = s["body"].replace("{BRAND_LINKS}",
+            f'<h3>Brand guides: what to try first</h3><ul class="link-pills">{brand_links}</ul>' if brand_links else "")
     build_home(x)
     build_services(x)
     build_prices(x)

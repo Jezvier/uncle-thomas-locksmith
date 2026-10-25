@@ -18,7 +18,7 @@
 - Letterbox lock replacement: S$60
 - Safe opening: Quote on request
 
-## Pages
+## Main pages
 - https://thomaslocksmith.sg/
 - https://thomaslocksmith.sg/services/
 - https://thomaslocksmith.sg/emergency-locksmith/
@@ -31,6 +31,10 @@
 - https://thomaslocksmith.sg/commercial-locksmith/
 - https://thomaslocksmith.sg/prices/
 - https://thomaslocksmith.sg/about/
+
+## Digital lock brands
+
+## Areas
 - https://thomaslocksmith.sg/areas/
 - https://thomaslocksmith.sg/areas/toa-payoh/
 - https://thomaslocksmith.sg/areas/ang-mo-kio/
@@ -44,8 +48,12 @@
 - https://thomaslocksmith.sg/areas/jurong/
 - https://thomaslocksmith.sg/areas/woodlands/
 - https://thomaslocksmith.sg/areas/yishun/
+
+## Guides
 - https://thomaslocksmith.sg/guides/
 - https://thomaslocksmith.sg/guides/locked-out-of-hdb-flat/
 - https://thomaslocksmith.sg/guides/digital-lock-battery-dead/
 - https://thomaslocksmith.sg/guides/forgot-safe-combination/
 - https://thomaslocksmith.sg/guides/how-to-choose-a-locksmith/
+
+## Chinese (中文)
