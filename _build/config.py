@@ -10,12 +10,11 @@ from urllib.parse import quote
 
 # ---- Domain -------------------------------------------------------------
 # The live domain (no trailing slash). Canonical URLs, sitemap and
-# structured data all use this. When thomaslocksmith.sg goes live, also add
-# a file called CNAME (containing: thomaslocksmith.sg) to the repo root and
-# set BASE_PATH = "/".
-SITE = "https://thomaslocksmith.sg"
-# Path the site is served from right now (only used by the 404 page).
-BASE_PATH = "/uncle-thomas-locksmith/"
+# structured data all use this. Hosted on Cloudflare Pages; www. redirects
+# here via a Cloudflare redirect rule.
+SITE = "https://singapore-locksmiths.com"
+# Path the site is served from (only used by the 404 page).
+BASE_PATH = "/"
 
 # Bump this after changing script.js so browsers fetch the new file.
 ASSET_VERSION = "3"
@@ -32,12 +31,12 @@ WA_LINK = "https://wa.me/6592249224?text=" + quote(WA_MESSAGE)
 WA_MESSAGE_ZH = "你好 Uncle Thomas，我需要锁匠。我的位置：___ 。锁的类型/照片：___"
 WA_LINK_ZH = "https://wa.me/6592249224?text=" + quote(WA_MESSAGE_ZH)
 
-# FILL: business email (e.g. hello@thomaslocksmith.sg). None = no email shown anywhere.
+# FILL: business email (e.g. info@singapore-locksmiths.com). None = no email shown anywhere.
 EMAIL = None
 # FILL: full Google Maps URL of the business profile
 #   (Google Maps → your business → Share → Copy link, or the https://www.google.com/maps/place/... URL).
 #   Until filled, the short share link below is used.
-GOOGLE_MAPS_URL = None
+GOOGLE_MAPS_URL = "https://maps.google.com/?cid=4145225534861484330"
 GOOGLE_SHARE_LINK = "https://share.google/pcY4Ywtr5iTrQpRfk"
 GOOGLE_PROFILE = GOOGLE_MAPS_URL or GOOGLE_SHARE_LINK
 # FILL: ACRA UEN (e.g. "53XXXXXXXA"). None = not shown.
