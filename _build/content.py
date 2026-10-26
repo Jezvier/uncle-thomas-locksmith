@@ -460,11 +460,15 @@ def build_home(x):
 <section class="hero">
   <div class="container hero-inner">
     <div>
-      <p class="eyebrow">🔑 Singapore's locksmith "Shifu" · Since {C_.FOUNDED}</p>
-      <h1>24/7 Locksmith in Singapore — Locked Out? <span class="hl">Uncle Thomas</span> Is On The Way.</h1>
-      <p class="hero-sub">Emergency lockouts, digital locks, safes and cars — opened damage-free wherever possible, anywhere on the island. Clear price before we start, from <strong>{{P_LOCKOUT}}</strong>.</p>
+      <p class="eyebrow">24/7 · Islandwide · Since {C_.FOUNDED}</p>
+      <h1>24/7 Locksmith in Singapore</h1>
+      <ul class="hero-tiles">
+        <li><a href="~/emergency-locksmith/"><span class="t-ico" aria-hidden="true">🚪</span><span class="t-txt"><strong>Doors</strong><span>Any door unlocked: HDB, condo, landed, office and digital locks</span></span></a></li>
+        <li><a href="~/safe-opening/"><span class="t-ico" aria-hidden="true">🔐</span><span class="t-txt"><strong>Safes</strong><span>All safes and bolts: combination dials and smart keypads</span></span></a></li>
+        <li><a href="~/car-locksmith/"><span class="t-ico" aria-hidden="true">🚗</span><span class="t-txt"><strong>Cars</strong><span>Car unlocking and key fob cloning, all major brands</span></span></a></li>
+      </ul>
       {x["cta_buttons"]()}
-      <ul class="badges"><li>24/7 incl. public holidays</li><li>Islandwide</li><li>US-trained safesmith</li><li>ID verified</li><li>No-expiry warranty</li></ul>
+      <p class="hero-note">From <strong>{{P_LOCKOUT}}</strong> · Price confirmed before we start · ID checked</p>
     </div>
     <div class="hero-art">{hero_art}</div>
   </div>
