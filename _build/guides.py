@@ -5,8 +5,9 @@ need a locksmith. Written for the owner of the lock — never break-in technique
 
 from guides_a import GUIDES_A
 from guides_b import GUIDES_B
+from guides_c import GUIDES_C
 
-GUIDES = GUIDES_A + GUIDES_B
+GUIDES = GUIDES_A + GUIDES_B + GUIDES_C
 from guides_extra import EXTRA, TAKEAWAYS, MORE_FAQS
 for _g in GUIDES:
     _extra = EXTRA.get(_g["slug"], "")
@@ -18,7 +19,8 @@ for _g in GUIDES:
                       "".join(f"<li>{t}</li>" for t in TAKEAWAYS[_g["slug"]]) + "</ul></div>" + _g["body"])
     if _g["slug"] in MORE_FAQS:
         _g["faqs"] = _g["faqs"] + [MORE_FAQS[_g["slug"]]]
-PUBLISHED = {g["slug"]: ("2026-10-25" if i < 4 else "2026-10-26") for i, g in enumerate(GUIDES)}
+PUBLISHED = {g["slug"]: ("2026-10-25" if i < 4 else "2026-10-26") for i, g in enumerate(GUIDES_A + GUIDES_B)}
+PUBLISHED.update({g["slug"]: "2026-10-27" for g in GUIDES_C})
 
 
 def build(x):

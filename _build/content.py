@@ -4,6 +4,7 @@ Links use "~/" for the site root (converted to relative links at build time).
 {PHONE}, {YEARS}, {P_LOCKOUT} etc. are replaced from config.TOKENS.
 """
 import config as C
+import icons
 
 BRANDS = ", ".join(C.DIGITAL_LOCK_BRANDS)
 
@@ -19,7 +20,7 @@ NO_REPAIR = ("We don't do lock repairs, key duplication or key cutting (the one 
 SERVICES = [
 # ----------------------------------------------------------------------
 dict(
- path="emergency-locksmith/", short="Emergency lockout", icon="🚪",
+ path="emergency-locksmith/", short="Emergency lockout", icon="door",
  card="Locked out of your HDB, condo, house or office? We get you back in — damage-free wherever possible.",
  title="Emergency Locksmith Singapore 24/7 | Lockouts from S$80",
  title_exp="Emergency Locksmith Singapore 24/7 | Trusted Since 1998",
@@ -68,7 +69,7 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="digital-lock-opening/", short="Digital & smart lock opening", icon="🔐",
+ path="digital-lock-opening/", short="Digital & smart lock opening", icon="keypad",
  card="Flat battery, forgotten PIN or faulty keypad? We open all digital lock and smart lock brands, 24/7.",
  title="Digital Lock & Smart Lock Opening Singapore 24/7 | All Brands",
  title_exp="Digital & Smart Lock Opening Singapore | All Brands Since 1998",
@@ -97,7 +98,7 @@ dict(
 <h2>Uncle Thomas's own digital and smart lock techniques</h2>
 <p>As Singapore homes moved from keys to keypads, Uncle Thomas kept learning. Over the years he has worked out his own damage-free ways to open faulty and locked digital locks — so in most cases you get back in <em>without</em> having to buy a new lock. Where a lock is truly beyond saving, we tell you honestly and can <a href="~/digital-lock-installation/">install a new one</a> on the spot.</p>
 
-<div class="callout"><p>{NO_REPAIR}</p></div>
+<div class="callout"><p>{NO_REPAIR} Searching for <strong>digital lock repair</strong>? Read <a href="~/guides/digital-lock-repair/">fix, replace or just get in</a> first.</p></div>
 
 <h2>What it costs</h2>
 <p>Digital lock emergency opening starts from <strong>{P_DIGITAL_OPEN}</strong>. The price depends on the brand, model and fault — WhatsApp a photo of the lock (front and inside if possible) to {PHONE} and we'll give you a firm price before we come. See all <a href="~/prices/">prices</a>.</p>
@@ -115,7 +116,7 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="digital-lock-installation/", short="Digital & smart lock installation", icon="📲",
+ path="digital-lock-installation/", short="Digital & smart lock installation", icon="wrench",
  card="Neat, correct digital and smart lock installation for HDB doors, gates, condos and offices, with a no-expiry warranty.",
  title="Digital Lock & Smart Lock Installation Singapore | HDB & Condo",
  title_exp="Digital & Smart Lock Installation Singapore | No-Expiry Warranty",
@@ -148,7 +149,7 @@ dict(
 
 <h2>Price</h2>
 <p>Digital lock installation (labour) starts from <strong>{P_DIGITAL_INSTALL}</strong>. The total depends on the door, whether old locks need removing, and whether you supply the lock. See the full <a href="~/prices/">price list</a>.</p>
-<p>Locked out of a digital lock right now? Go to <a href="~/digital-lock-opening/">digital lock opening</a>.</p>
+<p>Choosing a lock for your gate? Read <a href="~/guides/smart-lock-for-hdb-gate/">choosing a digital or smart lock for your HDB gate</a>. Locked out of a digital lock right now? Go to <a href="~/digital-lock-opening/">digital lock opening</a>.</p>
 """,
  faqs=[
   ("Can I install a digital lock on my HDB main door?", "Yes. Digital locks are common on HDB main doors and gates. We check your door's thickness and existing cut-outs so the lock fits properly."),
@@ -160,7 +161,7 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="safe-opening/", short="Safe opening", icon="🗄️",
+ path="safe-opening/", short="Safe opening", icon="safe",
  card="Forgotten combination or faulty safe? Opened by a US-trained safesmith who has worked on ships and across Asia.",
  title="Safe Opening Singapore | US-Trained Safesmith | Uncle Thomas",
  title_exp="Safe Opening Singapore | US-Trained Safesmith Since 1998",
@@ -211,7 +212,7 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="car-locksmith/", short="Car locksmith & key fobs", icon="🚗",
+ path="car-locksmith/", short="Car locksmith & key fobs", icon="car",
  card="Keys locked in the car, or need a spare key fob? Car unlocking and key fob cloning for all major brands, 24/7.",
  title="Car Locksmith Singapore 24/7 | Unlocking & Key Fob Cloning",
  title_exp="Car Locksmith Singapore | Car Key Fob Cloning, All Brands",
@@ -237,7 +238,7 @@ dict(
 <li>Replacement fob for family members or a second driver.</li>
 <li>Remote keys, flip keys and smart keys for push-start cars.</li>
 </ul>
-<p>WhatsApp {PHONE} your car's make, model and year, plus a photo of your key (front and back), and we'll confirm we can do it and the price before you book.</p>
+<p>WhatsApp {PHONE} your car's make, model and year, plus a photo of your key (front and back), and we'll confirm we can do it and the price before you book. Lost a key already? Read <a href="~/guides/lost-car-key-fob/">lost your car key fob: what to do next</a>.</p>
 
 <h2>All car brands</h2>
 <p>We work on all the major makes on Singapore roads. Tap your brand for tips and details:</p>
@@ -259,22 +260,23 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="lock-replacement/", short="Lock replacement", icon="🔧",
+ path="lock-replacement/", short="Lock replacement", icon="lock",
  card="Main door, gate, room and toilet door locks replaced with quality hardware — warranty with no expiry.",
- title="Door & Gate Lock Replacement Singapore | HDB from S$100",
- title_exp="Door & Gate Lock Replacement Singapore | No-Expiry Warranty",
- desc="Main door, HDB gate, room and toilet door lock replacement islandwide. Quality hardware, no-expiry warranty, from S$100. Uncle Thomas Locksmith, 9224 9224.",
- h1="Door & Gate Lock Replacement in Singapore",
+ title="Lock Change & Replacement Singapore | Door & Gate from S$100",
+ title_exp="Lock Change & Replacement Singapore | No-Expiry Warranty",
+ desc="Need to change a lock? Main door, HDB gate, room and toilet door lock change and replacement islandwide, from S$100, no-expiry warranty. Call 9224 9224.",
+ h1="Lock Change &amp; Replacement in Singapore: Doors and Gates",
  sub="Lost your keys, moved into a new home, or have a lock that's worn out? Uncle Thomas replaces main door, gate and room door locks with quality hardware — and every replacement has a warranty that never expires.",
  badges=["From {P_REPLACE}", "No-expiry warranty", "Same-visit replacement"],
  body="""
 <h2>When to change your locks</h2>
+<p>A lock change (lock replacement) means taking out the old lock and fitting a new one with new keys, so any old keys stop working.</p>
 <ul>
 <li><strong>You moved into a new home</strong> — you never know how many old keys are out there.</li>
 <li><strong>Keys lost or stolen</strong>.</li>
 <li><strong>A tenant or helper has moved out</strong>.</li>
 <li><strong>The lock is stiff, loose or jams</strong> — a worn lock can fail and lock you out.</li>
-<li><strong>After a break-in or attempted break-in</strong>.</li>
+<li><strong>After a break-in or attempted break-in</strong>. See <a href="~/guides/after-a-break-in/">what to do after a break-in</a>.</li>
 <li><strong>Upgrading security</strong> — or switching to a <a href="~/digital-lock-installation/">digital lock</a>.</li>
 </ul>
 
@@ -297,6 +299,7 @@ dict(
 """,
  faqs=[
   ("Should I change my locks after moving into a new flat?", "Yes, it's a good idea. Previous owners, tenants or contractors may still have keys."),
+  ("How much does a lock change cost in Singapore?", "With us, a main door or gate lock change starts from {P_REPLACE}, including the new lock and installation, with a no-expiry warranty. We confirm the price before we start."),
   ("Do you repair locks?", "No. We replace faulty locks with new ones, which are more reliable and come with our no-expiry warranty."),
   ("Can you replace my lock if I'm locked out?", "Yes — we open the door first, then replace the lock in the same visit if needed."),
   ("Is there a warranty on replacement locks?", "Yes. Every lock replacement comes with our warranty, with no expiry date."),
@@ -304,7 +307,7 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="letterbox-lock-replacement/", short="Letterbox lock", icon="📮",
+ path="letterbox-lock-replacement/", short="Letterbox lock", icon="mailbox",
  card="Lost your letterbox key? We open and replace HDB and condo letterbox locks.",
  title="Letterbox Lock Replacement Singapore | HDB from S$60",
  title_exp="Letterbox Lock Replacement Singapore | Since 1998",
@@ -342,7 +345,7 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="commercial-locksmith/", short="Commercial locksmith", icon="🏢",
+ path="commercial-locksmith/", short="Commercial locksmith", icon="building",
  card="Offices, shops, warehouses and vessels — door, glass door, shutter, cabinet and safe locks.",
  title="Commercial Locksmith Singapore | Office & Shop Locks 24/7",
  title_exp="Commercial Locksmith Singapore 24/7 | Since 1998",
@@ -389,7 +392,7 @@ def related_html(current_path):
     for s in SERVICES:
         if s["path"] == current_path:
             continue
-        cards.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{s["icon"]}</span>'
+        cards.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                      f'<h3>{s["short"]}</h3><p>{s["card"]}</p><span class="more">Learn more →</span></a>')
     return ('<section class="section section-alt"><div class="container"><h2 class="section-title">Other locksmith services</h2>'
             '<p class="section-lead">One call covers it all — 24/7, islandwide.</p>'
@@ -401,7 +404,7 @@ def service_cards(with_price=True):
     for s in SERVICES:
         pr = C.price(s["path"])
         tag = f'<span class="from">From {pr}</span>' if with_price and pr else '<span class="from">Quote on request</span>'
-        out.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{s["icon"]}</span>'
+        out.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                    f'<h3>{s["short"]}</h3><p>{s["card"]}</p>{tag}</a>')
     return "".join(out)
 
@@ -444,7 +447,7 @@ def reviews_html(C_):
     <h2 class="section-title">What Our Customers Say</h2>
     <p class="section-lead">Real reviews from Singapore customers on Google.</p>
     <div class="grid g3 reviews-grid">{cards}</div>
-    <a href="{C_.GOOGLE_PROFILE}" class="btn btn-outline" target="_blank" rel="noopener">⭐ Read all our Google reviews</a>
+    <a href="{C_.GOOGLE_PROFILE}" class="btn btn-outline" target="_blank" rel="noopener">{icons.svg("star", cls="bi bi-star", fill=True)} Read all our Google reviews</a>
   </div>
 </section>"""
 
@@ -563,12 +566,12 @@ def build_home(x):
     <h2 class="section-title">Why Singapore Chooses Uncle Thomas</h2>
     <p class="section-lead">What you get with every call.</p>
     <div class="grid g3">
-      <div class="card"><span class="ico" aria-hidden="true">⏱️</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">🏷️</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">🛡️</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">🪪</span><h3>ID verified</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">✅</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">🏆</span><h3>{C_.YEARS}+ years' experience</h3><p>From HDB gates to ship safes — there's very little Uncle Thomas hasn't opened.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("clock")}</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("tag")}</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("shield")}</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("idcard")}</span><h3>ID verified</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("check")}</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("award")}</span><h3>{C_.YEARS}+ years' experience</h3><p>From HDB gates to ship safes — there's very little Uncle Thomas hasn't opened.</p></div>
     </div>
   </div>
 </section>
@@ -652,7 +655,8 @@ def build_services(x):
             svc["image"] = img if len(img) > 1 else img[0]
         title = pick_title((s["title"], s.get("title_exp", s["title"])))
         nodes = x["page_schema"](s["path"], title, s["desc"], crumbs, faqs=s["faqs"], extra=[svc])
-        alts = {"en-SG": s["path"], "zh-SG": "zh/emergency-locksmith/"} if s["path"] == "emergency-locksmith/" else None
+        zh_set = {"emergency-locksmith/"} | set(x["zh_pages"])
+        alts = {"en-SG": s["path"], "zh-SG": "zh/" + s["path"]} if s["path"] in zh_set else None
         x["render"](s["path"], title, s["desc"], body, nodes, priority="0.9", alternates=alts)
 
 

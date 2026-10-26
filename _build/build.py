@@ -28,7 +28,7 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
 import config as C
-import content, areas, guides, brands, cars, zh
+import content, areas, guides, brands, cars, zh, icons
 
 TODAY = date.today().isoformat()
 PAGES = []          # (path, priority) for sitemap
@@ -65,7 +65,7 @@ T = {
             skip="Skip to content", menu_open="Open menu", home="Home", services="Services", more="More",
             prices="Prices", areas="Areas we serve", guides="Guides", about="About Uncle Thomas",
             hotline="24/7 hotline", email="Email", hours="Hours", hours_v="24 hours, 7 days, incl. public holidays",
-            coverage="Coverage", coverage_v="Islandwide Singapore", google="★ Find us on Google",
+            coverage="Coverage", coverage_v="Islandwide Singapore", google="Find us on Google",
             f_services="Services", f_areas="Areas", f_guides="Guides", all_areas="All areas →",
             cta_title="Need a Locksmith Right Now?",
             cta_lead="Call or WhatsApp Uncle Thomas — 24/7, islandwide. We set off as soon as you call.",
@@ -76,7 +76,7 @@ T = {
             skip="跳到内容", menu_open="打开菜单", home="首页", services="服务（英文）", more="更多",
             prices="价格", areas="服务地区", guides="指南", about="关于 Uncle Thomas",
             hotline="24小时热线", email="电邮", hours="营业时间", hours_v="全天24小时，全年无休（包括公共假期）",
-            coverage="服务范围", coverage_v="新加坡全岛", google="★ 在 Google 上找到我们",
+            coverage="服务范围", coverage_v="新加坡全岛", google="在 Google 上找到我们",
             f_services="服务", f_areas="地区", f_guides="指南", all_areas="所有地区 →",
             cta_title="现在需要锁匠吗？",
             cta_lead="致电或 WhatsApp Uncle Thomas — 24小时，全岛服务。接到电话立即出发。",
@@ -376,7 +376,7 @@ def footer_html(lang="en"):
         {email}
         <li><span class="lbl">{t["hours"]}:</span> {t["hours_v"]}</li>
         <li><span class="lbl">{t["coverage"]}:</span> {t["coverage_v"]}</li>
-        <li><a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">{t["google"]}</a></li>
+        <li><a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener" class="g-link">{icons.svg("star", cls="bi bi-star", fill=True)} {t["google"]}</a></li>
       </ul>
     </div>
     <div><h2>{t["f_services"]}</h2><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></div>
@@ -561,7 +561,7 @@ def main():
     ctx = dict(C=C, render=render, page_schema=page_schema, page_hero=page_hero, cta_buttons=cta_buttons,
                cta_band=cta_band, faq_html=faq_html, business_node=business_node, person_node=person_node,
                breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
-               areas=areas, guides=guides, content=content, brands=brands, cars=cars, abs_url=abs_url,
+               areas=areas, guides=guides, content=content, brands=brands, cars=cars, abs_url=abs_url, zh_pages=list(zh.ZH_PAGES),
                BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema, photos_schema=photos_schema,
                breadcrumb_html=breadcrumb_html)
     content.build(ctx)
@@ -570,6 +570,7 @@ def main():
     areas.build(ctx)
     guides.build(ctx)
     zh.build(ctx)
+    zh.build_more(ctx)
 
     old_css = os.path.join(ROOT, "styles.css")
     if os.path.exists(old_css):
