@@ -498,6 +498,16 @@ HEADERS = """# Cache rules for Netlify / Cloudflare Pages (GitHub Pages ignores 
 /script.js
   Cache-Control: public, max-age=604800
 
+# Build sources and notes are uploaded too: keep them out of Google.
+/_build/*
+  X-Robots-Tag: noindex
+
+/README.md
+  X-Robots-Tag: noindex
+
+/.kiro/*
+  X-Robots-Tag: noindex
+
 /*
   Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff

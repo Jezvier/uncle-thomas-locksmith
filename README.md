@@ -65,14 +65,16 @@ Everything below lives in `_build/config.py` (search for `FILL`). Empty settings
 
 Performance note: `_headers` sets cache rules for Netlify / Cloudflare Pages. GitHub Pages ignores it.
 
-## 🌐 Going live on thomaslocksmith.sg
+## 🌐 Live domain: singapore-locksmiths.com (Cloudflare Pages)
 
-1. Buy the domain.
-2. In `_build/config.py` set `BASE_PATH = "/"` (SITE is already `https://thomaslocksmith.sg`).
-3. Add a file named `CNAME` in the repo root containing `thomaslocksmith.sg`, rebuild, push.
-4. GitHub → repo Settings → Pages → Custom domain → `thomaslocksmith.sg`, add the DNS records it shows, tick **Enforce HTTPS**.
-5. Google Search Console: verify the domain, submit `https://thomaslocksmith.sg/sitemap.xml`.
-6. Put the website link on the Google Business Profile.
+The site is hosted on **Cloudflare Pages**, connected to this repo — every push to `main` publishes automatically. Domain registered at Namecheap; nameservers point to Cloudflare.
+
+- `SITE` in `_build/config.py` is `https://singapore-locksmiths.com` (no www). `www.` redirects to it via a Cloudflare redirect rule.
+- Cloudflare Pages settings: framework preset **None**, build command **empty**, output directory **/** (the committed HTML is published as-is — always run `python3 _build/build.py` before pushing).
+- `_headers` sets caching (Cloudflare reads it) and keeps `_build/`, `README.md` and `.kiro/` out of Google.
+- Google Search Console: verify the domain, submit `https://singapore-locksmiths.com/sitemap.xml`.
+- Put the website link on the Google Business Profile.
+- The old GitHub Pages copy (jezvier.github.io/uncle-thomas-locksmith) can be switched off in repo Settings → Pages once Cloudflare is live.
 
 ## 🚀 Preview locally
 
