@@ -106,6 +106,10 @@ def business_node(full=False):
     }
     if C.UEN:
         node["taxID"] = C.UEN
+    if getattr(C, "LEGAL_NAME", None):
+        node["legalName"] = C.LEGAL_NAME
+    if getattr(C, "ALT_NAMES", None):
+        node["alternateName"] = C.ALT_NAMES
     if full:
         node.update({
             "description": C.DESCRIPTION,
@@ -328,7 +332,7 @@ def footer_html(lang="en"):
     gd = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["short"]}</a></li>' for g in guides.GUIDES[:6])
     email = (f'<li><span class="lbl">{t["email"]}:</span> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></li>'
              if C.EMAIL else "<!-- FILL: business email in _build/config.py -->")
-    uen = f' · UEN {C.UEN}' if C.UEN else "<!-- FILL: ACRA UEN in _build/config.py -->"
+    uen = f' · {getattr(C, "LEGAL_NAME", C.NAME)} (UEN {C.UEN})' if C.UEN else "<!-- FILL: ACRA UEN in _build/config.py -->"
     return f'''<footer class="footer">
   <div class="container footer-grid">
     <div>

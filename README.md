@@ -52,7 +52,7 @@ Everything below lives in `_build/config.py` (search for `FILL`). Empty settings
 
 - [ ] `EMAIL` — business email (none shown until set)
 - [ ] `GOOGLE_MAPS_URL` — full Google Maps link (the short share link is used until then)
-- [ ] `UEN` — ACRA UEN (footer + schema)
+- [x] `UEN` — ACRA UEN 52862311K (footer + schema)
 - [ ] `GA4_ID` — Google Analytics ID (analytics off until set; add a privacy note when you switch it on)
 - [ ] `REVIEWS` — up to 3 real Google reviews (reviews section hidden until then)
 - [ ] `PHOTOS` — real photos in `assets/photos/` (12 slots: hero, About ×3, each service page)
