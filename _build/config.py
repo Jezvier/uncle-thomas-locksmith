@@ -39,8 +39,11 @@ EMAIL = None
 GOOGLE_MAPS_URL = "https://maps.google.com/?cid=4145225534861484330"
 GOOGLE_SHARE_LINK = "https://share.google/pcY4Ywtr5iTrQpRfk"
 GOOGLE_PROFILE = GOOGLE_MAPS_URL or GOOGLE_SHARE_LINK
-# FILL: ACRA UEN (e.g. "53XXXXXXXA"). None = not shown.
-UEN = None
+# ACRA registration (sole proprietorship, registered 21 Feb 1998). Shown in the footer + schema.
+UEN = "52862311K"
+LEGAL_NAME = "Thomas Locksmith"
+# Other names customers and listings know the business by (Google Business Profile = "Singapore Locksmith").
+ALT_NAMES = ["Thomas Locksmith", "Singapore Locksmith"]
 # FILL: Google Analytics 4 Measurement ID (e.g. "G-ABC123XYZ"). None = analytics off.
 GA4_ID = None
 
