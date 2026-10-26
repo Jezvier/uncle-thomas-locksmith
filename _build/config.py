@@ -81,18 +81,18 @@ REVIEWS = [
 PHOTOS = {
     # key: (file name or None, alt text, caption) — or a LIST of those for a 2-column grid.
     # Files live in assets/photos/ (already edited: straightened, colour-corrected, 4:5 crop).
-    "hero":       (None, "Uncle Thomas, Singapore locksmith, with his toolbox", "Uncle Thomas — locksmith since 1998"),
-    "about_portrait": (None, "Portrait of Uncle Thomas, master locksmith and safesmith", "Uncle Thomas"),
-    "about_van":  (None, "Uncle Thomas Locksmith service van", "Our van — on the road 24/7"),
-    "about_tools": (None, "Locksmith tools used by Uncle Thomas", "The tools of the trade"),
+    "hero":       ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
+    "about_portrait": ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
+    "about_van":  ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
+    "about_tools": ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
     # Homepage "Recent jobs" gallery
     "home_work": [
+        ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
         ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "Main door lock replaced"),
         ("digital-lock-installation-after.jpg", "Slim black digital door lock with camera installed on a wooden door", "Digital lock installed"),
         ("bumil-safe-new-keypad-after.jpg", "Bumil home safe with a new electronic keypad lock fitted", "New keypad fitted to a home safe"),
         ("digital-letterbox-lock.jpg", "Digital keypad lock fitted to a stainless steel condo letterbox", "Digital letterbox lock"),
         ("rim-lock-replacement-after.jpg", "New rim lock with brass latch fitted to a white panelled door", "Rim lock replaced"),
-        ("chubb-safe-singapore.jpg", "Old Chubb safe with spoked handle and keyholes in a Singapore office storeroom", "An old Chubb safe — no safe is too old"),
     ],
     "emergency-locksmith/":       (None, "Locksmith opening an HDB main door without damage", "A damage-free HDB lockout job"),
     "digital-lock-opening/":      ("kaadas-digital-lock-gate-and-door.jpg", "Kaadas digital locks on a black metal gate and a wooden main door in Singapore", "Kaadas digital locks on a gate and main door — we open all brands"),
@@ -101,10 +101,10 @@ PHOTOS = {
         ("digital-lock-installation-after.jpg", "Slim black digital door lock with camera installed on a wooden door", "After: new digital lock installed"),
     ],
     "safe-opening/": [
+        ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
         ("bumil-safe-faulty-keypad-before.jpg", "Bumil home safe with its original electronic keypad lock", "1. The safe with its original keypad lock"),
         ("bumil-safe-opened-lock-mechanism.jpg", "Safe door with the lock panel removed, showing the bolt mechanism and wiring", "2. Lock panel off, mechanism exposed"),
         ("bumil-safe-new-keypad-after.jpg", "Bumil home safe with a new electronic keypad lock fitted", "3. New keypad lock fitted"),
-        ("chubb-safe-singapore.jpg", "Old Chubb safe with spoked handle and keyholes in a Singapore office storeroom", "Old or new, home or office — we open them"),
     ],
     "car-locksmith/":             (None, "Car door being unlocked with non-destructive tools", "Non-destructive car unlocking"),
     "lock-replacement/": [
@@ -112,13 +112,15 @@ PHOTOS = {
         ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "After: new lever lock and cover plate"),
         ("rim-lock-replacement-before.jpg", "Old rusted rim lock on a white wooden door", "Before: old rusted rim lock"),
         ("rim-lock-replacement-after.jpg", "New rim lock with brass latch fitted to a white panelled door", "After: new rim lock fitted"),
+        ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
+        ("door-lock-cover-plate-hides-old-holes.jpg", "Stainless steel cover plate and new cylinder lock on a wooden door, hiding the holes from the old lock", "After: a cover plate neatly hides the old lock holes"),
     ],
     "letterbox-lock-replacement/": [
         ("hdb-letterbox-lock-replacement.jpg", "Key in a new lock on a stainless steel letterbox in Singapore", "Letterbox lock replaced"),
         ("digital-letterbox-lock.jpg", "Digital keypad lock fitted to a stainless steel condo letterbox", "Keyless digital letterbox lock"),
     ],
     "commercial-locksmith/": [
-        ("office-safes-singapore.jpg", "Office safe with electronic keypad and handle under a desk in Singapore", "Office safe with keypad lock"),
+        ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
         ("office-safe-opening.jpg", "Tall office safe cabinet with keypad lock in a Singapore office", "Office safe cabinet"),
     ],
 }
