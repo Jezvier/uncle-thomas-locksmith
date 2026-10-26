@@ -220,7 +220,9 @@ def _prepare(fname, alt, caption):
         r.save(os.path.join(PHOTO_OUT, f"{stem}-{w}.webp"), quality=78, method=6)
         outs[w] = h
     im.resize((800, outs[800]), Image.LANCZOS).save(os.path.join(PHOTO_OUT, f"{stem}-800.jpg"), quality=80, optimize=True, progressive=True)
-    _photo_cache[fname] = dict(stem=stem, w=800, h=outs[800])
+    import hashlib
+    ver = hashlib.md5(open(src, "rb").read()).hexdigest()[:8]   # cache-buster: assets are cached for a year
+    _photo_cache[fname] = dict(stem=stem, w=800, h=outs[800], ver=ver)
     return dict(_photo_cache[fname], alt=alt, caption=caption)
 
 
@@ -230,9 +232,9 @@ def _photos(key):
 
 def _figure(p, eager, cls, sizes):
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
-    base = f'~/assets/img/photos/{p["stem"]}'
-    return (f'<figure class="{cls}"><picture><source type="image/webp" srcset="{base}-400.webp 400w, {base}-800.webp 800w" '
-            f'sizes="{sizes}"><img src="{base}-800.jpg" alt="{esc(p["alt"])}" width="{p["w"]}" '
+    base, q = f'~/assets/img/photos/{p["stem"]}', f'?v={p["ver"]}'
+    return (f'<figure class="{cls}"><picture><source type="image/webp" srcset="{base}-400.webp{q} 400w, {base}-800.webp{q} 800w" '
+            f'sizes="{sizes}"><img src="{base}-800.jpg{q}" alt="{esc(p["alt"])}" width="{p["w"]}" '
             f'height="{p["h"]}" {load}></picture><figcaption>{esc(p["caption"])}</figcaption></figure>')
 
 
