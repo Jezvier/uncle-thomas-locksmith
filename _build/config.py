@@ -81,8 +81,8 @@ SAFE_BRANDS = ["Bumil", "Chubb", "Glory", "Uchida", "Eagle", "Phoenix", "Sentry"
 # Shown on the homepage first screen. _build/rating.json (written daily by the
 # "Update Google rating" GitHub Action) overrides these when it exists.
 # FILL: current Google rating (e.g. 4.6) and review count (e.g. 34). None = badge hidden.
-GOOGLE_RATING = None
-GOOGLE_REVIEW_COUNT = None
+GOOGLE_RATING = 4.6
+GOOGLE_REVIEW_COUNT = 34
 try:
     import json as _json, os as _os
     _rf = _os.path.join(_os.path.dirname(__file__), "rating.json")
