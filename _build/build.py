@@ -28,7 +28,7 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
 import config as C
-import content, areas, guides, brands, cars, zh, icons
+import content, areas, guides, brands, cars, zh, icons, pages_extra
 
 TODAY = date.today().isoformat()
 PAGES = []          # (path, priority) for sitemap
@@ -293,7 +293,7 @@ def cta_band(title=None, lead=None, lang="en"):
     t = T[lang]
     return (f'<section class="section cta-band"><div class="container narrow">'
             f'<h2 class="section-title">{title or t["cta_title"]}</h2><p class="section-lead">{lead or t["cta_lead"]}</p>'
-            f'{cta_buttons(center=True, wa_text=("WhatsApp " + C.PHONE) if lang == "en" else None, lang=lang, pos="cta_band")}</div></section>')
+            f'{cta_buttons(center=True, wa_text=None, lang=lang, pos="cta_band")}</div></section>')
 
 
 def breadcrumb_html(crumbs):
@@ -314,7 +314,7 @@ def page_hero(crumbs, h1, sub, badges=None, lang="en"):
             f'<h1>{h1}</h1><p class="hero-sub">{sub}</p>{cta_buttons(lang=lang)}{b}</div></section>')
 
 
-NAV = {"en": [("Services", "services/"), ("Prices", "prices/"), ("Areas", "areas/"), ("Guides", "guides/"), ("About", "about/")],
+NAV = {"en": [("Services", "services/"), ("Prices", "prices/"), ("Areas", "areas/"), ("Guides", "guides/"), ("About", "about/"), ("Contact", "contact/")],
        "zh": [("首页", "zh/"), ("紧急开锁", "zh/emergency-locksmith/"), ("价格", "prices/"), ("关于", "about/")]}
 
 
@@ -352,6 +352,7 @@ def header_html(path, lang="en", alt_path=None):
       <li><a href="~/areas/">{t["areas"]}</a></li>
       <li><a href="~/guides/">{t["guides"]}</a></li>
       <li><a href="~/about/">{t["about"]}</a></li>
+      <li><a href="~/contact/">{"联系我们" if lang == "zh" else "Contact"}</a></li>
       {'<li><a href="~/zh/" hreflang="zh-SG">中文 (Chinese)</a></li>' if lang == "en" else ""}
     </ul>
   </nav>
@@ -381,7 +382,7 @@ def footer_html(lang="en"):
     </div>
     <div><h2>{t["f_services"]}</h2><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></div>
     <div><h2>{t["f_areas"]}</h2><ul>{towns}<li><a href="~/areas/">{t["all_areas"]}</a></li></ul></div>
-    <div><h2>{t["f_guides"]}</h2><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></div>
+    <div><h2>{t["f_guides"]}</h2><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/contact/">Contact</a></li><li><a href="~/privacy/">Privacy</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></div>
   </div>
   <div class="footer-bottom"><div class="container">© <span data-year>{date.today().year}</span> {C.NAME}{uen} · {t["bottom"]}</div></div>
 </footer>
@@ -436,13 +437,13 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{C.SITE}/assets/img/og.jpg">
+<meta property="og:image" content="{C.SITE}/assets/img/og-2026.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{C.SITE}/assets/img/og.jpg">
+<meta name="twitter:image" content="{C.SITE}/assets/img/og-2026.jpg">
 <meta name="geo.region" content="SG">
 <meta name="geo.placename" content="Singapore">
 <link rel="icon" href="~/favicon.ico" sizes="48x48">
@@ -477,7 +478,7 @@ def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="Web
     nodes = [{"@type": page_type, "@id": abs_url(path) + "#webpage", "url": abs_url(path), "name": title,
               "description": desc, "inLanguage": lang, "isPartOf": {"@id": C.SITE + "/#website"},
               "about": {"@id": BUSINESS_ID}, "breadcrumb": {"@id": abs_url(path) + "#breadcrumb"},
-              "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/assets/img/og.jpg"}}]
+              "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/assets/img/og-2026.jpg"}}]
     bc = breadcrumb_node(crumbs); bc["@id"] = abs_url(path) + "#breadcrumb"
     nodes.append(bc)
     nodes.append(business_node())
@@ -571,6 +572,7 @@ def main():
     guides.build(ctx)
     zh.build(ctx)
     zh.build_more(ctx)
+    pages_extra.build(ctx)
 
     old_css = os.path.join(ROOT, "styles.css")
     if os.path.exists(old_css):
@@ -601,10 +603,20 @@ def main():
         if alts:
             x = "".join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{abs_url(v)}"/>' for k, v in alts.items())
             x += f'<xhtml:link rel="alternate" hreflang="x-default" href="{abs_url(alts["en-SG"])}"/>'
-        entries.append(f"  <url><loc>{abs_url(p)}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority>{x}</url>")
+        imgs = ""
+        try:
+            page_html = open(os.path.join(ROOT, p, "index.html") if p else os.path.join(ROOT, "index.html"), encoding="utf-8").read()
+            seen = []
+            for m in re.findall(r'src="[^"]*?assets/img/photos/([a-z0-9-]+-800\.jpg)', page_html):
+                if m not in seen:
+                    seen.append(m)
+            imgs = "".join(f"<image:image><image:loc>{C.SITE}/assets/img/photos/{m}</image:loc></image:image>" for m in seen)
+        except OSError:
+            pass
+        entries.append(f"  <url><loc>{abs_url(p)}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority>{x}{imgs}</url>")
     with open(os.path.join(ROOT, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
-                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(entries) + "\n</urlset>\n")
+                'xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(entries) + "\n</urlset>\n")
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
         f.write(f"User-agent: *\nAllow: /\n\nSitemap: {C.SITE}/sitemap.xml\n")
 

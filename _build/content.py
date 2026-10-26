@@ -392,7 +392,7 @@ def related_html(current_path):
     for s in SERVICES:
         if s["path"] == current_path:
             continue
-        cards.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
+        cards.append(f'<a class="card svc" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                      f'<h3>{s["short"]}</h3><p>{s["card"]}</p><span class="more">Learn more →</span></a>')
     return ('<section class="section section-alt"><div class="container"><h2 class="section-title">Other locksmith services</h2>'
             '<p class="section-lead">One call covers it all — 24/7, islandwide.</p>'
@@ -404,7 +404,7 @@ def service_cards(with_price=True):
     for s in SERVICES:
         pr = C.price(s["path"])
         tag = f'<span class="from">From {pr}</span>' if with_price and pr else '<span class="from">Quote on request</span>'
-        out.append(f'<a class="card" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
+        out.append(f'<a class="card svc" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                    f'<h3>{s["short"]}</h3><p>{s["card"]}</p>{tag}</a>')
     return "".join(out)
 
@@ -566,12 +566,12 @@ def build_home(x):
     <h2 class="section-title">Why Singapore Chooses Uncle Thomas</h2>
     <p class="section-lead">What you get with every call.</p>
     <div class="grid g3">
-      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("clock")}</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("tag")}</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("shield")}</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("idcard")}</span><h3>ID verified</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("check")}</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">{icons.svg("award")}</span><h3>{C_.YEARS}+ years' experience</h3><p>From HDB gates to ship safes — there's very little Uncle Thomas hasn't opened.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("clock")}</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("tag")}</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("shield")}</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("idcard")}</span><h3>ID verified</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("check")}</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("award")}</span><h3>{C_.YEARS}+ years' experience</h3><p>From HDB gates to ship safes — there's very little Uncle Thomas hasn't opened.</p></div>
     </div>
   </div>
 </section>
@@ -610,7 +610,7 @@ def build_home(x):
          "inLanguage": "en-SG", "publisher": {"@id": x["BUSINESS_ID"]}},
         {"@type": "WebPage", "@id": C_.SITE + "/#webpage", "url": C_.SITE + "/", "name": title, "description": desc,
          "isPartOf": {"@id": C_.SITE + "/#website"}, "about": {"@id": x["BUSINESS_ID"]}, "inLanguage": "en-SG",
-         "primaryImageOfPage": {"@type": "ImageObject", "url": C_.SITE + "/assets/img/og.jpg"}},
+         "primaryImageOfPage": {"@type": "ImageObject", "url": C_.SITE + "/assets/img/og-2026.jpg"}},
         biz, x["person_node"](), x["faq_node"](HOME_FAQS),
     ]
     x["render"]("", title, desc, body, nodes, preload_img=None if hero_photo.startswith("<figure") else "assets/img/logo-320.webp",
@@ -622,14 +622,35 @@ def build_home(x):
 # ======================================================================
 def build_services(x):
     C_ = x["C"]
+    lock_pills = "".join(f'<li><a href="~/digital-lock-opening/{b["slug"]}/">{b["name"]}</a></li>' for b in x["brands"].BRANDS)
     crumbs = [("Home", ""), ("Services", "services/")]
     title = "Locksmith Services Singapore | Doors, Digital Locks & Safes"
     desc = "All Uncle Thomas Locksmith services: emergency lockouts, digital lock opening & installation, safes, cars, lock and letterbox replacement. 24/7, islandwide."
     body = (x["page_hero"](crumbs, "Locksmith Services in Singapore",
             "Everything Uncle Thomas and his team can help with — 24/7, islandwide. Tap a service for details and prices.",
             ["24/7 islandwide", "Price before work", "No-expiry warranty"]) +
-            f'<section class="section"><div class="container"><div class="grid g4">{service_cards()}</div>'
-            f'<p class="note">{NO_REPAIR}</p></div></section>' + x["cta_band"]())
+            f'<section class="section"><div class="container"><h2 class="section-title">All locksmith services</h2><div class="grid g4" style="margin-top:24px">{service_cards()}</div>'
+            f'<p class="note">{NO_REPAIR}</p></div></section>' +
+            f'''<section class="section section-alt"><div class="container narrow prose">
+<h2>Which service do you need?</h2>
+<table class="price-table"><thead><tr><th scope="col">Your situation</th><th scope="col">Service</th></tr></thead><tbody>
+<tr><td>Locked out of your flat, house or office</td><td><a href="~/emergency-locksmith/">Emergency lockout</a></td></tr>
+<tr><td>Digital or smart lock won't open (flat battery, forgotten PIN, dead keypad)</td><td><a href="~/digital-lock-opening/">Digital &amp; smart lock opening</a></td></tr>
+<tr><td>Want a keyless lock on your door or gate</td><td><a href="~/digital-lock-installation/">Digital &amp; smart lock installation</a></td></tr>
+<tr><td>Lost keys, moved house, or a worn or broken lock</td><td><a href="~/lock-replacement/">Lock change &amp; replacement</a></td></tr>
+<tr><td>Forgot a safe combination or lost the safe key</td><td><a href="~/safe-opening/">Safe opening</a></td></tr>
+<tr><td>Keys locked in the car, or need a spare key fob</td><td><a href="~/car-locksmith/">Car locksmith &amp; key fobs</a></td></tr>
+<tr><td>Lost your letterbox key</td><td><a href="~/letterbox-lock-replacement/">Letterbox lock</a></td></tr>
+<tr><td>Office, shop, warehouse or vessel</td><td><a href="~/commercial-locksmith/">Commercial locksmith</a></td></tr>
+</tbody></table>
+<h2>Digital and smart lock brands</h2>
+<p>We open and install every brand. Guides for the most common ones:</p>
+<ul class="link-pills">{lock_pills}</ul>
+<h2>Car brands</h2>
+<p>Car unlocking and key fob cloning for all major makes:</p>
+{x["cars"].links_html()}
+<p>Not sure what you need? WhatsApp a photo to {C_.PHONE} and we'll tell you, with a price, before we set off.</p>
+</div></section>''' + x["cta_band"]())
     nodes = x["page_schema"]("services/", title, desc, crumbs, page_type="CollectionPage", extra=[
         {"@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": C_.SITE + "/" + s["path"], "name": s["short"]}
