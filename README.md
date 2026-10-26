@@ -67,11 +67,11 @@ Performance note: `_headers` sets cache rules for Netlify / Cloudflare Pages. Gi
 
 ## 🌐 Live domain: singapore-locksmiths.com (Cloudflare Pages)
 
-The site is hosted on **Cloudflare Pages**, connected to this repo — every push to `main` publishes automatically. Domain registered at Namecheap; nameservers point to Cloudflare.
+The site is hosted on **Cloudflare Pages** (project `singapore-locksmiths`, test URL https://singapore-locksmiths.pages.dev). Domain registered at Namecheap; nameservers point to Cloudflare.
 
+- **Publishing:** every push to `main` runs `.github/workflows/deploy.yml`, which uploads the site to Cloudflare Pages (it leaves out `_build/`, `.kiro/`, `.github/` and this README). It needs the repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. The committed HTML is published as-is, so always run `python3 _build/build.py` before pushing.
 - `SITE` in `_build/config.py` is `https://singapore-locksmiths.com` (no www). `www.` redirects to it via a Cloudflare redirect rule.
-- Cloudflare Pages settings: framework preset **None**, build command **empty**, output directory **/** (the committed HTML is published as-is — always run `python3 _build/build.py` before pushing).
-- `_headers` sets caching (Cloudflare reads it) and keeps `_build/`, `README.md` and `.kiro/` out of Google.
+- `_headers` sets caching (Cloudflare reads it).
 - Google Search Console: verify the domain, submit `https://singapore-locksmiths.com/sitemap.xml`.
 - Put the website link on the Google Business Profile.
 - The old GitHub Pages copy (jezvier.github.io/uncle-thomas-locksmith) can be switched off in repo Settings → Pages once Cloudflare is live.

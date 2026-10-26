@@ -19,7 +19,9 @@
 /.kiro/*
   X-Robots-Tag: noindex
 
+# Pages' default for everything else (HTML) is already "public, max-age=0,
+# must-revalidate". Don't set Cache-Control here: Cloudflare merges matching
+# rules, so it would clash with the long cache on /assets/* above.
 /*
-  Cache-Control: public, max-age=0, must-revalidate
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin

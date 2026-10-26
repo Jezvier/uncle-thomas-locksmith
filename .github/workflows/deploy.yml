@@ -1,0 +1,40 @@
+# Publishes the site to Cloudflare Pages (project: singapore-locksmiths)
+# every time something is pushed to main.
+#
+# Needs two repo secrets (Settings → Secrets and variables → Actions):
+#   CLOUDFLARE_API_TOKEN   – token with "Account → Cloudflare Pages → Edit"
+#   CLOUDFLARE_ACCOUNT_ID  – a6ccec22a2215df610e54656d4130d36
+#
+# The committed HTML is published as-is, so always run
+# `python3 _build/build.py` before pushing.
+name: Deploy to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Collect public files (leave out build sources and notes)
+        run: |
+          mkdir dist
+          git archive HEAD | tar -x -C dist
+          rm -rf dist/_build dist/.kiro dist/.github dist/README.md dist/.gitignore
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=singapore-locksmiths --branch=main --commit-dirty=true
