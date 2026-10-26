@@ -142,6 +142,8 @@ def build(x):
             (f"How much does it cost to open a {n} digital lock?", "Digital lock emergency opening starts from {P_DIGITAL_OPEN}. WhatsApp a photo of the lock (front and inside if possible) for an exact price."),
             (f"Do you repair {n} digital locks?", f"No — we don't do repairs. We open the lock, and if it's faulty we can replace it. For warranty repairs, contact {n} or your retailer."),
         ]
+        jobs = getattr(x["C"], "BRAND_JOBS", {}).get(n, [])
+        recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)
         others = " · ".join(f'<a href="~/digital-lock-opening/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["slug"] != b["slug"])
         body = (x["page_hero"](crumbs, f"{n} Digital Lock or Smart Lock Won't Open? 24/7 Help in Singapore",
                 f"Flat battery, forgotten PIN, dead keypad or locked out after too many wrong tries — here's what to try first with your {n} lock, and how Uncle Thomas can open it, damage-free wherever possible.",
@@ -149,24 +151,20 @@ def build(x):
                 f'''<section class="section"><div class="container narrow prose">
 <h2>{n} digital locks and smart locks in Singapore</h2>
 <p>{b["about"]}</p>
-<h2>Common {n} digital lock problems</h2>
+{recent}<h2>A typical {n} call</h2>
+<p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
+<h2>What's different about {n} locks</h2>
+<p>{FEATURE.get(n, "")}</p>
+<h2>Common {n} problems and what to try</h2>
 <h3>Flat battery</h3>
 <p>{b["power"]}</p>
 <h3>Forgotten PIN or fingerprint not recognised</h3>
 <p>{b["backup"]}</p>
-<h3>Keypad dead, or the lock won't respond</h3>
-<p>{b["quirk"]} Rain and condensation can also stop a keypad responding — dry it gently and wait a few minutes.</p>
-<h3>Locked out after too many wrong attempts</h3>
-<p>Most locks freeze the keypad for a few minutes after repeated wrong codes. Wait for the time-out, then enter your code once, carefully.</p>
+<h3>Lock won't respond</h3>
+<p>{b["quirk"]}</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{tip}</li>" for tip in b["tips"])}</ul>
-<p>More general checks are in our guide: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or won't open</a>.</p>
-<h2>When to call us</h2>
-<p>If none of this works — or the lock responds but the door still won't open — call or WhatsApp us. Please don't force the handle; it can break the motor. Uncle Thomas has his own damage-free methods for faulty digital locks, and we explain the options and price before starting.</p>
-
-<h2>Price</h2>
-<p>{n} digital lock emergency opening starts from <strong>{{P_DIGITAL_OPEN}}</strong>. WhatsApp a photo of the lock to {{PHONE}} for an exact price before we come. If the lock is beyond saving, we can <a href="~/digital-lock-installation/">install a new digital lock</a> — every installation comes with our no-expiry warranty. See all <a href="~/prices/">prices</a>.</p>
-<div class="callout"><p><strong>Security first:</strong> we check proof of residence before opening any door. Uncle Thomas Locksmith is an independent locksmith and is not affiliated with {n}.</p></div>
+<p><strong>Still locked out?</strong> Don't force the handle. Call or WhatsApp {{PHONE}}: {n} opening from {{P_DIGITAL_OPEN}}, price confirmed first, ID checked. Independent locksmith, not affiliated with {n}. General checks: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead</a>.</p>
 <p>Other brands: {others} · <a href="~/digital-lock-opening/">all digital lock brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Digital Lock FAQs")}</div></section>''' +
@@ -179,3 +177,35 @@ def build(x):
                           "priceSpecification": {"@type": "PriceSpecification", "minPrice": 150, "priceCurrency": "SGD"}}}
         nodes = x["page_schema"](path, title, desc, crumbs, faqs=faqs, extra=[svc])
         x["render"](path, title, desc, body, nodes, priority="0.7")
+
+
+# ---------------------------------------------------------------------------
+# Brand-specific depth (27 Oct 2026). SCENARIO = a realistic *typical* call,
+# framed as typical on the page, never as a dated real job.
+SCENARIO = {
+"Samsung": "An elderly couple in an older HDB flat come home from a family dinner to find the Samsung gate lock completely dark. The batteries ran flat while they were out, and they don't know about the 9V emergency contacts. We get them in, then show them where the contacts are and which battery to keep in their bag.",
+"Yale": "Someone at home switches the Yale lock to privacy mode before bed. The other half of the household comes home after a late shift, and the keypad refuses a code they know is right. If no one inside wakes up, we open it, and then explain how privacy mode works.",
+"Philips": "A family back from a holiday finds their Philips push-pull lock dead after two weeks of draining batteries. Their model takes USB emergency power, but the power bank and cable are packed deep in a suitcase. If they can't find them, we open the lock and the batteries get replaced.",
+"Igloohome": "A landlord set a tenant's access code to run until the end of the month. The tenant renewed, but nobody extended the code, and on the 1st it stops working. Usually the landlord can fix it in the app; when they can't be reached, we're the backup.",
+"Gateman": "A Gateman lock that has served a flat for about ten years has been getting slower: the motor hums and hesitates. One evening it doesn't finish turning at all, with the owner outside. We open it, and the owner decides it's time for a new lock.",
+"Kaadas": "A household with a matching Kaadas gate and door set finds the gate lock dead while the door lock still works. The two run on separate batteries, and the gate's ran out first. We get them through the gate, and they change both sets of batteries together from then on.",
+"Solity": "Someone pushed hard on a Solity handle when the lock was slow to respond. Now the code is accepted and the motor runs, but the latch won't pull back. That's a mechanical fault rather than a battery one, so we open the door and talk through replacing the lock body or the whole lock.",
+"Häfele": "A new condo owner moves in after a renovation and realises the contractor never handed over the Häfele master PIN or app account. Day to day the codes work, until a code needs changing. We open locks when people are locked out; for the master PIN, the contractor or Häfele is the first call.",
+"Aqara": "After changing their home Wi-Fi router, a family's Aqara smart lock shows offline in the app. They've only ever used app unlocking. The lock still accepts PIN and fingerprint at the door; if those were never set up, we're the next step.",
+"Xiaomi": "An owner bought a Xiaomi smart lock online and fitted it themselves. A few weeks later the latch catches on the strike plate and the door won't open from outside. We open it and check how the lock sits on the door.",
+"Lenovo": "Only one person in a household set up fingerprints on the Lenovo smart lock, and the app lives on their phone. When they're overseas, the rest of the family has only the PIN, and when that's forgotten, they call us.",
+}
+
+FEATURE = {
+"Samsung": "Samsung's range in Singapore spans rim gate locks and push-pull mortise main door locks, from older keypad-only models to newer ones with fingerprint and card. Older units are the ones we most often see with tired keypads.",
+"Yale": "Many Yale models have a privacy or double-lock mode that blocks outside codes, and newer smart models add app control. That mix of mechanical override, privacy settings and app features is why Yale lockouts usually have a simple cause.",
+"Philips": "Philips EasyKey push-pull locks are popular on HDB and condo main doors. The push-pull handle takes a lot of daily force, so a loose or stiff handle is an early warning sign worth acting on.",
+"Igloohome": "Igloohome is a Singapore-founded smart lock brand built around app access and time-limited codes, which makes it popular with landlords. Most lockouts we see are about code settings rather than a broken lock.",
+"Gateman": "Gateman locks have been fitted in Singapore for many years, so many are now older units. Ageing motors and keypads tend to give warning signs, slower opening or keys that need a hard press, before they fail.",
+"Kaadas": "Kaadas is often sold as a matching gate-and-door set with fingerprint, PIN and card access, and many models take USB emergency power. Two locks means two sets of batteries to keep an eye on.",
+"Solity": "Solity is a Korean brand found on many Singapore HDB and condo doors. Emergency power and override options vary by model, so knowing your model number saves time when something goes wrong.",
+"Häfele": "Häfele locks are often chosen and installed by renovation contractors and interior designers. That's why the most common Häfele problem isn't the lock but who holds the master PIN and app account.",
+"Aqara": "Aqara smart locks are built for smart homes, with app, hub and automation features. The lock and the network are separate, so an offline app doesn't mean a dead lock.",
+"Xiaomi": "Xiaomi smart locks are often bought online for their price and app features, and many are self-installed. Fit matters: door thickness and cut-outs decide whether the latch works smoothly.",
+"Lenovo": "Lenovo smart locks combine fingerprint, PIN and app access. They're most reliable when every household member has their own fingerprint and PIN, not just the person who set up the app.",
+}

@@ -73,6 +73,11 @@ CAR_BRANDS_MORE = ["BYD", "MG", "Mini", "Peugeot", "Skoda", "Suzuki", "Ford", "J
                    "Citroën", "Opel", "Infiniti", "Alfa Romeo", "Maserati", "Bentley", "Ferrari", "Lamborghini",
                    "Rolls-Royce", "Chevrolet", "Cupra", "Polestar"]
 
+# Real jobs per brand, shown as "Recent job" on that brand's page (car or lock).
+# FILL over time with REAL jobs only, e.g. "Kaadas": ["Oct 2026, Punggol: gate lock batteries flat, opened in 20 minutes."]
+BRAND_JOBS = {
+}
+
 # Safe brands mentioned on the safe opening page (Uncle Thomas opens all makes).
 SAFE_BRANDS = ["Bumil", "Chubb", "Glory", "Uchida", "Eagle", "Phoenix", "Sentry", "Yale", "Lion", "Diplomat",
                "Gunnebo", "Kokuyo", "Kaba", "Sargent & Greenleaf"]

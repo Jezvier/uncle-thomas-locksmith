@@ -185,6 +185,8 @@ def build(x):
             (f"How much does it cost to unlock a {n}?", "Car lockouts start from {P_CAR}. We confirm the price before we set off."),
             (f"How much is a spare {n} key fob?", "It depends on the model and key type. WhatsApp {PHONE} the model, year and a photo of your key for a price."),
         ]
+        jobs = getattr(C, "BRAND_JOBS", {}).get(n, [])
+        recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)
         others = " · ".join(f'<a href="~/car-locksmith/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["slug"] != b["slug"])
         body = (x["page_hero"](crumbs, f"{n} Locksmith Singapore: Unlocking &amp; Key Fob Cloning",
                 f"Keys locked inside your {n}, or down to your last key fob? Uncle Thomas opens {n} cars without damage and clones {n} key fobs, 24/7 anywhere in Singapore.",
@@ -192,16 +194,15 @@ def build(x):
                 f'''<section class="section"><div class="container narrow prose">
 <h2>{n} cars in Singapore</h2>
 <p>{b["about"]} We work on {n} models including the {b["models"]}.</p>
-<h2>Locked out of your {n}?</h2>
-<p>Keys locked inside the car or boot, or a remote that won't respond? We open {n} cars with professional, non-destructive entry tools: no broken windows, no scratched paint, no damaged seals. Please don't try a coat hanger; it can damage the door wiring and airbag sensors.</p>
-<h2>Spare {n} key fob</h2>
-<p>{b["keys"]}</p>
-<p>If you're down to one key, a spare saves a stressful day later. Uncle Thomas clones {n} key fobs, including remote and smart keys. WhatsApp {{PHONE}} your model, year and a photo of the key (front and back) and we'll confirm before you book.</p>
+{recent}<h2>A typical {n} call</h2>
+<p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
+<h2>What's different about {n} keys</h2>
+<p>{FEATURE.get(n, "")} {b["keys"]}</p>
+<h2>Locked out, or need a spare {n} fob?</h2>
+<p>We open {n} cars with non-destructive tools, and clone {n} key fobs, including remote and smart keys. WhatsApp {{PHONE}} your model, year and a photo of the key (front and back), and we'll confirm before you book.</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
-<h2>Price</h2>
-<p>{n} lockouts start from <strong>{{P_CAR}}</strong>. Key fob cloning is quoted per car, depending on the model and key type. See all <a href="~/prices/">prices</a>.</p>
-<div class="callout"><p><strong>Proof of ownership:</strong> before unlocking a car or cloning a key we check that it's yours, for example your NRIC against the vehicle log card. Uncle Thomas Locksmith is an independent locksmith and is not affiliated with {n}.</p></div>
+<p><strong>Price:</strong> {n} lockouts from {{P_CAR}}; key fobs quoted per car. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. See all <a href="~/prices/">prices</a>.</p>
 <p>Other brands: {others} · <a href="~/car-locksmith/">all car brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +
@@ -215,3 +216,46 @@ def build(x):
                           "priceSpecification": {"@type": "PriceSpecification", "minPrice": 100, "priceCurrency": "SGD"}}}
         nodes = x["page_schema"](path, title, desc, crumbs, faqs=faqs, extra=[svc])
         x["render"](path, title, desc, body, nodes, priority="0.7")
+
+
+# ---------------------------------------------------------------------------
+# Brand-specific depth (added 27 Oct 2026 to make each page more original).
+# SCENARIO = a realistic *typical* call, framed as typical on the page, never as
+# a dated real job. Real jobs go in config.BRAND_JOBS and show as "Recent job".
+SCENARIO = {
+"Toyota": "A driver loads groceries into the boot of a Corolla Altis at an HDB multi-storey carpark, sets the key down on the shopping bags, and closes the boot. The car locks itself. We open the driver's door with non-destructive tools, the key comes out of the boot, and the driver decides it's time to get a spare fob cloned.",
+"Honda": "A private-hire driver bought a used Vezel that came with only one key. Nothing has gone wrong yet, but losing that key would mean days off the road. They WhatsApp us a photo of the key and the car's year, we confirm we can clone it, and they get a spare the same day.",
+"Mercedes-Benz": "A C-Class owner in a condo carpark presses the fob and nothing happens: the battery has finally died. The car is KEYLESS-GO, so they've never used the hidden key blade. We talk them through sliding it out over WhatsApp, and they're in within a minute, no call-out needed. They book a spare fob for later.",
+"BMW": "At a petrol station, a 3 Series owner puts the key on the passenger seat while checking the tyres. Comfort Access locks the car when the doors close. The key is visible through the window but out of reach. We open it without damage and suggest a spare key kept at home.",
+"Audi": "A family with a Q5 at a shopping mall carpark: a child presses the lock button inside while the key is still in the cup holder, and everyone steps out. We open the car without touching the paint or seals, and the family is on their way.",
+"Volkswagen": "A Golf owner's flip key hinge has snapped and the blade only stays out with tape. It still works, for now. Before it fails completely they want a spare. We clone a new remote from the working key.",
+"Mazda": "A CX-5 driver unloading kids and a pram at a void deck drop-off locks the key inside with the engine off. We arrive, check the log card against the driver's NRIC, and open the door without damage.",
+"Lexus": "An ES owner loses the main smart key but still has the slim card key in their wallet. The car still works, but one key left is risky. We clone a new fob from the working key so they're back to two.",
+"Land Rover": "A Range Rover Evoque owner's spare fob went through the washing machine and no longer works. With only one key left, they ask us for a new spare cloned from the working fob.",
+"Hyundai": "A private-hire driver with an Ioniq has a fob that only works when it's held right next to the door. The battery is weak and the driver can't risk a dead key mid-shift. We sort out a cloned spare so there's always a backup in the car bag.",
+"Kia": "A couple share one Niro and one key, and they keep passing it back and forth. When one of them needs the car while the other is at work, they decide a second fob is cheaper than the hassle. We clone it from their working key.",
+"Nissan": "A family with a Serena MPV: a child locks the doors from inside while the Intelligent Key is on the seat, then climbs out the other side before the door shuts. Everyone is out, and the key is in. We open the car without damage.",
+"Porsche": "A Macan owner wants a spare key but doesn't want to leave the car at the dealer. They send us the model year and a photo of the key, and we confirm before booking that we can clone it.",
+"Volvo": "An XC60 owner loading luggage for a Changi drop-off closes the tailgate on the key. The car locks. We open it with non-destructive tools so the trip isn't missed.",
+"Mitsubishi": "A small company runs several Attrage cars, each with only one key. One key going missing has already cost them a day. They ask us to clone a spare for each car.",
+"Subaru": "A Forester owner's key was soaked in a heavy downpour and now works only some of the time. While it still works, they ask for a cloned spare as a backup.",
+}
+
+FEATURE = {
+"Toyota": "Many newer Toyotas have Smart Entry & Start, so the car can lock with the key nowhere near your hand. MPVs like the Alphard and Vellfire add power sliding doors, and a key left in a door pocket is easy to lock in.",
+"Honda": "Some Honda models have a walk-away auto lock that locks the car when the smart key moves out of range. It's convenient, but if the key is still in the car with someone who then leaves, you can come back to a locked car.",
+"Mercedes-Benz": "With KEYLESS-GO you rarely take the fob out, so many owners don't know where the emergency key blade is or where the hidden keyhole on the door handle sits. Learning both takes a minute and can save a call-out.",
+"BMW": "Comfort Access unlocks the car when you touch the handle and locks it when you walk away. Some newer models also support a digital key on your phone. Both still depend on a working key or phone battery, so a physical spare matters.",
+"Audi": "Many Audis with advanced keys lock and unlock by touch. On some models the emergency keyhole is hidden under a cap on the driver's door handle that you prise off with the key blade.",
+"Volkswagen": "Volkswagen's flip keys are hard-wearing, but the folding hinge is a common weak point after years in a pocket. Models with Keyless Access behave like other smart-key cars.",
+"Mazda": "Mazda's Advanced Keyless Entry lets you lock and unlock with a button on the door while the key stays in your pocket. A low key battery is the usual cause when that button stops responding.",
+"Lexus": "Some Lexus models come with a card key that slips into a wallet. It's a useful built-in backup, but it isn't a full replacement for a lost main fob.",
+"Land Rover": "Many Land Rover and Range Rover models use keyless entry, and some offer a wearable key for sports and the beach. Keep the main fob safe when you use it, because the main fob is what a cloned spare is made from.",
+"Hyundai": "Newer Hyundais may also support a digital key on a phone or card. A fob is still the backup most owners rely on, especially private-hire drivers who can't afford downtime.",
+"Kia": "Like Hyundai, some newer Kias support a phone-based digital key. A physical fob remains the simplest backup for sharing a car between drivers.",
+"Nissan": "Nissan's Intelligent Key works from a pocket or bag, which makes it easy to forget where it is. MPVs like the Serena have several doors that can be locked from inside.",
+"Porsche": "Porsche Entry & Drive works from your pocket on many models. The car-shaped fob still holds an emergency key for the driver's door.",
+"Volvo": "Many Volvos have keyless locking and unlocking, and a tailgate that can be closed with a button. A key left in the boot is a common way to get locked out.",
+"Mitsubishi": "Mitsubishi's Keyless Operation System is found on many models, while simpler models such as the Attrage often use a remote with a metal blade. For fleets, one spare per car avoids downtime.",
+"Subaru": "Many Subarus use Keyless Access with push-button start, and the fob contains an emergency key. A key that works only some of the time is often a weak battery or water damage.",
+}
