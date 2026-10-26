@@ -130,7 +130,11 @@ def business_node(full=False):
         })
         if C.EMAIL:
             node["email"] = C.EMAIL
-        imgs = [photo_schema(k) for k in C.PHOTOS if photo_schema(k)]
+        seen, imgs = set(), []
+        for k in C.PHOTOS:
+            for o in photos_schema(k):
+                if o["contentUrl"] not in seen:
+                    seen.add(o["contentUrl"]); imgs.append(o)
         if imgs:
             node["photo"] = imgs
     return node
@@ -184,55 +188,81 @@ PHOTO_OUT = os.path.join(ROOT, "assets", "img", "photos")
 _photo_cache = {}
 
 
-def _prepare_photo(key):
-    """Make 400/800px WebP + JPG versions of a configured photo. Returns dict or None."""
-    if key in _photo_cache:
-        return _photo_cache[key]
-    fname, alt, caption = C.PHOTOS.get(key, (None, "", ""))
-    info = None
-    if fname:
-        src = os.path.join(PHOTO_DIR, fname)
-        if not os.path.exists(src):
-            print(f"  ! Photo for '{key}' not found: assets/photos/{fname} (slot hidden)")
-        else:
-            try:
-                from PIL import Image, ImageOps
-            except ImportError:
-                sys.exit("Pillow is needed for photos: pip install pillow")
-            os.makedirs(PHOTO_OUT, exist_ok=True)
-            stem = re.sub(r"[^a-z0-9]+", "-", os.path.splitext(fname)[0].lower()).strip("-")
-            im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
-            outs = {}
-            for w in (400, 800):
-                h = round(im.height * w / im.width)
-                r = im.resize((w, h), Image.LANCZOS)
-                r.save(os.path.join(PHOTO_OUT, f"{stem}-{w}.webp"), quality=78, method=6)
-                outs[w] = h
-            im.resize((800, outs[800]), Image.LANCZOS).save(os.path.join(PHOTO_OUT, f"{stem}-800.jpg"), quality=80, optimize=True, progressive=True)
-            info = dict(stem=stem, w=800, h=outs[800], alt=alt, caption=caption)
-    _photo_cache[key] = info
-    return info
+def _entries(key):
+    """PHOTOS[key] may be one (file, alt, caption) tuple or a list of them."""
+    v = C.PHOTOS.get(key)
+    if not v:
+        return []
+    return v if isinstance(v, list) else [v]
 
 
-def photo(key, eager=False, cls="photo"):
-    """<figure> for a configured real photo, or a hidden FILL comment if none yet."""
-    p = _prepare_photo(key)
-    if not p:
-        alt = C.PHOTOS.get(key, (None, key, ""))[1]
-        return f'<!-- FILL: real photo for slot "{key}" ({alt}). Add it in _build/config.py → PHOTOS. -->'
+def _prepare(fname, alt, caption):
+    """Make 400/800px WebP + 800px JPG versions of one photo. Returns dict or None."""
+    if not fname:
+        return None
+    if fname in _photo_cache:
+        return dict(_photo_cache[fname], alt=alt, caption=caption)
+    src = os.path.join(PHOTO_DIR, fname)
+    if not os.path.exists(src):
+        print(f"  ! Photo not found: assets/photos/{fname} (hidden)")
+        return None
+    try:
+        from PIL import Image, ImageOps
+    except ImportError:
+        sys.exit("Pillow is needed for photos: pip install pillow")
+    os.makedirs(PHOTO_OUT, exist_ok=True)
+    stem = re.sub(r"[^a-z0-9]+", "-", os.path.splitext(fname)[0].lower()).strip("-")
+    im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
+    outs = {}
+    for w in (400, 800):
+        h = round(im.height * w / im.width)
+        r = im.resize((w, h), Image.LANCZOS)
+        r.save(os.path.join(PHOTO_OUT, f"{stem}-{w}.webp"), quality=78, method=6)
+        outs[w] = h
+    im.resize((800, outs[800]), Image.LANCZOS).save(os.path.join(PHOTO_OUT, f"{stem}-800.jpg"), quality=80, optimize=True, progressive=True)
+    _photo_cache[fname] = dict(stem=stem, w=800, h=outs[800])
+    return dict(_photo_cache[fname], alt=alt, caption=caption)
+
+
+def _photos(key):
+    return [p for p in (_prepare(*e) for e in _entries(key)) if p]
+
+
+def _figure(p, eager, cls, sizes):
     load = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
     base = f'~/assets/img/photos/{p["stem"]}'
     return (f'<figure class="{cls}"><picture><source type="image/webp" srcset="{base}-400.webp 400w, {base}-800.webp 800w" '
-            f'sizes="(min-width: 860px) 780px, 100vw"><img src="{base}-800.jpg" alt="{esc(p["alt"])}" width="{p["w"]}" '
+            f'sizes="{sizes}"><img src="{base}-800.jpg" alt="{esc(p["alt"])}" width="{p["w"]}" '
             f'height="{p["h"]}" {load}></picture><figcaption>{esc(p["caption"])}</figcaption></figure>')
 
 
-def photo_schema(key):
-    p = _prepare_photo(key)
-    if not p:
-        return None
+def photo(key, eager=False, cls="photo"):
+    """One <figure>, or a 2-column grid of figures when the slot holds a list.
+    Hidden FILL comment if the slot is empty."""
+    ps = _photos(key)
+    if not ps:
+        alt = (_entries(key) or [(None, key, "")])[0][1]
+        return f'<!-- FILL: real photo for slot "{key}" ({alt}). Add it in _build/config.py → PHOTOS. -->'
+    if len(ps) == 1 and not isinstance(C.PHOTOS.get(key), list):
+        return _figure(ps[0], eager, cls, "(min-width: 860px) 780px, 100vw")
+    figs = "".join(_figure(p, eager and i == 0, "photo", "(min-width: 860px) 390px, 50vw") for i, p in enumerate(ps))
+    return f'<div class="photo-grid">{figs}</div>'
+
+
+def _image_object(p):
     return {"@type": "ImageObject", "contentUrl": f'{C.SITE}/assets/img/photos/{p["stem"]}-800.jpg',
             "caption": p["caption"], "description": p["alt"], "width": p["w"], "height": p["h"]}
+
+
+def photo_schema(key):
+    """ImageObject for the first photo in a slot (or None)."""
+    ps = _photos(key)
+    return _image_object(ps[0]) if ps else None
+
+
+def photos_schema(key):
+    """ImageObjects for every photo in a slot."""
+    return [_image_object(p) for p in _photos(key)]
 
 
 # ---------- HTML building blocks ----------
@@ -529,7 +559,7 @@ def main():
                cta_band=cta_band, faq_html=faq_html, business_node=business_node, person_node=person_node,
                breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
                areas=areas, guides=guides, content=content, brands=brands, abs_url=abs_url,
-               BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema,
+               BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema, photos_schema=photos_schema,
                breadcrumb_html=breadcrumb_html)
     content.build(ctx)
     brands.build(ctx)

@@ -55,7 +55,7 @@ Everything below lives in `_build/config.py` (search for `FILL`). Empty settings
 - [x] `UEN` — ACRA UEN 52862311K (footer + schema)
 - [ ] `GA4_ID` — Google Analytics ID (analytics off until set; add a privacy note when you switch it on)
 - [ ] `REVIEWS` — up to 3 real Google reviews (reviews section hidden until then)
-- [ ] `PHOTOS` — real photos in `assets/photos/` (12 slots: hero, About ×3, each service page)
+- [~] `PHOTOS` — 15 edited job photos added (homepage gallery + 6 service pages). Still needed: Uncle Thomas portrait, van, tools, an emergency lockout job, a car lockout job
 - [ ] `RECENT_JOBS` — real recent jobs per town (section hidden until then)
 - [ ] `PRICES` — confirm Uncle Thomas honours every "from" price; confirm payment methods
 - [ ] `BRAND_PAGES` — confirm the brands Uncle Thomas handles

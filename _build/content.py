@@ -443,6 +443,16 @@ def build_home(x):
                     '<img src="~/assets/img/logo-640.jpg" alt="Uncle Thomas Locksmith mascot holding a key" width="340" height="340" fetchpriority="high"></picture>')
     else:
         hero_art = hero_photo
+    work = x["photo"]("home_work")
+    work_section = "" if work.startswith("<!--") else f"""
+<section class="section section-alt" id="work">
+  <div class="container">
+    <h2 class="section-title">Recent Jobs Across Singapore</h2>
+    <p class="section-lead">Real photos from Uncle Thomas's recent jobs: doors, digital locks, safes and letterboxes.</p>
+    <div class="work-grid">{work}</div>
+  </div>
+</section>
+"""
     town_links = "".join(f'<a href="~/areas/{t["slug"]}/">{t["name"]}</a>' for t in x["areas"].TOWNS)
     guide_cards = "".join(f'<a class="card" href="~/guides/{g["slug"]}/"><h3>{g["h1"]}</h3><p>{g["card"]}</p><span class="more">Read the guide →</span></a>'
                           for g in x["guides"].GUIDES[:4])
@@ -514,6 +524,7 @@ def build_home(x):
   </div>
 </section>
 
+{work_section}
 <section class="section" id="why">
   <div class="container">
     <h2 class="section-title">Why Singapore Chooses Uncle Thomas</h2>
@@ -603,9 +614,9 @@ def build_services(x):
         if pr:
             svc["offers"] = {"@type": "Offer", "priceCurrency": "SGD",
                              "priceSpecification": {"@type": "PriceSpecification", "minPrice": int(pr[2:]), "priceCurrency": "SGD"}}
-        img = x["photo_schema"](s["path"])
+        img = x["photos_schema"](s["path"])
         if img:
-            svc["image"] = img
+            svc["image"] = img if len(img) > 1 else img[0]
         title = pick_title((s["title"], s.get("title_exp", s["title"])))
         nodes = x["page_schema"](s["path"], title, s["desc"], crumbs, faqs=s["faqs"], extra=[svc])
         alts = {"en-SG": s["path"], "zh-SG": "zh/emergency-locksmith/"} if s["path"] == "emergency-locksmith/" else None
