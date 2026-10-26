@@ -53,11 +53,79 @@ DATA = {
   ("My old Gateman lock is slow to open. Should I replace it?", "Slow motors and unreliable keypads are common warning signs on older locks. Replacing it before it fails avoids an emergency lockout."),
   ("How do I wake a Gateman lock with a flat battery?", "On many models, hold a 9V battery to the emergency contacts on the outside and enter your code. Check your manual for your model."),
  ]),
+"Kaadas": dict(
+ about="Kaadas digital and smart locks have become a common sight on Singapore HDB gates and main doors, often fitted as a matching gate-and-door set with fingerprint, PIN and card access.",
+ power="Many Kaadas models take emergency power from outside, commonly through a USB port near the bottom of the lock. Check your model's manual so you know which cable to carry.",
+ backup="Many Kaadas models include a mechanical backup key behind a small cover. If yours came with one, keep it outside the home.",
+ quirk="Gate and door sets mean two locks and two sets of batteries. If one lock in the pair starts acting up, check its batteries separately.",
+ faqs=[
+  ("How do I open a Kaadas lock with a flat battery?", "On many models, plug a power bank into the emergency USB port to wake the lock, then enter your code. If your model has a backup key, that works without power."),
+  ("My Kaadas gate lock works but the door lock doesn't. Why?", "They usually run on separate batteries. Check the door lock's batteries first. If it still won't respond, call us."),
+ ]),
+"Solity": dict(
+ about="Solity is a Korean digital lock brand found on many Singapore HDB and condo doors, with push-pull and gate models that use fingerprint, PIN and card access.",
+ power="Many Solity models have an emergency power option on the outside, either a 9V battery terminal or a USB port depending on the model. Your manual will confirm which.",
+ backup="Some Solity models include a mechanical override key and some don't. If yours did, keep it outside the home.",
+ quirk="A Solity lock that beeps but won't turn the latch may have a weak battery or a mechanical problem in the lock body rather than a wrong code.",
+ faqs=[
+  ("Where is the emergency power point on a Solity lock?", "It depends on the model; many have a 9V terminal or USB port on the outside. Check your manual, or send us a photo."),
+  ("My Solity lock accepts the code but won't open. What's wrong?", "Usually a low battery or a mechanical fault in the lock body. Don't force the handle. Call us and we'll open it."),
+ ]),
+"Häfele": dict(
+ about="Häfele digital and smart locks are often fitted by interior designers and renovation contractors in Singapore condos and HDB flats, from simple keypad locks to app-connected smart locks.",
+ power="Many Häfele models accept emergency power from outside through a USB port or battery contacts. Check your model's manual so you're prepared.",
+ backup="Many Häfele models include a mechanical backup key. If your contractor handed one over at the end of the renovation, keep it outside the home.",
+ quirk="If your lock was installed during a renovation, the admin PIN or app account may still be under the contractor's details. Ask them to hand it over so you can manage it yourself.",
+ faqs=[
+  ("My Häfele lock was installed by my contractor and I don't know the master PIN. Can you help?", "If you're locked out, yes, we'll open it. For resetting the master PIN, check the manual or ask your contractor or Häfele first."),
+  ("How do I power a Häfele lock with flat batteries?", "Many models take emergency power through USB or battery contacts on the outside. Check your manual for your model."),
+ ]),
+"Aqara": dict(
+ about="Aqara smart locks are popular with Singapore homeowners who run a smart home, as they connect to the Aqara app and smart home systems, with fingerprint, PIN, card and app unlocking.",
+ power="Aqara smart locks run on batteries even when connected to Wi-Fi or a hub. Many models have an emergency USB power port outside for when the batteries die.",
+ backup="Many Aqara models include a mechanical backup key. The app can't open the lock if the lock itself has no power, so keep the key handy.",
+ quirk="If the app shows the lock offline, it may just be the hub or Wi-Fi rather than the lock. Try PIN or fingerprint at the door before assuming the lock has failed.",
+ faqs=[
+  ("Can I open my Aqara smart lock from the app if I'm locked out?", "If the lock has power and is online, often yes. If the batteries are flat or it's offline, use emergency USB power or the backup key, or call us."),
+  ("My Aqara lock shows offline in the app. Is it broken?", "Not necessarily. Check your hub and Wi-Fi. The lock usually still works with PIN or fingerprint at the door."),
+ ]),
+"Xiaomi": dict(
+ about="Xiaomi smart door locks are bought online by many Singapore homeowners for their app control and price, and are often fitted to HDB and condo main doors.",
+ power="Many Xiaomi smart locks have an emergency USB-C port on the outside to wake the lock when the batteries are flat. Check your model's manual.",
+ backup="Many Xiaomi models come with mechanical backup keys. Keep one outside the home in case the batteries die.",
+ quirk="Locks bought online sometimes don't suit the door's thickness or cut-outs, which leads to latch problems later. If your lock sticks, the fit may be the issue.",
+ faqs=[
+  ("I bought a Xiaomi smart lock online. Can you install it?", "Yes. Send us a photo of the lock and your door first, so we can confirm it will fit before we come."),
+  ("How do I wake a Xiaomi smart lock with flat batteries?", "On many models, connect a power bank to the emergency USB-C port outside, then unlock with your PIN or fingerprint."),
+ ]),
+"Lenovo": dict(
+ about="Lenovo smart locks are found in a growing number of Singapore homes, typically with fingerprint, PIN and app access.",
+ power="Like all smart locks, Lenovo models run on batteries. Many have an emergency USB port outside to wake the lock when the batteries are flat. Check your manual.",
+ backup="If your Lenovo lock came with a mechanical backup key, keep it outside the home.",
+ quirk="If your phone app can't reach the lock, try PIN or fingerprint at the door; the app connection and the lock itself are separate.",
+ faqs=[
+  ("Can you open a Lenovo smart lock?", "Yes. We open all digital and smart lock brands, including Lenovo, 24/7."),
+  ("My Lenovo smart lock battery died. What do I do?", "Use the emergency USB port if your model has one, or the backup key. If that doesn't work, call us."),
+ ]),
+
 }
 
 TIPS = {'Samsung': ["Keep a 9V battery in your bag or car if your model uses 9V emergency power — it's the quickest way back in.", 'Older Samsung keypads can wear out; if some buttons need a hard press, plan a replacement.', 'Gate rim locks take the most weather — wipe the keypad dry after heavy rain or corridor washing.', 'Register a second fingerprint or card for a family member in case yours fails.'], 'Yale': ["Learn where your model's emergency power point is — 9V on many models, USB on some newer ones.", 'If your lock has a privacy or double-lock mode, make sure everyone at home knows how it works.', "Smart Yale models with app control still need batteries — the app can't open a lock with no power.", 'Keep the override key outside the home, not in a drawer inside.'], 'Philips': ['Check whether your model takes USB or 9V emergency power, and keep the right cable or battery handy.', 'Enrol two fingers per person — if one is cut or dry, the other usually still works.', 'Push-pull handles take a lot of force; if the handle feels loose, get it checked before it fails.', 'Use good-quality batteries; cheap ones can drain quickly in a busy household.'], 'Igloohome': ['Keep your app login details somewhere you can reach from another device.', 'For rentals, set guest codes with clear start and end times, and check them before guests arrive.', 'Keep the mechanical backup key (if your model has one) outside the property.', "Replace batteries as soon as the app or lock warns you — don't wait for it to die."], 'Gateman': ['If your Gateman is more than a few years old, test the emergency power point now so you know it still works.', 'A lock that opens more slowly than it used to may be close to failing — plan a replacement.', 'Keep a 9V battery handy if your model uses 9V emergency power.', 'Check that gate-mounted models are protected from direct rain where possible.']}
 
-BRANDS = [dict(name=b, slug=b.lower(), tips=TIPS.get(b, []), **DATA[b]) for b in C.BRAND_PAGES if b in DATA]
+TIPS.update({
+ "Kaadas": ["Carry a small power bank and USB cable if your model uses USB emergency power.", "Change the batteries in the gate and door locks at the same time.", "Register a second fingerprint per person in case one fails.", "Keep the backup key outside the home."],
+ "Solity": ["Find out whether your model uses 9V or USB emergency power before you need it.", "If the latch is getting stiff, get it checked before it jams.", "Replace batteries as soon as the low-battery warning sounds.", "Keep the override key (if any) outside the home."],
+ "Häfele": ["Get the master PIN and app account handed over from your contractor.", "Check whether your model uses USB or battery-contact emergency power.", "Keep the backup key outside the home.", "Replace batteries at the first low-battery warning."],
+ "Aqara": ["Keep the backup key somewhere you can reach from outside.", "A power bank and USB cable can wake many models when the batteries die.", "Don't rely on the app alone; set up PIN and fingerprint too.", "Replace batteries when the app warns you, not after they die."],
+ "Xiaomi": ["Keep a USB-C cable and power bank handy for emergency power.", "Check the lock fits your door's thickness before buying.", "Store a backup key outside the home.", "Set up a second unlocking method in case the app or fingerprint fails."],
+ "Lenovo": ["Learn where your model's emergency power port is.", "Set up PIN as well as fingerprint and app access.", "Keep any backup key outside the home.", "Replace batteries at the first warning."],
+})
+
+import unicodedata as _u, re as _re
+def _slug(n):
+    return _re.sub(r'[^a-z0-9]+', '-', _u.normalize('NFKD', n).encode('ascii', 'ignore').decode().lower()).strip('-')
+
+BRANDS = [dict(name=b, slug=_slug(b), tips=TIPS.get(b, []), **DATA[b]) for b in C.BRAND_PAGES if b in DATA]
 
 
 def build(x):
@@ -65,8 +133,8 @@ def build(x):
         n = b["name"]
         path = f"digital-lock-opening/{b['slug']}/"
         crumbs = [("Home", ""), ("Services", "services/"), ("Digital lock opening", "digital-lock-opening/"), (n, path)]
-        title = f"{n} Digital Lock Opening Singapore 24/7 | From S$150"
-        desc = (f"{n} digital lock won't open? Flat battery, forgotten PIN, dead keypad or wrong-code lockout — what to try first, "
+        title = f"{n} Digital & Smart Lock Opening Singapore 24/7"
+        desc = (f"{n} digital or smart lock won't open? Flat battery, forgotten PIN, dead keypad or wrong-code lockout — what to try first, "
                 f"and 24/7 help from S$150. Call 9224 9224.")
         if len(desc) > 158:
             desc = f"{n} digital lock won't open? What to try first for a flat battery, forgotten PIN or dead keypad — and 24/7 help from S$150."
@@ -75,11 +143,11 @@ def build(x):
             (f"Do you repair {n} digital locks?", f"No — we don't do repairs. We open the lock, and if it's faulty we can replace it. For warranty repairs, contact {n} or your retailer."),
         ]
         others = " · ".join(f'<a href="~/digital-lock-opening/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["slug"] != b["slug"])
-        body = (x["page_hero"](crumbs, f"{n} Digital Lock Won't Open? 24/7 Help in Singapore",
+        body = (x["page_hero"](crumbs, f"{n} Digital Lock or Smart Lock Won't Open? 24/7 Help in Singapore",
                 f"Flat battery, forgotten PIN, dead keypad or locked out after too many wrong tries — here's what to try first with your {n} lock, and how Uncle Thomas can open it, damage-free wherever possible.",
                 ["From {P_DIGITAL_OPEN}", "24/7 islandwide", "Damage-free first"]) +
                 f'''<section class="section"><div class="container narrow prose">
-<h2>{n} digital locks in Singapore</h2>
+<h2>{n} digital locks and smart locks in Singapore</h2>
 <p>{b["about"]}</p>
 <h2>Common {n} digital lock problems</h2>
 <h3>Flat battery</h3>
@@ -104,7 +172,7 @@ def build(x):
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Digital Lock FAQs")}</div></section>''' +
                 x["cta_band"](f"Locked Out by Your {n} Lock?"))
         svc = {"@type": "Service", "@id": x["C"].SITE + "/" + path + "#service",
-               "name": f"{n} digital lock opening — Singapore", "serviceType": "Digital lock opening",
+               "name": f"{n} digital lock and smart lock opening — Singapore", "serviceType": "Digital lock and smart lock opening",
                "description": desc, "provider": {"@id": x["BUSINESS_ID"]},
                "areaServed": {"@type": "Country", "name": "Singapore"}, "url": x["C"].SITE + "/" + path,
                "offers": {"@type": "Offer", "priceCurrency": "SGD",

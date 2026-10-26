@@ -26,7 +26,8 @@ Folders starting with `_` are not published by GitHub Pages, so `_build/` stays 
 - **Home** `/` — targets *locksmith Singapore*, *24 hour locksmith*
 - **Services** `/services/` + 8 service pages: emergency lockout, digital lock opening, digital lock installation, safe opening, car lockout, lock replacement, letterbox lock, commercial locksmith
 - **Prices** `/prices/`
-- **Digital lock brands** `/digital-lock-opening/<brand>/` — Samsung, Yale, Philips, Igloohome, Gateman
+- **Digital & smart lock brands** `/digital-lock-opening/<brand>/` — Samsung, Yale, Philips, Igloohome, Gateman, Kaadas, Solity, Häfele, Aqara, Xiaomi, Lenovo
+- **Car brands** `/car-locksmith/<brand>/` — 16 brands (`_build/cars.py`; Tesla is deliberately never listed)
 - **Areas** `/areas/` + 25 town pages
 - **Guides** `/guides/` + 9 guides
 - **Chinese** `/zh/` and `/zh/emergency-locksmith/`
@@ -45,6 +46,10 @@ Folders starting with `_` are not published by GitHub Pages, so `_build/` stays 
 ## 🔑 Facts the site states (keep these true)
 
 24/7 islandwide · since 1998 · Uncle Thomas leads a small team · US-trained safesmith · ID/proof of residence checked before opening · warranty on every lock replacement and installation with no expiry · all digital lock brands · **no** key duplication or lock repair.
+
+## ⭐ Google rating badge
+
+Shown on the homepage first screen when `GOOGLE_RATING` and `GOOGLE_REVIEW_COUNT` are set in `_build/config.py`, or when `_build/rating.json` exists. The **Update Google rating** GitHub Action refreshes `rating.json` daily once the `PLACES_API_KEY` repo secret is added (Google Maps Platform key with Places API (New) enabled).
 
 ## 📝 Still to do (owner)
 

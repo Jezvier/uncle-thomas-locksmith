@@ -6,7 +6,7 @@
 - Founded: 1998. Lead locksmith: Uncle Thomas (US-trained safesmith), with a small team.
 - Verifies proof of residence or ownership before opening any door, car or safe.
 - Warranty on every lock replacement and installation, with no expiry date.
-- Does NOT offer key duplication or lock repair.
+- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands).
 - UEN: 52862311K
 
 ## Prices (from)
@@ -15,6 +15,7 @@
 - Digital lock emergency opening: S$150
 - Digital lock installation (labour): S$120
 - Car lockout (non-destructive): S$100
+- Car key fob cloning (spare key): Quote on request
 - Main door / gate lock replacement (supply + install): S$100
 - Letterbox lock replacement: S$60
 - Safe opening: Quote on request
@@ -39,6 +40,30 @@
 - https://singapore-locksmiths.com/digital-lock-opening/philips/
 - https://singapore-locksmiths.com/digital-lock-opening/igloohome/
 - https://singapore-locksmiths.com/digital-lock-opening/gateman/
+- https://singapore-locksmiths.com/digital-lock-opening/kaadas/
+- https://singapore-locksmiths.com/digital-lock-opening/solity/
+- https://singapore-locksmiths.com/digital-lock-opening/hafele/
+- https://singapore-locksmiths.com/digital-lock-opening/aqara/
+- https://singapore-locksmiths.com/digital-lock-opening/xiaomi/
+- https://singapore-locksmiths.com/digital-lock-opening/lenovo/
+
+## Car brands
+- https://singapore-locksmiths.com/car-locksmith/toyota/
+- https://singapore-locksmiths.com/car-locksmith/honda/
+- https://singapore-locksmiths.com/car-locksmith/mercedes-benz/
+- https://singapore-locksmiths.com/car-locksmith/bmw/
+- https://singapore-locksmiths.com/car-locksmith/audi/
+- https://singapore-locksmiths.com/car-locksmith/volkswagen/
+- https://singapore-locksmiths.com/car-locksmith/mazda/
+- https://singapore-locksmiths.com/car-locksmith/lexus/
+- https://singapore-locksmiths.com/car-locksmith/land-rover/
+- https://singapore-locksmiths.com/car-locksmith/hyundai/
+- https://singapore-locksmiths.com/car-locksmith/kia/
+- https://singapore-locksmiths.com/car-locksmith/nissan/
+- https://singapore-locksmiths.com/car-locksmith/porsche/
+- https://singapore-locksmiths.com/car-locksmith/volvo/
+- https://singapore-locksmiths.com/car-locksmith/mitsubishi/
+- https://singapore-locksmiths.com/car-locksmith/subaru/
 
 ## Areas
 - https://singapore-locksmiths.com/areas/

@@ -60,11 +60,38 @@ DESCRIPTION = ("24/7 emergency locksmith in Singapore since 1998, led by Uncle T
                "Door lockouts, digital lock opening and installation, safe opening, car lockouts, lock and "
                "letterbox replacement, islandwide.")
 
-DIGITAL_LOCK_BRANDS = ["Samsung", "Yale", "Philips", "Igloohome", "Solity", "Gateman", "Kaadas",
-                       "Häfele", "Aqara", "Schlage"]
-# Brands that get their own page at /digital-lock-opening/<brand>/
-# FILL: confirm this list with Uncle Thomas (only brands he handles).
-BRAND_PAGES = ["Samsung", "Yale", "Philips", "Igloohome", "Gateman"]
+DIGITAL_LOCK_BRANDS = ["Samsung", "Yale", "Philips", "Igloohome", "Kaadas", "Solity", "Gateman", "Häfele",
+                       "Aqara", "Xiaomi", "Lenovo", "Schlage", "Epic", "Milre", "Dessmann", "Lockin", "Ezviz"]
+# Digital / smart lock brands that get their own page at /digital-lock-opening/<brand>/
+BRAND_PAGES = ["Samsung", "Yale", "Philips", "Igloohome", "Gateman", "Kaadas", "Solity", "Häfele", "Aqara", "Xiaomi", "Lenovo"]
+
+# Car brands. Owner: Uncle Thomas opens and clones fobs for all makes EXCEPT Tesla — so Tesla is never listed.
+# CAR_BRAND_PAGES get their own page at /car-locksmith/<brand>/ (content in _build/cars.py).
+CAR_BRAND_PAGES = ["Toyota", "Honda", "Mercedes-Benz", "BMW", "Audi", "Volkswagen", "Mazda", "Lexus",
+                   "Land Rover", "Hyundai", "Kia", "Nissan", "Porsche", "Volvo", "Mitsubishi", "Subaru"]
+CAR_BRANDS_MORE = ["BYD", "MG", "Mini", "Peugeot", "Skoda", "Suzuki", "Ford", "Jaguar", "Jeep", "Renault",
+                   "Citroën", "Opel", "Infiniti", "Alfa Romeo", "Maserati", "Bentley", "Ferrari", "Lamborghini",
+                   "Rolls-Royce", "Chevrolet", "Cupra", "Polestar"]
+
+# Safe brands mentioned on the safe opening page (Uncle Thomas opens all makes).
+SAFE_BRANDS = ["Bumil", "Chubb", "Glory", "Uchida", "Eagle", "Phoenix", "Sentry", "Yale", "Lion", "Diplomat",
+               "Gunnebo", "Kokuyo", "Kaba", "Sargent & Greenleaf"]
+
+# ---- Google rating ------------------------------------------------------
+# Shown on the homepage first screen. _build/rating.json (written daily by the
+# "Update Google rating" GitHub Action) overrides these when it exists.
+# FILL: current Google rating (e.g. 4.6) and review count (e.g. 34). None = badge hidden.
+GOOGLE_RATING = None
+GOOGLE_REVIEW_COUNT = None
+try:
+    import json as _json, os as _os
+    _rf = _os.path.join(_os.path.dirname(__file__), "rating.json")
+    if _os.path.exists(_rf):
+        _r = _json.load(open(_rf))
+        GOOGLE_RATING = _r.get("rating") or GOOGLE_RATING
+        GOOGLE_REVIEW_COUNT = _r.get("count") or GOOGLE_REVIEW_COUNT
+except Exception:
+    pass
 
 # ---- Reviews ------------------------------------------------------------
 # FILL: up to 3 REAL Google reviews. The reviews section stays hidden until at
@@ -140,6 +167,7 @@ PRICES = [
     ("Digital lock emergency opening", "digital-lock-opening/", 150, "All brands"),
     ("Digital lock installation (labour)", "digital-lock-installation/", 120, "Lock supplied by you or us"),
     ("Car lockout (non-destructive)", "car-locksmith/", 100, "All makes and models"),
+    ("Car key fob cloning (spare key)", "car-locksmith/", "Quote on request", "All major car brands"),
     ("Main door / gate lock replacement (supply + install)", "lock-replacement/", 100, "Warranty included"),
     ("Letterbox lock replacement", "letterbox-lock-replacement/", 60, "HDB & condo letterboxes"),
     ("Safe opening", "safe-opening/", "Quote on request", "Depends on safe type"),

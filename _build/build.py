@@ -11,6 +11,7 @@ site.webmanifest, script.js and _headers in the repo root from:
   _build/content.py  page text for home, services, prices, about
   _build/areas.py    town pages
   _build/brands.py   digital lock brand pages
+  _build/cars.py     car brand pages
   _build/guides.py   guide articles
   _build/zh.py       Chinese pages
   _build/styles.css  the stylesheet (inlined into every page for speed)
@@ -27,7 +28,7 @@ ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 
 import config as C
-import content, areas, guides, brands, zh
+import content, areas, guides, brands, cars, zh
 
 TODAY = date.today().isoformat()
 PAGES = []          # (path, priority) for sitemap
@@ -269,7 +270,7 @@ def photos_schema(key):
 
 # ---------- HTML building blocks ----------
 WA_ICON = '<svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5A8.4 8.4 0 1 1 21 11.5z"/></svg>'
-PHONE_ICON = '<svg class="bi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>'
+PHONE_ICON = '<svg class="bi bi-phone" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>'
 
 
 def cta_buttons(size="btn-lg", center=False, wa_text=None, lang="en", pos="hero"):
@@ -560,11 +561,12 @@ def main():
     ctx = dict(C=C, render=render, page_schema=page_schema, page_hero=page_hero, cta_buttons=cta_buttons,
                cta_band=cta_band, faq_html=faq_html, business_node=business_node, person_node=person_node,
                breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
-               areas=areas, guides=guides, content=content, brands=brands, abs_url=abs_url,
+               areas=areas, guides=guides, content=content, brands=brands, cars=cars, abs_url=abs_url,
                BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema, photos_schema=photos_schema,
                breadcrumb_html=breadcrumb_html)
     content.build(ctx)
     brands.build(ctx)
+    cars.build(ctx)
     areas.build(ctx)
     guides.build(ctx)
     zh.build(ctx)
@@ -617,7 +619,7 @@ def main():
              f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas (US-trained safesmith), with a small team.",
              "- Verifies proof of residence or ownership before opening any door, car or safe.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
-             "- Does NOT offer key duplication or lock repair."]
+             "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands)."]
     if C.UEN:
         lines.append(f"- UEN: {C.UEN}")
     if C.EMAIL:
@@ -627,6 +629,7 @@ def main():
         lines.append(f"- {label}: {'S$' + str(price) if isinstance(price, int) else price}")
     groups = [("Main pages", lambda p: p.count("/") <= 1 and not p.startswith(("areas", "guides", "zh"))),
               ("Digital lock brands", lambda p: p.startswith("digital-lock-opening/") and p.count("/") == 2),
+              ("Car brands", lambda p: p.startswith("car-locksmith/") and p.count("/") == 2),
               ("Areas", lambda p: p.startswith("areas")),
               ("Guides", lambda p: p.startswith("guides")),
               ("Chinese (中文)", lambda p: p.startswith("zh"))]

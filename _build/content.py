@@ -10,8 +10,8 @@ BRANDS = ", ".join(C.DIGITAL_LOCK_BRANDS)
 ID_POLICY = ("For your security, we always check proof of residence or ownership before opening anything — "
              "for example NRIC with your address, a tenancy agreement or utility bill, or the car's log card.")
 WARRANTY = "Every lock replacement and installation comes with our warranty — with no expiry date."
-NO_REPAIR = ("We don't do lock repairs or key duplication. If a lock is faulty, we open it and replace it, "
-             "so the problem doesn't come back.")
+NO_REPAIR = ("We don't do lock repairs, key duplication or key cutting (the one exception is car key fobs, which we clone). "
+             "If a lock is faulty, we open it and replace it, so the problem doesn't come back.")
 
 # ======================================================================
 # SERVICES
@@ -42,8 +42,8 @@ dict(
 <li><strong>Condominiums</strong> — main doors, deadbolts and digital locks.</li>
 <li><strong>Landed homes</strong> — main doors, gates and back doors.</li>
 <li><strong>Offices and shops</strong> — office doors, glass doors, cabinets and roller shutters. See <a href="~/commercial-locksmith/">commercial locksmith</a>.</li>
-<li><strong>Digital lock won't open?</strong> Flat battery, forgotten PIN or faulty keypad — see <a href="~/digital-lock-opening/">digital lock opening</a>.</li>
-<li><strong>Keys locked in the car?</strong> See <a href="~/car-locksmith/">car lockout</a>.</li>
+<li><strong>Digital lock or smart lock won't open?</strong> Flat battery, forgotten PIN or faulty keypad — see <a href="~/digital-lock-opening/">digital and smart lock opening</a>.</li>
+<li><strong>Keys locked in the car, or need a spare key fob?</strong> See <a href="~/car-locksmith/">car locksmith</a>.</li>
 </ul>
 
 <h2>Damage-free first</h2>
@@ -68,16 +68,16 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="digital-lock-opening/", short="Digital lock opening", icon="🔐",
- card="Flat battery, forgotten PIN or faulty keypad? We open all digital lock brands, 24/7.",
- title="Digital Lock Opening Singapore 24/7 | All Brands from S$150",
- title_exp="Digital Lock Opening Singapore 24/7 | All Brands, Since 1998",
- desc="Locked out by your digital lock? Flat battery, forgotten PIN or faulty keypad — Uncle Thomas opens all brands, 24/7 islandwide. From S$150. Call 9224 9224.",
- h1="Digital Lock Won't Open? 24/7 Digital Lock Opening",
- sub="Flat battery, forgotten PIN, dead keypad or a lock that just won't respond — Uncle Thomas has developed his own damage-free techniques for opening digital locks of every brand.",
+ path="digital-lock-opening/", short="Digital & smart lock opening", icon="🔐",
+ card="Flat battery, forgotten PIN or faulty keypad? We open all digital lock and smart lock brands, 24/7.",
+ title="Digital Lock & Smart Lock Opening Singapore 24/7 | All Brands",
+ title_exp="Digital & Smart Lock Opening Singapore | All Brands Since 1998",
+ desc="Locked out by your digital lock or smart lock? Flat battery, forgotten PIN or faulty keypad: Uncle Thomas opens all brands, 24/7. From S$150. Call 9224 9224.",
+ h1="Digital Lock or Smart Lock Won't Open? 24/7 Opening",
+ sub="Flat battery, forgotten PIN, dead keypad, an app that won't connect, or a lock that just won't respond: Uncle Thomas has developed his own damage-free techniques for opening digital locks and smart locks of every brand.",
  badges=["All brands", "From {P_DIGITAL_OPEN}", "24/7 islandwide"],
  body="""
-<h2>Common digital lock problems we solve</h2>
+<h2>Common digital lock and smart lock problems we solve</h2>
 <ul>
 <li><strong>Battery went flat</strong> and the emergency power option didn't work.</li>
 <li><strong>Forgotten PIN</strong> or fingerprint no longer recognised.</li>
@@ -85,15 +85,16 @@ dict(
 <li><strong>Lock jammed or motor not turning</strong>, even with the right code.</li>
 <li><strong>Locked from the inside</strong> — privacy or double-lock mode left on.</li>
 <li><strong>Lost the backup key</strong> for the mechanical override.</li>
+<li><strong>Smart lock app offline</strong> or your phone is locked inside.</li>
 </ul>
 <p>Before you call, it's worth trying the quick checks in our guide: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or not opening — what to try first</a>.</p>
 
-<h2>Every brand, including</h2>
+<h2>Every digital and smart lock brand, including</h2>
 <ul class="tags">""" + "".join(f"<li>{b}</li>" for b in C.DIGITAL_LOCK_BRANDS) + """<li>and more</li></ul>
 <p>Main door locks, gate locks, rim locks and mortise digital locks — on HDB flats, condos, landed homes and offices.</p>
 {BRAND_LINKS}
 
-<h2>Uncle Thomas's own digital lock techniques</h2>
+<h2>Uncle Thomas's own digital and smart lock techniques</h2>
 <p>As Singapore homes moved from keys to keypads, Uncle Thomas kept learning. Over the years he has worked out his own damage-free ways to open faulty and locked digital locks — so in most cases you get back in <em>without</em> having to buy a new lock. Where a lock is truly beyond saving, we tell you honestly and can <a href="~/digital-lock-installation/">install a new one</a> on the spot.</p>
 
 <div class="callout"><p>{NO_REPAIR}</p></div>
@@ -105,21 +106,22 @@ dict(
 """,
  faqs=[
   ("Can you open a digital lock without damaging it?", "In most cases, yes. Uncle Thomas has developed his own damage-free techniques. If a lock is completely broken we'll explain the options before doing anything."),
-  ("Which digital lock brands do you open?", "All brands — including " + ", ".join(C.DIGITAL_LOCK_BRANDS) + "."),
+  ("Which digital lock and smart lock brands do you open?", "All brands — including " + ", ".join(C.DIGITAL_LOCK_BRANDS) + "."),
   ("My digital lock battery is flat. What should I do?", "Most digital locks have an emergency power point (often a 9V battery terminal) or a backup key. If those don't work, call or WhatsApp {PHONE} and we'll open it for you."),
   ("Do you repair digital locks?", "No — we don't do repairs. We open the lock, and if it's faulty we can replace it with a new one, covered by our no-expiry installation warranty."),
+  ("Is a smart lock different from a digital lock?", "A smart lock is a digital lock that also connects to an app, Wi-Fi or a smart home hub. Both run on batteries and can lock you out in the same ways, and we open both."),
   ("How much does it cost to open a digital lock?", "From {P_DIGITAL_OPEN}. Send a photo on WhatsApp for an exact price before we come."),
  ],
 ),
 # ----------------------------------------------------------------------
 dict(
- path="digital-lock-installation/", short="Digital lock installation", icon="📲",
- card="Neat, correct installation for HDB main doors, gates, condos and offices — with a no-expiry warranty.",
- title="Digital Lock Installation Singapore | HDB, Condo & Office",
- title_exp="Digital Lock Installation Singapore | No-Expiry Warranty",
- desc="Professional digital lock installation for HDB doors & gates, condos and offices. All brands, labour from S$120, warranty with no expiry. Call 9224 9224.",
- h1="Digital Lock Installation in Singapore",
- sub="Thinking of going keyless? Uncle Thomas installs digital locks of every brand on HDB main doors and gates, condo doors and offices — fitted properly, set up with you, and covered by a warranty that never expires.",
+ path="digital-lock-installation/", short="Digital & smart lock installation", icon="📲",
+ card="Neat, correct digital and smart lock installation for HDB doors, gates, condos and offices, with a no-expiry warranty.",
+ title="Digital Lock & Smart Lock Installation Singapore | HDB & Condo",
+ title_exp="Digital & Smart Lock Installation Singapore | No-Expiry Warranty",
+ desc="Digital lock and smart lock installation for HDB doors & gates, condos and offices. All brands, labour from S$120, no-expiry warranty. Call 9224 9224.",
+ h1="Digital Lock &amp; Smart Lock Installation in Singapore",
+ sub="Thinking of going keyless? Uncle Thomas installs digital locks and smart locks of every brand on HDB main doors and gates, condo doors and offices — fitted properly, set up with you, and covered by a warranty that never expires.",
  badges=["Labour from {P_DIGITAL_INSTALL}", "All brands", "No-expiry warranty"],
  body="""
 <h2>Why installation matters</h2>
@@ -127,7 +129,7 @@ dict(
 
 <h2>What we install</h2>
 <ul>
-<li><strong>HDB main door digital locks</strong> — including replacing an old mechanical lock.</li>
+<li><strong>HDB main door digital locks and smart locks</strong> — including replacing an old mechanical lock.</li>
 <li><strong>HDB gate digital locks</strong> — rim and mortise types for metal gates.</li>
 <li><strong>Condo and landed home locks</strong> — main doors, side doors and gates.</li>
 <li><strong>Office and shop locks</strong> — keypad and card access for small businesses. See <a href="~/commercial-locksmith/">commercial locksmith</a>.</li>
@@ -175,7 +177,8 @@ dict(
 <li><strong>Home safes</strong> — electronic keypad, key and combination safes.</li>
 <li><strong>Hotel-style and wardrobe safes</strong>.</li>
 <li><strong>Office and business safes</strong> — cash safes, drop safes and document safes.</li>
-<li><strong>Older mechanical dial safes</strong>.</li>
+<li><strong>Mechanical combination (dial) safes</strong> and smart keypad safes.</li>
+<li><strong>Filing safes, vault doors and bolts</strong>.</li>
 <li><strong>Safes on ships and vessels</strong>.</li>
 </ul>
 
@@ -187,6 +190,10 @@ dict(
 <li>Bolt jammed — the code is accepted but the door won't open.</li>
 <li>Inherited a safe and no one knows the code.</li>
 </ul>
+<h2>Safe brands we open</h2>
+<p>All makes, including:</p>
+<ul class="tags">""" + "".join(f"<li>{b}</li>" for b in C.SAFE_BRANDS) + """<li>and more</li></ul>
+
 <p>Before you call, try the steps in our guide: <a href="~/guides/forgot-safe-combination/">forgot your safe combination — what to do</a>.</p>
 
 <div class="callout"><p><strong>Proof of ownership:</strong> Before opening any safe we confirm it belongs to you or your business — for example a purchase receipt, company authorisation or proof of residence where the safe is kept. Jobs are handled discreetly.</p></div>
@@ -204,37 +211,50 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="car-locksmith/", short="Car lockout", icon="🚗",
- card="Keys locked in the car? Non-destructive car unlocking for all makes and models, 24/7.",
- title="Car Locksmith Singapore 24/7 | Car Lockout from S$100",
- title_exp="Car Locksmith Singapore 24/7 | Non-Destructive · Since 1998",
- desc="Keys locked in your car? Uncle Thomas unlocks all makes and models without damage, 24/7 islandwide. Car lockout from S$100. Call or WhatsApp 9224 9224.",
- h1="Car Locksmith Singapore — Keys Locked in the Car?",
- sub="Keys locked inside, or the remote stopped working? Uncle Thomas opens cars of all makes and models with non-destructive tools — no broken windows, no scratched doors.",
- badges=["From {P_CAR}", "All makes & models", "24/7 islandwide"],
+ path="car-locksmith/", short="Car locksmith & key fobs", icon="🚗",
+ card="Keys locked in the car, or need a spare key fob? Car unlocking and key fob cloning for all major brands, 24/7.",
+ title="Car Locksmith Singapore 24/7 | Unlocking & Key Fob Cloning",
+ title_exp="Car Locksmith Singapore | Car Key Fob Cloning, All Brands",
+ desc="Keys locked in the car or need a spare key fob? Uncle Thomas unlocks cars and clones key fobs for all major brands, 24/7 islandwide. Call 9224 9224.",
+ h1="Car Locksmith Singapore: Car Unlocking &amp; Key Fob Cloning",
+ sub="Keys locked inside, remote not working, or only one key fob left? Uncle Thomas opens cars of all major brands without damage, and clones car key fobs so you have a spare.",
+ badges=["Lockouts from {P_CAR}", "All major brands", "24/7 islandwide"],
  body="""
-<h2>Car lockouts we handle</h2>
+<h2>Two things we do for cars</h2>
+<h3>1. Car unlocking (keys locked inside)</h3>
 <ul>
 <li>Keys locked inside the car or boot.</li>
 <li>Remote key battery dead and the door won't open.</li>
-<li>Car locked at a carpark, petrol station or roadside — anywhere in Singapore.</li>
+<li>Car locked at a carpark, petrol station or roadside, anywhere in Singapore.</li>
 <li>Cars, vans and light commercial vehicles.</li>
 </ul>
+<p>We use professional car entry tools that open the door without damaging the paintwork, rubber seals or windows. It's much cheaper than breaking a window, and safer than trying a coat hanger yourself, which can damage the door's wiring and airbag sensors.</p>
 
-<h2>Non-destructive unlocking</h2>
-<p>We use professional car entry tools that open the door without damaging the paintwork, rubber seals or windows. It's much cheaper than breaking a window — and safer than trying a coat hanger yourself, which can damage the door's wiring and airbag sensors.</p>
+<h3>2. Car key fob cloning (spare key)</h3>
+<p>Down to your last key fob? A spare from the dealer can take time and cost a lot. Uncle Thomas clones car key fobs, including remote keys and smart (keyless) keys, so you have a working spare. It's the one kind of key we copy. We don't cut or copy house keys.</p>
+<ul>
+<li>Spare key fob for your car, so one lost key doesn't leave you stranded.</li>
+<li>Replacement fob for family members or a second driver.</li>
+<li>Remote keys, flip keys and smart keys for push-start cars.</li>
+</ul>
+<p>WhatsApp {PHONE} your car's make, model and year, plus a photo of your key (front and back), and we'll confirm we can do it and the price before you book.</p>
 
-<div class="callout"><p><strong>Proof of ownership:</strong> Before unlocking, we check that the car is yours — for example your NRIC against the vehicle log card, or a rental or company car agreement.</p></div>
+<h2>All car brands</h2>
+<p>We work on all the major makes on Singapore roads. Tap your brand for tips and details:</p>
+{CAR_BRAND_LINKS}
+<p>Also: {CAR_BRANDS_MORE} and more. Not sure about your model? Call or WhatsApp {PHONE} to check.</p>
+
+<div class="callout"><p><strong>Proof of ownership:</strong> Before unlocking a car or cloning a key, we check that the car is yours, for example your NRIC against the vehicle log card, or a rental or company car agreement.</p></div>
 
 <h2>Price</h2>
-<p>Car lockouts start from <strong>{P_CAR}</strong>. WhatsApp {PHONE} your location and car model and we'll confirm the price before we set off. See all <a href="~/prices/">prices</a>.</p>
-<p>Please note: we open locked cars. We don't cut or programme car keys.</p>
+<p>Car lockouts start from <strong>{P_CAR}</strong>. Key fob cloning is quoted per car, because it depends on the make, model and key type. WhatsApp {PHONE} your location, car model and a photo of the key, and we'll confirm the price before we set off. See all <a href="~/prices/">prices</a>.</p>
 """,
  faqs=[
   ("Can you open my car without damaging it?", "Yes. We use non-destructive car entry tools that don't damage the paint, seals or windows."),
-  ("Which cars can you open?", "All makes and models of cars, plus vans and light commercial vehicles."),
-  ("Can you make a new car key?", "No — we open locked cars, but we don't cut or programme car keys."),
-  ("How much is a car lockout?", "From {P_CAR}. We'll confirm the price before we set off."),
+  ("Which cars can you open?", "All major makes and models, including Toyota, Honda, Mercedes-Benz, BMW, Audi, Volkswagen, Mazda, Lexus, Land Rover, Hyundai, Kia, Nissan, Porsche, Volvo, Mitsubishi and Subaru, plus vans and light commercial vehicles. Not sure about yours? Call or WhatsApp to check."),
+  ("Can you make a spare car key fob?", "Yes. We clone car key fobs, including remote keys and smart keys, for all major brands. Send us your car's make, model and year and a photo of the key for a quote."),
+  ("Do you cut house keys too?", "No. Car key fobs are the only keys we copy. We don't do house key cutting or duplication."),
+  ("How much is a car lockout?", "From {P_CAR}. Key fob cloning is quoted per car. We'll confirm the price before we set off."),
  ],
 ),
 # ----------------------------------------------------------------------
@@ -316,7 +336,7 @@ dict(
 """,
  faqs=[
   ("I lost my HDB letterbox key. What should I do?", "WhatsApp us your block and a photo of the letterbox. We'll open it and fit a new lock with new keys after checking your proof of residence."),
-  ("Do you make duplicate letterbox keys?", "No, we don't do key duplication. We replace the lock and give you a new set of keys."),
+  ("Do you make duplicate letterbox keys?", "No, we don't do key duplication or key cutting. We replace the lock and give you a new set of keys."),
   ("How much does letterbox lock replacement cost?", "From {P_LETTERBOX}, including the new lock and keys."),
  ],
 ),
@@ -406,7 +426,7 @@ HOME_FAQS = [
   ("Do you check that I live there before opening the door?", "Yes. " + ID_POLICY + " It's how we keep every home safe."),
   ("Which areas in Singapore do you cover?", "All of Singapore — Central, East, West, North and North-East. See <a href=\"~/areas/\">areas we serve</a>."),
   ("Is there a warranty?", WARRANTY),
-  ("Do you do key duplication or lock repairs?", "No. We specialise in opening doors, digital locks and safes, and in lock replacement and installation. Faulty locks are replaced, not repaired."),
+  ("Do you do key duplication or lock repairs?", "No key duplication, key cutting or lock repairs. The one exception is car key fobs, which we clone for all major car brands. Otherwise we specialise in opening doors, digital and smart locks, safes and cars, and in lock replacement and installation. Faulty locks are replaced, not repaired."),
 ]
 
 
@@ -443,6 +463,14 @@ def build_home(x):
                     '<img src="~/assets/img/logo-640.jpg" alt="Uncle Thomas Locksmith mascot holding a key" width="340" height="340" fetchpriority="high"></picture>')
     else:
         hero_art = hero_photo
+    if C_.GOOGLE_RATING and C_.GOOGLE_REVIEW_COUNT:
+        r = float(C_.GOOGLE_RATING)
+        pct = max(0, min(100, r / 5 * 100))
+        rating_html = (f'<a class="g-rating" href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">'
+                       f'<span class="stars" style="--pct:{pct:.0f}%" aria-hidden="true">★★★★★</span>'
+                       f'<span><strong>{r:.1f}</strong> on Google · {int(C_.GOOGLE_REVIEW_COUNT)} reviews</span></a>')
+    else:
+        rating_html = "<!-- Google rating badge: set GOOGLE_RATING and GOOGLE_REVIEW_COUNT in _build/config.py -->"
     work = x["photo"]("home_work")
     work_section = "" if work.startswith("<!--") else f"""
 <section class="section section-alt" id="work">
@@ -462,8 +490,9 @@ def build_home(x):
     <div>
       <h1>24/7 Locksmith in Singapore</h1>
       <p class="hero-lead">Led by <strong>Uncle Thomas</strong>, locksmith and safesmith since {C_.FOUNDED}.</p>
+      {rating_html}
       <ul class="hero-tiles">
-        <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door unlocked: HDB, condo, landed, office, digital locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
+        <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door: HDB, condo, landed, office, digital &amp; smart locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
         <li><a href="~/safe-opening/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="15" rx="2"/><circle cx="12" cy="11" r="3.5"/><path d="M12 7.5V9M12 13v1.5M8.5 11H10M14 11h1.5"/><path d="M6.5 18.5V21M17.5 18.5V21"/></svg></span><span class="t-txt"><strong>Safes</strong><span>All safes and bolts: combination dials and smart keypads</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
         <li><a href="~/car-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5V12l1.8-4.6A2 2 0 0 1 7.7 6h8.6a2 2 0 0 1 1.9 1.4L20 12v4.5"/><path d="M3 16.5h18"/><path d="M4.5 12h15"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><span class="t-txt"><strong>Cars</strong><span>Car unlocking and key fob cloning, all major brands</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
       </ul>
@@ -488,7 +517,7 @@ def build_home(x):
     <h2 class="section-title">Locksmith Services in Singapore</h2>
     <p class="section-lead">Doors, digital locks, safes and cars — for HDB flats, condos, landed homes, offices and shops.</p>
     <div class="grid g4">{service_cards()}</div>
-    <p class="note">We specialise in opening and replacing locks. We do <strong>not</strong> offer key duplication or lock repair.</p>
+    <p class="note">We specialise in opening and replacing locks. We do <strong>not</strong> offer key duplication, key cutting or lock repair. The one exception: we clone car key fobs.</p>
   </div>
 </section>
 
@@ -676,7 +705,7 @@ def build_prices(x):
 def build_about(x):
     C_ = x["C"]
     crumbs = [("Home", ""), ("About", "about/")]
-    title = "About Uncle Thomas | Singapore Locksmith & Safesmith Since 1998"
+    title = "About Uncle Thomas | Singapore Locksmith & Safesmith"
     desc = "Meet Uncle Thomas, the locksmith Singapore calls 'Shifu'. An apprentice in 1998, US-trained in safesmithing, he has opened safes on ships and across Asia."
     body = (x["page_hero"](crumbs, 'Meet Uncle Thomas — The Locksmith Singapore Calls "Shifu"',
             f"From apprentice in {C_.FOUNDED} to US-trained safesmith — the story behind Uncle Thomas Locksmith.",
@@ -699,7 +728,7 @@ def build_about(x):
 <li><strong>Price before work</strong> — <a href="~/prices/">upfront starting prices</a>, and your final price confirmed before we begin.</li>
 <li><strong>ID verified</strong> — {ID_POLICY}</li>
 <li><strong>Warranty</strong> — {WARRANTY}</li>
-<li><strong>Specialists</strong> — we focus on opening doors, digital locks and safes, and on lock replacement and installation. We don't do lock repairs or key duplication.</li>
+<li><strong>Specialists</strong> — we focus on opening doors, digital locks and safes, and on lock replacement and installation. We don't do lock repairs, key duplication or key cutting, except cloning car key fobs.</li>
 </ul>
 <p>See all our <a href="~/services/">locksmith services</a>.</p>
 <div class="photo-grid">{x["photo"]("about_van")}{x["photo"]("about_tools")}</div>
@@ -720,6 +749,10 @@ def build(x):
                      .replace("{NO_REPAIR}", NO_REPAIR))
     brand_links = "".join(f'<li><a href="~/digital-lock-opening/{b["slug"]}/">{b["name"]} digital lock</a></li>'
                           for b in x["brands"].BRANDS)
+    car_more = ", ".join(C.CAR_BRANDS_MORE)
+    for s in SERVICES:
+        s["body"] = (s["body"].replace("{CAR_BRAND_LINKS}", x["cars"].links_html())
+                     .replace("{CAR_BRANDS_MORE}", car_more))
     for s in SERVICES:
         s["body"] = s["body"].replace("{BRAND_LINKS}",
             f'<h3>Brand guides: what to try first</h3><ul class="link-pills">{brand_links}</ul>' if brand_links else "")
