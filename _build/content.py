@@ -460,15 +460,15 @@ def build_home(x):
 <section class="hero">
   <div class="container hero-inner">
     <div>
-      <p class="eyebrow">24/7 · Islandwide · Since {C_.FOUNDED}</p>
       <h1>24/7 Locksmith in Singapore</h1>
+      <p class="hero-lead">Led by <strong>Uncle Thomas</strong>, locksmith and safesmith since {C_.FOUNDED}.</p>
       <ul class="hero-tiles">
-        <li><a href="~/emergency-locksmith/"><span class="t-ico" aria-hidden="true">🚪</span><span class="t-txt"><strong>Doors</strong><span>Any door unlocked: HDB, condo, landed, office and digital locks</span></span></a></li>
-        <li><a href="~/safe-opening/"><span class="t-ico" aria-hidden="true">🔐</span><span class="t-txt"><strong>Safes</strong><span>All safes and bolts: combination dials and smart keypads</span></span></a></li>
-        <li><a href="~/car-locksmith/"><span class="t-ico" aria-hidden="true">🚗</span><span class="t-txt"><strong>Cars</strong><span>Car unlocking and key fob cloning, all major brands</span></span></a></li>
+        <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door unlocked: HDB, condo, landed, office, digital locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
+        <li><a href="~/safe-opening/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="15" rx="2"/><circle cx="12" cy="11" r="3.5"/><path d="M12 7.5V9M12 13v1.5M8.5 11H10M14 11h1.5"/><path d="M6.5 18.5V21M17.5 18.5V21"/></svg></span><span class="t-txt"><strong>Safes</strong><span>All safes and bolts: combination dials and smart keypads</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
+        <li><a href="~/car-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5V12l1.8-4.6A2 2 0 0 1 7.7 6h8.6a2 2 0 0 1 1.9 1.4L20 12v4.5"/><path d="M3 16.5h18"/><path d="M4.5 12h15"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><span class="t-txt"><strong>Cars</strong><span>Car unlocking and key fob cloning, all major brands</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
       </ul>
       {x["cta_buttons"]()}
-      <p class="hero-note">From <strong>{{P_LOCKOUT}}</strong> · Price confirmed before we start · ID checked</p>
+      <p class="hero-note">From <strong>{{P_LOCKOUT}}</strong> · Price agreed before we start</p>
     </div>
     <div class="hero-art">{hero_art}</div>
   </div>
@@ -535,7 +535,7 @@ def build_home(x):
     <p class="section-lead">What you get with every call.</p>
     <div class="grid g3">
       <div class="card"><span class="ico" aria-hidden="true">⏱️</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
-      <div class="card"><span class="ico" aria-hidden="true">💬</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
+      <div class="card"><span class="ico" aria-hidden="true">🏷️</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
       <div class="card"><span class="ico" aria-hidden="true">🛡️</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
       <div class="card"><span class="ico" aria-hidden="true">🪪</span><h3>ID verified</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
       <div class="card"><span class="ico" aria-hidden="true">✅</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
