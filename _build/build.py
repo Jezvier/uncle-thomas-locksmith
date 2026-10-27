@@ -463,7 +463,7 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 {body}
 </main>
 {footer_html(lang)}
-<script src="~/script.js?v={C.ASSET_VERSION}" defer></script>
+<script src="~/script.js?v={hashlib.md5(SCRIPT_JS.encode()).hexdigest()[:8]}" defer></script>
 </body>
 </html>
 '''
