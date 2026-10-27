@@ -1,0 +1,19 @@
+# Old Wix site (singapore-locksmiths.com before Oct 2026) -> new pages.
+# Search engines still list some of these; 301s pass their value to the new pages.
+/contact-us                                 /contact/                          301
+/contact-us/                                /contact/                          301
+/about-us                                   /about/                            301
+/about-us/                                  /about/                            301
+/book-online                                /contact/                          301
+/booking                                    /contact/                          301
+/pricing                                    /prices/                           301
+/price-list                                 /prices/                           301
+/faq                                        /#faq                              301
+/gallery                                    /                                  301
+/home                                       /                                  301
+/blog                                       /guides/                           301
+/blog/*                                     /guides/                           301
+/post/3-types-of-common-locks-in-singapore  /guides/hdb-gate-lock-types/       301
+/post/*                                     /guides/                           301
+/service-page/*                             /services/                         301
+/services-1                                 /services/                         301
