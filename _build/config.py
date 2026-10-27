@@ -134,9 +134,11 @@ PHOTOS = {
     ],
     "safe-opening/": [
         ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
+        ("locksmith-safe-dial-manipulation.jpg", "Locksmith using a dial tool on the combination lock of a large stainless steel safe in Singapore", "Working the combination dial of a large safe"),
         ("bumil-safe-faulty-keypad-before.jpg", "Bumil home safe with its original electronic keypad lock", "1. The safe with its original keypad lock"),
         ("bumil-safe-opened-lock-mechanism.jpg", "Safe door with the lock panel removed, showing the bolt mechanism and wiring", "2. Lock panel off, mechanism exposed"),
         ("bumil-safe-new-keypad-after.jpg", "Bumil home safe with a new electronic keypad lock fitted", "3. New keypad lock fitted"),
+        ("chubb-safe-singapore.jpg", "Older Chubb safe with a spoked handle, combination dial and key lock in a Singapore storeroom", "Older Chubb safe: combination dial plus key lock"),
     ],
     "car-locksmith/":             (None, "Car door being unlocked with non-destructive tools", "Non-destructive car unlocking"),
     "lock-replacement/": [
