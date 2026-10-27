@@ -378,6 +378,7 @@ def footer_html(lang="en"):
         <li><span class="lbl">{t["hours"]}:</span> {t["hours_v"]}</li>
         <li><span class="lbl">{t["coverage"]}:</span> {t["coverage_v"]}</li>
         <li><a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener" class="g-link">{icons.svg("star", cls="bi bi-star", fill=True)} {t["google"]}</a></li>
+        <li><a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{"给我们留下 Google 评价" if lang == "zh" else "Leave us a Google review"}</a></li>
       </ul>
     </div>
     <div><h2>{t["f_services"]}</h2><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></div>
