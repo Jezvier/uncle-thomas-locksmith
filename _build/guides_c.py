@@ -15,7 +15,7 @@ dict(
 <p>A note on us: Uncle Thomas Locksmith doesn't do repairs. We <a href="~/digital-lock-opening/">open faulty digital and smart locks</a>, and if a lock is beyond saving we <a href="~/digital-lock-installation/">replace it</a> with a no-expiry installation warranty. So we have no reason to talk you into a repair you don't need.</p>
 
 <h2>First: are you locked out right now?</h2>
-<p>If you're outside and the lock won't open, getting in comes first. Try the quick checks in our guide <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or won't open</a>: emergency power, the backup key and waiting out a wrong-code lockout. If none of them work, call or WhatsApp {PHONE}. We open digital and smart locks of every brand, 24/7, damage-free wherever possible, from <strong>{P_DIGITAL_OPEN}</strong>.</p>
+<p>If you're outside and the lock won't open, getting in comes first. Try the quick checks in our guide <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or won't open</a>: emergency power, the backup key and waiting out a wrong-code lockout. If none of them work, call or WhatsApp {PHONE}. We open digital and smart locks of every brand, 24/7, damage-free wherever possible.</p>
 
 <h2>Problems you can usually fix yourself</h2>
 <ul>
@@ -52,7 +52,7 @@ dict(
   ("Do you repair digital locks?", "No. We open faulty digital and smart locks, and if a lock can't be saved we replace it, with a no-expiry installation warranty. For warranty repairs, contact the brand or the shop that sold the lock."),
   ("Is it worth repairing an old digital lock?", "Often not. If the lock is out of warranty, parts are hard to find, or the repair costs close to a new lock, replacing it is usually the better value."),
   ("My digital lock beeps but won't open. Is it broken?", "Check the batteries first. If fresh batteries don't help and the motor runs but the bolt doesn't move, the lock body has likely failed. Don't force the handle; call us."),
-  ("Can you open a smart lock that's not working?", "Yes. We open digital and smart locks of every brand, 24/7, damage-free wherever possible, from {P_DIGITAL_OPEN}."),
+  ("Can you open a smart lock that's not working?", "Yes. We open digital and smart locks of every brand, 24/7, damage-free wherever possible."),
  ],
 ),
 # ----------------------------------------------------------------------
@@ -180,7 +180,7 @@ dict(
 <p>Retrace your steps: the last carpark, petrol station, office, gym, coffee shop. Ask building management and shops you visited. Check bags, jacket pockets and between car seats. If you lost it in a mall or MRT station, check their lost-and-found.</p>
 
 <h2>2. Is the car locked with the key inside?</h2>
-<p>If the key is locked inside the car, that's a lockout, not a lost key. We open cars of all major brands without damage, from <strong>{P_CAR}</strong>. See <a href="~/car-locksmith/">car locksmith</a>.</p>
+<p>If the key is locked inside the car, that's a lockout, not a lost key. We open cars of all major brands without damage. See <a href="~/car-locksmith/">car locksmith</a>.</p>
 
 <h2>3. Do you still have a working key?</h2>
 <p>If you still have one working key, this is the best time to get a spare made. We clone car key fobs, copying your working key so you have a backup. It's usually faster and cheaper than waiting for a new key from the dealer.</p>

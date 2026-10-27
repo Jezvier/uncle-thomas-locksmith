@@ -192,7 +192,7 @@ def build(x):
         others = " · ".join(f'<a href="~/car-locksmith/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["name"] in rel)
         body = (x["page_hero"](crumbs, f"{n} Locksmith Singapore: Unlocking &amp; Key Fob Cloning",
                 f"Keys locked inside your {n}, or down to your last key fob? Uncle Thomas opens {n} cars without damage and clones {n} key fobs, 24/7 anywhere in Singapore.",
-                ["Lockouts from {P_CAR}", "Key fob cloning", "24/7 islandwide"]) +
+                ["Non-destructive entry", "Key fob cloning", "24/7 islandwide"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <h2>{n} cars in Singapore</h2>
 <p>{b["about"]} We work on {n} models including the {b["models"]}.</p>
@@ -205,7 +205,7 @@ def build(x):
 <p>Details vary by year, so check your manual. Still stuck? Call us. Key locked inside instead? See <a href="~/guides/keys-locked-in-car/">keys locked in the car</a>.</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
-<p><strong>Price:</strong> {n} lockouts from {{P_CAR}}; for a spare fob, WhatsApp {{PHONE}} the model, year and a photo of the key. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
+<p><strong>Spare fob?</strong> WhatsApp {{PHONE}} the model, year and a photo of the key, and we'll confirm before you book. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
 <p>Related: {others} · <a href="~/car-locksmith/">all car brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +

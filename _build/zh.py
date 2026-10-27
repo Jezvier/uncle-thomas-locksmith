@@ -66,16 +66,16 @@ def build(x):
         for p, n in ZH_NAMES.items())
 
     # ------------------------------------------------------------ /zh/
-    title = "新加坡锁匠 24小时开锁 | 紧急开锁 S$80起 | Uncle Thomas"
+    title = "新加坡锁匠 24小时开锁 | 1998年至今 | Uncle Thomas"
     desc = ("被锁在门外？Uncle Thomas 自1998年起提供新加坡24小时紧急开锁服务：组屋、公寓、电子锁、保险箱和汽车开锁，"
-            "全岛服务，S$80起。电话 9224 9224。")
+            "全岛服务，开工前先报价。电话 9224 9224。")
     body = f"""{REVIEW_NOTE}
 <section class="hero">
   <div class="container hero-inner">
     <div>
       <p class="eyebrow">新加坡锁匠"师傅" · 自{C.FOUNDED}年</p>
       <h1>新加坡24小时锁匠 — 被锁在门外？<span class="hl">Uncle Thomas</span> 马上到</h1>
-      <p class="hero-sub">紧急开锁、电子锁、保险箱和汽车开锁 — 尽可能无损开锁，覆盖新加坡全岛。开工前先报价，<strong>S$80 起</strong>。</p>
+      <p class="hero-sub">紧急开锁、电子锁、保险箱和汽车开锁 — 尽可能无损开锁，覆盖新加坡全岛。开工前先报价。</p>
       {cta(lang="zh")}
       <ul class="badges"><li>24小时，包括公共假期</li><li>全岛服务</li><li>美国受训保险箱技师</li><li>核对身份</li><li>保修无期限</li></ul>
     </div>
@@ -89,7 +89,7 @@ def build(x):
     <div class="trust-item"><strong>自{C.FOUNDED}年</strong><span>{C.YEARS}年以上经验</span></div>
     <div class="trust-item"><strong>24小时</strong><span>夜间、周末、公共假期</span></div>
     <div class="trust-item"><strong>全岛服务</strong><span>新加坡每个地区</span></div>
-    <div class="trust-item"><strong>S$80 起</strong><span>开工前先确认价格</span></div>
+    <div class="trust-item"><strong>保修无期限</strong><span>所有换锁及安装</span></div>
   </div>
 </section>
 
@@ -151,13 +151,13 @@ def build(x):
 
     # ------------------------------------------------------------ /zh/emergency-locksmith/
     path = "zh/emergency-locksmith/"
-    title = "紧急开锁 新加坡24小时 | 组屋公寓开锁 S$80起 | Uncle Thomas"
+    title = "紧急开锁 新加坡24小时 | 组屋公寓开锁 | Uncle Thomas"
     desc = ("被锁在门外？Uncle Thomas 提供新加坡24小时紧急开锁服务，组屋、公寓、有地住宅和办公室，尽可能无损开锁。"
-            "S$80起，电话 9224 9224。")
+            "开工前先报价，电话 9224 9224。")
     crumbs = [("首页", "zh/"), ("紧急开锁", path)]
     body = (REVIEW_NOTE + x["page_hero"](crumbs, "新加坡24小时紧急开锁",
             "被锁在门外？无论白天黑夜、周末或公共假期，请致电 Uncle Thomas。接到电话立即出发，尽可能无损开锁。",
-            ["白天 S$80 起", "24小时全岛服务", "核对身份，保障安全"], lang="zh") +
+            ["1998年至今", "24小时全岛服务", "核对身份，保障安全"], lang="zh") +
             f'''<section class="section"><div class="container narrow prose">
 <h2>被锁在门外？致电后的流程</h2>
 <ol>
@@ -183,7 +183,7 @@ def build(x):
 <div class="callout"><p><strong>为什么要核对身份：</strong>{ID_ZH}这是为了保护您 — 不核对身份就随便开门的锁匠，对大家都是风险。</p></div>
 
 <h2>新加坡紧急开锁要多少钱？</h2>
-<p>上午9点至傍晚6点开锁 <strong>S$80 起</strong>，非办公时间、周末及公共假期 <strong>S$120 起</strong>。最终价格视锁的种类以及是否需要更换零件而定，开工前一定先和您确认。完整价格请看<a href="~/zh/#pricing">价格表</a>。</p>
+<p>价格视锁的种类、开锁时间以及是否需要更换零件而定，开工前一定先和您确认。完整价格请看<a href="~/zh/#pricing">价格表</a>。</p>
 
 <h2>全岛服务，24小时</h2>
 <p>我们服务新加坡每个地区，从兀兰到淡滨尼、从裕廊到大巴窑。请看<a href="~/areas/">服务地区</a>（英文）。</p>
@@ -213,11 +213,11 @@ def build(x):
 # FILL: native Chinese speaker review. Added 27 Oct 2026.
 ZH_PAGES = {
 "digital-lock-opening/": dict(
- title="电子锁开锁 智能锁开锁 新加坡24小时 | 所有品牌 S$150起",
- desc="电子锁或智能锁打不开？电池没电、忘记密码、键盘故障或App离线，Uncle Thomas 24小时为您开锁，所有品牌，S$150起。电话 9224 9224。",
+ title="电子锁开锁 智能锁开锁 新加坡24小时 | 所有品牌",
+ desc="电子锁或智能锁打不开？电池没电、忘记密码、键盘故障或App离线，Uncle Thomas 24小时为您开锁，所有品牌，尽可能无损开锁。电话 9224 9224。",
  h1="电子锁、智能锁打不开？24小时开锁",
  sub="电池没电、忘记密码、指纹不认、键盘不亮或智能锁App连不上 — Uncle Thomas 自创无损开启故障电子锁和智能锁的方法，所有品牌都能开。",
- badges=["所有品牌", "S$150 起", "24小时全岛"],
+ badges=["所有品牌", "尽可能无损开锁", "24小时全岛"],
  body="""
 <h2>常见的电子锁和智能锁问题</h2>
 <ul>
@@ -233,7 +233,7 @@ ZH_PAGES = {
 <h2>我们不修锁</h2>
 <p>我们先帮您开锁。如果锁已经坏了，可以当场为您<a href="~/zh/lock-replacement/">换新锁</a>，{WARRANTY}</p>
 <h2>价格</h2>
-<p>电子锁、智能锁紧急开锁 <strong>S$150 起</strong>，视品牌、型号和故障而定。WhatsApp 锁的照片（正面和里面）至 {PHONE}，出发前先给您确定价格。</p>
+<p>价格视品牌、型号和故障而定。WhatsApp 锁的照片（正面和里面）至 {PHONE}，出发前先给您确定价格。</p>
 <div class="callout"><p><strong>安全第一：</strong>{ID}</p></div>
 """,
  faqs=[("你们能开哪些品牌的电子锁？", "所有品牌，包括 Samsung、Yale、Philips、Igloohome、Kaadas、Solity、Gateman、Häfele、Aqara、小米和联想等。"),
@@ -273,7 +273,7 @@ ZH_PAGES = {
  desc="钥匙锁在车里，或想复制一把汽车遥控钥匙？Uncle Thomas 无损汽车开锁，并为所有主要品牌复制车钥匙，24小时全岛服务。电话 9224 9224。",
  h1="汽车开锁和车钥匙复制",
  sub="钥匙锁在车里、遥控钥匙没反应，或只剩最后一把钥匙？Uncle Thomas 无损打开所有主要品牌的汽车，也能复制汽车遥控钥匙，让您多一把后备钥匙。",
- badges=["开锁 S$100 起", "所有主要品牌", "24小时全岛"],
+ badges=["无损开锁", "所有主要品牌", "24小时全岛"],
  body="""
 <h2>1. 汽车开锁</h2>
 <ul>
@@ -289,7 +289,7 @@ ZH_PAGES = {
 <p>所有主要品牌，包括丰田（Toyota）、本田（Honda）、奔驰（Mercedes-Benz）、宝马（BMW）、奥迪（Audi）、大众（Volkswagen）、马自达（Mazda）、雷克萨斯（Lexus）、路虎（Land Rover）、现代（Hyundai）、起亚（Kia）、日产（Nissan）、保时捷（Porsche）、沃尔沃（Volvo）、三菱（Mitsubishi）和斯巴鲁（Subaru）等。不确定您的车型？请致电或 WhatsApp 询问。</p>
 <div class="callout"><p><strong>拥有证明：</strong>开车门或复制钥匙之前，我们会确认车辆属于您，例如身份证和车辆登记文件（log card）。</p></div>
 <h2>价格</h2>
-<p>汽车开锁 <strong>S$100 起</strong>。车钥匙复制视品牌、型号和钥匙种类报价。</p>
+<p>汽车开锁和车钥匙复制视品牌、型号和钥匙种类报价，出发前先确认价格。</p>
 """,
  faqs=[("开车门会弄坏我的车吗？", "不会。我们用专业的无损开锁工具，不会弄坏车漆、胶条或车窗。"),
        ("你们能复制汽车遥控钥匙吗？", "可以。我们为所有主要品牌复制汽车遥控钥匙和智能钥匙。请发送车型、年份和钥匙照片报价。"),
@@ -297,11 +297,11 @@ ZH_PAGES = {
        ("汽车开锁要多少钱？", "S$100 起，出发前先确认价格。")],
  svc="Car locksmith: unlocking and key fob cloning", minp=100),
 "lock-replacement/": dict(
- title="换锁 新加坡 | 组屋大门锁、铁门锁更换 S$100起 | Uncle Thomas",
- desc="需要换锁？组屋大门锁、铁门锁、房门和厕所门锁更换，全岛服务，S$100起（含锁及安装），保修无期限。电话 9224 9224。",
+ title="换锁 新加坡 | 组屋大门锁、铁门锁更换 | Uncle Thomas",
+ desc="需要换锁？组屋大门锁、铁门锁、房门和厕所门锁更换，全岛服务，含锁及安装，保修无期限。电话 9224 9224。",
  h1="新加坡换锁 — 大门锁和铁门锁",
  sub="钥匙不见了、刚搬新家，或锁已经旧了？Uncle Thomas 用优质的锁为您更换大门锁、铁门锁和房门锁，每次换锁都享有无期限保修。",
- badges=["S$100 起", "保修无期限", "当场更换"],
+ badges=["开工前报价", "保修无期限", "当场更换"],
  body="""
 <h2>什么时候应该换锁</h2>
 <ul>
@@ -323,7 +323,7 @@ ZH_PAGES = {
 <h2>保修</h2>
 <p>{WARRANTY}</p>
 <h2>价格</h2>
-<p>大门或铁门换锁 <strong>S$100 起</strong>，包括新锁和安装。WhatsApp 锁的照片至 {PHONE}，即可获得准确报价。</p>
+<p>大门或铁门换锁包括新锁和安装，价格视所选的锁而定。WhatsApp 锁的照片至 {PHONE}，即可获得准确报价。</p>
 """,
  faqs=[("搬新家应该换锁吗？", "应该。之前的屋主、租客或装修师傅可能还有钥匙。"),
        ("你们修锁吗？", "不修。我们为您换上新锁，比修理更可靠，并享有无期限保修。"),

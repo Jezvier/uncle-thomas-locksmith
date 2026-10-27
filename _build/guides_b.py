@@ -54,7 +54,7 @@ dict(
 <p>Lock disputes between landlords and tenants — for example, a landlord changing the locks to keep a tenant out — are serious and can have legal consequences. A locksmith is not the right person to settle them. If you're in a dispute, seek legal advice or mediation; Singapore has the Community Mediation Centre, and the <a href="https://www.judiciary.gov.sg/civil/file-small-claim" target="_blank" rel="noopener">Small Claims Tribunals</a> hear disputes over residential leases of up to two years, for claims up to S$20,000. Uncle Thomas will not change locks to exclude someone who lives at the property.</p>
 
 <h2>What it costs</h2>
-<p>With Uncle Thomas, main door and gate lock replacement starts from <strong>{P_REPLACE}</strong> including supply and installation; letterbox lock replacement from <strong>{P_LETTERBOX}</strong>; and digital lock installation from <strong>{P_DIGITAL_INSTALL}</strong> for labour. Lockouts start from <strong>{P_LOCKOUT}</strong> (9am–6pm) and <strong>{P_AFTERHOURS}</strong> after hours. Every replacement and installation comes with our no-expiry warranty, and we provide receipts for your records. See the <a href="~/prices/">price list</a>.</p>
+<p>With Uncle Thomas, you get the price before we start. Every replacement and installation comes with our no-expiry warranty, and we provide receipts for your records. See the <a href="~/prices/">price list</a>.</p>
 
 <h2>Quick checklist</h2>
 <ol>
@@ -130,7 +130,7 @@ dict(
 <p>HDB doesn't require a permit to replace a main entrance gate, but the <a href="https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/renovation/guidelines/building-works" target="_blank" rel="noopener">HDB renovation guidelines</a> say the new gate must keep the original width, number of panels and swing, must not block the escape route, and along a common corridor must leave at least 0.6m to the parapet wall. Replacing the lock on an existing gate is generally a routine job.</p>
 
 <h2>What it costs</h2>
-<p>With Uncle Thomas, gate lock replacement starts from <strong>{P_REPLACE}</strong> including supply and installation, and every replacement has our no-expiry warranty. If you're locked out by a gate lock, lockouts start from <strong>{P_LOCKOUT}</strong> (9am–6pm) and <strong>{P_AFTERHOURS}</strong> after hours. Digital gate lock installation starts from <strong>{P_DIGITAL_INSTALL}</strong> for labour. See the full <a href="~/prices/">price list</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
+<p>With Uncle Thomas, gate lock replacement includes supply and installation, every replacement has our no-expiry warranty, and you get the price before we start. See the full <a href="~/prices/">price list</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
 
 <div class="callout navy"><p><strong>Gate lock stuck or worn?</strong> Send a photo to {PHONE} and we'll tell you what it is and what it'll cost.</p></div>
 """,
@@ -199,7 +199,7 @@ dict(
 </ul>
 
 <h2>What it costs</h2>
-<p>With Uncle Thomas, digital lock installation starts from <strong>{P_DIGITAL_INSTALL}</strong> for labour (the lock is supplied by you or us), and traditional main door or gate lock replacement starts from <strong>{P_REPLACE}</strong> including supply and installation. Every installation and replacement has our no-expiry warranty. If you're locked out, digital lock opening starts from <strong>{P_DIGITAL_OPEN}</strong> and standard lockouts from <strong>{P_LOCKOUT}</strong>. See the full <a href="~/prices/">price list</a>, <a href="~/digital-lock-installation/">digital lock installation</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
+<p>With Uncle Thomas, we install digital locks you supply or we supply, and replace traditional main door and gate locks. Every installation and replacement has our no-expiry warranty, and you get the price before we start. See the full <a href="~/prices/">price list</a>, <a href="~/digital-lock-installation/">digital lock installation</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
 
 <div class="callout navy"><p><strong>Not sure which to choose?</strong> WhatsApp a photo of your door to {PHONE} and Uncle Thomas will recommend options that fit.</p></div>
 """,

@@ -518,7 +518,7 @@ def build(x):
         cards.append(f'<div class="card area-card"><h3>{r}</h3><div class="town-links">{linked}{other}</div></div>')
     body = (x["page_hero"](crumbs, "Locksmith Near Me — Every Town in Singapore",
             "Wherever you are on the island, Uncle Thomas and his team can reach you — 24 hours a day, including weekends and public holidays.",
-            ["24/7 islandwide", "We set off immediately", "From {P_LOCKOUT}"]) +
+            ["24/7 islandwide", "We set off immediately", "Since 1998"]) +
             f'''<section class="section"><div class="container"><h2 class="section-title">Areas We Serve</h2>
 <p class="section-lead">Tap your town for local details. Don't see your area? We still cover it — every part of Singapore.</p>
 <div class="grid g3">{"".join(cards)}</div>
@@ -544,9 +544,9 @@ def build(x):
             title = f"Locksmith {n} 24/7 | Uncle Thomas Locksmith"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas"
-        desc = f"24/7 locksmith in {n} — door lockouts, digital locks, safes and car lockouts. Uncle Thomas sets off as soon as you call. From S$80. Call 9224 9224."
+        desc = f"24/7 locksmith in {n} — door lockouts, digital locks, safes and car lockouts. Uncle Thomas sets off as soon as you call. Since 1998. Call 9224 9224."
         if len(desc) > 158:
-            desc = f"24/7 locksmith in {n}: lockouts, digital locks, safes & cars. We set off as soon as you call. From S$80. Call 9224 9224."
+            desc = f"24/7 locksmith in {n}: lockouts, digital locks, safes & cars. We set off as soon as you call. Since 1998. Call 9224 9224."
         facts = (f'<div class="facts"><div class="fact"><strong>Estates we cover</strong>{", ".join(t["estates"])}</div>'
                  f'<div class="fact"><strong>Landmarks</strong>{", ".join(t["landmarks"])}</div>'
                  f'<div class="fact"><strong>MRT / LRT</strong>{", ".join(t["mrt"])}</div>'
@@ -559,10 +559,10 @@ def build(x):
         near = [TOWN_BY_SLUG[s] for s in t["nearby"] if s in TOWN_BY_SLUG]
         near_html = " and ".join(f'<a href="~/areas/{m["slug"]}/">{m["name"]}</a>' for m in near)
         faqs = list(t["faqs"]) + ([EXTRA_FAQS[t["slug"]]] if t["slug"] in EXTRA_FAQS else []) + [
-            (f"How much does a locksmith in {n} cost?", "The same as anywhere in Singapore — lockouts from {P_LOCKOUT} (9am–6pm) and {P_AFTERHOURS} after hours. We confirm the price before we start. See our <a href=\"~/prices/\">price list</a>."),
+            (f"How much does a locksmith in {n} cost?", "The same as anywhere in Singapore: it depends on the lock and the time of day, and we confirm the price before we start. See our <a href=\"~/prices/\">price list</a>."),
         ]
         body = (x["page_hero"](crumbs, f"Locksmith in {n} — 24/7 Emergency Service",
-                f"Locked out in {n}? {t['intro']}", ["24/7 incl. public holidays", "From {P_LOCKOUT}", "ID verified"]) +
+                f"Locked out in {n}? {t['intro']}", ["24/7 incl. public holidays", "Since 1998", "ID verified"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <h2>Locksmith work in {n}</h2>
 <p>{t["overview"]}</p>

@@ -22,12 +22,12 @@ SERVICES = [
 dict(
  path="emergency-locksmith/", short="Emergency lockout", icon="door",
  card="Locked out of your HDB, condo, house or office? We get you back in — damage-free wherever possible.",
- title="Emergency Locksmith Singapore 24/7 | Lockouts from S$80",
+ title="Emergency Locksmith Singapore 24/7 | Trusted Since 1998",
  title_exp="Emergency Locksmith Singapore 24/7 | Trusted Since 1998",
- desc="Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. HDB, condo, landed & office lockouts islandwide, from S$80. Call 9224 9224.",
+ desc="Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. HDB, condo, landed & office lockouts islandwide, damage-free first. Call 9224 9224.",
  h1="24/7 Emergency Locksmith in Singapore",
  sub="Locked out of your home or office? Call Uncle Thomas — day or night, weekends and public holidays. We set off as soon as you call and open your door damage-free wherever possible.",
- badges=["From {P_LOCKOUT} (office hours)", "24/7 islandwide", "ID verified for your safety"],
+ badges=["Since 1998", "24/7 islandwide", "ID verified for your safety"],
  body="""
 <h2>Locked out? Here's what happens when you call</h2>
 <ol>
@@ -53,7 +53,7 @@ dict(
 <div class="callout"><p><strong>Why we ask for ID:</strong> {ID_POLICY} It protects you — a locksmith who opens any door without checking is a risk to everyone.</p></div>
 
 <h2>How much does an emergency locksmith cost in Singapore?</h2>
-<p>Our door lockouts start from <strong>{P_LOCKOUT}</strong> between 9am and 6pm, and from <strong>{P_AFTERHOURS}</strong> after hours, on weekends and public holidays. The final price depends on the lock type and whether a part needs replacing — we always confirm it with you before we start. See the full <a href="~/prices/">price list</a>.</p>
+<p>The price depends on the lock type, the time of day and whether a part needs replacing. We always confirm it with you before we start, and the price we agree is the price you pay. See the <a href="~/prices/">price list</a>.</p>
 
 <h2>Islandwide, 24 hours a day</h2>
 <p>We cover every part of Singapore, from <a href="~/areas/woodlands/">Woodlands</a> to <a href="~/areas/tampines/">Tampines</a> and <a href="~/areas/jurong/">Jurong</a> to <a href="~/areas/toa-payoh/">Toa Payoh</a>. See <a href="~/areas/">all the areas we serve</a>.</p>
@@ -73,10 +73,10 @@ dict(
  card="Flat battery, forgotten PIN or faulty keypad? We open all digital lock and smart lock brands, 24/7.",
  title="Digital Lock & Smart Lock Opening Singapore 24/7 | All Brands",
  title_exp="Digital & Smart Lock Opening Singapore | All Brands Since 1998",
- desc="Locked out by your digital lock or smart lock? Flat battery, forgotten PIN or faulty keypad: Uncle Thomas opens all brands, 24/7. From S$150. Call 9224 9224.",
+ desc="Locked out by your digital lock or smart lock? Flat battery, forgotten PIN or faulty keypad: Uncle Thomas opens all brands 24/7, damage-free. Call 9224 9224.",
  h1="Digital Lock or Smart Lock Won't Open? 24/7 Opening",
  sub="Flat battery, forgotten PIN, dead keypad, an app that won't connect, or a lock that just won't respond: Uncle Thomas has developed his own damage-free techniques for opening digital locks and smart locks of every brand.",
- badges=["All brands", "From {P_DIGITAL_OPEN}", "24/7 islandwide"],
+ badges=["All brands", "Damage-free first", "24/7 islandwide"],
  body="""
 <h2>Common digital lock and smart lock problems we solve</h2>
 <ul>
@@ -101,7 +101,7 @@ dict(
 <div class="callout"><p>{NO_REPAIR} Searching for <strong>digital lock repair</strong>? Read <a href="~/guides/digital-lock-repair/">fix, replace or just get in</a> first.</p></div>
 
 <h2>What it costs</h2>
-<p>Digital lock emergency opening starts from <strong>{P_DIGITAL_OPEN}</strong>. The price depends on the brand, model and fault — WhatsApp a photo of the lock (front and inside if possible) to {PHONE} and we'll give you a firm price before we come. See all <a href="~/prices/">prices</a>.</p>
+<p>The price depends on the brand, model and fault. WhatsApp a photo of the lock (front and inside if possible) to {PHONE} and we'll give you a firm price before we come. See all <a href="~/prices/">prices</a>.</p>
 
 <div class="callout"><p><strong>Security first:</strong> {ID_POLICY}</p></div>
 """,
@@ -120,10 +120,10 @@ dict(
  card="Neat, correct digital and smart lock installation for HDB doors, gates, condos and offices, with a no-expiry warranty.",
  title="Digital Lock & Smart Lock Installation Singapore | HDB & Condo",
  title_exp="Digital & Smart Lock Installation Singapore | No-Expiry Warranty",
- desc="Digital lock and smart lock installation for HDB doors & gates, condos and offices. All brands, labour from S$120, no-expiry warranty. Call 9224 9224.",
+ desc="Digital lock and smart lock installation for HDB doors & gates, condos and offices. All brands, set up with you, no-expiry warranty. Call 9224 9224.",
  h1="Digital Lock &amp; Smart Lock Installation in Singapore",
  sub="Thinking of going keyless? Uncle Thomas installs digital locks and smart locks of every brand on HDB main doors and gates, condo doors and offices — fitted properly, set up with you, and covered by a warranty that never expires.",
- badges=["Labour from {P_DIGITAL_INSTALL}", "All brands", "No-expiry warranty"],
+ badges=["Set up with you", "All brands", "No-expiry warranty"],
  body="""
 <h2>Why installation matters</h2>
 <p>Most digital lock problems we're called out for start with a poor installation — a misaligned strike plate, a cable pinched in the door, or a lock that doesn't suit the door. A digital lock is only as good as how it's fitted. With {YEARS}+ years of opening and fitting locks, Uncle Thomas knows exactly what makes a lock last in Singapore's humid weather.</p>
@@ -157,7 +157,7 @@ dict(
 <div class="callout navy"><p><strong>Our warranty:</strong> {WARRANTY}</p></div>
 
 <h2>Price</h2>
-<p>Digital lock installation (labour) starts from <strong>{P_DIGITAL_INSTALL}</strong>. The total depends on the door, whether old locks need removing, and whether you supply the lock. See the full <a href="~/prices/">price list</a>.</p>
+<p>The total depends on the door, whether old locks need removing, and whether you supply the lock. See the full <a href="~/prices/">price list</a>.</p>
 <p>Choosing a lock for your gate? Read <a href="~/guides/smart-lock-for-hdb-gate/">choosing a digital or smart lock for your HDB gate</a>. Locked out of a digital lock right now? Go to <a href="~/digital-lock-opening/">digital lock opening</a>.</p>
 """,
  faqs=[
@@ -229,7 +229,7 @@ dict(
  desc="Keys locked in the car or need a spare key fob? Uncle Thomas unlocks cars and clones key fobs for all major brands, 24/7 islandwide. Call 9224 9224.",
  h1="Car Locksmith Singapore: Car Unlocking &amp; Key Fob Cloning",
  sub="Keys locked inside, remote not working, or only one key fob left? Uncle Thomas opens cars of all major brands without damage, and clones car key fobs so you have a spare.",
- badges=["Lockouts from {P_CAR}", "All major brands", "24/7 islandwide"],
+ badges=["Non-destructive entry", "All major brands", "24/7 islandwide"],
  body="""
 <h2>Two things we do for cars</h2>
 <h3>1. Car unlocking (keys locked inside)</h3>
@@ -258,7 +258,7 @@ dict(
 <div class="callout"><p><strong>Proof of ownership:</strong> Before unlocking a car or cloning a key, we check that the car is yours, for example your NRIC against the vehicle log card, or a rental or company car agreement.</p></div>
 
 <h2>Price</h2>
-<p>Car lockouts start from <strong>{P_CAR}</strong>. Key fob cloning is quoted per car, because it depends on the make, model and key type. WhatsApp {PHONE} your location, car model and a photo of the key, and we'll confirm the price before we set off. See all <a href="~/prices/">prices</a>.</p>
+<p>Car lockouts and key fob cloning are quoted per car, because it depends on the make, model and key type. WhatsApp {PHONE} your location, car model and a photo of the key, and we'll confirm the price before we set off. See all <a href="~/prices/">prices</a>.</p>
 """,
  faqs=[
   ("Can you open my car without damaging it?", "Yes. We use non-destructive car entry tools that don't damage the paint, seals or windows."),
@@ -272,12 +272,12 @@ dict(
 dict(
  path="lock-replacement/", short="Lock replacement", icon="lock",
  card="Main door, gate, room and toilet door locks replaced with quality hardware — warranty with no expiry.",
- title="Lock Change & Replacement Singapore | Door & Gate from S$100",
+ title="Lock Change & Replacement Singapore | No-Expiry Warranty",
  title_exp="Lock Change & Replacement Singapore | No-Expiry Warranty",
- desc="Need to change a lock? Main door, HDB gate, room and toilet door lock change and replacement islandwide, from S$100, no-expiry warranty. Call 9224 9224.",
+ desc="Need to change a lock? Main door, HDB gate, room and toilet door lock change and replacement islandwide, with a no-expiry warranty. Call 9224 9224.",
  h1="Lock Change &amp; Replacement in Singapore: Doors and Gates",
  sub="Lost your keys, moved into a new home, or have a lock that's worn out? Uncle Thomas replaces main door, gate and room door locks with quality hardware — and every replacement has a warranty that never expires.",
- badges=["From {P_REPLACE}", "No-expiry warranty", "Same-visit replacement"],
+ badges=["Price agreed first", "No-expiry warranty", "Same-visit replacement"],
  body="""
 <h2>When to change your locks</h2>
 <p>A lock change (lock replacement) means taking out the old lock and fitting a new one with new keys, so any old keys stop working.</p>
@@ -305,7 +305,7 @@ dict(
 <p>{NO_REPAIR} A new lock is usually more reliable, often not much more expensive than a repair, and comes with our warranty.</p>
 
 <h2>Price</h2>
-<p>Main door and gate lock replacement starts from <strong>{P_REPLACE}</strong>, including supply and installation. Higher-security locks cost more — WhatsApp a photo of your current lock to {PHONE} for a fixed price. See all <a href="~/prices/">prices</a>.</p>
+<p>Lock replacement includes supply and installation, and the price depends on the lock you choose. WhatsApp a photo of your current lock to {PHONE} for a fixed price. See all <a href="~/prices/">prices</a>.</p>
 """,
  faqs=[
   ("Should I change my locks after moving into a new flat?", "Yes, it's a good idea. Previous owners, tenants or contractors may still have keys."),
@@ -319,12 +319,12 @@ dict(
 dict(
  path="letterbox-lock-replacement/", short="Letterbox lock", icon="mailbox",
  card="Lost your letterbox key? We open and replace HDB and condo letterbox locks.",
- title="Letterbox Lock Replacement Singapore | HDB from S$60",
+ title="Letterbox Lock Replacement Singapore | HDB & Condo",
  title_exp="Letterbox Lock Replacement Singapore | Since 1998",
- desc="Lost your HDB or condo letterbox key? Uncle Thomas opens and replaces letterbox locks islandwide, from S$60, with a no-expiry warranty. Call 9224 9224.",
+ desc="Lost your HDB or condo letterbox key? Uncle Thomas opens and replaces letterbox locks islandwide, with a no-expiry warranty. Call 9224 9224.",
  h1="Letterbox Lock Replacement in Singapore",
  sub="Lost the key to your HDB or condo letterbox, or the lock is broken? We open it and fit a new lock with new keys — quickly, with proof of residence checked first.",
- badges=["From {P_LETTERBOX}", "HDB & condo", "No-expiry warranty"],
+ badges=["Price agreed first", "HDB & condo", "No-expiry warranty"],
  body="""
 <h2>We can help if…</h2>
 <ul>
@@ -344,7 +344,7 @@ dict(
 <div class="callout"><p><strong>Why we check ID:</strong> A letterbox holds bank letters and IDs. {ID_POLICY}</p></div>
 
 <h2>Price</h2>
-<p>Letterbox lock replacement starts from <strong>{P_LETTERBOX}</strong>, including a new lock and keys. {WARRANTY} See all <a href="~/prices/">prices</a>.</p>
+<p>Letterbox lock replacement includes a new lock and keys. {WARRANTY} See all <a href="~/prices/">prices</a>.</p>
 <p>Need your main door or gate lock changed too? See <a href="~/lock-replacement/">lock replacement</a>.</p>
 """,
  faqs=[
@@ -413,7 +413,7 @@ def service_cards(with_price=True):
     out = []
     for s in SERVICES:
         pr = C.price(s["path"])
-        tag = f'<span class="from">From {pr}</span>' if with_price and pr else '<span class="from">Quote on request</span>'
+        tag = '<span class="more">See details →</span>'
         out.append(f'<a class="card svc" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                    f'<h3>{s["short"]}</h3><p>{s["card"]}</p>{tag}</a>')
     return "".join(out)
@@ -510,7 +510,7 @@ def build_home(x):
         <li><a href="~/car-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5V12l1.8-4.6A2 2 0 0 1 7.7 6h8.6a2 2 0 0 1 1.9 1.4L20 12v4.5"/><path d="M3 16.5h18"/><path d="M4.5 12h15"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><span class="t-txt"><strong>Cars</strong><span>Car unlocking and key fob cloning, all major brands</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
       </ul>
       {x["cta_buttons"]()}
-      <p class="hero-note">From <strong>{{P_LOCKOUT}}</strong> · Price agreed before we start</p>
+      <p class="hero-note">Price agreed before we start · No-expiry warranty</p>
     </div>
     <div class="hero-art">{hero_art}</div>
   </div>
@@ -521,7 +521,7 @@ def build_home(x):
     <div class="trust-item"><strong>Since {C_.FOUNDED}</strong><span>{C_.YEARS}+ years in the trade</span></div>
     <div class="trust-item"><strong>24/7</strong><span>Nights, weekends, PH</span></div>
     <div class="trust-item"><strong>Islandwide</strong><span>Every town in Singapore</span></div>
-    <div class="trust-item"><strong>From {{P_LOCKOUT}}</strong><span>Price confirmed first</span></div>
+    <div class="trust-item"><strong>No-expiry</strong><span>Warranty on every lock we fit</span></div>
   </div>
 </section>
 
@@ -549,10 +549,9 @@ def build_home(x):
 
 <section class="section" id="pricing">
   <div class="container narrow">
-    <h2 class="section-title">Upfront Locksmith Prices</h2>
-    <p class="section-lead">Clear starting prices. Your final price is confirmed before any work begins.</p>
-    {price_table()}
-    <p class="price-foot">Prices depend on lock type and location. WhatsApp a photo to {C_.PHONE} for an exact quote · <a href="~/prices/">What affects the price?</a></p>
+    <h2 class="section-title">The Price Is Agreed Before We Start</h2>
+    <p class="section-lead">No call-out tricks and no surprises at the door. Send a photo of the lock, and Uncle Thomas gives you a firm price before anyone sets off. The price we agree is the price you pay.</p>
+    <p class="price-foot">Every lock we replace or install comes with a warranty that never expires · <a href="~/prices/">See how pricing works</a></p>
     {x["quote_form"]("home")}
   </div>
 </section>
@@ -612,9 +611,9 @@ def build_home(x):
 </section>
 {x["cta_band"]()}
 """
-    title = pick_title(("24/7 Locksmith Singapore from S$80 | Uncle Thomas Since 1998",
+    title = pick_title(("24/7 Locksmith Singapore | Since 1998 · US-Trained Safesmith",
                         "24/7 Locksmith Singapore | Since 1998 · US-Trained Safesmith"))
-    desc = "Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. Doors, digital locks, safes & cars, islandwide. From S$80. Call 9224 9224."
+    desc = "Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. Doors, digital locks, safes & cars, islandwide, 24/7. Call 9224 9224."
     biz = x["business_node"](full=True)
     nodes = [
         {"@type": "WebSite", "@id": C_.SITE + "/#website", "url": C_.SITE + "/", "name": C_.NAME,
@@ -707,7 +706,7 @@ PRICE_FAQS = [
 def build_prices(x):
     C_ = x["C"]
     crumbs = [("Home", ""), ("Prices", "prices/")]
-    title = "Locksmith Prices Singapore (2026) | Upfront Rates from S$60"
+    title = "Locksmith Prices Singapore (2026) | Confirmed Before We Start"
     desc = "How much does a locksmith cost in Singapore? Uncle Thomas's upfront 2026 prices for lockouts, digital locks, cars, lock and letterbox replacement and safes."
     faqs = [f for f in PRICE_FAQS if "OWNER TO CONFIRM" not in f[1]]
     body = (x["page_hero"](crumbs, "Locksmith Prices in Singapore (2026)",

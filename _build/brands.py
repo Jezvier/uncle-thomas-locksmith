@@ -135,9 +135,9 @@ def build(x):
         crumbs = [("Home", ""), ("Services", "services/"), ("Digital lock opening", "digital-lock-opening/"), (n, path)]
         title = f"{n} Digital & Smart Lock Opening Singapore 24/7"
         desc = (f"{n} digital or smart lock won't open? Flat battery, forgotten PIN, dead keypad or wrong-code lockout — what to try first, "
-                f"and 24/7 help from S$150. Call 9224 9224.")
+                f"and 24/7 help. Call 9224 9224.")
         if len(desc) > 158:
-            desc = f"{n} digital lock won't open? What to try first for a flat battery, forgotten PIN or dead keypad — and 24/7 help from S$150."
+            desc = f"{n} digital lock won't open? What to try first for a flat battery, forgotten PIN or dead keypad — and 24/7 damage-free help."
         faqs = b["faqs"] + [
             (f"How much does it cost to open a {n} digital lock?", "Digital lock emergency opening starts from {P_DIGITAL_OPEN}. WhatsApp a photo of the lock (front and inside if possible) for an exact price."),
             (f"Do you repair {n} digital locks?", f"No — we don't do repairs. We open the lock, and if it's faulty we can replace it. For warranty repairs, contact {n} or your retailer."),
@@ -147,7 +147,7 @@ def build(x):
         others = " · ".join(f'<a href="~/digital-lock-opening/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["slug"] != b["slug"])
         body = (x["page_hero"](crumbs, f"{n} Digital Lock or Smart Lock Won't Open? 24/7 Help in Singapore",
                 f"Flat battery, forgotten PIN, dead keypad or locked out after too many wrong tries — here's what to try first with your {n} lock, and how Uncle Thomas can open it, damage-free wherever possible.",
-                ["From {P_DIGITAL_OPEN}", "24/7 islandwide", "Damage-free first"]) +
+                ["Since 1998", "24/7 islandwide", "Damage-free first"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <h2>{n} digital locks and smart locks in Singapore</h2>
 <p>{b["about"]}</p>
@@ -164,7 +164,7 @@ def build(x):
 <p>{b["quirk"]}</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{tip}</li>" for tip in b["tips"])}</ul>
-<p><strong>Still locked out?</strong> Don't force the handle. Call or WhatsApp {{PHONE}}: {n} opening from {{P_DIGITAL_OPEN}}, price confirmed first, ID checked. Independent locksmith, not affiliated with {n}. General checks: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead</a> · <a href="~/guides/forgot-digital-lock-pin/">forgot your PIN</a>.</p>
+<p><strong>Still locked out?</strong> Don't force the handle. Call or WhatsApp {{PHONE}}: price confirmed first, ID checked. Independent locksmith, not affiliated with {n}. General checks: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead</a> · <a href="~/guides/forgot-digital-lock-pin/">forgot your PIN</a>.</p>
 <p>Other brands: {others} · <a href="~/digital-lock-opening/">all digital lock brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Digital Lock FAQs")}</div></section>''' +

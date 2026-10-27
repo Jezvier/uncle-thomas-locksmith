@@ -62,7 +62,7 @@ dict(
 <p>If your keys were lost or stolen — especially together with anything showing your address — change the lock cylinder. It's the only way to be sure the old keys can't be used. If a key snapped because the lock was stiff, that lock is worn and is likely to fail again. Our <a href="~/lock-replacement/">lock replacement</a> service covers HDB main doors and gates, with a warranty that has no expiry date.</p>
 
 <h2>What it costs</h2>
-<p>For a standard HDB lockout, Uncle Thomas charges from <strong>{P_LOCKOUT}</strong> between 9am and 6pm, and from <strong>{P_AFTERHOURS}</strong> after hours, on weekends and on public holidays. Digital lock emergency opening starts from <strong>{P_DIGITAL_OPEN}</strong>. If a lock has to be replaced, main door and gate lock replacement starts from <strong>{P_REPLACE}</strong> including the new lock. You'll always know the price before we start — see the full <a href="~/prices/">price list</a> and our <a href="~/guides/locksmith-cost-singapore/">guide to locksmith costs in Singapore</a>.</p>
+<p>The price depends on the lock, the time of day and whether anything needs replacing. You'll always know it before we start — see the full <a href="~/prices/">price list</a> and our <a href="~/guides/locksmith-cost-singapore/">guide to locksmith costs in Singapore</a>.</p>
 
 <h2>How to avoid the next lockout</h2>
 <ul>
@@ -121,7 +121,7 @@ dict(
 <p>If none of the above works, please don't pull hard on the handle or try to pry the lock off. Digital locks contain motors and electronics that break easily under force, and damage can turn a simple opening into a full replacement. Call a locksmith who works with digital locks. Uncle Thomas has developed his own damage-free methods for opening faulty digital locks of all brands — see <a href="~/digital-lock-opening/">digital lock opening</a>.</p>
 
 <h2>What it costs</h2>
-<p>Digital lock emergency opening with Uncle Thomas starts from <strong>{P_DIGITAL_OPEN}</strong>. The final price depends on the brand, model and fault, and you'll know it before we come — WhatsApp a photo of the lock (front and inside if possible) to {PHONE}. If the lock is beyond saving, digital lock installation starts from <strong>{P_DIGITAL_INSTALL}</strong> for labour, and every installation comes with our no-expiry warranty. Note that we don't do repairs: if a lock is faulty, we open it and replace it. See all <a href="~/prices/">prices</a>.</p>
+<p>The price depends on the brand, model and fault, and you'll know it before we come. WhatsApp a photo of the lock (front and inside if possible) to {PHONE}. If the lock is beyond saving, we can install a new one, and every installation comes with our no-expiry warranty. Note that we don't do repairs: if a lock is faulty, we open it and replace it. See all <a href="~/prices/">prices</a>.</p>
 
 <h2>How to avoid a digital lock lockout</h2>
 <ul>
@@ -264,7 +264,7 @@ dict(
 <p>Stay calm and ask for an itemised receipt. If you can't resolve it with the locksmith, the Consumers Association of Singapore (CASE) can advise you. You can submit a complaint on the <a href="https://www.case.org.sg/" target="_blank" rel="noopener">CASE website</a>; to have CASE take the matter up with the business, you'll need to become a member, which costs a small fee. Keep your messages, the quoted price and the receipt.</p>
 
 <h2>What it costs</h2>
-<p>With Uncle Thomas, door lockouts start from <strong>{P_LOCKOUT}</strong> (9am–6pm) and <strong>{P_AFTERHOURS}</strong> after hours, weekends and public holidays; digital lock opening from <strong>{P_DIGITAL_OPEN}</strong>; car lockouts from <strong>{P_CAR}</strong>; lock replacement from <strong>{P_REPLACE}</strong>; and letterbox locks from <strong>{P_LETTERBOX}</strong>. Safes are quoted per job. The price we agree is the price you pay.</p>
+<p>With Uncle Thomas, you get a firm price on WhatsApp before anyone sets off, and the price we agree is the price you pay. Our starting prices are published on our <a href="~/prices/">price list</a>, so you can compare.</p>
 
 <h2>A quick checklist to save on your phone</h2>
 <ol>
@@ -337,7 +337,7 @@ dict(
 <p>HDB doesn't provide a lockout service for flats. In condominiums, management usually doesn't hold keys to individual units, though it may be able to help with access to common areas and guardhouse clearance for a locksmith. For rented flats, your landlord may have a spare key — check before calling anyone else. For offices, building management may hold master keys or access cards.</p>
 
 <h2>What it costs</h2>
-<p>Calling 995 or 999 in a genuine emergency is free, and SCDF doesn't charge for emergency cases it takes to hospital. (It can charge S$274 if it conveys a non-emergency case.) If you need a locksmith afterwards — or for an ordinary lockout — Uncle Thomas charges from <strong>{P_LOCKOUT}</strong> for a daytime lockout and from <strong>{P_AFTERHOURS}</strong> after hours, weekends and public holidays. Lock replacement starts from <strong>{P_REPLACE}</strong>. You'll always know the price before we start. See the <a href="~/prices/">price list</a>.</p>
+<p>Calling 995 or 999 in a genuine emergency is free, and SCDF doesn't charge for emergency cases it takes to hospital. (It can charge S$274 if it conveys a non-emergency case.) If you need a locksmith afterwards — or for an ordinary lockout — Uncle Thomas can help 24/7, and you'll always know the price before we start. See the <a href="~/prices/">price list</a>.</p>
 
 <h2>Quick summary</h2>
 <ul>

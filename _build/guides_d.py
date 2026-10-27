@@ -14,7 +14,7 @@ dict(
  slug="keys-locked-in-car",
  short="Keys locked in car",
  title="Keys Locked in Car in Singapore? What to Do Now (2026)",
- desc="Locked your keys in the car in Singapore? What to check first, when to call 995, what not to try, and how a locksmith opens it without damage. From S$100.",
+ desc="Locked your keys in the car in Singapore? What to check first, when to call 995, what not to try, and and how a locksmith opens it without damage.",
  h1="Locked Your Keys in the Car? What to Do in Singapore",
  card="Someone inside? Call 995. Everyone safe? Two quick checks, what never to try, and how to get back in without a scratch.",
  body="""
@@ -44,7 +44,7 @@ dict(
 <ul>
 <li><strong>Your insurer's roadside assistance.</strong> Some motor policies include locksmith help, but <a href="https://www.singsaver.com.sg/car-insurance/blog/roadside-assistance" target="_blank" rel="noopener">coverage varies by provider</a>. Check your policy or call the hotline and ask.</li>
 <li><strong>Your dealer.</strong> Useful if you've lost every key, but a dealer can't usually get you into a locked car tonight.</li>
-<li><strong>A car locksmith.</strong> The quickest route for a simple lockout. Uncle Thomas opens cars of all major brands 24/7 with non-destructive tools, from <strong>{P_CAR}</strong>, with the price agreed before we set off.</li>
+<li><strong>A car locksmith.</strong> The quickest route for a simple lockout. Uncle Thomas opens cars of all major brands 24/7 with non-destructive tools, with the price agreed before we set off.</li>
 </ul>
 
 <h2>5. Have these ready</h2>
@@ -66,7 +66,7 @@ dict(
 </ul>
 <p>Brand guides: """ + _CAR_LINKS + """, and <a href="~/car-locksmith/">all car brands</a>.</p>
 
-<div class="callout navy"><p><strong>Locked out of your car now?</strong> Call or WhatsApp {PHONE} with your carpark and car model. 24/7, islandwide, from {P_CAR}, and the price is agreed before we set off.</p></div>
+<div class="callout navy"><p><strong>Locked out of your car now?</strong> Call or WhatsApp {PHONE} with your carpark and car model. 24/7, islandwide, and the price is agreed before we set off.</p></div>
 """,
  faqs=[
   ("Can SCDF or the police unlock my car?", "If a child, a vulnerable adult or a pet is trapped inside, call 995: SCDF will get them out, even if it means breaking a window. If everyone is safe and only the key is inside, it's a job for a locksmith."),
@@ -109,7 +109,7 @@ dict(
 <p>The brand's service centre can also help, but they'll usually ask for proof of purchase and may not come the same day.</p>
 
 <h2>When to call a locksmith</h2>
-<p>If you've tried the other ways in and you're still outside, call or WhatsApp {PHONE}. Uncle Thomas opens digital and smart locks of every brand, 24/7, without damage wherever possible, from <strong>{P_DIGITAL_OPEN}</strong>. We check proof of residence before opening. If your ID is inside, tell us, and we'll verify it with you once the door is open. Once you're in, we can show you how to set a new PIN on your model.</p>
+<p>If you've tried the other ways in and you're still outside, call or WhatsApp {PHONE}. Uncle Thomas opens digital and smart locks of every brand, 24/7, without damage wherever possible. We check proof of residence before opening. If your ID is inside, tell us, and we'll verify it with you once the door is open. Once you're in, we can show you how to set a new PIN on your model.</p>
 
 <h2>So it doesn't happen again</h2>
 <ul>
@@ -125,7 +125,7 @@ dict(
   ("Can I reset my digital lock PIN from outside?", "No. On almost every model, the reset button is on the inside unit, so nobody can reset the lock from the corridor. Get in using another method or a locksmith, then reset it."),
   ("Will a factory reset delete my fingerprints?", "Usually, yes. A factory reset returns the lock to its default settings and removes all PINs, fingerprints and cards, so you'll need to register them again."),
   ("How many wrong PIN attempts before my digital lock locks?", "It depends on the model, but many locks freeze the keypad for a few minutes after several wrong codes. Try once more, carefully, then use another way in."),
-  ("Can a locksmith open my digital lock without breaking it?", "In most cases, yes. We open digital and smart locks of every brand without damage wherever possible, from {P_DIGITAL_OPEN}, after checking proof of residence."),
+  ("Can a locksmith open my digital lock without breaking it?", "In most cases, yes. We open digital and smart locks of every brand without damage wherever possible, after checking proof of residence."),
  ],
 ),
 # ----------------------------------------------------------------------
@@ -176,7 +176,7 @@ dict(
 </ul>
 
 <h2>How we help</h2>
-<p>Uncle Thomas installs digital and smart locks of every brand on HDB, condo and landed home doors, from <strong>{P_DIGITAL_INSTALL}</strong> labour, with a no-expiry installation warranty. If you've bought a lock already, WhatsApp {PHONE} a photo of your door edge, the door's label and the lock's certificate, and we'll tell you whether it fits before you book. See <a href="~/digital-lock-installation/">digital and smart lock installation</a>.</p>
+<p>Uncle Thomas installs digital and smart locks of every brand on HDB, condo and landed home doors, with a no-expiry installation warranty. If you've bought a lock already, WhatsApp {PHONE} a photo of your door edge, the door's label and the lock's certificate, and we'll tell you whether it fits before you book. See <a href="~/digital-lock-installation/">digital and smart lock installation</a>.</p>
 <p><em>This guide summarises public guidance from SCDF and HDB as of October 2026. Rules can change, so check the linked SCDF page for the latest requirements.</em></p>
 """,
  faqs=[
