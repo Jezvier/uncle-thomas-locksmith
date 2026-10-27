@@ -28,7 +28,8 @@ def main():
     key = os.environ.get("PLACES_API_KEY")
     if not key:
         print("No PLACES_API_KEY set; skipping."); return
-    pid = os.environ.get("PLACE_ID")
+    # Google Place ID for the business (not a secret; found on the first run, 27 Oct 2026)
+    pid = os.environ.get("PLACE_ID") or "ChIJW1IOQGYX2jERKiFMX6nMhjk"
     try:
         if pid:
             p = call(f"https://places.googleapis.com/v1/places/{pid}", key, "id,rating,userRatingCount")

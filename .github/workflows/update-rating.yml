@@ -34,7 +34,8 @@ jobs:
       - name: Rebuild if changed
         id: build
         run: |
-          if git diff --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git add -A
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           pip install --quiet pillow
           python3 _build/build.py
           git config user.name "rating-bot"
@@ -50,7 +51,7 @@ jobs:
         run: |
           mkdir dist
           git archive HEAD | tar -x -C dist
-          rm -rf dist/_build dist/.kiro dist/.github dist/README.md dist/.gitignore dist/assets/photos dist/CNAME
+          rm -rf dist/_build dist/.kiro dist/.github dist/README.md dist/CLAUDE.md dist/.gitignore dist/assets/photos dist/CNAME
 
       - name: Deploy
         if: steps.build.outputs.changed == 'true'
