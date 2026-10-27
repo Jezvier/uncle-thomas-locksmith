@@ -571,15 +571,15 @@ def build(x):
 {bld}
 <h2>Lock tips for {n} homes and businesses</h2>
 <p>{LOCAL_NOTES.get(t["slug"], "")}</p>
+<h2>A typical call in {n}</h2>
+<p>{TYPICAL.get(t["slug"], "")}</p>
 <h2>Jobs we often do in {n}</h2>
 <ul>{jobs}</ul>
 {recent_html}
 <h2>Getting to you in {n}</h2>
-<p>{t["access"]} We set off as soon as you call and give you an honest arrival estimate on the phone.</p>
-<p>While you wait: stay near the door if it's safe to do so, keep your phone charged, and find something that shows your name and address for our ID check. If it's inside, tell us — we can usually verify it with you once the door is open. Please don't try to force the lock; it often turns a quick, damage-free job into a lock replacement.</p>
+<p>{t["access"]} Locked out right now? Here's <a href="~/guides/locked-out-of-hdb-flat/">what to do while you wait</a>.</p>
 <h2>Services in {n}</h2>
 <ul class="link-pills">{svc_pills}</ul>
-<p>Price confirmed before we start, ID checked before we open anything, and a no-expiry warranty on every lock replacement and installation. Led by <a href="~/about/">Uncle Thomas</a>, locksmith since {{FOUNDED}} and US-trained safesmith.</p>
 {"<p>Also nearby: " + near_html + ".</p>" if near_html else ""}
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +
@@ -649,4 +649,34 @@ EXTRA_FAQS = {
 "bukit-batok": ("Can you open a stuck gate lock in Bukit Batok?", "Yes. We open it first, then advise whether the lock can stay or should be replaced."),
 "bukit-panjang": ("Do you serve the condos along Upper Bukit Timah Road?", "Yes. We'll coordinate with the guardhouse to reach your unit quickly."),
 "choa-chu-kang": ("Do you serve landed homes and farms beyond Choa Chu Kang?", "Yes. We cover the whole north-west, including landed homes and farmland — send a pinned location on WhatsApp."),
+}
+
+# "A typical call in <town>": a realistic, clearly *typical* situation for each town
+# (never presented as a dated real job; real jobs go in config.RECENT_JOBS).
+TYPICAL = {
+"toa-payoh": "An auntie in a Lorong 1 block takes the rubbish to the chute in her house slippers, and the main door's old latch clicks shut behind her. Her keys are on the dining table. A neighbour lends her a phone, she WhatsApps a photo of the door, and we agree the price before we set off. The lock opens without damage, and because the key had been sticking for months, she decides to replace the worn cylinder while we're there.",
+"bishan": "A family in a Bishan condo comes home from Junction 8 to find the digital lock's screen dark. The batteries have died after weeks of low-battery beeps, and the backup key is in a kitchen drawer inside. The guardhouse lets us through once the owner confirms, we power up and open the lock, and the family leaves with fresh batteries in place and the backup key moved to a relative's home.",
+"novena": "A clinic manager arrives at a Novena medical suite at 7.30am, half an hour before the first patient, and the suite door's key won't turn. Building security has to sign us in, so the manager calls them first. With authorisation confirmed, we open the door without marking it, and because the cylinder is worn, we replace it on the spot so the clinic opens on time with new keys for the staff.",
+"cbd-orchard": "A restaurant manager near Tanjong Pagar closes up after midnight and realises the office safe holding the day's float won't accept the code. The owner is overseas but sends written authorisation by WhatsApp. We open the safe without drilling, and the manager resets the code with the owner on a video call before locking up for the night.",
+"queenstown": "A landlord in Commonwealth has a tenant moving out on Friday and a new tenant moving in on Saturday. The old tenant has returned only two of the three keys. The landlord sends us a photo of the door lock and the gate lock, and we replace both cylinders that afternoon so the new tenant gets the only working keys.",
+"bukit-merah": "A Tiong Bahru resident with a much-loved timber door is locked out after the latch slips shut. They're worried about the door being damaged, so we explain the damage-free options first and agree the price. The door opens cleanly, the frame is untouched, and the resident keeps a spare key with a friend nearby from then on.",
+"kallang-whampoa": "A Kallang Bahru workshop owner arrives at 6am to start a delivery, but the padlock on the roller shutter has seized after months of rain. The key turns halfway and stops. We cut the seized padlock, fit a new closed-shackle padlock suited to outdoor use, and the van is out on time.",
+"geylang": "A shop owner on Sims Avenue loses the bunch of keys for both the front shutter and the back-lane door. Anyone who finds them could open the shop, so after checking the business details, we open the front shutter, then change the padlocks and the back door lock so the lost keys no longer work.",
+"marine-parade": "A Marine Parade resident's gate lock has been getting stiffer for months, and tonight the key won't turn at all. Sea air has corroded the lock body. We open the gate, show the owner the rust inside the old lock, and fit a replacement better suited to the salty air near East Coast Park.",
+"tampines": "A couple collects the keys to their new Tampines North BTO flat and buys a digital lock online the same week. When it arrives, they aren't sure it fits their door. They WhatsApp us photos of the door edge and the lock box, we confirm the fit, and we install it, setting up their PINs and fingerprints with them before we leave.",
+"bedok": "A family unloading bicycles at the East Coast Park carpark puts the car key on the boot floor, closes the boot and hears the car lock. The bicycles are out but the key is in. They send us the carpark, lot number and car model, and we open the car with non-destructive tools so the picnic can go ahead.",
+"pasir-ris": "On check-out morning at a Pasir Ris chalet, the room's small safe won't open, and the family's passports are inside for a trip the next day. The operator confirms the booking and authorises us, and we open the safe without damaging it, with time to spare before check-out.",
+"ang-mo-kio": "A son gets a call from his elderly father in Ang Mo Kio: the door has swung shut and his father is waiting in the corridor. We head over, confirm the father's identity with his NRIC once inside, and open the door without damage. The family then asks about a simple digital lock so this can't happen again, and we recommend one with a mechanical backup key.",
+"serangoon": "A Serangoon Gardens homeowner's heavy main gate lock finally refuses to turn after years of daily use, with the car parked inside. We open the gate, check the lock body and replace it with a sturdier gate lock, so the family can lock up properly that night.",
+"hougang": "A toddler in a Hougang flat pushes the button lock on the bathroom door and can't work out how to open it. The parent is on the other side, worried. We arrive, open the privacy lock from outside in under a minute without damage, and show the parent how the emergency release works on that type of door.",
+"sengkang": "A Sengkang BTO owner comes home after a heavy downpour and the gate's digital lock keypad won't respond. The family has never used the backup key and isn't sure where it is. We open the lock, check that it has dried properly, and show them where the emergency power point and key override are.",
+"punggol": "A Punggol homeowner's budget digital lock keeps failing to read fingerprints and drains its batteries every few weeks. Tonight it won't open at all. We get the family inside, then recommend a more reliable model suited to their door, and install it with our no-expiry warranty.",
+"woodlands": "A Woodlands resident comes back from Johor Bahru late at night and realises the house keys were left behind across the Causeway. We check proof of residence, open the main door, and because the keys are with someone else for now, the resident decides to keep the old lock and pick the keys up the next day.",
+"yishun": "A Yishun resident loses the tiny letterbox key and has a bank letter waiting inside. After checking proof of residence, we open the letterbox and fit a new lock with new keys, so the old key no longer matters.",
+"sembawang": "A family staying in one of Sembawang's quiet landed streets near the park gets locked out of the side gate late at night. The road is dark and hard to find, so they send a pinned location on WhatsApp. We find the house first time and open the gate without damaging the old ironwork.",
+"jurong": "A factory manager in Jurong needs the office safe opened before the morning shift: the staff member with the code has left the company. With written authorisation from the director and proof of ownership, we open the safe, and the company sets a new code and changes the office door lock the same day.",
+"clementi": "A student renting a room near Clementi locks the room door with the key inside. We check the tenancy agreement on their phone and confirm with the landlord, then open the door without damage. The landlord later asks us to replace the room locks between tenants.",
+"bukit-batok": "A Bukit Batok resident at the top of a hilly street is locked out late at night and isn't sure how to describe the way in. A pinned location on WhatsApp brings us straight to the block. The main door opens without damage, and the resident decides to replace a worn gate lock while we're there.",
+"bukit-panjang": "A Bukit Panjang family near Petir LRT station finds their gate padlock rusted solid after weeks of wet weather. The key won't go in at all. We cut it off and fit a weather-resistant padlock, then check that the gate's own lock is still in good shape.",
+"choa-chu-kang": "A Yew Tee family's original 1990s main door lock has been getting harder to turn, and tonight the key snaps off in the cylinder. We open the door without damage and replace the worn cylinder, so the family has a smooth lock and new keys before bedtime.",
 }

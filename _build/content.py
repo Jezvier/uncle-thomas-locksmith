@@ -88,7 +88,7 @@ dict(
 <li><strong>Lost the backup key</strong> for the mechanical override.</li>
 <li><strong>Smart lock app offline</strong> or your phone is locked inside.</li>
 </ul>
-<p>Before you call, it's worth trying the quick checks in our guide: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or not opening — what to try first</a>.</p>
+<p>Before you call, it's worth trying the quick checks in our guides: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or not opening</a>, and <a href="~/guides/forgot-digital-lock-pin/">forgot your digital lock PIN</a>.</p>
 
 <h2>Every digital and smart lock brand, including</h2>
 <ul class="tags">""" + "".join(f"<li>{b}</li>" for b in C.DIGITAL_LOCK_BRANDS) + """<li>and more</li></ul>
@@ -144,7 +144,7 @@ dict(
 <li><strong>Its fire rating is at least the door's</strong> (residential fire doors are usually 30 or 60 minutes).</li>
 <li><strong>It has a mechanical fail-safe</strong>, so the door can still be opened if the battery dies.</li>
 </ul>
-<p>Not sure if your door is fire-rated? Look for a label near the hinges, or send us a photo and we'll help you check. Older locks fitted before March 2024 don't have to be replaced, but SCDF encourages switching to a certified one.</p>
+<p>Not sure if your door is fire-rated? Look for a label near the hinges, or send us a photo and we'll help you check. Full details: <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>. Older locks fitted before March 2024 don't have to be replaced, but SCDF encourages switching to a certified one.</p>
 
 <h2>How it works</h2>
 <ol>
@@ -248,7 +248,7 @@ dict(
 <li>Replacement fob for family members or a second driver.</li>
 <li>Remote keys, flip keys and smart keys for push-start cars.</li>
 </ul>
-<p>WhatsApp {PHONE} your car's make, model and year, plus a photo of your key (front and back), and we'll confirm we can do it and the price before you book. Lost a key already? Read <a href="~/guides/lost-car-key-fob/">lost your car key fob: what to do next</a>.</p>
+<p>WhatsApp {PHONE} your car's make, model and year, plus a photo of your key (front and back), and we'll confirm we can do it and the price before you book. Lost a key already? Read <a href="~/guides/lost-car-key-fob/">lost your car key fob: what to do next</a>. Key locked inside the car? Read <a href="~/guides/keys-locked-in-car/">keys locked in the car: what to do</a>.</p>
 
 <h2>All car brands</h2>
 <p>We work on all the major makes on Singapore roads. Tap your brand for tips and details:</p>

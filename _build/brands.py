@@ -164,7 +164,7 @@ def build(x):
 <p>{b["quirk"]}</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{tip}</li>" for tip in b["tips"])}</ul>
-<p><strong>Still locked out?</strong> Don't force the handle. Call or WhatsApp {{PHONE}}: {n} opening from {{P_DIGITAL_OPEN}}, price confirmed first, ID checked. Independent locksmith, not affiliated with {n}. General checks: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead</a>.</p>
+<p><strong>Still locked out?</strong> Don't force the handle. Call or WhatsApp {{PHONE}}: {n} opening from {{P_DIGITAL_OPEN}}, price confirmed first, ID checked. Independent locksmith, not affiliated with {n}. General checks: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead</a> · <a href="~/guides/forgot-digital-lock-pin/">forgot your PIN</a>.</p>
 <p>Other brands: {others} · <a href="~/digital-lock-opening/">all digital lock brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Digital Lock FAQs")}</div></section>''' +

@@ -202,7 +202,7 @@ def build(x):
 <p>{FEATURE.get(n, "")} {b["keys"]}</p>
 <h2>{n} key fob battery dead? How to get in and start</h2>
 <ol><li><strong>Get in:</strong> {DEADFOB[n]["open"]}</li><li><strong>Start the car:</strong> {DEADFOB[n]["start"]}</li></ol>
-<p>Details vary by year, so check your manual. Still stuck? Call us.</p>
+<p>Details vary by year, so check your manual. Still stuck? Call us. Key locked inside instead? See <a href="~/guides/keys-locked-in-car/">keys locked in the car</a>.</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
 <p><strong>Price:</strong> {n} lockouts from {{P_CAR}}; for a spare fob, WhatsApp {{PHONE}} the model, year and a photo of the key. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>

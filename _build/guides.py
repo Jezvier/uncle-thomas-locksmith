@@ -6,8 +6,9 @@ need a locksmith. Written for the owner of the lock — never break-in technique
 from guides_a import GUIDES_A
 from guides_b import GUIDES_B
 from guides_c import GUIDES_C
+from guides_d import GUIDES_D
 
-GUIDES = GUIDES_A + GUIDES_B + GUIDES_C
+GUIDES = GUIDES_A + GUIDES_B + GUIDES_C + GUIDES_D
 from guides_extra import EXTRA, TAKEAWAYS, MORE_FAQS
 for _g in GUIDES:
     _extra = EXTRA.get(_g["slug"], "")
@@ -20,7 +21,16 @@ for _g in GUIDES:
     if _g["slug"] in MORE_FAQS:
         _g["faqs"] = _g["faqs"] + [MORE_FAQS[_g["slug"]]]
 PUBLISHED = {g["slug"]: ("2026-10-25" if i < 4 else "2026-10-26") for i, g in enumerate(GUIDES_A + GUIDES_B)}
-PUBLISHED.update({g["slug"]: "2026-10-27" for g in GUIDES_C})
+PUBLISHED.update({g["slug"]: "2026-10-27" for g in GUIDES_C + GUIDES_D})
+
+def _modified(path, slug):
+    """Date the guide's content last changed (tracked by build.py in lastmod.json)."""
+    import json, os
+    try:
+        lm = json.load(open(os.path.join(os.path.dirname(__file__), "lastmod.json")))
+        return max(lm.get(path, {}).get("date", PUBLISHED[slug]), PUBLISHED[slug])
+    except (OSError, ValueError):
+        return PUBLISHED[slug]
 
 
 def build(x):
@@ -47,7 +57,7 @@ def build(x):
                 x["cta_band"]())
         art = {"@type": "Article", "@id": C.SITE + "/" + path + "#article", "headline": g["h1"], "description": g["desc"],
                "author": {"@id": x["PERSON_ID"]}, "publisher": {"@id": x["BUSINESS_ID"]},
-               "datePublished": PUBLISHED[g["slug"]], "dateModified": __import__("datetime").date.today().isoformat(),
+               "datePublished": PUBLISHED[g["slug"]], "dateModified": _modified(path, g["slug"]),
                "mainEntityOfPage": C.SITE + "/" + path, "image": C.SITE + "/assets/img/og-2026.jpg", "inLanguage": "en-SG"}
         nodes = x["page_schema"](path, g["title"], g["desc"], crumbs, faqs=g["faqs"], extra=[art, x["person_node"]()])
         x["render"](path, g["title"], g["desc"], body, nodes, og_type="article", priority="0.6")
