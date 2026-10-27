@@ -344,3 +344,16 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .qq .btn { width: 100%; justify-content: center; }
 .qq-note { font-size: .88rem; color: var(--grey); }
 @media (min-width: 720px) { .qq { padding: 26px 28px; } }
+
+/* ===== LIVE GOOGLE REVIEWS (homepage) ===== */
+#reviews .section-lead { display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
+.rv-score { font-size: 1.6rem; font-weight: 800; color: var(--navy); }
+.rv-stars { color: #f5a623; letter-spacing: 2px; }
+.rv-list { display: grid; gap: 16px; margin-top: 8px; }
+.rv-card { margin: 0; background: var(--white); border: 1px solid var(--grey-light); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.rv-card blockquote { margin: 0; font-size: .98rem; line-height: 1.6; color: var(--navy); }
+.rv-card figcaption { font-size: .88rem; color: var(--grey); margin-top: auto; }
+.rv-card figcaption a { font-weight: 600; color: var(--navy); }
+.rv-foot { text-align: center; margin-top: 18px; font-weight: 600; }
+.rv-attr { text-align: center; font-size: .8rem; color: var(--grey); margin-top: 6px; }
+@media (min-width: 860px) { .rv-list.loaded { grid-template-columns: repeat(3, 1fr); } }

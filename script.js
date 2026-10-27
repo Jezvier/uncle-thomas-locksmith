@@ -33,4 +33,41 @@
     var w = window.open(url, '_blank', 'noopener');
     if (!w) location.href = url;
   });
+  // Live Google reviews (homepage). Fetched from Google only when the section is near the
+  // screen, kept for the visit in sessionStorage, never stored on our side.
+  var rv = document.getElementById('g-reviews');
+  if (rv && window.fetch) {
+    var load = function () {
+      var ck = 'g-reviews-v1', cached = null;
+      try { cached = JSON.parse(sessionStorage.getItem(ck)); } catch (e) {}
+      var show = function (d) {
+        var list = ((d && d.reviews) || []).filter(function (r) { return r.rating >= 4 && r.text && r.text.text; }).slice(0, 3);
+        list.forEach(function (r) {
+          var card = document.createElement('figure'); card.className = 'rv-card';
+          var st = document.createElement('div'); st.className = 'rv-stars';
+          st.setAttribute('aria-label', r.rating + ' out of 5 stars'); st.textContent = '★★★★★'.slice(0, r.rating);
+          var t = r.text.text;
+          if (t.length > 260) { t = t.slice(0, 250); t = t.slice(0, t.lastIndexOf(' ')) + '…'; }
+          var q = document.createElement('blockquote'); q.textContent = t;
+          var cap = document.createElement('figcaption'), a = r.authorAttribution || {};
+          var who = document.createElement(a.uri ? 'a' : 'span');
+          who.textContent = a.displayName || 'Google user';
+          if (a.uri) { who.href = a.uri; who.target = '_blank'; who.rel = 'noopener'; }
+          var when = document.createElement('span'); when.textContent = r.relativePublishTimeDescription ? ' · ' + r.relativePublishTimeDescription : '';
+          cap.appendChild(who); cap.appendChild(when);
+          card.appendChild(st); card.appendChild(q); card.appendChild(cap); rv.appendChild(card);
+        });
+        if (list.length) rv.className += ' loaded';
+      };
+      if (cached) { show(cached); return; }
+      fetch('https://places.googleapis.com/v1/places/' + rv.getAttribute('data-place') + '?fields=reviews&languageCode=en&key=' + rv.getAttribute('data-key'))
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) { if (!d) return; try { sessionStorage.setItem(ck, JSON.stringify({ reviews: d.reviews || [] })); } catch (e) {} show(d); })
+        .catch(function () {});
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) { if (es[0].isIntersecting) { io.disconnect(); load(); } }, { rootMargin: '600px' });
+      io.observe(rv);
+    } else { load(); }
+  }
 })();

@@ -556,6 +556,16 @@ def build_home(x):
   </div>
 </section>
 
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <h2 class="section-title">What Customers Say on Google</h2>
+    <p class="section-lead"><span class="rv-score">{C_.GOOGLE_RATING:.1f}</span> <span class="rv-stars" aria-hidden="true">★★★★★</span> from {int(C_.GOOGLE_REVIEW_COUNT)} Google reviews</p>
+    <div class="rv-list" id="g-reviews" data-place="{C_.PLACE_ID}" data-key="{C_.GOOGLE_BROWSER_KEY}" aria-live="polite"></div>
+    <p class="rv-foot"><a href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read all reviews on Google</a> · <a href="{C_.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Leave a review</a></p>
+    <p class="rv-attr">Reviews from Google</p>
+  </div>
+</section>
+
 <section class="section shifu" id="shifu">
   <div class="container">
     <h2 class="section-title">Led by Singapore's Locksmith "Shifu"</h2>

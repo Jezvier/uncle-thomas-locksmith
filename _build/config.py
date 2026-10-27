@@ -42,6 +42,10 @@ GOOGLE_PROFILE = GOOGLE_MAPS_URL or GOOGLE_SHARE_LINK
 # Google Place ID (matched to the CID above on 27 Oct 2026) and the direct "write a review" link.
 PLACE_ID = "ChIJW1IOQGYX2jERKiFMX6nMhjk"
 GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=" + PLACE_ID
+# Browser key for the live Google reviews on the homepage. Public by design: Google only
+# accepts it from singapore-locksmiths.com and only for Places / Maps JavaScript.
+# (The private server key for the nightly rating update lives in GitHub secrets.)
+GOOGLE_BROWSER_KEY = "AIzaSyCUNm-S2hDRP6pABYF1hCNOqgVpN6_wgbI"
 # ACRA registration (sole proprietorship, registered 21 Feb 1998). Shown in the footer + schema.
 UEN = "52862311K"
 LEGAL_NAME = "Thomas Locksmith"
