@@ -543,6 +543,7 @@ def build_home(x):
     <p class="section-lead">Clear starting prices. Your final price is confirmed before any work begins.</p>
     {price_table()}
     <p class="price-foot">Prices depend on lock type and location. WhatsApp a photo to {C_.PHONE} for an exact quote · <a href="~/prices/">What affects the price?</a></p>
+    {x["quote_form"]("home")}
   </div>
 </section>
 

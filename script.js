@@ -22,4 +22,15 @@
       transport_type: 'beacon'
     });
   });
+  // WhatsApp quick-quote form: turn the answers into a ready-made message
+  var qs = document.querySelectorAll('form[data-qq]');
+  for (var i = 0; i < qs.length; i++) qs[i].addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, v = function (n) { var el = f.querySelector('[name="' + n + '"]:checked') || f.elements[n]; return el ? (el.value || '').trim() : ''; };
+    var t = 'Hi Uncle Thomas, I need a locksmith.\nService: ' + v('what') + '\nLocation: ' + (v('where') || '(will send)') + '\nWhen: ' + v('when') + '\n(Sent from your website)';
+    var url = f.getAttribute('action') + '?text=' + encodeURIComponent(t);
+    if (typeof window.gtag === 'function') window.gtag('event', 'quote_form_submit', { service: v('what'), urgency: v('when'), page_path: location.pathname, transport_type: 'beacon' });
+    var w = window.open(url, '_blank', 'noopener');
+    if (!w) location.href = url;
+  });
 })();

@@ -326,3 +326,20 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .contact-big .bi { width: 22px; height: 22px; color: var(--navy); margin-top: 3px; }
 .contact-big .bi-star { color: #f5a623; }
 .contact-big a { font-weight: 700; }
+
+/* ===== WHATSAPP QUICK-QUOTE FORM ===== */
+.qq { margin: 24px 0 8px; background: var(--white); border: 1px solid var(--grey-light); border-radius: var(--radius); box-shadow: var(--shadow); padding: 20px; display: grid; gap: 14px; text-align: left; }
+.qq-title { font-weight: 800; font-size: 1.15rem; color: var(--navy); }
+.qq-row { display: grid; gap: 6px; border: 0; min-width: 0; }
+.qq-row > label, .qq-row legend { font-weight: 600; font-size: .95rem; padding: 0; margin-bottom: 6px; }
+.qq select, .qq input[type="text"] { width: 100%; font: inherit; font-size: 1rem; color: var(--navy); background: var(--white); border: 1.5px solid #c9cedb; border-radius: 10px; padding: 12px 12px; min-height: 48px; }
+.qq select:focus, .qq input[type="text"]:focus { border-color: var(--navy); outline: 3px solid rgba(26,34,56,.18); outline-offset: 0; }
+.qq-pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.qq-pill { position: relative; cursor: pointer; }
+.qq-pill input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.qq-pill span { display: inline-block; padding: 10px 16px; border: 1.5px solid #c9cedb; border-radius: 999px; font-size: .95rem; font-weight: 600; min-height: 44px; line-height: 1.5; }
+.qq-pill input:checked + span { background: var(--navy); border-color: var(--navy); color: var(--white); }
+.qq-pill input:focus-visible + span { outline: 3px solid var(--navy); outline-offset: 2px; }
+.qq .btn { width: 100%; justify-content: center; }
+.qq-note { font-size: .88rem; color: var(--grey); }
+@media (min-width: 720px) { .qq { padding: 26px 28px; } }

@@ -35,6 +35,10 @@ def _contact(x):
 <li>{icons.svg("star", cls="bi bi-star", fill=True)} <span><strong>Google:</strong> <a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">our Google Business Profile and reviews</a></span></li>
 </ul>
 
+<h2>Quick quote form</h2>
+<p>Not urgent, or prefer to type? Pick what you need and we'll reply on WhatsApp with a price.</p>
+{x["quote_form"]("contact")}
+
 <h2>What to send on WhatsApp</h2>
 <p>A quick message with these details lets us give you a price and set off sooner:</p>
 <ol>

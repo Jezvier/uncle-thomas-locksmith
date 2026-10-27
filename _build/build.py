@@ -20,7 +20,7 @@ Do NOT hand-edit the generated .html files — edits are overwritten on the
 next build. (Folders starting with "_" are not published by GitHub Pages.)
 Requires Python 3 and Pillow (pip install pillow) only if you add photos.
 """
-import json, os, re, sys, html
+import hashlib, json, os, re, sys, html
 from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -498,6 +498,36 @@ def minify_css(css):
     return css.strip()
 
 
+
+QQ_OPTIONS = [
+    "Locked out (door or gate)",
+    "Digital / smart lock won't open",
+    "Install or replace a digital / smart lock",
+    "Change or replace a door or gate lock",
+    "Open a safe",
+    "Car locked, or a spare car key fob",
+    "Letterbox lock",
+    "Office or shop lock",
+]
+
+
+def quote_form(pos="page"):
+    """WhatsApp quick-quote form: builds a ready-made WhatsApp message, no server needed.
+    Without JavaScript it still opens a WhatsApp chat with the business."""
+    opts = "".join(f'<option>{esc(o)}</option>' for o in QQ_OPTIONS)
+    i = f"qq-{pos}"
+    when = "".join(
+        f'<label class="qq-pill"><input type="radio" name="when" value="{v}"{" checked" if k == 0 else ""}><span>{v}</span></label>'
+        for k, v in enumerate(["Right now", "Later today", "Not urgent"]))
+    return f'''<form class="qq" data-qq action="https://wa.me/{C.PHONE_E164.lstrip("+")}" method="get" target="_blank" aria-labelledby="{i}-t">
+<p class="qq-title" id="{i}-t">Quick quote on WhatsApp</p>
+<div class="qq-row"><label for="{i}-what">What do you need?</label><select id="{i}-what" name="what">{opts}</select></div>
+<div class="qq-row"><label for="{i}-where">Where are you?</label><input id="{i}-where" name="where" type="text" placeholder="e.g. Blk 116 Toa Payoh" autocomplete="street-address"></div>
+<fieldset class="qq-row"><legend>How urgent?</legend><div class="qq-pills">{when}</div></fieldset>
+<button class="btn btn-wa" type="submit" data-pos="quote-{pos}">WhatsApp my request</button>
+<p class="qq-note">Opens WhatsApp with your message ready to send. Add a photo of the lock for an exact price.</p>
+</form>'''
+
 SCRIPT_JS = """// Uncle Thomas Locksmith — tiny JS: mobile menu, footer year, call/WhatsApp click tracking
 (function () {
   var b = document.querySelector('.menu-btn'), m = document.getElementById('mobile-menu');
@@ -521,6 +551,17 @@ SCRIPT_JS = """// Uncle Thomas Locksmith — tiny JS: mobile menu, footer year, 
       link_position: a.getAttribute('data-pos') || 'inline',
       transport_type: 'beacon'
     });
+  });
+  // WhatsApp quick-quote form: turn the answers into a ready-made message
+  var qs = document.querySelectorAll('form[data-qq]');
+  for (var i = 0; i < qs.length; i++) qs[i].addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, v = function (n) { var el = f.querySelector('[name="' + n + '"]:checked') || f.elements[n]; return el ? (el.value || '').trim() : ''; };
+    var t = 'Hi Uncle Thomas, I need a locksmith.\\nService: ' + v('what') + '\\nLocation: ' + (v('where') || '(will send)') + '\\nWhen: ' + v('when') + '\\n(Sent from your website)';
+    var url = f.getAttribute('action') + '?text=' + encodeURIComponent(t);
+    if (typeof window.gtag === 'function') window.gtag('event', 'quote_form_submit', { service: v('what'), urgency: v('when'), page_path: location.pathname, transport_type: 'beacon' });
+    var w = window.open(url, '_blank', 'noopener');
+    if (!w) location.href = url;
   });
 })();
 """
@@ -552,6 +593,7 @@ HEADERS = """# Cache rules for Netlify / Cloudflare Pages (GitHub Pages ignores 
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+  Strict-Transport-Security: max-age=31536000
 """
 
 
@@ -564,7 +606,7 @@ def main():
                breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
                areas=areas, guides=guides, content=content, brands=brands, cars=cars, abs_url=abs_url, zh_pages=list(zh.ZH_PAGES),
                BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema, photos_schema=photos_schema,
-               breadcrumb_html=breadcrumb_html)
+               breadcrumb_html=breadcrumb_html, quote_form=quote_form)
     content.build(ctx)
     brands.build(ctx)
     cars.build(ctx)
@@ -596,7 +638,13 @@ def main():
     with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as f:
         f.write(four)
 
-    # sitemap (with hreflang alternates)
+    # sitemap (with hreflang alternates). lastmod only moves when a page's <main> content
+    # changes (tracked in _build/lastmod.json), so Google can trust the dates.
+    lm_path = os.path.join(HERE, "lastmod.json")
+    try:
+        lm = json.load(open(lm_path))
+    except (OSError, ValueError):
+        lm = {}
     entries = []
     for p, pr, alts in PAGES:
         x = ""
@@ -604,6 +652,7 @@ def main():
             x = "".join(f'<xhtml:link rel="alternate" hreflang="{k}" href="{abs_url(v)}"/>' for k, v in alts.items())
             x += f'<xhtml:link rel="alternate" hreflang="x-default" href="{abs_url(alts["en-SG"])}"/>'
         imgs = ""
+        lastmod = TODAY
         try:
             page_html = open(os.path.join(ROOT, p, "index.html") if p else os.path.join(ROOT, "index.html"), encoding="utf-8").read()
             seen = []
@@ -611,9 +660,18 @@ def main():
                 if m not in seen:
                     seen.append(m)
             imgs = "".join(f"<image:image><image:loc>{C.SITE}/assets/img/photos/{m}</image:loc></image:image>" for m in seen)
+            mm = re.search(r"<main.*?</main>", page_html, flags=re.S)
+            digest = hashlib.md5((mm.group(0) if mm else page_html).encode()).hexdigest()
+            old = lm.get(p or "/")
+            if old and old.get("hash") == digest:
+                lastmod = old["date"]
+            else:
+                lm[p or "/"] = {"hash": digest, "date": TODAY}
         except OSError:
             pass
-        entries.append(f"  <url><loc>{abs_url(p)}</loc><lastmod>{TODAY}</lastmod><priority>{pr}</priority>{x}{imgs}</url>")
+        entries.append(f"  <url><loc>{abs_url(p)}</loc><lastmod>{lastmod}</lastmod><priority>{pr}</priority>{x}{imgs}</url>")
+    with open(lm_path, "w") as f:
+        json.dump(lm, f, indent=0, sort_keys=True)
     with open(os.path.join(ROOT, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                 'xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(entries) + "\n</urlset>\n")

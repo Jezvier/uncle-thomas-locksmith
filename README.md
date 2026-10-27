@@ -2,26 +2,17 @@
 
 A fast, mobile-first, multi-page site for **Uncle Thomas Locksmith**, a 24/7 islandwide emergency locksmith in Singapore since 1998. Built for Google ranking on searches like *locksmith Singapore*, *emergency locksmith*, *locksmith near me*, *digital lock opening* and *safe opening Singapore*.
 
-## ⚠️ How to edit (important — read this first, including Kiro)
+## How to edit (read CLAUDE.md first)
 
-The `.html` pages are **generated**. Don't edit them directly — your changes will be overwritten.
+**`CLAUDE.md` is the up-to-date handover:** business facts, hard rules, how publishing works and what's pending.
 
-1. Edit the source files in `_build/`:
-   | File | What's in it |
-   |---|---|
-   | `_build/config.py` | Phone, email, UEN, domain, **prices**, reviews, photos, recent jobs, GA4 ID, title style, brand pages |
-   | `_build/content.py` | Homepage, service pages, prices page, About page text |
-   | `_build/areas.py` | Areas hub + 25 town pages (add a town by adding an entry to `TOWNS`) |
-   | `_build/brands.py` | Digital lock brand pages |
-   | `_build/guides_a.py`, `guides_b.py`, `guides_extra.py` | Guide articles |
-   | `_build/zh.py` | Chinese pages |
-   | `_build/styles.css` | The design (colours, layout) — inlined into every page |
+The `.html` pages are **generated**. Don't edit them directly; your changes will be overwritten.
+
+1. Edit the source files in `_build/` (see the file list in `CLAUDE.md`).
 2. Run: `python3 _build/build.py`
-3. Commit and push. GitHub Pages publishes automatically.
+3. Commit and push to `main`. A GitHub Action deploys to Cloudflare Pages automatically (singapore-locksmiths.com).
 
-Folders starting with `_` are not published by GitHub Pages, so `_build/` stays private-ish (it's still visible in the repo).
-
-## 📄 Pages (55)
+## 📄 Pages (87)
 
 - **Home** `/` — targets *locksmith Singapore*, *24 hour locksmith*
 - **Services** `/services/` + 8 service pages: emergency lockout, digital lock opening, digital lock installation, safe opening, car lockout, lock replacement, letterbox lock, commercial locksmith
@@ -29,10 +20,11 @@ Folders starting with `_` are not published by GitHub Pages, so `_build/` stays 
 - **Digital & smart lock brands** `/digital-lock-opening/<brand>/` — Samsung, Yale, Philips, Igloohome, Gateman, Kaadas, Solity, Häfele, Aqara, Xiaomi, Lenovo
 - **Car brands** `/car-locksmith/<brand>/` — 16 brands (`_build/cars.py`; Tesla is deliberately never listed)
 - **Areas** `/areas/` + 25 town pages
-- **Guides** `/guides/` + 9 guides
-- **Chinese** `/zh/` and `/zh/emergency-locksmith/`
+- **Guides** `/guides/` + 13 guides
+- **Chinese** `/zh/` + 5 service pages
+- **Contact** `/contact/` and **Privacy** `/privacy/`
 - **About** `/about/`
-- `404.html`, `sitemap.xml`, `robots.txt`, `llms.txt`, `site.webmanifest`
+- `404.html`, `_redirects` (old Wix URLs), `sitemap.xml`, `robots.txt`, `llms.txt`, `site.webmanifest`
 
 ## ✅ SEO built in
 
@@ -68,7 +60,7 @@ Everything below lives in `_build/config.py` (search for `FILL`). Empty settings
 - [ ] Guides: check every `<!-- FILL: verify -->` legal/regulatory statement (search the `_build/guides_*.py` files)
 - [ ] Chinese pages: native speaker review (`_build/zh.py`)
 
-Performance note: `_headers` sets cache rules for Netlify / Cloudflare Pages. GitHub Pages ignores it.
+Performance note: `_headers` (generated) sets cache and security headers on Cloudflare Pages.
 
 ## 🌐 Live domain: singapore-locksmiths.com (Cloudflare Pages)
 
