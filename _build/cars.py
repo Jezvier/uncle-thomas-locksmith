@@ -182,12 +182,14 @@ def build(x):
         if len(desc) > 158:
             desc = f"{n} locksmith in Singapore: car unlocking without damage and {n} key fob cloning, 24/7 islandwide. Call 9224 9224."
         faqs = b["faqs"] + [
+            (f"My {n} key fob battery is dead. How do I start the car?", DEADFOB[n]["start"]),
             (f"How much does it cost to unlock a {n}?", "Car lockouts start from {P_CAR}. We confirm the price before we set off."),
             (f"How much is a spare {n} key fob?", "It depends on the model and key type. WhatsApp {PHONE} the model, year and a photo of your key for a price."),
         ]
         jobs = getattr(C, "BRAND_JOBS", {}).get(n, [])
         recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)
-        others = " · ".join(f'<a href="~/car-locksmith/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["slug"] != b["slug"])
+        rel = RELATED.get(n, [])
+        others = " · ".join(f'<a href="~/car-locksmith/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["name"] in rel)
         body = (x["page_hero"](crumbs, f"{n} Locksmith Singapore: Unlocking &amp; Key Fob Cloning",
                 f"Keys locked inside your {n}, or down to your last key fob? Uncle Thomas opens {n} cars without damage and clones {n} key fobs, 24/7 anywhere in Singapore.",
                 ["Lockouts from {P_CAR}", "Key fob cloning", "24/7 islandwide"]) +
@@ -198,12 +200,13 @@ def build(x):
 <p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
 <h2>What's different about {n} keys</h2>
 <p>{FEATURE.get(n, "")} {b["keys"]}</p>
-<h2>Locked out, or need a spare {n} fob?</h2>
-<p>We open {n} cars with non-destructive tools, and clone {n} key fobs, including remote and smart keys. WhatsApp {{PHONE}} your model, year and a photo of the key (front and back), and we'll confirm before you book.</p>
+<h2>{n} key fob battery dead? How to get in and start</h2>
+<ol><li><strong>Get in:</strong> {DEADFOB[n]["open"]}</li><li><strong>Start the car:</strong> {DEADFOB[n]["start"]}</li></ol>
+<p>Details vary by year, so check your manual. Still stuck? Call us.</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
-<p><strong>Price:</strong> {n} lockouts from {{P_CAR}}; key fobs quoted per car. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. See all <a href="~/prices/">prices</a>.</p>
-<p>Other brands: {others} · <a href="~/car-locksmith/">all car brands</a></p>
+<p><strong>Price:</strong> {n} lockouts from {{P_CAR}}; for a spare fob, WhatsApp {{PHONE}} the model, year and a photo of the key. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
+<p>Related: {others} · <a href="~/car-locksmith/">all car brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +
                 x["cta_band"](f"Locked Out of Your {n}?"))
@@ -259,3 +262,90 @@ FEATURE = {
 "Mitsubishi": "Mitsubishi's Keyless Operation System is found on many models, while simpler models such as the Attrage often use a remote with a metal blade. For fleets, one spare per car avoids downtime.",
 "Subaru": "Many Subarus use Keyless Access with push-button start, and the fob contains an emergency key. A key that works only some of the time is often a weak battery or water damage.",
 }
+
+# Dead-fob help: how owners of each brand usually get in and start with a flat
+# key battery. Written cautiously ("many models") because it varies by model/year.
+DEADFOB = {
+"Toyota": dict(
+ open="Toyota hides a mechanical key in the smart key: slide the release and it comes out. On some models the driver's keyhole is behind a cap at the end of the handle; lever it off gently with the key.",
+ start="Hold the Toyota emblem side of the smart key against the POWER or ENGINE START STOP switch. A buzzer or light confirms it's been read, then press the switch again with your foot on the brake."),
+"Honda": dict(
+ open="There's a built-in key inside every Honda smart fob: slide the small knob on the back and it pulls free. It fits the driver's door lock.",
+ start="Honda's trick is the H logo. Hold that face of the fob flat against the ENGINE START/STOP button, keep your foot on the brake, and press."),
+"Mercedes-Benz": dict(
+ open="Slide the catch on the back of the fob to release the emergency key blade. On many models the door keyhole is hidden under a cover on the driver's handle.",
+ start="On models with a key slot, insert the fob as normal. On many newer models without a slot, place the fob in the spot marked with a key symbol (often in the centre console tray or a cup holder), then press start."),
+"BMW": dict(
+ open="Press the release on the fob and slide out the emergency key. The driver's door lock is often under a small cover at the end of the handle.",
+ start="Hold the key against the marked area on the steering column, or place it in the marked spot in the centre console or cup holder on newer models, then press the start button."),
+"Audi": dict(
+ open="Press the release button on the fob and pull out the emergency key. On many Audis you prise off a small cap on the driver's door handle to reach the keyhole.",
+ start="Hold the key at the spot marked with a key symbol, often in the centre console near the cup holders, then press the start button."),
+"Volkswagen": dict(
+ open="On a flip key, fold out the blade and use the driver's door keyhole. On Keyless Access models, pull the emergency key out of the fob and remove the cap on the driver's handle.",
+ start="On flip-key models the ignition works with the blade as normal. On Keyless Access models, hold the fob next to the steering column near the start button, then press start."),
+"Mazda": dict(
+ open="Mazda calls it the auxiliary key. Push the knob on the smart key, draw the key out, and open the driver's door with it.",
+ start="Mazda's push-button start can read a weak key at very close range. Bring the key right up to the button, then push it while braking."),
+"Lexus": dict(
+ open="Press the release and pull out the mechanical key, then unlock the driver's door. (A card key, if your model has one, is a backup for entry and doesn't replace a lost fob.)",
+ start="Press the brake and touch the Lexus emblem side of the fob to the start button. When the car detects it, press the button to start."),
+"Land Rover": dict(
+ open="Slide the release and pull the emergency key blade out of the fob. The driver's door lock is often hidden behind a cover on the handle.",
+ start="Many models have a backup reader for a flat fob, usually on the steering column cover or in a cup holder or console tray. Hold or place the fob there, then press start."),
+"Hyundai": dict(
+ open="A metal key hides in the back of most Hyundai smart keys; a press of the release frees it for the driver's door.",
+ start="Use the fob itself as your finger: push the ENGINE START/STOP button with the end of the smart key. The car reads it at close range even with a weak battery."),
+"Kia": dict(
+ open="Free the mechanical key from the smart key with its release button and use the driver's door lock. On EVs like the Niro EV and EV6, total silence from the car usually points to a flat 12V battery rather than the fob.",
+ start="Kia's backup method: press the start button using the smart key itself while braking. On EVs, wait for the READY light before driving off."),
+"Nissan": dict(
+ open="Nissan tucks a mechanical key inside the Intelligent Key. Release it and use it on the driver's door; on an MPV like the Serena, only the driver's door has a keyhole.",
+ start="Touch the Intelligent Key to the push-button ignition and listen for the chime. That's the car confirming the key, so you can now start it."),
+"Porsche": dict(
+ open="Press the release on the car-shaped fob to free the emergency key, then use the driver's door lock.",
+ start="On models with an ignition on the left of the steering wheel, insert the fob or the ignition handle as normal. On keyless models, your manual shows the backup spot to hold the fob before pressing start."),
+"Volvo": dict(
+ open="Slide the catch and remove the detachable key blade from the fob, then unlock the driver's door with it.",
+ start="Place the fob in the backup reader, usually marked with a key symbol in the cup holder or tunnel console on newer models, then start as normal."),
+"Mitsubishi": dict(
+ open="Pull out the emergency key from the keyless operation key, or use the blade on a remote key, to unlock the driver's door.",
+ start="On many push-button models, touch the start button with the key, or insert it into the key slot if your model has one. Your manual shows which applies."),
+"Subaru": dict(
+ open="Subaru's access key carries an emergency key; unclip it and it opens the driver's door.",
+ start="Turn the access key over and press its back against the push-button ignition. Once the car recognises it, start as usual."),
+}
+
+# More specific tips where the originals were generic.
+DATA["Kia"]["tips"] = [
+    "Sharing one car between two drivers? A second fob is simpler than passing one key around.",
+    "On the Niro EV and EV6, a flat 12V battery can stop the doors unlocking even with a good fob. Tell us if nothing responds at all.",
+    "Change the fob battery as soon as the range drops: Kia smart keys give little warning before they stop.",
+]
+DATA["Volvo"]["tips"] = [
+    "Find the backup key reader in your manual now, so a flat fob never strands you.",
+    "Take the key out of your pocket before loading the boot: a key left in the tailgate area is a common Volvo lockout.",
+    "Keep the detachable blade with the fob; it's your way in if the battery dies.",
+]
+DATA["Subaru"]["tips"] = [
+    "Keep the access key away from water. A soaked fob often works on and off before failing completely.",
+    "If the remote range drops, replace the battery before it leaves you touching the start button to get going.",
+    "Keep the spare key at home, not in the car.",
+]
+
+# Related brands linked from each page (same group, same market, or cars owners often compare).
+RELATED = {
+"Toyota": ["Lexus", "Honda", "Nissan"], "Lexus": ["Toyota", "Mercedes-Benz", "BMW"],
+"Honda": ["Toyota", "Mazda", "Nissan"], "Nissan": ["Toyota", "Honda", "Mitsubishi"],
+"Mazda": ["Honda", "Subaru", "Toyota"], "Subaru": ["Mazda", "Toyota", "Volvo"],
+"Mitsubishi": ["Nissan", "Toyota", "Hyundai"], "Hyundai": ["Kia", "Toyota", "Mitsubishi"],
+"Kia": ["Hyundai", "Toyota", "Mazda"], "Mercedes-Benz": ["BMW", "Audi", "Lexus"],
+"BMW": ["Mercedes-Benz", "Audi", "Porsche"], "Audi": ["Volkswagen", "Porsche", "BMW"],
+"Volkswagen": ["Audi", "Porsche", "Volvo"], "Porsche": ["Audi", "Volkswagen", "Mercedes-Benz"],
+"Land Rover": ["Volvo", "BMW", "Porsche"], "Volvo": ["Land Rover", "Audi", "Subaru"],
+}
+DATA["Porsche"]["tips"] = [
+    "Keyless cars can be targeted by relay theft. At home, keep fobs in a signal-blocking pouch, away from the front door.",
+    "Want a spare without leaving the car at the dealer? Send us the model year and a photo of the fob first, and we'll confirm before you book.",
+    "Replace the fob battery as soon as the dashboard warns you.",
+]
