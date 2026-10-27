@@ -10,7 +10,7 @@ dict(
  card="Who can change the locks in a rented flat, who keeps keys, and how lockouts work for tenants.",
  body="""
 <p>Rented flats and rooms are a big part of Singapore's housing, and they raise practical questions every locksmith hears: Can a tenant change the locks? Should a landlord keep a key? Who pays for a lockout? This guide sets out how it usually works and what Uncle Thomas looks for before doing a job in a rented home.</p>
-<p><em>This is general information, not legal advice. Your tenancy agreement is the main document that sets out your rights and responsibilities — read it first, and get legal advice if you're in a dispute.</em> <!-- FILL: verify --></p>
+<p><em>This is general information, not legal advice. Your tenancy agreement is the main document that sets out your rights and responsibilities — read it first, and get legal advice if you're in a dispute.</em></p>
 
 <h2>Start with the tenancy agreement</h2>
 <p>Most tenancy agreements in Singapore cover locks and keys somewhere — often in clauses about alterations, fixtures, access and the return of keys at the end of the tenancy. Look for:</p>
@@ -21,11 +21,11 @@ dict(
 <li>who pays for lost keys, lockouts and lock replacements;</li>
 <li>what must be returned at the end of the tenancy.</li>
 </ul>
-<p>If the agreement says nothing, the safest approach is to agree in writing — a simple WhatsApp message exchange is better than nothing. <!-- FILL: verify --></p>
+<p>If the agreement says nothing, the safest approach is to agree in writing — a simple WhatsApp message exchange is better than nothing.</p>
 
 <h2>For tenants</h2>
 <h3>Can I change the locks?</h3>
-<p>In most cases, a tenant should get the landlord's written agreement before changing the main door or gate lock, because the locks are part of the landlord's property. <!-- FILL: verify --> Many landlords are happy to agree — especially if you've lost keys, or the old lock is worn — as long as they receive a copy of the new key or the new lock is handed back at the end of the tenancy.</p>
+<p>In most cases, a tenant should get the landlord's written agreement before changing the main door or gate lock, because the locks are part of the landlord's property. Many landlords are happy to agree — especially if you've lost keys, or the old lock is worn — as long as they receive a copy of the new key or the new lock is handed back at the end of the tenancy.</p>
 <h3>I've lost my keys. What should I do?</h3>
 <p>Tell your landlord or agent as soon as possible, especially if anything with the address was lost too. Changing the cylinder is the only way to be sure the lost keys can't be used. Check your agreement to see who pays — commonly it's the tenant if the keys were lost through the tenant's fault.</p>
 <h3>I'm locked out. Can a locksmith help me?</h3>
@@ -51,7 +51,7 @@ dict(
 </ul>
 
 <h2>Disputes</h2>
-<p>Lock disputes between landlords and tenants — for example, a landlord changing the locks to keep a tenant out — are serious and can have legal consequences. A locksmith is not the right person to settle them. If you're in a dispute, seek legal advice or mediation; Singapore has community mediation services and the Small Claims Tribunals for some disputes. <!-- FILL: verify which bodies handle tenancy disputes --> Uncle Thomas will not change locks to exclude someone who lives at the property.</p>
+<p>Lock disputes between landlords and tenants — for example, a landlord changing the locks to keep a tenant out — are serious and can have legal consequences. A locksmith is not the right person to settle them. If you're in a dispute, seek legal advice or mediation; Singapore has the Community Mediation Centre, and the <a href="https://www.judiciary.gov.sg/civil/file-small-claim" target="_blank" rel="noopener">Small Claims Tribunals</a> hear disputes over residential leases of up to two years, for claims up to S$20,000. Uncle Thomas will not change locks to exclude someone who lives at the property.</p>
 
 <h2>What it costs</h2>
 <p>With Uncle Thomas, main door and gate lock replacement starts from <strong>{P_REPLACE}</strong> including supply and installation; letterbox lock replacement from <strong>{P_LETTERBOX}</strong>; and digital lock installation from <strong>{P_DIGITAL_INSTALL}</strong> for labour. Lockouts start from <strong>{P_LOCKOUT}</strong> (9am–6pm) and <strong>{P_AFTERHOURS}</strong> after hours. Every replacement and installation comes with our no-expiry warranty, and we provide receipts for your records. See the <a href="~/prices/">price list</a>.</p>
@@ -127,7 +127,7 @@ dict(
 </ul>
 
 <h2>HDB rules on gates</h2>
-<p>HDB has rules about gates and what can be installed in common corridors, and you may need to check the requirements before replacing a gate or making major changes. <!-- FILL: verify current HDB rules on gate installation and replacement --> Replacing the lock on an existing gate is generally a routine job.</p>
+<p>HDB doesn't require a permit to replace a main entrance gate, but the <a href="https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/renovation/guidelines/building-works" target="_blank" rel="noopener">HDB renovation guidelines</a> say the new gate must keep the original width, number of panels and swing, must not block the escape route, and along a common corridor must leave at least 0.6m to the parapet wall. Replacing the lock on an existing gate is generally a routine job.</p>
 
 <h2>What it costs</h2>
 <p>With Uncle Thomas, gate lock replacement starts from <strong>{P_REPLACE}</strong> including supply and installation, and every replacement has our no-expiry warranty. If you're locked out by a gate lock, lockouts start from <strong>{P_LOCKOUT}</strong> (9am–6pm) and <strong>{P_AFTERHOURS}</strong> after hours. Digital gate lock installation starts from <strong>{P_DIGITAL_INSTALL}</strong> for labour. See the full <a href="~/prices/">price list</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
@@ -185,7 +185,7 @@ dict(
 <li><strong>Door thickness</strong> — each lock supports a range.</li>
 <li><strong>Existing cut-outs</strong> — a lock that matches the existing mortise cut-out avoids extra cutting.</li>
 <li><strong>Door condition</strong> — a door that has dropped or warped will strain any lock.</li>
-<li><strong>Fire-rated main door</strong> — HDB main doors are generally fire-rated, and installation shouldn't compromise the door. <!-- FILL: verify HDB guidance on installing digital locks on fire-rated main doors --></li>
+<li><strong>Fire-rated main door</strong> — Many HDB main doors are fire-rated. Since 1 March 2024, <a href="https://scdf.gov.sg/home/fire-safety/digital-locksets-on-fire-rated-doors" target="_blank" rel="noopener">SCDF requires</a> any digital lock fitted on a fire door to be certified for fire resistance, rated at least as high as the door, with a mechanical fail-safe. Ask the seller for the lock's Certificate of Conformity before you buy.</li>
 <li><strong>Gate type</strong> — gate locks need to suit the gate's frame and be designed for outdoor use.</li>
 </ul>
 <p>Send us a photo of your door's edge and both sides and we'll tell you what fits.</p>
@@ -268,7 +268,7 @@ dict(
 </ol>
 
 <h2>Does insurance cover locksmith costs?</h2>
-<p>Some home insurance policies cover lock replacement after a break-in or theft of keys. <!-- FILL: verify --> Check your policy, and keep the locksmith's receipt in case you need to claim.</p>
+<p>Many home insurance policies in Singapore cover replacing locks and keys, either as a standard benefit or an optional add-on, typically up to S$500–S$1,000. Check your policy, and keep the locksmith's receipt in case you need to claim.</p>
 
 <div class="callout navy"><p><strong>Our promise:</strong> the price we agree is the price you pay. Call or WhatsApp {PHONE}, 24/7. <a href="~/prices/">See the full price list</a>.</p></div>
 """,

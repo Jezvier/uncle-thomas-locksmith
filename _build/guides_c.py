@@ -73,7 +73,7 @@ dict(
 <p>It's natural to want to clean up, but leave the scene as it is until the police have seen it. Fingerprints and marks on the door, lock and frame can help an investigation.</p>
 
 <h2>3. Report it to the police</h2>
-<p>If it's an emergency or happening now, call 999. Otherwise you can make a police report afterwards, online through the Singapore Police Force's e-services or at a Neighbourhood Police Centre. Ask for the report number: your insurer will want it. <!-- FILL: verify --></p>
+<p>If it's an emergency or happening now, call 999. Otherwise you can make a police report afterwards, <a href="https://www.police.gov.sg/E-Services/Lodge-Police-Report" target="_blank" rel="noopener">online through the Singapore Police Force's e-services</a> or at a Neighbourhood Police Centre. Ask for the report number: your insurer will want it.</p>
 
 <h2>4. Photograph everything</h2>
 <p>Take clear photos of the damaged door, lock, frame and windows, and of each room as you found it. Photos help the police, your insurer and the locksmith who'll repair the door.</p>
@@ -152,7 +152,7 @@ dict(
 </ul>
 
 <h2>Rules and permissions</h2>
-<p>If you rent, ask your landlord before changing the gate lock. If you own the flat, check with your town council or HDB if you're also changing the gate itself. <!-- FILL: verify --></p>
+<p>If you rent, ask your landlord before changing the gate lock. If you own the flat and are also changing the gate itself, HDB doesn't require a permit, but the new gate must keep the original width, number of panels and swing.</p>
 
 <h2>Brands we install and open</h2>
 <p>We work with every brand, including Samsung, Yale, Philips, Igloohome, Kaadas, Solity, Gateman, Häfele, Aqara, Xiaomi and Lenovo. Bought a lock online? We'll install it. Send a photo first so we can confirm it fits. See <a href="~/digital-lock-installation/">digital and smart lock installation</a> (labour from <strong>{P_DIGITAL_INSTALL}</strong>, no-expiry warranty).</p>

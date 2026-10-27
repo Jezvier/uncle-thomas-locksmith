@@ -137,6 +137,15 @@ dict(
 </ul>
 <p>We work with all brands, including """ + BRANDS + """. Bought your own lock online? We'll install it. Not sure which to get? Tell us your door and budget and we'll recommend one that fits.</p>
 
+<h2>Fire-rated doors: the SCDF rule</h2>
+<p>Many HDB main doors are fire-rated. Since 1 March 2024, <a href="https://scdf.gov.sg/home/fire-safety/digital-locksets-on-fire-rated-doors" target="_blank" rel="noopener">SCDF requires</a> any digital lock fitted on a fire door to be certified for fire resistance. Before you buy, check three things on the lock's Certificate of Conformity:</p>
+<ul>
+<li><strong>The exact brand and model</strong> you're buying is listed.</li>
+<li><strong>Its fire rating is at least the door's</strong> (residential fire doors are usually 30 or 60 minutes).</li>
+<li><strong>It has a mechanical fail-safe</strong>, so the door can still be opened if the battery dies.</li>
+</ul>
+<p>Not sure if your door is fire-rated? Look for a label near the hinges, or send us a photo and we'll help you check. Older locks fitted before March 2024 don't have to be replaced, but SCDF encourages switching to a certified one.</p>
+
 <h2>How it works</h2>
 <ol>
 <li>WhatsApp {PHONE} a photo of your door (outside and inside edge) and the lock you want.</li>
@@ -153,6 +162,7 @@ dict(
 """,
  faqs=[
   ("Can I install a digital lock on my HDB main door?", "Yes. Digital locks are common on HDB main doors and gates. We check your door's thickness and existing cut-outs so the lock fits properly."),
+  ("Does a digital lock on a fire-rated door need certification?", "Yes. Since 1 March 2024, SCDF requires digital locks on fire doors to be certified for fire resistance, rated at least as high as the door, with a mechanical fail-safe. Ask the seller for the Certificate of Conformity."),
   ("Can you install a lock I bought online?", "Yes. Send us a photo of the lock and your door first so we can confirm it will fit."),
   ("How long does installation take?", "Most installations are completed in one visit. We test every function and set up your codes and fingerprints before we leave."),
   ("Is there a warranty?", "Yes — every installation comes with our warranty, with no expiry date."),

@@ -12,7 +12,7 @@ dict(
 <p>Getting locked out is stressful — especially late at night, in the rain, or with kids or elderly family inside. The good news is that most HDB lockouts are simple to solve, usually without any damage to your door. Here's what Uncle Thomas, a Singapore locksmith since 1998, recommends, in the order he'd do it himself.</p>
 
 <h2>1. First, check that no one is in danger</h2>
-<p>If a young child, an elderly person or someone who is unwell is alone inside, if a stove or appliance has been left on, or if you smell gas or see smoke, call <strong>995</strong> for the SCDF straight away. Emergencies where life or property is at risk come first; a locksmith comes second. <!-- FILL: verify --> For more on this, see our guide <a href="~/guides/police-scdf-open-door/">can the police or SCDF open my door?</a></p>
+<p>If a young child, an elderly person or someone who is unwell is alone inside, if a stove or appliance has been left on, or if you smell gas or see smoke, call <strong>995</strong> for the SCDF straight away. Emergencies where life or property is at risk come first; a locksmith comes second. For more on this, see our guide <a href="~/guides/police-scdf-open-door/">can the police or SCDF open my door?</a></p>
 <p>If everyone is safe, take a breath. A lockout is an inconvenience, not a disaster, and the steps below will usually get you back in within the hour.</p>
 
 <h2>2. Work out exactly what's locked</h2>
@@ -39,7 +39,7 @@ dict(
 <li>Forcing a mortise lock can bend the latch or break the lock body, turning a quick opening into a lock replacement.</li>
 <li>Prying a gate can bend the frame so it no longer closes properly.</li>
 <li>Poking a cylinder can jam the pins or snap a pin inside, making non-destructive opening harder.</li>
-<li>HDB main doors are generally required to be fire-rated, and damage to the door or frame can be expensive to put right. <!-- FILL: verify HDB fire-rated main door requirement --></li>
+<li>Many HDB main doors are fire-rated: where the door is on a fire escape route, HDB requires a half-hour fire-rated door with a self-closing device. Damage to the door or frame can be expensive to put right.</li>
 </ul>
 
 <h2>5. Call a locksmith — and ask for the price first</h2>
@@ -247,6 +247,9 @@ dict(
 <h2>7. Get a receipt</h2>
 <p>Ask for a receipt or invoice showing the business name, what was done, and what you paid. You'll need it if anything goes wrong with the lock, and it helps if there's a dispute.</p>
 
+<h2>Are locksmiths licensed in Singapore?</h2>
+<p>No. Locksmithing isn't a licensed trade in Singapore: there's no official register, certification body or competence test. The only registration a locksmith business holds is its ACRA business registration, which shows the business exists but says nothing about skill. Be wary of adverts that say "licensed locksmith". Check the business name and UEN (you can look it up on ACRA's Bizfile), then rely on reviews, experience, published prices and an ID check. Uncle Thomas's business, Thomas Locksmith, has been registered with ACRA since 1998 (UEN {UEN}).</p>
+
 <h2>Warning signs to watch for</h2>
 <ul>
 <li>No business name when they answer the phone, or a different name on arrival.</li>
@@ -258,7 +261,7 @@ dict(
 </ul>
 
 <h2>If you think you've been overcharged</h2>
-<p>Stay calm and ask for an itemised receipt. If you can't resolve it with the locksmith, the Consumers Association of Singapore (CASE) can advise you on your options. <!-- FILL: verify CASE process and contact details --> Keep your messages, the quoted price and the receipt.</p>
+<p>Stay calm and ask for an itemised receipt. If you can't resolve it with the locksmith, the Consumers Association of Singapore (CASE) can advise you. You can submit a complaint on the <a href="https://www.case.org.sg/" target="_blank" rel="noopener">CASE website</a>; to have CASE take the matter up with the business, you'll need to become a member, which costs a small fee. Keep your messages, the quoted price and the receipt.</p>
 
 <h2>What it costs</h2>
 <p>With Uncle Thomas, door lockouts start from <strong>{P_LOCKOUT}</strong> (9am–6pm) and <strong>{P_AFTERHOURS}</strong> after hours, weekends and public holidays; digital lock opening from <strong>{P_DIGITAL_OPEN}</strong>; car lockouts from <strong>{P_CAR}</strong>; lock replacement from <strong>{P_REPLACE}</strong>; and letterbox locks from <strong>{P_LETTERBOX}</strong>. Safes are quoted per job. The price we agree is the price you pay.</p>
@@ -279,6 +282,7 @@ dict(
  faqs=[
   ("What's a fair price for a locksmith in Singapore?", "For a standard daytime lockout, published prices in 2026 generally start from around S$80–S$90, with higher rates after hours. Digital locks, safes and replacements cost more. Always confirm the total before work begins."),
   ("Should a locksmith ask for my ID?", "Yes. Checking proof of residence or ownership is a sign of a trustworthy locksmith."),
+  ("Do locksmiths in Singapore need a licence?", "No. Locksmithing isn't a licensed trade in Singapore, so there's no official register. Check the business's ACRA registration (UEN), its reviews and its published prices instead."),
   ("Is drilling the lock ever necessary?", "Sometimes — for broken lock bodies or some high-security locks. But most standard lockouts can be opened without drilling. Ask why before agreeing."),
  ],
 ),
@@ -291,7 +295,7 @@ dict(
  card="When to call 995 or 999 — and when a lockout is a job for a locksmith instead.",
  body="""
 <p>It's a common question when someone is locked out: can't I just call the police or the SCDF? The short answer is that emergency services are there for emergencies — situations where someone's life or safety, or property, is at risk. An ordinary lockout, where everyone is safe and you just can't get in, is a job for a locksmith. Here's how to tell the difference, and what to do in each case.</p>
-<p><em>This guide is general information, not legal advice. Emergency services decide how to respond to each call.</em> <!-- FILL: verify all statements about SCDF and SPF practice before publishing --></p>
+<p><em>This guide is general information, not legal advice. Emergency services decide how to respond to each call.</em></p>
 
 <h2>When to call 995 (SCDF)</h2>
 <p>The Singapore Civil Defence Force handles fire, rescue and emergency medical services. Call <strong>995</strong> if a lockout involves a real emergency, for example:</p>
@@ -301,7 +305,7 @@ dict(
 <li>Something is burning — a pot on the stove, smoke, or a smell of gas.</li>
 <li>Someone is trapped and in danger.</li>
 </ul>
-<p>In situations like these, emergency responders may decide to force entry to protect life. <!-- FILL: verify --> Don't wait for a locksmith if someone's safety is at risk.</p>
+<p>In situations like these, emergency responders may decide to force entry to protect life. Don't wait for a locksmith if someone's safety is at risk.</p>
 
 <h2>When to call 999 (Police)</h2>
 <p>Call the police on <strong>999</strong> for emergencies involving crime or safety, for example:</p>
@@ -310,7 +314,7 @@ dict(
 <li>Your keys were stolen together with your address and you feel unsafe.</li>
 <li>Someone is preventing you from entering your home, or threatening you.</li>
 </ul>
-<p>For non-urgent police matters, such as reporting lost keys or property, the Singapore Police Force has a non-emergency hotline and online reporting. <!-- FILL: verify current SPF non-emergency number and e-services link --></p>
+<p>For non-urgent police matters, such as reporting lost keys or property, the Singapore Police Force has a hotline, <strong>1800-255-0000</strong>, and you can <a href="https://www.police.gov.sg/E-Services/Lodge-Police-Report" target="_blank" rel="noopener">lodge a police report online</a>.</p>
 
 <h2>When to call a locksmith</h2>
 <p>If everyone is safe and the issue is simply that you can't get in, call a locksmith. That includes:</p>
@@ -327,13 +331,13 @@ dict(
 <p>If you're unsure whether something is an emergency — for example, an elderly parent isn't answering the door or the phone — call 995. It's better to be safe. You can call a locksmith at the same time; if emergency services arrive first and take over, the locksmith can stand down or help afterwards with a replacement lock.</p>
 
 <h2>What happens to your door after forced entry?</h2>
-<p>When emergency responders force entry, the door, frame or lock may be damaged. You'll then need the lock — and possibly the door — repaired or replaced before you can secure your home again. Uncle Thomas can replace damaged main door and gate locks the same day; see <a href="~/lock-replacement/">lock replacement</a>. Door or frame repairs may need a contractor, and for HDB flats, a damaged main door may need to be replaced with a suitable fire-rated door. <!-- FILL: verify HDB main door replacement rules --></p>
+<p>When emergency responders force entry, the door, frame or lock may be damaged. You'll then need the lock — and possibly the door — repaired or replaced before you can secure your home again. Uncle Thomas can replace damaged main door and gate locks the same day; see <a href="~/lock-replacement/">lock replacement</a>. Door or frame repairs may need a contractor, and for HDB flats, replacing a main door on a fire escape route needs an HDB renovation permit, and the new door must be half-hour fire-rated, carry an accreditor's label and have a self-closing device.</p>
 
 <h2>Can a building manager or HDB open my door?</h2>
 <p>HDB doesn't provide a lockout service for flats. In condominiums, management usually doesn't hold keys to individual units, though it may be able to help with access to common areas and guardhouse clearance for a locksmith. For rented flats, your landlord may have a spare key — check before calling anyone else. For offices, building management may hold master keys or access cards.</p>
 
 <h2>What it costs</h2>
-<p>Calling 995 or 999 in a genuine emergency is free. <!-- FILL: verify any SCDF charges for non-emergency calls --> If you need a locksmith afterwards — or for an ordinary lockout — Uncle Thomas charges from <strong>{P_LOCKOUT}</strong> for a daytime lockout and from <strong>{P_AFTERHOURS}</strong> after hours, weekends and public holidays. Lock replacement starts from <strong>{P_REPLACE}</strong>. You'll always know the price before we start. See the <a href="~/prices/">price list</a>.</p>
+<p>Calling 995 or 999 in a genuine emergency is free, and SCDF doesn't charge for emergency cases it takes to hospital. (It can charge S$274 if it conveys a non-emergency case.) If you need a locksmith afterwards — or for an ordinary lockout — Uncle Thomas charges from <strong>{P_LOCKOUT}</strong> for a daytime lockout and from <strong>{P_AFTERHOURS}</strong> after hours, weekends and public holidays. Lock replacement starts from <strong>{P_REPLACE}</strong>. You'll always know the price before we start. See the <a href="~/prices/">price list</a>.</p>
 
 <h2>Quick summary</h2>
 <ul>

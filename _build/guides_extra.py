@@ -95,7 +95,7 @@ EXTRA = {
 <li>If you were happy, leave an honest review — it helps other people find a trustworthy locksmith.</li>
 </ul>
 <h2>Why this matters in Singapore</h2>
-<p>Locksmiths in Singapore are not individually licensed in the way some trades are, so the burden is on customers to check who they're calling. <!-- FILL: verify licensing position --> Reviews, published prices, a real business name and a locksmith who checks ID are your best signals.</p>
+<p>Locksmithing isn't a licensed trade in Singapore: there's no official register or competence test, and the only registration a locksmith business holds is its ACRA business registration. So the burden is on customers to check who they're calling. Reviews, published prices, a real business name and a locksmith who checks ID are your best signals.</p>
 """,
 "landlord-tenant-lock-change": """
 <h2>Letterboxes, room doors and gates</h2>
@@ -134,9 +134,9 @@ EXTRA = {
 <li>Ask a neighbour to stay with you.</li>
 </ol>
 <h2>Lost or stolen keys</h2>
-<p>If your keys were stolen, or lost together with something showing your address (a wallet, an IC, a bag with letters), treat it as a security risk. Report a theft to the police, and change your locks as soon as possible. <!-- FILL: verify --> If the keys were simply misplaced, a police report usually isn't needed, but changing the cylinder is still the safest option.</p>
+<p>If your keys were stolen, or lost together with something showing your address (a wallet, an IC, a bag with letters), treat it as a security risk. Report a theft to the police, and change your locks as soon as possible. If the keys were simply misplaced, a police report usually isn't needed, but changing the cylinder is still the safest option.</p>
 <h2>Getting your home secure after forced entry</h2>
-<p>After any forced entry — by emergency services, or after a break-in — your first priority is making the home secure for the night. A locksmith can usually fit a new lock to a damaged door the same day, or secure it temporarily if the door or frame needs a contractor. Take photos of the damage before any repairs, keep receipts, and check your home insurance policy. If there was a break-in, don't touch anything until the police have finished. <!-- FILL: verify --></p>
+<p>After any forced entry — by emergency services, or after a break-in — your first priority is making the home secure for the night. A locksmith can usually fit a new lock to a damaged door the same day, or secure it temporarily if the door or frame needs a contractor. Take photos of the damage before any repairs, keep receipts, and check your home insurance policy. If there was a break-in, don't touch anything until the police have finished.</p>
 """,
 }
 

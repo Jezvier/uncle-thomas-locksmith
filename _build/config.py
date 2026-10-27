@@ -204,4 +204,5 @@ TOKENS = {
     "P_REPLACE": "S$100",
     "P_LETTERBOX": "S$60",
     "P_LOWEST": f"S${LOWEST_PRICE}",
+    "UEN": UEN or "",
 }
