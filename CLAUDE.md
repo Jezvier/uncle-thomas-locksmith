@@ -28,7 +28,11 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 ## Publishing
 - Domain **singapore-locksmiths.com**: registered at Namecheap, DNS on Cloudflare.
 - Hosting is **Cloudflare Pages** (project `singapore-locksmiths`, Direct Upload). **Every push to `main` deploys automatically** through `.github/workflows/deploy.yml` (uses repo secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`).
-- `.github/workflows/update-rating.yml` refreshes the Google rating daily via the Places API, once the `PLACES_API_KEY` secret is added.
+- `.github/workflows/update-rating.yml` refreshes the Google rating nightly via the Places API (`PLACES_API_KEY` secret, added 27 Oct 2026).
+- The homepage "What Customers Say on Google" section fetches live reviews in the visitor's browser with `GOOGLE_BROWSER_KEY` in config.py (public, restricted to this domain). Reviews must not be stored in the repo (Google's terms).
+- After each deploy, `_build/indexnow.py` pings IndexNow (Bing → ChatGPT search, Copilot) with pages changed that day. The key file `eb37cd71ff868ba077b9f23ed60997c6.txt` at the site root must stay.
+- `script.js` is cache-busted by a hash of its contents, so script changes reach visitors immediately.
+- Google Cloud is on a free trial ending Jan 2027: the owner must upgrade (expected S$0) to keep reviews and rating updating.
 - The owner has said changes can go live without asking first. Still: build, check for broken links and errors, then push.
 
 ## Checks before pushing
