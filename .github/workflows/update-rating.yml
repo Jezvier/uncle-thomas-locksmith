@@ -60,3 +60,7 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy dist --project-name=singapore-locksmiths --branch=main --commit-dirty=true
+
+      - name: Tell Bing about changed pages (IndexNow)
+        if: steps.build.outputs.changed == 'true'
+        run: python3 _build/indexnow.py || true
