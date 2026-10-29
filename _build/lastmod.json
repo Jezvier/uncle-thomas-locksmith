@@ -1,7 +1,7 @@
 {
 "/": {
-"date": "2026-10-28",
-"hash": "ad1b79f6e2ec175b44816337e3eb5541"
+"date": "2026-10-29",
+"hash": "ad25cc99b2585b7f11c0c75f59731c86"
 },
 "about/": {
 "date": "2026-10-29",
@@ -281,7 +281,7 @@
 },
 "guides/": {
 "date": "2026-10-29",
-"hash": "93e72daa56229a69cbfad0f5fe06442b"
+"hash": "623021fe30128061511669fbfeb9a8cb"
 },
 "guides/after-a-break-in/": {
 "date": "2026-10-27",
@@ -309,7 +309,7 @@
 },
 "guides/forgot-safe-combination/": {
 "date": "2026-10-29",
-"hash": "4987237ab1a6c409d2c5e55b9cb70387"
+"hash": "891e9b57936c6aaecbdeec05aa5e0e0c"
 },
 "guides/hdb-gate-lock-types/": {
 "date": "2026-10-27",
@@ -343,13 +343,25 @@
 "date": "2026-10-27",
 "hash": "975112d4d5792f18d1788a44e849022c"
 },
+"guides/lost-safe-key/": {
+"date": "2026-10-29",
+"hash": "3ae9854353481dd218427e40e5a8161f"
+},
 "guides/police-scdf-open-door/": {
 "date": "2026-10-27",
 "hash": "91e168476a95ace1e203be875c42b821"
 },
+"guides/safe-box-battery-dead/": {
+"date": "2026-10-29",
+"hash": "fcab556860fe5679ebd1afea5636ac25"
+},
 "guides/safe-drilling-explained/": {
 "date": "2026-10-29",
 "hash": "53667aadf304c4de9ece5117792733a6"
+},
+"guides/safe-wont-open-correct-code/": {
+"date": "2026-10-29",
+"hash": "4f432c550cb7913facb8b0525fa12f5c"
 },
 "guides/smart-lock-for-hdb-gate/": {
 "date": "2026-10-27",
@@ -381,7 +393,51 @@
 },
 "safe-opening/": {
 "date": "2026-10-29",
-"hash": "ca90cdae91b90c9ff3b6df47ddd010eb"
+"hash": "c3e994f54463ac4b26ad40c91e0cd08b"
+},
+"safe-opening/booil/": {
+"date": "2026-10-29",
+"hash": "f67e1349d81c2ba46c2246625552a0c4"
+},
+"safe-opening/bumil/": {
+"date": "2026-10-29",
+"hash": "427051314c021142b59d873879d80d9c"
+},
+"safe-opening/burg-wachter/": {
+"date": "2026-10-29",
+"hash": "9456116876ba0fa3731c95d7a2cc865d"
+},
+"safe-opening/chubb/": {
+"date": "2026-10-29",
+"hash": "b0ec2f0210ea4049bef573842df6c6bb"
+},
+"safe-opening/diplomat/": {
+"date": "2026-10-29",
+"hash": "ca110cee711e615b530fed7e561a447a"
+},
+"safe-opening/eagle/": {
+"date": "2026-10-29",
+"hash": "2b4a9973000ff52e57752e6761adee7c"
+},
+"safe-opening/godrej/": {
+"date": "2026-10-29",
+"hash": "9c717d5f5cb491fdf5391817a3db150e"
+},
+"safe-opening/honeywell/": {
+"date": "2026-10-29",
+"hash": "9049a0e25fb1c96b250adff03c61fea2"
+},
+"safe-opening/phoenix/": {
+"date": "2026-10-29",
+"hash": "cc234edfece7827535a7e12a0a7f0a13"
+},
+"safe-opening/sentrysafe/": {
+"date": "2026-10-29",
+"hash": "2932131e6415b7b96473e9b982dfe28a"
+},
+"safe-opening/yale/": {
+"date": "2026-10-29",
+"hash": "214d3283f9acb8da446e15ad02120693"
 },
 "services/": {
 "date": "2026-10-29",
@@ -408,7 +464,7 @@
 "hash": "fdf305753b369ff1d781ff2e4999d79f"
 },
 "zh/safe-opening/": {
-"date": "2026-10-27",
-"hash": "7f2633a2224511dd97542cab64e8c125"
+"date": "2026-10-29",
+"hash": "a8f70169450f7a3d999896f0fdb741df"
 }
 }

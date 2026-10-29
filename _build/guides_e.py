@@ -151,4 +151,155 @@ dict(
   ("Can you supply and install a safe?", "Yes. Uncle Thomas can recommend, source and install a safe for your home or business. WhatsApp {PHONE} for advice."),
  ],
 ),
+# ----------------------------------------------------------------------
+dict(
+ slug="safe-box-battery-dead",
+ short="Safe box battery dead",
+ title="Safe Box Battery Dead? How to Open It (Singapore Guide)",
+ desc="Safe box battery dead, keypad blank or beeping? How to open it with external battery terminals or the override key, which batteries to use, and when to call.",
+ h1="Safe Box Battery Dead? How to Open It",
+ card="Keypad blank, beeping or flashing red? How to get into an electronic safe with flat batteries, and how to stop it happening again.",
+ body="""
+<p>A dead keypad on an electronic safe box looks alarming, but in most cases the safe isn't broken. The batteries are simply flat, and the code is still stored: electronic safe locks keep your code in memory even with no power. The problem is that on most safes the batteries sit <em>inside</em> the door. Here's how to get in.</p>
+
+<h2>1. Check for an external battery compartment</h2>
+<p>Some safes have their batteries on the outside, under the keypad or behind a cover on the front. If yours does, just replace them with fresh alkaline batteries and enter your code.</p>
+
+<h2>2. Look for external power terminals</h2>
+<p>Many safes have two small metal contacts on the outside, often under the keypad or dial, for exactly this situation. Hold a 9V battery against them, wake the keypad, and enter your code while the battery stays in place. Yale's Fire Safe works this way: its terminals are underneath the dial. Some brands, such as Godrej, supply an external battery adapter instead, so check the box the safe came in.</p>
+
+<h2>3. Use the override (emergency) key</h2>
+<p>Most home safes come with an override key for when the electronics fail. It's usually hidden behind a cover or plug near the keypad or handle. On SentrySafe models such as the X125, it's behind the cover between the knob and keypad; on Phoenix models such as the SS0300E, it's under the grey plug at the bottom of the keypad. Turn the key and hold it while you turn the handle.</p>
+<p>Not every safe has one. Yale's Fire Safe and several Burg-Wächter ranges (Home Safe, Cityline, Karat and others) have no mechanical override at all.</p>
+
+<h2>4. If the keypad lights up but the door won't open</h2>
+<p>Weak batteries can light the keypad and beep normally, yet not have enough power to move the bolt. If your safe accepts the code but stays shut, treat it as a battery problem first. More causes in <a href="~/guides/safe-wont-open-correct-code/">safe won't open with the correct code</a>.</p>
+
+<h2>Which batteries, and how often?</h2>
+<ul>
+<li><strong>Most home safes take four AA alkaline batteries</strong> (SentrySafe X-series, Phoenix SS0300E, many Honeywell and Eagle models). Some take a 9V or a different number, so check yours.</li>
+<li><strong>Use alkaline, not rechargeable.</strong> Rechargeables run at a lower voltage and can leak.</li>
+<li><strong>Replace them once a year</strong>, or at the first low-battery warning (often a red light or a beep when you press a key). Don't wait for the safe to die.</li>
+<li><strong>Replace them all at once.</strong> Mixing old and new shortens their life.</li>
+<li><strong>Check whether your code survives.</strong> On most safes it does; on some, such as Burg-Wächter's Basic Safe and Smart Safe, the code has to be set again after a battery change.</li>
+</ul>
+
+<h2>What not to do</h2>
+<ul>
+<li><strong>Don't force the handle or pry the door.</strong> You'll damage the bolt work and can trigger relockers, which makes opening much harder.</li>
+<li><strong>Don't drill it yourself.</strong> See <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></li>
+<li><strong>Don't keep the override key inside the safe.</strong> It's the most common reason a flat battery turns into a locksmith call.</li>
+</ul>
+
+<h2>When to call a safe locksmith</h2>
+<p>Call if there's no external power point, the override key is lost or inside the safe, or fresh power doesn't help (which can mean the lock itself has failed). Uncle Thomas is a US-trained safesmith who opens every type of safe box across Singapore, 24/7. Send photos of the safe's front, keypad and brand label to {PHONE} and we'll tell you how we'd open it and the price before we come. Brand guides: <a href="~/safe-opening/yale/">Yale</a> · <a href="~/safe-opening/sentrysafe/">SentrySafe</a> · <a href="~/safe-opening/phoenix/">Phoenix</a> · <a href="~/safe-opening/godrej/">Godrej</a> · <a href="~/safe-opening/#brands">all brands</a>.</p>
+<div class="callout navy"><p><strong>Safe box dead and no key?</strong> WhatsApp photos to {PHONE}. Price agreed before we come.</p></div>
+""",
+ faqs=[
+  ("Does a safe lose its code when the battery dies?", "Usually not. Electronic safe locks store the code in memory. A few models need the code set again after a battery change, so check your manual."),
+  ("How do I open a safe box with a dead battery and no key?", "Look for external power terminals and hold a 9V battery to them while you enter the code. If there are none, call a safe locksmith rather than forcing it."),
+  ("Why does my safe beep but not open?", "Often the batteries are strong enough to run the keypad but not the bolt motor. Replace them and try again."),
+  ("What batteries does a safe box use?", "Most home safes take four AA alkaline batteries, but some use a 9V or a different number. Use alkaline, not rechargeable."),
+ ],
+),
+# ----------------------------------------------------------------------
+dict(
+ slug="safe-wont-open-correct-code",
+ short="Safe won't open with correct code",
+ title="Safe Won't Open With the Correct Code? 8 Causes & Fixes",
+ desc="Safe box accepts the code but won't open? Weak batteries, bolt pressure, lockout mode, a jammed handle and more: what to check first and when to call.",
+ h1="Safe Won't Open With the Correct Code? 8 Causes and Fixes",
+ card="The code is right but the door stays shut. Eight common causes, from weak batteries to a jammed bolt, and what to try for each.",
+ body="""
+<p>You've entered the code you know is right. The keypad beeps, maybe a green light shows, but the safe stays shut. It's one of the most common safe problems, and usually not because the code is wrong. Work through these in order.</p>
+
+<h2>1. Weak batteries</h2>
+<p>The most common cause by far. Batteries that can still light the keypad may not have enough power to move the bolt motor or solenoid. Replace all the batteries (or use the external power terminals or override key: see <a href="~/guides/safe-box-battery-dead/">safe box battery dead</a>) and try again.</p>
+
+<h2>2. Pressure on the bolts</h2>
+<p>If something inside is pressing against the door, or the door was slammed shut, the bolts can be pinned and the motor can't pull them back. Push firmly on the door, right next to the handle side, while you enter the code and turn the handle.</p>
+
+<h2>3. You're not turning the handle in time</h2>
+<p>Many electronic safes only release for a few seconds after a correct code. Enter the code, then turn the handle straight away, in the right direction.</p>
+
+<h2>4. A wrong-code lockout</h2>
+<p>After several wrong entries, many safes ignore all codes for a while, even the right one. Honeywell safes lock for about five minutes after three wrong codes; some Diplomat models lock after three. Wait the full time, then enter the code once, slowly.</p>
+
+<h2>5. A changed or partly saved code</h2>
+<p>If someone recently changed the code, it may not have saved properly. On many safes a failed code change ends with several beeps or a flashing light. Try the old code too, and ask whoever last changed it.</p>
+
+<h2>6. The safe was moved or dropped</h2>
+<p>A knock during a move can misalign the bolt work or loosen something inside the lock. If the safe stopped working after a move, don't force it.</p>
+
+<h2>7. A dial safe that's slightly off</h2>
+<p>Mechanical dial combinations are unforgiving. Dial slowly, stop exactly on each number, and follow your manual's turn directions (for example, the number of full turns before the first number). If the dial feels stiff or spins freely, stop: the lock may be worn.</p>
+
+<h2>8. The lock has failed</h2>
+<p>If fresh power, the override key and careful entry all fail, the lock itself (keypad board, motor or bolt mechanism) may have broken. That's when a safe needs a safesmith, and usually drilling at a precise point. On many safes a new lock can then be fitted. See <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
+
+<h2>Hotel safe won't open?</h2>
+<p>Call the hotel's front desk. Hotel safes have a master override that staff can use after checking you're the guest.</p>
+
+<h2>When to call a safe locksmith</h2>
+<p>If you've worked through these and the safe still won't open, call or WhatsApp {PHONE}. Uncle Thomas is a US-trained safesmith who opens every type of safe box in Singapore, 24/7, for homes and businesses. We check ownership, agree the price first, and tell you whether the safe will stay usable. See <a href="~/safe-opening/">safe opening</a>.</p>
+<div class="callout navy"><p><strong>Code right, door shut?</strong> WhatsApp photos of the safe to {PHONE}. We'll tell you what we think is wrong.</p></div>
+""",
+ faqs=[
+  ("Why won't my safe open with the right code?", "Most often weak batteries, which can light the keypad but not move the bolt. Other causes are pressure on the bolts, a lockout after wrong tries, or a failed lock."),
+  ("My safe shows a green light but won't open. What should I do?", "Turn the handle straight away after the code, push the door firmly near the handle side while turning, and replace the batteries."),
+  ("How long is a safe lockout after wrong codes?", "It varies by brand, often a few minutes. Honeywell safes lock for about five minutes after three wrong codes."),
+  ("My safe stopped working after we moved house. Why?", "A knock can misalign the bolts or damage the lock. Don't force it: call a safe locksmith."),
+ ],
+),
+# ----------------------------------------------------------------------
+dict(
+ slug="lost-safe-key",
+ short="Lost safe key",
+ title="Lost Your Safe Key or Override Key? What to Do (SG)",
+ desc="Lost the key to your safe box, or the emergency override key? How to get a replacement from the maker, what proof you need, and when a safe locksmith is faster.",
+ h1="Lost Your Safe Key or Override Key? What to Do",
+ card="Key safe, dual-lock safe or a lost override key: replacement options, the proof you'll need, and when to call a safesmith.",
+ body="""
+<p>Safe keys get lost in drawers, moves and spring cleans, and override keys are often put away so carefully that nobody can find them. What you can do depends on whether the safe is open or locked, and what kind of key it is.</p>
+
+<h2>Which key have you lost?</h2>
+<ul>
+<li><strong>The only key to a key safe:</strong> the safe can't be opened without it.</li>
+<li><strong>The key on a dual-lock safe</strong> (code plus key): you need both, so a lost key locks you out even with the right code.</li>
+<li><strong>The override (emergency) key on an electronic safe:</strong> you can still use the code day to day, but there's no backup when the batteries die or the electronics fail.</li>
+</ul>
+
+<h2>If the safe is still open</h2>
+<p>Don't close it. Leave it open and ask a safe locksmith about replacing the lock or getting a new key set while it's easy. For an electronic safe with a lost override key, at least replace the batteries now and keep spares.</p>
+
+<h2>Getting a replacement key from the maker</h2>
+<p>Some manufacturers supply replacement keys if you can prove ownership. You'll usually need:</p>
+<ul>
+<li>The safe's <strong>serial number</strong>, often on a label on the outside or inside the door. SentrySafe, for example, puts it on a label on the outside of the safe.</li>
+<li>The <strong>key number</strong>, if it's stamped on the key or noted in the paperwork.</li>
+<li><strong>Proof of purchase</strong> and ID. Some makers ask for a signed or notarised letter.</li>
+</ul>
+<p>This can take days or weeks, especially when the brand's service centre is overseas. If you need the safe open sooner, a safe locksmith is faster.</p>
+
+<h2>If the safe is locked and the key is gone</h2>
+<p>Don't try to pick, pry or drill it yourself. A safe locksmith can open it, and in many cases fit a new lock with new keys so the safe can keep being used. See <a href="~/safe-combination-change/">safe lock replacement</a>.</p>
+
+<h2>Where to keep safe keys</h2>
+<ul>
+<li><strong>Never inside the safe.</strong></li>
+<li>Somewhere secure and separate, such as a locked drawer elsewhere, with a trusted family member, or at the office.</li>
+<li>For a business, record who holds each key, and get keys back when staff leave.</li>
+</ul>
+
+<h2>How we help</h2>
+<p>Uncle Thomas, a US-trained safesmith, opens safes with lost keys for homes and businesses across Singapore, 24/7. We check proof of ownership, agree the price before we come, and can replace the lock afterwards. WhatsApp photos of the safe, the keyhole and the brand label to {PHONE}.</p>
+<div class="callout navy"><p><strong>Lost the safe key?</strong> WhatsApp photos to {PHONE}. Price agreed before we come.</p></div>
+""",
+ faqs=[
+  ("Can a locksmith open a safe without the key?", "Yes. A safe locksmith can open it after checking proof of ownership, and can often fit a new lock with new keys."),
+  ("Can I get a replacement safe key from the manufacturer?", "Some makers supply one with the serial number, key number, proof of purchase and ID. It can take days or weeks."),
+  ("Where is the serial number on my safe?", "Usually on a label on the outside of the safe or inside the door. SentrySafe puts it on a label on the outside."),
+  ("I lost the override key but the code still works. Is that a problem?", "Only when the batteries die or the electronics fail. Replace the batteries now, keep spares, and consider getting a new key set or lock."),
+ ],
+),
 ]

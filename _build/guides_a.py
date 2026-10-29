@@ -145,9 +145,9 @@ dict(
 # ---------------------------------------------------------------------------
 dict(
  slug="forgot-safe-combination", short="Forgot safe combination",
- title="Forgot Your Safe Combination? What to Do Next | Singapore",
- desc="Forgot your safe code or lost the key? A US-trained safesmith explains what to try first, what not to do, and how professional safe opening works.",
- h1="Forgot Your Safe Combination? What to Do Next",
+ title="Safe Box Forgot Password or Combination? What to Do (SG)",
+ desc="Forgot your safe box password, code or combination? A US-trained safesmith explains what to try first, how to reset it, what not to do, and when to call.",
+ h1="Forgot Your Safe Box Password or Combination? What to Do",
  card="Lost the code or key to your safe? What to try, what not to do, and how a safesmith helps.",
  body="""
 <p>Forgetting a safe code happens more often than you'd think — after a long holiday, after inheriting a safe, when the person who set it has left the company, or when an electronic keypad suddenly stops accepting a code you're sure is right. Here's what Uncle Thomas, who trained in safesmithing in the United States and has opened safes on ships and across Asia, suggests you do.</p>

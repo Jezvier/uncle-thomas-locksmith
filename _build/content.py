@@ -173,10 +173,10 @@ dict(
 dict(
  path="safe-opening/", short="Safe opening", icon="safe",
  card="Forgotten combination or faulty safe? Opened by a US-trained safesmith who has worked on ships and across Asia.",
- title="Safe Opening Singapore | US-Trained Safesmith | Uncle Thomas",
- title_exp="Safe Opening Singapore | US-Trained Safesmith Since 1998",
- desc="Forgot your safe code, lost the key or keypad dead? Uncle Thomas, a US-trained safesmith, opens all safe types for homes and businesses, 24/7. Call 9224 9224.",
- h1="Safe Opening in Singapore by a US-Trained Safesmith",
+ title="Safe Locksmith Singapore | Safe & Safe Box Opening 24/7",
+ title_exp="Safe Locksmith Singapore | Safe Box Opening by a Safesmith",
+ desc="Safe box forgot password, battery dead or lost key? A US-trained safe locksmith opens all safe types in Singapore, homes and businesses, 24/7. Call 9224 9224.",
+ h1="Safe Locksmith Singapore: Safe and Safe Box Opening, 24/7",
  sub="Forgotten combination, lost key, dead keypad or a jammed bolt. Uncle Thomas trained in safesmithing in the United States and opens every type of safe, for homes, offices, pawnshops, banks and government agencies.",
  badges=["US-trained safesmith", "All safe types", "Discreet, 24/7"],
  body="""
@@ -232,9 +232,19 @@ dict(
 <h2>Will my safe need to be drilled?</h2>
 <p>It depends on the safe and what's wrong with it. A safe with a forgotten code or a lost key can often be opened and stays fully usable. A safe whose lock has <strong>failed</strong>, such as a dead keypad board, a broken motor or a jammed bolt, usually needs drilling, because the lock can no longer respond to any code. Professional drilling is precise: a small hole at a specific point to reach the lock, chosen to avoid the relockers. On many safes the lock can then be replaced, and the safe used again. We'll always explain this, and the price, before starting. Read more in <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
 
-<h2>Safe brands we open</h2>
-<p>All makes, including:</p>
-<ul class="tags">""" + "".join(f"<li>{b}</li>" for b in C.SAFE_BRANDS) + """<li>and more</li></ul>
+<h2 id="brands">Safe brands we open</h2>
+<p>All makes. Brand guides with battery, override key and code-reset help:</p>
+{SAFE_BRAND_PILLS}
+<p>We also open """ + ", ".join(C.SAFE_BRANDS_MORE) + """ and every other make.</p>
+
+<h2>Common safe box problems</h2>
+<ul>
+<li><a href="~/guides/forgot-safe-combination/">Safe box forgot password or combination</a></li>
+<li><a href="~/guides/safe-box-battery-dead/">Safe box battery dead: how to open it</a></li>
+<li><a href="~/guides/safe-wont-open-correct-code/">Safe won't open with the correct code</a></li>
+<li><a href="~/guides/lost-safe-key/">Lost safe key or override key</a></li>
+<li><a href="~/guides/safe-drilling-explained/">Does my safe need drilling?</a></li>
+</ul>
 
 <div class="callout"><p><strong>Proof of ownership:</strong> Before opening any safe we confirm it belongs to you or your business, for example a purchase receipt, company authorisation, or proof of residence where the safe is kept. A safesmith who opens any safe without checking is a risk to everyone. Jobs are handled discreetly.</p></div>
 
@@ -850,6 +860,9 @@ def build(x):
     for s in SERVICES:
         s["body"] = (s["body"].replace("{CAR_BRAND_LINKS}", x["cars"].links_html())
                      .replace("{CAR_BRANDS_MORE}", car_more))
+    import safe_brands
+    for s in SERVICES:
+        s["body"] = s["body"].replace("{SAFE_BRAND_PILLS}", safe_brands.pills_html())
     for s in SERVICES:
         s["body"] = s["body"].replace("{BRAND_LINKS}",
             f'<h3>Brand guides: what to try first</h3><ul class="link-pills">{brand_links}</ul>' if brand_links else "")

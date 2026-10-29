@@ -88,8 +88,10 @@ BRAND_JOBS = {
 }
 
 # Safe brands mentioned on the safe opening page (Uncle Thomas opens all makes).
-SAFE_BRANDS = ["Bumil", "Chubb", "Glory", "Uchida", "Eagle", "Phoenix", "Sentry", "Yale", "Lion", "Diplomat",
-               "Gunnebo", "Kokuyo", "Kaba", "Sargent & Greenleaf"]
+SAFE_BRANDS = ["Yale", "SentrySafe", "Phoenix", "Honeywell", "Godrej", "Diplomat", "Eagle", "Bumil", "Booil", "Chubb",
+               "Burg-Wächter", "Glory", "Uchida", "Lion", "Gunnebo", "Kokuyo", "Kaba", "Sargent & Greenleaf"]
+# Safe brands without their own page (mentioned on the safe opening hub).
+SAFE_BRANDS_MORE = ["Nikawa", "Uchida", "Kokuyo", "Lion", "Glory", "Gunnebo", "Kaba", "Sargent & Greenleaf"]
 
 # ---- Google rating ------------------------------------------------------
 # Shown on the homepage first screen. _build/rating.json (written daily by the

@@ -660,6 +660,8 @@ def main():
                breadcrumb_html=breadcrumb_html, quote_form=quote_form)
     content.build(ctx)
     brands.build(ctx)
+    import safe_brands
+    safe_brands.build(ctx)
     cars.build(ctx)
     areas.build(ctx)
     guides.build(ctx)
