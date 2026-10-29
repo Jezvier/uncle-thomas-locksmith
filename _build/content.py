@@ -182,6 +182,9 @@ dict(
  body="""
 <p><strong>The short answer:</strong> try fresh batteries and the override key first. If the safe still won't open, don't force it. Send photos of the safe to {PHONE}, and Uncle Thomas will tell you how he'd open it and the price before he comes. Some safes can be opened and stay fully usable. When a safe is faulty, it usually has to be drilled, precisely, at the right point, so the safe can often take a new lock afterwards.</p>
 
+<h2>What is a safesmith?</h2>
+<p>A <strong>safesmith</strong> is a locksmith who specialises in safes and vaults: opening locked safes, changing combinations, replacing safe locks and installing safes. Uncle Thomas Locksmith is a safesmith in Singapore: its founder, Uncle Thomas, trained in safesmithing in the United States and has opened safes since 1998 for homes, offices, pawnshops, banks and government agencies.</p>
+
 <h2>Why a safesmith, not just a locksmith</h2>
 <p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, and many have hidden relockers that fire if the safe is attacked the wrong way. A wrong approach can make the job far harder or damage what's inside. Few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in <strong>safesmithing</strong>, and has since opened safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
 
