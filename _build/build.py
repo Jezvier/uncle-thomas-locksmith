@@ -381,10 +381,11 @@ def footer_html(lang="en"):
         <li><a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{"给我们留下 Google 评价" if lang == "zh" else "Leave us a Google review"}</a></li>
       </ul>
     </div>
-    <div><h2>{t["f_services"]}</h2><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></div>
-    <div><h2>{t["f_areas"]}</h2><ul>{towns}<li><a href="~/areas/">{t["all_areas"]}</a></li></ul></div>
-    <div><h2>{t["f_guides"]}</h2><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/contact/">Contact</a></li><li><a href="~/privacy/">Privacy</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></div>
+    <details class="m-fold fgroup" open><summary><h2>{t["f_services"]}</h2></summary><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></details>
+    <details class="m-fold fgroup" open><summary><h2>{t["f_areas"]}</h2></summary><ul>{towns}<li><a href="~/areas/">{t["all_areas"]}</a></li></ul></details>
+    <details class="m-fold fgroup" open><summary><h2>{t["f_guides"]}</h2></summary><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/contact/">Contact</a></li><li><a href="~/privacy/">Privacy</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></details>
   </div>
+  <script>if(matchMedia("(max-width:639px)").matches)document.querySelectorAll("details.m-fold").forEach(function(d){{d.removeAttribute("open")}})</script>
   <div class="footer-bottom"><div class="container">© <span data-year>{date.today().year}</span> {C.NAME}{uen} · {t["bottom"]}</div></div>
 </footer>
 <div class="mobile-bar">

@@ -394,7 +394,36 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
   .page-hero .container > .hero-sub { order: 5; }
   .page-hero .container > .badges { order: 6; }
 }
-.hero-lead picture { display: block; flex-shrink: 0; width: 56px; height: 56px; }
+.hero-lead picture { display: none; }
+@media (max-width: 959px) { .hero-lead picture { display: block; flex-shrink: 0; width: 56px; height: 56px; } }
 @media (max-width: 380px) {
   .cta-row .btn { font-size: .92rem; padding: 14px 6px; gap: 6px; }
+}
+
+/* ===== Phone-only folds (29 Oct 2026): same links for Google, less scrolling on phones ===== */
+details.m-fold > summary { list-style: none; }
+details.m-fold > summary::-webkit-details-marker { display: none; }
+@media (min-width: 640px) {
+  details.m-fold > summary { pointer-events: none; }
+  .towns-box > summary { display: none; }
+}
+@media (max-width: 639px) {
+  /* 1. compact services list: one line per service */
+  #services .card.svc p, #services .card.svc .more { display: none; }
+  #services .card.svc { align-items: center; padding: 10px 14px; }
+  #services .card.svc .ico { grid-row: auto; }
+  #services .card.svc h3 { margin: 0; align-self: center; }
+  /* 4. three guides on phones (the fourth stays for desktop) */
+  #guides .grid > :nth-child(n+4) { display: none; }
+  .towns-box > summary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 999px; background: var(--white); border: 2px solid var(--navy); font-weight: 700; color: var(--navy); cursor: pointer; }
+  .towns-box > summary::after { content: '+'; font-size: 1.3rem; line-height: 1; }
+  .towns-box[open] > summary::after { content: '−'; }
+  /* 5. collapsible footer groups */
+  .fgroup { border-top: 1px solid rgba(255,255,255,.12); }
+  .fgroup > summary { display: flex; align-items: center; justify-content: space-between; min-height: 52px; cursor: pointer; }
+  .fgroup > summary h2 { margin: 0; }
+  .fgroup > summary::after { content: '+'; color: var(--yellow-light); font-size: 1.4rem; line-height: 1; }
+  .fgroup[open] > summary::after { content: '−'; }
+  .footer-grid { gap: 0; }
+  .footer-grid > div:first-child { padding-bottom: 20px; }
 }

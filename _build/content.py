@@ -670,7 +670,7 @@ def build_home(x):
   <div class="container narrow" style="text-align:center">
     <h2 class="section-title">Locksmith Near You — Islandwide</h2>
     <p class="section-lead">Wherever you are in Singapore, Uncle Thomas can reach you. Find your town:</p>
-    <div class="town-links" style="justify-content:center">{town_links}</div>
+    <details class="m-fold towns-box" open><summary>Find your town ({len(x["areas"].TOWNS)} areas)</summary><div class="town-links" style="justify-content:center">{town_links}</div></details>
     <p style="margin-top:20px"><a href="~/areas/" class="btn btn-outline">See all areas we serve</a></p>
   </div>
 </section>
