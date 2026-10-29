@@ -67,10 +67,12 @@ DESCRIPTION = ("24/7 emergency locksmith in Singapore since 1998, led by Uncle T
                "Door lockouts, digital lock opening and installation, safe opening, car lockouts, lock and "
                "letterbox replacement, islandwide.")
 
-DIGITAL_LOCK_BRANDS = ["Samsung", "Yale", "Philips", "Igloohome", "Kaadas", "Solity", "Gateman", "Häfele",
-                       "Aqara", "Xiaomi", "Lenovo", "Schlage", "Epic", "Milre", "Dessmann", "Lockin", "Ezviz"]
+DIGITAL_LOCK_BRANDS = ["Samsung", "Zigbang", "Yale", "Philips", "Igloohome", "Kaadas", "Solity", "Gateman", "Häfele",
+                       "Aqara", "Xiaomi", "Lenovo", "Schlage", "Eufy", "Tapo", "Prism+", "Ezviz", "Lockly", "Yew",
+                       "Epic", "Milre", "Dessmann", "Lockin", "Zeus", "Kaiser+", "Starke"]
 # Digital / smart lock brands that get their own page at /digital-lock-opening/<brand>/
-BRAND_PAGES = ["Samsung", "Yale", "Philips", "Igloohome", "Gateman", "Kaadas", "Solity", "Häfele", "Aqara", "Xiaomi", "Lenovo"]
+BRAND_PAGES = ["Samsung", "Zigbang", "Yale", "Philips", "Igloohome", "Gateman", "Kaadas", "Solity", "Häfele", "Schlage",
+               "Aqara", "Xiaomi", "Lenovo", "Eufy", "Tapo", "Prism+", "Ezviz", "Lockly", "Yew"]
 
 # Car brands. Owner: Uncle Thomas opens and clones fobs for all makes EXCEPT Tesla — so Tesla is never listed.
 # CAR_BRAND_PAGES get their own page at /car-locksmith/<brand>/ (content in _build/cars.py).
