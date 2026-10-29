@@ -111,6 +111,14 @@
 "date": "2026-10-27",
 "hash": "7ae772538f9f711ab03b6da6626a436b"
 },
+"broken-key-extraction/": {
+"date": "2026-10-29",
+"hash": "563569e181371a53d9f3f5c1d4a556e5"
+},
+"cabinet-lock/": {
+"date": "2026-10-29",
+"hash": "e0170bc4887e617aa3a22ccd984b5cf1"
+},
 "car-key-duplicate/": {
 "date": "2026-10-29",
 "hash": "f168f392355c8a156cb5d60a4d95e1f3"
@@ -209,7 +217,7 @@
 },
 "commercial-locksmith/": {
 "date": "2026-10-29",
-"hash": "5b840767ba52b03a7fb796dd49d5455a"
+"hash": "ecd46fa104530a6df9324332d58767a3"
 },
 "commercial-safe-services/": {
 "date": "2026-10-29",
@@ -305,7 +313,11 @@
 },
 "emergency-locksmith/": {
 "date": "2026-10-29",
-"hash": "5666fe01a5514e35749a01db2b1683d9"
+"hash": "a775afbbb65fcfaf0a216b777855071c"
+},
+"glass-door-lock/": {
+"date": "2026-10-29",
+"hash": "898acb0cbdbb57c37f533eec4b604387"
 },
 "guides/": {
 "date": "2026-10-29",
@@ -341,7 +353,7 @@
 },
 "guides/door-lock-jammed/": {
 "date": "2026-10-29",
-"hash": "0b72c124f5788bebcb2d8e8baf75f32d"
+"hash": "25aa704bd197c2aeefb631ff3daecccb"
 },
 "guides/forgot-digital-lock-pin/": {
 "date": "2026-10-29",
@@ -437,7 +449,11 @@
 },
 "lock-replacement/": {
 "date": "2026-10-29",
-"hash": "98d5e4e4e67f14cb987ab860a9659223"
+"hash": "2a0ef9e6264c456838a4aa0bb2be3223"
+},
+"padlock-cutting/": {
+"date": "2026-10-29",
+"hash": "3d34e6f1dd86360c6661fd15697f6488"
 },
 "prices/": {
 "date": "2026-10-27",
@@ -446,6 +462,10 @@
 "privacy/": {
 "date": "2026-10-27",
 "hash": "21c2b250e701f59b183ef0e2d3267ef6"
+},
+"roller-shutter-lock/": {
+"date": "2026-10-29",
+"hash": "7a239e13d8f1c35e5c4924429e36d6ff"
 },
 "safe-combination-change/": {
 "date": "2026-10-29",
@@ -505,7 +525,7 @@
 },
 "services/": {
 "date": "2026-10-29",
-"hash": "18378b79a8fc01542cc3c1dc74b5157f"
+"hash": "323c559ec229845ad9587e47df890ad0"
 },
 "zh/": {
 "date": "2026-10-27",

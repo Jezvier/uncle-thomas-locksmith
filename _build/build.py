@@ -744,6 +744,7 @@ def main():
              "- Verifies proof of residence or ownership before opening any door, car or safe.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
              "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands).",
+             "- Also: broken key extraction; padlock opening and cutting; roller shutter locks; glass door and sliding door locks; cabinet, drawer and locker locks.",
              "- Safes: opens all safe types; changes combinations; replaces safe locks; recommends, supplies and installs safes. Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies."]
     if C.UEN:
         lines.append(f"- UEN: {C.UEN}")

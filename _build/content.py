@@ -43,6 +43,7 @@ dict(
 <li><strong>Condominiums</strong> — main doors, deadbolts and digital locks.</li>
 <li><strong>Landed homes</strong> — main doors, gates and back doors.</li>
 <li><strong>Offices and shops</strong> — office doors, glass doors, cabinets and roller shutters. See <a href="~/commercial-locksmith/">commercial locksmith</a>.</li>
+<li><strong>Key snapped in the lock?</strong> See <a href="~/broken-key-extraction/">broken key extraction</a>.</li>
 <li><strong>Digital lock or smart lock won't open?</strong> Flat battery, forgotten PIN or faulty keypad — see <a href="~/digital-lock-opening/">digital and smart lock opening</a>.</li>
 <li><strong>Keys locked in the car, or need a spare key fob?</strong> See <a href="~/car-locksmith/">car locksmith</a>.</li>
 </ul>
@@ -349,6 +350,7 @@ dict(
 <li>HDB main door locks — mortise locks, cylinder locks, deadbolts and lever handles. See <a href="~/hdb-main-door-lock-replacement/">HDB main door lock replacement</a>.</li>
 <li>HDB metal gate locks — hook bolts, padlocks and gate locksets. See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>.</li>
 <li>Room, toilet and bedroom door locks and knobs.</li>
+<li><a href="~/glass-door-lock/">Glass door and sliding door locks</a>, <a href="~/roller-shutter-lock/">roller shutter locks</a> and <a href="~/cabinet-lock/">cabinet, drawer and locker locks</a>.</li>
 <li>Condo, landed and office door locks.</li>
 <li><a href="~/letterbox-lock-replacement/">Letterbox and mailbox locks</a>.</li>
 </ul>
@@ -420,10 +422,11 @@ dict(
  body="""
 <h2>Commercial locksmith services</h2>
 <ul>
-<li><strong>Office and shop lockouts</strong> — main doors, glass doors, back doors and roller shutters.</li>
+<li><strong>Office and shop lockouts</strong> — main doors, back doors, <a href="~/glass-door-lock/">glass doors</a> and <a href="~/roller-shutter-lock/">roller shutters</a>.</li>
 <li><strong>Lock changes when staff leave</strong> or keys go missing.</li>
 <li><strong>Digital and keypad locks</strong> for offices and small businesses — see <a href="~/digital-lock-installation/">digital lock installation</a>.</li>
-<li><strong>Cabinet, drawer and locker locks</strong>.</li>
+<li><strong>Cabinet, drawer and locker locks</strong> — see <a href="~/cabinet-lock/">cabinet and locker locks</a>.</li>
+<li><strong>Padlocks and broken keys</strong> — see <a href="~/padlock-cutting/">padlock cutting</a> and <a href="~/broken-key-extraction/">broken key extraction</a>.</li>
 <li><strong>Safes</strong>: opening, combination changes, new locks and new safes for cash, drop and document safes. Uncle Thomas has worked for commercial offices, pawnshops, banks and government ministries. See <a href="~/commercial-safe-services/">commercial safe services</a>.</li>
 <li><strong>Ships and vessels</strong> — Uncle Thomas has opened safes and locks on ships and cruise liners.</li>
 </ul>
@@ -728,6 +731,11 @@ def build_services(x):
 <tr><td>New lock for your HDB main door</td><td><a href="~/hdb-main-door-lock-replacement/">HDB main door lock replacement</a></td></tr>
 <tr><td>Rusty, stiff or broken HDB gate lock</td><td><a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a></td></tr>
 <tr><td>A spare car key fob</td><td><a href="~/car-key-duplicate/">Car key duplicate</a></td></tr>
+<tr><td>Key broken or stuck in the lock</td><td><a href="~/broken-key-extraction/">Broken key extraction</a></td></tr>
+<tr><td>Padlock key lost or code forgotten</td><td><a href="~/padlock-cutting/">Padlock cutting &amp; removal</a></td></tr>
+<tr><td>Shop shutter won't unlock</td><td><a href="~/roller-shutter-lock/">Roller shutter locks</a></td></tr>
+<tr><td>Glass door or sliding door lock</td><td><a href="~/glass-door-lock/">Glass &amp; sliding door locks</a></td></tr>
+<tr><td>Cabinet, drawer or locker key lost</td><td><a href="~/cabinet-lock/">Cabinet, drawer &amp; locker locks</a></td></tr>
 <tr><td>Forgot a safe combination or lost the safe key</td><td><a href="~/safe-opening/">Safe opening</a></td></tr>
 <tr><td>Need a new safe code, or a faulty safe lock replaced</td><td><a href="~/safe-combination-change/">Safe combination &amp; lock change</a></td></tr>
 <tr><td>Buying a safe, or need one installed</td><td><a href="~/safe-installation/">Safe supply &amp; installation</a></td></tr>

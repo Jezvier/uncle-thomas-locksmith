@@ -10,6 +10,7 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - **No key duplication or key cutting**, with one exception: **car key fob cloning** (spare fobs).
 - Opens **all** digital/smart lock brands. Always use both keywords: "digital lock" and "smart lock".
 - Safes (confirmed 29 Oct 2026): opens **all safe types**; some can be opened and stay usable, but **most faulty safes need drilling**; changes combinations; replaces safe locks; installs safes and can recommend or procure them. Has worked for commercial offices, pawnshops, banks and government ministries (never name clients). Issues invoices to companies. Safe pages: `safe-opening/` (hub, in `content.py`) plus `safes.py` (combination change, installation, commercial) and `guides_e.py`.
+- Also confirmed 29 Oct 2026: **broken key extraction**, **padlock opening/cutting**, **roller shutter locks** (locks only, not motors), **glass door and sliding door locks**, **cabinet, drawer and locker locks**. Pages in `_build/niche.py`.
 - Opens all cars **except Tesla**. Never list or mention Tesla anywhere; "all brands" is fine.
 - Google rating: updated automatically (see below). Starting value 4.6 from 34 reviews.
 
@@ -47,7 +48,7 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - No broken internal links. Mobile Lighthouse has been 97–100: keep it there (no heavy scripts, no web fonts beyond what's there).
 
 ## Where things stand (Oct 2026)
-- Site live since 26 Oct 2026; 124 pages (safe section and brand pages added 29 Oct). Search Console and Bing Webmaster verified.
+- Site live since 26 Oct 2026; 138 pages (safe section, brand pages and niche service pages added 29 Oct). Search Console and Bing Webmaster verified.
 - The biggest ranking gaps are off-site, not code: the number of Google reviews (competitors have hundreds to thousands), mentions in "best locksmith in Singapore" articles, the GBP name and website link, and old phone numbers on directories.
 - Ideas waiting on owner facts: typical arrival time, payment methods, languages spoken, insurance, team names, photo of the van; WhatsApp quick-quote form; live Google review quotes; a business email (Cloudflare Email Routing); GA4 ID (`GA4_ID` in config).
 - Ongoing: add real reviews and jobs as they come in; one new useful guide a month; only change a page's sitemap `lastmod` when the page changes.
