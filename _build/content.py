@@ -39,7 +39,7 @@ dict(
 
 <h2>Lockouts we handle every day</h2>
 <ul>
-<li><strong>HDB flats</strong> — main doors, metal gates, room doors and toilet doors locked from the inside.</li>
+<li><strong>HDB flats</strong> — main doors, metal gates, room doors and toilet doors locked from the inside. See <a href="~/guides/room-door-locked-from-inside/">room or toilet door locked from inside</a>.</li>
 <li><strong>Condominiums</strong> — main doors, deadbolts and digital locks.</li>
 <li><strong>Landed homes</strong> — main doors, gates and back doors.</li>
 <li><strong>Offices and shops</strong> — office doors, glass doors, cabinets and roller shutters. See <a href="~/commercial-locksmith/">commercial locksmith</a>.</li>
@@ -346,8 +346,8 @@ dict(
 
 <h2>Locks we replace</h2>
 <ul>
-<li>HDB main door locks — mortise locks, cylinder locks, deadbolts and lever handles.</li>
-<li>HDB metal gate locks — hook bolts, padlocks and gate locksets.</li>
+<li>HDB main door locks — mortise locks, cylinder locks, deadbolts and lever handles. See <a href="~/hdb-main-door-lock-replacement/">HDB main door lock replacement</a>.</li>
+<li>HDB metal gate locks — hook bolts, padlocks and gate locksets. See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>.</li>
 <li>Room, toilet and bedroom door locks and knobs.</li>
 <li>Condo, landed and office door locks.</li>
 <li><a href="~/letterbox-lock-replacement/">Letterbox and mailbox locks</a>.</li>
@@ -449,13 +449,18 @@ dict(
 ]
 
 from safes import SAFE_SERVICES
+import niche
+NICHE_SERVICES = niche.NICHE_SERVICES
 SAFE_PATHS = {"safe-opening/"} | {s["path"] for s in SAFE_SERVICES}
-SERVICE_BY_PATH = {s["path"]: s for s in SERVICES + SAFE_SERVICES}
+SERVICE_BY_PATH = {s["path"]: s for s in SERVICES + SAFE_SERVICES + NICHE_SERVICES}
 
 
 def related_html(current_path):
     cards = []
-    if current_path in SAFE_PATHS:
+    if current_path in niche.RELATED:
+        pool = [SERVICE_BY_PATH[p] for p in niche.RELATED[current_path]]
+        heading, lead = "Related services", "One call covers it all — 24/7, islandwide."
+    elif current_path in SAFE_PATHS:
         pool = [SERVICE_BY_PATH["safe-opening/"]] + SAFE_SERVICES + [SERVICE_BY_PATH["commercial-locksmith/"], SERVICE_BY_PATH["emergency-locksmith/"]]
         heading, lead = "Other safe services", "From opening a locked safe to fitting a new one: one safesmith, 24/7, islandwide."
     else:
@@ -720,6 +725,9 @@ def build_services(x):
 <tr><td>Digital or smart lock won't open (flat battery, forgotten PIN, dead keypad)</td><td><a href="~/digital-lock-opening/">Digital &amp; smart lock opening</a></td></tr>
 <tr><td>Want a keyless lock on your door or gate</td><td><a href="~/digital-lock-installation/">Digital &amp; smart lock installation</a></td></tr>
 <tr><td>Lost keys, moved house, or a worn or broken lock</td><td><a href="~/lock-replacement/">Lock change &amp; replacement</a></td></tr>
+<tr><td>New lock for your HDB main door</td><td><a href="~/hdb-main-door-lock-replacement/">HDB main door lock replacement</a></td></tr>
+<tr><td>Rusty, stiff or broken HDB gate lock</td><td><a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a></td></tr>
+<tr><td>A spare car key fob</td><td><a href="~/car-key-duplicate/">Car key duplicate</a></td></tr>
 <tr><td>Forgot a safe combination or lost the safe key</td><td><a href="~/safe-opening/">Safe opening</a></td></tr>
 <tr><td>Need a new safe code, or a faulty safe lock replaced</td><td><a href="~/safe-combination-change/">Safe combination &amp; lock change</a></td></tr>
 <tr><td>Buying a safe, or need one installed</td><td><a href="~/safe-installation/">Safe supply &amp; installation</a></td></tr>
@@ -739,10 +747,10 @@ def build_services(x):
     nodes = x["page_schema"]("services/", title, desc, crumbs, page_type="CollectionPage", extra=[
         {"@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": C_.SITE + "/" + s["path"], "name": s["short"]}
-            for i, s in enumerate(SERVICES + SAFE_SERVICES)]}])
+            for i, s in enumerate(SERVICES + SAFE_SERVICES + NICHE_SERVICES)]}])
     x["render"]("services/", title, desc, body, nodes, priority="0.8")
 
-    for s in SERVICES + SAFE_SERVICES:
+    for s in SERVICES + SAFE_SERVICES + NICHE_SERVICES:
         crumbs = [("Home", ""), ("Services", "services/"), (s["short"], s["path"])]
         body = (x["page_hero"](crumbs, s["h1"], s["sub"], s["badges"]) +
                 f'<section class="section"><div class="container narrow prose">{s["body"]}{x["photo"](s["path"])}</div></section>' +
@@ -860,7 +868,7 @@ def build(x):
     brand_links = "".join(f'<li><a href="~/digital-lock-opening/{b["slug"]}/">{b["name"]} digital lock</a></li>'
                           for b in x["brands"].BRANDS)
     car_more = ", ".join(C.CAR_BRANDS_MORE)
-    for s in SERVICES:
+    for s in SERVICES + NICHE_SERVICES:
         s["body"] = (s["body"].replace("{CAR_BRAND_LINKS}", x["cars"].links_html())
                      .replace("{CAR_BRANDS_MORE}", car_more))
     import safe_brands

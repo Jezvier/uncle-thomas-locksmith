@@ -111,6 +111,10 @@
 "date": "2026-10-27",
 "hash": "7ae772538f9f711ab03b6da6626a436b"
 },
+"car-key-duplicate/": {
+"date": "2026-10-29",
+"hash": "f168f392355c8a156cb5d60a4d95e1f3"
+},
 "car-locksmith/": {
 "date": "2026-10-29",
 "hash": "ecb7d48b65af7a1216485a5659cbc938"
@@ -300,12 +304,12 @@
 "hash": "b40a0eababd2a9ce08dfc43919c2e908"
 },
 "emergency-locksmith/": {
-"date": "2026-10-27",
-"hash": "58f0788d79df40015e908bdc25337b01"
+"date": "2026-10-29",
+"hash": "5666fe01a5514e35749a01db2b1683d9"
 },
 "guides/": {
 "date": "2026-10-29",
-"hash": "47b696c57c4e8b6847db707f167461e1"
+"hash": "466ea29a5c887b5081ec375b4adc6c68"
 },
 "guides/after-a-break-in/": {
 "date": "2026-10-27",
@@ -314,6 +318,10 @@
 "guides/car-key-fob-not-working/": {
 "date": "2026-10-29",
 "hash": "6c15287bc66f4651c964f4ee0b3e7ee6"
+},
+"guides/change-locks-new-home/": {
+"date": "2026-10-29",
+"hash": "5bbd24ad0bc50f2b0d9a50180abdb8e5"
 },
 "guides/digital-lock-battery-dead/": {
 "date": "2026-10-27",
@@ -330,6 +338,10 @@
 "guides/digital-vs-traditional-lock-hdb/": {
 "date": "2026-10-27",
 "hash": "361aaddd4a8649b7bd94f18be10deb61"
+},
+"guides/door-lock-jammed/": {
+"date": "2026-10-29",
+"hash": "0b72c124f5788bebcb2d8e8baf75f32d"
 },
 "guides/forgot-digital-lock-pin/": {
 "date": "2026-10-29",
@@ -371,13 +383,29 @@
 "date": "2026-10-27",
 "hash": "975112d4d5792f18d1788a44e849022c"
 },
+"guides/lost-house-key/": {
+"date": "2026-10-29",
+"hash": "21301a1ff4f0b3b9c3edee9aadedc593"
+},
+"guides/lost-letterbox-key/": {
+"date": "2026-10-29",
+"hash": "6a6382fb5e7e19623591280b0bcdef62"
+},
 "guides/lost-safe-key/": {
 "date": "2026-10-29",
 "hash": "3ae9854353481dd218427e40e5a8161f"
 },
+"guides/main-door-lock-types/": {
+"date": "2026-10-29",
+"hash": "0f118660c66f5cdcfc1eb0c95fa56779"
+},
 "guides/police-scdf-open-door/": {
 "date": "2026-10-27",
 "hash": "91e168476a95ace1e203be875c42b821"
+},
+"guides/room-door-locked-from-inside/": {
+"date": "2026-10-29",
+"hash": "21426468c37b0d6de9e27b8b2d104de5"
 },
 "guides/safe-box-battery-dead/": {
 "date": "2026-10-29",
@@ -395,13 +423,21 @@
 "date": "2026-10-27",
 "hash": "dbd67a231b0b0241da04eb8abe5c2e6d"
 },
+"hdb-gate-lock-replacement/": {
+"date": "2026-10-29",
+"hash": "e88f96561d01f6cd6b21a01404ec2bd4"
+},
+"hdb-main-door-lock-replacement/": {
+"date": "2026-10-29",
+"hash": "a28a0a9b3e098b8ba49ed60618c4a811"
+},
 "letterbox-lock-replacement/": {
 "date": "2026-10-27",
 "hash": "1ac4efbacd89fa61a193a87302b49584"
 },
 "lock-replacement/": {
-"date": "2026-10-27",
-"hash": "7d75a11bc5437d6769e74f16a75321ba"
+"date": "2026-10-29",
+"hash": "98d5e4e4e67f14cb987ab860a9659223"
 },
 "prices/": {
 "date": "2026-10-27",
@@ -469,7 +505,7 @@
 },
 "services/": {
 "date": "2026-10-29",
-"hash": "51001e0599c83a60ec4e5b64a5f92f4c"
+"hash": "18378b79a8fc01542cc3c1dc74b5157f"
 },
 "zh/": {
 "date": "2026-10-27",

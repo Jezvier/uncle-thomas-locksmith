@@ -164,6 +164,12 @@ PHOTOS = {
         ("uncle-thomas-safe-dial-tool.jpg", "Uncle Thomas, Singapore safesmith, using a dial tool on the combination lock of a large stainless steel safe", "Uncle Thomas working the combination dial of a large safe"),
         ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe in an office", "Uncle Thomas opening a filing safe in an office"),
     ],
+    "hdb-main-door-lock-replacement/": [
+        ("hdb-door-lock-replacement-before.jpg", "Damaged wooden HDB main door with the old lock removed and a splintered edge", "Before: damaged door, old lock removed"),
+        ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "After: new lever lock and cover plate"),
+        ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
+        ("door-lock-cover-plate-hides-old-holes.jpg", "Stainless steel cover plate and new cylinder lock on a wooden door, hiding the holes from the old lock", "A cover plate neatly hides the old lock holes"),
+    ],
     "car-locksmith/":             (None, "Car door being unlocked with non-destructive tools", "Non-destructive car unlocking"),
     "lock-replacement/": [
         ("hdb-door-lock-replacement-before.jpg", "Damaged wooden main door with the old lock removed and splintered edge", "Before: damaged door, old lock removed"),
