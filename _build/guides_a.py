@@ -185,7 +185,7 @@ dict(
 </ul>
 
 <h2>6. Call a safesmith</h2>
-<p>A trained safesmith can usually open a safe with minimal damage, using methods matched to the lock type. Safes are a specialist field, and few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in safesmithing, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong. See <a href="~/safe-opening/">safe opening in Singapore</a>.</p>
+<p>A trained safesmith can usually open a safe with minimal damage, using methods matched to the lock type. Safes are a specialist field, and few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in safesmithing, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong. See <a href="~/safe-opening/">safe opening in Singapore</a>, and if you're worried about damage, read <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
 
 <h2>What to have ready</h2>
 <ul>

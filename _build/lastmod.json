@@ -4,8 +4,8 @@
 "hash": "ad1b79f6e2ec175b44816337e3eb5541"
 },
 "about/": {
-"date": "2026-10-27",
-"hash": "389de8f710c1a8782f4e1126a276ef57"
+"date": "2026-10-29",
+"hash": "c84abc10d8eb6afc4ed634fc47595719"
 },
 "areas/": {
 "date": "2026-10-27",
@@ -180,8 +180,12 @@
 "hash": "cccd4677905c0c9e119db8acfd8d5d9c"
 },
 "commercial-locksmith/": {
-"date": "2026-10-27",
-"hash": "6acce8911ded53360e73b62809739ba7"
+"date": "2026-10-29",
+"hash": "5b840767ba52b03a7fb796dd49d5455a"
+},
+"commercial-safe-services/": {
+"date": "2026-10-29",
+"hash": "35483318efa55e421e9a970d3a63e333"
 },
 "contact/": {
 "date": "2026-10-27",
@@ -244,8 +248,8 @@
 "hash": "58f0788d79df40015e908bdc25337b01"
 },
 "guides/": {
-"date": "2026-10-27",
-"hash": "b759f8b66037687970f3f399154cb929"
+"date": "2026-10-29",
+"hash": "93e72daa56229a69cbfad0f5fe06442b"
 },
 "guides/after-a-break-in/": {
 "date": "2026-10-27",
@@ -272,8 +276,8 @@
 "hash": "3c8c309a7ad9e3da5ff3a5517b28e45d"
 },
 "guides/forgot-safe-combination/": {
-"date": "2026-10-27",
-"hash": "18dd508d0a6788e0ee1a491c5a191210"
+"date": "2026-10-29",
+"hash": "4987237ab1a6c409d2c5e55b9cb70387"
 },
 "guides/hdb-gate-lock-types/": {
 "date": "2026-10-27",
@@ -282,6 +286,10 @@
 "guides/how-to-choose-a-locksmith/": {
 "date": "2026-10-27",
 "hash": "5bc2c5da5f15e66f288b7ac52766afb1"
+},
+"guides/how-to-choose-a-safe-singapore/": {
+"date": "2026-10-29",
+"hash": "c915b6f272f2c145dfc05511f7ed59b9"
 },
 "guides/keys-locked-in-car/": {
 "date": "2026-10-27",
@@ -307,6 +315,10 @@
 "date": "2026-10-27",
 "hash": "91e168476a95ace1e203be875c42b821"
 },
+"guides/safe-drilling-explained/": {
+"date": "2026-10-29",
+"hash": "53667aadf304c4de9ece5117792733a6"
+},
 "guides/smart-lock-for-hdb-gate/": {
 "date": "2026-10-27",
 "hash": "dbd67a231b0b0241da04eb8abe5c2e6d"
@@ -327,13 +339,21 @@
 "date": "2026-10-27",
 "hash": "21c2b250e701f59b183ef0e2d3267ef6"
 },
+"safe-combination-change/": {
+"date": "2026-10-29",
+"hash": "a680ea165b928c472875ce94c5cbdb58"
+},
+"safe-installation/": {
+"date": "2026-10-29",
+"hash": "20156eb13fe4fbe54eb51893177cba07"
+},
 "safe-opening/": {
-"date": "2026-10-27",
-"hash": "10ed07545618885b0466991a7294752c"
+"date": "2026-10-29",
+"hash": "ca90cdae91b90c9ff3b6df47ddd010eb"
 },
 "services/": {
-"date": "2026-10-27",
-"hash": "d45345deee9c74f5ccd3544c8c65778b"
+"date": "2026-10-29",
+"hash": "689485bb0928eea9bee25c6d27e2a70e"
 },
 "zh/": {
 "date": "2026-10-27",

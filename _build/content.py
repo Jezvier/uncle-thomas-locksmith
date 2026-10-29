@@ -175,49 +175,90 @@ dict(
  card="Forgotten combination or faulty safe? Opened by a US-trained safesmith who has worked on ships and across Asia.",
  title="Safe Opening Singapore | US-Trained Safesmith | Uncle Thomas",
  title_exp="Safe Opening Singapore | US-Trained Safesmith Since 1998",
- desc="Forgot your safe combination or lost the key? Uncle Thomas is a US-trained safesmith who has opened safes on ships and across Asia. Call 9224 9224.",
+ desc="Forgot your safe code, lost the key or keypad dead? Uncle Thomas, a US-trained safesmith, opens all safe types for homes and businesses, 24/7. Call 9224 9224.",
  h1="Safe Opening in Singapore by a US-Trained Safesmith",
- sub="Forgotten combination, lost key, flat battery or a jammed safe — Uncle Thomas trained in safesmithing in the United States and has opened safes for multinational companies, on ships and across Asia.",
- badges=["US-trained safesmith", "Home & business safes", "Discreet service"],
+ sub="Forgotten combination, lost key, dead keypad or a jammed bolt. Uncle Thomas trained in safesmithing in the United States and opens every type of safe, for homes, offices, pawnshops, banks and government agencies.",
+ badges=["US-trained safesmith", "All safe types", "Discreet, 24/7"],
  body="""
+<p><strong>The short answer:</strong> try fresh batteries and the override key first. If the safe still won't open, don't force it. Send photos of the safe to {PHONE}, and Uncle Thomas will tell you how he'd open it and the price before he comes. Some safes can be opened and stay fully usable. When a safe is faulty, it usually has to be drilled, precisely, at the right point, so the safe can often take a new lock afterwards.</p>
+
 <h2>Why a safesmith, not just a locksmith</h2>
-<p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, so the wrong approach can destroy the safe — or its contents. In Singapore, few locksmiths have formal safe training. Uncle Thomas spent a year in the United States training in <strong>safesmithing</strong>, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
+<p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, and many have hidden relockers that fire if the safe is attacked the wrong way. A wrong approach can make the job far harder or damage what's inside. Few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in <strong>safesmithing</strong>, and has since opened safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
+
+<h2>Who we open safes for</h2>
+<ul>
+<li><strong>Homes:</strong> HDB flats, condos and landed houses.</li>
+<li><strong>Businesses:</strong> commercial offices, shops, pawnshops and banks. See <a href="~/commercial-safe-services/">commercial safe services</a>.</li>
+<li><strong>Government ministries and agencies.</strong></li>
+<li><strong>Ships and vessels</strong> in Singapore waters and overseas.</li>
+</ul>
 
 <h2>Safes we open</h2>
+<p>Every type of safe, including:</p>
 <ul>
-<li><strong>Home safes</strong> — electronic keypad, key and combination safes.</li>
-<li><strong>Hotel-style and wardrobe safes</strong>.</li>
-<li><strong>Office and business safes</strong> — cash safes, drop safes and document safes.</li>
-<li><strong>Mechanical combination (dial) safes</strong> and smart keypad safes.</li>
-<li><strong>Filing safes, vault doors and bolts</strong>.</li>
-<li><strong>Safes on ships and vessels</strong>.</li>
+<li><strong>Electronic keypad safes</strong>: the most common type in homes and hotels.</li>
+<li><strong>Mechanical dial (combination) safes</strong>: older and higher-security safes.</li>
+<li><strong>Key safes</strong>, including safes with lost or broken keys.</li>
+<li><strong>Dual-control safes</strong> that need a code and a key, or two codes.</li>
+<li><strong>Biometric (fingerprint) safes.</strong></li>
+<li><strong>Hotel-style and wardrobe safes.</strong></li>
+<li><strong>Cash, drop and deposit safes</strong> for shops and offices.</li>
+<li><strong>Fire safes, filing safes and document safes.</strong></li>
+<li><strong>Vault doors and strongroom doors.</strong></li>
+<li><strong>Safes on ships.</strong></li>
 </ul>
 
-<h2>Common reasons people call us</h2>
-<ul>
-<li>Forgot the combination or PIN.</li>
-<li>Lost the key, or the override key.</li>
-<li>Electronic keypad dead even after changing the batteries.</li>
-<li>Bolt jammed — the code is accepted but the door won't open.</li>
-<li>Inherited a safe and no one knows the code.</li>
-</ul>
+<h2>What's wrong with your safe?</h2>
+<table class="price-table info-table"><thead><tr><th scope="col">What you see</th><th scope="col">Likely cause</th><th scope="col">Try this first</th></tr></thead><tbody>
+<tr><td>Keypad is dead, no lights or beeps</td><td>Flat batteries, or a failed keypad</td><td>Change the batteries. Many safes have an external battery point under the keypad.</td></tr>
+<tr><td>Keypad beeps and accepts the code, but the door won't open</td><td>Weak batteries, or a jammed bolt or motor</td><td>New batteries. Then gently ease the handle while entering the code. Don't force it.</td></tr>
+<tr><td>Keypad flashes or locks you out after tries</td><td>Wrong-code lockout</td><td>Wait out the lockout (often several minutes), then try once, slowly.</td></tr>
+<tr><td>Forgot the code or the dial combination</td><td>Code lost</td><td>Look for the override key and the paperwork. Check whether the maker can reset it with proof of ownership.</td></tr>
+<tr><td>Lost the key or override key</td><td>Key missing</td><td>Check paperwork for a key number; some makers can supply a key with proof of ownership.</td></tr>
+<tr><td>Dial turns stiffly, or spins freely</td><td>Worn or broken lock parts</td><td>Stop turning it. Forcing a dial can make the job much harder.</td></tr>
+<tr><td>Inherited a safe and nobody knows the code</td><td>Code never passed on</td><td>Gather proof that you have the right to open it, such as being the executor or the property owner.</td></tr>
+</tbody></table>
+<p>For step-by-step help, read <a href="~/guides/forgot-safe-combination/">forgot your safe combination: what to do</a>.</p>
+
+<h2>How we open your safe</h2>
+<ol>
+<li><strong>Send photos on WhatsApp</strong> to {PHONE}: the safe's front, the keypad or dial, the brand label, and roughly how big it is.</li>
+<li><strong>Get the price first.</strong> We tell you the price and the likely method before we set off.</li>
+<li><strong>Proof of ownership.</strong> We confirm the safe is yours, or that you're authorised by the business, before touching it.</li>
+<li><strong>We open it the right way for that safe.</strong> Where the safe allows, it's opened without damage and stays usable. Where the lock has failed, we drill at a precise point, not through the door.</li>
+<li><strong>Your options afterwards.</strong> A new code, a <a href="~/safe-combination-change/">replacement lock</a>, or advice on whether the safe is worth keeping.</li>
+</ol>
+
+<h2>Will my safe need to be drilled?</h2>
+<p>It depends on the safe and what's wrong with it. A safe with a forgotten code or a lost key can often be opened and stays fully usable. A safe whose lock has <strong>failed</strong>, such as a dead keypad board, a broken motor or a jammed bolt, usually needs drilling, because the lock can no longer respond to any code. Professional drilling is precise: a small hole at a specific point to reach the lock, chosen to avoid the relockers. On many safes the lock can then be replaced, and the safe used again. We'll always explain this, and the price, before starting. Read more in <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
+
 <h2>Safe brands we open</h2>
 <p>All makes, including:</p>
 <ul class="tags">""" + "".join(f"<li>{b}</li>" for b in C.SAFE_BRANDS) + """<li>and more</li></ul>
 
-<p>Before you call, try the steps in our guide: <a href="~/guides/forgot-safe-combination/">forgot your safe combination — what to do</a>.</p>
+<div class="callout"><p><strong>Proof of ownership:</strong> Before opening any safe we confirm it belongs to you or your business, for example a purchase receipt, company authorisation, or proof of residence where the safe is kept. A safesmith who opens any safe without checking is a risk to everyone. Jobs are handled discreetly.</p></div>
 
-<div class="callout"><p><strong>Proof of ownership:</strong> Before opening any safe we confirm it belongs to you or your business — for example a purchase receipt, company authorisation or proof of residence where the safe is kept. Jobs are handled discreetly.</p></div>
+<h2>How much does safe opening cost?</h2>
+<p>Safe opening is <strong>quoted per job</strong>, because it depends on the safe's make, size, lock type and fault. A small home keypad safe with a battery problem is a very different job from a heavy commercial safe with a failed dial lock. WhatsApp {PHONE} photos of the safe and we'll give you a price before we come. The price we agree is the price you pay. Businesses can get an invoice.</p>
 
-<h2>Price</h2>
-<p>Safe opening is <strong>quoted per job</strong>, because it depends on the safe's make, size and lock type. WhatsApp {PHONE} a photo of the safe (front, keypad or dial, and the brand label) and we'll give you a price before we come.</p>
+<h2>More safe services</h2>
+<ul>
+<li><a href="~/safe-combination-change/">Safe combination change and safe lock replacement</a>.</li>
+<li><a href="~/safe-installation/">Safe supply and installation</a>: we recommend, source and install the right safe.</li>
+<li><a href="~/commercial-safe-services/">Commercial safe services</a> for offices, shops, pawnshops, banks and government agencies.</li>
+<li>Guide: <a href="~/guides/how-to-choose-a-safe-singapore/">how to choose a safe in Singapore</a>.</li>
+</ul>
 <p>Read more about <a href="~/about/">Uncle Thomas's background</a>.</p>
 """,
  faqs=[
-  ("Can you open a safe without destroying it?", "In many cases, yes — that's what safesmith training is for. The method depends on the safe. We'll explain the approach and price before we start."),
-  ("I forgot my safe code. Can you help?", "Yes. Try the manufacturer's reset steps first (see our guide). If that doesn't work, WhatsApp us a photo of the safe and we'll quote you."),
-  ("Do you open safes for businesses?", "Yes — offices, shops and vessels. We'll need authorisation from the business before opening."),
-  ("How much does safe opening cost?", "It's quoted per job, depending on the safe. Send a photo on WhatsApp to {PHONE} for a price."),
+  ("Can you open a safe without destroying it?", "Often, yes. Safes with a forgotten code or lost key can usually be opened and stay usable. When the lock has failed, the safe usually needs precise drilling, and the lock can often be replaced afterwards. We explain the method and price before we start."),
+  ("I forgot my safe code. Can you help?", "Yes. Try fresh batteries and the override key first (see our guide). If that doesn't work, WhatsApp us photos of the safe and we'll quote you."),
+  ("What types of safes do you open?", "All types: electronic keypad, mechanical dial, key, dual-control, biometric, hotel and wardrobe safes, cash and drop safes, fire and filing safes, vault and strongroom doors, and safes on ships."),
+  ("Do you open safes for businesses?", "Yes. Uncle Thomas has worked for commercial offices, pawnshops, banks and government ministries. We need authorisation from the business, and we issue invoices."),
+  ("Do I need to bring the safe to you?", "No. We come to you, anywhere in Singapore, 24/7. Most safes are opened where they stand."),
+  ("Can you change the combination after opening?", "Yes. We can set a new code, or fit a new lock if the old one has failed."),
+  ("Do you check that the safe is mine?", "Always. We ask for proof of ownership or business authorisation before opening any safe."),
+  ("How much does safe opening cost?", "It's quoted per job, depending on the safe. Send photos on WhatsApp to {PHONE} for a price."),
  ],
 ),
 # ----------------------------------------------------------------------
@@ -370,7 +411,7 @@ dict(
 <li><strong>Lock changes when staff leave</strong> or keys go missing.</li>
 <li><strong>Digital and keypad locks</strong> for offices and small businesses — see <a href="~/digital-lock-installation/">digital lock installation</a>.</li>
 <li><strong>Cabinet, drawer and locker locks</strong>.</li>
-<li><strong>Safe opening</strong> for cash, drop and document safes — see <a href="~/safe-opening/">safe opening</a>.</li>
+<li><strong>Safes</strong>: opening, combination changes, new locks and new safes for cash, drop and document safes. Uncle Thomas has worked for commercial offices, pawnshops, banks and government ministries. See <a href="~/commercial-safe-services/">commercial safe services</a>.</li>
 <li><strong>Ships and vessels</strong> — Uncle Thomas has opened safes and locks on ships and cruise liners.</li>
 </ul>
 
@@ -394,18 +435,26 @@ dict(
 ),
 ]
 
-SERVICE_BY_PATH = {s["path"]: s for s in SERVICES}
+from safes import SAFE_SERVICES
+SAFE_PATHS = {"safe-opening/"} | {s["path"] for s in SAFE_SERVICES}
+SERVICE_BY_PATH = {s["path"]: s for s in SERVICES + SAFE_SERVICES}
 
 
 def related_html(current_path):
     cards = []
-    for s in SERVICES:
+    if current_path in SAFE_PATHS:
+        pool = [SERVICE_BY_PATH["safe-opening/"]] + SAFE_SERVICES + [SERVICE_BY_PATH["commercial-locksmith/"], SERVICE_BY_PATH["emergency-locksmith/"]]
+        heading, lead = "Other safe services", "From opening a locked safe to fitting a new one: one safesmith, 24/7, islandwide."
+    else:
+        pool = SERVICES
+        heading, lead = "Other locksmith services", "One call covers it all — 24/7, islandwide."
+    for s in pool:
         if s["path"] == current_path:
             continue
         cards.append(f'<a class="card svc" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                      f'<h3>{s["short"]}</h3><p>{s["card"]}</p><span class="more">Learn more →</span></a>')
-    return ('<section class="section section-alt"><div class="container"><h2 class="section-title">Other locksmith services</h2>'
-            '<p class="section-lead">One call covers it all — 24/7, islandwide.</p>'
+    return (f'<section class="section section-alt"><div class="container"><h2 class="section-title">{heading}</h2>'
+            f'<p class="section-lead">{lead}</p>'
             f'<div class="grid g3">{"".join(cards[:6])}</div></div></section>')
 
 
@@ -653,12 +702,15 @@ def build_services(x):
             f'<p class="note">{NO_REPAIR}</p></div></section>' +
             f'''<section class="section section-alt"><div class="container narrow prose">
 <h2>Which service do you need?</h2>
-<table class="price-table"><thead><tr><th scope="col">Your situation</th><th scope="col">Service</th></tr></thead><tbody>
+<table class="price-table info-table"><thead><tr><th scope="col">Your situation</th><th scope="col">Service</th></tr></thead><tbody>
 <tr><td>Locked out of your flat, house or office</td><td><a href="~/emergency-locksmith/">Emergency lockout</a></td></tr>
 <tr><td>Digital or smart lock won't open (flat battery, forgotten PIN, dead keypad)</td><td><a href="~/digital-lock-opening/">Digital &amp; smart lock opening</a></td></tr>
 <tr><td>Want a keyless lock on your door or gate</td><td><a href="~/digital-lock-installation/">Digital &amp; smart lock installation</a></td></tr>
 <tr><td>Lost keys, moved house, or a worn or broken lock</td><td><a href="~/lock-replacement/">Lock change &amp; replacement</a></td></tr>
 <tr><td>Forgot a safe combination or lost the safe key</td><td><a href="~/safe-opening/">Safe opening</a></td></tr>
+<tr><td>Need a new safe code, or a faulty safe lock replaced</td><td><a href="~/safe-combination-change/">Safe combination &amp; lock change</a></td></tr>
+<tr><td>Buying a safe, or need one installed</td><td><a href="~/safe-installation/">Safe supply &amp; installation</a></td></tr>
+<tr><td>A safe at your office, shop, pawnshop or bank</td><td><a href="~/commercial-safe-services/">Commercial safe services</a></td></tr>
 <tr><td>Keys locked in the car, or need a spare key fob</td><td><a href="~/car-locksmith/">Car locksmith &amp; key fobs</a></td></tr>
 <tr><td>Lost your letterbox key</td><td><a href="~/letterbox-lock-replacement/">Letterbox lock</a></td></tr>
 <tr><td>Office, shop, warehouse or vessel</td><td><a href="~/commercial-locksmith/">Commercial locksmith</a></td></tr>
@@ -674,10 +726,10 @@ def build_services(x):
     nodes = x["page_schema"]("services/", title, desc, crumbs, page_type="CollectionPage", extra=[
         {"@type": "ItemList", "itemListElement": [
             {"@type": "ListItem", "position": i + 1, "url": C_.SITE + "/" + s["path"], "name": s["short"]}
-            for i, s in enumerate(SERVICES)]}])
+            for i, s in enumerate(SERVICES + SAFE_SERVICES)]}])
     x["render"]("services/", title, desc, body, nodes, priority="0.8")
 
-    for s in SERVICES:
+    for s in SERVICES + SAFE_SERVICES:
         crumbs = [("Home", ""), ("Services", "services/"), (s["short"], s["path"])]
         body = (x["page_hero"](crumbs, s["h1"], s["sub"], s["badges"]) +
                 f'<section class="section"><div class="container narrow prose">{s["body"]}{x["photo"](s["path"])}</div></section>' +
@@ -762,7 +814,7 @@ def build_about(x):
 <h2>Trained in safesmithing in the United States</h2>
 <p>Wanting to master the hardest locks in the trade, he spent a year in the United States training in safesmithing — the specialist skill of opening and servicing safes and vaults. It's a skill few locksmiths in Singapore have. <a href="~/safe-opening/">See our safe opening service</a>.</p>
 <h2>Trusted overseas — on land and at sea</h2>
-<p>That expertise has taken Uncle Thomas far beyond Singapore. He has been called in to open safes for multinational companies and on board ships and cruise liners, with jobs in Thailand, Malaysia, China, Hong Kong and more.</p>
+<p>That expertise has taken Uncle Thomas far beyond Singapore. He has been called in to open safes for multinational companies and on board ships and cruise liners, with jobs in Thailand, Malaysia, China, Hong Kong and more. In Singapore he has worked on safes for commercial offices, pawnshops, banks and government ministries.</p>
 <h2>Keeping up with digital locks</h2>
 <p>As homes moved from keys to keypads, Uncle Thomas kept learning. He has developed his own damage-free techniques for opening faulty and locked digital locks — so you get back in without needing to replace an expensive lock. <a href="~/digital-lock-opening/">See digital lock opening</a>.</p>
 <h2>Why they call him "Shifu"</h2>

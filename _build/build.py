@@ -405,11 +405,24 @@ def analytics_head():
             f"s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id={gid}';document.head.appendChild(s)}},1500)}});</script>")
 
 
+def label_tables(body):
+    """Info tables stack into cards on phones; each cell gets its column name as a label."""
+    def one(m):
+        tbl = m.group(0)
+        heads = [strip_tags(h) for h in re.findall(r"<th[^>]*>(.*?)</th>", tbl, re.S)]
+        def row(r):
+            i = iter(heads)
+            return re.sub(r"<td>", lambda _: f'<td data-label="{esc(next(i, ""))}">', r.group(0))
+        return re.sub(r"<tr>(?:(?!</tr>).)*<td>.*?</tr>", row, tbl, flags=re.S)
+    return re.sub(r'<table class="price-table info-table">.*?</table>', one, body, flags=re.S)
+
+
 def render(path, title, desc, body, schema_nodes, og_type="website", preload_img=None, priority="0.7",
            lang="en", alternates=None):
     """alternates: {"en-SG": path, "zh-SG": path} for pages that have a translation."""
     assert len(title) <= 65, f"Title too long ({len(title)}): {title}"
     assert len(desc) <= 160, f"Description too long ({len(desc)}) on {path}"
+    body = label_tables(body)
     prefix = rel_prefix(path)
     url = abs_url(path)
     graph = {"@context": "https://schema.org", "@graph": schema_nodes}
@@ -728,7 +741,8 @@ def main():
              f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas (US-trained safesmith), with a small team.",
              "- Verifies proof of residence or ownership before opening any door, car or safe.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
-             "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands)."]
+             "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands).",
+             "- Safes: opens all safe types; changes combinations; replaces safe locks; recommends, supplies and installs safes. Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies."]
     if C.UEN:
         lines.append(f"- UEN: {C.UEN}")
     if C.EMAIL:
