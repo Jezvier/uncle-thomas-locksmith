@@ -13,6 +13,12 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - Opens all cars **except Tesla**. Never list or mention Tesla anywhere; "all brands" is fine.
 - Google rating: updated automatically (see below). Starting value 4.6 from 34 reviews.
 
+## Brand pages (rebuilt 29 Oct 2026)
+- Built around real Google SG autocomplete phrasing: digital locks "<brand> digital lock battery flat / battery replacement / change password / reset / not working"; safes "<brand> safe forgot password / battery dead / won't open with correct code / override key" plus Singapore's "safe box" wording; cars "<brand> key fob battery / spare key / not working after battery change / locked keys in car".
+- Lock brands: `brands.py` (19, list in `config.BRAND_PAGES`). Safe brands: `safe_brands.py` (11, /safe-opening/<brand>/). Car brands: `cars.py` (22, `config.CAR_BRAND_PAGES`).
+- Every brand fact comes from a manual or official support page listed in that brand's `sources`. Don't add a brand without sources (Epic, Lockin, Zeus, Kaiser+, Starke, Gainproof were skipped for that reason; Gainproof also has no search volume). Never publish factory default codes.
+- Keep brand pages at about 55%+ unique text (5-word shingle check); put shared troubleshooting in guides and link to it.
+
 ## Hard rules
 1. **Never invent jobs, reviews, testimonials, customer quotes, arrival times, insurance or licences.** Only publish what the owner confirms. Brand pages use "A typical [brand] call" scenarios, clearly generic. Real jobs go in `BRAND_JOBS` in `_build/config.py`; real reviews go in `REVIEWS`.
 2. Never list Tesla.
@@ -41,7 +47,7 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - No broken internal links. Mobile Lighthouse has been 97–100: keep it there (no heavy scripts, no web fonts beyond what's there).
 
 ## Where things stand (Oct 2026)
-- Site live since 26 Oct 2026; 95 pages (safe section added 29 Oct). Search Console and Bing Webmaster verified.
+- Site live since 26 Oct 2026; 124 pages (safe section and brand pages added 29 Oct). Search Console and Bing Webmaster verified.
 - The biggest ranking gaps are off-site, not code: the number of Google reviews (competitors have hundreds to thousands), mentions in "best locksmith in Singapore" articles, the GBP name and website link, and old phone numbers on directories.
 - Ideas waiting on owner facts: typical arrival time, payment methods, languages spoken, insurance, team names, photo of the van; WhatsApp quick-quote form; live Google review quotes; a business email (Cloudflare Email Routing); GA4 ID (`GA4_ID` in config).
 - Ongoing: add real reviews and jobs as they come in; one new useful guide a month; only change a page's sitemap `lastmod` when the page changes.

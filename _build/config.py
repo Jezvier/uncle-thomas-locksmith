@@ -76,9 +76,10 @@ BRAND_PAGES = ["Samsung", "Zigbang", "Yale", "Philips", "Igloohome", "Gateman", 
 
 # Car brands. Owner: Uncle Thomas opens and clones fobs for all makes EXCEPT Tesla — so Tesla is never listed.
 # CAR_BRAND_PAGES get their own page at /car-locksmith/<brand>/ (content in _build/cars.py).
-CAR_BRAND_PAGES = ["Toyota", "Honda", "Mercedes-Benz", "BMW", "Audi", "Volkswagen", "Mazda", "Lexus",
-                   "Land Rover", "Hyundai", "Kia", "Nissan", "Porsche", "Volvo", "Mitsubishi", "Subaru"]
-CAR_BRANDS_MORE = ["BYD", "MG", "Mini", "Peugeot", "Skoda", "Suzuki", "Ford", "Jaguar", "Jeep", "Renault",
+CAR_BRAND_PAGES = ["BYD", "Toyota", "Honda", "Mercedes-Benz", "BMW", "Audi", "Volkswagen", "Mazda", "Lexus",
+                   "Land Rover", "Hyundai", "Kia", "Nissan", "Porsche", "Volvo", "Mitsubishi", "Subaru",
+                   "MG", "Mini", "Skoda", "Peugeot", "Suzuki"]
+CAR_BRANDS_MORE = ["Ford", "Jaguar", "Jeep", "Renault",
                    "Citroën", "Opel", "Infiniti", "Alfa Romeo", "Maserati", "Bentley", "Ferrari", "Lamborghini",
                    "Rolls-Royce", "Chevrolet", "Cupra", "Polestar"]
 

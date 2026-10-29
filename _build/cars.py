@@ -161,6 +161,64 @@ DATA = {
        ("Can you unlock a Subaru with the key inside?", "Yes, 24/7 islandwide, without damage.")]),
 }
 
+# Added 29 Oct 2026: BYD (Singapore's best-selling brand in 2025), MG, Mini, Skoda, Peugeot, Suzuki.
+DATA.update({
+"BYD": dict(
+ models="Atto 3, Dolphin, Seal, Sealion 7, M6 and Atto 2",
+ about="BYD was Singapore's best-selling car brand in 2025 for the second year running, with 11,184 new cars registered, so its electric Atto 3, Dolphin, Seal and Sealion models are now everywhere from HDB carparks to private-hire fleets.",
+ keys="BYD cars lean on digital keys: a smart key fob, and on many models an NFC card key and a phone digital key in the BYD app. An NFC card needs no battery, which makes it the best backup to carry.",
+ tips=["Keep the NFC card key in your wallet, not in the car: it's the backup that works when the fob battery or your phone dies.",
+       "A phone digital key is only as good as your phone's battery. Carry the card or fob too.",
+       "Replace the fob battery at the first low-battery warning on the dashboard."],
+ faqs=[("Can you open a BYD with the key locked inside?", "Yes. We open BYD cars without damaging the paint, seals or windows, 24/7 islandwide."),
+       ("Can you make a spare BYD key?", "It depends on the model and key system. WhatsApp {PHONE} the model, year and a photo of your key or card, and we'll confirm before you book.")]),
+"MG": dict(
+ models="MG4, MG ZS EV, MG5 and HS",
+ about="MG, owned by China's SAIC Motor, sells electric and petrol models such as the MG4 and MG ZS EV in Singapore, popular with families and private-hire drivers who want an affordable EV.",
+ keys="Many MG models use a smart key with keyless entry and push-button start. Check whether your fob holds a mechanical key for the door.",
+ tips=["Replace the fob battery as soon as the car says the key isn't detected or the range drops.",
+       "Know where your model's key detection spot is; some MG owners find a weak fob is read more easily in the marked spot in the centre console.",
+       "Keep a spare key at home, not in the glovebox."],
+ faqs=[("Can you unlock an MG with the keys inside?", "Yes. We open MG cars without damage, 24/7 islandwide."),
+       ("Can you clone an MG key fob?", "For many models, yes. Send the model, year and a photo of the key so we can confirm first.")]),
+"Mini": dict(
+ models="Cooper, Countryman, Clubman and Aceman",
+ about="MINI, part of the BMW Group, is a favourite city car in Singapore, from the three-door Cooper to the Countryman.",
+ keys="MINI keys hold an integrated mechanical key for the door, and many models have Comfort Access keyless entry. MINI's own advice for a weak key is emergency detection on the steering column.",
+ tips=["Learn how to release the integrated key from your MINI fob now.",
+       "If the car says the key isn't recognised, try the steering column emergency detection before calling.",
+       "Keep the spare key away from the car to avoid relay theft on keyless models."],
+ faqs=[("Can you open a MINI with the key locked inside?", "Yes, without damage, 24/7 islandwide."),
+       ("Can you make a spare MINI key?", "For many MINI models, yes. Send the model, year and a photo of the key and we'll confirm.")]),
+"Skoda": dict(
+ models="Octavia, Superb, Kodiaq, Karoq, Kamiq and Enyaq",
+ about="Škoda, part of the Volkswagen Group, is known in Singapore for roomy, practical cars like the Octavia and Superb, plus the Kodiaq SUV and electric Enyaq.",
+ keys="Many Škodas use KESSY keyless entry and start, with an emergency key blade inside the fob.",
+ tips=["Slide out the emergency key and find the driver's door keyhole before you need it.",
+       "On a weak fob, the back of the fob against the Start/Stop button usually works.",
+       "Replace the fob battery at the first dashboard warning."],
+ faqs=[("How do I start a Škoda with a dead key fob?", "Press the Start/Stop button with the back of the fob while braking. On the Enyaq and Octavia, you can also place the fob in the cup holder nearest the driver, buttons up."),
+       ("Can you unlock a Škoda with the keys inside?", "Yes, without damage, 24/7 islandwide.")]),
+"Peugeot": dict(
+ models="208, 2008, 308, 3008, 5008 and e-208",
+ about="Peugeot, part of Stellantis, sells hatchbacks and SUVs such as the 208, 2008, 3008 and 5008 in Singapore, plus electric versions.",
+ keys="Newer Peugeots often have Keyless Entry and Starting; others use a remote flip key with a folding blade.",
+ tips=["Find out how your key's integrated blade releases, and where the driver's keyhole is.",
+       "Read the handbook's 'key not detected' section once, so you know your model's backup start method.",
+       "Keep a spare key at home."],
+ faqs=[("Can you open a Peugeot with the keys inside?", "Yes, without damage, 24/7 islandwide."),
+       ("Can you make a spare Peugeot key?", "For many models, yes. Send the model, year and a photo of the key and we'll confirm.")]),
+"Suzuki": dict(
+ models="Swift, Jimny, Vitara and S-Cross",
+ about="Suzuki's Swift and Jimny are long-time Singapore favourites: small, economical and easy to park.",
+ keys="Keyless Suzukis hide a mechanical key in the fob, and older models use a regular ignition key.",
+ tips=["Slide the release on the back of the fob to free the mechanical key, and practise once.",
+       "The driver's keyhole is at the back of the door handle on Suzuki models.",
+       "A spare key is cheap insurance for an older car."],
+ faqs=[("How do I start a Suzuki with a dead key fob?", "On push-button models, press the start button with the back of the fob while stepping on the brake."),
+       ("Can you unlock a Suzuki with the keys inside?", "Yes, without damage, 24/7 islandwide.")]),
+})
+
 BRANDS = [dict(name=b, slug=slug(b), **DATA[b]) for b in C.CAR_BRAND_PAGES if b in DATA]
 
 
@@ -174,11 +232,11 @@ def build(x):
         n = b["name"]
         path = f"car-locksmith/{b['slug']}/"
         crumbs = [("Home", ""), ("Services", "services/"), ("Car locksmith", "car-locksmith/"), (n, path)]
-        title = f"{n} Locksmith Singapore | Unlocking & Key Fob Cloning"
-        if len(title) > 60:
-            title = f"{n} Locksmith Singapore | Car Key Fob & Lockout"
-        desc = (f"{n} keys locked in the car, or need a spare key fob? Uncle Thomas unlocks {n} cars without damage and clones "
-                f"{n} key fobs, 24/7 islandwide. Call 9224 9224.")
+        title = next(t for t in (f"{n} Key Fob Battery, Spare Key & Locked Keys in Car",
+                                 f"{n} Key Fob, Spare Key & Locked Keys | Singapore",
+                                 f"{n} Key Fob & Car Lockout Help Singapore") if len(t) <= 60)
+        desc = (f"{n} key fob battery dead or not working, need a spare key, or keys locked in the car? What to try, "
+                f"plus 24/7 unlocking and key fob cloning in Singapore.")
         if len(desc) > 158:
             desc = f"{n} locksmith in Singapore: car unlocking without damage and {n} key fob cloning, 24/7 islandwide. Call 9224 9224."
         faqs = b["faqs"] + [
@@ -190,7 +248,7 @@ def build(x):
         recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)
         rel = RELATED.get(n, [])
         others = " · ".join(f'<a href="~/car-locksmith/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["name"] in rel)
-        body = (x["page_hero"](crumbs, f"{n} Locksmith Singapore: Unlocking &amp; Key Fob Cloning",
+        body = (x["page_hero"](crumbs, f"{n} Key Fob Battery Dead, Spare Key or Keys Locked in the Car?",
                 f"Keys locked inside your {n}, or down to your last key fob? Uncle Thomas opens {n} cars without damage and clones {n} key fobs, 24/7 anywhere in Singapore.",
                 ["Non-destructive entry", "Key fob cloning", "24/7 islandwide"]) +
                 f'''<section class="section"><div class="container narrow prose">
@@ -203,9 +261,13 @@ def build(x):
 <h2>{n} key fob battery dead? How to get in and start</h2>
 <ol><li><strong>Get in:</strong> {DEADFOB[n]["open"]}</li><li><strong>Start the car:</strong> {DEADFOB[n]["start"]}</li></ol>
 <p>Details vary by year, so check your manual. Still stuck? Call us. Key locked inside instead? See <a href="~/guides/keys-locked-in-car/">keys locked in the car</a>.</p>
+<h2>{n} key fob battery replacement</h2>
+<p>Most {n} fobs take a 3V coin cell (often CR2032 or CR2025): copy the type printed on the old one and fit the new cell the same way up. Not working after the swap? See <a href="~/guides/car-key-fob-not-working/">key fob not working after a battery change</a>; if the backup start above works, the {n} fob itself is fine.</p>
+<h2>{n} spare key</h2>
+<p>Down to one {n} key? We clone {n} fobs from a working key, after checking your NRIC against the log card. WhatsApp {{PHONE}} the model, year and a key photo to confirm first.</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
-<p><strong>Spare fob?</strong> WhatsApp {{PHONE}} the model, year and a photo of the key, and we'll confirm before you book. We check your NRIC against the log card first. Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
+<p>Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
 <p>Related: {others} · <a href="~/car-locksmith/">all car brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +
@@ -349,3 +411,36 @@ DATA["Porsche"]["tips"] = [
     "Want a spare without leaving the car at the dealer? Send us the model year and a photo of the fob first, and we'll confirm before you book.",
     "Replace the fob battery as soon as the dashboard warns you.",
 ]
+
+SCENARIO.update({
+"BYD": "A BYD owner uses the phone digital key every day and left the NFC card in the glovebox. At a mall carpark late at night, the phone dies and the fob is at home. We open the car without damage, and the card goes into their wallet.",
+"MG": "An MG ZS EV owner ignores the key-not-detected messages for a week. One morning in an HDB carpark the fob is too weak to start the car. If the console spot doesn't help, they call us.",
+"Mini": "A MINI Cooper owner with Comfort Access drops the key in the boot while loading shopping and shuts it. The car locks itself. We open it without damage.",
+"Skoda": "A Škoda Octavia driver's fob battery dies at a petrol station. They don't know the emergency key or the Start/Stop trick, so they call. Often we can talk them through it on the phone.",
+"Peugeot": "A Peugeot 3008 owner locks the key inside after the kids climb out and press the lock button. We open it without damage while the family waits in the shade.",
+"Suzuki": "A Swift owner's remote stops working and they don't know the fob hides a key. We explain over WhatsApp where the release is and where the keyhole sits, and they're in.",
+})
+FEATURE.update({
+"BYD": "BYD's electric cars use several key types at once (fob, NFC card and phone), which is great until the phone dies or the card is locked inside.",
+"MG": "MG's smart keys rely on the car detecting the fob, so a weak battery shows up as 'key not detected' before it fails completely.",
+"Mini": "MINI shares BMW Group key technology, including emergency key detection at the steering column and an integrated door key.",
+"Skoda": "Škoda shares Volkswagen Group key systems, and has two well-known backup start methods: the back of the fob on Start/Stop, or the cup holder on some models.",
+"Peugeot": "Peugeot's keyless system varies by model and year, so the handbook's backup procedure is the first thing to check.",
+"Suzuki": "Suzuki keeps things simple: a hidden mechanical key in the fob and a keyhole behind the driver's door handle.",
+})
+DEADFOB.update({
+"BYD": dict(open="If your BYD has an NFC card key, it needs no battery: tap it on the car's card reader (your manual shows where). Phone digital keys work if your phone has charge.",
+            start="With a weak fob, follow the 'key not detected' steps in your BYD manual. If the car still won't detect a key or card, call us."),
+"MG": dict(open="If your MG fob holds a mechanical key, use it in the driver's door.",
+           start="Some MG ZS EV owners find placing the fob in the marked spot in the centre console cup holder helps the car read a weak key. Check your manual for your model."),
+"Mini": dict(open="Release the integrated mechanical key from the fob and use it in the driver's door.",
+             start="MINI says to press the back of the key against the marking on the steering column (emergency detection), then start as normal."),
+"Skoda": dict(open="Slide the emergency key out of the fob and use it in the driver's door.",
+              start="Press the Start/Stop button with the back of the fob while braking. On the Enyaq and Octavia, you can also put the fob in the cup holder nearest the driver, buttons up."),
+"Peugeot": dict(open="Release the key blade from your remote and use it in the driver's door lock.",
+                start="Follow the 'key not detected' backup procedure in your Peugeot handbook; it varies by model and year."),
+"Suzuki": dict(open="Slide the button on the back of the fob, pull out the mechanical key, and use the keyhole at the back of the driver's door handle.",
+               start="On push-button models, press the start button with the back of the fob while stepping on the brake. On older models, remove the cap over the key slot and use the key in the ignition."),
+})
+RELATED.update({"BYD": ["MG", "Hyundai", "Kia"], "MG": ["BYD", "Hyundai", "Kia"], "Mini": ["BMW", "Volkswagen", "Audi"],
+                "Skoda": ["Volkswagen", "Audi", "Hyundai"], "Peugeot": ["Volkswagen", "Skoda", "Volvo"], "Suzuki": ["Toyota", "Honda", "Mazda"]})

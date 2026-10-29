@@ -302,4 +302,53 @@ dict(
   ("I lost the override key but the code still works. Is that a problem?", "Only when the batteries die or the electronics fail. Replace the batteries now, keep spares, and consider getting a new key set or lock."),
  ],
 ),
+# ----------------------------------------------------------------------
+dict(
+ slug="car-key-fob-not-working",
+ short="Car key fob not working",
+ title="Car Key Fob Not Working After Battery Change? 7 Fixes",
+ desc="New battery but the car key fob still won't work? Wrong cell, upside down, bent contacts, resync: what to check, how to still start the car, and when to call.",
+ h1="Car Key Fob Not Working After a Battery Change? 7 Fixes",
+ card="Swapped the battery and the remote still does nothing? Seven common causes, and how to get in and start the car meanwhile.",
+ body="""
+<p>You've put a fresh battery in your car key fob, and the buttons still do nothing, or the car still says "key not detected". It's a common problem, and most of the time it's something small. Work through these.</p>
+
+<h2>1. The battery is the wrong type</h2>
+<p>Most fobs take a 3V coin cell, and the common sizes look alike. A CR2025 is thinner than a CR2032, so it can sit loose and lose contact; a CR2016 is thinner still. Use exactly the type printed on the old battery or in your manual.</p>
+
+<h2>2. It's upside down</h2>
+<p>The positive (+) side, with the writing, usually faces one way in the case. Take a photo before you remove the old battery, then match it.</p>
+
+<h2>3. The contacts were bent</h2>
+<p>Prying the case open can bend the small metal tabs that touch the battery. Gently ease them back so they press on the cell.</p>
+
+<h2>4. The new battery is old or poor quality</h2>
+<p>Coin cells lose charge sitting on a shelf, and cheap ones can arrive nearly flat. Try a fresh one from a good brand.</p>
+
+<h2>5. The case isn't closed properly</h2>
+<p>If the two halves aren't clicked shut, the battery or the button pad may not seat properly. Press around the edges until it closes evenly.</p>
+
+<h2>6. The fob needs to resync</h2>
+<p>Some older remotes need re-synchronising after a battery change: often a matter of pressing a button within range of the car, or locking and unlocking with the mechanical key. Your owner's manual will say if yours needs it.</p>
+
+<h2>7. The fob itself is damaged</h2>
+<p>A drop or water damage can break the fob's circuit. A good test: try your car's backup start method (on many cars, holding the fob against the start button or a marked spot). If the car starts, the transponder chip is fine and only the remote side has a problem.</p>
+
+<h2>Getting in and started meanwhile</h2>
+<ul>
+<li><strong>Door:</strong> most smart keys hide a mechanical key; the driver's door has a keyhole, sometimes under a cap on the handle.</li>
+<li><strong>Start:</strong> most keyless cars have a backup method for a weak fob. Brand-by-brand steps: <a href="~/car-locksmith/toyota/">Toyota</a> · <a href="~/car-locksmith/honda/">Honda</a> · <a href="~/car-locksmith/byd/">BYD</a> · <a href="~/car-locksmith/bmw/">BMW</a> · <a href="~/car-locksmith/mercedes-benz/">Mercedes-Benz</a> · <a href="~/car-locksmith/">all brands</a>.</li>
+</ul>
+
+<h2>When to call</h2>
+<p>If your only working key has stopped working, get a spare made while you still have one that works: we clone key fobs for all major brands from a working key, after checking your NRIC against the car's log card. If you're locked out, we open cars without damage, 24/7 islandwide. Call or WhatsApp {PHONE}.</p>
+<div class="callout navy"><p><strong>Down to one key?</strong> WhatsApp {PHONE} your car's model, year and a photo of the key for a spare.</p></div>
+""",
+ faqs=[
+  ("Why is my key fob not working after I changed the battery?", "Usually the wrong battery type (CR2025 instead of CR2032), the battery upside down, or bent contacts. Some older remotes also need resyncing."),
+  ("Can I still start my car if the key fob doesn't work?", "Usually. Most keyless cars have a backup method, such as holding the fob against the start button or a marked spot. Check your manual."),
+  ("Does a car key fob need reprogramming after a battery change?", "Most don't. Some older remotes need a simple resync, which the owner's manual explains."),
+  ("Can you make a spare car key fob?", "Yes, we clone key fobs for all major brands from a working key. WhatsApp {PHONE} the model, year and a photo of the key."),
+ ],
+),
 ]
