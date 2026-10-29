@@ -370,3 +370,31 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .rv-foot { text-align: center; margin-top: 18px; font-weight: 600; }
 .rv-attr { text-align: center; font-size: .8rem; color: var(--grey); margin-top: 6px; }
 @media (min-width: 860px) { .rv-list.loaded { grid-template-columns: repeat(3, 1fr); } }
+
+/* ===== Phone-first fixes (29 Oct 2026): 44px tap targets, 15px+ text, call buttons right under the H1 ===== */
+.menu-btn { flex-shrink: 0; }
+.header-call { min-height: 44px; }
+.topbar .lang-switch { padding: 11px 10px; margin: -11px 0; }
+.g-rating { min-height: 44px; }
+.prose .contact-big { margin-left: 0; }
+.hero-face { display: none; }
+@media (max-width: 959px) {
+  .hero-lead { display: flex; align-items: center; gap: 12px; }
+  .hero-face { display: block; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(26,34,56,.18); }
+}
+@media (max-width: 639px) {
+  .card p, .card.svc p, .price-table td, .shifu-item p, .note, .hero-note, .qq-note, .price-foot { font-size: 1rem; }
+  .badges li, .breadcrumb, .meta-line, .tags li, .rv-attr, .photo figcaption, .photo-grid figcaption, .t-txt span { font-size: .9375rem; }
+  .page-hero .container { display: flex; flex-direction: column; }
+  .page-hero .container > * { order: 10; }
+  .page-hero .container > .breadcrumb { order: 1; }
+  .page-hero .container > h1 { order: 2; }
+  .page-hero .container > .meta-line { order: 3; }
+  .page-hero .container > .cta-row { order: 4; margin-bottom: 18px; }
+  .page-hero .container > .hero-sub { order: 5; }
+  .page-hero .container > .badges { order: 6; }
+}
+.hero-lead picture { display: block; flex-shrink: 0; width: 56px; height: 56px; }
+@media (max-width: 380px) {
+  .cta-row .btn { font-size: .92rem; padding: 14px 6px; gap: 6px; }
+}

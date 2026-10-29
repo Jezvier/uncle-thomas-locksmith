@@ -562,7 +562,7 @@ def build(x):
             (f"How much does a locksmith in {n} cost?", "The same as anywhere in Singapore: it depends on the lock and the time of day, and we confirm the price before we start. See our <a href=\"~/prices/\">price list</a>."),
         ]
         body = (x["page_hero"](crumbs, f"Locksmith in {n} — 24/7 Emergency Service",
-                f"Locked out in {n}? {t['intro']}", ["24/7 incl. public holidays", "Since 1998", "ID verified"]) +
+                f"Locked out in {n}? {t['intro']}", ["24/7 incl. public holidays", "Since 1998", "We check ID before opening"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <h2>Locksmith work in {n}</h2>
 <p>{t["overview"]}</p>

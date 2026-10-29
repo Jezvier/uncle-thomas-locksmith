@@ -27,7 +27,7 @@ dict(
  desc="Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. HDB, condo, landed & office lockouts islandwide, damage-free first. Call 9224 9224.",
  h1="24/7 Emergency Locksmith in Singapore",
  sub="Locked out of your home or office? Call Uncle Thomas — day or night, weekends and public holidays. We set off as soon as you call and open your door damage-free wherever possible.",
- badges=["Since 1998", "24/7 islandwide", "ID verified for your safety"],
+ badges=["Since 1998", "24/7 islandwide", "We check ID before opening"],
  body="""
 <h2>Locked out? Here's what happens when you call</h2>
 <ol>
@@ -572,7 +572,7 @@ def build_home(x):
   <div class="container hero-inner">
     <div>
       <h1>24/7 Locksmith in Singapore</h1>
-      <p class="hero-lead">Led by <strong>Uncle Thomas</strong>, locksmith and safesmith since {C_.FOUNDED}.</p>
+      <p class="hero-lead"><picture><source srcset="~/assets/img/uncle-thomas-face-112.webp 1x, ~/assets/img/uncle-thomas-face-224.webp 2x" type="image/webp"><img class="hero-face" src="~/assets/img/uncle-thomas-face-112.jpg" srcset="~/assets/img/uncle-thomas-face-224.jpg 2x" width="56" height="56" alt="Uncle Thomas at work on a safe" fetchpriority="high"></picture><span>Led by <strong>Uncle Thomas</strong>, locksmith and safesmith since {C_.FOUNDED}.</span></p>
       {rating_html}
       <ul class="hero-tiles">
         <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door: HDB, condo, landed, office, digital &amp; smart locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
@@ -592,6 +592,17 @@ def build_home(x):
     <div class="trust-item"><strong>24/7</strong><span>Nights, weekends, PH</span></div>
     <div class="trust-item"><strong>Islandwide</strong><span>Every town in Singapore</span></div>
     <div class="trust-item"><strong>No-expiry</strong><span>Warranty on every lock we fit</span></div>
+  </div>
+</section>
+
+{reviews_html(C_)}
+<section class="section section-alt" id="reviews">
+  <div class="container">
+    <h2 class="section-title">What Customers Say on Google</h2>
+    <p class="section-lead"><span class="rv-score">{C_.GOOGLE_RATING:.1f}</span> <span class="rv-stars" aria-hidden="true">★★★★★</span> from {int(C_.GOOGLE_REVIEW_COUNT)} Google reviews</p>
+    <div class="rv-list" id="g-reviews" data-place="{C_.PLACE_ID}" data-key="{C_.GOOGLE_BROWSER_KEY}" aria-live="polite"></div>
+    <p class="rv-foot"><a href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read all reviews on Google</a> · <a href="{C_.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Leave a review</a></p>
+    <p class="rv-attr">Reviews from Google</p>
   </div>
 </section>
 
@@ -625,17 +636,6 @@ def build_home(x):
     {x["quote_form"]("home")}
   </div>
 </section>
-
-<section class="section section-alt" id="reviews">
-  <div class="container">
-    <h2 class="section-title">What Customers Say on Google</h2>
-    <p class="section-lead"><span class="rv-score">{C_.GOOGLE_RATING:.1f}</span> <span class="rv-stars" aria-hidden="true">★★★★★</span> from {int(C_.GOOGLE_REVIEW_COUNT)} Google reviews</p>
-    <div class="rv-list" id="g-reviews" data-place="{C_.PLACE_ID}" data-key="{C_.GOOGLE_BROWSER_KEY}" aria-live="polite"></div>
-    <p class="rv-foot"><a href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read all reviews on Google</a> · <a href="{C_.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Leave a review</a></p>
-    <p class="rv-attr">Reviews from Google</p>
-  </div>
-</section>
-
 <section class="section shifu" id="shifu">
   <div class="container">
     <h2 class="section-title">Led by Singapore's Locksmith "Shifu"</h2>
@@ -659,7 +659,7 @@ def build_home(x):
       <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("clock")}</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
       <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("tag")}</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
       <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("shield")}</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("idcard")}</span><h3>ID verified</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
+      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("idcard")}</span><h3>We check ID before opening</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
       <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("check")}</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
       <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("award")}</span><h3>{C_.YEARS}+ years' experience</h3><p>From HDB gates to ship safes — there's very little Uncle Thomas hasn't opened.</p></div>
     </div>
@@ -675,7 +675,6 @@ def build_home(x):
   </div>
 </section>
 
-{reviews_html(C_)}
 
 <section class="section section-alt" id="guides">
   <div class="container">
