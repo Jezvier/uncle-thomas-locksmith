@@ -509,7 +509,7 @@ def build(x):
 
     # ---- hub ----
     crumbs = [("Home", ""), ("Areas", "areas/")]
-    title = "Locksmith Near Me Singapore | Every Town, 24/7 | Uncle Thomas"
+    title = "Locksmith Near Me Singapore | Every Town, 24/7"
     desc = "Need a locksmith near you? Uncle Thomas covers every town in Singapore 24/7 — Toa Payoh, Ang Mo Kio, Tampines, Jurong, Woodlands and more. Call 9224 9224."
     cards = []
     for r in regions:

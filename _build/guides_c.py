@@ -59,7 +59,7 @@ dict(
 dict(
  slug="after-a-break-in",
  short="After a break-in",
- title="What to Do After a Break-In in Singapore: A Step-by-Step Guide",
+ title="What to Do After a Break-In in Singapore: Step-by-Step Guide",
  desc="Home or office broken into? What to do first, what to tell the police and your insurer, and how to secure your locks the same day. A locksmith's checklist.",
  h1="What to Do After a Break-In in Singapore",
  card="A calm, step-by-step checklist: safety first, the police report, insurance, and securing your locks the same day.",

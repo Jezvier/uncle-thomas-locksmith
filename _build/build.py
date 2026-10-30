@@ -129,6 +129,7 @@ def business_node(full=False):
                              "hoursAvailable": {"@type": "OpeningHoursSpecification", "dayOfWeek": ALL_DAYS,
                                                 "opens": "00:00", "closes": "23:59"}},
             "sameAs": C.SAME_AS,
+            "hasMap": C.GOOGLE_MAPS_URL,
         })
         if C.EMAIL:
             node["email"] = C.EMAIL

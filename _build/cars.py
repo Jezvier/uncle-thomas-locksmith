@@ -268,7 +268,7 @@ def build(x):
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
 <p>Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
-<p>Related: {others} · <a href="~/car-locksmith/">all car brands</a></p>
+<p>Related: {others} · <a href="~/car-key-duplicate/">spare key fob cloning</a> · <a href="~/car-locksmith/">all car brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +
                 x["cta_band"](f"Locked Out of Your {n}?"))

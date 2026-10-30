@@ -72,7 +72,7 @@ dict(
 dict(
  path="digital-lock-opening/", short="Digital & smart lock opening", icon="keypad",
  card="Flat battery, forgotten PIN or faulty keypad? We open all digital lock and smart lock brands, 24/7.",
- title="Digital Lock & Smart Lock Opening Singapore 24/7 | All Brands",
+ title="Digital & Smart Lock Opening Singapore 24/7 | All Brands",
  title_exp="Digital & Smart Lock Opening Singapore | All Brands Since 1998",
  desc="Locked out by your digital lock or smart lock? Flat battery, forgotten PIN or faulty keypad: Uncle Thomas opens all brands 24/7, damage-free. Call 9224 9224.",
  h1="Digital Lock or Smart Lock Won't Open? 24/7 Opening",
@@ -119,7 +119,7 @@ dict(
 dict(
  path="digital-lock-installation/", short="Digital & smart lock installation", icon="wrench",
  card="Neat, correct digital and smart lock installation for HDB doors, gates, condos and offices, with a no-expiry warranty.",
- title="Digital Lock & Smart Lock Installation Singapore | HDB & Condo",
+ title="Digital & Smart Lock Installation Singapore | HDB & Condo",
  title_exp="Digital & Smart Lock Installation Singapore | No-Expiry Warranty",
  desc="Digital lock and smart lock installation for HDB doors & gates, condos and offices. All brands, set up with you, no-expiry warranty. Call 9224 9224.",
  h1="Digital Lock &amp; Smart Lock Installation in Singapore",
@@ -303,6 +303,7 @@ dict(
 <li>Replacement fob for family members or a second driver.</li>
 <li>Remote keys, flip keys and smart keys for push-start cars.</li>
 </ul>
+<p>More on how it works: <a href="~/car-key-duplicate/">car key duplicate and spare key fob cloning</a>.</p>
 <p>WhatsApp {PHONE} your car's make, model and year, plus a photo of your key (front and back), and we'll confirm we can do it and the price before you book. Lost a key already? Read <a href="~/guides/lost-car-key-fob/">lost your car key fob: what to do next</a>. Key locked inside the car? Read <a href="~/guides/keys-locked-in-car/">keys locked in the car: what to do</a>.</p>
 
 <h2>All car brands</h2>
@@ -796,7 +797,7 @@ PRICE_FAQS = [
 def build_prices(x):
     C_ = x["C"]
     crumbs = [("Home", ""), ("Prices", "prices/")]
-    title = "Locksmith Prices Singapore (2026) | Confirmed Before We Start"
+    title = "Locksmith Prices Singapore (2026) | Confirmed Upfront"
     desc = "How much does a locksmith cost in Singapore? Uncle Thomas's upfront 2026 prices for lockouts, digital locks, cars, lock and letterbox replacement and safes."
     faqs = [f for f in PRICE_FAQS if "OWNER TO CONFIRM" not in f[1]]
     body = (x["page_hero"](crumbs, "Locksmith Prices in Singapore (2026)",
