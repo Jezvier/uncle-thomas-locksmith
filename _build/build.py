@@ -32,6 +32,7 @@ import content, areas, guides, brands, cars, zh, icons, pages_extra
 
 TODAY = date.today().isoformat()
 PAGES = []          # (path, priority) for sitemap
+TITLES = {}         # path -> <title>, used for llms.txt links
 CSS = ""            # minified stylesheet, inlined into every page
 
 
@@ -486,6 +487,7 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
     os.makedirs(os.path.dirname(out), exist_ok=True)
     with open(out, "w", encoding="utf-8") as f:
         f.write(doc)
+    TITLES[path] = title
     PAGES.append((path, priority, alternates))
 
 
@@ -738,7 +740,14 @@ def main():
                    "icons": [{"src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
                              {"src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, f, indent=2)
 
-    # llms.txt (summary for AI assistants / answer engines)
+    # llms.txt (summary for AI assistants / answer engines); links follow llmstxt.org: "- [Title](url)"
+    def llms_title(p):
+        t = TITLES.get(p) or C.NAME
+        for sep in (" | ", " – ", " - "):
+            if sep in t and t.split(sep)[0].strip():
+                t = t.split(sep)[0].strip()
+                break
+        return t.replace("[", "(").replace("]", ")")
     lines = [f"# {C.NAME}", "", f"> {C.DESCRIPTION}", "",
              f"- Phone / WhatsApp: {C.PHONE} ({C.PHONE_E164}) — 24/7, islandwide Singapore",
              f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas (US-trained safesmith), with a small team.",
@@ -761,7 +770,7 @@ def main():
               ("Guides", lambda p: p.startswith("guides")),
               ("Chinese (中文)", lambda p: p.startswith("zh"))]
     for name, test in groups:
-        lines += ["", f"## {name}"] + [f"- {abs_url(p)}" for p, _, _ in PAGES if test(p)]
+        lines += ["", f"## {name}"] + [f"- [{llms_title(p)}]({abs_url(p)})" for p, _, _ in PAGES if test(p)]
     with open(os.path.join(ROOT, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
 
