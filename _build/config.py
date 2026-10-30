@@ -52,7 +52,7 @@ LEGAL_NAME = "Thomas Locksmith"
 # Other names customers and listings know the business by (Google Business Profile = "Singapore Locksmith").
 ALT_NAMES = ["Thomas Locksmith", "Singapore Locksmith"]
 # FILL: Google Analytics 4 Measurement ID (e.g. "G-ABC123XYZ"). None = analytics off.
-GA4_ID = "G-WF8P935BCY"
+GA4_ID = "G-DSL14WM5HH"
 
 # Add Facebook / Instagram / Carousell / directory profile URLs here as you create them.
 SAME_AS = [GOOGLE_PROFILE]
