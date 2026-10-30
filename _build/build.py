@@ -159,8 +159,9 @@ def person_node():
     node = {
         "@type": "Person", "@id": PERSON_ID, "name": "Uncle Thomas",
         "jobTitle": "Master Locksmith & Safesmith",
-        "description": "Singapore locksmith since 1998. Trained in safesmithing in the United States; has opened safes on ships and in Thailand, Malaysia, China and Hong Kong.",
-        "knowsAbout": ["Locksmithing", "Safesmithing", "Safe opening", "Digital locks"],
+        "alternateName": "Shifu",
+        "description": "Singapore locksmith since 1998, known in the trade as \"Shifu\". Trained in safesmithing in the United States; has opened safes on ships and in Thailand, Malaysia, China and Hong Kong, and developed his own methods for opening digital locks. Has worked for commercial offices, pawnshops, banks and government ministries.",
+        "knowsAbout": ["Locksmithing", "Safesmithing", "Safe opening", "Safe combination change", "Digital locks", "Smart locks", "Car key fob cloning"],
         "worksFor": {"@id": BUSINESS_ID},
         "url": C.SITE + "/about/",
         "image": (photo_schema("about_portrait") or {}).get("contentUrl", C.SITE + "/assets/img/logo-640.jpg"),
@@ -751,7 +752,8 @@ def main():
         return t.replace("[", "(").replace("]", ")")
     lines = [f"# {C.NAME}", "", f"> {C.DESCRIPTION}", "",
              f"- Phone / WhatsApp: {C.PHONE} ({C.PHONE_E164}) — 24/7, islandwide Singapore",
-             f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas (US-trained safesmith), with a small team.",
+             f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas, known in the trade as \"Shifu\" (US-trained safesmith), with a small team.",
+             "- Uncle Thomas has opened safes on ships and overseas (Thailand, Malaysia, China, Hong Kong) and developed his own methods for opening digital locks.",
              "- Verifies proof of residence or ownership before opening any door, car or safe.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
              "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands).",
