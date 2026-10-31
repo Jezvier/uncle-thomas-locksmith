@@ -183,7 +183,7 @@ dict(
 <p>If the key is locked inside the car, that's a lockout, not a lost key. We open cars of all major brands without damage. See <a href="~/car-locksmith/">car locksmith</a>.</p>
 
 <h2>3. Do you still have a working key?</h2>
-<p>If you still have one working key, this is the best time to get a spare made. We clone car key fobs, copying your working key so you have a backup. It's usually faster and cheaper than waiting for a new key from the dealer.</p>
+<p>If you still have one working key, this is the best time to get a spare made. We clone remote car key fobs, copying your working key so you have a backup (we don't clone smart keyless keys). It's usually faster and cheaper than waiting for a new key from the dealer.</p>
 <p>If you've lost <strong>every</strong> key, the options depend on your car's make, model and year. Call or WhatsApp {PHONE} with the details and we'll tell you honestly what's possible.</p>
 
 <h2>4. Think about security</h2>

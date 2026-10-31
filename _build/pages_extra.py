@@ -74,10 +74,9 @@ def _privacy(x):
                  "<p>This website does not use advertising cookies. If we add website analytics, we'll update this notice.</p>")
     body = (x["page_hero"](crumbs, "Privacy Notice", f"How {C.NAME} handles your personal data. Last updated {{MONTH_YEAR}}.") +
             f'''<section class="section"><div class="container narrow prose">
-<!-- FILL: owner to confirm what records are kept, and for how long, and add a business email for data requests. -->
 <h2>What we collect</h2>
 <p>When you call, WhatsApp or book a job, we collect only what we need to help you: your name, phone number, the address or location of the job, photos you choose to send, and details of the lock, safe or car.</p>
-<p>Before opening a door, car or safe, we check proof of residence or ownership, such as your NRIC with your address, a tenancy agreement, a utility bill or a vehicle log card.</p>
+<p>Before every job we check your ID (NRIC, Singpass or other ID proof) and proof of residence or ownership, such as your NRIC with your address, a tenancy agreement, a utility bill or a vehicle log card.</p>
 
 <h2>Why we use it</h2>
 <ul>
@@ -91,13 +90,13 @@ def _privacy(x):
 <p>We don't sell your personal data. We share it only where the law requires it, for example with the police on request, or with service providers we rely on to run the business, such as our phone and messaging apps.</p>
 
 <h2>How long we keep it</h2>
-<p>We keep job records only as long as we need them for the job, our warranty, and our legal and accounting obligations.</p>
+<p>The only records we keep are the invoice for the job and our WhatsApp messages with you about it. We keep them for our warranty and our legal and accounting obligations, and no longer than we need to.</p>
 
 <h2>This website</h2>
 {analytics}
 
 <h2>Your rights</h2>
-<p>Under Singapore's Personal Data Protection Act (PDPA), you can ask what personal data we hold about you, ask us to correct it, or withdraw consent for how we use it. Contact us at {contact}{C.PHONE}.</p>
+<p>Under Singapore's Personal Data Protection Act (PDPA), you can ask what personal data we hold about you, ask us to correct it, or withdraw consent for how we use it. Email <a href="mailto:thomaslocksmith@hotmail.com">thomaslocksmith@hotmail.com</a> or call {C.PHONE}.</p>
 </div></section>''')
     nodes = x["page_schema"](path, title, desc, crumbs)
     x["render"](path, title, desc, body, nodes, priority="0.2")

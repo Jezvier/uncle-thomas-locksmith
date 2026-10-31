@@ -86,8 +86,48 @@ dict(slug="cbd-orchard", name="CBD & Orchard", region="Central",
   ("Can you come to our CBD office at night or on weekends?", "Yes. We work 24/7, and after-hours visits mean no disruption to your business. Please arrange building access with security."),
   ("Do you open shop safes in Orchard and the CBD?", "Yes — Uncle Thomas trained in safesmithing in the United States. We'll need authorisation from the business before opening any safe."),
  ],
- nearby=["novena", "bukit-merah"]),
+ nearby=["novena", "bukit-merah", "newton", "paterson"]),
 
+dict(
+ slug="newton", name="Newton", region="Central",
+ intro="Newton is condo country, between Orchard and Novena — so most of our calls here are digital lock lockouts, home safes and cars in condo carparks.",
+ overview="Newton sits just north of Orchard, around Newton Circus and the hawker centre that gives the area its name. Most homes are private condominiums and apartments along Newton Road, Scotts Road, Cairnhill and the streets off Bukit Timah Road, with a few landed pockets and older walk-up apartments. That means high-end digital locks, home safes in bedrooms and study rooms, and cars parked in basement carparks.",
+ estates=["Newton Road", "Cairnhill", "Scotts Road", "Kampong Java", "Stevens Road", "Bukit Timah Road"],
+ landmarks=["Newton Food Centre", "Newton Circus", "Cairnhill", "Scotts Road"],
+ mrt=["Newton", "Stevens", "Orchard"],
+ buildings=[
+  ("Condominiums and apartments", "Digital and smart locks on main doors, often with a second deadbolt. The guardhouse will need to know we're coming, and we check proof of residence before opening."),
+  ("Home safes", "Many Newton homes keep passports, jewellery and documents in a bedroom or wardrobe safe. Uncle Thomas opens home safes of every type, usually without drilling."),
+  ("Basement carparks", "Car lockouts in condo carparks are common here. Tell us the level and lot number, and the guardhouse can let us in."),
+ ],
+ jobs=["Digital lock lockouts in condos", "Home safes that won't open", "Car lockouts in condo carparks", "Main door lock changes after a tenancy"],
+ access="Most Newton condos have a guardhouse, so let them know a locksmith is coming and give us the block and unit. For car lockouts, tell us the carpark level and lot number.",
+ faqs=[
+  ("Can you open a home safe in a Newton condo?", "Yes. Uncle Thomas is a safe specialist and opens home safes of every type, usually without drilling. We check that the safe is yours first."),
+  ("Do you come to Newton late at night?", "Yes, 24/7. Newton is central, so it's quick for us to reach, usually within 25–30 minutes."),
+ ],
+ nearby=["cbd-orchard", "novena", "paterson"],
+),
+dict(
+ slug="paterson", name="Paterson", region="Central",
+ intro="Paterson is a quiet, upmarket pocket just off Orchard Road — our calls here are mostly luxury condo digital locks, home safes and cars.",
+ overview="Paterson Road and Paterson Hill run between Orchard Road and River Valley, a few minutes' walk from Orchard Boulevard. It's an area of luxury condominiums, serviced residences and a few landed homes, many of them owned by families who travel often or by owners who rent to expatriates. High-end digital and smart locks, home safes and cars in private carparks make up most of the work here.",
+ estates=["Paterson Road", "Paterson Hill", "Orchard Boulevard", "Grange Road", "Angullia Park", "River Valley"],
+ landmarks=["Paterson Hill", "Orchard Boulevard", "Orchard Road", "Grange Road"],
+ mrt=["Orchard Boulevard", "Orchard", "Somerset", "Great World"],
+ buildings=[
+  ("Luxury condominiums", "Premium digital and smart locks, sometimes with app access and a concierge. We work with the management office and check proof of residence before opening."),
+  ("Serviced and rented residences", "Landlords and agents call us when a tenant has left without returning the code or keys. We check proof of ownership, open the door and can change the lock the same visit."),
+  ("Home safes", "Safes in walk-in wardrobes and studies hold passports, watches and jewellery. Uncle Thomas opens them, usually without drilling, and can change the combination afterwards."),
+ ],
+ jobs=["Home safe opening and combination changes", "Smart lock lockouts in luxury condos", "Lock changes for landlords between tenants", "Car lockouts in private carparks"],
+ access="Paterson condos usually have a concierge or guardhouse, so tell them a locksmith is coming. For safes, have proof that the safe is yours ready, such as ID with the address.",
+ faqs=[
+  ("Can you change a safe combination in Paterson?", "Yes. After checking the safe is yours, Uncle Thomas can open it and set a new combination, or replace the safe lock if it's faulty."),
+  ("My tenant left and the digital lock code changed. Can you help?", "Yes. Show us proof that you own the unit and we'll open the door without damage, then reset or replace the lock."),
+ ],
+ nearby=["cbd-orchard", "newton", "bukit-merah"],
+),
 dict(slug="queenstown", name="Queenstown", region="Central",
  intro="Queenstown was Singapore's first satellite estate, so it mixes some of the oldest HDB blocks on the island with tall new ones at Dawson — and business parks like one-north and Science Park.",
  overview="Queenstown covers Commonwealth, Dawson, Tanglin Halt, Mei Ling and Stirling, stretching out to Alexandra and the one-north business district. Older blocks here have seen several generations of locks, while redeveloped areas such as Dawson have newer flats where digital locks are common. Offices, labs and start-ups around one-north and Science Park make up a good share of our commercial work in the area.",
@@ -595,6 +635,8 @@ def build(x):
 
 # Town-specific advice paragraphs (rendered as "Lock tips for <town>").
 LOCAL_NOTES = {
+"newton": "Newton condos are full of digital locks that are rarely given a thought until the batteries die. Change them as soon as the lock starts warning you, and keep the mechanical backup key somewhere outside the flat, such as with a family member nearby. For home safes, write the combination down and keep it somewhere safe away from the safe itself: a forgotten code is the most common reason we're called to open one.",
+"paterson": "Owners in Paterson often travel or rent their units out, so a lock can go unused for months. Before a long trip, change the digital lock batteries and check the backup key works. If you rent your unit out, change the code or cylinder between every tenancy, and keep a record of who has which code. For safes, change the combination whenever staff or tenants change.",
 "toa-payoh": "In older Toa Payoh flats, the most common warning sign we see is a key that has to be jiggled or pulled slightly to turn. That usually means the cylinder pins are worn, and it's only a matter of time before the key snaps or the lock refuses to turn at all — often late at night. Replacing a worn cylinder costs far less than an emergency call-out with a broken key stuck inside. If your gate's hook-bolt lock has started to rust from corridor washing, a few drops of lock lubricant (not cooking oil) can help, but a rusted lock body is best replaced. Families with elderly parents living alone in Toa Payoh often ask us about digital locks so that children can let themselves in — it's a sensible upgrade for older blocks, provided the door is in good condition.",
 "bishan": "Bishan homes often have more than one lock per entrance: a condo door with a deadbolt and a digital lock, or a landed home with a gate lock, a padlock and a front door lock. When you call, tell us exactly which lock is stopping you — it changes the tools we bring and the price. If you live in a condo, keep a spare card or key with a trusted neighbour or family member rather than in your car, because a car parked in the condo carpark doesn't help if the lift lobby needs a card too. For workshops in Sin Ming, we recommend replacing padlocks on shutters with closed-shackle padlocks, which are harder to cut and stand up better to the weather.",
 "novena": "Clinics and medical suites in Novena often have strict rules about who can open a door or cabinet, so we'll always ask for authorisation from the clinic owner or practice manager before starting. If your clinic uses a key safe or drug cupboard, keep a record of who holds the keys, and change the lock when staff leave — it's cheaper than dealing with a missing key later. Shophouse owners along Balestier should check shutter padlocks every few months: rust on the shackle is the first sign that a padlock will seize, and a seized padlock means cutting it off. In older walk-up apartments, a door that has dropped on its hinges can put strain on the lock; if your key turns stiffly only when the door is closed, the door may need adjusting before the lock is replaced.",
@@ -624,6 +666,8 @@ LOCAL_NOTES = {
 
 # One more town-specific question per page.
 EXTRA_FAQS = {
+"newton": ("Can you open my car in a Newton condo carpark?", "Yes. Tell us the carpark level, lot number and car model, and let the guardhouse know. We open cars without damage after checking the log card."),
+"paterson": ("Do you work with condo management in Paterson?", "Yes. We coordinate with the concierge or management office, and check proof of residence or ownership before opening anything."),
 "toa-payoh": ("Can you replace the lock on an old timber door in Toa Payoh?", "Yes. Older timber doors often have mortise locks set into the door edge. We'll fit a replacement that suits the existing cut-out where possible, so the door doesn't need extra work."),
 "bishan": ("Do you serve landed homes near Upper Thomson?", "Yes. We handle main gates, side gates and front doors on landed homes in Bishan and Thomson, including homes with several locks on one entrance."),
 "novena": ("Can you change locks at our Balestier shop after a staff member leaves?", "Yes. We replace shutter padlocks, door locks and cabinet locks so former staff keys no longer work, usually in a single visit."),
@@ -654,6 +698,8 @@ EXTRA_FAQS = {
 # "A typical call in <town>": a realistic, clearly *typical* situation for each town
 # (never presented as a dated real job; real jobs go in config.RECENT_JOBS).
 TYPICAL = {
+"newton": "A family in a Newton condo can't remember the combination of the bedroom safe holding their passports, two days before a flight. They send a photo of the safe, and after checking ID with their address, Uncle Thomas opens it without drilling and sets a new combination they'll remember.",
+"paterson": "A landlord near Paterson Hill finds that a tenant has moved out and changed the digital lock code without passing it on. The new tenant arrives on Saturday. After checking proof of ownership, we open the door without damage and reset the lock so the landlord can set a new code.",
 "toa-payoh": "An auntie in a Lorong 1 block takes the rubbish to the chute in her house slippers, and the main door's old latch clicks shut behind her. Her keys are on the dining table. A neighbour lends her a phone, she WhatsApps a photo of the door, and we agree the price before we set off. The lock opens without damage, and because the key had been sticking for months, she decides to replace the worn cylinder while we're there.",
 "bishan": "A family in a Bishan condo comes home from Junction 8 to find the digital lock's screen dark. The batteries have died after weeks of low-battery beeps, and the backup key is in a kitchen drawer inside. The guardhouse lets us through once the owner confirms, we power up and open the lock, and the family leaves with fresh batteries in place and the backup key moved to a relative's home.",
 "novena": "A clinic manager arrives at a Novena medical suite at 7.30am, half an hour before the first patient, and the suite door's key won't turn. Building security has to sign us in, so the manager calls them first. With authorisation confirmed, we open the door without marking it, and because the cylinder is worn, we replace it on the spot so the clinic opens on time with new keys for the staff.",

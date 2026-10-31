@@ -123,13 +123,14 @@ dict(
  desc="Need a spare or duplicate car key in Singapore? We clone key fobs for all major car brands from your working key, after checking ID against the log card.",
  h1="Car Key Duplicate: Spare Key Fob Cloning in Singapore",
  sub="Bought a used car with one key, or worried about losing your only fob? Uncle Thomas clones a spare key fob from your working key, for all major car brands, without a trip to the dealer.",
- badges=["All major brands", "From your working key", "ID checked"],
+ badges=["All major brands", "Remote keys", "S$100–S$1,000"],
  body="""
-<p><strong>The short answer:</strong> if you still have one working key, we can clone a spare key fob for all major car brands. WhatsApp {PHONE} the car's make, model, year and a photo of your key, and we'll confirm and quote before you book.</p>
+<p><strong>The short answer:</strong> if you still have one working remote key, we can clone a spare key fob for all major car brands. We don't clone smart (keyless) keys. Cloning costs S$100–S$1,000 depending on the car and takes from a few minutes to a few hours. WhatsApp {PHONE} the car's make, model, year and a photo of your key, and we'll confirm and quote before you book.</p>
 
 <h2>Duplicate vs replacement: which do you need?</h2>
 <table class="price-table info-table"><thead><tr><th scope="col">Your situation</th><th scope="col">What you need</th><th scope="col">Who can help</th></tr></thead><tbody>
-<tr><td>You have one working key and want a spare</td><td>A duplicate (cloned) key fob</td><td>Us: we clone it from your working key.</td></tr>
+<tr><td>You have one working remote key and want a spare</td><td>A duplicate (cloned) key fob</td><td>Us: we clone it from your working key.</td></tr>
+<tr><td>Your car uses a smart (keyless) key</td><td>A new smart key programmed to the car</td><td>Usually the dealer: we don't clone smart keys.</td></tr>
 <tr><td>Your key works but the remote buttons don't</td><td>Usually just a new battery</td><td>See <a href="~/guides/car-key-fob-not-working/">key fob not working</a>.</td></tr>
 <tr><td>Every key is lost or dead</td><td>A replacement key programmed to the car</td><td>Usually the dealer. If you're locked out meanwhile, we can open the car.</td></tr>
 </tbody></table>

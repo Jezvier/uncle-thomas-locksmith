@@ -130,6 +130,8 @@ def business_node(full=False):
                                                 "opens": "00:00", "closes": "23:59"}},
             "sameAs": C.SAME_AS,
             "hasMap": C.GOOGLE_MAPS_URL,
+            "paymentAccepted": C.PAYMENT,
+            "knowsLanguage": C.LANGUAGES,
         })
         if C.EMAIL:
             node["email"] = C.EMAIL
@@ -160,7 +162,7 @@ def person_node():
         "@type": "Person", "@id": PERSON_ID, "name": "Uncle Thomas",
         "jobTitle": "Master Locksmith & Safesmith",
         "alternateName": "Shifu",
-        "description": "Singapore locksmith since 1998, known in the trade as \"Shifu\". Trained in safesmithing in the United States; has opened safes on ships and in Thailand, Malaysia, China and Hong Kong, and developed his own methods for opening digital locks. Has worked for commercial offices, pawnshops, banks and government ministries.",
+        "description": "Singapore locksmith since 1998, known in the trade as \"Shifu\". Trained in safesmithing in the United States and completed the ALOA (Associated Locksmiths of America) Fundamentals of Locksmithing course in 1999; trained in safe manipulation of Group 2M combination locks; has opened safes on ships and in Thailand, Malaysia, China and Hong Kong, and developed his own methods for opening digital locks. Has worked for commercial offices, pawnshops, banks and government ministries.",
         "knowsAbout": ["Locksmithing", "Safesmithing", "Safe opening", "Safe combination change", "Digital locks", "Smart locks", "Car key fob cloning"],
         "worksFor": {"@id": BUSINESS_ID},
         "url": C.SITE + "/about/",
@@ -753,10 +755,13 @@ def main():
     lines = [f"# {C.NAME}", "", f"> {C.DESCRIPTION}", "",
              f"- Phone / WhatsApp: {C.PHONE} ({C.PHONE_E164}) — 24/7, islandwide Singapore",
              f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas, known in the trade as \"Shifu\" (US-trained safesmith), with a small team.",
-             "- Uncle Thomas has opened safes on ships and overseas (Thailand, Malaysia, China, Hong Kong) and developed his own methods for opening digital locks.",
+             "- Uncle Thomas has opened safes on ships and overseas (Thailand, Malaysia, China, Hong Kong) and developed his own methods for opening digital locks. Completed ALOA Fundamentals of Locksmithing (1999). Trained in safe manipulation of Group 2M combination locks.",
+             "- Specialises in safes (home and office) and cars. Team: Thomas, Ong, Melvin, Andrew. Languages: English, Mandarin, Malay, Hokkien, Cantonese.",
+             "- Usually arrives within 25–30 minutes, any time, any distance. Payment by PayNow; invoice for every job. Turns down no jobs except key duplication and key cutting.",
+             "- Car key fob cloning: remote keys only (not smart/keyless keys), S$100–S$1,000 depending on the car.",
              "- Verifies proof of residence or ownership before opening any door, car or safe.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
-             "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones car key fobs (all major brands).",
+             "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones remote car key fobs (all major brands; not smart keyless keys).",
              "- Also: broken key extraction; padlock opening and cutting; roller shutter locks; glass door and sliding door locks; cabinet, drawer and locker locks.",
              "- Safes: opens all safe types; changes combinations; replaces safe locks; recommends, supplies and installs safes. Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies."]
     if C.UEN:

@@ -1,15 +1,15 @@
 {
 "/": {
-"date": "2026-10-30",
-"hash": "df4332adad6db47d0a7eef8b624fa765"
+"date": "2026-10-31",
+"hash": "958e220c59b04358895a68e56e0c7566"
 },
 "about/": {
-"date": "2026-10-29",
-"hash": "c84abc10d8eb6afc4ed634fc47595719"
+"date": "2026-10-31",
+"hash": "a3255a712ba824cc26812482e3de6acb"
 },
 "areas/": {
-"date": "2026-10-27",
-"hash": "75d15de15cea9ed5cb76288427b2172b"
+"date": "2026-10-31",
+"hash": "dcac238daa8bc59fe8ffc990b5d003c3"
 },
 "areas/ang-mo-kio/": {
 "date": "2026-10-29",
@@ -36,8 +36,8 @@
 "hash": "df028c3d3d93d6cd2450846fe422d6ae"
 },
 "areas/cbd-orchard/": {
-"date": "2026-10-29",
-"hash": "8bbabd8ad864ad180ddf1af6352008ff"
+"date": "2026-10-31",
+"hash": "b0af3564d5d7ea90f16687c38e58c6a6"
 },
 "areas/choa-chu-kang/": {
 "date": "2026-10-29",
@@ -67,6 +67,10 @@
 "date": "2026-10-29",
 "hash": "b3735656218acd584825fcc024332389"
 },
+"areas/newton/": {
+"date": "2026-10-31",
+"hash": "de09e7168a1c0d1e69b60e9cf4cfd7c0"
+},
 "areas/novena/": {
 "date": "2026-10-29",
 "hash": "e041a4ac7ac7ededaf3e0701a06ffebc"
@@ -74,6 +78,10 @@
 "areas/pasir-ris/": {
 "date": "2026-10-29",
 "hash": "bbef03d49d69f253a45b6c55df33e3a2"
+},
+"areas/paterson/": {
+"date": "2026-10-31",
+"hash": "c14b233270606b254be60849a5b6feb7"
 },
 "areas/punggol/": {
 "date": "2026-10-29",
@@ -120,100 +128,100 @@
 "hash": "e0170bc4887e617aa3a22ccd984b5cf1"
 },
 "car-key-duplicate/": {
-"date": "2026-10-29",
-"hash": "f168f392355c8a156cb5d60a4d95e1f3"
+"date": "2026-10-31",
+"hash": "8f24289e370d7ef7395780fb8b4cf484"
 },
 "car-locksmith/": {
-"date": "2026-10-30",
-"hash": "d43e6b4a757d3912dce4de4945e428ee"
+"date": "2026-10-31",
+"hash": "09e4f13a07a33e58dabfb1d70bc44616"
 },
 "car-locksmith/audi/": {
-"date": "2026-10-30",
-"hash": "c71cc1fe7b2a98778b53ab0dbe75f25f"
+"date": "2026-10-31",
+"hash": "e60a1c2b56fac618c11b96dfb020298e"
 },
 "car-locksmith/bmw/": {
-"date": "2026-10-30",
-"hash": "c04051583ad4bf88f72ff07df275d57d"
+"date": "2026-10-31",
+"hash": "c672f8f885e99d822400b58769ecfd03"
 },
 "car-locksmith/byd/": {
-"date": "2026-10-30",
-"hash": "c5d3589ea8cfadd174b37d50201749a9"
+"date": "2026-10-31",
+"hash": "cc581ab4e4e2ce4f122d17ce3ea82894"
 },
 "car-locksmith/honda/": {
-"date": "2026-10-30",
-"hash": "b37cb004ae28c77b610299f071b7b859"
+"date": "2026-10-31",
+"hash": "2a40dd8189cb8e051fdf2abee76e3e46"
 },
 "car-locksmith/hyundai/": {
-"date": "2026-10-30",
-"hash": "96329a60e3c19d109b0e28421a021a60"
+"date": "2026-10-31",
+"hash": "04cd213734f4974ac8e12284d2796922"
 },
 "car-locksmith/kia/": {
-"date": "2026-10-30",
-"hash": "7b11f75a434ffe948e047e58e8f41a99"
+"date": "2026-10-31",
+"hash": "bf43af48baae10c25dfddd19cbc58a8a"
 },
 "car-locksmith/land-rover/": {
-"date": "2026-10-30",
-"hash": "5da2a7347aa2f44ab29de665bebf4c3d"
+"date": "2026-10-31",
+"hash": "e921ea14b0d4e2d18e14af8e4c52a53e"
 },
 "car-locksmith/lexus/": {
-"date": "2026-10-30",
-"hash": "d23a6152a2a33e5ec57d9a81b55c3d9c"
+"date": "2026-10-31",
+"hash": "c27a7b931dd247e6bf064c277ec6be41"
 },
 "car-locksmith/mazda/": {
-"date": "2026-10-30",
-"hash": "7ba8850e0c8483262b3744c8ca9865e3"
+"date": "2026-10-31",
+"hash": "87f5a4008da310863df4e7bcd37ceac7"
 },
 "car-locksmith/mercedes-benz/": {
-"date": "2026-10-30",
-"hash": "27f43ce4da6393c00a47584e90d7fce0"
+"date": "2026-10-31",
+"hash": "ef358146dcf6383c246d819e1324cdf9"
 },
 "car-locksmith/mg/": {
-"date": "2026-10-30",
-"hash": "d6f68e077b556b5eba3a847894495394"
+"date": "2026-10-31",
+"hash": "2b24f342b3a780beb1e46200bf963f66"
 },
 "car-locksmith/mini/": {
-"date": "2026-10-30",
-"hash": "3c162159cac527d40ef89d593c1dae86"
+"date": "2026-10-31",
+"hash": "79e7536df219100041bfe01a584deaf5"
 },
 "car-locksmith/mitsubishi/": {
-"date": "2026-10-30",
-"hash": "2698672472c67b204012e4460ed0c467"
+"date": "2026-10-31",
+"hash": "2949575298f08cdc91b7b972bb6f3c6a"
 },
 "car-locksmith/nissan/": {
-"date": "2026-10-30",
-"hash": "89e380e14e4bd2d0c0be0f40fcb0e026"
+"date": "2026-10-31",
+"hash": "559730593f32d542590033bf7b0a9073"
 },
 "car-locksmith/peugeot/": {
-"date": "2026-10-30",
-"hash": "011425e476295a924ff2affdeebbd0b5"
+"date": "2026-10-31",
+"hash": "cee111fa704605e2c3b4e66bfae55b5e"
 },
 "car-locksmith/porsche/": {
-"date": "2026-10-30",
-"hash": "fad0b9cc36b5339abf3bcaf983e62894"
+"date": "2026-10-31",
+"hash": "e048c5da1e4e7200193bf5c84cfd16e0"
 },
 "car-locksmith/skoda/": {
-"date": "2026-10-30",
-"hash": "b6c506e5d3e3632805aff57899b0593f"
+"date": "2026-10-31",
+"hash": "eb90e37deadb3eb45dd9d6f15017a875"
 },
 "car-locksmith/subaru/": {
-"date": "2026-10-30",
-"hash": "cd0eb8456d7f5873fbbfad01ad488a19"
+"date": "2026-10-31",
+"hash": "68c37b9895c2b23c3a21ab7cdc407cb9"
 },
 "car-locksmith/suzuki/": {
-"date": "2026-10-30",
-"hash": "4435cd3e734516b6b79d40a21641941d"
+"date": "2026-10-31",
+"hash": "d44766822a75cac1926d5eecc9d641a9"
 },
 "car-locksmith/toyota/": {
-"date": "2026-10-30",
-"hash": "20b13917f7f082b1a41bf03cf274bb78"
+"date": "2026-10-31",
+"hash": "68c40c5540ebc690af6466e13028b71b"
 },
 "car-locksmith/volkswagen/": {
-"date": "2026-10-30",
-"hash": "0712a5e87f19a2382ee516c328e4af66"
+"date": "2026-10-31",
+"hash": "3e667baaf01930d44caa1dde4be7ed0d"
 },
 "car-locksmith/volvo/": {
-"date": "2026-10-30",
-"hash": "f6bcc44d7eb9c67ca0628d4870e17133"
+"date": "2026-10-31",
+"hash": "22af7d1f9718c226660a46e86a0e7ac5"
 },
 "commercial-locksmith/": {
 "date": "2026-10-29",
@@ -232,8 +240,8 @@
 "hash": "6ee0aae9ab35daa59463e7cdd5b78eb8"
 },
 "digital-lock-opening/": {
-"date": "2026-10-29",
-"hash": "c56c735252d9d7a721d0d0e4bede8999"
+"date": "2026-10-31",
+"hash": "ad0b7f5b83b5bca6bad0194e9f90ae95"
 },
 "digital-lock-opening/aqara/": {
 "date": "2026-10-29",
@@ -312,8 +320,8 @@
 "hash": "b40a0eababd2a9ce08dfc43919c2e908"
 },
 "emergency-locksmith/": {
-"date": "2026-10-29",
-"hash": "9c7c8608129929c6e3cbc25cf6c54ba3"
+"date": "2026-10-31",
+"hash": "00d3af945b605202436e13484cc93027"
 },
 "glass-door-lock/": {
 "date": "2026-10-29",
@@ -344,8 +352,8 @@
 "hash": "932bc8a94b215abf484651ca552fafdf"
 },
 "guides/digital-lock-repair/": {
-"date": "2026-10-27",
-"hash": "af1996e9fce5b17b0ec1b2a987ff8028"
+"date": "2026-10-31",
+"hash": "fb052861db6f7d77923a21cee9250a42"
 },
 "guides/digital-vs-traditional-lock-hdb/": {
 "date": "2026-10-27",
@@ -376,8 +384,8 @@
 "hash": "c915b6f272f2c145dfc05511f7ed59b9"
 },
 "guides/keys-locked-in-car/": {
-"date": "2026-10-29",
-"hash": "735805629222ec4de56605ce7d04ec93"
+"date": "2026-10-31",
+"hash": "ed1d924a28905a61bfc723f310c8ee83"
 },
 "guides/landlord-tenant-lock-change/": {
 "date": "2026-10-27",
@@ -388,12 +396,12 @@
 "hash": "da3177b4f881e47a8c59bd4df20bb077"
 },
 "guides/locksmith-cost-singapore/": {
-"date": "2026-10-27",
-"hash": "7624f70560cc921e75d6983f760fb24c"
+"date": "2026-10-31",
+"hash": "f9e57e3a8ba6dbad5d239aaf61a05231"
 },
 "guides/lost-car-key-fob/": {
-"date": "2026-10-27",
-"hash": "975112d4d5792f18d1788a44e849022c"
+"date": "2026-10-31",
+"hash": "303983c6747bea6fea3ee0095bc47069"
 },
 "guides/lost-house-key/": {
 "date": "2026-10-29",
@@ -432,8 +440,8 @@
 "hash": "4f432c550cb7913facb8b0525fa12f5c"
 },
 "guides/smart-lock-for-hdb-gate/": {
-"date": "2026-10-27",
-"hash": "dbd67a231b0b0241da04eb8abe5c2e6d"
+"date": "2026-10-31",
+"hash": "c3cb8a53c255df963a746a7a691f3ad1"
 },
 "hdb-gate-lock-replacement/": {
 "date": "2026-10-29",
@@ -444,24 +452,24 @@
 "hash": "a28a0a9b3e098b8ba49ed60618c4a811"
 },
 "letterbox-lock-replacement/": {
-"date": "2026-10-27",
-"hash": "1ac4efbacd89fa61a193a87302b49584"
+"date": "2026-10-31",
+"hash": "b521d0fc4ae79720e16b059db72622a2"
 },
 "lock-replacement/": {
-"date": "2026-10-29",
-"hash": "2a0ef9e6264c456838a4aa0bb2be3223"
+"date": "2026-10-31",
+"hash": "6687afdc6472dfd45596694affe65e20"
 },
 "padlock-cutting/": {
 "date": "2026-10-29",
 "hash": "3d34e6f1dd86360c6661fd15697f6488"
 },
 "prices/": {
-"date": "2026-10-27",
-"hash": "b6d95701935e3b1c5e953d0176570a50"
+"date": "2026-10-31",
+"hash": "72be60c2fce898b5a2e2e7808039677d"
 },
 "privacy/": {
-"date": "2026-10-27",
-"hash": "21c2b250e701f59b183ef0e2d3267ef6"
+"date": "2026-10-31",
+"hash": "4b37868813777cb1cc32af597bec4ccb"
 },
 "roller-shutter-lock/": {
 "date": "2026-10-29",
@@ -476,8 +484,8 @@
 "hash": "20156eb13fe4fbe54eb51893177cba07"
 },
 "safe-opening/": {
-"date": "2026-10-29",
-"hash": "45d9c2f8ab3d486efba05909afba3868"
+"date": "2026-10-31",
+"hash": "b802828f01ea558b51b85222d88d4e28"
 },
 "safe-opening/booil/": {
 "date": "2026-10-29",
@@ -524,24 +532,24 @@
 "hash": "214d3283f9acb8da446e15ad02120693"
 },
 "services/": {
-"date": "2026-10-29",
-"hash": "323c559ec229845ad9587e47df890ad0"
+"date": "2026-10-31",
+"hash": "38afdce228407843dc49b99c3e5922bf"
 },
 "zh/": {
-"date": "2026-10-27",
-"hash": "c42c5d4d038c2ac62393433f23a0c508"
+"date": "2026-10-31",
+"hash": "03127eece6e13617edde8e231af935ec"
 },
 "zh/car-locksmith/": {
-"date": "2026-10-27",
-"hash": "d64f7186261d9f9b83a3e7304b78f2f9"
+"date": "2026-10-31",
+"hash": "ef9ed5bc142e8b3cbe77e20b5a65de1c"
 },
 "zh/digital-lock-opening/": {
 "date": "2026-10-27",
 "hash": "954d17dcc68295e67517b275b222ff3d"
 },
 "zh/emergency-locksmith/": {
-"date": "2026-10-27",
-"hash": "d1033a11bac78154cb291fce334e2eee"
+"date": "2026-10-31",
+"hash": "8cb863f86d98933055a8714579c9d7a9"
 },
 "zh/lock-replacement/": {
 "date": "2026-10-27",

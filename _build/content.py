@@ -8,10 +8,10 @@ import icons
 
 BRANDS = ", ".join(C.DIGITAL_LOCK_BRANDS)
 
-ID_POLICY = ("For your security, we always check proof of residence or ownership before opening anything — "
-             "for example NRIC with your address, a tenancy agreement or utility bill, or the car's log card.")
+ID_POLICY = ("For your security, we check ID before every job — your NRIC, Singpass or other ID proof — "
+             "and proof of residence or ownership, for example NRIC with your address, a tenancy agreement or utility bill, or the car's log card.")
 WARRANTY = "Every lock replacement and installation comes with our warranty — with no expiry date."
-NO_REPAIR = ("We don't do lock repairs, key duplication or key cutting (the one exception is car key fobs, which we clone). "
+NO_REPAIR = ("We don't do lock repairs, key duplication or key cutting (the one exception is remote car key fobs, which we clone). "
              "If a lock is faulty, we open it and replace it, so the problem doesn't come back.")
 
 # ======================================================================
@@ -61,7 +61,7 @@ dict(
 <p>Not locked out yet but worried? Read our guide: <a href="~/guides/locked-out-of-hdb-flat/">locked out of your HDB flat — what to do</a>.</p>
 """,
  faqs=[
-  ("How fast can an emergency locksmith reach me?", "We set off as soon as you call, 24/7. Arrival time depends on where you are and traffic — we'll give you an honest estimate on the phone."),
+  ("How fast can an emergency locksmith reach me?", "We set off as soon as you call, 24/7, and usually arrive within 25–30 minutes. Far areas and heavy traffic can take longer, and we'll give you an honest estimate on the phone."),
   ("Will you damage my door?", "We use damage-free methods wherever possible, and most lockouts are opened without any damage. If a lock can't be opened cleanly, we explain the options and price before doing anything."),
   ("What do I need to show before you open the door?", "Proof that you live there — for example your NRIC with the address, a tenancy agreement or a utility bill. This protects you and your home."),
   ("Do you charge more at night?", "Lockouts start from {P_LOCKOUT} from 9am to 6pm and from {P_AFTERHOURS} after hours, weekends and public holidays. You'll always know the price before we start."),
@@ -88,6 +88,7 @@ dict(
 <li><strong>Locked from the inside</strong> — privacy or double-lock mode left on.</li>
 <li><strong>Lost the backup key</strong> for the mechanical override.</li>
 <li><strong>Smart lock app offline</strong> or your phone is locked inside.</li>
+<li><strong>Tenant moved out without handing over the code</strong>: landlords and agents call us to get back into the flat. We check proof of ownership first.</li>
 </ul>
 <p>Before you call, it's worth trying the quick checks in our guides: <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or not opening</a>, and <a href="~/guides/forgot-digital-lock-pin/">forgot your digital lock PIN</a>.</p>
 
@@ -97,7 +98,7 @@ dict(
 {BRAND_LINKS}
 
 <h2>Uncle Thomas's own digital and smart lock techniques</h2>
-<p>As Singapore homes moved from keys to keypads, Uncle Thomas kept learning. Over the years he has worked out his own damage-free ways to open faulty and locked digital locks — so in most cases you get back in <em>without</em> having to buy a new lock. Where a lock is truly beyond saving, we tell you honestly and can <a href="~/digital-lock-installation/">install a new one</a> on the spot.</p>
+<p>As Singapore homes moved from keys to keypads, Uncle Thomas kept learning. Over the years he has worked out his own damage-free ways to open faulty and locked digital locks, including lock picking the mechanical override — so in most cases you get back in <em>without</em> having to buy a new lock. Where a lock is truly beyond saving, we tell you honestly and can <a href="~/digital-lock-installation/">install a new one</a> on the spot.</p>
 
 <div class="callout"><p>{NO_REPAIR} Searching for <strong>digital lock repair</strong>? Read <a href="~/guides/digital-lock-repair/">fix, replace or just get in</a> first.</p></div>
 
@@ -188,6 +189,9 @@ dict(
 
 <h2>Why a safesmith, not just a locksmith</h2>
 <p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, and many have hidden relockers that fire if the safe is attacked the wrong way. A wrong approach can make the job far harder or damage what's inside. Few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in <strong>safesmithing</strong>, and has since opened safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
+
+<h2>Opening a safe without drilling</h2>
+<p>Uncle Thomas is trained in <strong>safe manipulation</strong>: opening high-security Group 2M combination locks by feel and sound, with no drilling and no damage. A safe can take anywhere from 5 minutes to 5 hours, depending on the lock and its condition. When drilling is the only way in, it's done precisely, and about 90% of drilled safes can be repaired and used again.</p>
 
 <h2>Who we open safes for</h2>
 <ul>
@@ -297,7 +301,7 @@ dict(
 <p>We use professional car entry tools that open the door without damaging the paintwork, rubber seals or windows. It's much cheaper than breaking a window, and safer than trying a coat hanger yourself, which can damage the door's wiring and airbag sensors.</p>
 
 <h3>2. Car key fob cloning (spare key)</h3>
-<p>Down to your last key fob? A spare from the dealer can take time and cost a lot. Uncle Thomas clones car key fobs, including remote keys and smart (keyless) keys, so you have a working spare. It's the one kind of key we copy. We don't cut or copy house keys.</p>
+<p>Down to your last key fob? A spare from the dealer can take time and cost a lot. Uncle Thomas clones remote car key fobs, so you have a working spare. It's the one kind of key we copy. We don't clone smart (keyless) keys. Cloning costs S$100–S$1,000 depending on the car and takes from a few minutes to a few hours, so call or WhatsApp to check yours first. We don't cut or copy house keys.</p>
 <ul>
 <li>Spare key fob for your car, so one lost key doesn't leave you stranded.</li>
 <li>Replacement fob for family members or a second driver.</li>
@@ -319,7 +323,7 @@ dict(
  faqs=[
   ("Can you open my car without damaging it?", "Yes. We use non-destructive car entry tools that don't damage the paint, seals or windows."),
   ("Which cars can you open?", "All major makes and models, including Toyota, Honda, Mercedes-Benz, BMW, Audi, Volkswagen, Mazda, Lexus, Land Rover, Hyundai, Kia, Nissan, Porsche, Volvo, Mitsubishi and Subaru, plus vans and light commercial vehicles. Not sure about yours? Call or WhatsApp to check."),
-  ("Can you make a spare car key fob?", "Yes. We clone car key fobs, including remote keys and smart keys, for all major brands. Send us your car's make, model and year and a photo of the key for a quote."),
+  ("Can you make a spare car key fob?", "Yes, for remote key fobs on all major brands. We don't clone smart (keyless) keys. It costs S$100–S$1,000 depending on the car; send us the make, model, year and a photo of the key for a quote."),
   ("Do you cut house keys too?", "No. Car key fobs are the only keys we copy. We don't do house key cutting or duplication."),
   ("How much is a car lockout?", "From {P_CAR}. Key fob cloning is quoted per car. We'll confirm the price before we set off."),
  ],
@@ -505,12 +509,13 @@ def price_table():
 # ======================================================================
 HOME_FAQS = [
   ("Are you really available 24/7?", "Yes. Uncle Thomas Locksmith works 24 hours a day, 7 days a week, including weekends and public holidays, anywhere in Singapore."),
-  ("How fast can you reach me?", "We set off as soon as you call. Arrival time depends on your location and traffic — we'll give you an honest estimate on the phone. Call or WhatsApp {PHONE}."),
+  ("Can you come now? How fast can you reach me?", "Yes, any time of day or night. We set off as soon as you call and usually arrive within 25–30 minutes, depending on where you are and traffic. Call or WhatsApp {PHONE}."),
+  ("How do I pay?", "By PayNow, once the job is done. We issue an invoice for every job, for homes and companies."),
   ("How much does a locksmith cost in Singapore?", "Our lockouts start from {P_LOCKOUT} (9am–6pm) and {P_AFTERHOURS} after hours, weekends and public holidays. Car lockouts start from {P_CAR} and digital lock opening from {P_DIGITAL_OPEN}. Your final price is always confirmed before any work begins. See our <a href=\"~/prices/\">full price list</a>."),
   ("Do you check that I live there before opening the door?", "Yes. " + ID_POLICY + " It's how we keep every home safe."),
   ("Which areas in Singapore do you cover?", "All of Singapore — Central, East, West, North and North-East. See <a href=\"~/areas/\">areas we serve</a>."),
   ("Is there a warranty?", WARRANTY),
-  ("Do you do key duplication or lock repairs?", "No key duplication, key cutting or lock repairs. The one exception is car key fobs, which we clone for all major car brands. Otherwise we specialise in opening doors, digital and smart locks, safes and cars, and in lock replacement and installation. Faulty locks are replaced, not repaired."),
+  ("Do you do key duplication or lock repairs?", "No key duplication, key cutting or lock repairs. That's the only work we turn down: the one exception is remote car key fobs, which we clone for all major car brands. Otherwise we specialise in opening doors, digital and smart locks, safes and cars, and in lock replacement and installation. Faulty locks are replaced, not repaired."),
 ]
 
 
@@ -573,7 +578,7 @@ def build_home(x):
   <div class="container hero-inner">
     <div>
       <h1>24/7 Locksmith in Singapore</h1>
-      <p class="hero-lead"><picture><source srcset="~/assets/img/uncle-thomas-face-112.webp 1x, ~/assets/img/uncle-thomas-face-224.webp 2x" type="image/webp"><img class="hero-face" src="~/assets/img/uncle-thomas-face-112.jpg" srcset="~/assets/img/uncle-thomas-face-224.jpg 2x" width="56" height="56" alt="Uncle Thomas at work on a safe" fetchpriority="high"></picture><span>Led by <strong>Uncle Thomas</strong>, locksmith and safesmith since {C_.FOUNDED}.</span></p>
+      <p class="hero-lead"><picture><source srcset="~/assets/img/uncle-thomas-face-112.webp 1x, ~/assets/img/uncle-thomas-face-224.webp 2x" type="image/webp"><img class="hero-face" src="~/assets/img/uncle-thomas-face-112.jpg" srcset="~/assets/img/uncle-thomas-face-224.jpg 2x" width="56" height="56" alt="Uncle Thomas at work on a safe" fetchpriority="high"></picture><span>Led by <strong>Uncle Thomas</strong>: safe and car specialist, locksmith since {C_.FOUNDED}.</span></p>
       {rating_html}
       <ul class="hero-tiles">
         <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door: HDB, condo, landed, office, digital &amp; smart locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
@@ -790,7 +795,7 @@ PRICE_FAQS = [
   ("Is there a call-out or transport fee?", "Our prices are quoted for the job at your location. We'll tell you the total before we set off, so you won't be surprised by extra fees."),
   ("Do you charge more after midnight or on public holidays?", "Lockouts start from {P_LOCKOUT} from 9am to 6pm and from {P_AFTERHOURS} after hours, weekends and public holidays."),
   ("What if you can't open the lock?", "We'll explain the options — such as replacing the lock — and the price, and only go ahead with your agreement."),
-  ("How do I pay?", "OWNER TO CONFIRM: payment methods (e.g. PayNow, cash). We'll tell you when you call."),
+  ("How do I pay?", "By PayNow, once the job is done. We issue an invoice for every job."),
 ]
 
 
@@ -835,26 +840,29 @@ def build_about(x):
     desc = "Meet Uncle Thomas, the locksmith Singapore calls 'Shifu'. An apprentice in 1998, US-trained in safesmithing, he has opened safes on ships and across Asia."
     body = (x["page_hero"](crumbs, 'Meet Uncle Thomas — The Locksmith Singapore Calls "Shifu"',
             f"From apprentice in {C_.FOUNDED} to US-trained safesmith — the story behind Uncle Thomas Locksmith.",
-            [f"Since {C_.FOUNDED}", "US-trained safesmith", "Leads a small team"]) +
+            [f"Since {C_.FOUNDED}", "US-trained safesmith", "Team of four"]) +
             f'''<section class="section"><div class="container narrow prose">
 {x["photo"]("about_portrait")}
 <h2>From apprentice to master locksmith</h2>
 <p>Uncle Thomas started in {C_.FOUNDED} as an apprentice under his uncle, learning the trade the traditional way — one lock, one door, one customer at a time. Years of hands-on work across Singapore's HDB flats, condos, shophouses and offices built the foundation he still relies on today.</p>
 <h2>Trained in safesmithing in the United States</h2>
-<p>Wanting to master the hardest locks in the trade, he spent a year in the United States training in safesmithing — the specialist skill of opening and servicing safes and vaults. It's a skill few locksmiths in Singapore have. <a href="~/safe-opening/">See our safe opening service</a>.</p>
+<p>Wanting to master the hardest locks in the trade, he spent a year in the United States training in safesmithing — the specialist skill of opening and servicing safes and vaults — and completed the Associated Locksmiths of America (ALOA) Fundamentals of Locksmithing course in 1999. It's a skill few locksmiths in Singapore have. <a href="~/safe-opening/">See our safe opening service</a>.</p>
 <h2>Trusted overseas — on land and at sea</h2>
 <p>That expertise has taken Uncle Thomas far beyond Singapore. He has been called in to open safes for multinational companies and on board ships and cruise liners, with jobs in Thailand, Malaysia, China, Hong Kong and more. In Singapore he has worked on safes for commercial offices, pawnshops, banks and government ministries.</p>
 <h2>Keeping up with digital locks</h2>
-<p>As homes moved from keys to keypads, Uncle Thomas kept learning. He has developed his own damage-free techniques for opening faulty and locked digital locks — so you get back in without needing to replace an expensive lock. <a href="~/digital-lock-opening/">See digital lock opening</a>.</p>
+<p>As homes moved from keys to keypads, Uncle Thomas kept learning. He has developed his own damage-free techniques, including lock picking, for opening faulty and locked digital locks — so you get back in without needing to replace an expensive lock. <a href="~/digital-lock-opening/">See digital lock opening</a>.</p>
 <h2>Why they call him "Shifu"</h2>
-<p>In the trade, Uncle Thomas is known as the "Shifu" — the master other locksmiths turn to when a job gets difficult. Today he leads a small team of locksmiths, and he still personally handles the toughest jobs.</p>
+<p>In the trade, Uncle Thomas is known as the "Shifu" — the master other locksmiths turn to when a job gets difficult. Today he leads a team of four locksmiths, Thomas, Ong, Melvin and Andrew, and he still personally handles the toughest jobs.</p>
 <h2>How we work</h2>
 <ul>
-<li><strong>24/7, islandwide</strong> — we set off as soon as you call.</li>
+<li><strong>24/7, islandwide</strong> — we set off as soon as you call and usually arrive within 25–30 minutes, any distance, any time.</li>
+<li><strong>Every job, day or night</strong> — the only work we turn down is key duplication and key cutting.</li>
+<li><strong>Languages</strong> — English, Mandarin, Malay, Hokkien and Cantonese.</li>
+<li><strong>Payment</strong> — PayNow, with an invoice for every job.</li>
 <li><strong>Price before work</strong> — <a href="~/prices/">upfront starting prices</a>, and your final price confirmed before we begin.</li>
 <li><strong>ID verified</strong> — {ID_POLICY}</li>
 <li><strong>Warranty</strong> — {WARRANTY}</li>
-<li><strong>Specialists</strong> — we focus on opening doors, digital locks and safes, and on lock replacement and installation. We don't do lock repairs, key duplication or key cutting, except cloning car key fobs.</li>
+<li><strong>Specialists</strong> — safes and cars first, then doors and digital locks, and lock replacement and installation. We don't do lock repairs, key duplication or key cutting, except cloning remote car key fobs.</li>
 </ul>
 <p>See all our <a href="~/services/">locksmith services</a>.</p>
 <div class="photo-grid">{x["photo"]("about_van")}{x["photo"]("about_tools")}</div>

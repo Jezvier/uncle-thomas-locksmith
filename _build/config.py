@@ -56,7 +56,9 @@ GA4_ID = "G-DSL14WM5HH"
 
 # Add Facebook / Instagram / Carousell / directory profile URLs here as you create them.
 SAME_AS = [GOOGLE_PROFILE]
-LANGUAGES = ["English"]   # FILL: add "Chinese", "Malay" etc. if Uncle Thomas or the team speak them
+LANGUAGES = ["English", "Mandarin", "Malay", "Hokkien", "Cantonese"]   # confirmed by owner 31 Oct 2026 ("all languages")
+TEAM = ["Thomas", "Ong", "Melvin", "Andrew"]   # confirmed 31 Oct 2026
+PAYMENT = "PayNow"   # confirmed 31 Oct 2026
 
 # Title style for homepage + service pages:
 #   "KEEP PRICE"           -> "24/7 Locksmith Singapore from S$80 | Uncle Thomas Since 1998"
@@ -125,7 +127,7 @@ REVIEWS = [
 PHOTOS = {
     # key: (file name or None, alt text, caption) — or a LIST of those for a 2-column grid.
     # Files live in assets/photos/ (already edited: straightened, colour-corrected, 4:5 crop).
-    "hero":       ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
+    "hero":       ("uncle-thomas-safe-dial-hero.jpg", "Uncle Thomas, Singapore safesmith, wearing a mask and turning the combination dial of a stainless steel safe with a dial tool", "Uncle Thomas working the combination dial of a safe"),
     "about_portrait": ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
     "about_van":  ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
     "about_tools": ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
@@ -199,12 +201,12 @@ RECENT_JOBS = {
 # (label, page path or None, "from" price in S$ (int) or text, short note)
 # FILL / CONFIRM: Uncle Thomas must be willing to honour every "from" price.
 PRICES = [
-    ("Home / office lockout (9am–6pm)", "emergency-locksmith/", 80, "Damage-free entry where possible"),
-    ("Lockout after hours, weekends & public holidays", "emergency-locksmith/", 120, "24/7, islandwide"),
+    ("Home / office lockout (9am–6pm)", "emergency-locksmith/", 70, "Damage-free entry where possible"),
+    ("Lockout after hours, weekends & public holidays", "emergency-locksmith/", 90, "24/7, islandwide"),
     ("Digital lock emergency opening", "digital-lock-opening/", 150, "All brands"),
-    ("Digital lock installation (labour)", "digital-lock-installation/", 120, "Lock supplied by you or us"),
-    ("Car lockout (non-destructive)", "car-locksmith/", 100, "All makes and models"),
-    ("Car key fob cloning (spare key)", "car-locksmith/", "Quote on request", "All major car brands"),
+    ("Digital lock installation (labour)", "digital-lock-installation/", 150, "Lock supplied by you or us"),
+    ("Car lockout (non-destructive)", "car-locksmith/", 80, "All makes and models"),
+    ("Car key fob cloning (spare key)", "car-locksmith/", "S$100–S$1,000", "Remote keys; depends on the car, call to enquire"),
     ("Main door / gate lock replacement (supply + install)", "lock-replacement/", 100, "Warranty included"),
     ("Letterbox lock replacement", "letterbox-lock-replacement/", 60, "HDB & condo letterboxes"),
     ("Safe opening", "safe-opening/", "Quote on request", "Depends on safe type"),
@@ -226,13 +228,15 @@ TOKENS = {
     "PHONE": PHONE,
     "YEARS": str(YEARS),
     "FOUNDED": str(FOUNDED),
-    "P_LOCKOUT": "S$80",
-    "P_AFTERHOURS": "S$120",
+    "P_LOCKOUT": "S$70",
+    "P_AFTERHOURS": "S$90",
     "P_DIGITAL_OPEN": "S$150",
-    "P_DIGITAL_INSTALL": "S$120",
-    "P_CAR": "S$100",
+    "P_DIGITAL_INSTALL": "S$150",
+    "P_CAR": "S$80",
     "P_REPLACE": "S$100",
     "P_LETTERBOX": "S$60",
+    "P_FOB": "S$100–S$1,000",
+    "ARRIVAL": "25–30 minutes",
     "P_LOWEST": f"S${LOWEST_PRICE}",
     "UEN": UEN or "",
 }

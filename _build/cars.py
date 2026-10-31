@@ -22,7 +22,7 @@ DATA = {
  tips=["If your smart key battery is dying, many Toyotas still start if you hold the fob against the start button. Check your manual for your model.",
        "Slide out the hidden mechanical key now and learn where the hidden keyhole on the driver's door is, before you need it.",
        "Businesses running Hiace vans should keep a spare fob at the office, as one lost key can stop a delivery day."],
- faqs=[("Can you clone a Toyota smart key?", "Yes, for most Toyota models. Send us the model, year and a photo of the key for a quote."),
+ faqs=[("Can you clone a Toyota smart key?", "No. We clone Toyota remote keys, not smart (keyless) keys. Send us the model, year and a photo of the key and we'll tell you which yours is."),
        ("My Toyota smart key battery is flat. How do I get in?", "Most Toyota smart keys hide a mechanical key inside. Use it in the driver's door. If that fails, call us.")]),
 "Honda": dict(
  models="Vezel, HR-V, Civic, Jazz, Fit, Shuttle, Freed and Odyssey",
@@ -31,7 +31,7 @@ DATA = {
  tips=["Private-hire drivers: a spare fob is cheap insurance, because a lost key means lost earnings while you wait.",
        "If the remote range is getting shorter, change the fob battery before it dies completely.",
        "Keep the spare fob at home, not in the glovebox."],
- faqs=[("Can you make a spare Honda Vezel key?", "Yes, we clone key fobs for most Honda models, including the Vezel. Send the year and a photo of your key for a quote."),
+ faqs=[("Can you make a spare Honda Vezel key?", "It depends on the key. We clone Honda remote keys, not smart (keyless) keys. Send the year and a photo of your key and we'll confirm."),
        ("I locked my keys inside my Honda. Can you open it without damage?", "Yes. We use non-destructive tools that don't damage the paint, seals or windows.")]),
 "Mercedes-Benz": dict(
  models="A-Class, C-Class, E-Class, GLA, GLC and S-Class",
@@ -76,7 +76,7 @@ DATA = {
  tips=["If your smart key battery is weak, many Mazdas start if you hold the key close to the start button. Check your manual.",
        "Find the hidden emergency key in your fob before you need it.",
        "A spare key avoids a long wait if one goes missing."],
- faqs=[("Can you clone a Mazda smart key?", "Yes, for most Mazda models. Send the model, year and a photo of the key for a quote."),
+ faqs=[("Can you clone a Mazda smart key?", "No. We clone Mazda remote keys, not smart (keyless) keys. Send the model, year and a photo of the key and we'll tell you which yours is."),
        ("Can you unlock a Mazda CX-5 with the key inside?", "Yes. We open it without damage, 24/7.")]),
 "Lexus": dict(
  models="ES, IS, NX, RX, UX and LM",
@@ -85,7 +85,7 @@ DATA = {
  tips=["If your model came with a card key, keep it in your wallet as a backup.",
        "Learn where the hidden keyhole is on the driver's door.",
        "Replace the smart key battery as soon as the car warns you it's low."],
- faqs=[("Can you clone a Lexus key?", "Yes, for many Lexus models. Send the model, year and a photo of the key and we'll confirm."),
+ faqs=[("Can you clone a Lexus key?", "Most Lexus keys are smart (keyless) keys, which we don't clone. We do open locked Lexus cars without damage, 24/7."),
        ("My Lexus smart key isn't detected. What should I do?", "Try the hidden mechanical key, and hold the fob close to the start button. If you're still stuck, call us.")]),
 "Land Rover": dict(
  models="Range Rover, Range Rover Sport, Range Rover Evoque, Range Rover Velar, Defender and Discovery",
@@ -94,7 +94,7 @@ DATA = {
  tips=["Find the emergency key blade in your fob before you need it.",
        "Keyless keys can be affected by a weak battery; replace it when the car warns you.",
        "A spare fob is worth having, as dealer keys can take time."],
- faqs=[("Can you clone a Range Rover key fob?", "We clone key fobs for many Land Rover and Range Rover models. Send the model, year and a photo of the key for a quote."),
+ faqs=[("Can you clone a Range Rover key fob?", "Most Range Rover fobs are smart (keyless) keys, which we don't clone. Send a photo of the key and we'll tell you honestly what's possible."),
        ("Can you open a locked Range Rover?", "Yes, without damaging the paint, seals or windows, 24/7.")]),
 "Hyundai": dict(
  models="Avante, Elantra, Ioniq, Kona, Tucson and Santa Fe",
@@ -112,7 +112,7 @@ DATA = {
  tips=["Keep a spare fob at home in case the main one goes missing.",
        "Learn where the emergency key and hidden keyhole are on your model.",
        "Replace the fob battery before it dies."],
- faqs=[("Can you clone a Kia smart key?", "Yes, for most Kia models. Send the model, year and a photo of the key for a quote."),
+ faqs=[("Can you clone a Kia smart key?", "No. We clone Kia remote flip keys, not smart (keyless) keys. Send the model, year and a photo of the key and we'll confirm."),
        ("Can you open a Kia without damaging it?", "Yes. Our tools open the door without damaging the paint, seals or windows.")]),
 "Nissan": dict(
  models="Sylphy, Qashqai, X-Trail, Kicks, Serena and Note",
@@ -121,7 +121,7 @@ DATA = {
  tips=["If your Intelligent Key battery is low, many Nissans start if you touch the key to the start button. Check your manual.",
        "Find the hidden mechanical key in the fob before you need it.",
        "Keep the spare key at home rather than in the car."],
- faqs=[("Can you clone a Nissan Intelligent Key?", "Yes, for most Nissan models. Send the model, year and a photo of the key for a quote."),
+ faqs=[("Can you clone a Nissan Intelligent Key?", "No. The Intelligent Key is a smart (keyless) key, which we don't clone. We clone Nissan remote keys; send a photo of yours and we'll confirm."),
        ("Can you unlock a Nissan with the keys inside?", "Yes, 24/7 islandwide, without damage.")]),
 "Porsche": dict(
  models="911, Cayenne, Macan, Panamera and Taycan",
@@ -249,7 +249,7 @@ def build(x):
         rel = RELATED.get(n, [])
         others = " · ".join(f'<a href="~/car-locksmith/{o["slug"]}/">{o["name"]}</a>' for o in BRANDS if o["name"] in rel)
         body = (x["page_hero"](crumbs, f"{n} Key Fob Battery Dead, Spare Key or Keys Locked in the Car?",
-                f"Keys locked inside your {n}, or down to your last key fob? Uncle Thomas opens {n} cars without damage and clones {n} key fobs, 24/7 anywhere in Singapore.",
+                f"Keys locked inside your {n}, or down to your last key fob? Uncle Thomas opens {n} cars without damage and clones {n} remote key fobs, 24/7 anywhere in Singapore.",
                 ["Non-destructive entry", "Key fob cloning", "24/7 islandwide"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <h2>{n} cars in Singapore</h2>
@@ -264,7 +264,7 @@ def build(x):
 <h2>{n} key fob battery replacement</h2>
 <p>Most {n} fobs take a 3V coin cell (often CR2032 or CR2025): copy the type printed on the old one and fit the new cell the same way up. Not working after the swap? See <a href="~/guides/car-key-fob-not-working/">key fob not working after a battery change</a>; if the backup start above works, the {n} fob itself is fine.</p>
 <h2>{n} spare key</h2>
-<p>Down to one {n} key? We clone {n} fobs from a working key, after checking your NRIC against the log card. WhatsApp {{PHONE}} the model, year and a key photo to confirm first.</p>
+<p>Down to one {n} key? We clone {n} remote key fobs from a working key, after checking your NRIC against the log card. We don't clone smart (keyless) keys. Cloning costs S$100–S$1,000 depending on the car, so WhatsApp {{PHONE}} the model, year and a key photo to confirm first.</p>
 <h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
 <p>Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
@@ -289,18 +289,18 @@ def build(x):
 # a dated real job. Real jobs go in config.BRAND_JOBS and show as "Recent job".
 SCENARIO = {
 "Toyota": "A driver loads groceries into the boot of a Corolla Altis at an HDB multi-storey carpark, sets the key down on the shopping bags, and closes the boot. The car locks itself. We open the driver's door with non-destructive tools, the key comes out of the boot, and the driver decides it's time to get a spare fob cloned.",
-"Honda": "A private-hire driver bought a used Vezel that came with only one key. Nothing has gone wrong yet, but losing that key would mean days off the road. They WhatsApp us a photo of the key and the car's year, we confirm we can clone it, and they get a spare the same day.",
+"Honda": "A private-hire driver bought a used Vezel that came with only one key. Nothing has gone wrong yet, but losing that key would mean days off the road. They WhatsApp us a photo of the key and the car's year, we confirm we can clone it, and they get a spare the same day if it's a remote key we can clone.",
 "Mercedes-Benz": "A C-Class owner in a condo carpark presses the fob and nothing happens: the battery has finally died. The car is KEYLESS-GO, so they've never used the hidden key blade. We talk them through sliding it out over WhatsApp, and they're in within a minute, no call-out needed. They book a spare fob for later.",
 "BMW": "At a petrol station, a 3 Series owner puts the key on the passenger seat while checking the tyres. Comfort Access locks the car when the doors close. The key is visible through the window but out of reach. We open it without damage and suggest a spare key kept at home.",
 "Audi": "A family with a Q5 at a shopping mall carpark: a child presses the lock button inside while the key is still in the cup holder, and everyone steps out. We open the car without touching the paint or seals, and the family is on their way.",
 "Volkswagen": "A Golf owner's flip key hinge has snapped and the blade only stays out with tape. It still works, for now. Before it fails completely they want a spare. We clone a new remote from the working key.",
 "Mazda": "A CX-5 driver unloading kids and a pram at a void deck drop-off locks the key inside with the engine off. We arrive, check the log card against the driver's NRIC, and open the door without damage.",
-"Lexus": "An ES owner loses the main smart key but still has the slim card key in their wallet. The car still works, but one key left is risky. We clone a new fob from the working key so they're back to two.",
-"Land Rover": "A Range Rover Evoque owner's spare fob went through the washing machine and no longer works. With only one key left, they ask us for a new spare cloned from the working fob.",
-"Hyundai": "A private-hire driver with an Ioniq has a fob that only works when it's held right next to the door. The battery is weak and the driver can't risk a dead key mid-shift. We sort out a cloned spare so there's always a backup in the car bag.",
-"Kia": "A couple share one Niro and one key, and they keep passing it back and forth. When one of them needs the car while the other is at work, they decide a second fob is cheaper than the hassle. We clone it from their working key.",
+"Lexus": "An ES owner puts the smart key down on the passenger seat while loading shopping at a condo carpark, and the car locks. We check the log card and open the driver's door without damage.",
+"Land Rover": "A Range Rover Evoque owner leaves the fob in the boot while unloading golf clubs, and the car locks itself. We check the log card and open it without damaging the paint, seals or windows.",
+"Hyundai": "A private-hire driver with an older Avante has a remote flip key that only works when it's held right next to the door. The battery is weak and the driver can't risk a dead key mid-shift. We sort out a cloned spare so there's always a backup in the car bag.",
+"Kia": "A couple share one older Cerato and one flip key, and they keep passing it back and forth. When one of them needs the car while the other is at work, they decide a second fob is cheaper than the hassle. We clone it from their working key.",
 "Nissan": "A family with a Serena MPV: a child locks the doors from inside while the Intelligent Key is on the seat, then climbs out the other side before the door shuts. Everyone is out, and the key is in. We open the car without damage.",
-"Porsche": "A Macan owner wants a spare key but doesn't want to leave the car at the dealer. They send us the model year and a photo of the key, and we confirm before booking that we can clone it.",
+"Porsche": "A Macan owner wants a spare key but doesn't want to leave the car at the dealer. They send us the model year and a photo of the key, and we tell them honestly before booking whether it's a remote key we can clone or a smart key that needs the dealer.",
 "Volvo": "An XC60 owner loading luggage for a Changi drop-off closes the tailgate on the key. The car locks. We open it with non-destructive tools so the trip isn't missed.",
 "Mitsubishi": "A small company runs several Attrage cars, each with only one key. One key going missing has already cost them a day. They ask us to clone a spare for each car.",
 "Subaru": "A Forester owner's key was soaked in a heavy downpour and now works only some of the time. While it still works, they ask for a cloned spare as a backup.",
@@ -315,7 +315,7 @@ FEATURE = {
 "Volkswagen": "Volkswagen's flip keys are hard-wearing, but the folding hinge is a common weak point after years in a pocket. Models with Keyless Access behave like other smart-key cars.",
 "Mazda": "Mazda's Advanced Keyless Entry lets you lock and unlock with a button on the door while the key stays in your pocket. A low key battery is the usual cause when that button stops responding.",
 "Lexus": "Some Lexus models come with a card key that slips into a wallet. It's a useful built-in backup, but it isn't a full replacement for a lost main fob.",
-"Land Rover": "Many Land Rover and Range Rover models use keyless entry, and some offer a wearable key for sports and the beach. Keep the main fob safe when you use it, because the main fob is what a cloned spare is made from.",
+"Land Rover": "Many Land Rover and Range Rover models use keyless entry, and some offer a wearable key for sports and the beach. Keep the main fob safe when you use it.",
 "Hyundai": "Newer Hyundais may also support a digital key on a phone or card. A fob is still the backup most owners rely on, especially private-hire drivers who can't afford downtime.",
 "Kia": "Like Hyundai, some newer Kias support a phone-based digital key. A physical fob remains the simplest backup for sharing a car between drivers.",
 "Nissan": "Nissan's Intelligent Key works from a pocket or bag, which makes it easy to forget where it is. MPVs like the Serena have several doors that can be locked from inside.",
