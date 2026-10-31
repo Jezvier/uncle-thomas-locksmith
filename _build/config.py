@@ -196,7 +196,7 @@ PHOTOS = {
 # FILL: real job notes, e.g. "toa-payoh": ["Oct 2026 — HDB main door lockout at Lorong 4, opened damage-free"]
 # A town's "Recent jobs" section stays hidden until it has at least one entry.
 RECENT_JOBS = {
-    "cbd-orchard": ["Oct 2026, Orchard Road: room door lockout in the evening. Uncle Thomas opened the locked room door on the spot."],
+    "cbd-orchard": ["Oct 2026, Orchard Road: room door lockout after dinner. Opened in under 2 minutes."],
     "punggol": ["Oct 2026, Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."],
 }
 
