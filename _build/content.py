@@ -57,7 +57,7 @@ dict(
 <p>The price depends on the lock type, the time of day and whether a part needs replacing. We always confirm it with you before we start, and the price we agree is the price you pay. See the <a href="~/prices/">price list</a>.</p>
 
 <h2>Islandwide, 24 hours a day</h2>
-<p>We cover every part of Singapore, from <a href="~/areas/woodlands/">Woodlands</a> to <a href="~/areas/tampines/">Tampines</a> and <a href="~/areas/jurong/">Jurong</a> to <a href="~/areas/toa-payoh/">Toa Payoh</a>. See <a href="~/areas/">all the areas we serve</a>.</p>
+<p>We cover every part of Singapore, from <a href="~/areas/woodlands/">Woodlands</a> to <a href="~/areas/tampines/">Tampines</a> and <a href="~/areas/cbd-orchard/">Orchard</a> to <a href="~/areas/toa-payoh/">Toa Payoh</a>. See <a href="~/areas/">all the areas we serve</a>.</p>
 <p>Not locked out yet but worried? Read our guide: <a href="~/guides/locked-out-of-hdb-flat/">locked out of your HDB flat — what to do</a>.</p>
 """,
  faqs=[
@@ -455,6 +455,9 @@ dict(
  ],
 ),
 ]
+# Premium focus (owner, 1 Nov 2026): safes and cars first.
+_ORDER = ["safe-opening/", "car-locksmith/", "emergency-locksmith/", "digital-lock-opening/", "digital-lock-installation/", "commercial-locksmith/", "lock-replacement/", "letterbox-lock-replacement/"]
+SERVICES.sort(key=lambda s: _ORDER.index(s["path"]) if s["path"] in _ORDER else 99)
 
 from safes import SAFE_SERVICES
 import niche
@@ -581,9 +584,9 @@ def build_home(x):
       <p class="hero-lead"><picture><source srcset="~/assets/img/uncle-thomas-face-112.webp 1x, ~/assets/img/uncle-thomas-face-224.webp 2x" type="image/webp"><img class="hero-face" src="~/assets/img/uncle-thomas-face-112.jpg" srcset="~/assets/img/uncle-thomas-face-224.jpg 2x" width="56" height="56" alt="Uncle Thomas at work on a safe" fetchpriority="high"></picture><span>Led by <strong>Uncle Thomas</strong>: safe and car specialist, locksmith since {C_.FOUNDED}.</span></p>
       {rating_html}
       <ul class="hero-tiles">
-        <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door: HDB, condo, landed, office, digital &amp; smart locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
         <li><a href="~/safe-opening/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="15" rx="2"/><circle cx="12" cy="11" r="3.5"/><path d="M12 7.5V9M12 13v1.5M8.5 11H10M14 11h1.5"/><path d="M6.5 18.5V21M17.5 18.5V21"/></svg></span><span class="t-txt"><strong>Safes</strong><span>All safes and bolts: combination dials and smart keypads</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
         <li><a href="~/car-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16.5V12l1.8-4.6A2 2 0 0 1 7.7 6h8.6a2 2 0 0 1 1.9 1.4L20 12v4.5"/><path d="M3 16.5h18"/><path d="M4.5 12h15"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg></span><span class="t-txt"><strong>Cars</strong><span>Car unlocking and key fob cloning, all major brands</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
+        <li><a href="~/emergency-locksmith/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21"/><path d="M3.5 21h17"/><path d="M14.5 12.5h.01"/></svg></span><span class="t-txt"><strong>Doors</strong><span>Any door: HDB, condo, landed, office, digital &amp; smart locks</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
       </ul>
       {x["cta_buttons"]()}
       <p class="hero-note">Price agreed before we start · No-expiry warranty</p>

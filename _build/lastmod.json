@@ -1,123 +1,143 @@
 {
 "/": {
-"date": "2026-10-31",
-"hash": "958e220c59b04358895a68e56e0c7566"
+"date": "2026-11-01",
+"hash": "9d5be894e23c062c3195430ecc29cc29"
 },
 "about/": {
 "date": "2026-10-31",
 "hash": "a3255a712ba824cc26812482e3de6acb"
 },
 "areas/": {
-"date": "2026-10-31",
-"hash": "dcac238daa8bc59fe8ffc990b5d003c3"
+"date": "2026-11-01",
+"hash": "601b8beac7c50a46f76dc5934b61bc21"
 },
 "areas/ang-mo-kio/": {
-"date": "2026-10-29",
-"hash": "fa84018d4afa18b7185b34b7c00d1a86"
+"date": "2026-11-01",
+"hash": "8a1f9a7e454ecb22c6bab430ed7bfbcc"
 },
 "areas/bedok/": {
-"date": "2026-10-29",
-"hash": "bd1c246e0872e70b30539ac145f5ccd0"
+"date": "2026-11-01",
+"hash": "3604b95b66e46036a9de147df35e278f"
 },
 "areas/bishan/": {
-"date": "2026-10-29",
-"hash": "4a0d383baac9b9f4e5a5970f6ae57fed"
+"date": "2026-11-01",
+"hash": "860b18af047981448ef505f7ecb9bbce"
 },
 "areas/bukit-batok/": {
-"date": "2026-10-29",
-"hash": "17605d242509d7ffcb094a8e6aece370"
+"date": "2026-11-01",
+"hash": "c9d0485b795a2a88243ddc72bcc1d03f"
 },
 "areas/bukit-merah/": {
-"date": "2026-10-29",
-"hash": "4c0e7ff980b26cc5d1955d7771d2bb14"
+"date": "2026-11-01",
+"hash": "31381340f347fa21638b6ca38754c1c6"
 },
 "areas/bukit-panjang/": {
-"date": "2026-10-29",
-"hash": "df028c3d3d93d6cd2450846fe422d6ae"
+"date": "2026-11-01",
+"hash": "a2d1c19f7afaaf8bf8799a0d89c30071"
+},
+"areas/bukit-timah/": {
+"date": "2026-11-01",
+"hash": "608522743279c5d904698f73b1ccfc35"
 },
 "areas/cbd-orchard/": {
-"date": "2026-10-31",
-"hash": "b0af3564d5d7ea90f16687c38e58c6a6"
+"date": "2026-11-01",
+"hash": "1daa34941f796104386cbe80b07fd7a2"
 },
 "areas/choa-chu-kang/": {
-"date": "2026-10-29",
-"hash": "e06db16d2429adb39dcba0a604bc6b38"
+"date": "2026-11-01",
+"hash": "0a10082b8074e9665dab0850cb350ac8"
 },
 "areas/clementi/": {
-"date": "2026-10-29",
-"hash": "39cc1f4bab81b69359cc1d2b906022f2"
+"date": "2026-11-01",
+"hash": "803b95ca2f70f98dba89d14aec9ecd97"
 },
 "areas/geylang/": {
-"date": "2026-10-29",
-"hash": "e62cfe11d7c5bacb12702255b382ff1f"
+"date": "2026-11-01",
+"hash": "2fa3b44e6a92f6116582ddc3ae0c6f67"
+},
+"areas/holland-village/": {
+"date": "2026-11-01",
+"hash": "82e3d3fef1a1b69ef70e71787cdbb793"
 },
 "areas/hougang/": {
-"date": "2026-10-29",
-"hash": "d6fd7112776224d20911bd355d9f6386"
+"date": "2026-11-01",
+"hash": "b5b48dca09887df59d3a2cdb9d833f65"
 },
 "areas/jurong/": {
 "date": "2026-10-29",
 "hash": "3dc04dbd1a244eb33864caed4ee98864"
 },
 "areas/kallang-whampoa/": {
-"date": "2026-10-29",
-"hash": "67e993db50274e12f7ed6d80b8acbec2"
+"date": "2026-11-01",
+"hash": "9c11a68b9705d7ffc495fe76d316e7f6"
 },
 "areas/marine-parade/": {
-"date": "2026-10-29",
-"hash": "b3735656218acd584825fcc024332389"
+"date": "2026-11-01",
+"hash": "d7586512df27e5213f3b67d43e880d47"
 },
 "areas/newton/": {
-"date": "2026-10-31",
-"hash": "de09e7168a1c0d1e69b60e9cf4cfd7c0"
+"date": "2026-11-01",
+"hash": "29127599a6510f82df164458add6bd7e"
 },
 "areas/novena/": {
-"date": "2026-10-29",
-"hash": "e041a4ac7ac7ededaf3e0701a06ffebc"
+"date": "2026-11-01",
+"hash": "027fc42865cf41a679b970aa20836258"
 },
 "areas/pasir-ris/": {
-"date": "2026-10-29",
-"hash": "bbef03d49d69f253a45b6c55df33e3a2"
+"date": "2026-11-01",
+"hash": "d00d60820f7aefa9f1e717a0281ced3e"
 },
 "areas/paterson/": {
-"date": "2026-10-31",
-"hash": "c14b233270606b254be60849a5b6feb7"
+"date": "2026-11-01",
+"hash": "59a30b598c41d83ae018ec20a4f562a6"
 },
 "areas/punggol/": {
-"date": "2026-10-29",
-"hash": "3e538f776eda6f8f13fc34197fbad03a"
+"date": "2026-11-01",
+"hash": "ec13bd16bd58b24fd8e0b3377f633efc"
 },
 "areas/queenstown/": {
-"date": "2026-10-29",
-"hash": "4330d73b83d4f1ac316b4b2a68177969"
+"date": "2026-11-01",
+"hash": "e0f6b66ea2323862017be0e16ad515b6"
+},
+"areas/river-valley/": {
+"date": "2026-11-01",
+"hash": "8f4bb451cfb6f5debda36c983e0bdec3"
 },
 "areas/sembawang/": {
-"date": "2026-10-29",
-"hash": "efef44d6ddabfc8cae58aaea5718bdfe"
+"date": "2026-11-01",
+"hash": "9a0dd27882c944af87c902a516f8791c"
 },
 "areas/sengkang/": {
-"date": "2026-10-29",
-"hash": "cf8f9a1c30c20b0e82671f25f66ff659"
+"date": "2026-11-01",
+"hash": "fe8b9e8d461b5ebfdb4800357a34da00"
+},
+"areas/sentosa-cove/": {
+"date": "2026-11-01",
+"hash": "d6432ad2b7bbae06aaa9f2348acf1a45"
 },
 "areas/serangoon/": {
-"date": "2026-10-29",
-"hash": "013e21d8fb65e097248f0196d6bf25eb"
+"date": "2026-11-01",
+"hash": "fbb8bf2539790fe9770cf09cbdb92653"
 },
 "areas/tampines/": {
-"date": "2026-10-29",
-"hash": "9b1ea7cdcfa74ec1b284619fb73fb639"
+"date": "2026-11-01",
+"hash": "9d30b370f15a1d2221275111d5850050"
+},
+"areas/tanglin/": {
+"date": "2026-11-01",
+"hash": "648d114405ca58de0388ae886c1c54f6"
 },
 "areas/toa-payoh/": {
-"date": "2026-10-29",
-"hash": "44adc41aa7866d584e17feb4a5923879"
+"date": "2026-11-01",
+"hash": "24a4b9a64ba8f7a46447830669d2f220"
 },
 "areas/woodlands/": {
-"date": "2026-10-29",
-"hash": "db942425c07c49f22324db88fa34c90d"
+"date": "2026-11-01",
+"hash": "ae01cb2dbd2acd3601f37ed5dde62254"
 },
 "areas/yishun/": {
-"date": "2026-10-29",
-"hash": "4330f924eb5967f0e649fa769d3a89a3"
+"date": "2026-11-01",
+"hash": "4850de521938c9fb6e91c589e0d785af"
 },
 "broken-key-extraction/": {
 "date": "2026-10-29",
@@ -132,8 +152,8 @@
 "hash": "8f24289e370d7ef7395780fb8b4cf484"
 },
 "car-locksmith/": {
-"date": "2026-10-31",
-"hash": "09e4f13a07a33e58dabfb1d70bc44616"
+"date": "2026-11-01",
+"hash": "18f42f6254421a0d23001e5d8240d4ef"
 },
 "car-locksmith/audi/": {
 "date": "2026-10-31",
@@ -224,24 +244,24 @@
 "hash": "22af7d1f9718c226660a46e86a0e7ac5"
 },
 "commercial-locksmith/": {
-"date": "2026-10-29",
-"hash": "ecd46fa104530a6df9324332d58767a3"
+"date": "2026-11-01",
+"hash": "cea24bedb395a479052d42892bf81e1c"
 },
 "commercial-safe-services/": {
 "date": "2026-10-29",
 "hash": "35483318efa55e421e9a970d3a63e333"
 },
 "contact/": {
-"date": "2026-10-27",
-"hash": "5aaad95ba2bb5fc782c74a7ac23b8f5a"
+"date": "2026-11-01",
+"hash": "a6bb7db75dabbcdf99cb7b1bbf6026bc"
 },
 "digital-lock-installation/": {
-"date": "2026-10-29",
-"hash": "6ee0aae9ab35daa59463e7cdd5b78eb8"
+"date": "2026-11-01",
+"hash": "f063337697b8b843061dbd8f7f8d45ed"
 },
 "digital-lock-opening/": {
-"date": "2026-10-31",
-"hash": "ad0b7f5b83b5bca6bad0194e9f90ae95"
+"date": "2026-11-01",
+"hash": "9a10e3a449501dce73651af6b3d2ed70"
 },
 "digital-lock-opening/aqara/": {
 "date": "2026-10-29",
@@ -320,8 +340,8 @@
 "hash": "b40a0eababd2a9ce08dfc43919c2e908"
 },
 "emergency-locksmith/": {
-"date": "2026-10-31",
-"hash": "00d3af945b605202436e13484cc93027"
+"date": "2026-11-01",
+"hash": "3b63a4d428afdf161e0412c52bc4f1bb"
 },
 "glass-door-lock/": {
 "date": "2026-10-29",
@@ -332,116 +352,116 @@
 "hash": "466ea29a5c887b5081ec375b4adc6c68"
 },
 "guides/after-a-break-in/": {
-"date": "2026-10-27",
-"hash": "5525ba81781240d32e4303e62db54f30"
+"date": "2026-11-01",
+"hash": "f1beed0cd0f8d288a75c08d408166724"
 },
 "guides/car-key-fob-not-working/": {
-"date": "2026-10-29",
-"hash": "6c15287bc66f4651c964f4ee0b3e7ee6"
+"date": "2026-11-01",
+"hash": "f10b18670ab2f7ad327e6be4080d386f"
 },
 "guides/change-locks-new-home/": {
-"date": "2026-10-29",
-"hash": "5bbd24ad0bc50f2b0d9a50180abdb8e5"
+"date": "2026-11-01",
+"hash": "bbd77519581c859e1c1d1c90ce6ea54f"
 },
 "guides/digital-lock-battery-dead/": {
-"date": "2026-10-27",
-"hash": "ab9556437aeb45e4921f893e2bf8a4a4"
+"date": "2026-11-01",
+"hash": "d72ef339ccc7f592512bc1643262227a"
 },
 "guides/digital-lock-fire-rated-door-scdf/": {
-"date": "2026-10-27",
-"hash": "932bc8a94b215abf484651ca552fafdf"
+"date": "2026-11-01",
+"hash": "d58409eb8a82fdc56ce6a6d79e9d879b"
 },
 "guides/digital-lock-repair/": {
-"date": "2026-10-31",
-"hash": "fb052861db6f7d77923a21cee9250a42"
+"date": "2026-11-01",
+"hash": "b17e1dbf1a9e5a23a545812aa9f04588"
 },
 "guides/digital-vs-traditional-lock-hdb/": {
-"date": "2026-10-27",
-"hash": "361aaddd4a8649b7bd94f18be10deb61"
+"date": "2026-11-01",
+"hash": "c1afc2ab438008060e0c405801a75630"
 },
 "guides/door-lock-jammed/": {
-"date": "2026-10-29",
-"hash": "25aa704bd197c2aeefb631ff3daecccb"
+"date": "2026-11-01",
+"hash": "29e2152b65418ab57a8214e22bbf1d00"
 },
 "guides/forgot-digital-lock-pin/": {
-"date": "2026-10-29",
-"hash": "0b820a559866e3efde52f2900effae80"
+"date": "2026-11-01",
+"hash": "3dfa76538dde8ebd969228b0b81a10fe"
 },
 "guides/forgot-safe-combination/": {
-"date": "2026-10-29",
-"hash": "891e9b57936c6aaecbdeec05aa5e0e0c"
+"date": "2026-11-01",
+"hash": "5ba742557389927fe6d8822111ffef6c"
 },
 "guides/hdb-gate-lock-types/": {
-"date": "2026-10-27",
-"hash": "a844296889bab084439e1dafb0f5478b"
+"date": "2026-11-01",
+"hash": "ecf3365877caf493efdb0b9d57cd1f13"
 },
 "guides/how-to-choose-a-locksmith/": {
-"date": "2026-10-27",
-"hash": "5bc2c5da5f15e66f288b7ac52766afb1"
+"date": "2026-11-01",
+"hash": "0533bd2b9d896c9bdb8a226fbf2a586e"
 },
 "guides/how-to-choose-a-safe-singapore/": {
-"date": "2026-10-29",
-"hash": "c915b6f272f2c145dfc05511f7ed59b9"
+"date": "2026-11-01",
+"hash": "00b224a83865a0a358d616775333edfb"
 },
 "guides/keys-locked-in-car/": {
-"date": "2026-10-31",
-"hash": "ed1d924a28905a61bfc723f310c8ee83"
+"date": "2026-11-01",
+"hash": "d2f3184fa71bb7807d264cf9f1cf4f1e"
 },
 "guides/landlord-tenant-lock-change/": {
-"date": "2026-10-27",
-"hash": "257be05efbcdae687545aac9f9895734"
+"date": "2026-11-01",
+"hash": "f06b6f328612c442a909cec066860417"
 },
 "guides/locked-out-of-hdb-flat/": {
-"date": "2026-10-27",
-"hash": "da3177b4f881e47a8c59bd4df20bb077"
+"date": "2026-11-01",
+"hash": "0a9d2fc414ae39d295d54a067c000ea1"
 },
 "guides/locksmith-cost-singapore/": {
-"date": "2026-10-31",
-"hash": "f9e57e3a8ba6dbad5d239aaf61a05231"
+"date": "2026-11-01",
+"hash": "0bc1028f24d703d2601e64cf60dcca99"
 },
 "guides/lost-car-key-fob/": {
-"date": "2026-10-31",
-"hash": "303983c6747bea6fea3ee0095bc47069"
+"date": "2026-11-01",
+"hash": "80453d1d86f7b57c1c0bdfbaf0c82803"
 },
 "guides/lost-house-key/": {
-"date": "2026-10-29",
-"hash": "21301a1ff4f0b3b9c3edee9aadedc593"
+"date": "2026-11-01",
+"hash": "a62e3ae5f926e953927cb345c93d5cb9"
 },
 "guides/lost-letterbox-key/": {
-"date": "2026-10-29",
-"hash": "6a6382fb5e7e19623591280b0bcdef62"
+"date": "2026-11-01",
+"hash": "253c0d0dfec6457d079df26f14fda901"
 },
 "guides/lost-safe-key/": {
-"date": "2026-10-29",
-"hash": "3ae9854353481dd218427e40e5a8161f"
+"date": "2026-11-01",
+"hash": "09193224528980fb7e800fb06d43c81f"
 },
 "guides/main-door-lock-types/": {
-"date": "2026-10-29",
-"hash": "0f118660c66f5cdcfc1eb0c95fa56779"
+"date": "2026-11-01",
+"hash": "977475290e9fc9bfc53ef258da9e83b5"
 },
 "guides/police-scdf-open-door/": {
-"date": "2026-10-27",
-"hash": "91e168476a95ace1e203be875c42b821"
+"date": "2026-11-01",
+"hash": "f033c583aa56fd5a14a5031a305d5e64"
 },
 "guides/room-door-locked-from-inside/": {
-"date": "2026-10-29",
-"hash": "21426468c37b0d6de9e27b8b2d104de5"
+"date": "2026-11-01",
+"hash": "0a7061de494fcc5c1c7964a8f82f6c80"
 },
 "guides/safe-box-battery-dead/": {
-"date": "2026-10-29",
-"hash": "fcab556860fe5679ebd1afea5636ac25"
+"date": "2026-11-01",
+"hash": "63ad606c6c35523cb94912e8fe181338"
 },
 "guides/safe-drilling-explained/": {
-"date": "2026-10-29",
-"hash": "53667aadf304c4de9ece5117792733a6"
+"date": "2026-11-01",
+"hash": "b9dd864231f3208acdf35f9b84aa7942"
 },
 "guides/safe-wont-open-correct-code/": {
-"date": "2026-10-29",
-"hash": "4f432c550cb7913facb8b0525fa12f5c"
+"date": "2026-11-01",
+"hash": "05c5b983f045a9b780498e26e9d5d8be"
 },
 "guides/smart-lock-for-hdb-gate/": {
-"date": "2026-10-31",
-"hash": "c3cb8a53c255df963a746a7a691f3ad1"
+"date": "2026-11-01",
+"hash": "5b44594689b91d7e3808275436b23803"
 },
 "hdb-gate-lock-replacement/": {
 "date": "2026-10-29",
@@ -452,24 +472,24 @@
 "hash": "a28a0a9b3e098b8ba49ed60618c4a811"
 },
 "letterbox-lock-replacement/": {
-"date": "2026-10-31",
-"hash": "b521d0fc4ae79720e16b059db72622a2"
+"date": "2026-11-01",
+"hash": "1508839b151b5ee6161faa575d6076bb"
 },
 "lock-replacement/": {
-"date": "2026-10-31",
-"hash": "6687afdc6472dfd45596694affe65e20"
+"date": "2026-11-01",
+"hash": "111cbcc99fcd9c882ba3b8653a7d94c6"
 },
 "padlock-cutting/": {
 "date": "2026-10-29",
 "hash": "3d34e6f1dd86360c6661fd15697f6488"
 },
 "prices/": {
-"date": "2026-10-31",
-"hash": "72be60c2fce898b5a2e2e7808039677d"
+"date": "2026-11-01",
+"hash": "9aa23196ed2dbb711bec6f62cb9f6708"
 },
 "privacy/": {
-"date": "2026-10-31",
-"hash": "4b37868813777cb1cc32af597bec4ccb"
+"date": "2026-11-01",
+"hash": "78332d61e158278e71e464802ec7236b"
 },
 "roller-shutter-lock/": {
 "date": "2026-10-29",
@@ -532,8 +552,8 @@
 "hash": "214d3283f9acb8da446e15ad02120693"
 },
 "services/": {
-"date": "2026-10-31",
-"hash": "38afdce228407843dc49b99c3e5922bf"
+"date": "2026-11-01",
+"hash": "ab41de9e6ec84968d7b8757ee2681a40"
 },
 "zh/": {
 "date": "2026-10-31",

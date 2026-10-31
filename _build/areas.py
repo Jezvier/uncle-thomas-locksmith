@@ -69,7 +69,7 @@ dict(slug="novena", name="Novena & Balestier", region="Central",
  ],
  nearby=["toa-payoh", "cbd-orchard"]),
 
-dict(slug="cbd-orchard", name="CBD & Orchard", region="Central",
+dict(slug="cbd-orchard", name="Orchard & CBD", region="Central",
  intro="Offices, shops, hotels, serviced apartments and city condos — in the CBD and Orchard, most of our calls are about getting businesses and residents back in fast, often outside office hours.",
  overview="Singapore's city centre runs from Raffles Place, Tanjong Pagar and Marina Bay through Chinatown and River Valley to Orchard Road and Tanglin. During the day it's offices and retail; at night it's condos, serviced apartments and hotels. Locks here range from office glass doors and access-controlled suites to safes in shops and high-end digital locks in city apartments.",
  estates=["Raffles Place", "Tanjong Pagar", "Marina Bay", "Chinatown", "River Valley", "Robertson Quay", "Orchard", "Tanglin"],
@@ -86,7 +86,7 @@ dict(slug="cbd-orchard", name="CBD & Orchard", region="Central",
   ("Can you come to our CBD office at night or on weekends?", "Yes. We work 24/7, and after-hours visits mean no disruption to your business. Please arrange building access with security."),
   ("Do you open shop safes in Orchard and the CBD?", "Yes — Uncle Thomas trained in safesmithing in the United States. We'll need authorisation from the business before opening any safe."),
  ],
- nearby=["novena", "bukit-merah", "newton", "paterson"]),
+ nearby=["novena", "bukit-merah", "newton", "paterson", "tanglin", "river-valley"]),
 
 dict(
  slug="newton", name="Newton", region="Central",
@@ -127,6 +127,106 @@ dict(
   ("My tenant left and the digital lock code changed. Can you help?", "Yes. Show us proof that you own the unit and we'll open the door without damage, then reset or replace the lock."),
  ],
  nearby=["cbd-orchard", "newton", "bukit-merah"],
+),
+dict(
+ slug="tanglin", name="Tanglin", region="Central",
+ intro="Tanglin is one of Singapore's most exclusive addresses: embassies, good class bungalows and luxury condos, so our calls here are mostly home safes, high-end digital locks and cars.",
+ overview="Tanglin stretches from the top of Orchard Road past Tanglin Mall and Dempsey Hill to the Singapore Botanic Gardens. Around Nassim Road, Napier Road and Cuscaden Road you'll find embassies, ambassadors' residences, large landed houses and some of the island's most expensive condominiums. Homes here often have a safe in the master bedroom or study, gated driveways with several locks, and more than one car.",
+ estates=["Nassim", "Cuscaden", "Napier Road", "Tanglin Road", "Dempsey", "Grange Road"],
+ landmarks=["Singapore Botanic Gardens", "Dempsey Hill", "Tanglin Mall", "Nassim Road"],
+ mrt=["Botanic Gardens", "Napier", "Orchard Boulevard", "Orchard"],
+ buildings=[
+  ("Landed homes and bungalows", "Main gates, side gates, front doors and safes, each with its own lock. We confirm ownership before opening anything and can rekey the whole property by replacing the cylinders."),
+  ("Luxury condominiums", "Premium digital and smart locks with app access, often managed through a concierge. We coordinate with management and check proof of residence."),
+  ("Home safes and watch safes", "Safes holding passports, jewellery, watches and documents. Uncle Thomas is a safe specialist and opens them, usually without drilling, then changes the combination."),
+ ],
+ jobs=["Home safe and watch safe opening", "Combination changes when household staff change", "Car lockouts in private driveways and condo carparks", "Gate and main door lock upgrades"],
+ access="Many Tanglin homes are gated, so tell us the gate or guardhouse procedure. For embassy-area addresses, let security know a locksmith is expected.",
+ faqs=[
+  ("Can you open a home safe in Tanglin discreetly?", "Yes. Uncle Thomas works quietly and alone if you prefer, opens the safe usually without drilling, and can set a new combination on the spot. We check the safe is yours first."),
+  ("Should I change my safe combination when my helper or staff leave?", "It's a good idea. Anyone who has seen or been told the code can still open the safe. We change combinations on most safe types in one visit."),
+ ],
+ nearby=["cbd-orchard", "paterson", "bukit-timah", "holland-village"],
+),
+dict(
+ slug="bukit-timah", name="Bukit Timah", region="Central",
+ intro="Bukit Timah is landed-home country, with bungalows, semi-detached houses and quiet condos, so most of our work here is gates, home safes and cars.",
+ overview="Bukit Timah runs along Bukit Timah Road and Dunearn Road from the Botanic Gardens out towards Beauty World and the nature reserve. It's home to many of Singapore's good class bungalows and landed estates around Sixth Avenue, King Albert Park, Coronation Road and Hillcrest, alongside low-rise condos and top schools. Large homes mean more locks: driveway gates, side gates, front doors, store rooms and safes.",
+ estates=["Sixth Avenue", "King Albert Park", "Coronation Road", "Hillcrest", "Swiss Club Road", "Cluny"],
+ landmarks=["Bukit Timah Nature Reserve", "Beauty World", "Cluny Court", "Botanic Gardens"],
+ mrt=["Botanic Gardens", "Tan Kah Kee", "Sixth Avenue", "King Albert Park", "Beauty World"],
+ buildings=[
+  ("Bungalows and landed homes", "Several locks per property and heavy driveway gates that take a lot of wear. We open, replace or rekey them so one set of keys works the way you want."),
+  ("Home safes", "Bedroom, study and wardrobe safes are common here. Uncle Thomas opens every type of safe, usually without drilling, and about 90% of drilled safes can be repaired and used again."),
+  ("Family cars", "Car lockouts in driveways, school carparks and condo basements. We open cars without damage after checking the log card."),
+ ],
+ jobs=["Home safe opening and combination changes", "Driveway and side gate lock replacement", "Car lockouts at home and at school pick-up", "Rekeying a whole house after moving in"],
+ access="Bukit Timah's landed streets can be hard to find at night, so a pinned location on WhatsApp helps. Tell us which gate to come to.",
+ faqs=[
+  ("We just bought a landed home in Bukit Timah. Should we change the locks?", "Yes. You don't know who still has keys from the previous owner, contractors or agents. We replace the cylinders on every gate and door so only your keys work."),
+  ("Can you open an old safe left by the previous owner?", "Usually, yes. Show us that you own the property and the safe came with it, and Uncle Thomas will open it, often without drilling."),
+ ],
+ nearby=["tanglin", "holland-village", "bukit-panjang"],
+),
+dict(
+ slug="holland-village", name="Holland Village", region="Central",
+ intro="Holland Village mixes landed estates, expat condos and its famous dining strip, so our calls are home safes, digital locks, cars and the odd shop shutter.",
+ overview="Holland Village sits around Lorong Liput and Jalan Merah Saga, with the landed estates of Chip Bee Gardens, Holland Grove and Holland Hill around it and condos along Holland Road and Farrer Road. Many homes are rented to expatriate families, so lock changes between tenancies and safes left by previous occupants are common. The dining strip adds shophouse shutters and back doors.",
+ estates=["Chip Bee Gardens", "Holland Grove", "Holland Hill", "Leedon Park", "Farrer Road", "Jalan Merah Saga"],
+ landmarks=["Holland Village", "Holland Road", "Farrer Road", "Lorong Liput"],
+ mrt=["Holland Village", "Farrer Road", "Buona Vista"],
+ buildings=[
+  ("Landed and semi-detached homes", "Gates, front doors and safes. We open them without damage where possible and confirm ownership or tenancy first."),
+  ("Expat condos and rentals", "Digital locks and deadbolts that need resetting or replacing between tenants. Landlords and agents can authorise the job in writing."),
+  ("Restaurants and shops", "Roller shutter locks, padlocks and back-lane doors, often before opening or after closing."),
+ ],
+ jobs=["Home safe opening for families moving in or out", "Lock changes between tenancies", "Car lockouts around Holland Village", "Shop shutter and padlock jobs"],
+ access="Parking near the dining strip is tight in the evenings, so tell us the nearest carpark. For condos, let the guardhouse know we're coming.",
+ faqs=[
+  ("Can you help a family relocating out of Holland Village?", "Yes. We open safes whose codes have been forgotten, and change or reset locks before you hand the home back, with the landlord's agreement."),
+  ("Do you open shop shutters on the Holland Village strip?", "Yes, 24/7. We'll need proof that you own or run the business before opening."),
+ ],
+ nearby=["tanglin", "bukit-timah", "clementi"],
+),
+dict(
+ slug="river-valley", name="River Valley", region="Central",
+ intro="River Valley and Robertson Quay are packed with luxury condos and serviced apartments, so most calls here are smart lock lockouts, home safes and cars in basement carparks.",
+ overview="River Valley runs between Orchard and the Singapore River, taking in Robertson Quay, Mohamed Sultan, Killiney, Kim Yam and Institution Hill. Almost every home is a condo or serviced apartment, many with premium digital locks, and residents are often busy professionals who travel. It's a short drive from Orchard Road, so we reach it quickly at any hour.",
+ estates=["Robertson Quay", "Mohamed Sultan", "Killiney", "Kim Yam", "Institution Hill", "Great World"],
+ landmarks=["Robertson Quay", "Great World", "Fort Canning Park", "Valley Point"],
+ mrt=["Great World", "Havelock", "Fort Canning", "Somerset"],
+ buildings=[
+  ("Luxury condos", "Premium digital and smart locks, sometimes linked to an app. We open them damage-free and check proof of residence with the concierge."),
+  ("Serviced apartments", "Doors and in-room safes. The operator authorises the job and we confirm the guest's identity."),
+  ("Basement carparks", "Car lockouts in tight condo basements. Tell us the level and lot number."),
+ ],
+ jobs=["Smart lock lockouts after a flat battery or app failure", "Home and in-room safe opening", "Car lockouts in condo carparks", "Lock resets when owners change tenants"],
+ access="Most River Valley condos have a guardhouse or concierge, so let them know a locksmith is coming. At night, we usually arrive within 25–30 minutes.",
+ faqs=[
+  ("My smart lock app stopped working and my phone is inside. Can you help?", "Yes. We open smart and digital locks without damage after checking you live there, then help you get the lock working again."),
+  ("Can you open the safe in my serviced apartment?", "Yes, with the operator's authorisation. We open it without damaging the safe or the furniture around it."),
+ ],
+ nearby=["cbd-orchard", "paterson", "bukit-merah"],
+),
+dict(
+ slug="sentosa-cove", name="Sentosa Cove", region="Central",
+ intro="Sentosa Cove is Singapore's only island waterfront address: bungalows, condos and yachts, so our calls here are home safes, high-end locks, cars and boats.",
+ overview="Sentosa Cove sits on the eastern end of Sentosa, with waterfront bungalows on Ocean Drive, Cove Drive, Paradise Island and Treasure Island, condominiums around the village, and berths at the marina. Owners often spend time abroad, so safes go unopened for months and digital lock batteries quietly run down. Uncle Thomas has opened safes on ships and cruise liners, which helps with safes on boats as well as at home.",
+ estates=["Ocean Drive", "Cove Drive", "Paradise Island", "Treasure Island", "Coral Island", "Sentosa Cove Village"],
+ landmarks=["Sentosa Cove Village", "ONE°15 Marina", "Ocean Drive", "Quayside Isle"],
+ mrt=["HarbourFront (then by road to Sentosa)"],
+ buildings=[
+  ("Waterfront bungalows", "Gates, front doors, store rooms and safes. Sea air corrodes outdoor locks quickly, so we often replace gate locks with ones better suited to the coast."),
+  ("Condominiums", "Premium digital locks, often with long gaps between visits. We open them and replace batteries or the lock if needed."),
+  ("Yachts and boats", "Safes and locks on board. Uncle Thomas has opened safes on ships, so marine safes are familiar work."),
+ ],
+ jobs=["Home safe opening after a long trip abroad", "Safes on yachts and boats", "Gate lock replacement after sea-air corrosion", "Car lockouts at home or the marina"],
+ access="Sentosa Cove is reached by road over the Sentosa Gateway. Tell the guardhouse or estate security we're coming, and send a pinned location for bungalows.",
+ faqs=[
+  ("Can you open a safe on a yacht at Sentosa Cove?", "Yes. Uncle Thomas has opened safes on ships and cruise liners. We need proof that the boat and safe are yours, or the owner's written authorisation."),
+  ("Our home has been empty for months and the digital lock is dead. Can you help?", "Yes. We open it without damage, then replace the batteries or the lock. Before your next trip, change the batteries and keep the backup key with someone you trust."),
+ ],
+ nearby=["bukit-merah", "cbd-orchard"],
 ),
 dict(slug="queenstown", name="Queenstown", region="Central",
  intro="Queenstown was Singapore's first satellite estate, so it mixes some of the oldest HDB blocks on the island with tall new ones at Dawson — and business parks like one-north and Science Park.",
@@ -436,25 +536,6 @@ dict(slug="sembawang", name="Sembawang", region="North",
  nearby=["yishun", "woodlands"]),
 
 # ======================= WEST =======================
-dict(slug="jurong", name="Jurong East & Jurong West", region="West",
- intro="Jurong covers the busy Jurong Gateway district, the large HDB estates of Jurong West and Singapore's biggest industrial zone — where safes and commercial locks are a regular part of our work.",
- overview="Jurong East is home to Jurong Gateway's malls and offices and estates like Teban Gardens, Yuhua and Toh Guan. Jurong West stretches through Boon Lay, Pioneer, Hong Kah and Taman Jurong. Beyond them lie the Jurong industrial estates, with factories, warehouses and offices that need everything from padlocks to safe opening.",
- estates=["Jurong Gateway", "Teban Gardens", "Yuhua", "Toh Guan", "Boon Lay", "Pioneer", "Hong Kah", "Taman Jurong"],
- landmarks=["JEM", "Westgate", "IMM", "Jurong Point", "Jurong Lake Gardens"],
- mrt=["Jurong East", "Chinese Garden", "Lakeside", "Boon Lay", "Pioneer", "Joo Koon"],
- buildings=[
-  ("HDB estates", "Large estates across Jurong West with a mix of older and newer locks."),
-  ("Offices at Jurong Gateway", "Office suites, cabinets and access-controlled doors."),
-  ("Industrial estates", "Factories, warehouses and safes."),
- ],
- jobs=["HDB lockouts in Jurong West", "Office lockouts around Jurong Gateway", "Factory, warehouse and safe opening in the industrial estates", "Car lockouts at mall and industrial carparks"],
- access="Jurong is spread out — share your street and block number, or the factory's address and gate number.",
- faqs=[
-  ("Can you open a safe at our Jurong factory?", "Yes. We'll need authorisation from the company. WhatsApp a photo of the safe for a quote."),
-  ("Do you cover Boon Lay and Pioneer?", "Yes, all of Jurong East and Jurong West."),
- ],
- nearby=["clementi", "bukit-batok"]),
-
 dict(slug="clementi", name="Clementi", region="West",
  intro="Clementi is a mature western town full of families, students and renters — close to universities and polytechnics, with HDB estates, condos and landed homes around Sunset Way and West Coast.",
  overview="Clementi's town centre around Clementi Mall is ringed by mature HDB estates along the Clementi Avenues, with condos and landed homes towards Sunset Way, West Coast and Dover. With several universities and polytechnics nearby, many flats and rooms here are rented to students and young workers — which means plenty of lost keys, room door lockouts and lock changes between tenants.",
@@ -538,7 +619,7 @@ TOWN_BY_SLUG = {t["slug"]: t for t in TOWNS}
 OTHER_TOWNS = {
  "Central": ["Bukit Timah", "Holland", "Potong Pasir"],
  "East": ["Changi", "Simei", "Loyang"],
- "West": ["Tengah", "Tuas"],
+ "West": ["Jurong East", "Jurong West", "Tengah", "Tuas"],
  "North": ["Admiralty", "Kranji", "Mandai"],
  "North-East": ["Seletar Hills", "Buangkok"],
 }
@@ -579,14 +660,14 @@ def build(x):
         path = f"areas/{t['slug']}/"
         n = t["name"]
         crumbs = [("Home", ""), ("Areas", "areas/"), (n, path)]
-        title = f"Locksmith {n} 24/7 | Doors, Digital Locks & Safes"
+        title = f"Locksmith {n} 24/7 | Safes, Cars & Digital Locks"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas Locksmith"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas"
-        desc = f"24/7 locksmith in {n} — door lockouts, digital locks, safes and car lockouts. Uncle Thomas sets off as soon as you call. Since 1998. Call 9224 9224."
+        desc = f"24/7 locksmith in {n}: safe opening, car lockouts, digital locks and door lockouts. Uncle Thomas sets off as soon as you call. Since 1998. Call 9224 9224."
         if len(desc) > 158:
-            desc = f"24/7 locksmith in {n}: lockouts, digital locks, safes & cars. We set off as soon as you call. Since 1998. Call 9224 9224."
+            desc = f"24/7 locksmith in {n}: safes, cars, digital locks & lockouts. We set off as soon as you call. Since 1998. Call 9224 9224."
         facts = (f'<div class="facts"><div class="fact"><strong>Estates we cover</strong>{", ".join(t["estates"])}</div>'
                  f'<div class="fact"><strong>Landmarks</strong>{", ".join(t["landmarks"])}</div>'
                  f'<div class="fact"><strong>MRT / LRT</strong>{", ".join(t["mrt"])}</div>'
@@ -635,6 +716,11 @@ def build(x):
 
 # Town-specific advice paragraphs (rendered as "Lock tips for <town>").
 LOCAL_NOTES = {
+"tanglin": "In large Tanglin homes, keys tend to multiply: helpers, drivers, gardeners and contractors may all have had one at some point. If you've lost track, the simplest fix is to rekey every gate and door in one visit so old keys stop working. Do the same for safe combinations whenever household staff change.",
+"bukit-timah": "Driveway gates in Bukit Timah take a beating from daily use, rain and heat. If a gate lock starts to stick, have it replaced before it fails with the car inside. For home safes, keep the combination written down somewhere secure away from the safe, because a forgotten code is the most common reason we're called.",
+"holland-village": "Holland Village homes change hands and tenants often. If you're moving in, change the locks on day one; if you're moving out, make sure every safe is open and every code is handed over, so the next occupant doesn't inherit a locked safe with no code.",
+"river-valley": "Smart locks in River Valley condos depend on batteries and apps. Change the batteries as soon as the lock warns you, keep the mechanical backup key outside the flat (with a friend or at the office), and don't rely only on your phone to get in.",
+"sentosa-cove": "Salt air at Sentosa Cove is hard on locks and safe keypads. Before a long trip, replace safe and digital lock batteries, and check that gate locks still turn smoothly. Stainless or marine-grade gate locks last much longer here than standard ones.",
 "newton": "Newton condos are full of digital locks that are rarely given a thought until the batteries die. Change them as soon as the lock starts warning you, and keep the mechanical backup key somewhere outside the flat, such as with a family member nearby. For home safes, write the combination down and keep it somewhere safe away from the safe itself: a forgotten code is the most common reason we're called to open one.",
 "paterson": "Owners in Paterson often travel or rent their units out, so a lock can go unused for months. Before a long trip, change the digital lock batteries and check the backup key works. If you rent your unit out, change the code or cylinder between every tenancy, and keep a record of who has which code. For safes, change the combination whenever staff or tenants change.",
 "toa-payoh": "In older Toa Payoh flats, the most common warning sign we see is a key that has to be jiggled or pulled slightly to turn. That usually means the cylinder pins are worn, and it's only a matter of time before the key snaps or the lock refuses to turn at all — often late at night. Replacing a worn cylinder costs far less than an emergency call-out with a broken key stuck inside. If your gate's hook-bolt lock has started to rust from corridor washing, a few drops of lock lubricant (not cooking oil) can help, but a rusted lock body is best replaced. Families with elderly parents living alone in Toa Payoh often ask us about digital locks so that children can let themselves in — it's a sensible upgrade for older blocks, provided the door is in good condition.",
@@ -666,6 +752,11 @@ LOCAL_NOTES = {
 
 # One more town-specific question per page.
 EXTRA_FAQS = {
+"tanglin": ("Do you work at embassies and diplomatic residences in Tanglin?", "We work wherever we're authorised to. Security will need to clear us in advance, and we'll need written authorisation for any lock or safe."),
+"bukit-timah": ("Can you replace all the locks on a bungalow in one visit?", "Usually, yes. Send photos of each gate and door lock on WhatsApp, and we'll confirm the parts and price before we come."),
+"holland-village": ("Do you serve Chip Bee Gardens and Leedon Park?", "Yes. We cover all the landed estates and condos around Holland Village, 24/7."),
+"river-valley": ("How quickly can you get to Robertson Quay at night?", "River Valley is close to the city, so we usually arrive within 25–30 minutes, any time."),
+"sentosa-cove": ("Do you come to Sentosa Cove at night?", "Yes, 24/7. Let estate security know we're coming so we can get to you quickly."),
 "newton": ("Can you open my car in a Newton condo carpark?", "Yes. Tell us the carpark level, lot number and car model, and let the guardhouse know. We open cars without damage after checking the log card."),
 "paterson": ("Do you work with condo management in Paterson?", "Yes. We coordinate with the concierge or management office, and check proof of residence or ownership before opening anything."),
 "toa-payoh": ("Can you replace the lock on an old timber door in Toa Payoh?", "Yes. Older timber doors often have mortise locks set into the door edge. We'll fit a replacement that suits the existing cut-out where possible, so the door doesn't need extra work."),
@@ -698,6 +789,11 @@ EXTRA_FAQS = {
 # "A typical call in <town>": a realistic, clearly *typical* situation for each town
 # (never presented as a dated real job; real jobs go in config.RECENT_JOBS).
 TYPICAL = {
+"tanglin": "A family in a Tanglin bungalow can't open the study safe after a helper who knew the code has left. After confirming ownership, Uncle Thomas opens the safe without drilling and sets a new combination that only the family knows.",
+"bukit-timah": "A Bukit Timah homeowner reverses out for the school run and the driveway gate lock jams with the car halfway out. We open the gate, replace the worn lock body with a sturdier one, and the family is on the road again.",
+"holland-village": "An expat family leaving Singapore finds that nobody remembers the code to the wardrobe safe in their Holland Village rental. With the landlord's written authorisation, Uncle Thomas opens it the day before the movers arrive.",
+"river-valley": "A Robertson Quay resident returns from an overseas trip and the condo's smart lock won't respond: the batteries died while they were away and the backup key is inside. After checking ID with the concierge, we open the lock without damage and replace the batteries.",
+"sentosa-cove": "A boat owner at the Sentosa Cove marina can't open the small safe on board after a long season away. With proof of ownership, Uncle Thomas opens it without damaging the cabinetry around it.",
 "newton": "A family in a Newton condo can't remember the combination of the bedroom safe holding their passports, two days before a flight. They send a photo of the safe, and after checking ID with their address, Uncle Thomas opens it without drilling and sets a new combination they'll remember.",
 "paterson": "A landlord near Paterson Hill finds that a tenant has moved out and changed the digital lock code without passing it on. The new tenant arrives on Saturday. After checking proof of ownership, we open the door without damage and reset the lock so the landlord can set a new code.",
 "toa-payoh": "An auntie in a Lorong 1 block takes the rubbish to the chute in her house slippers, and the main door's old latch clicks shut behind her. Her keys are on the dining table. A neighbour lends her a phone, she WhatsApps a photo of the door, and we agree the price before we set off. The lock opens without damage, and because the key had been sticking for months, she decides to replace the worn cylinder while we're there.",
