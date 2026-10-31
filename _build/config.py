@@ -88,6 +88,7 @@ CAR_BRANDS_MORE = ["Ford", "Jaguar", "Jeep", "Renault",
 # Real jobs per brand, shown as "Recent job" on that brand's page (car or lock).
 # FILL over time with REAL jobs only, e.g. "Kaadas": ["Oct 2026, Punggol: gate lock batteries flat, opened in 20 minutes."]
 BRAND_JOBS = {
+    "Nissan": ["Oct 2026, Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."],
 }
 
 # Safe brands mentioned on the safe opening page (Uncle Thomas opens all makes).
@@ -195,6 +196,7 @@ PHOTOS = {
 # FILL: real job notes, e.g. "toa-payoh": ["Oct 2026 — HDB main door lockout at Lorong 4, opened damage-free"]
 # A town's "Recent jobs" section stays hidden until it has at least one entry.
 RECENT_JOBS = {
+    "punggol": ["Oct 2026, Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."],
 }
 
 # ---- Prices -------------------------------------------------------------
