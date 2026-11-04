@@ -468,14 +468,16 @@ dict(slug="punggol", name="Punggol", region="North-East",
   ("New BTO flats", "Digital locks on doors and gates — many fitted at key collection, some of them budget models."),
   ("Waterfront condos", "Smart locks with app control and guardhouse access."),
   ("Punggol Digital District", "Office suites and access-controlled doors."),
+  ("Multi-storey carparks", "Car lockouts are common in Punggol's HDB and condo carparks. Tell us the carpark, level and lot number, and we'll come straight to the car."),
  ],
- jobs=["Digital lock lockouts and forgotten PINs", "Replacing or upgrading digital locks fitted at key collection", "Gate digital lock installation", "Office and shop locks in the Digital District"],
+ jobs=["Digital lock lockouts and forgotten PINs", "Replacing or upgrading digital locks fitted at key collection", "Gate digital lock installation", "Office and shop locks in the Digital District", "Car lockouts in HDB and condo carparks"],
  access="Punggol's newest blocks can be hard to find on maps — your block number plus the nearest LRT station helps.",
  faqs=[
   ("The digital lock that came with my Punggol BTO keeps failing. Can you replace it?", "Yes. We open it if you're locked out, then recommend and install a reliable replacement with our no-expiry warranty."),
   ("Do you cover Punggol Point and Northshore?", "Yes, all of Punggol, 24/7."),
+  ("I'm locked out of my car in a Punggol carpark. How fast can you come?", "Usually within 25–30 minutes, and on a recent Punggol job we arrived within 15. We check the log card before opening the car."),
  ],
- nearby=["sengkang"]),
+ nearby=["sengkang", "hougang", "pasir-ris"]),
 
 # ======================= NORTH =======================
 dict(slug="woodlands", name="Woodlands", region="North",

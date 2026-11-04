@@ -54,6 +54,8 @@ dict(
 
 <h2>Locked out with a broken lock?</h2>
 <p>We open the door first, then replace the lock in the same visit if it needs it. We don't repair locks: a faulty lock is replaced, so the problem doesn't come back. See <a href="~/emergency-locksmith/">emergency locksmith</a>.</p>
+
+<p>Doing the gate as well? See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>, or find out which metal gate lock you have in our <a href="~/guides/hdb-gate-lock-types/">guide to HDB gate lock types</a>.</p>
 """,
  faqs=[
   ("How much does it cost to change an HDB main door lock?", "From {P_REPLACE}, including the new lock and installation, with a no-expiry warranty. The price depends on the lock you choose, and we confirm it before we come."),
