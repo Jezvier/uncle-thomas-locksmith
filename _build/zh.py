@@ -14,6 +14,7 @@ ZH_NAMES = {
     "lock-replacement/": "换锁（门锁 / 铁门锁）",
     "letterbox-lock-replacement/": "信箱锁更换",
     "commercial-locksmith/": "商业锁匠（办公室 / 店铺）",
+    "prices/": "开锁价格",
 }
 
 ZH_PRICES = [
@@ -29,7 +30,7 @@ ZH_PRICES = [
 
 REVIEW_NOTE = "<!-- FILL: 中文内容须由母语人士审核后才正式上线 (a native Chinese speaker must review this page before launch). -->"
 
-ID_ZH = "为了您的安全，我们在开任何门、车或保险箱之前，都会先核对居住或拥有证明，例如附有地址的身份证、租约、水电账单或车辆登记文件。"
+ID_ZH = "为了您的安全，我们在开任何门、车或保险箱之前，都会先核对您的身份证、Singpass 或其他身份证明，以及居住或拥有证明，例如附有地址的身份证、租约、水电账单或车辆登记文件。"
 WARRANTY_ZH = "所有换锁及安装工作均享有保修，且保修没有期限。"
 
 
@@ -44,11 +45,14 @@ HOME_FAQS = [
     ("开锁要多少钱？", "白天（上午9点至傍晚6点）开锁 S$70 起，非办公时间、周末及公共假期 S$90 起。电子锁开锁 S$150 起，汽车开锁 S$80 起。开工前一定先确认价格。"),
     ("开门前会核对身份吗？", "会。" + ID_ZH),
     ("会不会弄坏我的门？", "我们尽可能使用无损方法开锁，大多数情况下不会损坏门锁。如果无法无损开锁，会先向您说明方案和价格，经您同意才进行。"),
+    ("你们多久能到？", "接到电话立即出发，通常25至30分钟内到达，24小时、全岛任何地方都去。"),
+    ("你们会说华语吗？", "会。我们说华语、福建话、广东话、马来语和英语，您用最方便的语言跟我们沟通就可以。"),
+    ("怎么付款？", "工作完成后用 PayNow 付款，每项工作都开发票，家庭和公司都一样。"),
     ("你们配钥匙或修锁吗？", "不提供配钥匙和修锁服务，唯一例外是汽车遥控钥匙（车钥匙）复制。我们专门开门锁、电子锁/智能锁、保险箱和汽车，以及换锁和安装新锁。坏掉的锁我们会直接更换，而不是修理。"),
 ]
 
 EMERGENCY_FAQS = [
-    ("锁匠多久能到？", "接到电话我们立即出发，全天24小时。到达时间视您的位置和交通而定，我们会在电话中给您一个诚实的预计时间。"),
+    ("锁匠多久能到？", "接到电话我们立即出发，全天24小时，通常25至30分钟内到达。偏远地区或交通繁忙时可能稍久，我们会在电话中给您一个诚实的预计时间。"),
     ("开门前需要出示什么证明？", "需要证明您住在那里，例如附有地址的身份证、租约或水电账单。如果证件在屋内，请告诉我们，开门后可以当面核对。"),
     ("晚上开锁会贵一些吗？", "白天（上午9点至傍晚6点）开锁 S$70 起，非办公时间、周末及公共假期 S$90 起。开工前一定先确认价格。"),
     ("租客可以叫锁匠开门吗？", "可以，只要能证明您住在那里，例如出示租约或寄到该地址、写有您名字的信件。"),
@@ -266,20 +270,24 @@ ZH_PAGES = {
 </ul>
 <h2>保险箱品牌</h2>
 <p>所有品牌，包括 Yale、SentrySafe、Phoenix、Honeywell、Godrej、Diplomat、Eagle、Bumil、Booil、Chubb、Burg-Wächter 等。</p>
+<h2>不钻开也能开：转盘密码锁</h2>
+<p>Uncle Thomas 受过<strong>保险箱开锁技术（manipulation）</strong>训练，能凭手感和声音打开很多家庭和办公室保险箱常用的 Group 2M 机械转盘密码锁，不钻孔、不损坏。他在1998年入行，在美国接受了一年保险箱专业训练，1999年完成美国锁匠协会（ALOA）的锁匠基础课程。开一个保险箱可能只需5分钟，复杂的可能要5小时，视保险箱和锁的情况而定。</p>
 <h2>需要钻开吗？</h2>
-<p>要看保险箱和故障。忘记密码或钥匙不见，但锁本身没坏的保险箱，很多可以打开后继续使用。如果是锁坏了（例如键盘电路板坏了、马达坏了或锁舌卡住），大部分需要在准确的位置钻一个小孔。很多保险箱之后可以换新锁继续用。开工前我们会先说明方法和价格。</p>
+<p>要看保险箱和故障。忘记密码或钥匙不见，但锁本身没坏的保险箱，很多可以打开后继续使用。如果是锁坏了（例如键盘电路板坏了、马达坏了或锁舌卡住），大部分需要在准确的位置钻一个小孔。根据 Uncle Thomas 的经验，大约90%钻开的保险箱都可以修好继续使用。开工前我们会先说明方法和价格。</p>
 <h2>商业客户</h2>
 <p>Uncle Thomas 曾为商业办公室、当铺、银行和政府部门处理保险箱。开公司保险箱前需要公司授权，我们可以开发票给公司。</p>
 <h2>拥有证明</h2>
 <p>开任何保险箱之前，我们会确认保险箱属于您或您的公司，例如购买收据、公司授权或保险箱所在地的住址证明。所有工作都会低调处理。</p>
 <h2>保险箱开锁费用</h2>
 <p>保险箱开锁<strong>按情况报价</strong>，视品牌、大小、锁的种类和故障而定。WhatsApp 保险箱的照片（正面、键盘或转盘、品牌标签）至 {PHONE}，出发前先给您报价，说好的价格就是最终价格。</p>
-<p>English: <a href="~/safe-opening/">safe opening</a> · <a href="~/guides/safe-box-battery-dead/">safe box battery dead</a> · <a href="~/guides/forgot-safe-combination/">forgot safe password</a></p>
+<p>English: <a href="~/safe-opening/">safe opening</a> · <a href="~/guides/how-to-choose-a-safe-locksmith/">how to choose a safe locksmith</a> · <a href="~/guides/safe-box-battery-dead/">safe box battery dead</a> · <a href="~/guides/forgot-safe-combination/">forgot safe password</a></p>
 """,
  faqs=[("保险箱忘记密码怎么办？", "先换电池，再找紧急钥匙或外接电池接点。都不行的话，不要硬撬，WhatsApp 照片给我们报价。"),
        ("能不弄坏保险箱就打开吗？", "忘记密码或钥匙不见、但锁没坏的保险箱，很多可以打开后继续使用。锁坏了的话，大部分需要准确地钻一个小孔，之后很多可以换新锁。"),
        ("保险箱电池没电怎么开？", "用紧急钥匙，或在外接接点用 9V 电池临时供电后输入密码。电子保险箱没电时，密码通常不会消失。"),
        ("你们帮公司开保险箱吗？", "会。Uncle Thomas 曾为商业办公室、当铺、银行和政府部门处理保险箱，需要公司授权，可以开发票。"),
+       ("开保险箱要多久？", "从5分钟到5小时不等，视保险箱的牌子、锁的种类和情况而定。WhatsApp 照片给我们，可以先估计时间。"),
+       ("钻开的保险箱还能用吗？", "通常可以。准确地钻一个小孔后，大部分保险箱可以修好或换新锁。根据 Uncle Thomas 的经验，大约90%钻开的保险箱都能继续使用。"),
        ("保险箱开锁要多少钱？", "按情况报价。WhatsApp 照片至 {PHONE} 即可获得报价。")],
  svc="Safe opening", minp=None),
 "car-locksmith/": dict(
@@ -299,6 +307,7 @@ ZH_PAGES = {
 <h2>2. 车钥匙复制（遥控钥匙）</h2>
 <p>只剩一把钥匙？我们可以复制汽车遥控钥匙（不包括智能无钥匙钥匙），费用约 S$100–S$1,000，视车型而定，让您有一把可以用的后备钥匙。这是我们唯一复制的钥匙 — 我们不配家里的钥匙。</p>
 <p>WhatsApp 您的车牌子、型号、年份和钥匙照片（正反面）至 {PHONE}，我们会先确认能否复制以及价格。</p>
+<div class="callout"><p><strong>最近的工作：</strong>2026年10月，榜鹅（Punggol）：日产（Nissan）汽车钥匙锁在车里，15分钟内到达，不到2分钟就打开车门。</p></div>
 <h2>汽车品牌</h2>
 <p>所有主要品牌，包括丰田（Toyota）、本田（Honda）、奔驰（Mercedes-Benz）、宝马（BMW）、奥迪（Audi）、大众（Volkswagen）、马自达（Mazda）、雷克萨斯（Lexus）、路虎（Land Rover）、现代（Hyundai）、起亚（Kia）、日产（Nissan）、保时捷（Porsche）、沃尔沃（Volvo）、三菱（Mitsubishi）和斯巴鲁（Subaru）等。不确定您的车型？请致电或 WhatsApp 询问。</p>
 <div class="callout"><p><strong>拥有证明：</strong>开车门或复制钥匙之前，我们会确认车辆属于您，例如身份证和车辆登记文件（log card）。</p></div>
@@ -309,7 +318,7 @@ ZH_PAGES = {
        ("你们能复制汽车遥控钥匙吗？", "可以，限遥控钥匙，我们不复制智能（无钥匙）钥匙。费用约 S$100–S$1,000，视车型而定。请发送车型、年份和钥匙照片报价。"),
        ("你们也配家里的钥匙吗？", "不配。汽车遥控钥匙是我们唯一复制的钥匙。"),
        ("汽车开锁要多少钱？", "S$80 起，出发前先确认价格。")],
- svc="Car locksmith: unlocking and key fob cloning", minp=100),
+ svc="Car locksmith: unlocking and key fob cloning", minp=80),
 "lock-replacement/": dict(
  title="换锁 新加坡 | 组屋大门锁、铁门锁更换 | Uncle Thomas",
  desc="需要换锁？组屋大门锁、铁门锁、房门和厕所门锁更换，全岛服务，含锁及安装，保修无期限。电话 9224 9224。",
@@ -344,6 +353,42 @@ ZH_PAGES = {
        ("被锁在门外，可以顺便换锁吗？", "可以。我们先开门，如有需要，同一次上门就能换锁。"),
        ("换锁要多少钱？", "大门或铁门换锁 S$100 起，包括新锁和安装，开工前先确认价格。")],
  svc="Lock change and replacement", minp=100),
+"prices/": dict(
+ title="新加坡开锁多少钱？2026开锁价格表 | Uncle Thomas",
+ desc="新加坡开锁多少钱？白天开锁 S$70 起，晚上和周末 S$90 起，电子锁 S$150 起，汽车开锁 S$80 起。开工前先报价，PayNow 付款，开发票。电话 9224 9224。",
+ h1="新加坡开锁多少钱？2026年开锁价格",
+ sub="清楚的起价，出发前先确认最终价格，没有隐藏费用。Uncle Thomas 自1998年起为新加坡家庭和公司开锁，通常25至30分钟内到达。",
+ badges=["开工前报价", "PayNow 付款", "开发票"],
+ body="""
+<h2>开锁价格表</h2>
+{PRICE_TABLE}
+<p>以上是起价。最终价格视锁的种类、时间和地点而定，我们出发前一定先告诉您。</p>
+<h2>什么会影响价格？</h2>
+<ul>
+<li><strong>时间：</strong>白天（上午9点至傍晚6点）开锁 S$70 起；晚上、周末和公共假期 S$90 起。</li>
+<li><strong>锁的种类：</strong>普通门锁、电子锁或智能锁、汽车和保险箱的价格不同。电子锁开锁 S$150 起，汽车开锁 S$80 起。</li>
+<li><strong>是否需要换锁：</strong>如果锁已经坏了，换锁的价格包括新锁和安装，大门或铁门换锁 S$100 起，保修无期限。</li>
+<li><strong>保险箱：</strong>按情况报价，视牌子、大小、锁和故障而定。</li>
+<li><strong>汽车遥控钥匙复制：</strong>约 S$100–S$1,000，视车型而定（不包括智能无钥匙钥匙）。</li>
+</ul>
+<h2>怎样得到准确报价</h2>
+<ol>
+<li>WhatsApp 锁的照片（外面和里面）至 {PHONE}。</li>
+<li>告诉我们您的地点，以及是门、电子锁、保险箱还是汽车。</li>
+<li>我们会在出发前给您确定的价格，说好的价格就是最终价格。</li>
+</ol>
+<h2>付款和发票</h2>
+<p>工作完成后用 PayNow 付款。每项工作都开发票，家庭和公司都一样。</p>
+<div class="callout"><p><strong>安全第一：</strong>{ID}</p></div>
+<p>English: <a href="~/prices/">locksmith prices</a> · <a href="~/guides/locksmith-cost-singapore/">how much a locksmith costs in Singapore</a></p>
+""",
+ faqs=[("新加坡开锁多少钱？", "白天（上午9点至傍晚6点）开锁 S$70 起，晚上、周末和公共假期 S$90 起。出发前一定先确认价格。"),
+       ("晚上开锁会贵一些吗？", "会稍微贵一点：晚上、周末和公共假期开锁 S$90 起。"),
+       ("电子锁开锁多少钱？", "S$150 起，所有品牌。WhatsApp 锁的照片给我们，出发前先确定价格。"),
+       ("汽车开锁多少钱？", "S$80 起，无损开锁。复制汽车遥控钥匙约 S$100–S$1,000，视车型而定。"),
+       ("保险箱开锁多少钱？", "按情况报价，视保险箱的牌子、大小和锁而定。WhatsApp 照片至 {PHONE} 即可获得报价。"),
+       ("怎么付款？", "工作完成后用 PayNow 付款，每项工作都开发票。")],
+ svc="Locksmith prices", minp=70),
 }
 
 
@@ -352,7 +397,7 @@ def build_more(x):
     for en_path, d in ZH_PAGES.items():
         path = "zh/" + en_path
         crumbs = [("首页", "zh/"), (ZH_NAMES[en_path].split("（")[0], path)]
-        body_html = (d["body"].replace("{PHONE}", C.PHONE).replace("{WARRANTY}", WARRANTY_ZH).replace("{ID}", ID_ZH))
+        body_html = (d["body"].replace("{PHONE}", C.PHONE).replace("{WARRANTY}", WARRANTY_ZH).replace("{ID}", ID_ZH).replace("{PRICE_TABLE}", price_table()))
         faqs = [(q, a.replace("{PHONE}", C.PHONE)) for q, a in d["faqs"]]
         body = (REVIEW_NOTE + x["page_hero"](crumbs, d["h1"], d["sub"], d["badges"], lang="zh") +
                 f'<section class="section"><div class="container narrow prose">{body_html}'

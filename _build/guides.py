@@ -9,8 +9,9 @@ from guides_c import GUIDES_C
 from guides_d import GUIDES_D
 from guides_e import GUIDES_E
 from guides_f import GUIDES_F
+from guides_g import GUIDES_G
 
-GUIDES = GUIDES_A + GUIDES_B + GUIDES_C + GUIDES_D + GUIDES_E + GUIDES_F
+GUIDES = GUIDES_A + GUIDES_B + GUIDES_C + GUIDES_D + GUIDES_E + GUIDES_F + GUIDES_G
 from guides_extra import EXTRA, TAKEAWAYS, MORE_FAQS
 for _g in GUIDES:
     _extra = EXTRA.get(_g["slug"], "")
@@ -25,6 +26,7 @@ for _g in GUIDES:
 PUBLISHED = {g["slug"]: ("2026-10-25" if i < 4 else "2026-10-26") for i, g in enumerate(GUIDES_A + GUIDES_B)}
 PUBLISHED.update({g["slug"]: "2026-10-27" for g in GUIDES_C + GUIDES_D})
 PUBLISHED.update({g["slug"]: "2026-10-29" for g in GUIDES_E + GUIDES_F})
+PUBLISHED.update({g["slug"]: "2026-11-04" for g in GUIDES_G})
 
 def _modified(path, slug):
     """Date the guide's content last changed (tracked by build.py in lastmod.json)."""

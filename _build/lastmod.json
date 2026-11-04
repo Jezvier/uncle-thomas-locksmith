@@ -348,8 +348,8 @@
 "hash": "898acb0cbdbb57c37f533eec4b604387"
 },
 "guides/": {
-"date": "2026-10-29",
-"hash": "466ea29a5c887b5081ec375b4adc6c68"
+"date": "2026-11-04",
+"hash": "b505d9a71cc535f6eff4d9cf3f0fccab"
 },
 "guides/after-a-break-in/": {
 "date": "2026-11-01",
@@ -398,6 +398,10 @@
 "guides/how-to-choose-a-locksmith/": {
 "date": "2026-11-01",
 "hash": "0533bd2b9d896c9bdb8a226fbf2a586e"
+},
+"guides/how-to-choose-a-safe-locksmith/": {
+"date": "2026-11-04",
+"hash": "5d33a6b51d9426970421b6ccef500d4e"
 },
 "guides/how-to-choose-a-safe-singapore/": {
 "date": "2026-11-01",
@@ -505,7 +509,7 @@
 },
 "safe-opening/": {
 "date": "2026-11-04",
-"hash": "1ef5fa5398ab62cf3be7c7a32fefc41e"
+"hash": "f76070ea65bbcfe1eb6b489cccd8c9d7"
 },
 "safe-opening/booil/": {
 "date": "2026-10-29",
@@ -556,27 +560,31 @@
 "hash": "ab41de9e6ec84968d7b8757ee2681a40"
 },
 "zh/": {
-"date": "2026-10-31",
-"hash": "03127eece6e13617edde8e231af935ec"
+"date": "2026-11-04",
+"hash": "6371e810e6af5bb5f8b3d1dd60226a17"
 },
 "zh/car-locksmith/": {
-"date": "2026-10-31",
-"hash": "ef9ed5bc142e8b3cbe77e20b5a65de1c"
+"date": "2026-11-04",
+"hash": "92509875608d38bf77269da3d5a8c29b"
 },
 "zh/digital-lock-opening/": {
-"date": "2026-10-27",
-"hash": "954d17dcc68295e67517b275b222ff3d"
+"date": "2026-11-04",
+"hash": "85d1af63a6adcad03f3abd3586528f9b"
 },
 "zh/emergency-locksmith/": {
-"date": "2026-10-31",
-"hash": "8cb863f86d98933055a8714579c9d7a9"
+"date": "2026-11-04",
+"hash": "47846bcd21a32b0e440358e47f62b97c"
 },
 "zh/lock-replacement/": {
-"date": "2026-10-27",
-"hash": "fdf305753b369ff1d781ff2e4999d79f"
+"date": "2026-11-04",
+"hash": "20620d271ebdc2ec430e10a3f0e7e3e0"
+},
+"zh/prices/": {
+"date": "2026-11-04",
+"hash": "8d5a4126f32b44045d32563a6d228f51"
 },
 "zh/safe-opening/": {
-"date": "2026-10-29",
-"hash": "a8f70169450f7a3d999896f0fdb741df"
+"date": "2026-11-04",
+"hash": "69598c9001f3af018e232eb3a13f8b8a"
 }
 }

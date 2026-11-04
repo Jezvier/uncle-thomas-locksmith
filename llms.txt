@@ -8,12 +8,21 @@
 - Specialises in safes (home and office) and cars. Team: Thomas, Ong, Melvin, Andrew. Languages: English, Mandarin, Malay, Hokkien, Cantonese.
 - Usually arrives within 25–30 minutes, any time, any distance. Payment by PayNow; invoice for every job. Turns down no jobs except key duplication and key cutting.
 - Car key fob cloning: remote keys only (not smart/keyless keys), S$100–S$1,000 depending on the car.
-- Verifies proof of residence or ownership before opening any door, car or safe.
+- Checks NRIC, Singpass or other ID, plus proof of residence or ownership, before opening any door, car or safe.
+- Safe opening: trained in safe manipulation (Group 2M combination locks) to open safes without drilling; a safe takes 5 minutes to 5 hours; about 90% of drilled safes can be repaired and reused.
+- Focus areas: Orchard, Tanglin, Newton, Paterson, River Valley, Bukit Timah, Holland Village, Sentosa Cove and the CBD, plus all of Singapore.
 - Warranty on every lock replacement and installation, with no expiry date.
 - Does NOT offer key duplication, key cutting or lock repair. Only exception: clones remote car key fobs (all major brands; not smart keyless keys).
 - Also: broken key extraction; padlock opening and cutting; roller shutter locks; glass door and sliding door locks; cabinet, drawer and locker locks.
 - Safes: opens all safe types; changes combinations; replaces safe locks; recommends, supplies and installs safes. Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies.
 - UEN: 52862311K
+
+## Recent jobs (real, owner-confirmed)
+- Nov 2026, Woodlands: an elderly couple could no longer open their small, unbranded home safe. Uncle Thomas opened it for them on the spot.
+- Nov 2026, Toa Payoh: opened a locked factory door fitted with a Nelon lock, for a business client.
+- Nov 2026, Orchard Road: a cracked bedroom door lock left the resident locked out of her room. Uncle Thomas removed the broken lock and fitted a new lockset in the same visit.
+- Oct 2026, Orchard Road: a worn-out door knob broke and locked the resident out of her room in the evening. Uncle Thomas removed the broken knob and had her back in within 2 minutes.
+- Oct 2026, Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes.
 
 ## Prices (from)
 - Home / office lockout (9am–6pm): S$70
@@ -162,6 +171,20 @@
 - [Moving Into a New Home? Why and How to Change the Locks](https://singapore-locksmiths.com/guides/change-locks-new-home/)
 - [Main Door Lock Types: Mortise vs Rim vs Deadbolt vs Digital](https://singapore-locksmiths.com/guides/main-door-lock-types/)
 - [Lost Your Letterbox Key in Singapore? What to Do](https://singapore-locksmiths.com/guides/lost-letterbox-key/)
+- [How to Choose a Safe Locksmith in Singapore (2026 Guide)](https://singapore-locksmiths.com/guides/how-to-choose-a-safe-locksmith/)
+
+## Safe brands
+- [Yale Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/yale/)
+- [SentrySafe Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/sentrysafe/)
+- [Phoenix Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/phoenix/)
+- [Honeywell Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/honeywell/)
+- [Godrej Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/godrej/)
+- [Diplomat Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/diplomat/)
+- [Eagle Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/eagle/)
+- [Bumil Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/bumil/)
+- [Booil Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/booil/)
+- [Chubb Safe Forgot Password, Battery Dead or Won't Open?](https://singapore-locksmiths.com/safe-opening/chubb/)
+- [Burg-Wächter Safe: Forgot Code, Battery Dead, Won't Open](https://singapore-locksmiths.com/safe-opening/burg-wachter/)
 
 ## Chinese (中文)
 - [新加坡锁匠 24小时开锁](https://singapore-locksmiths.com/zh/)
@@ -170,3 +193,4 @@
 - [保险箱开锁服务 新加坡](https://singapore-locksmiths.com/zh/safe-opening/)
 - [汽车开锁 车钥匙复制 新加坡24小时](https://singapore-locksmiths.com/zh/car-locksmith/)
 - [换锁 新加坡](https://singapore-locksmiths.com/zh/lock-replacement/)
+- [新加坡开锁多少钱？2026开锁价格表](https://singapore-locksmiths.com/zh/prices/)

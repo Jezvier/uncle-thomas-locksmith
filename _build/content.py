@@ -191,7 +191,7 @@ dict(
 <p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, and many have hidden relockers that fire if the safe is attacked the wrong way. A wrong approach can make the job far harder or damage what's inside. Few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in <strong>safesmithing</strong>, and has since opened safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
 
 <h2>Opening a safe without drilling</h2>
-<p>Uncle Thomas is trained in <strong>safe manipulation</strong>: opening high-security Group 2M combination locks by feel and sound, with no drilling and no damage. A safe can take anywhere from 5 minutes to 5 hours, depending on the lock and its condition. When drilling is the only way in, it's done precisely, and about 90% of drilled safes can be repaired and used again.</p>
+<p>Uncle Thomas is trained in <strong>safe manipulation</strong>: opening high-security Group 2M combination locks by feel and sound, with no drilling and no damage. A safe can take anywhere from 5 minutes to 5 hours, depending on the lock and its condition. When drilling is the only way in, it's done precisely, and about 90% of drilled safes can be repaired and used again. Comparing safe locksmiths? Read <a href="~/guides/how-to-choose-a-safe-locksmith/">how to choose a safe locksmith in Singapore</a>.</p>
 
 <h2>Who we open safes for</h2>
 <ul>
@@ -842,7 +842,7 @@ def build_prices(x):
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, "Price Questions")}</div></section>''' +
             x["cta_band"]())
     nodes = x["page_schema"]("prices/", title, desc, crumbs, faqs=faqs, extra=[x["offer_catalog"]()])
-    x["render"]("prices/", title, desc, body, nodes, priority="0.9")
+    x["render"]("prices/", title, desc, body, nodes, priority="0.9", alternates={"en-SG": "prices/", "zh-SG": "zh/prices/"})
 
 
 # ======================================================================

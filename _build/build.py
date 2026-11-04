@@ -759,7 +759,9 @@ def main():
              "- Specialises in safes (home and office) and cars. Team: Thomas, Ong, Melvin, Andrew. Languages: English, Mandarin, Malay, Hokkien, Cantonese.",
              "- Usually arrives within 25–30 minutes, any time, any distance. Payment by PayNow; invoice for every job. Turns down no jobs except key duplication and key cutting.",
              "- Car key fob cloning: remote keys only (not smart/keyless keys), S$100–S$1,000 depending on the car.",
-             "- Verifies proof of residence or ownership before opening any door, car or safe.",
+             "- Checks NRIC, Singpass or other ID, plus proof of residence or ownership, before opening any door, car or safe.",
+             "- Safe opening: trained in safe manipulation (Group 2M combination locks) to open safes without drilling; a safe takes 5 minutes to 5 hours; about 90% of drilled safes can be repaired and reused.",
+             "- Focus areas: Orchard, Tanglin, Newton, Paterson, River Valley, Bukit Timah, Holland Village, Sentosa Cove and the CBD, plus all of Singapore.",
              "- Warranty on every lock replacement and installation, with no expiry date.",
              "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones remote car key fobs (all major brands; not smart keyless keys).",
              "- Also: broken key extraction; padlock opening and cutting; roller shutter locks; glass door and sliding door locks; cabinet, drawer and locker locks.",
@@ -768,6 +770,7 @@ def main():
         lines.append(f"- UEN: {C.UEN}")
     if C.EMAIL:
         lines.append(f"- Email: {C.EMAIL}")
+    lines += ["", "## Recent jobs (real, owner-confirmed)"] + [f"- {j['date']}, {j['text']}" for j in C.JOBS]
     lines += ["", "## Prices (from)"]
     for label, p, price, note in C.PRICES:
         lines.append(f"- {label}: {'S$' + str(price) if isinstance(price, int) else price}")
@@ -776,6 +779,7 @@ def main():
               ("Car brands", lambda p: p.startswith("car-locksmith/") and p.count("/") == 2),
               ("Areas", lambda p: p.startswith("areas")),
               ("Guides", lambda p: p.startswith("guides")),
+              ("Safe brands", lambda p: p.startswith("safe-opening/") and p.count("/") == 2),
               ("Chinese (中文)", lambda p: p.startswith("zh"))]
     for name, test in groups:
         lines += ["", f"## {name}"] + [f"- [{llms_title(p)}]({abs_url(p)})" for p, _, _ in PAGES if test(p)]
