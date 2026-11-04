@@ -699,9 +699,10 @@ def build_home(x):
 </section>
 {x["cta_band"]()}
 """
-    title = pick_title(("24/7 Locksmith Singapore | Since 1998 · US-Trained Safesmith",
-                        "24/7 Locksmith Singapore | Since 1998 · US-Trained Safesmith"))
-    desc = "Locked out? Uncle Thomas is Singapore's 24/7 emergency locksmith since 1998. Doors, digital locks, safes & cars, islandwide, 24/7. Call 9224 9224."
+    # CTR rewrite 4 Nov 2026: "locksmith near me" had 172 impressions at position 8 but 0 clicks.
+    title = pick_title(("24/7 Locksmith Singapore Near You | Arrives in 25–30 Min",
+                        "24/7 Locksmith Singapore Near You | Arrives in 25–30 Min"))
+    desc = "Locked out? Uncle Thomas usually arrives in 25–30 min, 24/7 islandwide. Doors, digital locks, safes & cars, from S$70. Since 1998. Call 9224 9224."
     biz = x["business_node"](full=True)
     nodes = [
         {"@type": "WebSite", "@id": C_.SITE + "/#website", "url": C_.SITE + "/", "name": C_.NAME,
