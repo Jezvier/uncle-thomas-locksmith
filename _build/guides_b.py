@@ -76,7 +76,7 @@ dict(
 # ---------------------------------------------------------------------------
 dict(
  slug="hdb-gate-lock-types", short="HDB gate lock types",
- title="HDB Gate Lock Types Explained: Which One Do You Have?",
+ title="HDB Gate Lock Types: Which Metal Gate Lock Do You Have?",
  desc="Hook bolt, padlock, rim lock or digital gate lock? A Singapore locksmith explains the common HDB gate lock types, how they fail and when to replace them.",
  h1="HDB Gate Lock Types Explained",
  card="Hook bolts, padlocks, rim locks and digital gate locks — how they work and how they fail.",

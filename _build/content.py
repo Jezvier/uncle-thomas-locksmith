@@ -564,12 +564,18 @@ def build_home(x):
     else:
         rating_html = "<!-- Google rating badge: set GOOGLE_RATING and GOOGLE_REVIEW_COUNT in _build/config.py -->"
     work = x["photo"]("home_work")
+    _towns = {t["slug"]: t["name"] for t in x["areas"].TOWNS}
+    latest_jobs = "".join(
+        f'<li>{j["date"]}, {j["text"]} <a href="~/areas/{j["area"]}/">More on {_towns.get(j["area"], "this area")} →</a></li>'
+        for j in C_.JOBS[:6])
     work_section = "" if work.startswith("<!--") else f"""
 <section class="section section-alt" id="work">
   <div class="container">
     <h2 class="section-title">Recent Jobs Across Singapore</h2>
-    <p class="section-lead">Real photos from Uncle Thomas's recent jobs: doors, digital locks, safes and letterboxes.</p>
+    <p class="section-lead">Real photos and jobs from Uncle Thomas: safes, cars, doors and digital locks.</p>
     <div class="work-grid">{work}</div>
+    <h3 style="margin-top:32px">Latest jobs</h3>
+    <ul class="jobs">{latest_jobs}</ul>
   </div>
 </section>
 """
@@ -719,6 +725,11 @@ def build_home(x):
 # ======================================================================
 # SERVICES HUB + SERVICE PAGES
 # ======================================================================
+def service_jobs_html(path):
+    jobs = C.SERVICE_JOBS.get(path, [])
+    return ('<h2>Recent jobs</h2><ul class="jobs">' + "".join(f"<li>{j}</li>" for j in jobs) + "</ul>") if jobs else ""
+
+
 def build_services(x):
     C_ = x["C"]
     lock_pills = "".join(f'<li><a href="~/digital-lock-opening/{b["slug"]}/">{b["name"]}</a></li>' for b in x["brands"].BRANDS)
@@ -770,7 +781,7 @@ def build_services(x):
     for s in SERVICES + SAFE_SERVICES + NICHE_SERVICES:
         crumbs = [("Home", ""), ("Services", "services/"), (s["short"], s["path"])]
         body = (x["page_hero"](crumbs, s["h1"], s["sub"], s["badges"]) +
-                f'<section class="section"><div class="container narrow prose">{s["body"]}{x["photo"](s["path"])}</div></section>' +
+                f'<section class="section"><div class="container narrow prose">{s["body"]}{service_jobs_html(s["path"])}{x["photo"](s["path"])}</div></section>' +
                 f'<section class="section section-alt"><div class="container narrow">{x["faq_html"](s["faqs"])}</div></section>' +
                 x["cta_band"]() + related_html(s["path"]))
         pr = C_.price(s["path"])

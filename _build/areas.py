@@ -675,7 +675,8 @@ def build(x):
         bld = "".join(f"<h3>{h}</h3><p>{p}</p>" for h, p in t["buildings"])
         jobs = "".join(f"<li>{j}</li>" for j in t["jobs"])
         recent = C.RECENT_JOBS.get(t["slug"], [])
-        recent_html = (f'<h2>Recent jobs in {n}</h2><ul class="jobs">' + "".join(f"<li>{j}</li>" for j in recent) + "</ul>"
+        _ph = x["photo"](f"areas/{t['slug']}/") if f"areas/{t['slug']}/" in C.PHOTOS else ""
+        recent_html = (f'<h2>Recent jobs in {n}</h2><ul class="jobs">' + "".join(f"<li>{j}</li>" for j in recent) + "</ul>" + _ph
                        if recent else f'<!-- FILL: real recent jobs in {n} → _build/config.py RECENT_JOBS["{t["slug"]}"]. Section hidden until then. -->')
         near = [TOWN_BY_SLUG[s] for s in t["nearby"] if s in TOWN_BY_SLUG]
         near_html = " and ".join(f'<a href="~/areas/{m["slug"]}/">{m["name"]}</a>' for m in near)

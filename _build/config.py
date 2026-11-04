@@ -87,9 +87,7 @@ CAR_BRANDS_MORE = ["Ford", "Jaguar", "Jeep", "Renault",
 
 # Real jobs per brand, shown as "Recent job" on that brand's page (car or lock).
 # FILL over time with REAL jobs only, e.g. "Kaadas": ["Oct 2026, Punggol: gate lock batteries flat, opened in 20 minutes."]
-BRAND_JOBS = {
-    "Nissan": ["Oct 2026, Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."],
-}
+BRAND_JOBS = {}   # filled from JOBS below
 
 # Safe brands mentioned on the safe opening page (Uncle Thomas opens all makes).
 SAFE_BRANDS = ["Yale", "SentrySafe", "Phoenix", "Honeywell", "Godrej", "Diplomat", "Eagle", "Bumil", "Booil", "Chubb",
@@ -134,14 +132,15 @@ PHOTOS = {
     "about_tools": ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
     # Homepage "Recent jobs" gallery
     "home_work": [
+        ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door in a carpark'),
         ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
-        ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "Main door lock replaced"),
-        ("digital-lock-installation-after.jpg", "Slim black digital door lock with camera installed on a wooden door", "Digital lock installed"),
+        ('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)'),
         ("bumil-safe-new-keypad-after.jpg", "Bumil home safe with a new electronic keypad lock fitted", "New keypad fitted to a home safe"),
-        ("digital-letterbox-lock.jpg", "Digital keypad lock fitted to a stainless steel condo letterbox", "Digital letterbox lock"),
-        ("rim-lock-replacement-after.jpg", "New rim lock with brass latch fitted to a white panelled door", "Rim lock replaced"),
+        ("digital-lock-installation-after.jpg", "Slim black digital door lock with camera installed on a wooden door", "Digital lock installed"),
+        ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "Main door lock replaced"),
     ],
-    "emergency-locksmith/":       (None, "Locksmith opening an HDB main door without damage", "A damage-free HDB lockout job"),
+    "emergency-locksmith/":       [('orchard-broken-door-knob-removal.jpg', 'Uncle Thomas removing a worn-out brass door knob that broke and locked a resident out of her room', 'Removing a worn-out knob that broke and locked a resident out (Orchard)'), ('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)')],
+    "areas/cbd-orchard/":         [('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)'), ('orchard-broken-door-knob-removal.jpg', 'Uncle Thomas removing a worn-out brass door knob that broke and locked a resident out of her room', 'Removing a worn-out knob that broke and locked a resident out (Orchard)')],
     "digital-lock-opening/":      ("kaadas-digital-lock-gate-and-door.jpg", "Kaadas digital locks on a black metal gate and a wooden main door in Singapore", "Kaadas digital locks on a gate and main door — we open all brands"),
     "digital-lock-installation/": [
         ("digital-lock-installation-before.jpg", "Wooden door with drilled holes left after the old lock was removed", "Before: old lock removed, holes in the door"),
@@ -173,7 +172,7 @@ PHOTOS = {
         ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
         ("door-lock-cover-plate-hides-old-holes.jpg", "Stainless steel cover plate and new cylinder lock on a wooden door, hiding the holes from the old lock", "A cover plate neatly hides the old lock holes"),
     ],
-    "car-locksmith/":             (None, "Car door being unlocked with non-destructive tools", "Non-destructive car unlocking"),
+    "car-locksmith/":             ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door in a carpark'),
     "lock-replacement/": [
         ("hdb-door-lock-replacement-before.jpg", "Damaged wooden main door with the old lock removed and splintered edge", "Before: damaged door, old lock removed"),
         ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "After: new lever lock and cover plate"),
@@ -195,10 +194,30 @@ PHOTOS = {
 # ---- Recent jobs per town ------------------------------------------------
 # FILL: real job notes, e.g. "toa-payoh": ["Oct 2026 — HDB main door lockout at Lorong 4, opened damage-free"]
 # A town's "Recent jobs" section stays hidden until it has at least one entry.
-RECENT_JOBS = {
-    "cbd-orchard": ["Oct 2026, Orchard Road: room door lockout after dinner. Opened in under 2 minutes."],
-    "punggol": ["Oct 2026, Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."],
-}
+# Real jobs confirmed by the owner. One list; area, service and brand pages are filled from it.
+# area = areas slug, service = service page path, brand = car or lock brand page name (optional).
+JOBS = [
+    dict(date="Nov 2026", area="woodlands", service="safe-opening/",
+         text="Woodlands: an elderly couple could no longer open their small, unbranded home safe. Uncle Thomas opened it for them on the spot."),
+    dict(date="Nov 2026", area="toa-payoh", service="commercial-locksmith/",
+         text="Toa Payoh: a factory door was locked and the key wouldn't open it. Uncle Thomas opened it for the business owner."),
+    dict(date="Nov 2026", area="cbd-orchard", service="lock-replacement/",
+         text="Orchard Road: a cracked bedroom door lock left the resident locked out of her room. Uncle Thomas removed the broken lock and fitted a new lockset in the same visit."),
+    dict(date="Nov 2026", area="cbd-orchard", service="emergency-locksmith/",
+         text="Orchard: a worn-out door knob broke and locked the resident out of her room after work. Uncle Thomas removed the broken knob and got her back in."),
+    dict(date="Oct 2026", area="cbd-orchard", service="emergency-locksmith/",
+         text="Orchard Road: room door lockout after dinner. Opened in under 2 minutes."),
+    dict(date="Oct 2026", area="punggol", service="car-locksmith/", brand="Nissan",
+         text="Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."),
+]
+RECENT_JOBS, SERVICE_JOBS = {}, {}
+for _j in JOBS:
+    _line = f'{_j["date"]}, {_j["text"]}'
+    RECENT_JOBS.setdefault(_j["area"], []).append(_line)
+    SERVICE_JOBS.setdefault(_j["service"], []).append(_line)
+    if _j.get("brand"):
+        BRAND_JOBS.setdefault(_j["brand"], []).append(_line)
+
 
 # ---- Prices -------------------------------------------------------------
 # (label, page path or None, "from" price in S$ (int) or text, short note)
