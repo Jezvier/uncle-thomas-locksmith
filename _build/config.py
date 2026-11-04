@@ -132,7 +132,7 @@ PHOTOS = {
     "about_tools": ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
     # Homepage "Recent jobs" gallery
     "home_work": [
-        ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door in a carpark'),
+        ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a Woodlands carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door (Woodlands)'),
         ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
         ('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)'),
         ("bumil-safe-new-keypad-after.jpg", "Bumil home safe with a new electronic keypad lock fitted", "New keypad fitted to a home safe"),
@@ -140,6 +140,7 @@ PHOTOS = {
         ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "Main door lock replaced"),
     ],
     "emergency-locksmith/":       [('orchard-broken-door-knob-removal.jpg', 'Uncle Thomas removing a worn-out brass door knob that broke and locked a resident out of her room', 'Removing a worn-out knob that broke and locked a resident out (Orchard)'), ('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)')],
+    "areas/woodlands/":           [('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a Woodlands carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door (Woodlands)')],
     "areas/cbd-orchard/":         [('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)'), ('orchard-broken-door-knob-removal.jpg', 'Uncle Thomas removing a worn-out brass door knob that broke and locked a resident out of her room', 'Removing a worn-out knob that broke and locked a resident out (Orchard)')],
     "digital-lock-opening/":      ("kaadas-digital-lock-gate-and-door.jpg", "Kaadas digital locks on a black metal gate and a wooden main door in Singapore", "Kaadas digital locks on a gate and main door — we open all brands"),
     "digital-lock-installation/": [
@@ -172,7 +173,7 @@ PHOTOS = {
         ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
         ("door-lock-cover-plate-hides-old-holes.jpg", "Stainless steel cover plate and new cylinder lock on a wooden door, hiding the holes from the old lock", "A cover plate neatly hides the old lock holes"),
     ],
-    "car-locksmith/":             ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door in a carpark'),
+    "car-locksmith/":             ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a Woodlands carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door (Woodlands)'),
     "lock-replacement/": [
         ("hdb-door-lock-replacement-before.jpg", "Damaged wooden main door with the old lock removed and splintered edge", "Before: damaged door, old lock removed"),
         ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "After: new lever lock and cover plate"),
@@ -200,13 +201,11 @@ JOBS = [
     dict(date="Nov 2026", area="woodlands", service="safe-opening/",
          text="Woodlands: an elderly couple could no longer open their small, unbranded home safe. Uncle Thomas opened it for them on the spot."),
     dict(date="Nov 2026", area="toa-payoh", service="commercial-locksmith/",
-         text="Toa Payoh: a factory door was locked and the key wouldn't open it. Uncle Thomas opened it for the business owner."),
+         text="Toa Payoh: opened a locked factory door fitted with a Nelon lock, for a business client."),
     dict(date="Nov 2026", area="cbd-orchard", service="lock-replacement/",
          text="Orchard Road: a cracked bedroom door lock left the resident locked out of her room. Uncle Thomas removed the broken lock and fitted a new lockset in the same visit."),
-    dict(date="Nov 2026", area="cbd-orchard", service="emergency-locksmith/",
-         text="Orchard: a worn-out door knob broke and locked the resident out of her room after work. Uncle Thomas removed the broken knob and got her back in."),
     dict(date="Oct 2026", area="cbd-orchard", service="emergency-locksmith/",
-         text="Orchard Road: room door lockout after dinner. Opened in under 2 minutes."),
+         text="Orchard Road: a worn-out door knob broke and locked the resident out of her room in the evening. Uncle Thomas removed the broken knob and had her back in within 2 minutes."),
     dict(date="Oct 2026", area="punggol", service="car-locksmith/", brand="Nissan",
          text="Punggol: Nissan car lockout. Arrived within 15 minutes and opened the door in under 2 minutes."),
 ]
