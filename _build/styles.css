@@ -71,7 +71,8 @@ strong, b { font-weight: 600; }
 .header { position: sticky; top: 0; z-index: 100; background: var(--white); box-shadow: 0 2px 12px rgba(26,34,56,.08); }
 .header-inner { display: flex; align-items: center; gap: 12px; padding-top: 8px; padding-bottom: 8px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand img { width: 52px; height: 52px; border-radius: 50%; }
+.brand picture { flex: none; display: block; }
+.brand img { width: 52px; height: 52px; border-radius: 50%; display: block; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-text strong { font-size: 1.05rem; font-weight: 800; }
 .brand-text small { font-size: .72rem; color: var(--grey); font-weight: 600; }
@@ -275,7 +276,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .footer a { text-decoration: none; }
 .footer a:hover { color: var(--yellow-light); text-decoration: underline; }
 .footer-brand { display: flex; gap: 12px; align-items: center; margin-bottom: 12px; }
-.footer-brand img { width: 48px; height: 48px; border-radius: 50%; }
+.footer-brand img { flex: none; width: 48px; height: 48px; border-radius: 50%; }
 .footer-brand strong { color: #fff; font-weight: 800; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.08); padding: 16px 0; font-size: .8rem; text-align: center; }
 
@@ -434,3 +435,12 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
 }
 /* the phone glyph has blank space on its left; nudge so "Call Now" looks centred */
 .mobile-call .bi-phone { margin-left: -4px; }
+/* Very small phones (≤350px): keep logo round, name and call button side by side without overlap */
+@media (max-width: 350px) {
+  .header-inner { gap: 8px; }
+  .brand { gap: 7px; min-width: 0; }
+  .brand img { width: 38px; height: 38px; }
+  .brand-text strong { font-size: .92rem; }
+  .header-call { padding: 8px 11px 8px 9px; font-size: .92rem; gap: 5px; }
+  .menu-btn { width: 40px; height: 40px; }
+}

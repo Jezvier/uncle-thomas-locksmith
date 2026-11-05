@@ -339,7 +339,7 @@ def header_html(path, lang="en", alt_path=None):
 <header class="header">
   <div class="container header-inner">
     <a href="{home}" class="brand" aria-label="{C.NAME} — {t["home"]}">
-      <picture><source srcset="~/assets/img/logo-112.webp" type="image/webp"><img src="~/assets/img/logo-112.png" alt="{C.NAME} logo" width="52" height="52"></picture>
+      <picture><source srcset="~/assets/img/logo-mark-ring-56.webp 1x, ~/assets/img/logo-mark-ring-112.webp 2x, ~/assets/img/logo-mark-ring-168.webp 3x" type="image/webp"><img src="~/assets/img/logo-mark-ring-112.png" alt="{C.NAME} logo" width="52" height="52"></picture>
       <span class="brand-text"><strong>Uncle Thomas</strong><small>Locksmith · Since {C.FOUNDED}</small></span>
     </a>
     <nav class="nav" aria-label="Main">{"".join(nav)}</nav>
@@ -375,7 +375,7 @@ def footer_html(lang="en"):
     return f'''<footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="footer-brand"><img src="~/assets/img/logo-112.webp" alt="" width="48" height="48" loading="lazy"><div><strong>{C.NAME}</strong><br>{C.SLOGAN}</div></div>
+      <div class="footer-brand"><img src="~/assets/img/logo-mark-96.webp" srcset="~/assets/img/logo-mark-48.webp 1x, ~/assets/img/logo-mark-96.webp 2x, ~/assets/img/logo-mark-144.webp 3x" alt="" width="48" height="48" loading="lazy"><div><strong>{C.NAME}</strong><br>{C.SLOGAN}</div></div>
       <ul class="contact-list">
         <li><span class="lbl">{t["hotline"]}:</span> <a href="tel:{C.PHONE_E164}" data-pos="footer">{C.PHONE}</a></li>
         <li><span class="lbl">WhatsApp:</span> <a href="{t["wa_link"]}" target="_blank" rel="noopener" data-pos="footer">{C.PHONE}</a></li>
