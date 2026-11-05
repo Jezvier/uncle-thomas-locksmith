@@ -21,3 +21,7 @@
 /apple-touch-icon-precomposed.png           /assets/img/apple-touch-icon.png   301
 /areas/jurong                                /areas/                            301
 /areas/jurong/                               /areas/                            301
+
+# Short review link for WhatsApp/QR after each job: singapore-locksmiths.com/review
+/review    https://search.google.com/local/writereview?placeid=ChIJW1IOQGYX2jERKiFMX6nMhjk    302
+/review/   https://search.google.com/local/writereview?placeid=ChIJW1IOQGYX2jERKiFMX6nMhjk    302

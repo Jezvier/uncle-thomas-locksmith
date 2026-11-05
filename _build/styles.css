@@ -367,7 +367,11 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .rv-card blockquote { margin: 0; font-size: .98rem; line-height: 1.6; color: var(--navy); }
 .rv-card figcaption { font-size: .88rem; color: var(--grey); margin-top: auto; }
 .rv-card figcaption a { font-weight: 600; color: var(--navy); }
-.rv-foot { text-align: center; margin-top: 18px; font-weight: 600; }
+.rv-foot { text-align: center; margin-top: 14px; font-weight: 600; }
+.rv-cta { text-align: center; margin: 22px auto 0; max-width: 560px; }
+.rv-cta p { margin: 0 0 12px; }
+.rv-cta .btn { display: inline-flex; align-items: center; gap: 8px; }
+.rv-cta .bi { width: 20px; height: 20px; color: #f5a623; }
 .rv-attr { text-align: center; font-size: .8rem; color: var(--grey); margin-top: 6px; }
 @media (min-width: 860px) { .rv-list.loaded { grid-template-columns: repeat(3, 1fr); } }
 

@@ -616,7 +616,9 @@ def build_home(x):
     <h2 class="section-title">What Customers Say on Google</h2>
     <p class="section-lead"><span class="rv-score">{C_.GOOGLE_RATING:.1f}</span> <span class="rv-stars" aria-hidden="true">★★★★★</span> from {int(C_.GOOGLE_REVIEW_COUNT)} Google reviews</p>
     <div class="rv-list" id="g-reviews" data-place="{C_.PLACE_ID}" data-key="{C_.GOOGLE_BROWSER_KEY}" aria-live="polite"></div>
-    <p class="rv-foot"><a href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read all reviews on Google</a> · <a href="{C_.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Leave a review</a></p>
+    <div class="rv-cta"><p><strong>Had a job done by Uncle Thomas?</strong> A short review helps other people in Singapore find an honest locksmith.</p>
+      <a class="btn btn-call" href="{C_.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{icons.svg("star", cls="bi", fill=True)} Review us on Google</a></div>
+    <p class="rv-foot"><a href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read all {int(C_.GOOGLE_REVIEW_COUNT)} reviews on Google</a></p>
     <p class="rv-attr">Reviews from Google</p>
   </div>
 </section>
