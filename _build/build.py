@@ -467,8 +467,8 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 <meta name="geo.region" content="SG">
 <meta name="geo.placename" content="Singapore">
 <link rel="icon" href="~/favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-32.png">
-<link rel="apple-touch-icon" href="~/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-v2-32.png">
+<link rel="apple-touch-icon" href="~/assets/img/apple-touch-icon-v2.png">
 <link rel="manifest" href="~/site.webmanifest">
 <link rel="preload" href="~/assets/fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="~/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>{pre}
@@ -742,8 +742,8 @@ def main():
     with open(os.path.join(ROOT, "site.webmanifest"), "w") as f:
         json.dump({"name": C.NAME, "short_name": "Uncle Thomas", "start_url": "./", "display": "standalone",
                    "background_color": "#ffffff", "theme_color": "#d3a80c",
-                   "icons": [{"src": "assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
-                             {"src": "assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}]}, f, indent=2)
+                   "icons": [{"src": "assets/img/icon-v2-192.png", "sizes": "192x192", "type": "image/png"},
+                             {"src": "assets/img/icon-v2-512.png", "sizes": "512x512", "type": "image/png"}]}, f, indent=2)
 
     # llms.txt (summary for AI assistants / answer engines); links follow llmstxt.org: "- [Title](url)"
     def llms_title(p):
