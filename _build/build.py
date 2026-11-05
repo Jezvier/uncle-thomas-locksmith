@@ -589,10 +589,11 @@ SCRIPT_JS = """// Uncle Thomas Locksmith — tiny JS: mobile menu, footer year, 
   var rv = document.getElementById('g-reviews');
   if (rv && window.fetch) {
     var load = function () {
-      var ck = 'g-reviews-v1', cached = null;
+      var ck = 'g-reviews-v2', cached = null;
       try { cached = JSON.parse(sessionStorage.getItem(ck)); } catch (e) {}
       var show = function (d) {
-        var list = ((d && d.reviews) || []).filter(function (r) { return r.rating >= 4 && r.text && r.text.text; }).slice(0, 3);
+        var list = ((d && d.reviews) || []).filter(function (r) { return r.rating >= 4 && r.text && r.text.text; })
+          .sort(function (a, b) { return (b.publishTime || '').localeCompare(a.publishTime || ''); }).slice(0, 3);
         list.forEach(function (r) {
           var card = document.createElement('figure'); card.className = 'rv-card';
           var st = document.createElement('div'); st.className = 'rv-stars';
