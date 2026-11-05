@@ -444,3 +444,6 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
   .header-call { padding: 8px 11px 8px 9px; font-size: .92rem; gap: 5px; }
   .menu-btn { width: 40px; height: 40px; }
 }
+
+/* "Last updated" line (freshness for readers, search engines and AI answers) */
+.updated { text-align: center; color: var(--grey); font-size: .82rem; margin: 18px 0 22px; }

@@ -510,6 +510,31 @@ def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="Web
     return nodes
 
 
+MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
+          "September", "October", "November", "December"]
+
+
+def stamp_updated(page_html, p, lastmod):
+    """Add dateModified to the page's WebPage schema and a small visible 'Last updated' line
+    (pages that already show a date, like guides, keep their own byline)."""
+    y, m, d = (int(x) for x in lastmod.split("-"))
+    wid = '"@id":"' + abs_url(p) + '#webpage",'
+    if wid in page_html and '"dateModified"' not in page_html.split(wid, 1)[1][:400].split("}", 1)[0]:
+        page_html = page_html.replace(wid, wid + '"dateModified":"' + lastmod + '",', 1)
+    main = re.search(r"<main.*?</main>", page_html, flags=re.S)
+    if not main or re.search(r"Updated [A-Z][a-z]+ 20\d\d|更新", main.group(0)) or 'class="updated"' in main.group(0):
+        return page_html
+    zh = p.startswith("zh/") or p == "zh"
+    label = f"最后更新：{y}年{m}月{d}日" if zh else f"Last updated {d} {MONTHS[m-1]} {y}"
+    line = f'<div class="container"><p class="updated"><time datetime="{lastmod}">{label}</time></p></div>\n'
+    body = main.group(0)
+    if '<section class="section cta-band"' in body:
+        body = body.replace('<section class="section cta-band"', line + '<section class="section cta-band"', 1)
+    else:
+        body = body.replace("</main>", line + "</main>", 1)
+    return page_html.replace(main.group(0), body, 1)
+
+
 def minify_css(css):
     css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
     css = re.sub(r"\s+", " ", css)
@@ -728,6 +753,11 @@ def main():
                 lastmod = old["date"]
             else:
                 lm[p or "/"] = {"hash": digest, "date": TODAY}
+            # Freshness for search engines and AI answers: same date as the sitemap, added after
+            # hashing so it never feeds back into the date itself.
+            page_html = stamp_updated(page_html, p, lastmod)
+            with open(os.path.join(ROOT, p, "index.html") if p else os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
+                f.write(page_html)
         except OSError:
             pass
         entries.append(f"  <url><loc>{abs_url(p)}</loc><lastmod>{lastmod}</lastmod><priority>{pr}</priority>{x}{imgs}</url>")
