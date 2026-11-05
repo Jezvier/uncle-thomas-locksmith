@@ -138,7 +138,7 @@ def build(x):
       <div class="shifu-item"><strong>船上与海外经验</strong><p>曾在船只和邮轮上，以及泰国、马来西亚、中国和香港为客户开保险箱。</p></div>
       <div class="shifu-item"><strong>电子锁专家</strong><p>自创无损开启故障电子锁的方法。</p></div>
     </div>
-    <div class="cta-row center"><a href="~/about/" class="btn btn-light">阅读 Uncle Thomas 的故事（英文）</a></div>
+    <div class="cta-row center"><a href="~/about/" class="btn btn-light">阅读 Uncle Thomas 的故事 (英文)</a></div>
   </div>
 </section>
 

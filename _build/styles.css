@@ -432,3 +432,5 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
   .footer-grid { gap: 0; }
   .footer-grid > div:first-child { padding-bottom: 20px; }
 }
+/* the phone glyph has blank space on its left; nudge so "Call Now" looks centred */
+.mobile-call .bi-phone { margin-left: -4px; }
