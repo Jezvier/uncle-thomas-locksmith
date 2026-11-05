@@ -251,6 +251,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .cta-band .section-title { color: #fff; }
 .cta-band .section-lead { color: #c7cbd8; }
 .cta-band .btn-call { background: var(--yellow-light); color: var(--navy); }
+.cta-band .btn-call .bi-phone { color: var(--navy); }
 
 /* ===== REVIEWS ===== */
 .review-cta { text-align: center; }
