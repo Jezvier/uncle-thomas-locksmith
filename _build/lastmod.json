@@ -248,8 +248,8 @@
 "hash": "cbf40512a824b9112169ce7d7347e7c7"
 },
 "commercial-safe-services/": {
-"date": "2026-10-29",
-"hash": "35483318efa55e421e9a970d3a63e333"
+"date": "2026-11-06",
+"hash": "16ce733af3cf4b99d9555c8815ecde6c"
 },
 "contact/": {
 "date": "2026-11-01",
@@ -348,8 +348,8 @@
 "hash": "898acb0cbdbb57c37f533eec4b604387"
 },
 "guides/": {
-"date": "2026-11-04",
-"hash": "b505d9a71cc535f6eff4d9cf3f0fccab"
+"date": "2026-11-06",
+"hash": "c090169e2993b50ed4021d224783fd93"
 },
 "guides/after-a-break-in/": {
 "date": "2026-11-01",
@@ -443,6 +443,10 @@
 "date": "2026-11-01",
 "hash": "977475290e9fc9bfc53ef258da9e83b5"
 },
+"guides/opening-a-deceased-persons-safe/": {
+"date": "2026-11-06",
+"hash": "60601715a4a43fcab3df3985cc8796f9"
+},
 "guides/police-scdf-open-door/": {
 "date": "2026-11-01",
 "hash": "f033c583aa56fd5a14a5031a305d5e64"
@@ -475,6 +479,10 @@
 "date": "2026-11-04",
 "hash": "d4ef5ec3a89b3997e877b67b5d3cc8fa"
 },
+"hotel-safe-opening/": {
+"date": "2026-11-06",
+"hash": "f0e453614e1133a29c5ff91ac03d53a1"
+},
 "letterbox-lock-replacement/": {
 "date": "2026-11-01",
 "hash": "1508839b151b5ee6161faa575d6076bb"
@@ -500,16 +508,16 @@
 "hash": "7a239e13d8f1c35e5c4924429e36d6ff"
 },
 "safe-combination-change/": {
-"date": "2026-10-29",
-"hash": "a680ea165b928c472875ce94c5cbdb58"
+"date": "2026-11-06",
+"hash": "3ef1b725b45ec624d51c86f0dd681159"
 },
 "safe-installation/": {
-"date": "2026-10-29",
-"hash": "20156eb13fe4fbe54eb51893177cba07"
+"date": "2026-11-06",
+"hash": "898d2d7665673a46cafe27eb8297b2ff"
 },
 "safe-opening/": {
-"date": "2026-11-04",
-"hash": "f76070ea65bbcfe1eb6b489cccd8c9d7"
+"date": "2026-11-06",
+"hash": "86995989edf90c6d47f82b367a069660"
 },
 "safe-opening/booil/": {
 "date": "2026-10-29",

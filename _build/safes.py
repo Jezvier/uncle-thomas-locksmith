@@ -17,6 +17,8 @@ _MORE_SAFE = """
 <li><a href="~/safe-combination-change/">Safe combination change and safe lock replacement</a>.</li>
 <li><a href="~/safe-installation/">Safe supply and installation</a>: we recommend, source and install the right safe.</li>
 <li><a href="~/commercial-safe-services/">Commercial safe services</a> for offices, shops, pawnshops, banks and government agencies.</li>
+<li><a href="~/hotel-safe-opening/">Hotel safe opening</a> for hotels, serviced apartments and ships.</li>
+<li>Guide: <a href="~/guides/opening-a-deceased-persons-safe/">opening a late family member's safe</a>.</li>
 </ul>
 """
 
@@ -180,6 +182,68 @@ dict(
   ("Can you come before our shop opens?", "Yes. We work 24/7, including early mornings, late nights, weekends and public holidays."),
   ("Our safe needs drilling. Will it still be usable?", "It depends on the safe. Some can be opened and stay usable; most faulty safes need drilling. We explain the options and price before starting, and the lock can often be replaced afterwards."),
   ("How do you confirm we're authorised?", "Typically a letter on company letterhead or confirmation from a director or manager, plus ID of the person meeting us."),
+ ],
+),
+# ----------------------------------------------------------------------
+# Added 6 Nov 2026. Hotel safe facts from official sources: Vingcard Elsafe Infinity product page
+# (service tool / SafeLink, PinKey PLUS emergency openings, 500-event audit trail, 5 AA batteries)
+# and the Chubbsafes Air Hotel CEU user manual (handheld Computerised Emergency Unit: emergency
+# opening, audit trail download, protected by its own codes). Owner-confirmed: opens all safe types,
+# commercial clients, safes on ships and cruise liners, invoices. No hotel clients are named or claimed.
+dict(
+ path="hotel-safe-opening/", short="Hotel & guest safes", icon="building",
+ card="In-room guest safes for hotels, serviced apartments and ships: emergency opening, lost service codes, failed locks.",
+ title="Hotel Safe Opening Singapore | Guest Safes & Master Codes",
+ title_exp="Hotel Safe Opening Singapore | Guest Safe Locked, 24/7",
+ desc="Guest safe locked and your service tool or master code can't open it? A US-trained safesmith opens hotel and serviced apartment safes 24/7. Invoices issued.",
+ h1="Hotel Safe Opening in Singapore",
+ sub="For hotels, serviced apartments and ships: when an in-room guest safe won't open and your own emergency tool can't help, Uncle Thomas can. 24/7, discreet, with invoices for your accounts team.",
+ badges=["Guest safes, all brands", "24/7, discreet", "Invoices issued"],
+ body="""
+<p><strong>The short answer:</strong> most hotel guest safes can be opened by the hotel itself, with a management code, a handheld emergency unit or an override key. When that fails, because the tool is missing or flat, the codes left with a former staff member, or the lock itself has failed, you need a safesmith. Uncle Thomas is US-trained, opens all safe types, and has opened safes on board ships and cruise liners as well as for businesses across Singapore.</p>
+
+<h2>How hotel safes are normally opened</h2>
+<p>In-room safes are built so the hotel can open them when a guest can't:</p>
+<ul>
+<li><strong>A handheld emergency unit.</strong> Chubbsafes' Air Hotel safes, for example, use a Computerised Emergency Unit (CEU) that can open a safe in an emergency and download its audit trail. The unit is protected by its own codes, separate from the safe's guest code (<a href="https://chubbsafes.com/en-gb/wp-content/uploads/sites/6/2024/09/Air-Hotel-CEU-User-Manual-GB.pdf" target="_blank" rel="noopener">Chubbsafes CEU manual</a>).</li>
+<li><strong>A service tool and service code.</strong> Vingcard's Elsafe Infinity is serviced from a tablet or laptop with SafeLink software and a unique service code, and its optional PinKey PLUS tool carries out emergency openings and supports named staff passwords (<a href="https://vingcard.com/en/products/electronic-hotel-safes/elsafe-infinity" target="_blank" rel="noopener">Vingcard</a>).</li>
+<li><strong>A mechanical override key</strong> on many other models.</li>
+</ul>
+<p>Most hotel safes also keep an <strong>audit trail</strong>: the Elsafe Infinity records 500 events, including when the safe was opened and by whom. That record matters if a guest disputes what was in the safe, so read it before anything else is done.</p>
+
+<h2>When to call a safesmith</h2>
+<table class="price-table info-table"><thead><tr><th scope="col">What's happened</th><th scope="col">What we do</th></tr></thead><tbody>
+<tr><td>The emergency unit or service tool is lost, broken or flat</td><td>Open the safe for you, so the guest isn't kept waiting.</td></tr>
+<tr><td>Management or service codes left with a former staff member, or the previous operator</td><td>Open the safe; where the model allows, help you get codes and access back under your control.</td></tr>
+<tr><td>Override key missing</td><td>Open the safe and advise on replacing the lock or keys.</td></tr>
+<tr><td>The safe has failed: dead keypad, leaking batteries, jammed bolt</td><td>Open it with the least damage possible and explain whether it can be repaired or should be replaced.</td></tr>
+<tr><td>Back-office safes: cash, front desk and key safes</td><td>See <a href="~/commercial-safe-services/">commercial safe services</a>.</td></tr>
+</tbody></table>
+
+<h2>How we work with hotels</h2>
+<ul>
+<li><strong>Authorisation first.</strong> We open a hotel's safes only at the request of the hotel, confirmed by a duty manager or management, with ID of the staff member meeting us.</li>
+<li><strong>Price agreed before work starts.</strong> Send photos of the safe, keypad and any brand label on WhatsApp.</li>
+<li><strong>24/7</strong>, because guests check out at all hours.</li>
+<li><strong>Discreet.</strong> We don't name our clients or publish where their safes are.</li>
+<li><strong>Invoices issued</strong> to the company.</li>
+</ul>
+
+<h2>Keep guest safes trouble-free</h2>
+<ul>
+<li>Keep the emergency unit or service tool charged and stored securely, and know who holds it on each shift.</li>
+<li>Change service and management codes when staff with access leave.</li>
+<li>Replace safe batteries on a schedule. Leaking batteries are a common cause of failed keypads.</li>
+<li>Keep a register of override keys and safe models by room.</li>
+</ul>
+<p>Serviced apartments, condo management offices and ships face the same problems. Uncle Thomas has opened safes on board ships and cruise liners.</p>
+""" + _MORE_SAFE,
+ faqs=[
+  ("A guest's safe is locked and our emergency unit can't open it. Can you help?", "Yes. Call or WhatsApp {PHONE} with photos of the safe and keypad. We open hotel guest safes 24/7, at the request of hotel management."),
+  ("Which hotel safe brands do you open?", "All types and brands of in-room safes, including electronic keypad safes with emergency units, service tools or override keys."),
+  ("Will the safe still work afterwards?", "Often, yes. If the lock itself has failed, we explain whether it can be repaired or the safe should be replaced, and the price, before we start."),
+  ("Do you need authorisation from the hotel?", "Yes. We open a hotel's safes only when hotel management requests it, with ID of the staff member meeting us."),
+  ("Can you issue an invoice?", "Yes. We issue invoices for business jobs."),
  ],
 ),
 ]

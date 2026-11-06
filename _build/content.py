@@ -264,7 +264,9 @@ dict(
 <li><a href="~/safe-combination-change/">Safe combination change and safe lock replacement</a>.</li>
 <li><a href="~/safe-installation/">Safe supply and installation</a>: we recommend, source and install the right safe.</li>
 <li><a href="~/commercial-safe-services/">Commercial safe services</a> for offices, shops, pawnshops, banks and government agencies.</li>
+<li><a href="~/hotel-safe-opening/">Hotel safe opening</a>: guest safes for hotels, serviced apartments and ships.</li>
 <li>Guide: <a href="~/guides/how-to-choose-a-safe-singapore/">how to choose a safe in Singapore</a>.</li>
+<li>Guide: <a href="~/guides/opening-a-deceased-persons-safe/">opening a late family member's safe</a>: who can authorise it and what to bring.</li>
 </ul>
 <p>Read more about <a href="~/about/">Uncle Thomas's background</a>.</p>
 """,
