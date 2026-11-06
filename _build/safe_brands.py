@@ -4,7 +4,8 @@ Safe brand pages: /safe-opening/<brand>/  (added 29 Oct 2026)
 Built around how people search (Google SG autocomplete): "<brand> safe forgot
 password / battery dead / won't open with correct code / override key / reset
 code / manual", and Singapore's "safe box" wording.
-Facts from the manufacturers' manuals and support pages in each `sources`.
+Facts from the manufacturers' manuals and support pages in each `sources`. Exception (owner, 6 Nov 2026): Morries,
+Uchida, Leeco and Premier have no manuals online; their pages give general advice only, plus retailer facts.
 Factory default codes are deliberately NOT published, even where manuals show them.
 Independent: not affiliated with any brand.
 """
@@ -138,6 +139,56 @@ DATA = {
  sources=[("Burg-Wächter safe FAQs", "https://burg.biz/en/pages/faqs-safes")],
  faqs=[("Does my Burg-Wächter safe have an emergency key?", "Basic Safe, Smart Safe, Uni-Safe and Point Safe models do. Home Safe, Cityline, Combi Line, Karat, Diplomat and Ranger models have no mechanical emergency lock."),
        ("Do I lose my code when I change Burg-Wächter safe batteries?", "On most ranges the code is kept. On Basic Safe, Smart Safe and Uni-Safe models it must be reprogrammed.")]),
+
+# ---- Added 6 Nov 2026 at the owner's request, WITHOUT official manuals (none are published online).
+# Only general, honest advice plus facts from retailer listings; no model-specific steps or codes.
+"Morries": dict(
+ about="Morries is a home appliance brand sold in Singapore, and its electronic digital safes (such as the MS-23DW) have been sold through retailers like <a href=\"https://www.courts.com.sg/morries-electronic-digital-safe-ms-23dw-IP215008.html\" target=\"_blank\" rel=\"noopener\">Courts</a>. Morries doesn't publish its safe manuals online, so if you've lost the paper manual, the steps below are the general ones that apply to most digital safe boxes of this kind.",
+ battery="Most digital safe boxes like the Morries models run on AA batteries in a compartment on the inside of the door, which you can't reach while the safe is locked. That's why the emergency key matters: it's the usual way in when the batteries have died.",
+ key="The emergency key is the usual way in when the battery is flat or the code is forgotten, which is why so many people search \"Morries safe box cannot open without key\". It usually sits behind a small cover near the keypad. If the key is lost, or it turns but the door still won't open, don't force the handle or the keyhole.",
+ code="On most safe boxes of this type, the code is changed from inside the open door, using a small reset button and then entering a new code on the keypad. Because Morries hasn't published its manual online, check the paper manual that came with the safe, or test a new code with the door open before you close it.",
+ forgot="If you've forgotten the code, the emergency key is your first option. With no key and no code, the safe needs a safesmith: we open it after checking that it's yours, and where the lock still works we keep the safe usable.",
+ quirk="A Morries safe that beeps but won't open with the right code usually has weak batteries, or the bolt is pressed against the door frame. Try pressing the door firmly shut while you turn the knob.",
+ sources=[],
+ faqs=[("My Morries safe box cannot open without the key. What now?", "If the batteries are flat or the code is forgotten, the emergency key is the normal way in. If the key is lost, call us: we open the safe after checking ownership."),
+       ("Where's the battery on a Morries safe?", "On most digital safe boxes of this type, the batteries sit inside the door, so you need the key or a working code to reach them."),
+       ("Can I get a replacement Morries safe key?", "Morries doesn't publish a key replacement service online. Try the retailer you bought it from, or ask us to open the safe and advise on the lock.")]),
+
+"Uchida": dict(
+ about="Uchida makes fire-resistant safes and envelope-slot safes sold across Southeast Asia, with both digital and dial locks: for example the UBH-37E and UBO-140E digital fire-resistant safes and the UBH-65CD dial safe, listed by retailers such as <a href=\"https://mall.lapasar.com/products/156448\" target=\"_blank\" rel=\"noopener\">Lapasar</a>. Many are heavy, from around 60 kg to 140 kg, and are used in homes, shops and offices.",
+ battery="On Uchida digital safes, as on most heavy fire-resistant safes with keypads, a dead battery leaves the keypad dark or makes it beep without the bolt moving. Change the batteries if you can reach them. If they're inside the locked door, use the key.",
+ key="Many Uchida models combine a keypad or dial with a key lock, and on dual-lock safes the key alone won't open the door: you need both the key and the code. That's why \"Uchida safe box how to open\" is such a common search. Check which lock your model has before calling.",
+ code="Uchida doesn't publish its manuals online. On most digital fire-resistant safes, the code is changed with the door open, using a reset or programming button inside the door. On dial models such as the UBH-65CD, changing the combination is a job for a safesmith, because a mistake can lock you out for good.",
+ forgot="For an Uchida digital safe with a forgotten code, try the key first if your model has a key-only override. For dial models, or dual-lock safes where you've lost the code, a safesmith is the way in. Many dial locks can be opened without drilling.",
+ quirk="Like most heavy fire-resistant safes, an older Uchida can have a door that sits tight in its frame, so the bolt binds. Push the door in firmly before turning the handle.",
+ sources=[],
+ faqs=[("How do I open an Uchida safe box?", "Use your code, and on models with a key lock, the key as well. If the code is forgotten or the dial won't open, call us: we open Uchida digital and dial safes after checking ownership."),
+       ("I forgot my Uchida safe box password. What can I do?", "Try the key if your model has a key override. If it needs both the key and the code, or it's a dial safe, a safesmith can open it, often without drilling."),
+       ("Can you change the combination on an Uchida dial safe?", "Yes. Uncle Thomas changes combinations on mechanical dial safes and tests the new one with you before he leaves.")]),
+
+"Leeco": dict(
+ about="Leeco is a Thai maker of fire-resistant safes and steel office furniture (Leeco Safe & Furniture Co.), sold by retailers such as <a href=\"https://www.homepro.co.th/p/888175000117\" target=\"_blank\" rel=\"noopener\">HomePro in Thailand</a>, including fire-resistant safes like the ES-7 and SS-CPL. If yours was bought overseas or second-hand, the paper manual may be long gone.",
+ battery="On Leeco safes with an electronic keypad, flat batteries are the most common reason the safe won't respond. If the battery box is on the outside or reachable, replace them with fresh alkaline batteries first. If the keypad stays dark, use the key.",
+ key="Many Leeco fire-resistant safes have a key lock as well as a keypad or dial. Find out whether yours needs the key alone or the key and the code together. Keep the key outside the safe and away from the paperwork inside it.",
+ code="People search \"Leeco safe box forgot password\" because the manuals are hard to find in English, and Leeco doesn't publish them online. On most keypad models, the code is reset from inside the open door. For dial models, ask a safesmith to change the combination.",
+ forgot="If you've forgotten the code on a Leeco safe and the key alone won't open it, a safesmith can. We open it after checking ownership, and where possible we keep the safe usable and set a new code with you.",
+ quirk="Leeco's office safes and steel cabinets are often moved between premises. A safe that won't open after a move may have a door that's dropped slightly on its hinges, pressing the bolts against the frame.",
+ sources=[],
+ faqs=[("I forgot my Leeco safe box password. Can you open it?", "Yes. We open Leeco safes after checking ownership, and set a new code with you where the lock still works."),
+       ("Where can I find a Leeco safe manual?", "Leeco doesn't publish its manuals online. If you've lost the paper one, WhatsApp us a photo of the safe's front and lock and we'll tell you what we see."),
+       ("Is a Leeco safe fireproof?", "Leeco sells fire-resistant safes. Check your model's label or receipt for its fire rating, and don't assume it protects hard drives unless it's rated for data.")]),
+
+"Premier": dict(
+ about="Premier is a name found on budget electronic safe boxes. There's no official online manual or support page for them, which is why \"premier safe box reset password\" is such a common search.",
+ battery="Like most small electronic safe boxes, a Premier safe box runs on batteries. If the keypad is dim, slow to respond or beeps without opening, weak batteries are the first suspect. Where the battery cover is on the inside of the door, you'll need the emergency key to reach them.",
+ key="Small safe boxes usually come with two emergency keys, often behind a cover beside the keypad. Store one away from the safe, ideally at a different address. Never keep the spare key inside the safe it opens.",
+ code="To reset the password on a small electronic safe box, the usual method is: open the door, press the small reset button on the inside of the door, enter a new code and confirm it. Then test it twice with the door open before closing it.",
+ forgot="Forgot the code and lost the keys? A safesmith can open a Premier safe box, usually with little or no damage, after checking that it's yours. In a rented room or office, we may need the landlord or manager to confirm.",
+ quirk="If a Premier safe box opens only sometimes, the battery contacts may be loose or corroded. Clean them, use fresh alkaline batteries, and don't mix old and new.",
+ sources=[],
+ faqs=[("How do I reset the password on a Premier safe box?", "With the door open, press the reset button on the inside of the door, enter a new code and confirm it. Test it with the door open before closing. If the safe is locked and the code is forgotten, use the emergency key or call us."),
+       ("My Premier safe box beeps but won't open. Why?", "Usually weak batteries or a bolt pressed against the frame. Try the emergency key, or push the door shut firmly while turning the knob."),
+       ("Can you open a Premier safe box without damaging it?", "Often, yes. We check ownership first and agree the price before we start.")]),
 }
 
 SCENARIO = {
@@ -152,6 +203,10 @@ SCENARIO = {
 "Booil": "An office moving premises finds its Booil fire-resistant filing cabinet locked, and nobody knows the code. We open it on site before the movers arrive.",
 "Chubb": "A business takes over a shophouse and finds an old Chubb safe with a dial and a key lock. No combination, no key. With proof the business owns the premises and contents, we open it and fit a new lock.",
 "Burg-Wächter": "An owner forgets the code on a Burg-Wächter Home Safe, then learns that model has no emergency key. We open the safe and talk through options for the lock.",
+"Morries": "A Morries digital safe box in a bedroom wardrobe won't respond, and the emergency key went missing during a move. We confirm ownership, open the safe, and advise whether to keep the lock or replace the safe.",
+"Uchida": "A shop's Uchida fire-resistant safe has a dial and a key lock. The key is there, but the combination left with a former manager. We open the safe and change the combination with the new owner present.",
+"Leeco": "An office's Leeco fire-resistant safe, bought years ago, won't open after the office moves, and nobody has the manual. We open it on site and check the door and bolts.",
+"Premier": "A tenant forgets the code on a small Premier safe box in a rented room, and the spare keys are with a former housemate. With the landlord's confirmation, we open the safe and the tenant sets a new code.",
 }
 
 SAFE_BRAND_PAGES = list(DATA.keys())
@@ -194,7 +249,7 @@ def build(x):
         crumbs = [("Home", ""), ("Services", "services/"), ("Safe opening", "safe-opening/"), (n, path)]
         faqs = b["faqs"] + [
             (f"Can a locksmith open a {n} safe?", f"Yes. Uncle Thomas is a US-trained safesmith who opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
-            (f"How much does it cost to open a {n} safe in Singapore?", "It depends on the model, the lock and what's wrong, so it's quoted per job. WhatsApp photos of the safe's front, keypad or dial and brand label to {PHONE} for a price before we come."),
+            (f"How much does it cost to open a {n} safe in Singapore?", "With us, safe opening starts from {P_SAFE}; the exact price depends on the model, the lock and what's wrong. WhatsApp photos of the safe's front, keypad or dial and brand label to {PHONE} for a price before we come."),
         ]
         i = [o["slug"] for o in BRANDS].index(b["slug"])
         near = (BRANDS[i + 1:] + BRANDS[:i])[:5]

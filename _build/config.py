@@ -230,7 +230,7 @@ PRICES = [
     ("Car key fob cloning (spare key)", "car-locksmith/", "S$100–S$1,000", "Remote keys; depends on the car, call to enquire"),
     ("Main door / gate lock replacement (supply + install)", "lock-replacement/", 100, "Warranty included"),
     ("Letterbox lock replacement", "letterbox-lock-replacement/", 60, "HDB & condo letterboxes"),
-    ("Safe opening", "safe-opening/", "Quote on request", "Depends on safe type"),
+    ("Safe opening", "safe-opening/", 120, "All safe types; exact price confirmed from photos"),
 ]
 # One consistent framing for schema priceRange: the lowest "from" price.
 LOWEST_PRICE = min(p[2] for p in PRICES if isinstance(p[2], int))
@@ -257,6 +257,7 @@ TOKENS = {
     "P_REPLACE": "S$100",
     "P_LETTERBOX": "S$60",
     "P_FOB": "S$100–S$1,000",
+    "P_SAFE": "S$120",
     "ARRIVAL": "25–30 minutes",
     "P_LOWEST": f"S${LOWEST_PRICE}",
     "UEN": UEN or "",

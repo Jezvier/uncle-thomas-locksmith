@@ -796,7 +796,7 @@ def main():
              "- Warranty on every lock replacement and installation, with no expiry date.",
              "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones remote car key fobs (all major brands; not smart keyless keys).",
              "- Also: broken key extraction; padlock opening and cutting; roller shutter locks; glass door and sliding door locks; cabinet, drawer and locker locks.",
-             "- Safes: opens all safe types; changes combinations; replaces safe locks; recommends, supplies and installs safes. Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies."]
+             "- Safes: opens all safe types; changes combinations; replaces safe locks; recommends and installs safes (doesn't sell safes). Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies."]
     if C.UEN:
         lines.append(f"- UEN: {C.UEN}")
     if C.EMAIL:

@@ -175,9 +175,9 @@ dict(
 dict(
  path="safe-opening/", short="Safe opening", icon="safe",
  card="Forgotten combination or faulty safe? Opened by a US-trained safesmith who has worked on ships and across Asia.",
- title="Safe Locksmith Singapore | Safe & Safe Box Opening 24/7",
+ title="Safe Locksmith Singapore | Safe Box Opening From S$120",
  title_exp="Safe Locksmith Singapore | Safe Box Opening by a Safesmith",
- desc="Safe box forgot password, battery dead or lost key? A US-trained safe locksmith opens all safe types in Singapore, homes and businesses, 24/7. Call 9224 9224.",
+ desc="Safe box forgot password, battery dead or lost key? A US-trained safesmith opens all safe types in Singapore from S$120, homes and businesses, 24/7.",
  h1="Safe Locksmith Singapore: Safe and Safe Box Opening, 24/7",
  sub="Forgotten combination, lost key, dead keypad or a jammed bolt. Uncle Thomas trained in safesmithing in the United States and opens every type of safe, for homes, offices, pawnshops, banks and government agencies.",
  badges=["US-trained safesmith", "All safe types", "Discreet, 24/7"],
@@ -257,12 +257,12 @@ dict(
 <div class="callout"><p><strong>Proof of ownership:</strong> Before opening any safe we confirm it belongs to you or your business, for example a purchase receipt, company authorisation, or proof of residence where the safe is kept. A safesmith who opens any safe without checking is a risk to everyone. Jobs are handled discreetly.</p></div>
 
 <h2>How much does safe opening cost?</h2>
-<p>Safe opening is <strong>quoted per job</strong>, because it depends on the safe's make, size, lock type and fault. A small home keypad safe with a battery problem is a very different job from a heavy commercial safe with a failed dial lock. WhatsApp {PHONE} photos of the safe and we'll give you a price before we come. The price we agree is the price you pay. Businesses can get an invoice.</p>
+<p>Safe opening starts <strong>from {P_SAFE}</strong>. The exact price depends on the safe's make, size, lock type and fault. A small home keypad safe with a battery problem is a very different job from a heavy commercial safe with a failed dial lock. WhatsApp {PHONE} photos of the safe and we'll give you a price before we come. The price we agree is the price you pay. Businesses can get an invoice.</p>
 
 <h2>More safe services</h2>
 <ul>
 <li><a href="~/safe-combination-change/">Safe combination change and safe lock replacement</a>.</li>
-<li><a href="~/safe-installation/">Safe supply and installation</a>: we recommend, source and install the right safe.</li>
+<li><a href="~/safe-installation/">Safe installation</a>: independent advice on which safe to buy, then installed properly. We don't sell safes.</li>
 <li><a href="~/commercial-safe-services/">Commercial safe services</a> for offices, shops, pawnshops, banks and government agencies.</li>
 <li><a href="~/hotel-safe-opening/">Hotel safe opening</a>: guest safes for hotels, serviced apartments and ships.</li>
 <li>Guide: <a href="~/guides/how-to-choose-a-safe-singapore/">how to choose a safe in Singapore</a>.</li>
@@ -278,7 +278,7 @@ dict(
   ("Do I need to bring the safe to you?", "No. We come to you, anywhere in Singapore, 24/7. Most safes are opened where they stand."),
   ("Can you change the combination after opening?", "Yes. We can set a new code, or fit a new lock if the old one has failed."),
   ("Do you check that the safe is mine?", "Always. We ask for proof of ownership or business authorisation before opening any safe."),
-  ("How much does safe opening cost?", "It's quoted per job, depending on the safe. Send photos on WhatsApp to {PHONE} for a price."),
+  ("How much does safe opening cost?", "From {P_SAFE}. The exact price depends on the safe and what's wrong with it, so send photos on WhatsApp to {PHONE} and we'll confirm the price before we come."),
  ],
 ),
 # ----------------------------------------------------------------------
@@ -762,7 +762,7 @@ def build_services(x):
 <tr><td>Cabinet, drawer or locker key lost</td><td><a href="~/cabinet-lock/">Cabinet, drawer &amp; locker locks</a></td></tr>
 <tr><td>Forgot a safe combination or lost the safe key</td><td><a href="~/safe-opening/">Safe opening</a></td></tr>
 <tr><td>Need a new safe code, or a faulty safe lock replaced</td><td><a href="~/safe-combination-change/">Safe combination &amp; lock change</a></td></tr>
-<tr><td>Buying a safe, or need one installed</td><td><a href="~/safe-installation/">Safe supply &amp; installation</a></td></tr>
+<tr><td>Buying a safe, or need one installed</td><td><a href="~/safe-installation/">Safe installation &amp; advice</a></td></tr>
 <tr><td>A safe at your office, shop, pawnshop or bank</td><td><a href="~/commercial-safe-services/">Commercial safe services</a></td></tr>
 <tr><td>Keys locked in the car, or need a spare key fob</td><td><a href="~/car-locksmith/">Car locksmith &amp; key fobs</a></td></tr>
 <tr><td>Lost your letterbox key</td><td><a href="~/letterbox-lock-replacement/">Letterbox lock</a></td></tr>

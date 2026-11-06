@@ -228,7 +228,7 @@ dict(
 <li>Car lockout: from <strong>{P_CAR}</strong> — <a href="~/car-locksmith/">car locksmith</a></li>
 <li>Main door / gate lock replacement (supply + install): from <strong>{P_REPLACE}</strong> — <a href="~/lock-replacement/">lock replacement</a></li>
 <li>Letterbox lock replacement: from <strong>{P_LETTERBOX}</strong> — <a href="~/letterbox-lock-replacement/">letterbox locks</a></li>
-<li>Safe opening: quoted per job — <a href="~/safe-opening/">safe opening</a></li>
+<li>Safe opening: from <strong>{P_SAFE}</strong> — <a href="~/safe-opening/">safe opening</a></li>
 </ul>
 <p>These are starting prices. Your final price is confirmed before any work begins.</p>
 

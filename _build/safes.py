@@ -2,7 +2,7 @@
 Safe pages beyond safe opening (added 29 Oct 2026).
 Owner-confirmed facts (29 Oct 2026): Uncle Thomas opens all safe types; some safes
 can be opened and stay usable, but most faulty safes need drilling; he changes
-combinations, installs safes, and recommends or procures safes on request; he has
+combinations, installs safes, and recommends safes (he does NOT sell or supply safes, owner 6 Nov 2026); he has
 worked for commercial offices, pawnshops, banks and government ministries; he
 issues invoices to companies. Don't add claims beyond these without owner input.
 """
@@ -15,7 +15,7 @@ _MORE_SAFE = """
 <ul>
 <li><a href="~/safe-opening/">Safe opening</a>: forgotten combination, lost key, dead keypad or jammed bolt.</li>
 <li><a href="~/safe-combination-change/">Safe combination change and safe lock replacement</a>.</li>
-<li><a href="~/safe-installation/">Safe supply and installation</a>: we recommend, source and install the right safe.</li>
+<li><a href="~/safe-installation/">Safe installation</a>: independent advice on which safe to buy, then installed properly.</li>
 <li><a href="~/commercial-safe-services/">Commercial safe services</a> for offices, shops, pawnshops, banks and government agencies.</li>
 <li><a href="~/hotel-safe-opening/">Hotel safe opening</a> for hotels, serviced apartments and ships.</li>
 <li>Guide: <a href="~/guides/opening-a-deceased-persons-safe/">opening a late family member's safe</a>.</li>
@@ -78,13 +78,13 @@ dict(
 ),
 # ----------------------------------------------------------------------
 dict(
- path="safe-installation/", short="Safe supply & installation", icon="wrench",
- card="Not sure which safe to buy? We recommend the right one, source it if needed, and install it properly.",
- title="Safe Installation Singapore | Advice, Supply & Bolt-Down",
- title_exp="Safe Installation Singapore | We Recommend, Supply & Install",
- desc="Buying a safe in Singapore? A US-trained safesmith recommends the right safe, sources it if needed and installs it properly, for homes and businesses.",
- h1="Safe Supply and Installation in Singapore",
- sub="Uncle Thomas has opened safes of every type for {YEARS}+ years, so he knows which ones hold up. He'll recommend the right safe for what you're protecting, source it if you need one, and install it properly.",
+ path="safe-installation/", short="Safe installation & advice", icon="wrench",
+ card="Not sure which safe to buy? Independent advice on the right one, then installed and fixed down properly.",
+ title="Safe Installation Singapore | Independent Advice & Bolt-Down",
+ title_exp="Safe Installation Singapore | Safe Advice & Bolt-Down Fixing",
+ desc="Buying a safe in Singapore? A US-trained safesmith tells you which safe to buy (we don't sell safes, so the advice is independent) and installs it properly.",
+ h1="Safe Installation and Advice in Singapore",
+ sub="Uncle Thomas has opened safes of every type for {YEARS}+ years, so he knows which ones hold up. He'll tell you which safe suits what you're protecting, and install it properly. We don't sell safes, so the advice is independent.",
  badges=["Independent advice", "Homes & businesses", "Installed properly"],
  body="""
 <p><strong>The short answer:</strong> choose a safe for what you're protecting (cash, jewellery, documents or data), how much it's worth, and where it will stand. Then make sure it's fixed down. A safe that isn't anchored can be carried away and opened somewhere else.</p>
@@ -92,7 +92,7 @@ dict(
 <h2>What we do</h2>
 <ul>
 <li><strong>Recommend:</strong> we ask what you'll keep in it, its value, and where the safe will go, then suggest the right type and size.</li>
-<li><strong>Source:</strong> if you don't have a safe yet, we can procure one for you.</li>
+<li><strong>Independent:</strong> we don't sell safes, so we have no stock to push. You buy the safe from a shop or online.</li>
 <li><strong>Install:</strong> we position the safe and fix it down where the safe and the floor allow, then set your code and check the lock with you.</li>
 <li><strong>Already bought one?</strong> We can install a safe you've bought yourself. Send us the model first so we can check it can be fixed down.</li>
 </ul>
@@ -118,7 +118,7 @@ dict(
 """ + _MORE_SAFE,
  faqs=[
   ("Can you recommend a safe for my home?", "Yes. Tell us what you'll keep in it, roughly what it's worth and where it will stand, and we'll suggest the right type and size."),
-  ("Can you supply the safe?", "Yes. If you don't have one yet, we can procure a suitable safe and install it."),
+  ("Do you sell safes?", "No. We don't sell or supply safes, so our advice is independent. Buy the safe from a safe shop or online, and we'll check the model and install it."),
   ("Should a home safe be bolted down?", "Yes, wherever the safe and floor allow. European standards expect burglary-resistant safes under 1,000 kg to be anchored, and an unanchored small safe can simply be carried away."),
   ("Is a fireproof safe good for hard drives?", "Only if it's rated for data or digital media. Safes rated for paper can still get too hot inside for electronics."),
   ("Can you install a safe I bought online?", "Usually, yes. Send us the model and photos of where it will go, and we'll confirm before we come."),
@@ -141,7 +141,7 @@ dict(
 <ul>
 <li><strong>Commercial offices:</strong> cash safes, document and filing safes, and key cabinets.</li>
 <li><strong>Pawnshops and jewellers:</strong> safes holding pledges, gold and jewellery.</li>
-<li><strong>Banks and financial businesses.</strong></li>
+<li><strong>Banks and financial businesses:</strong> including safe deposit boxes and vault doors.</li>
 <li><strong>Government ministries and agencies.</strong></li>
 <li><strong>Shops, restaurants and retail counters:</strong> drop safes and cash safes.</li>
 <li><strong>Ships and vessels:</strong> Uncle Thomas has opened safes on board ships and cruise liners.</li>
@@ -152,7 +152,7 @@ dict(
 <tr><td>A safe opened now</td><td>Forgotten code, lost key, dead keypad or a jammed bolt. See <a href="~/safe-opening/">safe opening</a>.</td></tr>
 <tr><td>A new code after staff changes</td><td>Combination changed and tested with you. See <a href="~/safe-combination-change/">combination change</a>.</td></tr>
 <tr><td>A faulty lock fixed for good</td><td>Old lock out, new lock in, so you keep the safe.</td></tr>
-<tr><td>A new or extra safe</td><td>We recommend, source and install it. See <a href="~/safe-installation/">safe installation</a>.</td></tr>
+<tr><td>A new or extra safe</td><td>We advise which one to buy and install it. See <a href="~/safe-installation/">safe installation</a>.</td></tr>
 <tr><td>Doors, shutters and office locks too</td><td>See <a href="~/commercial-locksmith/">commercial locksmith</a>.</td></tr>
 </tbody></table>
 
@@ -177,7 +177,7 @@ dict(
 </ul>
 """ + _MORE_SAFE,
  faqs=[
-  ("Do you open safes for banks and government agencies?", "Uncle Thomas has worked on safes for commercial offices, pawnshops, banks and government ministries. We need authorisation from the organisation before opening."),
+  ("Do you open safes for banks and government agencies?", "Uncle Thomas has worked on safes for commercial offices, pawnshops, banks and government ministries, including bank safe deposit boxes and vault doors. We need authorisation from the organisation before opening."),
   ("Can you issue an invoice to our company?", "Yes. We issue invoices for business jobs."),
   ("Can you come before our shop opens?", "Yes. We work 24/7, including early mornings, late nights, weekends and public holidays."),
   ("Our safe needs drilling. Will it still be usable?", "It depends on the safe. Some can be opened and stay usable; most faulty safes need drilling. We explain the options and price before starting, and the lock can often be replaced afterwards."),
@@ -189,7 +189,7 @@ dict(
 # (service tool / SafeLink, PinKey PLUS emergency openings, 500-event audit trail, 5 AA batteries)
 # and the Chubbsafes Air Hotel CEU user manual (handheld Computerised Emergency Unit: emergency
 # opening, audit trail download, protected by its own codes). Owner-confirmed: opens all safe types,
-# commercial clients, safes on ships and cruise liners, invoices. No hotel clients are named or claimed.
+# commercial clients, safes on ships and cruise liners, invoices. Owner, 6 Nov 2026: has opened safes for many hotels (never name them).
 dict(
  path="hotel-safe-opening/", short="Hotel & guest safes", icon="building",
  card="In-room guest safes for hotels, serviced apartments and ships: emergency opening, lost service codes, failed locks.",
@@ -200,7 +200,7 @@ dict(
  sub="For hotels, serviced apartments and ships: when an in-room guest safe won't open and your own emergency tool can't help, Uncle Thomas can. 24/7, discreet, with invoices for your accounts team.",
  badges=["Guest safes, all brands", "24/7, discreet", "Invoices issued"],
  body="""
-<p><strong>The short answer:</strong> most hotel guest safes can be opened by the hotel itself, with a management code, a handheld emergency unit or an override key. When that fails, because the tool is missing or flat, the codes left with a former staff member, or the lock itself has failed, you need a safesmith. Uncle Thomas is US-trained, opens all safe types, and has opened safes on board ships and cruise liners as well as for businesses across Singapore.</p>
+<p><strong>The short answer:</strong> most hotel guest safes can be opened by the hotel itself, with a management code, a handheld emergency unit or an override key. When that fails, because the tool is missing or flat, the codes left with a former staff member, or the lock itself has failed, you need a safesmith. Uncle Thomas is US-trained, opens all safe types, and has opened guest safes for many hotels over the years, as well as safes on board ships and cruise liners.</p>
 
 <h2>How hotel safes are normally opened</h2>
 <p>In-room safes are built so the hotel can open them when a guest can't:</p>
@@ -240,6 +240,7 @@ dict(
 """ + _MORE_SAFE,
  faqs=[
   ("A guest's safe is locked and our emergency unit can't open it. Can you help?", "Yes. Call or WhatsApp {PHONE} with photos of the safe and keypad. We open hotel guest safes 24/7, at the request of hotel management."),
+  ("Have you worked with hotels before?", "Yes. Uncle Thomas has opened guest safes for many hotels over the years. We don't name our clients."),
   ("Which hotel safe brands do you open?", "All types and brands of in-room safes, including electronic keypad safes with emergency units, service tools or override keys."),
   ("Will the safe still work afterwards?", "Often, yes. If the lock itself has failed, we explain whether it can be repaired or the safe should be replaced, and the price, before we start."),
   ("Do you need authorisation from the hotel?", "Yes. We open a hotel's safes only when hotel management requests it, with ID of the staff member meeting us."),

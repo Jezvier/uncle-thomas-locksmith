@@ -110,7 +110,7 @@ EXTRA = {
 <li><strong>Digital lock dead on a Sunday, emergency power didn't work:</strong> digital lock opening from {P_DIGITAL_OPEN}.</li>
 <li><strong>Keys locked in the car at a mall carpark:</strong> car lockout from {P_CAR}.</li>
 <li><strong>Lost letterbox key:</strong> letterbox lock replacement from {P_LETTERBOX}, including the new lock and keys.</li>
-<li><strong>Forgotten code on a home safe:</strong> quoted per job after we see a photo.</li>
+<li><strong>Forgotten code on a home safe:</strong> safe opening from {P_SAFE}, confirmed after we see a photo.</li>
 </ul>
 <h2>Ways to keep the cost down</h2>
 <ul>

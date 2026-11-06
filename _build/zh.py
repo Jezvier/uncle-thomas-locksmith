@@ -25,7 +25,7 @@ ZH_PRICES = [
     ("汽车开锁（无损开锁）", "car-locksmith/", "S$80 起"),
     ("大门 / 铁门换锁（含锁及安装）", "lock-replacement/", "S$100 起"),
     ("信箱锁更换", "letterbox-lock-replacement/", "S$60 起"),
-    ("保险箱开锁", "safe-opening/", "按情况报价"),
+    ("保险箱开锁", "safe-opening/", "S$120 起"),
 ]
 
 REVIEW_NOTE = "<!-- FILL: 中文内容须由母语人士审核后才正式上线 (a native Chinese speaker must review this page before launch). -->"
@@ -279,7 +279,7 @@ ZH_PAGES = {
 <h2>拥有证明</h2>
 <p>开任何保险箱之前，我们会确认保险箱属于您或您的公司，例如购买收据、公司授权或保险箱所在地的住址证明。所有工作都会低调处理。</p>
 <h2>保险箱开锁费用</h2>
-<p>保险箱开锁<strong>按情况报价</strong>，视品牌、大小、锁的种类和故障而定。WhatsApp 保险箱的照片（正面、键盘或转盘、品牌标签）至 {PHONE}，出发前先给您报价，说好的价格就是最终价格。</p>
+<p>保险箱开锁<strong>{P_SAFE} 起</strong>，实际价格视品牌、大小、锁的种类和故障而定。WhatsApp 保险箱的照片（正面、键盘或转盘、品牌标签）至 {PHONE}，出发前先给您报价，说好的价格就是最终价格。</p>
 <p>English: <a href="~/safe-opening/">safe opening</a> · <a href="~/guides/how-to-choose-a-safe-locksmith/">how to choose a safe locksmith</a> · <a href="~/guides/safe-box-battery-dead/">safe box battery dead</a> · <a href="~/guides/forgot-safe-combination/">forgot safe password</a></p>
 """,
  faqs=[("保险箱忘记密码怎么办？", "先换电池，再找紧急钥匙或外接电池接点。都不行的话，不要硬撬，WhatsApp 照片给我们报价。"),
@@ -288,7 +288,7 @@ ZH_PAGES = {
        ("你们帮公司开保险箱吗？", "会。Uncle Thomas 曾为商业办公室、当铺、银行和政府部门处理保险箱，需要公司授权，可以开发票。"),
        ("开保险箱要多久？", "从5分钟到5小时不等，视保险箱的牌子、锁的种类和情况而定。WhatsApp 照片给我们，可以先估计时间。"),
        ("钻开的保险箱还能用吗？", "通常可以。准确地钻一个小孔后，大部分保险箱可以修好或换新锁。根据 Uncle Thomas 的经验，大约90%钻开的保险箱都能继续使用。"),
-       ("保险箱开锁要多少钱？", "按情况报价。WhatsApp 照片至 {PHONE} 即可获得报价。")],
+       ("保险箱开锁要多少钱？", "{P_SAFE} 起。实际价格视保险箱而定，WhatsApp 照片至 {PHONE}，出发前先确认价格。")],
  svc="Safe opening", minp=None),
 "car-locksmith/": dict(
  title="汽车开锁 车钥匙复制 新加坡24小时 | 所有品牌 | Uncle Thomas",
@@ -368,7 +368,7 @@ ZH_PAGES = {
 <li><strong>时间：</strong>白天（上午9点至傍晚6点）开锁 S$70 起；晚上、周末和公共假期 S$90 起。</li>
 <li><strong>锁的种类：</strong>普通门锁、电子锁或智能锁、汽车和保险箱的价格不同。电子锁开锁 S$150 起，汽车开锁 S$80 起。</li>
 <li><strong>是否需要换锁：</strong>如果锁已经坏了，换锁的价格包括新锁和安装，大门或铁门换锁 S$100 起，保修无期限。</li>
-<li><strong>保险箱：</strong>按情况报价，视牌子、大小、锁和故障而定。</li>
+<li><strong>保险箱：</strong>{P_SAFE} 起，实际价格视牌子、大小、锁和故障而定。</li>
 <li><strong>汽车遥控钥匙复制：</strong>约 S$100–S$1,000，视车型而定（不包括智能无钥匙钥匙）。</li>
 </ul>
 <h2>怎样得到准确报价</h2>
@@ -386,7 +386,7 @@ ZH_PAGES = {
        ("晚上开锁会贵一些吗？", "会稍微贵一点：晚上、周末和公共假期开锁 S$90 起。"),
        ("电子锁开锁多少钱？", "S$150 起，所有品牌。WhatsApp 锁的照片给我们，出发前先确定价格。"),
        ("汽车开锁多少钱？", "S$80 起，无损开锁。复制汽车遥控钥匙约 S$100–S$1,000，视车型而定。"),
-       ("保险箱开锁多少钱？", "按情况报价，视保险箱的牌子、大小和锁而定。WhatsApp 照片至 {PHONE} 即可获得报价。"),
+       ("保险箱开锁多少钱？", "{P_SAFE} 起，实际价格视保险箱的牌子、大小和锁而定。WhatsApp 照片至 {PHONE}，出发前先确认价格。"),
        ("怎么付款？", "工作完成后用 PayNow 付款，每项工作都开发票。")],
  svc="Locksmith prices", minp=70),
 }

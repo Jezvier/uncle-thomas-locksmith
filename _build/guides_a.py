@@ -195,7 +195,7 @@ dict(
 </ul>
 
 <h2>What it costs</h2>
-<p>Safe opening is <strong>quoted per job</strong>, because the work depends on the safe's make, size, lock type and condition. A small electronic home safe with a battery or override problem is very different from a heavy commercial safe with a mechanical dial. WhatsApp {PHONE} the photos above and we'll give you a price before we come. If the safe's lock needs replacing after opening, we'll explain the options. See our <a href="~/prices/">price list</a> for other services.</p>
+<p>Safe opening starts <strong>from {P_SAFE}</strong>. The exact price depends on the safe's make, size, lock type and condition. A small electronic home safe with a battery or override problem is very different from a heavy commercial safe with a mechanical dial. WhatsApp {PHONE} the photos above and we'll give you a price before we come. If the safe's lock needs replacing after opening, we'll explain the options. See our <a href="~/prices/">price list</a> for other services.</p>
 
 <h2>Preventing it next time</h2>
 <ul>
@@ -210,7 +210,7 @@ dict(
 """,
  faqs=[
   ("Can a safe be opened without damaging it?", "Often, yes — it depends on the safe and the fault. A trained safesmith will explain the method before starting."),
-  ("How much does safe opening cost in Singapore?", "It depends on the make, size and lock type, so it's quoted per job. Send a photo for a price."),
+  ("How much does safe opening cost in Singapore?", "With us, from {P_SAFE}. The exact price depends on the make, size and lock type, so send a photo and we'll confirm it before we come."),
   ("I inherited a safe and no one knows the code. Can you open it?", "Yes, with proof that you have the right to open it — for example, documents showing you're the executor or owner of the property."),
   ("Do you open hotel or ship safes?", "Yes, with authorisation from the operator. Uncle Thomas has opened safes on ships and cruise liners."),
  ],

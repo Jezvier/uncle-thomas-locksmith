@@ -138,9 +138,9 @@ dict(
 <p>Home contents policies often have limits for jewellery and valuables, and some cover items differently when they're kept in a home safe or a bank vault. Read your policy's valuables section, or ask your insurer, before deciding how much to keep at home.</p>
 
 <h2>How we help</h2>
-<p>Uncle Thomas can recommend the right safe for what you're protecting, source it if you need one, and install it properly, for homes and businesses across Singapore. Already have a safe that won't open? See <a href="~/safe-opening/">safe opening</a>. Want to keep your current safe but change the code or replace a tired lock? See <a href="~/safe-combination-change/">safe combination change</a>.</p>
+<p>Uncle Thomas can tell you which safe suits what you're protecting, and install it properly, for homes and businesses across Singapore. He doesn't sell safes, so the advice is independent. Already have a safe that won't open? See <a href="~/safe-opening/">safe opening</a>. Want to keep your current safe but change the code or replace a tired lock? See <a href="~/safe-combination-change/">safe combination change</a>.</p>
 <p><em>Standards summarised as of October 2026. Ratings and labels vary by manufacturer and testing body, so check the certificate for the exact model.</em></p>
-<div class="callout navy"><p><strong>Need advice on a safe?</strong> WhatsApp {PHONE} what you'll keep in it and where it will go. See <a href="~/safe-installation/">safe supply and installation</a>.</p></div>
+<div class="callout navy"><p><strong>Need advice on a safe?</strong> WhatsApp {PHONE} what you'll keep in it and where it will go. See <a href="~/safe-installation/">safe installation</a>.</p></div>
 """,
  faqs=[
   ("What's the difference between a fire safe and a burglary safe?", "A fire safe keeps the inside cool enough to protect paper or data for a set time. A burglary safe resists being broken into. Many safes are only one or the other, so check both ratings if you need both."),
@@ -148,7 +148,7 @@ dict(
   ("Should I bolt my home safe to the floor?", "Yes, wherever possible. European standards expect burglary-resistant safes under 1,000 kg to be anchored, and an unanchored small safe can be carried away."),
   ("Keypad or dial: which is better?", "Keypads are quicker and easier to re-code but need batteries. Dials need no batteries and last a long time, but are slower to open."),
   ("How do I stop my safe getting damp in Singapore?", "Keep a silica gel pack inside and change it regularly, put important papers in sealed sleeves, and open the safe now and then to air it."),
-  ("Can you supply and install a safe?", "Yes. Uncle Thomas can recommend, source and install a safe for your home or business. WhatsApp {PHONE} for advice."),
+  ("Do you sell safes?", "No. Uncle Thomas doesn't sell safes, so his advice on which one to buy is independent. He can install the safe you buy, for your home or business. WhatsApp {PHONE} for advice."),
  ],
 ),
 # ----------------------------------------------------------------------

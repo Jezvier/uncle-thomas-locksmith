@@ -249,7 +249,7 @@
 },
 "commercial-safe-services/": {
 "date": "2026-11-06",
-"hash": "16ce733af3cf4b99d9555c8815ecde6c"
+"hash": "b3f5389c984aa72b4dd6d28d7b506705"
 },
 "contact/": {
 "date": "2026-11-01",
@@ -388,8 +388,8 @@
 "hash": "3dfa76538dde8ebd969228b0b81a10fe"
 },
 "guides/forgot-safe-combination/": {
-"date": "2026-11-01",
-"hash": "5ba742557389927fe6d8822111ffef6c"
+"date": "2026-11-06",
+"hash": "a7f28b24f1ee5fec5d111e2f9eecfc6c"
 },
 "guides/hdb-gate-lock-types/": {
 "date": "2026-11-01",
@@ -400,12 +400,12 @@
 "hash": "0533bd2b9d896c9bdb8a226fbf2a586e"
 },
 "guides/how-to-choose-a-safe-locksmith/": {
-"date": "2026-11-04",
-"hash": "5d33a6b51d9426970421b6ccef500d4e"
+"date": "2026-11-06",
+"hash": "b5cc09a2acfb0d054ee86d49adf156f9"
 },
 "guides/how-to-choose-a-safe-singapore/": {
-"date": "2026-11-01",
-"hash": "00b224a83865a0a358d616775333edfb"
+"date": "2026-11-06",
+"hash": "d49132062bb58d76f915507217b104e2"
 },
 "guides/keys-locked-in-car/": {
 "date": "2026-11-01",
@@ -420,8 +420,8 @@
 "hash": "0a9d2fc414ae39d295d54a067c000ea1"
 },
 "guides/locksmith-cost-singapore/": {
-"date": "2026-11-01",
-"hash": "0bc1028f24d703d2601e64cf60dcca99"
+"date": "2026-11-06",
+"hash": "53e85e216ac67bb68d3d1cd165630c26"
 },
 "guides/lost-car-key-fob/": {
 "date": "2026-11-01",
@@ -481,7 +481,7 @@
 },
 "hotel-safe-opening/": {
 "date": "2026-11-06",
-"hash": "f0e453614e1133a29c5ff91ac03d53a1"
+"hash": "63da6b84a625f96da3399f069a4ddf95"
 },
 "letterbox-lock-replacement/": {
 "date": "2026-11-01",
@@ -496,8 +496,8 @@
 "hash": "3d34e6f1dd86360c6661fd15697f6488"
 },
 "prices/": {
-"date": "2026-11-01",
-"hash": "9aa23196ed2dbb711bec6f62cb9f6708"
+"date": "2026-11-06",
+"hash": "0b015ca58a8014e1a77e39e118131c77"
 },
 "privacy/": {
 "date": "2026-11-01",
@@ -509,67 +509,83 @@
 },
 "safe-combination-change/": {
 "date": "2026-11-06",
-"hash": "3ef1b725b45ec624d51c86f0dd681159"
+"hash": "099c088b4e165465df9f1543bb4b6a4f"
 },
 "safe-installation/": {
 "date": "2026-11-06",
-"hash": "898d2d7665673a46cafe27eb8297b2ff"
+"hash": "e61cf0aaecf8f093b6931284170268f7"
 },
 "safe-opening/": {
 "date": "2026-11-06",
-"hash": "86995989edf90c6d47f82b367a069660"
+"hash": "302a5cb9e46232e68ddf02d02bda1763"
 },
 "safe-opening/booil/": {
-"date": "2026-10-29",
-"hash": "f67e1349d81c2ba46c2246625552a0c4"
+"date": "2026-11-06",
+"hash": "7c49639fcbc45d55a16231eba9ebfbd2"
 },
 "safe-opening/bumil/": {
-"date": "2026-10-29",
-"hash": "427051314c021142b59d873879d80d9c"
+"date": "2026-11-06",
+"hash": "48c89c923cdd38dd30081ae58c46d688"
 },
 "safe-opening/burg-wachter/": {
-"date": "2026-10-29",
-"hash": "9456116876ba0fa3731c95d7a2cc865d"
+"date": "2026-11-06",
+"hash": "fecafbbc103996b522f62130f4a563d2"
 },
 "safe-opening/chubb/": {
-"date": "2026-10-29",
-"hash": "b0ec2f0210ea4049bef573842df6c6bb"
+"date": "2026-11-06",
+"hash": "a4d68b65e2509d6c738cfb60b34a53e9"
 },
 "safe-opening/diplomat/": {
-"date": "2026-10-29",
-"hash": "ca110cee711e615b530fed7e561a447a"
+"date": "2026-11-06",
+"hash": "5c0a2f5d858c6738d9444aa8d25ccca9"
 },
 "safe-opening/eagle/": {
-"date": "2026-10-29",
-"hash": "2b4a9973000ff52e57752e6761adee7c"
+"date": "2026-11-06",
+"hash": "9f6d0c098c7b6ee401f1b7e3b7d57e53"
 },
 "safe-opening/godrej/": {
-"date": "2026-10-29",
-"hash": "9c717d5f5cb491fdf5391817a3db150e"
+"date": "2026-11-06",
+"hash": "1d84d1918c24ceb02f3f6272f10da2e0"
 },
 "safe-opening/honeywell/": {
-"date": "2026-10-29",
-"hash": "9049a0e25fb1c96b250adff03c61fea2"
+"date": "2026-11-06",
+"hash": "1ec89ed399a352c22fe910aec6b6c753"
+},
+"safe-opening/leeco/": {
+"date": "2026-11-06",
+"hash": "8b881097adbacf8f1b56b8d2d1693c87"
+},
+"safe-opening/morries/": {
+"date": "2026-11-06",
+"hash": "ddb5342c39875635ab7e27ac70d3de19"
 },
 "safe-opening/phoenix/": {
-"date": "2026-10-29",
-"hash": "cc234edfece7827535a7e12a0a7f0a13"
+"date": "2026-11-06",
+"hash": "b8c5fa2c93177b131b93d7e6d0bd6426"
+},
+"safe-opening/premier/": {
+"date": "2026-11-06",
+"hash": "ed6e00e5983f92ce593233a1e32b751f"
 },
 "safe-opening/sentrysafe/": {
-"date": "2026-10-29",
-"hash": "2932131e6415b7b96473e9b982dfe28a"
+"date": "2026-11-06",
+"hash": "06e6ec6f84fc7f9383a3741411433761"
+},
+"safe-opening/uchida/": {
+"date": "2026-11-06",
+"hash": "55e136654709cff2405641e0036531f7"
 },
 "safe-opening/yale/": {
-"date": "2026-10-29",
-"hash": "214d3283f9acb8da446e15ad02120693"
+"date": "2026-11-06",
+"hash": "29d19635f29271910f6e819ffdf8257e"
 },
 "services/": {
-"date": "2026-11-01",
-"hash": "ab41de9e6ec84968d7b8757ee2681a40"
+"date": "2026-11-06",
+"hash": "da9e5643054a4e430eef12ff33b3eb92"
 },
 "zh/": {
-"date": "2026-11-05",
-"hash": "e75c990c5fa746134454f6321b4227cb"
+"date": "2026-11-06",
+"hash": "1c967a6d1895cbb4047b902c631a3752"
 },
 "zh/car-locksmith/": {
 "date": "2026-11-04",
@@ -588,11 +604,11 @@
 "hash": "20620d271ebdc2ec430e10a3f0e7e3e0"
 },
 "zh/prices/": {
-"date": "2026-11-04",
-"hash": "8d5a4126f32b44045d32563a6d228f51"
+"date": "2026-11-06",
+"hash": "ed959b34673eb17cc3f60736c0db39f2"
 },
 "zh/safe-opening/": {
-"date": "2026-11-04",
-"hash": "69598c9001f3af018e232eb3a13f8b8a"
+"date": "2026-11-06",
+"hash": "bfdf8ad0c8192ff4b88fa0c8391f4033"
 }
 }

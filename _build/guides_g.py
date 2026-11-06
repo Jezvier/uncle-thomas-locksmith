@@ -35,7 +35,7 @@ dict(
 <p>A trustworthy safesmith won't open a safe without proof that it's yours. Expect to show your NRIC or other ID with the address, or for a business safe, authorisation from the owner or a director. It can feel like a hassle when you're stressed, but a locksmith who skips this would open anyone's safe, including yours.</p>
 
 <h2>4. Get the price before they start</h2>
-<p>Safe jobs are usually quoted rather than fixed-price, because the work depends on the safe's make, size, lock type and condition. A job can take anywhere from 5 minutes to 5 hours. Send clear photos of the safe, the lock and any brand label on WhatsApp, and you should get an honest estimate, including whether drilling is likely, before anyone sets off. For general price ranges, see <a href="~/guides/locksmith-cost-singapore/">how much a locksmith costs in Singapore</a>.</p>
+<p>Safe jobs are usually priced per safe, because the work depends on the safe's make, size, lock type and condition. With Uncle Thomas, safe opening starts from {P_SAFE}. A job can take anywhere from 5 minutes to 5 hours. Send clear photos of the safe, the lock and any brand label on WhatsApp, and you should get an honest estimate, including whether drilling is likely, before anyone sets off. For general price ranges, see <a href="~/guides/locksmith-cost-singapore/">how much a locksmith costs in Singapore</a>.</p>
 
 <h2>5. Ask what happens after it's open</h2>
 <ul>
