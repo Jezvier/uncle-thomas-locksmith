@@ -155,7 +155,7 @@ dict(
 <p>If you rent, ask your landlord before changing the gate lock. If you own the flat and are also changing the gate itself, HDB doesn't require a permit, but the new gate must keep the original width, number of panels and swing.</p>
 
 <h2>Brands we install and open</h2>
-<p>We work with every brand, including Samsung, Yale, Philips, Igloohome, Kaadas, Solity, Gateman, Häfele, Aqara, Xiaomi and Lenovo. Bought a lock online? We'll install it. Send a photo first so we can confirm it fits. See <a href="~/digital-lock-installation/">digital and smart lock installation</a> (labour from <strong>{P_DIGITAL_INSTALL}</strong>, no-expiry warranty).</p>
+<p>We work with every brand, including Samsung, Yale, Philips, Igloohome, Kaadas, Solity, Gateman, Häfele, Aqara, Xiaomi and Lenovo. Bought a lock online? We'll install it. Send a photo first so we can confirm it fits. See <a href="~/hdb-gate-digital-lock/">digital lock for HDB gate: supply and installation</a> and <a href="~/digital-lock-installation/">digital and smart lock installation</a> (labour from <strong>{P_DIGITAL_INSTALL}</strong>, no-expiry warranty).</p>
 <div class="callout navy"><p>Want a recommendation for your gate? WhatsApp a photo to {PHONE}.</p></div>
 """,
  faqs=[

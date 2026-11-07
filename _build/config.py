@@ -143,6 +143,7 @@ PHOTOS = {
     "areas/woodlands/":           [('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a Woodlands carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door (Woodlands)')],
     "areas/cbd-orchard/":         [('orchard-room-door-lock-replacement.jpg', 'Uncle Thomas fitting a new stainless steel knob lockset to a bedroom door in an Orchard apartment', 'Fitting a new lockset after a bedroom door lock cracked (Orchard)'), ('orchard-broken-door-knob-removal.jpg', 'Uncle Thomas removing a worn-out brass door knob that broke and locked a resident out of her room', 'Removing a worn-out knob that broke and locked a resident out (Orchard)')],
     "digital-lock-opening/":      ("kaadas-digital-lock-gate-and-door.jpg", "Kaadas digital locks on a black metal gate and a wooden main door in Singapore", "Kaadas digital locks on a gate and main door — we open all brands"),
+    "hdb-gate-digital-lock/":     ("kaadas-digital-lock-gate-and-door.jpg", "Kaadas digital locks on a black metal gate and a wooden main door in Singapore", "A matching digital lock set on an HDB gate and main door"),
     "digital-lock-installation/": [
         ("digital-lock-installation-before.jpg", "Wooden door with drilled holes left after the old lock was removed", "Before: old lock removed, holes in the door"),
         ("digital-lock-installation-after.jpg", "Slim black digital door lock with camera installed on a wooden door", "After: new digital lock installed"),

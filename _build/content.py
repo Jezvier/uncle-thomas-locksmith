@@ -133,7 +133,7 @@ dict(
 <h2>What we install</h2>
 <ul>
 <li><strong>HDB main door digital locks and smart locks</strong> — including replacing an old mechanical lock.</li>
-<li><strong>HDB gate digital locks</strong> — rim and mortise types for metal gates.</li>
+<li><strong>HDB gate digital locks</strong> — rim and mortise types for metal gates. See <a href="~/hdb-gate-digital-lock/">digital lock for HDB gate</a>.</li>
 <li><strong>Condo and landed home locks</strong> — main doors, side doors and gates.</li>
 <li><strong>Office and shop locks</strong> — keypad and card access for small businesses. See <a href="~/commercial-locksmith/">commercial locksmith</a>.</li>
 </ul>

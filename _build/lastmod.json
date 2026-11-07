@@ -256,8 +256,8 @@
 "hash": "a6bb7db75dabbcdf99cb7b1bbf6026bc"
 },
 "digital-lock-installation/": {
-"date": "2026-11-01",
-"hash": "f063337697b8b843061dbd8f7f8d45ed"
+"date": "2026-11-08",
+"hash": "99804b2e66584d5419f0a40d55db33fd"
 },
 "digital-lock-opening/": {
 "date": "2026-11-01",
@@ -468,12 +468,16 @@
 "hash": "05c5b983f045a9b780498e26e9d5d8be"
 },
 "guides/smart-lock-for-hdb-gate/": {
-"date": "2026-11-01",
-"hash": "5b44594689b91d7e3808275436b23803"
+"date": "2026-11-08",
+"hash": "b32cf50f54442b9131fa958b433ebba1"
+},
+"hdb-gate-digital-lock/": {
+"date": "2026-11-08",
+"hash": "5f1b4f24e6fdfbfa2d29c4c55b2933e7"
 },
 "hdb-gate-lock-replacement/": {
-"date": "2026-10-29",
-"hash": "e88f96561d01f6cd6b21a01404ec2bd4"
+"date": "2026-11-08",
+"hash": "79e3ba94b94404d1ca05177fee5a1083"
 },
 "hdb-main-door-lock-replacement/": {
 "date": "2026-11-04",

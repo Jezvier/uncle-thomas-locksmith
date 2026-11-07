@@ -6,6 +6,7 @@ Uses only owner-confirmed facts: lock replacement from P_REPLACE incl. lock and
 installation, no-expiry warranty, no repairs, car key fob cloning for all major
 brands (never Tesla) from a working key, NRIC checked against the log card.
 """
+import config as C
 
 NICHE_SERVICES = [
 # ----------------------------------------------------------------------
@@ -91,7 +92,7 @@ dict(
 <ul>
 <li><strong>Gate locksets and rim gate locks</strong> with a key outside and a knob or key inside.</li>
 <li><strong>Hook bolts</strong>, which hook into the frame and resist the gate being lifted.</li>
-<li><strong>Digital gate locks</strong>, opened with PIN, fingerprint or card, often matched to your door lock. See <a href="~/guides/smart-lock-for-hdb-gate/">choosing a smart lock for your HDB gate</a>.</li>
+<li><strong>Digital gate locks</strong>, opened with PIN, fingerprint or card, often matched to your door lock. See <a href="~/hdb-gate-digital-lock/">digital lock for HDB gate</a>, or <a href="~/guides/smart-lock-for-hdb-gate/">choosing a smart lock for your HDB gate</a>.</li>
 </ul>
 <p>Comparing options? Read <a href="~/guides/hdb-gate-lock-types/">HDB gate lock types</a>.</p>
 
@@ -394,4 +395,85 @@ RELATED.update({
  "roller-shutter-lock/": ["commercial-locksmith/", "padlock-cutting/", "broken-key-extraction/", "glass-door-lock/", "commercial-safe-services/", "cabinet-lock/"],
  "glass-door-lock/": ["commercial-locksmith/", "roller-shutter-lock/", "lock-replacement/", "cabinet-lock/", "emergency-locksmith/", "digital-lock-installation/"],
  "cabinet-lock/": ["commercial-locksmith/", "broken-key-extraction/", "safe-opening/", "glass-door-lock/", "lock-replacement/", "padlock-cutting/"],
+})
+
+# ----------------------------------------------------------------------
+# Added 8 Nov 2026: Search Console showed "digital lock for hdb gate" (35
+# impressions/week, position ~69), "hdb gate digital lock", "smart lock for hdb
+# gate" etc. landing on the buying guide. This is the matching service page
+# (supply + install). Facts: digital lock installation labour from
+# P_DIGITAL_INSTALL, lock "supplied by you or us" (config.PRICES), all brands,
+# no-expiry warranty, no repairs. HDB gate rule cites the HDB renovation
+# guidelines (same source as guides/hdb-gate-lock-types). SCDF rule covers
+# digital locks on fire-rated DOORS only.
+NICHE_SERVICES += [
+dict(
+ path="hdb-gate-digital-lock/", short="Digital lock for HDB gate", icon="lock",
+ card="A digital or smart lock for your HDB gate: supplied and installed, or fitted to one you bought, with a no-expiry warranty.",
+ title="Digital Lock for HDB Gate Singapore | Supply & Install",
+ title_exp="HDB Gate Digital Lock Installation | No-Expiry Warranty",
+ desc="Digital or smart lock for your HDB gate: we check your gate, supply a lock or fit the one you bought, and set it up with you. All brands, no-expiry warranty.",
+ h1="Digital Lock for Your HDB Gate: Supply and Installation",
+ sub="Keyless at the gate as well as the door. Uncle Thomas fits digital and smart locks on HDB metal gates across Singapore: he checks your gate first, supplies a lock that suits it or fits the one you bought, and sets it up with you.",
+ badges=["Installation from {P_DIGITAL_INSTALL}", "Your lock or ours", "No-expiry warranty"],
+ body="""
+<p><strong>The short answer:</strong> installing a digital lock on an HDB gate starts from {P_DIGITAL_INSTALL} for labour. We can supply the lock, or fit one you've already bought. WhatsApp photos of your gate (front, back and the edge where the lock goes) to {PHONE}, and we'll confirm what fits and give you the full price before we come.</p>
+
+<h2>What we check on your gate first</h2>
+<p>A gate lock that looks right in the shop may not suit your gate. Before recommending or fitting anything, we look at:</p>
+<ul>
+<li><strong>The frame and the space for the lock.</strong> Most HDB metal gates take a rim lock, which mounts on the surface. Some frames are deep enough for a mortise lock, which sits inside. See <a href="~/guides/hdb-gate-lock-types/">HDB gate lock types</a>.</li>
+<li><strong>How the gate closes.</strong> If the gate has dropped on its hinges, the bolt won't meet the frame cleanly, and a digital lock will struggle to lock or keep showing errors. We check this before anything is fitted and tell you what's needed.</li>
+<li><strong>The bars around the lock.</strong> On an open-bar gate, the inside of the lock can be reached through the bars. It's worth choosing a lock, and a position, where the inside release isn't easy to reach from the corridor. We'll point this out on your gate.</li>
+<li><strong>Rain and corridor washing.</strong> Which way the gate faces, and whether water runs straight onto the keypad.</li>
+<li><strong>Your main door lock.</strong> If you want the gate and door to share codes, fingerprints and an app, both locks need to come from the same range.</li>
+</ul>
+
+<h2>Our lock or yours</h2>
+<ul>
+<li><strong>We supply it.</strong> Tell us your budget and what matters to you (fingerprint, app access, a matching door set), and Uncle Thomas recommends a gate lock that suits your gate. You get one price for the lock and the installation.</li>
+<li><strong>You've already bought one.</strong> Send us the model and photos of your gate before the visit, so we can check it suits your gate's frame.</li>
+</ul>
+<p>We fit every brand, including """ + ", ".join(C.DIGITAL_LOCK_BRANDS) + """.</p>
+
+<h2>Gate lock vs main door lock</h2>
+<p>They look alike, but a gate lock faces different conditions and rules:</p>
+<ul>
+<li><strong>Fire rating.</strong> SCDF's certification rule, in force since 1 March 2024, covers digital locks fitted on fire-rated doors. Many HDB main doors are fire-rated, so if you're buying a matching gate and door set, check the door lock's certificate. See <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>.</li>
+<li><strong>Weather.</strong> The gate lock lives in the corridor. Choose one sold for gates, with its water resistance stated in the specifications.</li>
+<li><strong>Power.</strong> In a matching set, the gate and door locks run on separate batteries. Change both together, and make sure the gate lock has an emergency power point or a backup key.</li>
+</ul>
+
+<h2>HDB rules</h2>
+<p>Changing the lock on your existing gate is a routine job. If you're replacing the whole gate at the same time, the <a href="https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/renovation/guidelines/building-works" target="_blank" rel="noopener">HDB renovation guidelines</a> say the new gate must keep the original width, number of panels and swing, must not block the escape route, and along a common corridor must leave at least 0.6m to the parapet wall. Renting? Ask your landlord before changing any lock.</p>
+
+<h2>How it works</h2>
+<ol>
+<li><strong>WhatsApp photos</strong> of your gate from both sides and the lock edge to {PHONE}, plus the lock if you've bought one.</li>
+<li><strong>Get the full price first</strong>, for the installation and, if we supply it, the lock.</li>
+<li><strong>We fit the lock</strong>, check the bolt meets the frame every time the gate closes, and test every function.</li>
+<li><strong>We set it up with you:</strong> PINs, fingerprints, cards and app, and where the emergency power point is.</li>
+</ol>
+
+<div class="callout navy"><p><strong>Our warranty:</strong> every lock we install comes with our warranty, with no expiry date.</p></div>
+
+<h2>Locked out at the gate?</h2>
+<p>Flat batteries, or a keypad that stopped responding after rain? We open digital gate locks of every brand: see <a href="~/digital-lock-opening/">digital lock opening</a>. If the lock has failed, we replace it in the same visit. We don't repair locks.</p>
+
+<p>Still deciding which lock to buy? Read <a href="~/guides/smart-lock-for-hdb-gate/">choosing a digital or smart lock for your HDB gate</a>. Changing a mechanical gate lock instead? See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>.</p>
+""",
+ faqs=[
+  ("How much does it cost to install a digital lock on an HDB gate?", "Installation starts from {P_DIGITAL_INSTALL}. If we supply the lock, its price is added and you get one total before we come. WhatsApp photos of your gate to {PHONE} for an exact quote."),
+  ("Can you supply the digital lock for my gate?", "Yes. Tell us your budget and the features you want, and we'll recommend a gate lock that suits your gate. We can also fit one you've already bought."),
+  ("Can my HDB gate take a digital lock?", "Most HDB metal gates can take a rim digital lock, and some can take a mortise lock. Send us photos of your gate so we can confirm before you buy."),
+  ("Does a digital lock on an HDB gate need SCDF certification?", "SCDF's certification rule covers digital locks on fire-rated doors. If you're fitting a matching gate and door set, the main door lock is the one to check."),
+  ("Will rain damage a digital gate lock?", "Rain and corridor washing are the main reasons gate locks fail. Choose a model sold for gates, with its water resistance stated, and wipe the keypad dry after heavy rain."),
+  ("Is there a warranty?", "Yes. Every installation comes with our warranty, with no expiry date."),
+ ],
+),
+]
+
+RELATED.update({
+ "hdb-gate-digital-lock/": ["hdb-gate-lock-replacement/", "digital-lock-installation/", "digital-lock-opening/", "hdb-main-door-lock-replacement/", "lock-replacement/", "emergency-locksmith/"],
+ "hdb-gate-lock-replacement/": ["hdb-gate-digital-lock/", "hdb-main-door-lock-replacement/", "lock-replacement/", "digital-lock-installation/", "emergency-locksmith/", "digital-lock-opening/"],
 })
