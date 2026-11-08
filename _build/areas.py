@@ -70,23 +70,57 @@ dict(slug="novena", name="Novena & Balestier", region="Central",
  nearby=["toa-payoh", "cbd-orchard"]),
 
 dict(slug="cbd-orchard", name="Orchard & CBD", region="Central",
- intro="Offices, shops, hotels, serviced apartments and city condos — in the CBD and Orchard, most of our calls are about getting businesses and residents back in fast, often outside office hours.",
- overview="Singapore's city centre runs from Raffles Place, Tanjong Pagar and Marina Bay through Chinatown and River Valley to Orchard Road and Tanglin. During the day it's offices and retail; at night it's condos, serviced apartments and hotels. Locks here range from office glass doors and access-controlled suites to safes in shops and high-end digital locks in city apartments.",
- estates=["Raffles Place", "Tanjong Pagar", "Marina Bay", "Chinatown", "River Valley", "Robertson Quay", "Orchard", "Tanglin"],
- landmarks=["Raffles Place", "Marina Bay", "Chinatown", "Orchard Road", "Clarke Quay"],
- mrt=["Raffles Place", "Tanjong Pagar", "Downtown", "Chinatown", "Clarke Quay", "Somerset", "Orchard", "Great World"],
+ # Rewritten 9 Nov 2026 around the real Orchard and CBD jobs in config.JOBS. Targets "locksmith orchard",
+ # "locksmith orchard road", "locksmith cbd", "locksmith raffles place". Facts only: prices from config.PRICES,
+ # arrival from TOKENS["ARRIVAL"] (owner-confirmed), safe experience from CLAUDE.md (never name clients).
+ title="Locksmith Orchard Road & CBD | 24/7 Lockouts and Safes",
+ desc="24/7 locksmith for Orchard Road and the CBD: locked room doors, office safes, gates and digital locks. US-trained safesmith, real local jobs. Call 9224 9224.",
+ h1="Locksmith in Orchard Road and the CBD, 24/7",
+ intro="From Orchard Road apartments to Raffles Place offices, city calls tend to be urgent and awkward: a bedroom door that won't open, an office safe that rejects its code, a gate locked shut after hours. Uncle Thomas handles all three, day and night.",
+ overview="The city is where Singapore lives and works on top of each other. Orchard Road and Somerset are lined with condos, serviced apartments, hotels and malls; a few minutes south, Raffles Place, Tanjong Pagar, Telok Ayer and Marina Bay fill with offices by day and empty out by night, with shophouses, restaurants and bars in between. That mix shapes the work: apartment room doors and high-end digital locks around Orchard, and office doors, cash safes, gates and shutters in the CBD.",
+ feature="""
+<h2>What our Orchard and CBD jobs actually look like</h2>
+<p>Ask most people what a locksmith does and they picture a front door. In the city, the pattern is different. Every Orchard Road job we logged this autumn was an <strong>interior door</strong>: a worn knob that broke and trapped a resident out of her room, a cracked bedroom lock that needed replacing, and a painter locked out of a room. In the CBD, the calls were a <strong>Bumil keypad safe</strong> that refused to open and a <strong>metal gate</strong> held shut by its surface-mounted lock. Each one is listed, with photos, further down this page.</p>
+<p>Why room doors? City apartments are full of knob and lever locksets with privacy buttons, and many are budget fittings that have seen years of tenants. Latches wear, knobs work loose, and one day the door closes and simply won't open again. The good news is that most of these open quickly and without damage. The fastest Orchard job so far took Uncle Thomas under a minute; another had the resident back in her room within 2 minutes. If the lock itself has broken, we fit a new lockset in the same visit.</p>
+
+<h2>Locked out of a room in an Orchard apartment</h2>
+<p>Before you call, check the outside of the knob or lever for a small hole or slot. Many privacy locks have an emergency release there, meant for exactly this moment. If there isn't one, or it doesn't work, don't force the door: a shoulder or a screwdriver usually damages the frame, and the repair costs more than the call-out. Our guide to <a href="~/guides/room-door-locked-from-inside/">a room door locked from the inside</a> walks through the safe things to try. Still stuck? WhatsApp a photo of the lock to {PHONE} and we'll tell you what it will take.</p>
+
+<h2>Office safes, cash safes and hotel safes in the CBD</h2>
+<p>Safes are where the city work gets serious. Uncle Thomas trained as a safesmith in the United States and has opened safes for offices, pawnshops, hotels and banks, including safe deposit boxes and vault doors. We never name clients, and we work after hours so your business isn't disrupted. Companies get a proper invoice.</p>
+<p>Some safes can be opened and stay fully usable, like the Bumil keypad safe we opened through its override lock in the CBD this month. But when a safe's lock has failed, it usually has to be drilled, precisely and at the right point, and a new lock can often be fitted afterwards. We'll tell you which situation you're in, and the price, before we start. Safe opening starts from {P_SAFE}. See <a href="~/safe-opening/">safe opening</a>, <a href="~/commercial-safe-services/">commercial safe services</a> and <a href="~/hotel-safe-opening/">hotel safe opening</a>.</p>
+
+<h2>Gates, shutters and back-of-house doors</h2>
+<p>Shophouses around Telok Ayer, Chinatown and Tanjong Pagar often have a front shutter, a metal gate and a back door onto the lane, each with its own lock. When you call, tell us which one is stopping you: it changes what we bring and how long it takes. Gate locks exposed to rain and heat are the usual culprits. If a lock has seized or is past saving, we replace it in the same visit; see <a href="~/roller-shutter-lock/">roller shutter locks</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
+
+<h2>Getting us in the building faster</h2>
+<p>In the city, the lock is rarely the slowest part of the job. Getting to it is. A few minutes of preparation saves the most time:</p>
+<ul>
+<li><strong>Tell security or the guardhouse a locksmith is coming</strong>, with your name and unit. Many office towers need tenants to register contractors, especially after hours.</li>
+<li><strong>Send us the building name, unit and nearest loading bay or carpark</strong> on WhatsApp, with a pinned location.</li>
+<li><strong>Photograph the lock</strong> (or the safe's front and brand label) so we can bring the right parts and confirm the price.</li>
+<li><strong>Have your proof ready.</strong> We check NRIC, Singpass or other ID before opening anything. For offices and shops we need authorisation from the business; for rentals and serviced apartments, from the landlord or management.</li>
+</ul>
+<p>The city is a short drive from our usual base around Toa Payoh, so we usually arrive within {ARRIVAL}, any hour. Daytime lockouts start from {P_LOCKOUT}, and nights, weekends and public holidays from {P_AFTERHOURS}. Full details are on our <a href="~/prices/">price list</a>.</p>
+""",
+ estates=["Orchard Road", "Somerset", "Dhoby Ghaut", "Raffles Place", "Tanjong Pagar", "Telok Ayer", "Marina Bay", "Shenton Way", "Chinatown", "Robertson Quay"],
+ landmarks=["ION Orchard", "Ngee Ann City", "Raffles Place", "Marina Bay Sands", "Lau Pa Sat", "Chinatown"],
+ mrt=["Orchard", "Somerset", "Dhoby Ghaut", "Raffles Place", "Tanjong Pagar", "Telok Ayer", "Downtown", "Chinatown", "Marina Bay"],
  buildings=[
-  ("Office towers", "Office doors, glass doors and cabinet locks. Most buildings need the tenant to register us with security before we go up."),
-  ("Retail and F&B", "Shop shutters, back-of-house doors and cash safes — usually before opening or after closing."),
-  ("City condos and serviced apartments", "High-end digital locks and deadbolts. We'll check proof of residence or authorisation from the management."),
+  ("Orchard condos and serviced apartments", "Room doors with knob and lever locks, main doors with high-end digital locks and deadbolts. We check proof of residence, or authorisation from the landlord or management, before opening."),
+  ("Office towers in Raffles Place, Marina Bay and Shenton Way", "Office doors, glass doors, cabinets and safes. Most buildings need the tenant to register us with security before we go up, especially after hours."),
+  ("Shophouses, restaurants and bars", "Front shutters, metal gates, back-lane doors and cash safes, usually before opening or after closing time."),
+  ("Hotels", 'Guest room safes and back-office safes, always through hotel management. See <a href="~/hotel-safe-opening/">hotel safe opening</a>.'),
  ],
- jobs=["Office lockouts outside working hours", "Shop and restaurant safes that won't open", "Digital lock lockouts in city condos", "Lock changes when staff leave"],
- access="Parking in the city is limited, so tell us the building's loading bay or nearest carpark if you know it. For offices, please arrange building access with security in advance.",
+ jobs=["Room doors locked in Orchard apartments", "Office, shop and hotel safes that won't open", "Metal gates and shophouse shutters", "Digital lock lockouts in city condos", "Lock changes when staff or tenants leave"],
+ access="Parking in the city is limited, so tell us the building's loading bay or nearest carpark if you know it. For offices and condos, let security or the guardhouse know we're coming.",
  faqs=[
+  ("How quickly can a locksmith reach Orchard Road?", "Orchard is a short drive from our usual base around Toa Payoh, so we usually arrive within {ARRIVAL}, day or night. Building access can add a few minutes, so let security know we're coming."),
+  ("Can you open a locked bedroom door in an Orchard apartment without damage?", "Usually, yes. Most room door locks open without damage: this November Uncle Thomas had one open in under a minute. If the lock itself has broken, we fit a new lockset in the same visit."),
+  ("Do you open office safes in Raffles Place, Tanjong Pagar and Marina Bay?", "Yes, after hours too. Uncle Thomas is a US-trained safesmith who has opened safes for offices, pawnshops, hotels and banks. We need authorisation from the business, and we issue an invoice."),
   ("Can you come to our CBD office at night or on weekends?", "Yes. We work 24/7, and after-hours visits mean no disruption to your business. Please arrange building access with security."),
-  ("Do you open shop safes in Orchard and the CBD?", "Yes — Uncle Thomas trained in safesmithing in the United States. We'll need authorisation from the business before opening any safe."),
  ],
- nearby=["novena", "bukit-merah", "newton", "paterson", "tanglin", "river-valley"]),
+ nearby=["river-valley", "tanglin", "newton", "novena", "paterson", "bukit-merah"]),
 
 dict(
  slug="newton", name="Newton", region="Central",
@@ -662,13 +696,13 @@ def build(x):
         path = f"areas/{t['slug']}/"
         n = t["name"]
         crumbs = [("Home", ""), ("Areas", "areas/"), (n, path)]
-        title = f"Locksmith {n} 24/7 | Safes, Cars & Digital Locks"
+        title = t.get("title") or f"Locksmith {n} 24/7 | Safes, Cars & Digital Locks"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas Locksmith"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas"
-        desc = f"24/7 locksmith in {n}: safe opening, car lockouts, digital locks and door lockouts. Uncle Thomas sets off as soon as you call. Since 1998. Call 9224 9224."
-        if len(desc) > 158:
+        desc = t.get("desc") or f"24/7 locksmith in {n}: safe opening, car lockouts, digital locks and door lockouts. Uncle Thomas sets off as soon as you call. Since 1998. Call 9224 9224."
+        if len(desc) > 158 and not t.get("desc"):
             desc = f"24/7 locksmith in {n}: safes, cars, digital locks & lockouts. We set off as soon as you call. Since 1998. Call 9224 9224."
         facts = (f'<div class="facts"><div class="fact"><strong>Estates we cover</strong>{", ".join(t["estates"])}</div>'
                  f'<div class="fact"><strong>Landmarks</strong>{", ".join(t["landmarks"])}</div>'
@@ -685,12 +719,13 @@ def build(x):
         faqs = list(t["faqs"]) + ([EXTRA_FAQS[t["slug"]]] if t["slug"] in EXTRA_FAQS else []) + [
             (f"How much does a locksmith in {n} cost?", "The same as anywhere in Singapore: it depends on the lock and the time of day, and we confirm the price before we start. See our <a href=\"~/prices/\">price list</a>."),
         ]
-        body = (x["page_hero"](crumbs, f"Locksmith in {n} — 24/7 Emergency Service",
+        body = (x["page_hero"](crumbs, t.get("h1") or f"Locksmith in {n} — 24/7 Emergency Service",
                 f"Locked out in {n}? {t['intro']}", ["24/7 incl. public holidays", "Since 1998", "We check ID before opening"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <h2>Locksmith work in {n}</h2>
 <p>{t["overview"]}</p>
 {facts}
+{t.get("feature", "")}
 <h2>Locks and buildings in {n}</h2>
 {bld}
 <h2>Lock tips for {n} homes and businesses</h2>
