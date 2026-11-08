@@ -249,7 +249,7 @@ dict(
 <ul>
 <li><a href="~/guides/forgot-safe-combination/">Safe box forgot password or combination</a></li>
 <li><a href="~/guides/safe-box-battery-dead/">Safe box battery dead: how to open it</a></li>
-<li><a href="~/guides/safe-wont-open-correct-code/">Safe won't open with the correct code</a></li>
+<li><a href="~/guides/safe-wont-open-correct-code/">Safe won't open, even with the correct code</a></li>
 <li><a href="~/guides/lost-safe-key/">Lost safe key or override key</a></li>
 <li><a href="~/guides/safe-drilling-explained/">Does my safe need drilling?</a></li>
 </ul>

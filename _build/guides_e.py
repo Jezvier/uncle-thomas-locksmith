@@ -206,12 +206,12 @@ dict(
 dict(
  slug="safe-wont-open-correct-code",
  short="Safe won't open with correct code",
- title="Safe Won't Open With the Correct Code? 8 Causes & Fixes",
- desc="Safe box accepts the code but won't open? Weak batteries, bolt pressure, lockout mode, a jammed handle and more: what to check first and when to call.",
- h1="Safe Won't Open With the Correct Code? 8 Causes and Fixes",
+ title="Safe Won't Open, Even With the Correct Code? 8 Fixes",
+ desc="Safe won't open, or accepts the code but stays locked? Weak batteries, bolt pressure, lockout mode, a jammed handle: what to check first and when to call.",
+ h1="Safe Won't Open, Even With the Correct Code? 8 Causes and Fixes",
  card="The code is right but the door stays shut. Eight common causes, from weak batteries to a jammed bolt, and what to try for each.",
  body="""
-<p>You've entered the code you know is right. The keypad beeps, maybe a green light shows, but the safe stays shut. It's one of the most common safe problems, and usually not because the code is wrong. Work through these in order.</p>
+<p>Your safe won't open. You've entered the code you know is right, the keypad beeps, maybe a green light shows, but the door stays shut. It's one of the most common safe problems, and usually not because the code is wrong. Work through these in order.</p>
 
 <h2>1. Weak batteries</h2>
 <p>The most common cause by far. Batteries that can still light the keypad may not have enough power to move the bolt motor or solenoid. Replace all the batteries (or use the external power terminals or override key: see <a href="~/guides/safe-box-battery-dead/">safe box battery dead</a>) and try again.</p>
