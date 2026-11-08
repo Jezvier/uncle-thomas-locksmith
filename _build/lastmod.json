@@ -1,7 +1,7 @@
 {
 "/": {
-"date": "2026-11-08",
-"hash": "1a9256fcb4359ce4ffa3ae8ae65378bb"
+"date": "2026-11-09",
+"hash": "dccc300ddcadf85d07700f7b70d9e3aa"
 },
 "about/": {
 "date": "2026-10-31",
@@ -20,8 +20,8 @@
 "hash": "3604b95b66e46036a9de147df35e278f"
 },
 "areas/bishan/": {
-"date": "2026-11-01",
-"hash": "860b18af047981448ef505f7ecb9bbce"
+"date": "2026-11-09",
+"hash": "86e15ec826d10a46a9d4503407e8b0f1"
 },
 "areas/bukit-batok/": {
 "date": "2026-11-01",
@@ -40,8 +40,8 @@
 "hash": "608522743279c5d904698f73b1ccfc35"
 },
 "areas/cbd-orchard/": {
-"date": "2026-11-08",
-"hash": "96971c19ec88dcc62c07a66f1ebc042c"
+"date": "2026-11-09",
+"hash": "eec0829fed5d84ca1479b10413e27f5e"
 },
 "areas/choa-chu-kang/": {
 "date": "2026-11-01",
@@ -116,8 +116,8 @@
 "hash": "d6432ad2b7bbae06aaa9f2348acf1a45"
 },
 "areas/serangoon/": {
-"date": "2026-11-01",
-"hash": "fbb8bf2539790fe9770cf09cbdb92653"
+"date": "2026-11-09",
+"hash": "22aafa785167563039e613bda2f616d0"
 },
 "areas/tampines/": {
 "date": "2026-11-01",
@@ -340,8 +340,8 @@
 "hash": "b40a0eababd2a9ce08dfc43919c2e908"
 },
 "emergency-locksmith/": {
-"date": "2026-11-08",
-"hash": "b6ccd80cc01a34af0aab6a066fcee75b"
+"date": "2026-11-09",
+"hash": "d2387a95a0903b796184526350ed52c3"
 },
 "glass-door-lock/": {
 "date": "2026-10-29",
@@ -521,67 +521,67 @@
 },
 "safe-opening/": {
 "date": "2026-11-09",
-"hash": "6f440e8fc9d7b3bd16f6e09a7570c7a9"
+"hash": "57b591b6c05ad8854aca7d601ce563ba"
 },
 "safe-opening/booil/": {
-"date": "2026-11-06",
-"hash": "7c49639fcbc45d55a16231eba9ebfbd2"
+"date": "2026-11-09",
+"hash": "47a398d667f8256ed241ed24f60c7439"
 },
 "safe-opening/bumil/": {
-"date": "2026-11-06",
-"hash": "48c89c923cdd38dd30081ae58c46d688"
+"date": "2026-11-09",
+"hash": "e1d9b208c33a37c1188f60204c04214c"
 },
 "safe-opening/burg-wachter/": {
-"date": "2026-11-06",
-"hash": "fecafbbc103996b522f62130f4a563d2"
+"date": "2026-11-09",
+"hash": "ce97ce8f7ba31521aeb8819ef22dd70f"
 },
 "safe-opening/chubb/": {
-"date": "2026-11-06",
-"hash": "a4d68b65e2509d6c738cfb60b34a53e9"
+"date": "2026-11-09",
+"hash": "d633849fd342ded3b743583f1debafd3"
 },
 "safe-opening/diplomat/": {
-"date": "2026-11-06",
-"hash": "5c0a2f5d858c6738d9444aa8d25ccca9"
+"date": "2026-11-09",
+"hash": "1b92ccd7a1c2403a2d88bf1a6575e3e2"
 },
 "safe-opening/eagle/": {
-"date": "2026-11-06",
-"hash": "9f6d0c098c7b6ee401f1b7e3b7d57e53"
+"date": "2026-11-09",
+"hash": "c5c6cd1de3573f7a57a8543ef40e8b22"
 },
 "safe-opening/godrej/": {
-"date": "2026-11-06",
-"hash": "1d84d1918c24ceb02f3f6272f10da2e0"
+"date": "2026-11-09",
+"hash": "902d4e16967423c16c1cccb53812b7e1"
 },
 "safe-opening/honeywell/": {
-"date": "2026-11-06",
-"hash": "1ec89ed399a352c22fe910aec6b6c753"
+"date": "2026-11-09",
+"hash": "17724043be590014051bcc5dc885e328"
 },
 "safe-opening/leeco/": {
-"date": "2026-11-06",
-"hash": "8b881097adbacf8f1b56b8d2d1693c87"
+"date": "2026-11-09",
+"hash": "9a25ff4fa5c9fe828b776a632be58320"
 },
 "safe-opening/morries/": {
-"date": "2026-11-06",
-"hash": "ddb5342c39875635ab7e27ac70d3de19"
+"date": "2026-11-09",
+"hash": "4857135dd6bc488d8f309c77ffcc7f34"
 },
 "safe-opening/phoenix/": {
-"date": "2026-11-06",
-"hash": "b8c5fa2c93177b131b93d7e6d0bd6426"
+"date": "2026-11-09",
+"hash": "df1bfe9120468ef6c461027cc17879a3"
 },
 "safe-opening/premier/": {
-"date": "2026-11-06",
-"hash": "ed6e00e5983f92ce593233a1e32b751f"
+"date": "2026-11-09",
+"hash": "98ba0e34688e05e618af4c3d1c6793cd"
 },
 "safe-opening/sentrysafe/": {
-"date": "2026-11-06",
-"hash": "06e6ec6f84fc7f9383a3741411433761"
+"date": "2026-11-09",
+"hash": "300dcc84edc8571cd93da571799f189a"
 },
 "safe-opening/uchida/": {
-"date": "2026-11-06",
-"hash": "55e136654709cff2405641e0036531f7"
+"date": "2026-11-09",
+"hash": "11d8a3a771dfa39b974dc451aa10c491"
 },
 "safe-opening/yale/": {
-"date": "2026-11-06",
-"hash": "29d19635f29271910f6e819ffdf8257e"
+"date": "2026-11-09",
+"hash": "f70e5ab1d83b4e3c4cc686691d587f5f"
 },
 "services/": {
 "date": "2026-11-06",

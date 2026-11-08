@@ -251,6 +251,9 @@ def build(x):
             (f"Can a locksmith open a {n} safe?", f"Yes. Uncle Thomas is a US-trained safesmith who opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
             (f"How much does it cost to open a {n} safe in Singapore?", "With us, safe opening starts from {P_SAFE}; the exact price depends on the model, the lock and what's wrong. WhatsApp photos of the safe's front, keypad or dial and brand label to {PHONE} for a price before we come."),
         ]
+        jobs = getattr(C_, "BRAND_JOBS", {}).get(f"safe:{n}", [])   # real jobs only (config.JOBS)
+        recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)
+        pic = x["photo"](path) if path in C_.PHOTOS else ""
         i = [o["slug"] for o in BRANDS].index(b["slug"])
         near = (BRANDS[i + 1:] + BRANDS[:i])[:5]
         others = " · ".join(f'<a href="~/safe-opening/{o["slug"]}/">{o["name"]}</a>' for o in near)
@@ -278,6 +281,7 @@ def build(x):
 <p>{b["quirk"]} More causes: <a href="~/guides/safe-wont-open-correct-code/">safe won't open with the correct code</a>.</p>
 <h2>A typical {n} call</h2>
 <p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
+{pic}{recent}
 <h2>When to call a safe locksmith</h2>
 <p>If power and the key don't work, call or WhatsApp {{PHONE}}, 24/7. Uncle Thomas, a US-trained safesmith, opens {n} safes across Singapore after checking ownership, with the price agreed first. See <a href="~/safe-opening/">safe opening</a> · <a href="~/safe-combination-change/">safe lock replacement</a> · <a href="~/guides/safe-drilling-explained/">drilling explained</a>. Not affiliated with {n}.</p>
 {src}
