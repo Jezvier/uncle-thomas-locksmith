@@ -405,9 +405,14 @@ def analytics_head():
     gid = C.GA4_ID
     # gtag is defined immediately (events queue in dataLayer) but the library
     # loads ~1.5s after the page has finished loading, so it never slows LCP.
-    return (f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}"
+    # Owner opt-out: open any page once with ?notrack=1 and that browser is never
+    # counted (?notrack=0 undoes it). Uses GA's own ga-disable flag and skips the library.
+    return (f"<script>var _nt;try{{if(/[?&]notrack=1/.test(location.search))localStorage.setItem('ut_nt','1');"
+            f"if(/[?&]notrack=0/.test(location.search))localStorage.removeItem('ut_nt');_nt=localStorage.getItem('ut_nt')==='1'}}catch(e){{}}"
+            f"if(_nt)window['ga-disable-{gid}']=true;"
+            f"window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}"
             f"gtag('js',new Date());gtag('config','{gid}');"
-            f"addEventListener('load',function(){{setTimeout(function(){{var s=document.createElement('script');"
+            f"if(!_nt)addEventListener('load',function(){{setTimeout(function(){{var s=document.createElement('script');"
             f"s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id={gid}';document.head.appendChild(s)}},1500)}});</script>")
 
 
