@@ -272,8 +272,8 @@
 "hash": "01de8a3d5f05633e63e098615f4c114e"
 },
 "digital-lock-opening/ezviz/": {
-"date": "2026-10-29",
-"hash": "0d5a764fdf65e68082b15d1f4636565e"
+"date": "2026-11-10",
+"hash": "d36078b61d1adabbead46a53eb21b063"
 },
 "digital-lock-opening/gateman/": {
 "date": "2026-10-29",
@@ -308,8 +308,8 @@
 "hash": "f56a75e9f8de4f38806e1627edddfcd4"
 },
 "digital-lock-opening/samsung/": {
-"date": "2026-10-29",
-"hash": "bf39c9f2ebbbd6c4f66995eaed0132f4"
+"date": "2026-11-10",
+"hash": "9369ec2c3b0fbbe5c358ab9df2e75d2d"
 },
 "digital-lock-opening/schlage/": {
 "date": "2026-10-29",
@@ -348,8 +348,8 @@
 "hash": "898acb0cbdbb57c37f533eec4b604387"
 },
 "guides/": {
-"date": "2026-11-09",
-"hash": "c381c44e40c97ce9208dbc209f9cb478"
+"date": "2026-11-10",
+"hash": "233400e7f9aa116c2088997cde86c499"
 },
 "guides/after-a-break-in/": {
 "date": "2026-11-01",
@@ -368,8 +368,8 @@
 "hash": "d72ef339ccc7f592512bc1643262227a"
 },
 "guides/digital-lock-fire-rated-door-scdf/": {
-"date": "2026-11-01",
-"hash": "d58409eb8a82fdc56ce6a6d79e9d879b"
+"date": "2026-11-10",
+"hash": "c0b386a2d545d3c57f72346d3aaabb2e"
 },
 "guides/digital-lock-repair/": {
 "date": "2026-11-01",
@@ -464,8 +464,8 @@
 "hash": "b9dd864231f3208acdf35f9b84aa7942"
 },
 "guides/safe-wont-open-correct-code/": {
-"date": "2026-11-09",
-"hash": "9e78dbba4eefc0e6959426abe955f532"
+"date": "2026-11-10",
+"hash": "7291eac708e56f55782730fd920693e9"
 },
 "guides/smart-lock-for-hdb-gate/": {
 "date": "2026-11-08",
@@ -552,8 +552,8 @@
 "hash": "902d4e16967423c16c1cccb53812b7e1"
 },
 "safe-opening/honeywell/": {
-"date": "2026-11-09",
-"hash": "17724043be590014051bcc5dc885e328"
+"date": "2026-11-10",
+"hash": "94fae829b7448de66708c1414f13dcb3"
 },
 "safe-opening/leeco/": {
 "date": "2026-11-09",
@@ -572,8 +572,8 @@
 "hash": "98ba0e34688e05e618af4c3d1c6793cd"
 },
 "safe-opening/sentrysafe/": {
-"date": "2026-11-09",
-"hash": "300dcc84edc8571cd93da571799f189a"
+"date": "2026-11-10",
+"hash": "94882b5940a67f77de78793a551f6fd2"
 },
 "safe-opening/uchida/": {
 "date": "2026-11-09",

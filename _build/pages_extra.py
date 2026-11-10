@@ -67,7 +67,6 @@ def _privacy(x):
     title = "Privacy Notice | Uncle Thomas Locksmith"
     desc = "How Uncle Thomas Locksmith collects, uses and protects your personal data when you call, message or use this website."
     crumbs = [("Home", ""), ("Privacy", path)]
-    contact = f'<a href="mailto:{C.EMAIL}">{C.EMAIL}</a> or ' if C.EMAIL else ""
     analytics = ("<p>This website uses Google Analytics to understand which pages are useful. It uses cookies and collects "
                  "anonymous usage information such as pages visited and the type of device. You can block cookies in your browser.</p>"
                  if C.GA4_ID else

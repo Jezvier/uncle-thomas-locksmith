@@ -7,7 +7,7 @@ Optional env PLACE_ID; if missing, the place is found by text search and matched
 on the Maps CID below. Exits 0 without changes if anything is missing, so the
 site never breaks because of this job.
 """
-import json, os, sys, urllib.request, urllib.parse
+import json, os, urllib.request, urllib.parse
 
 CID = "4145225534861484330"          # from https://maps.google.com/?cid=...
 QUERY = "Singapore Locksmith 238 Lorong 1 Toa Payoh Singapore"

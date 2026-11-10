@@ -492,7 +492,6 @@ def related_html(current_path):
 def service_cards(with_price=True):
     out = []
     for s in SERVICES:
-        pr = C.price(s["path"])
         tag = '<span class="more">See details →</span>'
         out.append(f'<a class="card svc" href="~/{s["path"]}"><span class="ico" aria-hidden="true">{icons.svg(s["icon"])}</span>'
                    f'<h3>{s["short"]}</h3><p>{s["card"]}</p>{tag}</a>')

@@ -611,8 +611,10 @@ SCRIPT_JS = """// Uncle Thomas Locksmith — tiny JS: mobile menu, footer year, 
     var t = 'Hi Uncle Thomas, I need a locksmith.\\nService: ' + v('what') + '\\nLocation: ' + (v('where') || '(will send)') + '\\nWhen: ' + v('when') + '\\n(Sent from your website)';
     var url = f.getAttribute('action') + '?text=' + encodeURIComponent(t);
     if (typeof window.gtag === 'function') window.gtag('event', 'quote_form_submit', { service: v('what'), urgency: v('when'), page_path: location.pathname, transport_type: 'beacon' });
-    var w = window.open(url, '_blank', 'noopener');
-    if (!w) location.href = url;
+    // No 'noopener' feature here: with it, window.open always returns null, which made the
+    // fallback below also send this tab to WhatsApp. Cut the opener link by hand instead.
+    var w = window.open(url, '_blank');
+    if (w) { try { w.opener = null; } catch (err) {} } else location.href = url;
   });
   // Live Google reviews (homepage). Fetched from Google only when the section is near the
   // screen, kept for the visit in sessionStorage, never stored on our side.
@@ -715,17 +717,19 @@ def main():
     with open(os.path.join(ROOT, "_headers"), "w") as f:
         f.write(HEADERS)
 
-    # 404 page (GitHub Pages serves /404.html)
+    # 404 page (Cloudflare Pages serves /404.html for unknown URLs)
     four = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
     four = re.sub(r"<main id=\"main\">.*</main>", f'''<main id="main"><section class="page-hero"><div class="container narrow">
 <h1>Page not found</h1><p class="hero-sub">Sorry, that page doesn't exist. If you're locked out, don't worry — call or WhatsApp Uncle Thomas now, 24/7.</p>
 {cta_buttons(pos="404")}<p style="margin-top:22px"><a href="./">← Back to the homepage</a></p></div></section></main>''', four, flags=re.S)
     four = re.sub(r"<title>.*?</title>", f"<title>Page Not Found | {C.NAME}</title>", four)
+    four = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="Sorry, that page doesn&#39;t exist. Locked out? Call or WhatsApp Uncle Thomas on {C.PHONE}, 24/7 islandwide.">', four)
     four = four.replace('content="index, follow, max-image-preview:large"', 'content="noindex"')
     four = re.sub(r'<link rel="canonical"[^>]*>', "", four)
     four = re.sub(r'<link rel="alternate" hreflang[^>]*>', "", four)
     four = re.sub(r'<script type="application/ld\+json">.*?</script>', "", four, flags=re.S)
     four = four.replace("<head>", "<head>\n<base href=\"" + C.BASE_PATH + "\">", 1)
+    four = re.sub(r"<!-- FILL:.*?-->", "", four, flags=re.S)
     with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as f:
         f.write(four)
 
@@ -761,6 +765,9 @@ def main():
             # Freshness for search engines and AI answers: same date as the sitemap, added after
             # hashing so it never feeds back into the date itself.
             page_html = stamp_updated(page_html, p, lastmod)
+            # FILL reminders are for the source, not the public page source (stripped after
+            # hashing, so page dates don't move).
+            page_html = re.sub(r"<!-- FILL:.*?-->", "", page_html, flags=re.S)
             with open(os.path.join(ROOT, p, "index.html") if p else os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as f:
                 f.write(page_html)
         except OSError:

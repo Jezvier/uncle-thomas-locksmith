@@ -47,11 +47,13 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - The owner has said changes can go live without asking first. Still: build, check for broken links and errors, then push.
 
 ## Checks before pushing
+- Brand-page `sources` must open: some sites (HDB, manualslib, seam.co, eBay) refuse scripts and look broken from a shell, so confirm a dead link in a browser before replacing it. Encode spaces in URLs as %20.
 - Build runs without errors; every page has one H1, a unique title (60 characters or fewer) and description (160 or fewer), and valid JSON-LD.
 - No broken internal links. Mobile Lighthouse has been 97–100: keep it there (no heavy scripts, no web fonts beyond what's there).
 
-## Where things stand (Oct 2026)
-- Site live since 26 Oct 2026; 138 pages (safe section, brand pages and niche service pages added 29 Oct). Search Console and Bing Webmaster verified. Google Business Profile verified 10 Nov 2026 (place ID and CID in config.py already match it). The old Ang Mo Kio listing "Thomas locksmith Lock and safe service" (9382 1637) is kept by the owner's choice: don't push to merge or remove it. All the owner's numbers (9224 9224, 8177 8177, 9382 1637) still work.
+## Where things stand (Nov 2026)
+- Site live since 26 Oct 2026; 153 pages. Search Console and Bing Webmaster verified. Google Business Profile verified 10 Nov 2026 (place ID and CID in config.py already match it). The old Ang Mo Kio listing "Thomas locksmith Lock and safe service" (9382 1637) is kept by the owner's choice: don't push to merge or remove it. All the owner's numbers (9224 9224, 8177 8177, 9382 1637) still work.
 - The biggest ranking gaps are off-site, not code: the number of Google reviews (competitors have hundreds to thousands), mentions in "best locksmith in Singapore" articles, the GBP name and website link, and old phone numbers on directories.
-- Ideas waiting on owner facts: typical arrival time, payment methods, languages spoken, insurance, team names, photo of the van; WhatsApp quick-quote form; live Google review quotes; a business email (Cloudflare Email Routing); GA4 ID (`GA4_ID` in config).
+- Already confirmed and live (config.py): arrival time (`ARRIVAL`, use the placeholder, never hard-code it), PayNow, languages, team names, GA4. Still waiting on the owner: insurance, photo of the van, a business email (Cloudflare Email Routing).
+- `<!-- FILL -->` reminders are stripped from the published pages; search the source for FILL to see what's missing.
 - Ongoing: add real reviews and jobs as they come in; one new useful guide a month; only change a page's sitemap `lastmod` when the page changes.

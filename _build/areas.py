@@ -166,7 +166,7 @@ dict(
  access="Most Newton condos have a guardhouse, so let them know a locksmith is coming and give us the block and unit. For car lockouts, tell us the carpark level and lot number.",
  faqs=[
   ("Can you open a home safe in a Newton condo?", "Yes. Uncle Thomas opens home safes of every type. If the code is forgotten but the lock works, it can often be opened without damage; a faulty lock usually means drilling, and most drilled safes can be repaired. We check that the safe is yours first."),
-  ("Do you come to Newton late at night?", "Yes, 24/7. Newton is central, so it's quick for us to reach, usually within 25–30 minutes."),
+  ("Do you come to Newton late at night?", "Yes, 24/7. Newton is central, so it's quick for us to reach, usually within {ARRIVAL}."),
   ('My condo digital lock is dead and the backup key is inside. What now?', 'Try the emergency power point under the keypad with a power bank or a 9V battery. If that fails, WhatsApp us the brand and a photo. We open all digital and smart lock brands and replace the batteries on the spot.'),
   ('How much does it cost to open a safe in Newton?', "Safe opening starts from {P_SAFE}. Send a photo of the safe's front and brand label, and we'll confirm the price before we come."),
  ],
@@ -402,7 +402,7 @@ dict(
   ("Basement carparks", "Car lockouts in tight condo basements. Tell us the level and lot number."),
  ],
  jobs=["Smart lock lockouts after a flat battery or app failure", "Home and in-room safe opening", "Car lockouts in condo carparks", "Lock resets when owners change tenants"],
- access="Most River Valley condos have a guardhouse or concierge, so let them know a locksmith is coming. At night, we usually arrive within 25–30 minutes.",
+ access="Most River Valley condos have a guardhouse or concierge, so let them know a locksmith is coming. At night, we usually arrive within {ARRIVAL}.",
  faqs=[
   ("My smart lock app stopped working and my phone is inside. Can you help?", "Yes. We open smart and digital locks without damage after checking you live there, then help you get the lock working again."),
   ("Can you open the safe in my serviced apartment?", "Yes, with the operator's authorisation. We open it without damaging the safe or the furniture around it."),
@@ -705,7 +705,7 @@ dict(slug="punggol", name="Punggol", region="North-East",
  faqs=[
   ("The digital lock that came with my Punggol BTO keeps failing. Can you replace it?", "Yes. We open it if you're locked out, then recommend and install a reliable replacement with our no-expiry warranty."),
   ("Do you cover Punggol Point and Northshore?", "Yes, all of Punggol, 24/7."),
-  ("I'm locked out of my car in a Punggol carpark. How fast can you come?", "Usually within 25–30 minutes, and on a recent Punggol job we arrived within 15. We check the log card before opening the car."),
+  ("I'm locked out of my car in a Punggol carpark. How fast can you come?", "Usually within {ARRIVAL}, and on a recent Punggol job we arrived within 15. We check the log card before opening the car."),
  ],
  nearby=["sengkang", "hougang", "pasir-ris"]),
 
@@ -989,7 +989,7 @@ EXTRA_FAQS = {
 "tanglin": ("Do you work at embassies and diplomatic residences in Tanglin?", "We work wherever we're authorised to. Security will need to clear us in advance, and we'll need written authorisation for any lock or safe."),
 "bukit-timah": ("Can you replace all the locks on a bungalow in one visit?", "Usually, yes. Send photos of each gate and door lock on WhatsApp, and we'll confirm the parts and price before we come."),
 "holland-village": ("Do you serve Chip Bee Gardens and Leedon Park?", "Yes. We cover all the landed estates and condos around Holland Village, 24/7."),
-"river-valley": ("How quickly can you get to Robertson Quay at night?", "River Valley is close to the city, so we usually arrive within 25–30 minutes, any time."),
+"river-valley": ("How quickly can you get to Robertson Quay at night?", "River Valley is close to the city, so we usually arrive within {ARRIVAL}, any time."),
 "sentosa-cove": ("Do you come to Sentosa Cove at night?", "Yes, 24/7. Let estate security know we're coming so we can get to you quickly."),
 "newton": ("Can you open my car in a Newton condo carpark?", "Yes. Tell us the carpark level, lot number and car model, and let the guardhouse know. We open cars without damage after checking the log card."),
 "paterson": ("Do you work with condo management in Paterson?", "Yes. We coordinate with the concierge or management office, and check proof of residence or ownership before opening anything."),

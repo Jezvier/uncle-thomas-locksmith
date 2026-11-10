@@ -144,7 +144,7 @@ dict(
 <p>To check yours:</p>
 <ul>
 <li><strong>Look for the label</strong> on the door edge, usually near the hinges. It shows the rating and a serial number.</li>
-<li><strong>Look for a door closer</strong>, the arm at the top that pulls the door shut. HDB fits one to fire-rated entrance doors, and <a href="https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/home-maintenance/home-care-guide/gate-and-door" target="_blank" rel="noopener">it must not be removed</a>.</li>
+<li><strong>Look for a door closer</strong>, the arm at the top that pulls the door shut. HDB fits one to fire-rated entrance doors, and <a href="https://www.hdb.gov.sg/managing-my-home/renovation-and-maintenance/home-maintenance/home-care-guide/gate-and-door" target="_blank" rel="noopener">it must not be removed</a>.</li>
 <li><strong>Still unsure?</strong> HDB residents can check with HDB. Condo residents can ask the management office.</li>
 </ul>
 

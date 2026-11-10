@@ -1,7 +1,7 @@
 /* ==========================================================
    Uncle Thomas Locksmith — Stylesheet
-   Brand: logo mustard + navy + white. Mobile-first.
-   Generated into /styles.css by _build/build.py
+   Brand: white, near-black and logo red (Nov 2026). Mobile-first.
+   Minified and inlined into every page by _build/build.py
    ========================================================== */
 
 @font-face { font-family: 'Poppins'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/fonts/poppins-latin-400-normal.woff2') format('woff2'); }
@@ -152,7 +152,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .card .ico .ico-svg { width: 26px; height: 26px; }
 .bi-star { color: #f5a623; }
 .g-link { display: inline-flex; align-items: center; gap: 6px; }
-.card h3 { font-size: 1.08rem; margin-bottom: 6px; }
+.card h2, .card h3 { font-size: 1.08rem; margin-bottom: 6px; }
 .card p { font-size: .93rem; color: var(--grey); }
 .card .more { display: inline-block; margin-top: 10px; font-weight: 600; font-size: .9rem; color: var(--gold-text); }
 .card .from { display: inline-block; margin-top: 8px; font-weight: 800; font-size: .88rem; background: var(--yellow-soft); color: var(--gold-text); padding: 3px 10px; border-radius: 999px; }
@@ -173,7 +173,8 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .price-table td a { text-decoration: underline; display: inline-block; padding: 6px 0; }
 .price-table td:last-child { font-weight: 800; color: var(--gold-text); white-space: nowrap; }
 .price-table tr:nth-child(even) td { background: var(--yellow-soft); }
-.info-table th:last-child, .info-table td:last-child { text-align: left; font-weight: 400; color: inherit; white-space: normal; }
+.info-table th:last-child, .info-table td:last-child { text-align: left; white-space: normal; }
+.info-table td:last-child { font-weight: 400; color: inherit; }
 .info-table td:first-child { font-weight: 700; }
 @media (max-width: 640px) {
   .info-table thead { display: none; }
@@ -230,7 +231,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .shifu .section-title { color: #fff; }
 .shifu .section-lead { color: #d0d0d0; }
 .shifu-grid { display: grid; gap: 14px; grid-template-columns: 1fr; margin-bottom: 26px; }
-.shifu-item { background: var(--navy-light); border-radius: var(--radius); padding: 18px; }
+.shifu-item { background: #262626; border-radius: var(--radius); padding: 18px; }
 .shifu-item strong { color: var(--yellow-light); display: block; font-weight: 800; margin-bottom: 4px; }
 .shifu-item p { color: #dddddd; font-size: .92rem; }
 

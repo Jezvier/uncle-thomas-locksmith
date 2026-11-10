@@ -24,7 +24,7 @@ DATA = {
  reset="A factory reset wipes every PIN, card and fingerprint and can only be done from inside, using the button under the battery cover. You never need it to get back in from outside.",
  lockout="Like most digital locks, Samsung locks block the keypad for a few minutes after several wrong attempts. Wait, then enter the code once, slowly.",
  quirk="On older Samsung locks, a keypad that lights up but doesn't accept a correct code is often a sign of a weak battery or worn keypad contacts rather than a forgotten PIN.",
- sources=[("Zigbang (previously Samsung) SHP-DP609 listing, JB Hi-Fi", "https://www.jbhifi.com.au/products/zigbang-previously-samsung-shp-dp609"),
+ sources=[("Samsung SHP-DP728 user manual", "https://cdn.shopify.com/s/files/1/0571/0400/7337/files/SHP-DP728-ManualEN.pdf"),
           ("TheSmartLocal: digital locks in Singapore (key override by model)", "https://thesmartlocal.com/read/digital-locks-singapore/")],
  faqs=[("Where is the emergency battery point on a Samsung digital lock?", "On many models it's on the outside, at the bottom of the front unit. Hold a 9V battery to the contacts and enter your code. Models differ, so check your manual."),
        ("My Samsung lock beeps but won't open with the right PIN. Why?", "Often it's low battery power or a mechanical problem with the lock body. Try emergency power first; if it still won't open, call us."),
@@ -247,7 +247,7 @@ DATA = {
  reset="A reset removes the lock from your EZVIZ account and deletes users. Do it from inside only.",
  lockout="Repeated wrong attempts trigger a temporary keypad lockout.",
  quirk="Camera and radar features use power. If the battery drains fast, check the motion and video settings in the app.",
- sources=[("EZVIZ DL50FVS datasheet", "https://mfs.ezvizlife.com/DL50FVS_Datasheet (5085).pdf")],
+ sources=[("EZVIZ DL50FVS datasheet", "https://mfs.ezvizlife.com/DL50FVS_Datasheet%20(5085).pdf")],
  faqs=[("How do I open an EZVIZ smart lock with a dead battery?", "Connect a power bank to the USB-C emergency port to wake it, or use the mechanical key."),
        ("How long does the EZVIZ DL50FVS battery last?", "EZVIZ quotes up to about four months between charges, depending on face-ID and video use.")]),
 

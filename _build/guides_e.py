@@ -223,7 +223,7 @@ dict(
 <p>Many electronic safes only release for a few seconds after a correct code. Enter the code, then turn the handle straight away, in the right direction.</p>
 
 <h2>4. A wrong-code lockout</h2>
-<p>After several wrong entries, many safes ignore all codes for a while, even the right one. Honeywell safes lock for about five minutes after three wrong codes; some Diplomat models lock after three. Wait the full time, then enter the code once, slowly.</p>
+<p>After several wrong entries, many safes ignore all codes for a while, even the right one. Honeywell's 5100-series safes lock for five minutes after three wrong codes (the 2605 fire safe for 15); some Diplomat models lock after three. Wait the full time, then enter the code once, slowly.</p>
 
 <h2>5. A changed or partly saved code</h2>
 <p>If someone recently changed the code, it may not have saved properly. On many safes a failed code change ends with several beeps or a flashing light. Try the old code too, and ask whoever last changed it.</p>
@@ -247,7 +247,7 @@ dict(
  faqs=[
   ("Why won't my safe open with the right code?", "Most often weak batteries, which can light the keypad but not move the bolt. Other causes are pressure on the bolts, a lockout after wrong tries, or a failed lock."),
   ("My safe shows a green light but won't open. What should I do?", "Turn the handle straight away after the code, push the door firmly near the handle side while turning, and replace the batteries."),
-  ("How long is a safe lockout after wrong codes?", "It varies by brand, often a few minutes. Honeywell safes lock for about five minutes after three wrong codes."),
+  ("How long is a safe lockout after wrong codes?", "It varies by brand, often a few minutes. Honeywell's 5100-series safes lock for five minutes after three wrong codes."),
   ("My safe stopped working after we moved house. Why?", "A knock can misalign the bolts or damage the lock. Don't force it: call a safe locksmith."),
  ],
 ),

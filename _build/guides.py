@@ -46,7 +46,7 @@ def build(x):
     crumbs = [("Home", ""), ("Guides", "guides/")]
     title = "Locksmith Guides Singapore | Lockouts, Digital Locks & Safes"
     desc = "Practical guides from Uncle Thomas, a Singapore locksmith since 1998: what to do when locked out, digital lock problems, forgotten safe codes and more."
-    cards = "".join(f'<a class="card" href="~/guides/{g["slug"]}/"><h3>{g["h1"]}</h3><p>{g["card"]}</p><span class="more">Read the guide →</span></a>' for g in GUIDES)
+    cards = "".join(f'<a class="card" href="~/guides/{g["slug"]}/"><h2>{g["h1"]}</h2><p>{g["card"]}</p><span class="more">Read the guide →</span></a>' for g in GUIDES)
     body = (x["page_hero"](crumbs, "Locksmith Guides", "Practical, honest advice for when something goes wrong with a lock — written by a locksmith with {YEARS}+ years in the trade.") +
             f'<section class="section"><div class="container"><div class="grid g2">{cards}</div></div></section>' + x["cta_band"]())
     nodes = x["page_schema"]("guides/", title, desc, crumbs, page_type="CollectionPage")

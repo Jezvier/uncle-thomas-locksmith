@@ -30,8 +30,10 @@
     var t = 'Hi Uncle Thomas, I need a locksmith.\nService: ' + v('what') + '\nLocation: ' + (v('where') || '(will send)') + '\nWhen: ' + v('when') + '\n(Sent from your website)';
     var url = f.getAttribute('action') + '?text=' + encodeURIComponent(t);
     if (typeof window.gtag === 'function') window.gtag('event', 'quote_form_submit', { service: v('what'), urgency: v('when'), page_path: location.pathname, transport_type: 'beacon' });
-    var w = window.open(url, '_blank', 'noopener');
-    if (!w) location.href = url;
+    // No 'noopener' feature here: with it, window.open always returns null, which made the
+    // fallback below also send this tab to WhatsApp. Cut the opener link by hand instead.
+    var w = window.open(url, '_blank');
+    if (w) { try { w.opener = null; } catch (err) {} } else location.href = url;
   });
   // Live Google reviews (homepage). Fetched from Google only when the section is near the
   // screen, kept for the visit in sessionStorage, never stored on our side.

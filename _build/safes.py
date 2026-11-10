@@ -6,7 +6,6 @@ combinations, installs safes, and recommends safes (he does NOT sell or supply s
 worked for commercial offices, pawnshops, banks and government ministries; he
 issues invoices to companies. Don't add claims beyond these without owner input.
 """
-import config as C
 
 SAFE_CLUSTER_NOTE = "safe"
 

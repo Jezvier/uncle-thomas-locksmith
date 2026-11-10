@@ -9,7 +9,6 @@ Uchida, Leeco and Premier have no manuals online; their pages give general advic
 Factory default codes are deliberately NOT published, even where manuals show them.
 Independent: not affiliated with any brand.
 """
-import config as C
 import re as _re
 import unicodedata as _u
 
@@ -34,7 +33,7 @@ DATA = {
  code="With the door open, remove the battery cover and press the key button in the battery compartment. When the yellow light comes on, enter a new code of 2 to 8 digits and press #. If the light flashes with five beeps, the code wasn't saved: start again. Change the factory code as soon as you set the safe up.",
  forgot="Open the safe with the override key, then set a new code. If the key is lost too, SentrySafe can supply one for some models if you send the serial number (on a label on the outside of the safe) and proof of ownership, which takes time.",
  quirk="When a SentrySafe accepts the code but won't open, try fresh batteries first, then the override key. Don't force the knob.",
- sources=[("SentrySafe X055/X105/X125 user manual (Hardware City Singapore)", "https://hardwarecity.com.sg/uploads/product/1637635883_Sentrysafe X055 _ X105 _ X125 User Manual.pdf")],
+ sources=[("SentrySafe X055/X105/X125 user manual (Hardware City Singapore)", "https://hardwarecity.com.sg/uploads/product/1637635883_Sentrysafe%20X055%20_%20X105%20_%20X125%20User%20Manual.pdf")],
  faqs=[("How do I open a SentrySafe without the code?", "Use the override key: remove the cover between the knob and keypad, insert the key, turn it clockwise and hold it while turning the knob."),
        ("How many batteries does a SentrySafe take?", "Electronic models like the X055, X105 and X125 take four AA alkaline batteries inside the door."),
        ("I lost my SentrySafe key and code. Can you open it?", "Yes, with proof of ownership. SentrySafe can also supply keys for some models, but that takes time.")]),
@@ -52,14 +51,15 @@ DATA = {
 
 "Honeywell": dict(
  about="Honeywell-branded safes are made under licence by LH Licensed Products and sold widely online, including to Singapore buyers, as digital security and fire safes.",
- battery="Digital Honeywell safes typically use four AA batteries, and a flashing red light warns when they're low. If you ignore it, the keypad can stop responding. Some commercial models can take temporary power from a 9V battery held to contacts on the keypad.",
- key="Most digital models have an emergency override key behind a small plastic cover near the keypad or handle. Keys are specific to the lock series, so keep yours outside the safe.",
- code="A small reset button inside the door clears the old code, after which you enter a new one of 3 to 8 digits. Follow your model's manual.",
- forgot="Open with the override key, then use the reset button inside to set a new code.",
- quirk="Three wrong codes in a row trigger a lockout of about five minutes. Wait it out rather than keep trying.",
- sources=[("How to open a Honeywell safe (overview)", "https://library.peoplespharmacy.com/open-honeywell-safe")],
- faqs=[("Why won't my Honeywell safe keypad respond?", "Usually low batteries: a flashing red light warns you first. Use the override key, then replace the four AA batteries."),
-       ("My Honeywell safe locked me out after wrong codes. How long?", "About five minutes after three wrong codes. Wait, then enter the code once, slowly.")]),
+ battery="Digital Honeywell safes such as the 5100 series take four AA batteries in a compartment on the inside of the door. On those models, pressing LOCK once shows whether the batteries are good or low, and Honeywell says to change all four as soon as they're weak. Fire safes such as the 2605 show a battery meter when you press *.",
+ key="Digital models have an override key lock behind a cover: on the 5100 series you lift the cover off with a small screwdriver, and on the 2605 it's a rubber cover. Keep the key outside the safe, never inside it.",
+ code="On the 5100 series the pass code is 3 to 6 digits; on fire safes such as the 2605 it's 3 to 8 digits. Set it with the door open, following your model's manual, and test it before you close the door.",
+ forgot="Open the safe with the override key, then set a new code with the door open.",
+ quirk="Three wrong codes in a row start a lockout: five minutes on the 5100 series, 15 minutes on the 2605. The override key still opens the safe during the lockout.",
+ sources=[("Honeywell 5103 to 5113 digital security safe manual (Grainger)", "https://punchout.acklandsgrainger.com/ec/pdf/52HM81_1.pdf"),
+          ("Honeywell 2605 waterproof fire safe manual (Home Depot)", "https://images.thdstatic.com/catalog/pdfImages/c8/c80baf67-57f0-4b59-af89-aaa6be74ef77.pdf")],
+ faqs=[("Why won't my Honeywell safe keypad respond?", "Usually weak batteries. Open it with the override key, then replace all four AA batteries at once."),
+       ("My Honeywell safe locked me out after wrong codes. How long?", "After three wrong codes, five minutes on the 5100 series and 15 minutes on the 2605. The override key still works during the lockout.")]),
 
 "Godrej": dict(
  about="Godrej, from India's Godrej Enterprises Group, makes home and office safes and electronic lockers used across Asia, including by Singapore homes and businesses.",
