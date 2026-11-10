@@ -12,6 +12,63 @@ import icons
 def build(x):
     _contact(x)
     _privacy(x)
+    _jobs(x)
+
+
+_SERVICE_LABELS = {
+    "emergency-locksmith/": "Emergency locksmith", "safe-opening/": "Safe opening",
+    "commercial-locksmith/": "Commercial locksmith", "lock-replacement/": "Lock replacement",
+    "car-locksmith/": "Car locksmith", "digital-lock-opening/": "Digital lock opening",
+    "digital-lock-installation/": "Digital lock installation", "letterbox-lock-replacement/": "Letterbox locks",
+}
+
+
+def _jobs(x):
+    """All real, owner-confirmed jobs, newest first (added 10 Nov 2026).
+    The page changes only when a job is added to config.JOBS, so its date stays honest."""
+    import areas
+    path = "jobs/"
+    title = "Recent Locksmith Jobs in Singapore | Uncle Thomas Locksmith"
+    desc = ("Real jobs by Uncle Thomas Locksmith, newest first: lockouts, safes, gates and cars across "
+            "Singapore, each confirmed by the owner. Call or WhatsApp 9224 9224.")
+    crumbs = [("Home", ""), ("Recent jobs", path)]
+    towns = {t["slug"]: t["name"] for t in areas.TOWNS}
+    groups, order = {}, []
+    for j in C.JOBS:
+        if j["date"] not in groups:
+            groups[j["date"]] = []
+            order.append(j["date"])
+        groups[j["date"]].append(j)
+    sections = ""
+    for month in order:
+        items = ""
+        for j in groups[month]:
+            svc = j.get("service", "")
+            label = _SERVICE_LABELS.get(svc)
+            links = []
+            if label:
+                links.append(f'<a href="~/{svc}">{label}</a>')
+            if j["area"] in towns:
+                links.append(f'<a href="~/areas/{j["area"]}/">Locksmith in {towns[j["area"]]}</a>')
+            more = f' <span class="job-links">{" · ".join(links)}</span>' if links else ""
+            items += f"<li>{j['text']}{more}</li>"
+        sections += f'<h2>{month}</h2><ul class="jobs">{items}</ul>'
+    rating = ""
+    if C.GOOGLE_RATING and C.GOOGLE_REVIEW_COUNT:
+        rating = (f'<p>Rated <strong>{float(C.GOOGLE_RATING):.1f}</strong> on Google from {int(C.GOOGLE_REVIEW_COUNT)} reviews. '
+                  f'<a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read the reviews on Google</a>.</p>')
+    body = (x["page_hero"](crumbs, "Recent Locksmith Jobs in Singapore",
+            "Real jobs Uncle Thomas and the team have done, newest first. No stock stories: every one is confirmed by the owner.",
+            ["Real jobs", "Islandwide", "24/7"]) +
+            f'''<section class="section"><div class="container narrow prose">
+{rating}
+<p>We add jobs as they're done. Customers' names and addresses are never shown; only the area and the kind of lock.</p>
+{sections}
+<h2>Had a job done with us?</h2>
+<p><a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Leave Uncle Thomas a Google review</a>. It takes a minute and helps other families find us.</p>
+</div></section>''' + x["cta_band"]())
+    nodes = x["page_schema"](path, title, desc, crumbs)
+    x["render"](path, title, desc, body, nodes, priority="0.6")
 
 
 def _contact(x):
