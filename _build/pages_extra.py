@@ -32,7 +32,7 @@ def _contact(x):
 <li>{icons.svg("phone", cls="bi")} <span><strong>Phone (24/7):</strong> <a href="tel:{C.PHONE_E164}" data-pos="contact">{C.PHONE}</a></span></li>
 <li>{icons.svg("chat", cls="bi")} <span><strong>WhatsApp:</strong> <a href="{C.WA_LINK}" target="_blank" rel="noopener" data-pos="contact">{C.PHONE}</a></span></li>
 {email_row}
-<li>{icons.svg("star", cls="bi bi-star", fill=True)} <span><strong>Google:</strong> <a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">our Google Business Profile and reviews</a></span></li>
+<li>{icons.svg("star", cls="bi bi-star", fill=True)} <span><strong>Google:</strong> we're listed on Google Maps as <a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">{C.GBP_NAME}</a>, with our reviews</span></li>
 <li>{icons.svg("star", cls="bi bi-star", fill=True)} <span><strong>Had a job done with us?</strong> <a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">Leave Uncle Thomas a Google review</a>. It takes a minute and helps other families find us.</span></li>
 </ul>
 

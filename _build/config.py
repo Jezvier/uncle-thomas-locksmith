@@ -39,6 +39,9 @@ EMAIL = None
 GOOGLE_MAPS_URL = "https://maps.google.com/?cid=4145225534861484330"
 GOOGLE_SHARE_LINK = "https://share.google/pcY4Ywtr5iTrQpRfk"
 GOOGLE_PROFILE = GOOGLE_MAPS_URL or GOOGLE_SHARE_LINK
+# The name the Google Business Profile shows (it differs from the trading name, so say so
+# on the site and in llms.txt: it helps Google and AI assistants tie the two together).
+GBP_NAME = "Singapore Locksmith"
 # Google Place ID (matched to the CID above on 27 Oct 2026) and the direct "write a review" link.
 PLACE_ID = "ChIJW1IOQGYX2jERKiFMX6nMhjk"
 GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=" + PLACE_ID
