@@ -32,7 +32,7 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - Sources: `config.py` (facts, prices, photos, brand lists), `content.py` (home, services, prices, about), `areas.py` (towns), `brands.py` (digital/smart lock brands), `cars.py` (car brands), `guides*.py` (articles), `zh.py` (Chinese pages, still need a native-speaker check), `pages_extra.py` (contact, privacy), `icons.py` (SVG icons, no emoji), `styles.css`.
 - Photos: originals in `assets/photos/` (not deployed); the build makes WebP/JPG sizes in `assets/img/photos/`.
 - Page dates: `_build/lastmod.json` tracks when each page's `<main>` content last changed. The build uses that one date for the sitemap `lastmod`, the WebPage `dateModified` schema and the small "Last updated" line on each page (guides keep their own byline). Never fake dates.
-- Logo: header uses `logo-mark-ring-*`, footer `logo-mark-*`, favicons/app icons `*-v2`; masters in `_build/brand/`. The full text logo (`logo-640.jpg`) stays in schema to match the Google profile.
+- Logo: header uses `logo-ring-v3-*`, footer `logo-face-v3-*`, favicons/app icons `*-v3` (neck and shirt redrawn 10 Nov 2026; bump the version in the file names when the art changes, because /assets/ is cached for a year); masters in `_build/brand/`. The full text logo (`logo-640.jpg`) stays in schema to match the Google profile.
 - `_redirects` holds 301s from the old Wix URLs. `/review` is a 302 to the Google review form (short link for WhatsApp/QR). `_headers` is generated: change `HEADERS` in `build.py`, not the file.
 
 ## Publishing
