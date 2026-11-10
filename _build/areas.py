@@ -124,88 +124,225 @@ dict(slug="cbd-orchard", name="Orchard & CBD", region="Central",
 
 dict(
  slug="newton", name="Newton", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith Newton | Condo Digital Locks, Safes and Cars 24/7',
+ desc='24/7 locksmith in Newton, Cairnhill and Scotts Road: condo digital lock lockouts, home safes and cars in basement carparks. Safe specialist. Call 9224 9224.',
+ h1='Locksmith in Newton, Cairnhill and Scotts Road, 24/7',
  intro="Newton is condo country, between Orchard and Novena — so most of our calls here are digital lock lockouts, home safes and cars in condo carparks.",
  overview="Newton sits just north of Orchard, around Newton Circus and the hawker centre that gives the area its name. Most homes are private condominiums and apartments along Newton Road, Scotts Road, Cairnhill and the streets off Bukit Timah Road, with a few landed pockets and older walk-up apartments. That means high-end digital locks, home safes in bedrooms and study rooms, and cars parked in basement carparks.",
+ feature="""
+<h2>Why Newton calls are different from the heartlands</h2>
+<p>Newton is almost entirely private housing. Between Newton Circus, Cairnhill, Scotts Road and the streets off Bukit Timah Road, nearly every front door belongs to a condominium unit, and nearly every unit has a digital lock. The classic heartland call, an old mortise lock that has finally worn out, is rare here. What we see instead falls into three groups: a digital or smart lock that won't let the owner in, a home safe that won't open, and a car locked in a basement carpark with the key inside.</p>
+<p>All three have something in common: the lock itself is usually fine. A dead battery, a forgotten code or a key left on the passenger seat is the real problem, so most Newton jobs end with nothing broken and nothing to replace.</p>
+
+<h2>Digital lock lockouts in Newton condos</h2>
+<p>Most condo digital locks give weeks of warning before the batteries die: a beep, a flashing icon, a voice prompt. In a busy household that warning is easy to ignore, and the lock fails on the one evening the backup key is sitting in a drawer inside. Before you call us, try these in order:</p>
+<ol>
+<li><strong>Look for the emergency power point.</strong> Many locks have a USB port, or two contacts for a 9V battery, under the keypad. A power bank can wake the lock long enough to enter your PIN.</li>
+<li><strong>Find the key override.</strong> Most models hide a mechanical keyhole behind a small cover. It only helps if the key is outside the flat.</li>
+<li><strong>Check the lock isn't in privacy or double-lock mode</strong>, which some brands use to block the keypad when someone inside has locked up for the night.</li>
+</ol>
+<p>If none of that works, WhatsApp us the brand and a photo of the keypad. We open digital and smart locks of every brand, usually without damage, and replace the batteries before we leave. Emergency digital lock opening starts from {P_DIGITAL_OPEN}. Our guide to <a href="~/guides/digital-lock-battery-dead/">a digital lock with a dead battery</a> has more detail, and the <a href="~/digital-lock-opening/">digital lock opening</a> page covers the brands we see most.</p>
+
+<h2>Home safes: a forgotten code is not the same as a faulty safe</h2>
+<p>Newton families tend to keep passports, jewellery and documents in a bedroom or wardrobe safe, and the call often comes a day or two before a flight. How we open it depends on what has gone wrong. If the code has simply been forgotten and the lock is healthy, there are often ways in that leave the safe as it was: the override key, a manufacturer reset with proof of ownership, or, on high-security combination locks, manipulation by feel and sound, a skill Uncle Thomas trained in. If the lock itself has failed, the honest answer is different: most faulty safes have to be drilled. Done properly, that means one small, precise hole, and about 90% of drilled safes can be repaired and used again.</p>
+<p>Either way, we tell you which case you're in, and the price, before we start. Safe opening starts from {P_SAFE}. If the safe holds something you need for a trip, say so when you call. See <a href="~/safe-opening/">safe opening</a> and <a href="~/guides/forgot-safe-combination/">forgot your safe combination</a>.</p>
+
+<h2>Cars in condo basements</h2>
+<p>Newton's condo carparks are deep, and phone signal down there is often poor, so many owners call us from the lift lobby. Send the carpark level, lot number and car model, and let the guardhouse know a locksmith is coming. We open cars of all major brands with non-destructive tools, from {P_CAR}, after checking your NRIC against the log card. If one remote key is shared between two drivers, a cloned spare fob stops it happening again: see <a href="~/car-key-duplicate/">spare car key fob</a>.</p>
+
+<h2>Getting in at night</h2>
+<p>Newton is one of the closest areas to our usual base around Toa Payoh, a short run down Thomson Road or the CTE, so late-night jobs here move quickly. The slow part is usually the gate. Tell the guardhouse your unit and that a locksmith is expected, and have ID showing your address ready. Daytime lockouts start from {P_LOCKOUT}; nights, weekends and public holidays from {P_AFTERHOURS}.</p>
+""",
  estates=["Newton Road", "Cairnhill", "Scotts Road", "Kampong Java", "Stevens Road", "Bukit Timah Road"],
  landmarks=["Newton Food Centre", "Newton Circus", "Cairnhill", "Scotts Road"],
  mrt=["Newton", "Stevens", "Orchard"],
  buildings=[
   ("Condominiums and apartments", "Digital and smart locks on main doors, often with a second deadbolt. The guardhouse will need to know we're coming, and we check proof of residence before opening."),
-  ("Home safes", "Many Newton homes keep passports, jewellery and documents in a bedroom or wardrobe safe. Uncle Thomas opens home safes of every type, usually without drilling."),
+  ("Home safes", "Many Newton homes keep passports, jewellery and documents in a bedroom or wardrobe safe. Uncle Thomas opens home safes of every type and changes combinations."),
   ("Basement carparks", "Car lockouts in condo carparks are common here. Tell us the level and lot number, and the guardhouse can let us in."),
  ],
  jobs=["Digital lock lockouts in condos", "Home safes that won't open", "Car lockouts in condo carparks", "Main door lock changes after a tenancy"],
  access="Most Newton condos have a guardhouse, so let them know a locksmith is coming and give us the block and unit. For car lockouts, tell us the carpark level and lot number.",
  faqs=[
-  ("Can you open a home safe in a Newton condo?", "Yes. Uncle Thomas is a safe specialist and opens home safes of every type, usually without drilling. We check that the safe is yours first."),
+  ("Can you open a home safe in a Newton condo?", "Yes. Uncle Thomas opens home safes of every type. If the code is forgotten but the lock works, it can often be opened without damage; a faulty lock usually means drilling, and most drilled safes can be repaired. We check that the safe is yours first."),
   ("Do you come to Newton late at night?", "Yes, 24/7. Newton is central, so it's quick for us to reach, usually within 25–30 minutes."),
+  ('My condo digital lock is dead and the backup key is inside. What now?', 'Try the emergency power point under the keypad with a power bank or a 9V battery. If that fails, WhatsApp us the brand and a photo. We open all digital and smart lock brands and replace the batteries on the spot.'),
+  ('How much does it cost to open a safe in Newton?', "Safe opening starts from {P_SAFE}. Send a photo of the safe's front and brand label, and we'll confirm the price before we come."),
  ],
  nearby=["cbd-orchard", "novena", "paterson"],
 ),
 dict(
  slug="paterson", name="Paterson", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith Paterson & Orchard Boulevard | Safes, Smart Locks',
+ desc='24/7 locksmith for Paterson Road, Paterson Hill and Orchard Boulevard: luxury smart locks, watch and home safes, lock changes between tenants. Call 9224 9224.',
+ h1='Locksmith in Paterson and Orchard Boulevard, 24/7',
  intro="Paterson is a quiet, upmarket pocket just off Orchard Road — our calls here are mostly luxury condo digital locks, home safes and cars.",
  overview="Paterson Road and Paterson Hill run between Orchard Road and River Valley, a few minutes' walk from Orchard Boulevard. It's an area of luxury condominiums, serviced residences and a few landed homes, many of them owned by families who travel often or by owners who rent to expatriates. High-end digital and smart locks, home safes and cars in private carparks make up most of the work here.",
+ feature="""
+<h2>A district of owners who are often elsewhere</h2>
+<p>Paterson is small, and its locksmith work follows an unusual pattern. Many of its luxury condos and serviced residences belong to owners who spend part of the year abroad, or who rent their units to professionals on two- or three-year postings. Homes sit empty for weeks, tenants come and go, and the person who set a lock's code is often not the person standing in front of it. That shapes almost every call we get here.</p>
+
+<h2>Between tenancies: a landlord's lock checklist</h2>
+<p>When a tenant moves out of a Paterson unit, the lock is easy to forget. It shouldn't be. A departing tenant may have added fingerprints, shared PINs with a helper or driver, or paired the lock to an app on a phone that has now left the country. Before the next tenant moves in:</p>
+<ul>
+<li><strong>Delete every user code, card and fingerprint</strong>, or factory-reset the lock and set it up again.</li>
+<li><strong>Unpair the app</strong> from the old tenant's account. Most smart lock apps let only the admin account do this, which is where many landlords get stuck.</li>
+<li><strong>Collect or replace the mechanical keys.</strong> If one is missing, replacing the cylinder costs less than wondering who has it.</li>
+<li><strong>Open and reset any safe</strong> left in the unit, so the next occupant doesn't inherit a locked box with no code.</li>
+</ul>
+<p>If the tenant has already gone and the code went with them, we open the door without damage once you show proof of ownership, then reset or replace the lock. Our <a href="~/guides/landlord-tenant-lock-change/">landlord and tenant lock change guide</a> explains who can authorise what.</p>
+
+<h2>Smart locks, concierges and lift cards</h2>
+<p>High-end condos around Paterson Hill and Orchard Boulevard often pair a premium smart lock with a concierge desk and lift access cards. When something fails, it's rarely the lock alone: an app that has logged out, a phone left inside, a lift that won't take you to your floor without your card. We deal with the lock, but the concierge holds the keys to everything else. Let them know a locksmith is expected and that you'll need lift access, and the job usually takes minutes rather than an hour. We open smart and digital locks of every brand, from {P_DIGITAL_OPEN} for an emergency opening.</p>
+
+<h2>Watch, jewellery and document safes</h2>
+<p>The safes we're called to in Paterson tend to be small, well built and kept in a walk-in wardrobe or study: watch safes, jewellery safes and document safes. Owners who travel ask for two things most. One is opening a safe whose code nobody remembers after months away. The other is a <strong>combination change</strong>, because someone who knew the old code has left: a household member, a member of staff or a tenant. A combination change is quicker than an opening, and worth doing every time the people around a safe change. See <a href="~/safe-combination-change/">safe combination change</a>.</p>
+<p>If a safe's lock has actually failed, most faulty safes need drilling, done precisely so that about 90% of them can be repaired and used again. We explain which situation you're in, and the price, before any work starts. Safe opening starts from {P_SAFE}.</p>
+
+<h2>When you're overseas</h2>
+<p>If you own a unit here and you're abroad when something goes wrong, the job can still be done. Someone on site, such as a tenant, a family member or your agent, needs to meet us with ID, and we need your written authorisation and proof that the unit is yours. Send everything on WhatsApp to {PHONE} before we set off, and we confirm the price in writing too. Companies and property managers receive a proper invoice, and we take PayNow.</p>
+""",
  estates=["Paterson Road", "Paterson Hill", "Orchard Boulevard", "Grange Road", "Angullia Park", "River Valley"],
  landmarks=["Paterson Hill", "Orchard Boulevard", "Orchard Road", "Grange Road"],
  mrt=["Orchard Boulevard", "Orchard", "Somerset", "Great World"],
  buildings=[
   ("Luxury condominiums", "Premium digital and smart locks, sometimes with app access and a concierge. We work with the management office and check proof of residence before opening."),
   ("Serviced and rented residences", "Landlords and agents call us when a tenant has left without returning the code or keys. We check proof of ownership, open the door and can change the lock the same visit."),
-  ("Home safes", "Safes in walk-in wardrobes and studies hold passports, watches and jewellery. Uncle Thomas opens them, usually without drilling, and can change the combination afterwards."),
+  ("Home safes", "Safes in walk-in wardrobes and studies hold passports, watches and jewellery. Uncle Thomas opens them and can change the combination afterwards."),
  ],
  jobs=["Home safe opening and combination changes", "Smart lock lockouts in luxury condos", "Lock changes for landlords between tenants", "Car lockouts in private carparks"],
  access="Paterson condos usually have a concierge or guardhouse, so tell them a locksmith is coming. For safes, have proof that the safe is yours ready, such as ID with the address.",
  faqs=[
   ("Can you change a safe combination in Paterson?", "Yes. After checking the safe is yours, Uncle Thomas can open it and set a new combination, or replace the safe lock if it's faulty."),
   ("My tenant left and the digital lock code changed. Can you help?", "Yes. Show us proof that you own the unit and we'll open the door without damage, then reset or replace the lock."),
+  ("I'm overseas. Can you open my Paterson unit for my agent or tenant?", 'Yes, with your written authorisation and proof that the unit is yours, sent on WhatsApp before we set off. Someone you trust needs to be there with ID.'),
+  ('How often should I change my safe combination?', "Whenever someone who knew it moves on: a tenant, a member of staff or anyone else. It's a quick job compared with opening a safe whose code has been lost."),
  ],
  nearby=["cbd-orchard", "newton", "bukit-merah"],
 ),
 dict(
  slug="tanglin", name="Tanglin", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith Tanglin & Nassim | Safes, Gates and Rekeying 24/7',
+ desc='Discreet 24/7 locksmith for Tanglin, Nassim, Cuscaden and Dempsey: home and watch safes, bungalow gates, whole-house rekeying and smart locks. Call 9224 9224.',
+ h1='Locksmith in Tanglin, Nassim and Dempsey, 24/7',
  intro="Tanglin is one of Singapore's most exclusive addresses: embassies, good class bungalows and luxury condos, so our calls here are mostly home safes, high-end digital locks and cars.",
  overview="Tanglin stretches from the top of Orchard Road past Tanglin Mall and Dempsey Hill to the Singapore Botanic Gardens. Around Nassim Road, Napier Road and Cuscaden Road you'll find embassies, ambassadors' residences, large landed houses and some of the island's most expensive condominiums. Homes here often have a safe in the master bedroom or study, gated driveways with several locks, and more than one car.",
+ feature="""
+<h2>Large homes, many keys</h2>
+<p>A Tanglin bungalow can have a dozen locks before you count the safes: a driveway gate, a pedestrian gate, a front door, a back door, a service entrance, store rooms and staff quarters. Over the years, those keys spread. Helpers, drivers, gardeners, renovation contractors and previous tenants may all have held one, and some will have been copied. For most of the homes we see around Nassim, Napier and Cuscaden, the security question isn't whether the locks are good. It's who still has a key.</p>
+
+<h2>Rekeying the whole property in one visit</h2>
+<p>You don't usually need new locks to solve that. Replacing the cylinders, the part the key goes into, makes every old key useless while keeping the lock bodies, handles and gate hardware you already have. On a large property we work through it methodically:</p>
+<ol>
+<li><strong>Walk the property with you</strong> and list every entrance, gate and internal lock that matters.</li>
+<li><strong>Photograph each lock</strong> so the right cylinders and parts are on hand. Sending these on WhatsApp beforehand saves a second trip.</li>
+<li><strong>Agree who gets which keys.</strong> Staff may need the service gate and kitchen door, but not the study or the front door.</li>
+<li><strong>Replace and test</strong> each cylinder, then hand over the new keys with a simple record of what opens what.</li>
+</ol>
+<p>Main door and gate lock replacement starts from {P_REPLACE}, supplied and installed, with our no-expiry warranty. See <a href="~/lock-replacement/">lock replacement</a> and <a href="~/guides/change-locks-new-home/">changing locks in a new home</a>.</p>
+
+<h2>Safes, staff changes and discretion</h2>
+<p>Tanglin homes often keep more than one safe: a wall or floor safe in the master bedroom, a watch or jewellery safe in the dressing room, a document safe in the study. Most of our safe calls here come from one of two moments. Either nobody can remember a code, or the household has changed and a member of staff who knew the code has moved on. In the second case the safe still opens, and the fix is a <a href="~/safe-combination-change/">combination change</a> that only the family knows.</p>
+<p>Uncle Thomas trained as a safesmith in the United States and has opened safes for banks, hotels and offices, as well as on ships. That experience matters with expensive safes, which often have relockers that fire if a safe is attacked the wrong way. When a code is lost but the lock works, there's often a way in that leaves the safe as it was. When the lock has failed, drilling is usually the answer, at a precise point, and about 90% of drilled safes can be repaired. He works quietly, can come alone, and never discusses clients or what was inside. Safe opening starts from {P_SAFE}.</p>
+
+<h2>Gates and driveways</h2>
+<p>Heavy driveway gates take daily wear, and rain and heat get into every lock exposed to them. Watch for a key that turns only partway, a bolt that needs the gate lifted before it slides, or rust staining around the keyhole. Replace a failing gate lock before it seizes with the car on the wrong side. We open seized gate locks and fit replacements made for outdoor use.</p>
+
+<h2>Embassies, guardhouses and access</h2>
+<p>Tanglin is home to many embassies and diplomatic residences, and plenty of private homes have their own guards or gate procedures. If security needs to clear contractors, register us before you call, as Uncle Thomas Locksmith, {PHONE}. We still ask for ID and proof that the property is yours, or written authorisation from whoever is responsible for it. That check protects you as much as anyone.</p>
+""",
  estates=["Nassim", "Cuscaden", "Napier Road", "Tanglin Road", "Dempsey", "Grange Road"],
  landmarks=["Singapore Botanic Gardens", "Dempsey Hill", "Tanglin Mall", "Nassim Road"],
  mrt=["Botanic Gardens", "Napier", "Orchard Boulevard", "Orchard"],
  buildings=[
   ("Landed homes and bungalows", "Main gates, side gates, front doors and safes, each with its own lock. We confirm ownership before opening anything and can rekey the whole property by replacing the cylinders."),
   ("Luxury condominiums", "Premium digital and smart locks with app access, often managed through a concierge. We coordinate with management and check proof of residence."),
-  ("Home safes and watch safes", "Safes holding passports, jewellery, watches and documents. Uncle Thomas is a safe specialist and opens them, usually without drilling, then changes the combination."),
+  ("Home safes and watch safes", "Safes holding passports, jewellery, watches and documents. Uncle Thomas is a safe specialist: he opens them and can change the combination afterwards."),
  ],
  jobs=["Home safe and watch safe opening", "Combination changes when household staff change", "Car lockouts in private driveways and condo carparks", "Gate and main door lock upgrades"],
  access="Many Tanglin homes are gated, so tell us the gate or guardhouse procedure. For embassy-area addresses, let security know a locksmith is expected.",
  faqs=[
-  ("Can you open a home safe in Tanglin discreetly?", "Yes. Uncle Thomas works quietly and alone if you prefer, opens the safe usually without drilling, and can set a new combination on the spot. We check the safe is yours first."),
+  ("Can you open a home safe in Tanglin discreetly?", "Yes. Uncle Thomas works quietly and can come alone if you prefer. If the code is lost but the lock works, there is often a way in without damage, and he can set a new combination on the spot. We check the safe is yours first."),
   ("Should I change my safe combination when my helper or staff leave?", "It's a good idea. Anyone who has seen or been told the code can still open the safe. We change combinations on most safe types in one visit."),
+  ('Can you rekey every lock on a Tanglin bungalow without changing the hardware?', "Usually, yes. We replace the cylinders so old keys stop working, keep your existing lock bodies and handles where they're in good shape, and give you a record of which key opens what."),
  ],
  nearby=["cbd-orchard", "paterson", "bukit-timah", "holland-village"],
 ),
 dict(
  slug="bukit-timah", name="Bukit Timah", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith Bukit Timah | Gates, Home Safes and Cars, 24/7',
+ desc='24/7 locksmith in Bukit Timah, Sixth Avenue and King Albert Park: driveway gates, lock changes, inherited safes, school-run car lockouts. Call 9224 9224.',
+ h1='Locksmith in Bukit Timah, 24/7: Gates, Safes and Cars',
  intro="Bukit Timah is landed-home country, with bungalows, semi-detached houses and quiet condos, so most of our work here is gates, home safes and cars.",
  overview="Bukit Timah runs along Bukit Timah Road and Dunearn Road from the Botanic Gardens out towards Beauty World and the nature reserve. It's home to many of Singapore's good class bungalows and landed estates around Sixth Avenue, King Albert Park, Coronation Road and Hillcrest, alongside low-rise condos and top schools. Large homes mean more locks: driveway gates, side gates, front doors, store rooms and safes.",
+ feature="""
+<h2>Bukit Timah's most common calls</h2>
+<p>Behind the schools and shophouses of Bukit Timah Road lie streets of bungalows, semi-detached houses and low-rise condos, from Cluny and Coronation Road out past Sixth Avenue and King Albert Park to Hillcrest and Beauty World. The calls we get from them fall into clear patterns: families who have just moved into a landed home and want control of the keys, gates that fail at the worst possible moment, and safes nobody can open, often ones that came with the house or belonged to a parent who has passed away.</p>
+
+<h2>Just moved into a landed home? Start with the locks</h2>
+<p>When you buy a landed house, you inherit every key the previous owners ever handed out: to helpers, contractors, agents, the neighbour who watered the plants. There is no way to know where they all are. The fix is simple and worth doing in your first week: replace the cylinders on every external door and gate, so only your keys work. Bring a list of the entrances, or send photos on WhatsApp, and we confirm parts and price in advance. If the house came with a digital lock, delete every old user and fingerprint, or reset it to factory settings. Our <a href="~/guides/change-locks-new-home/">guide to changing locks in a new home</a> covers the details.</p>
+
+<h2>When the driveway gate won't open</h2>
+<p>A driveway gate gets used several times a day, and its lock lives outdoors in the rain and heat. The failure is almost always gradual: a key that needs wiggling, a bolt that needs the gate pushed or lifted, a lock that only works if you're gentle with it. Then one morning, usually a school day, it stops. If that happens, don't force the key. A snapped key turns a quick opening into an extraction job. Call us, and we open the gate and, if the lock body is worn, fit a sturdier replacement in the same visit, from {P_REPLACE}. If a key has already snapped, see <a href="~/broken-key-extraction/">broken key extraction</a>.</p>
+
+<h2>The safe nobody can open</h2>
+<p>Older Bukit Timah homes often hold older safes: a heavy dial safe built into a wardrobe, a cabinet safe in a study, sometimes one the previous owners left behind with no code and no paperwork. Others belonged to a parent who has died, with documents or valuables the family needs to settle the estate. These are delicate situations, so we go carefully. We need to see that the property is yours or, for a late family member's safe, documents that show you're entitled to deal with the estate. Our guide to <a href="~/guides/opening-a-deceased-persons-safe/">opening a late family member's safe</a> explains what Singapore's probate process expects.</p>
+<p>On the safe itself: an old dial lock in working order can sometimes be opened by manipulation, by feel and sound, without leaving a mark. Uncle Thomas is trained in that technique for high-security combination locks, and a job can take anywhere from 5 minutes to 5 hours. If the lock has failed, drilling is usually needed, and about 90% of drilled safes can be repaired and used again. Safe opening starts from {P_SAFE}.</p>
+
+<h2>School runs and car lockouts</h2>
+<p>With so many schools along Bukit Timah and Dunearn Road, drop-off and pick-up are when car lockouts happen: keys left inside while a child is helped out, a smart key dropped into a bag that ends up in the boot. Tell us the school or carpark and the car model. We open cars of all major brands without damage, from {P_CAR}, after checking the log card. For families sharing one remote key between two drivers, a cloned spare fob is the lasting fix; see <a href="~/car-key-duplicate/">spare car key fob</a>.</p>
+""",
  estates=["Sixth Avenue", "King Albert Park", "Coronation Road", "Hillcrest", "Swiss Club Road", "Cluny"],
  landmarks=["Bukit Timah Nature Reserve", "Beauty World", "Cluny Court", "Botanic Gardens"],
  mrt=["Botanic Gardens", "Tan Kah Kee", "Sixth Avenue", "King Albert Park", "Beauty World"],
  buildings=[
   ("Bungalows and landed homes", "Several locks per property and heavy driveway gates that take a lot of wear. We open, replace or rekey them so one set of keys works the way you want."),
-  ("Home safes", "Bedroom, study and wardrobe safes are common here. Uncle Thomas opens every type of safe, usually without drilling, and about 90% of drilled safes can be repaired and used again."),
+  ("Home safes", "Bedroom, study and wardrobe safes are common here. Uncle Thomas opens every type of safe, and when drilling is needed, about 90% of drilled safes can be repaired and used again."),
   ("Family cars", "Car lockouts in driveways, school carparks and condo basements. We open cars without damage after checking the log card."),
  ],
  jobs=["Home safe opening and combination changes", "Driveway and side gate lock replacement", "Car lockouts at home and at school pick-up", "Rekeying a whole house after moving in"],
  access="Bukit Timah's landed streets can be hard to find at night, so a pinned location on WhatsApp helps. Tell us which gate to come to.",
  faqs=[
   ("We just bought a landed home in Bukit Timah. Should we change the locks?", "Yes. You don't know who still has keys from the previous owner, contractors or agents. We replace the cylinders on every gate and door so only your keys work."),
-  ("Can you open an old safe left by the previous owner?", "Usually, yes. Show us that you own the property and the safe came with it, and Uncle Thomas will open it, often without drilling."),
+  ("Can you open an old safe left by the previous owner?", "Usually, yes. Show us that you own the property and the safe came with it, and Uncle Thomas will open it. If its lock still works it may open without damage; if the lock has failed, it will usually need drilling."),
+  ("Can you open my late father's safe in Bukit Timah?", "Yes, once you show you're entitled to deal with his estate, for example a Grant of Probate or Letters of Administration, or with the executor's agreement. Our guide to opening a late family member's safe explains the documents in plain English."),
  ],
  nearby=["tanglin", "holland-village", "bukit-panjang"],
 ),
 dict(
  slug="holland-village", name="Holland Village", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith Holland Village | Safes, Lock Changes and Shutters',
+ desc='24/7 locksmith in Holland Village, Chip Bee Gardens and Leedon: lock changes between tenancies, safes left behind, restaurant shutters and cars. Call 9224 9224.',
+ h1='Locksmith in Holland Village and Chip Bee Gardens, 24/7',
  intro="Holland Village mixes landed estates, expat condos and its famous dining strip, so our calls are home safes, digital locks, cars and the odd shop shutter.",
  overview="Holland Village sits around Lorong Liput and Jalan Merah Saga, with the landed estates of Chip Bee Gardens, Holland Grove and Holland Hill around it and condos along Holland Road and Farrer Road. Many homes are rented to expatriate families, so lock changes between tenancies and safes left by previous occupants are common. The dining strip adds shophouse shutters and back doors.",
+ feature="""
+<h2>A neighbourhood that moves in and out</h2>
+<p>Holland Village has long been a favourite with families on overseas postings, and that gives our work here a rhythm of its own. Every few months a household arrives, another leaves, and the locks, codes and safes pass from one set of hands to the next. Most Holland Village calls happen at those handover points, plus late-night lockouts on the dining strip and the occasional car locked near One Holland Village.</p>
+
+<h2>Moving in: what to do with the locks</h2>
+<p>New tenants often assume the landlord has changed the locks. Many haven't, so ask. If they haven't, there are two options: ask the landlord to arrange a cylinder change, or agree to do it yourself and hand over the new keys when you leave. Either way, get it in writing, because changing locks on a rented home normally needs the landlord's agreement. For a digital lock, have every old PIN, card and fingerprint removed and set your own. See <a href="~/guides/landlord-tenant-lock-change/">who can change the locks in a rental</a>.</p>
+
+<h2>Moving out: open every safe, hand over every code</h2>
+<p>The most avoidable call we get in Holland Village is the safe nobody can open on moving day. The person who set the code has packed, the movers are booked, and a wardrobe safe still holds something important. Before a relocation:</p>
+<ul>
+<li>Open every safe in the home, empty it, and leave it open, or reset it to the factory code if the landlord prefers.</li>
+<li>Hand the landlord or agent every key, every card and the digital lock's admin code.</li>
+<li>Mention any lock that has become stiff or unreliable, so it's fixed before the next family arrives.</li>
+</ul>
+<p>Already stuck? With the landlord's or agent's written authorisation, we open a safe or door left locked by a previous occupant. If the code has just been forgotten, check the paperwork for an override key first; our <a href="~/guides/lost-safe-key/">lost safe key</a> and <a href="~/guides/forgot-safe-combination/">forgotten combination</a> guides explain what to look for. If the lock has failed, most faulty safes need drilling, and about 90% of those can be repaired and reused. Safe opening starts from {P_SAFE}.</p>
+
+<h2>Older landed homes in Chip Bee Gardens and Holland Grove</h2>
+<p>Chip Bee Gardens was built as housing for British military families, and many of its houses, like others around Holland Grove and Holland Hill, have been renovated more than once. That leaves a patchwork of hardware: an original timber door with a newer deadbolt, a modern digital lock on an old frame, a gate lock replaced twice. With mixed hardware, the first job is to look properly, so we bring the right parts and don't damage a door that may be hard to match. Photos on WhatsApp before we come help a lot.</p>
+
+<h2>Restaurants and shops on the strip</h2>
+<p>For restaurants and shops along Lorong Liput, Lorong Mambong and Jalan Merah Saga, the late shift is when locks fail: a shutter padlock that won't close at 1am, a back door that jams after the last delivery. We work 24/7, cut seized padlocks and fit new ones, and open roller shutter locks. We need proof that you own or run the business, and companies receive an invoice. See <a href="~/roller-shutter-lock/">roller shutter locks</a> and <a href="~/padlock-cutting/">padlock cutting</a>.</p>
+""",
  estates=["Chip Bee Gardens", "Holland Grove", "Holland Hill", "Leedon Park", "Farrer Road", "Jalan Merah Saga"],
  landmarks=["Holland Village", "Holland Road", "Farrer Road", "Lorong Liput"],
  mrt=["Holland Village", "Farrer Road", "Buona Vista"],
@@ -219,13 +356,43 @@ dict(
  faqs=[
   ("Can you help a family relocating out of Holland Village?", "Yes. We open safes whose codes have been forgotten, and change or reset locks before you hand the home back, with the landlord's agreement."),
   ("Do you open shop shutters on the Holland Village strip?", "Yes, 24/7. We'll need proof that you own or run the business before opening."),
+  ('Can a tenant in Holland Village ask you to change the locks?', "A tenant can call us for a lockout with proof of residence. Changing the lock on a rented home normally needs the landlord's agreement, so check your tenancy agreement first."),
+  ('The previous tenant left a locked safe. Can you open it?', "Yes, with written authorisation from the landlord or agent. Send a photo of the safe and we'll confirm the price first."),
  ],
  nearby=["tanglin", "bukit-timah", "clementi"],
 ),
 dict(
  slug="river-valley", name="River Valley", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith River Valley & Robertson Quay | Smart Locks, Safes',
+ desc='24/7 locksmith in River Valley, Robertson Quay and Killiney: smart lock and app failures, serviced apartment doors and safes, car lockouts. Call 9224 9224.',
+ h1='Locksmith in River Valley and Robertson Quay, 24/7',
  intro="River Valley and Robertson Quay are packed with luxury condos and serviced apartments, so most calls here are smart lock lockouts, home safes and cars in basement carparks.",
  overview="River Valley runs between Orchard and the Singapore River, taking in Robertson Quay, Mohamed Sultan, Killiney, Kim Yam and Institution Hill. Almost every home is a condo or serviced apartment, many with premium digital locks, and residents are often busy professionals who travel. It's a short drive from Orchard Road, so we reach it quickly at any hour.",
+ feature="""
+<h2>Smart homes, short stays and late nights</h2>
+<p>River Valley packs more serviced apartments and app-controlled smart locks into a few square kilometres than almost anywhere else in Singapore. Add Robertson Quay's restaurants and bars, which keep the riverside busy past midnight, and you get our River Valley pattern: smart locks that stop cooperating, serviced apartment doors and in-room safes, and residents coming home late to a door that won't open.</p>
+
+<h2>Five ways a smart lock locks you out</h2>
+<p>When a smart lock fails, knowing why helps you fix it yourself, or tells us what to bring.</p>
+<ol>
+<li><strong>Flat batteries.</strong> The most common cause by far. Most locks warn you for weeks first, and many have an emergency power point under the keypad that a power bank can use.</li>
+<li><strong>The app has logged you out</strong>, or a phone update has broken the pairing. Try the keypad PIN or a card instead.</li>
+<li><strong>Your phone is inside.</strong> If the app is your only way in, you're stuck. Always set up a PIN or card as a second method.</li>
+<li><strong>The hub has dropped offline.</strong> Remote unlocking needs the lock's Wi-Fi bridge or hub to be online, and a power cut or new router can knock it off.</li>
+<li><strong>Privacy or lockdown mode.</strong> Some locks block every outside method once someone inside has locked up for the night.</li>
+</ol>
+<p>Still locked out? WhatsApp us the brand and model. We open smart and digital locks of every brand, usually without damage, from {P_DIGITAL_OPEN}. See <a href="~/digital-lock-opening/">digital lock opening</a> and our guide to a <a href="~/guides/forgot-digital-lock-pin/">forgotten digital lock PIN</a>.</p>
+
+<h2>Serviced apartments: who can let us in</h2>
+<p>In a serviced apartment, the operator controls the door, not the guest. If you're locked out, call the front desk or duty manager first: a master card may solve it in minutes. If the lock itself has failed, or the operator needs a locksmith, they authorise the job and we confirm your identity before opening anything. The same goes for in-room safes. Operators and property managers receive a proper invoice. See <a href="~/hotel-safe-opening/">hotel and serviced apartment safes</a>.</p>
+
+<h2>Home safes after a long trip</h2>
+<p>Owners here often travel for work, and safes go untouched for weeks. Electronic keypad safes then fail in a predictable way: the batteries die, or leak and corrode the contacts, and the keypad goes dark. Many have a backup key or an external battery point; our guide to a <a href="~/guides/safe-box-battery-dead/">safe with a dead battery</a> shows where to look. If the safe still won't open, or its lock has failed, Uncle Thomas opens every type of safe. Most faulty ones need drilling, and about 90% of drilled safes can be repaired afterwards. Safe opening starts from {P_SAFE}.</p>
+
+<h2>Late nights and tight basements</h2>
+<p>River Valley sits between Orchard and the river, a short drive from our usual base, so we usually reach Robertson Quay, Mohamed Sultan or Killiney within {ARRIVAL}, whatever the hour. Basements here are tight, so for a car lockout send the carpark level and lot, and let the concierge know we're coming. Nights, weekends and public holidays start from {P_AFTERHOURS}; car lockouts from {P_CAR}.</p>
+""",
  estates=["Robertson Quay", "Mohamed Sultan", "Killiney", "Kim Yam", "Institution Hill", "Great World"],
  landmarks=["Robertson Quay", "Great World", "Fort Canning Park", "Valley Point"],
  mrt=["Great World", "Havelock", "Fort Canning", "Somerset"],
@@ -239,13 +406,41 @@ dict(
  faqs=[
   ("My smart lock app stopped working and my phone is inside. Can you help?", "Yes. We open smart and digital locks without damage after checking you live there, then help you get the lock working again."),
   ("Can you open the safe in my serviced apartment?", "Yes, with the operator's authorisation. We open it without damaging the safe or the furniture around it."),
+  ('Can you open a dead keypad safe in my River Valley condo?', "Usually. First look for a backup key or an external battery point. If it still won't open, Uncle Thomas opens every type of safe, and we confirm the price from a photo first."),
+  ('Who authorises a locksmith in a serviced apartment?', 'The operator. Call the front desk first. If they need a locksmith, they authorise us, and we confirm your identity before opening.'),
  ],
  nearby=["cbd-orchard", "paterson", "bukit-merah"],
 ),
 dict(
  slug="sentosa-cove", name="Sentosa Cove", region="Central",
+ # Long-form rewrite 10 Nov 2026 (no real jobs yet: guidance only, facts from CLAUDE.md and config).
+ title='Locksmith Sentosa Cove | Home and Boat Safes, Gates, Locks',
+ desc='24/7 locksmith for Sentosa Cove bungalows, condos and the marina: home and boat safes, salt-corroded gate locks, smart locks after months away. Call 9224 9224.',
+ h1='Locksmith in Sentosa Cove, 24/7: Homes, Safes and Boats',
  intro="Sentosa Cove is Singapore's only island waterfront address: bungalows, condos and yachts, so our calls here are home safes, high-end locks, cars and boats.",
  overview="Sentosa Cove sits on the eastern end of Sentosa, with waterfront bungalows on Ocean Drive, Cove Drive, Paradise Island and Treasure Island, condominiums around the village, and berths at the marina. Owners often spend time abroad, so safes go unopened for months and digital lock batteries quietly run down. Uncle Thomas has opened safes on ships and cruise liners, which helps with safes on boats as well as at home.",
+ feature="""
+<h2>Locks by the sea</h2>
+<p>Sentosa Cove is unlike any other address in Singapore. Bungalows line the waterways of Ocean Drive, Cove Drive and the private islands, condos cluster around the village, and boats sit in the marina a few steps from the front door. It's beautiful, and it's hard on locks. Salt air, humidity and long stretches with nobody home cause most of the problems we see here.</p>
+
+<h2>What salt air does to a lock</h2>
+<p>Salt settles inside keyholes and on a lock's moving parts, draws in moisture and starts corrosion you can't see until the key begins to grit or stick. Gate locks, padlocks and anything else facing the water go first. Digital lock keypads and safe keypads suffer too, as contacts corrode and buttons stop responding. Signs to watch for:</p>
+<ul>
+<li>A key that feels rough, or needs a push or a jiggle to turn.</li>
+<li>Brown or white staining around the keyhole or on a padlock shackle.</li>
+<li>A digital keypad that misses presses, or a safe keypad that beeps but won't open.</li>
+</ul>
+<p>Caught at that stage, a replacement is a quick, planned job. Left alone, the lock seizes, usually with you on the wrong side. When we replace outdoor locks here, we recommend stainless steel or marine-grade hardware, which lasts far longer by the sea than standard locks. See <a href="~/lock-replacement/">lock replacement</a>.</p>
+
+<h2>Coming home after months away</h2>
+<p>Many Sentosa Cove owners split the year between Singapore and elsewhere. While a house or apartment sits empty, digital lock batteries run down, safe batteries leak, and a code set a year ago is hard to recall. Before a long trip, replace the batteries in every digital lock and safe, test the backup keys, and leave a spare key with someone you trust in Singapore. If you've already come home to a dead lock, we open it, usually without damage, and replace the batteries. If a property manager needs to let us in while you're abroad, send your written authorisation and proof of ownership on WhatsApp first.</p>
+
+<h2>Safes at home and on board</h2>
+<p>Uncle Thomas trained as a safesmith in the United States and has opened safes on ships and cruise liners, so a safe on a yacht is familiar ground. Marine safes bring their own complications: tight cabinetry, salt-damaged keypads and owners who may be abroad. We work carefully around the joinery, and we need proof that the boat and safe are yours, or the owner's written authorisation. At home or afloat, the same honest rule applies. If a code is lost but the lock works, there's often a way in without damage; if the lock has failed, the safe usually has to be drilled, and about 90% of drilled safes can be repaired. Safe opening starts from {P_SAFE}.</p>
+
+<h2>Getting to you on the island</h2>
+<p>We reach Sentosa Cove by road over the Sentosa Gateway. Estate security adds a step that doesn't exist elsewhere, so let the guardhouse or your condo's security know a locksmith is coming, and send a pinned location, especially for the island bungalows, which can be hard to find at night. For a boat, tell us the marina and berth, and let the marina office know. We work 24/7; nights, weekends and public holidays start from {P_AFTERHOURS}.</p>
+""",
  estates=["Ocean Drive", "Cove Drive", "Paradise Island", "Treasure Island", "Coral Island", "Sentosa Cove Village"],
  landmarks=["Sentosa Cove Village", "ONE°15 Marina", "Ocean Drive", "Quayside Isle"],
  mrt=["HarbourFront (then by road to Sentosa)"],
@@ -259,6 +454,7 @@ dict(
  faqs=[
   ("Can you open a safe on a yacht at Sentosa Cove?", "Yes. Uncle Thomas has opened safes on ships and cruise liners. We need proof that the boat and safe are yours, or the owner's written authorisation."),
   ("Our home has been empty for months and the digital lock is dead. Can you help?", "Yes. We open it without damage, then replace the batteries or the lock. Before your next trip, change the batteries and keep the backup key with someone you trust."),
+  ('My gate lock at Sentosa Cove has rusted shut. Can you replace it?', 'Yes. We open it, then fit a stainless steel or marine-grade lock that copes better with salt air.'),
  ],
  nearby=["bukit-merah", "cbd-orchard"],
 ),
@@ -653,7 +849,7 @@ TOWN_BY_SLUG = {t["slug"]: t for t in TOWNS}
 
 # Places covered without their own page yet (listed on the hub so every searcher sees coverage)
 OTHER_TOWNS = {
- "Central": ["Bukit Timah", "Holland", "Potong Pasir"],
+ "Central": ["Potong Pasir"],
  "East": ["Changi", "Simei", "Loyang"],
  "West": ["Jurong East", "Jurong West", "Tengah", "Tuas"],
  "North": ["Admiralty", "Kranji", "Mandai"],
@@ -827,12 +1023,12 @@ EXTRA_FAQS = {
 # "A typical call in <town>": a realistic, clearly *typical* situation for each town
 # (never presented as a dated real job; real jobs go in config.RECENT_JOBS).
 TYPICAL = {
-"tanglin": "A family in a Tanglin bungalow can't open the study safe after a helper who knew the code has left. After confirming ownership, Uncle Thomas opens the safe without drilling and sets a new combination that only the family knows.",
+"tanglin": "A family in a Tanglin bungalow can't open the study safe after a helper who knew the code has left. After confirming ownership, Uncle Thomas opens the safe and sets a new combination that only the family knows.",
 "bukit-timah": "A Bukit Timah homeowner reverses out for the school run and the driveway gate lock jams with the car halfway out. We open the gate, replace the worn lock body with a sturdier one, and the family is on the road again.",
 "holland-village": "An expat family leaving Singapore finds that nobody remembers the code to the wardrobe safe in their Holland Village rental. With the landlord's written authorisation, Uncle Thomas opens it the day before the movers arrive.",
 "river-valley": "A Robertson Quay resident returns from an overseas trip and the condo's smart lock won't respond: the batteries died while they were away and the backup key is inside. After checking ID with the concierge, we open the lock without damage and replace the batteries.",
 "sentosa-cove": "A boat owner at the Sentosa Cove marina can't open the small safe on board after a long season away. With proof of ownership, Uncle Thomas opens it without damaging the cabinetry around it.",
-"newton": "A family in a Newton condo can't remember the combination of the bedroom safe holding their passports, two days before a flight. They send a photo of the safe, and after checking ID with their address, Uncle Thomas opens it without drilling and sets a new combination they'll remember.",
+"newton": "A family in a Newton condo can't remember the combination of the bedroom safe holding their passports, two days before a flight. They send a photo of the safe, and after checking ID with their address, Uncle Thomas opens it and sets a new combination they'll remember.",
 "paterson": "A landlord near Paterson Hill finds that a tenant has moved out and changed the digital lock code without passing it on. The new tenant arrives on Saturday. After checking proof of ownership, we open the door without damage and reset the lock so the landlord can set a new code.",
 "toa-payoh": "An auntie in a Lorong 1 block takes the rubbish to the chute in her house slippers, and the main door's old latch clicks shut behind her. Her keys are on the dining table. A neighbour lends her a phone, she WhatsApps a photo of the door, and we agree the price before we set off. The lock opens without damage, and because the key had been sticking for months, she decides to replace the worn cylinder while we're there.",
 "bishan": "A family in a Bishan condo comes home from Junction 8 to find the digital lock's screen dark. The batteries have died after weeks of low-battery beeps, and the backup key is in a kitchen drawer inside. The guardhouse lets us through once the owner confirms, we power up and open the lock, and the family leaves with fresh batteries in place and the backup key moved to a relative's home.",
