@@ -471,7 +471,7 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 <meta name="twitter:image" content="{C.SITE}/assets/img/og-v4.jpg">
 <meta name="geo.region" content="SG">
 <meta name="geo.placename" content="Singapore">
-<link rel="icon" href="~/favicon.ico" sizes="48x48">
+<link rel="icon" href="~/assets/img/favicon-v4.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-v4-32.png">
 <link rel="apple-touch-icon" href="~/assets/img/apple-touch-icon-v4.png">
 <link rel="manifest" href="~/site.webmanifest">
@@ -670,8 +670,10 @@ https://:version.:project.pages.dev/*
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Root favicon.ico keeps its name (browsers and crawlers ask for it directly), so cache it
+# for a day only. Pages link to the versioned copy in /assets/img/ (favicon-vN.ico).
 /favicon.ico
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=86400
 
 /script.js
   Cache-Control: public, max-age=604800
