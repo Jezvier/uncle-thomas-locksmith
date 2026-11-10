@@ -41,7 +41,7 @@ GOOGLE_SHARE_LINK = "https://share.google/pcY4Ywtr5iTrQpRfk"
 GOOGLE_PROFILE = GOOGLE_MAPS_URL or GOOGLE_SHARE_LINK
 # The name the Google Business Profile shows (it differs from the trading name, so say so
 # on the site and in llms.txt: it helps Google and AI assistants tie the two together).
-GBP_NAME = "Singapore Locksmith"
+GBP_NAME = "Thomas Locksmith"   # renamed on Google from "Singapore Locksmith" (seen 10 Nov 2026)
 # Google Place ID (matched to the CID above on 27 Oct 2026) and the direct "write a review" link.
 PLACE_ID = "ChIJW1IOQGYX2jERKiFMX6nMhjk"
 GOOGLE_REVIEW_URL = "https://search.google.com/local/writereview?placeid=" + PLACE_ID
@@ -52,8 +52,8 @@ GOOGLE_BROWSER_KEY = "AIzaSyCUNm-S2hDRP6pABYF1hCNOqgVpN6_wgbI"
 # ACRA registration (sole proprietorship, registered 21 Feb 1998). Shown in the footer + schema.
 UEN = "52862311K"
 LEGAL_NAME = "Thomas Locksmith"
-# Other names customers and listings know the business by (Google Business Profile = "Singapore Locksmith").
-ALT_NAMES = ["Thomas Locksmith", "Singapore Locksmith"]
+# Other names customers and listings know the business by (Google Business Profile = GBP_NAME).
+ALT_NAMES = ["Thomas Locksmith"]
 # FILL: Google Analytics 4 Measurement ID (e.g. "G-ABC123XYZ"). None = analytics off.
 GA4_ID = "G-DSL14WM5HH"
 

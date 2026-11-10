@@ -3,7 +3,7 @@
 Read this first. It replaces the "How to edit" notes in README.md wherever they disagree (README still mentions GitHub Pages and Kiro; both are out of date).
 
 ## The business (facts confirmed by the owner)
-- Trading name: **Uncle Thomas Locksmith**. ACRA name: THOMAS LOCKSMITH, UEN 52862311K, registered 1998. Google Business Profile is named "Singapore Locksmith".
+- Trading name: **Uncle Thomas Locksmith**. ACRA name: THOMAS LOCKSMITH, UEN 52862311K, registered 1998. Google Business Profile is named "Thomas Locksmith" (it was "Singapore Locksmith" until Nov 2026); `GBP_NAME` in config.py.
 - Phone and WhatsApp: **9224 9224**. 24/7, islandwide; most jobs are around Toa Payoh and Ang Mo Kio. Mobile only, no walk-in shop.
 - Uncle Thomas trained as a safesmith in the US. In photos he wears the **red polo**; the man in the **white T-shirt** is a team member.
 - Services: unlocking (doors, gates, digital/smart locks, safes, cars, letterboxes) and lock installation/replacement.
