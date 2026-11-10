@@ -578,7 +578,6 @@ def build_home(x):
     <div class="work-grid">{work}</div>
     <h3 style="margin-top:32px">Latest jobs</h3>
     <ul class="jobs">{latest_jobs}</ul>
-    <p><a href="~/jobs/">See all recent jobs →</a></p>
   </div>
 </section>
 """

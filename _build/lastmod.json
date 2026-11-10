@@ -1,7 +1,7 @@
 {
 "/": {
-"date": "2026-11-10",
-"hash": "e0953abf5d908f9b5171f35b149c23e2"
+"date": "2026-11-09",
+"hash": "7fa4ba0f04ec757547246c7d338898c8"
 },
 "about/": {
 "date": "2026-10-31",
@@ -486,10 +486,6 @@
 "hotel-safe-opening/": {
 "date": "2026-11-06",
 "hash": "63da6b84a625f96da3399f069a4ddf95"
-},
-"jobs/": {
-"date": "2026-11-10",
-"hash": "1b098365c9e1815c0a1097841eba296c"
 },
 "letterbox-lock-replacement/": {
 "date": "2026-11-01",
