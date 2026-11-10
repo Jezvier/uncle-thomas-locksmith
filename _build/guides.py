@@ -65,7 +65,7 @@ def build(x):
         art = {"@type": "Article", "@id": C.SITE + "/" + path + "#article", "headline": g["h1"], "description": g["desc"],
                "author": {"@id": x["PERSON_ID"]}, "publisher": {"@id": x["BUSINESS_ID"]},
                "datePublished": PUBLISHED[g["slug"]], "dateModified": _modified(path, g["slug"]),
-               "mainEntityOfPage": C.SITE + "/" + path, "image": C.SITE + "/assets/img/og-2026.jpg", "inLanguage": "en-SG"}
+               "mainEntityOfPage": C.SITE + "/" + path, "image": C.SITE + "/assets/img/og-v4.jpg", "inLanguage": "en-SG"}
         nodes = x["page_schema"](path, g["title"], g["desc"], crumbs, faqs=g["faqs"], extra=[art, x["person_node"]()])
         x["render"](path, g["title"], g["desc"], body, nodes, og_type="article", priority="0.6")
 

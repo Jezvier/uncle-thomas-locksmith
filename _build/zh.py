@@ -83,8 +83,8 @@ def build(x):
       {cta(lang="zh")}
       <ul class="badges"><li>24小时，包括公共假期</li><li>全岛服务</li><li>美国受训保险箱技师</li><li>核对身份</li><li>保修无期限</li></ul>
     </div>
-    <div class="hero-art"><picture><source srcset="~/assets/img/logo-320.webp 320w, ~/assets/img/logo-640.webp 640w" sizes="340px" type="image/webp">
-      <img src="~/assets/img/logo-640.jpg" alt="Uncle Thomas 锁匠吉祥物手拿钥匙" width="340" height="340" fetchpriority="high"></picture></div>
+    <div class="hero-art"><picture><source srcset="~/assets/img/logo-badge-v4-320.webp 320w, ~/assets/img/logo-badge-v4-640.webp 640w" sizes="340px" type="image/webp">
+      <img src="~/assets/img/logo-badge-v4-640.jpg" alt="Uncle Thomas 锁匠吉祥物手拿钥匙" width="340" height="340" fetchpriority="high"></picture></div>
   </div>
 </section>
 

@@ -553,8 +553,8 @@ def build_home(x):
     C_ = x["C"]
     hero_photo = x["photo"]("hero", eager=True, cls="photo hero-photo")
     if hero_photo.startswith("<!--"):
-        hero_art = (hero_photo + '<picture><source srcset="~/assets/img/logo-320.webp 320w, ~/assets/img/logo-640.webp 640w" sizes="340px" type="image/webp">'
-                    '<img src="~/assets/img/logo-640.jpg" alt="Uncle Thomas Locksmith mascot holding a key" width="340" height="340" fetchpriority="high"></picture>')
+        hero_art = (hero_photo + '<picture><source srcset="~/assets/img/logo-badge-v4-320.webp 320w, ~/assets/img/logo-badge-v4-640.webp 640w" sizes="340px" type="image/webp">'
+                    '<img src="~/assets/img/logo-badge-v4-640.jpg" alt="Uncle Thomas Locksmith mascot holding keys" width="340" height="340" fetchpriority="high"></picture>')
     else:
         hero_art = hero_photo
     if C_.GOOGLE_RATING and C_.GOOGLE_REVIEW_COUNT:
@@ -719,10 +719,10 @@ def build_home(x):
          "inLanguage": "en-SG", "publisher": {"@id": x["BUSINESS_ID"]}},
         {"@type": "WebPage", "@id": C_.SITE + "/#webpage", "url": C_.SITE + "/", "name": title, "description": desc,
          "isPartOf": {"@id": C_.SITE + "/#website"}, "about": {"@id": x["BUSINESS_ID"]}, "inLanguage": "en-SG",
-         "primaryImageOfPage": {"@type": "ImageObject", "url": C_.SITE + "/assets/img/og-2026.jpg"}},
+         "primaryImageOfPage": {"@type": "ImageObject", "url": C_.SITE + "/assets/img/og-v4.jpg"}},
         biz, x["person_node"](), x["faq_node"](HOME_FAQS),
     ]
-    x["render"]("", title, desc, body, nodes, preload_img=None if hero_photo.startswith("<figure") else "assets/img/logo-320.webp",
+    x["render"]("", title, desc, body, nodes, preload_img=None if hero_photo.startswith("<figure") else "assets/img/logo-badge-v4-320.webp",
                 priority="1.0", alternates={"en-SG": "", "zh-SG": "zh/"})
 
 

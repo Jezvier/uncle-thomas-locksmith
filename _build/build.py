@@ -98,8 +98,8 @@ def business_node(full=False):
         "name": C.NAME,
         "url": C.SITE + "/",
         "telephone": C.PHONE_E164,
-        "image": C.SITE + "/assets/img/logo-640.jpg",
-        "logo": C.SITE + "/assets/img/logo-640.jpg",
+        "image": C.SITE + "/assets/img/logo-badge-v4-640.jpg",
+        "logo": C.SITE + "/assets/img/logo-badge-v4-640.jpg",
         "priceRange": C.PRICE_RANGE,
         "address": {"@type": "PostalAddress", "addressLocality": "Singapore", "addressCountry": "SG"},
         "areaServed": {"@type": "Country", "name": "Singapore"},
@@ -166,7 +166,7 @@ def person_node():
         "knowsAbout": ["Locksmithing", "Safesmithing", "Safe opening", "Safe combination change", "Digital locks", "Smart locks", "Car key fob cloning"],
         "worksFor": {"@id": BUSINESS_ID},
         "url": C.SITE + "/about/",
-        "image": (photo_schema("about_portrait") or {}).get("contentUrl", C.SITE + "/assets/img/logo-640.jpg"),
+        "image": (photo_schema("about_portrait") or {}).get("contentUrl", C.SITE + "/assets/img/logo-badge-v4-640.jpg"),
     }
     return node
 
@@ -339,7 +339,7 @@ def header_html(path, lang="en", alt_path=None):
 <header class="header">
   <div class="container header-inner">
     <a href="{home}" class="brand" aria-label="{C.NAME} — {t["home"]}">
-      <picture><source srcset="~/assets/img/logo-ring-v3-56.webp 1x, ~/assets/img/logo-ring-v3-112.webp 2x, ~/assets/img/logo-ring-v3-168.webp 3x" type="image/webp"><img src="~/assets/img/logo-ring-v3-112.png" alt="{C.NAME} logo" width="52" height="52"></picture>
+      <picture><source srcset="~/assets/img/logo-head-v4-60.webp 1x, ~/assets/img/logo-head-v4-120.webp 2x, ~/assets/img/logo-head-v4-180.webp 3x" type="image/webp"><img src="~/assets/img/logo-head-v4-120.png" alt="{C.NAME} logo" width="60" height="60"></picture>
       <span class="brand-text"><strong>Uncle Thomas</strong><small>Locksmith · Since {C.FOUNDED}</small></span>
     </a>
     <nav class="nav" aria-label="Main">{"".join(nav)}</nav>
@@ -375,7 +375,7 @@ def footer_html(lang="en"):
     return f'''<footer class="footer">
   <div class="container footer-grid">
     <div>
-      <div class="footer-brand"><img src="~/assets/img/logo-face-v3-96.webp" srcset="~/assets/img/logo-face-v3-48.webp 1x, ~/assets/img/logo-face-v3-96.webp 2x, ~/assets/img/logo-face-v3-144.webp 3x" alt="" width="48" height="48" loading="lazy"><div><strong>{C.NAME}</strong><br>{C.SLOGAN}</div></div>
+      <div class="footer-brand"><img src="~/assets/img/logo-icon-v4-96.webp" srcset="~/assets/img/logo-icon-v4-48.webp 1x, ~/assets/img/logo-icon-v4-96.webp 2x, ~/assets/img/logo-icon-v4-144.webp 3x" alt="" width="48" height="48" loading="lazy"><div><strong>{C.NAME}</strong><br>{C.SLOGAN}</div></div>
       <ul class="contact-list">
         <li><span class="lbl">{t["hotline"]}:</span> <a href="tel:{C.PHONE_E164}" data-pos="footer">{C.PHONE}</a></li>
         <li><span class="lbl">WhatsApp:</span> <a href="{t["wa_link"]}" target="_blank" rel="noopener" data-pos="footer">{C.PHONE}</a></li>
@@ -455,25 +455,25 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 <meta name="description" content="{esc(desc)}">
 <link rel="canonical" href="{url}">{hreflang}
 <meta name="robots" content="index, follow, max-image-preview:large">
-<meta name="theme-color" content="#d3a80c">
+<meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="{og_type}">
 <meta property="og:site_name" content="{C.NAME}">
 <meta property="og:locale" content="{og_locale}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{C.SITE}/assets/img/og-2026.jpg">
+<meta property="og:image" content="{C.SITE}/assets/img/og-v4.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{C.SITE}/assets/img/og-2026.jpg">
+<meta name="twitter:image" content="{C.SITE}/assets/img/og-v4.jpg">
 <meta name="geo.region" content="SG">
 <meta name="geo.placename" content="Singapore">
 <link rel="icon" href="~/favicon.ico" sizes="48x48">
-<link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-v3-32.png">
-<link rel="apple-touch-icon" href="~/assets/img/apple-touch-icon-v3.png">
+<link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-v4-32.png">
+<link rel="apple-touch-icon" href="~/assets/img/apple-touch-icon-v4.png">
 <link rel="manifest" href="~/site.webmanifest">
 <link rel="preload" href="~/assets/fonts/poppins-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="~/assets/fonts/poppins-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>{pre}
@@ -504,7 +504,7 @@ def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="Web
     nodes = [{"@type": page_type, "@id": abs_url(path) + "#webpage", "url": abs_url(path), "name": title,
               "description": desc, "inLanguage": lang, "isPartOf": {"@id": C.SITE + "/#website"},
               "about": {"@id": BUSINESS_ID}, "breadcrumb": {"@id": abs_url(path) + "#breadcrumb"},
-              "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/assets/img/og-2026.jpg"}}]
+              "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/assets/img/og-v4.jpg"}}]
     bc = breadcrumb_node(crumbs); bc["@id"] = abs_url(path) + "#breadcrumb"
     nodes.append(bc)
     nodes.append(business_node())
@@ -776,9 +776,9 @@ def main():
 
     with open(os.path.join(ROOT, "site.webmanifest"), "w") as f:
         json.dump({"name": C.NAME, "short_name": "Uncle Thomas", "start_url": "./", "display": "standalone",
-                   "background_color": "#ffffff", "theme_color": "#d3a80c",
-                   "icons": [{"src": "assets/img/icon-v3-192.png", "sizes": "192x192", "type": "image/png"},
-                             {"src": "assets/img/icon-v3-512.png", "sizes": "512x512", "type": "image/png"}]}, f, indent=2)
+                   "background_color": "#ffffff", "theme_color": "#ffffff",
+                   "icons": [{"src": "assets/img/icon-v4-192.png", "sizes": "192x192", "type": "image/png"},
+                             {"src": "assets/img/icon-v4-512.png", "sizes": "512x512", "type": "image/png"}]}, f, indent=2)
 
     # llms.txt (summary for AI assistants / answer engines); links follow llmstxt.org: "- [Title](url)"
     def llms_title(p):
