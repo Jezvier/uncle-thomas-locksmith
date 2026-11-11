@@ -248,7 +248,7 @@ def build(x):
                     f"{n} safe won't open? Batteries, override key and code reset explained, plus 24/7 safe opening in Singapore.", limit=160)
         crumbs = [("Home", ""), ("Services", "services/"), ("Safe opening", "safe-opening/"), (n, path)]
         faqs = b["faqs"] + [
-            (f"Can a locksmith open a {n} safe?", f"Yes. Uncle Thomas is a US-trained safesmith who opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
+            (f"Can a locksmith open a {n} safe?", f"Yes. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
             (f"How much does it cost to open a {n} safe in Singapore?", "With us, safe opening starts from {P_SAFE}; the exact price depends on the model, the lock and what's wrong. WhatsApp photos of the safe's front, keypad or dial and brand label to {PHONE} for a price before we come."),
         ]
         jobs = getattr(C_, "BRAND_JOBS", {}).get(f"safe:{n}", [])   # real jobs only (config.JOBS)
@@ -263,8 +263,8 @@ def build(x):
                    " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{t}</a>' for t, u in b["sources"]) +
                    ". Checked October 2026. Features vary by model: check your safe's own manual. We never publish factory default codes.</p>")
         body = (x["page_hero"](crumbs, h1,
-                f"Forgot the code, batteries dead, lost the override key, or the {n} safe box won't open even with the right code: what to try first, and how Uncle Thomas, a US-trained safesmith, can open it.",
-                ["US-trained safesmith", "24/7 islandwide", "Ownership checked"]) +
+                f"Forgot the code, batteries dead, lost the override key, or the {n} safe box won't open even with the right code: what to try first, and how Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA), can open it.",
+                ["US-trained (ALOA & SAVTA)", "24/7 islandwide", "Ownership checked"]) +
                 f'''<section class="section"><div class="container narrow prose">
 <p><strong>The short answer:</strong> {_strip(b["battery"]).split(". ")[0]}. {_strip(b["key"]).split(". ")[0]}. If neither works, don't force the handle: call or WhatsApp {{PHONE}}.</p>
 <h2>{n} safes in Singapore</h2>
@@ -283,7 +283,7 @@ def build(x):
 <p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
 {pic}{recent}
 <h2>When to call a safe locksmith</h2>
-<p>If power and the key don't work, call or WhatsApp {{PHONE}}, 24/7. Uncle Thomas, a US-trained safesmith, opens {n} safes across Singapore after checking ownership, with the price agreed first. See <a href="~/safe-opening/">safe opening</a> · <a href="~/safe-combination-change/">safe lock replacement</a> · <a href="~/guides/safe-drilling-explained/">drilling explained</a>. Not affiliated with {n}.</p>
+<p>If power and the key don't work, call or WhatsApp {{PHONE}}, 24/7. Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA), opens {n} safes across Singapore after checking ownership, with the price agreed first. See <a href="~/safe-opening/">safe opening</a> · <a href="~/safe-combination-change/">safe lock replacement</a> · <a href="~/guides/safe-drilling-explained/">drilling explained</a>. Not affiliated with {n}.</p>
 {src}
 <p>Other safe brands: {others} · <a href="~/safe-opening/#brands">all safe brands</a></p>
 </div></section>

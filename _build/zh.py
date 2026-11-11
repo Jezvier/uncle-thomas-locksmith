@@ -131,10 +131,10 @@ def build(x):
 <section class="section shifu" id="shifu">
   <div class="container">
     <h2 class="section-title">由新加坡锁匠"师傅"带领</h2>
-    <p class="section-lead">Uncle Thomas 于{C.FOUNDED}年跟随舅舅当学徒入行。如今，同行都称他为"师傅" — 遇到难题时大家都会找他。</p>
+    <p class="section-lead">Uncle Thomas 自{C.FOUNDED}年起在新加坡做锁匠。如今，同行都称他为"师傅" — 遇到难题时大家都会找他。</p>
     <div class="shifu-grid">
-      <div class="shifu-item"><strong>自{C.FOUNDED}年</strong><p>以传统方式学艺，一把锁、一扇门慢慢累积经验。</p></div>
-      <div class="shifu-item"><strong>美国受训保险箱技师</strong><p>曾在美国接受一年保险箱开锁专业训练。</p></div>
+      <div class="shifu-item"><strong>在美国受训</strong><p>1999年在洛杉矶参加锁匠大会，修读 ALOA 锁匠基础课程，以及 SAVTA 保险箱密码锁开启与故障锁维修课程。</p></div>
+      <div class="shifu-item"><strong>2000年的先驱</strong><p>新加坡最早打开宝马和大众甲壳虫的锁匠之一，用的是他自制的工具。</p></div>
       <div class="shifu-item"><strong>船上与海外经验</strong><p>曾在船只和邮轮上，以及泰国、马来西亚、中国和香港为客户开保险箱。</p></div>
       <div class="shifu-item"><strong>电子锁专家</strong><p>自创无损开启故障电子锁的方法。</p></div>
     </div>
@@ -271,7 +271,7 @@ ZH_PAGES = {
 <h2>保险箱品牌</h2>
 <p>所有品牌，包括 Yale、SentrySafe、Phoenix、Honeywell、Godrej、Diplomat、Eagle、Bumil、Booil、Chubb、Burg-Wächter 等。</p>
 <h2>不钻开也能开：转盘密码锁</h2>
-<p>Uncle Thomas 受过<strong>保险箱开锁技术（manipulation）</strong>训练，能凭手感和声音打开很多家庭和办公室保险箱常用的 Group 2M 机械转盘密码锁，不钻孔、不损坏。他在1998年入行，在美国接受了一年保险箱专业训练，1999年完成美国锁匠协会（ALOA）的锁匠基础课程。开一个保险箱可能只需5分钟，复杂的可能要5小时，视保险箱和锁的情况而定。</p>
+<p>Uncle Thomas 受过<strong>保险箱开锁技术（manipulation）</strong>训练，能凭手感和声音打开很多家庭和办公室保险箱常用的 Group 2M 机械转盘密码锁，不钻孔、不损坏。他在1998年入行，1999年赴美国洛杉矶参加锁匠大会，修读美国锁匠协会（ALOA）的锁匠基础课程，以及保险箱与金库技师协会（SAVTA）的保险箱密码锁开启与故障锁维修课程。开一个保险箱可能只需5分钟，复杂的可能要5小时，视保险箱和锁的情况而定。</p>
 <h2>需要钻开吗？</h2>
 <p>要看保险箱和故障。忘记密码或钥匙不见，但锁本身没坏的保险箱，很多可以打开后继续使用。如果是锁坏了（例如键盘电路板坏了、马达坏了或锁舌卡住），大部分需要在准确的位置钻一个小孔。根据 Uncle Thomas 的经验，大约90%钻开的保险箱都可以修好继续使用。开工前我们会先说明方法和价格。</p>
 <h2>商业客户</h2>

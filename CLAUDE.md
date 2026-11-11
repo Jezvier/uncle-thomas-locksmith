@@ -5,7 +5,7 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 ## The business (facts confirmed by the owner)
 - Trading name: **Uncle Thomas Locksmith**. ACRA name: THOMAS LOCKSMITH, UEN 52862311K, registered 1998. Google Business Profile is named "Thomas Locksmith" (it was "Singapore Locksmith" until Nov 2026); `GBP_NAME` in config.py.
 - Phone and WhatsApp: **9224 9224**. 24/7, islandwide; most jobs are around Toa Payoh and Ang Mo Kio. Mobile only, no walk-in shop.
-- Uncle Thomas trained as a safesmith in the US. In photos he wears the **red polo**; the man in the **white T-shirt** is a team member.
+- Uncle Thomas's training (owner, 11 Nov 2026): in 1999 he went to a locksmith convention in Los Angeles and took ALOA's Fundamentals of Locksmithing plus SAVTA classes in opening safe combination locks and servicing/troubleshooting problem locks. Don't say how long he was in the US, and never say he apprenticed under his uncle. In 2000 he was one of the first locksmiths in Singapore to open BMWs and VW Beetles, with tools he made himself. Short form in titles, meta descriptions and badges: "US-trained safesmith" / "US-trained (ALOA & SAVTA)". In photos he wears the **red polo**; the man in the **white T-shirt** is a team member.
 - Services: unlocking (doors, gates, digital/smart locks, safes, cars, letterboxes) and lock installation/replacement.
 - **No key duplication or key cutting**, with one exception: **car key fob cloning** (spare fobs).
 - Opens **all** digital/smart lock brands. Always use both keywords: "digital lock" and "smart lock".

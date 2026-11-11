@@ -69,7 +69,7 @@ dict(
 </ul>
 
 <h2>How we help</h2>
-<p>Uncle Thomas has been a locksmith since 1998 and trained as a safesmith in the United States. He has opened safes for homes, businesses, pawnshops, banks and government ministries. He'll explain each step to everyone present, open the safe with as little damage as possible, and issue an invoice for the estate's records. See <a href="~/safe-opening/">safe opening</a>.</p>
+<p>Uncle Thomas has been a locksmith since 1998 and trained in the USA with ALOA and SAVTA in 1999. He has opened safes for homes, businesses, pawnshops, banks and government ministries. He'll explain each step to everyone present, open the safe with as little damage as possible, and issue an invoice for the estate's records. See <a href="~/safe-opening/">safe opening</a>.</p>
 <div class="callout navy"><p><strong>Need to open a late family member's safe?</strong> WhatsApp photos of the safe to {PHONE}. We'll tell you how we'd open it, what documents to have ready, and the price, before we come.</p></div>
 """,
  faqs=[

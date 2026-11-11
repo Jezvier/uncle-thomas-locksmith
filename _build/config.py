@@ -68,7 +68,7 @@ PAYMENT = "PayNow"   # confirmed 31 Oct 2026
 #   "LEAD WITH EXPERIENCE" -> "24/7 Locksmith Singapore | Since 1998 · US-Trained Safesmith"
 TITLE_STYLE = "KEEP PRICE"
 
-DESCRIPTION = ("24/7 emergency locksmith in Singapore since 1998, led by Uncle Thomas — a US-trained safesmith. "
+DESCRIPTION = ("24/7 emergency locksmith in Singapore since 1998, led by Uncle Thomas, who trained in the USA with ALOA and SAVTA. "
                "Door lockouts, digital lock opening and installation, safe opening, car lockouts, lock and "
                "letterbox replacement, islandwide.")
 

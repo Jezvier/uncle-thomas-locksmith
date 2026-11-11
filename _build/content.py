@@ -179,16 +179,16 @@ dict(
  title_exp="Safe Locksmith Singapore | Safe Box Opening by a Safesmith",
  desc="Safe box forgot password, battery dead or lost key? A US-trained safesmith opens all safe types in Singapore from S$120, homes and businesses, 24/7.",
  h1="Safe Locksmith Singapore: Safe and Safe Box Opening, 24/7",
- sub="Forgotten combination, lost key, dead keypad or a jammed bolt. Uncle Thomas trained in safesmithing in the United States and opens every type of safe, for homes, offices, pawnshops, banks and government agencies.",
- badges=["US-trained safesmith", "All safe types", "Discreet, 24/7"],
+ sub="Forgotten combination, lost key, dead keypad or a jammed bolt. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe, for homes, offices, pawnshops, banks and government agencies.",
+ badges=["US-trained (ALOA & SAVTA)", "All safe types", "Discreet, 24/7"],
  body="""
 <p><strong>The short answer:</strong> try fresh batteries and the override key first. If the safe still won't open, don't force it. Send photos of the safe to {PHONE}, and Uncle Thomas will tell you how he'd open it and the price before he comes. Some safes can be opened and stay fully usable. When a safe is faulty, it usually has to be drilled, precisely, at the right point, so the safe can often take a new lock afterwards.</p>
 
 <h2>What is a safesmith?</h2>
-<p>A <strong>safesmith</strong> is a locksmith who specialises in safes and vaults: opening locked safes, changing combinations, replacing safe locks and installing safes. Uncle Thomas Locksmith is a safesmith in Singapore: its founder, Uncle Thomas, trained in safesmithing in the United States and has opened safes since 1998 for homes, offices, pawnshops, banks and government agencies.</p>
+<p>A <strong>safesmith</strong> is a locksmith who specialises in safes and vaults: opening locked safes, changing combinations, replacing safe locks and installing safes. Uncle Thomas Locksmith is a safesmith in Singapore: its founder, Uncle Thomas, trained in safe opening in the USA (ALOA and SAVTA) and has opened safes since 1998 for homes, offices, pawnshops, banks and government agencies.</p>
 
 <h2>Why a safesmith, not just a locksmith</h2>
-<p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, and many have hidden relockers that fire if the safe is attacked the wrong way. A wrong approach can make the job far harder or damage what's inside. Few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in <strong>safesmithing</strong>, and has since opened safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
+<p>Opening a safe is a different skill from opening a door. Safes are built to resist forced entry, and many have hidden relockers that fire if the safe is attacked the wrong way. A wrong approach can make the job far harder or damage what's inside. Few locksmiths in Singapore have formal safe training. In 1999 Uncle Thomas went to a locksmith convention in Los Angeles and trained with <strong>ALOA</strong> (the Associated Locksmiths of America) and <strong>SAVTA</strong> (the Safe and Vault Technicians Association): the fundamentals of locksmithing, opening safe combination locks, and servicing and troubleshooting problem locks. He has since opened safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p>
 
 <h2>Opening a safe without drilling</h2>
 <p>Uncle Thomas is trained in <strong>safe manipulation</strong>: opening high-security Group 2M combination locks by feel and sound, with no drilling and no damage. A safe can take anywhere from 5 minutes to 5 hours, depending on the lock and its condition. When drilling is the only way in, it's done precisely, and about 90% of drilled safes can be repaired and used again. Comparing safe locksmiths? Read <a href="~/guides/how-to-choose-a-safe-locksmith/">how to choose a safe locksmith in Singapore</a>.</p>
@@ -657,10 +657,10 @@ def build_home(x):
 <section class="section shifu" id="shifu">
   <div class="container">
     <h2 class="section-title">Led by Singapore's Locksmith "Shifu"</h2>
-    <p class="section-lead">Uncle Thomas started as an apprentice under his uncle in {C_.FOUNDED}. Today other locksmiths call him "Shifu" — the master they turn to when a job gets difficult.</p>
+    <p class="section-lead">Uncle Thomas has been opening locks in Singapore since {C_.FOUNDED}. Today other locksmiths call him "Shifu" — the master they turn to when a job gets difficult.</p>
     <div class="shifu-grid">
-      <div class="shifu-item"><strong>Since {C_.FOUNDED}</strong><p>Learnt the trade the traditional way — one lock, one door at a time.</p></div>
-      <div class="shifu-item"><strong>US-trained safesmith</strong><p>Spent a year in the United States training in safesmithing.</p></div>
+      <div class="shifu-item"><strong>Trained in the USA</strong><p>Took ALOA and SAVTA courses in Los Angeles in 1999: locksmithing, safe combination locks and problem locks.</p></div>
+      <div class="shifu-item"><strong>A first in 2000</strong><p>One of the first in Singapore to open BMWs and VW Beetles, with tools he made himself.</p></div>
       <div class="shifu-item"><strong>Ships &amp; overseas</strong><p>Opened safes on ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong.</p></div>
       <div class="shifu-item"><strong>Digital lock specialist</strong><p>Developed his own damage-free ways to open faulty digital locks.</p></div>
     </div>
@@ -855,16 +855,23 @@ def build_about(x):
     C_ = x["C"]
     crumbs = [("Home", ""), ("About", "about/")]
     title = "About Uncle Thomas | Singapore Locksmith & Safesmith"
-    desc = "Meet Uncle Thomas, the locksmith Singapore calls 'Shifu'. An apprentice in 1998, US-trained in safesmithing, he has opened safes on ships and across Asia."
+    desc = "Meet Uncle Thomas, the locksmith Singapore calls 'Shifu'. Trained in the USA with ALOA and SAVTA, he opens safes, cars and digital locks across Singapore."
     body = (x["page_hero"](crumbs, 'Meet Uncle Thomas — The Locksmith Singapore Calls "Shifu"',
-            f"From apprentice in {C_.FOUNDED} to US-trained safesmith — the story behind Uncle Thomas Locksmith.",
-            [f"Since {C_.FOUNDED}", "US-trained safesmith", "Team of four"]) +
+            f"From a 1999 locksmith convention in Los Angeles to the \"Shifu\" other locksmiths call for help — the story behind Uncle Thomas Locksmith.",
+            [f"Since {C_.FOUNDED}", "US-trained (ALOA & SAVTA)", "Team of four"]) +
             f'''<section class="section"><div class="container narrow prose">
 {x["photo"]("about_portrait")}
-<h2>From apprentice to master locksmith</h2>
-<p>Uncle Thomas started in {C_.FOUNDED} as an apprentice under his uncle, learning the trade the traditional way — one lock, one door, one customer at a time. Years of hands-on work across Singapore's HDB flats, condos, shophouses and offices built the foundation he still relies on today.</p>
-<h2>Trained in safesmithing in the United States</h2>
-<p>Wanting to master the hardest locks in the trade, he spent a year in the United States training in safesmithing — the specialist skill of opening and servicing safes and vaults — and completed the Associated Locksmiths of America (ALOA) Fundamentals of Locksmithing course in 1999. It's a skill few locksmiths in Singapore have. <a href="~/safe-opening/">See our safe opening service</a>.</p>
+<h2>Where it started: Los Angeles, 1999</h2>
+<p>Uncle Thomas has been a locksmith in Singapore since {C_.FOUNDED}. In 1999 he flew to Los Angeles for a locksmith convention, and while he was there he signed up for classes with two American trade associations:</p>
+<ul>
+<li><strong>ALOA</strong> (Associated Locksmiths of America): Fundamentals of Locksmithing</li>
+<li><strong>SAVTA</strong> (Safe and Vault Technicians Association): opening safe combination locks, and servicing and troubleshooting problem locks</li>
+</ul>
+<p>That was his foundation. Few locksmiths in Singapore have formal safe training, and it's why safes are still his speciality today. <a href="~/safe-opening/">See our safe opening service</a>.</p>
+<h2>Years of research and development</h2>
+<p>The classes were only the start. Back in Singapore, Uncle Thomas spent countless hours on research and development: taking locks apart, learning how each one works and how it fails, and working out how to open it without damage. HDB flats, condos, shophouses, offices and cars across Singapore did the rest.</p>
+<h2>2000: the cars nobody could open</h2>
+<p>In 2000, when locksmiths here couldn't open a BMW or a Volkswagen Beetle, Uncle Thomas was one of the first in Singapore to do it, with tools he made himself. It's still how he works: when a lock beats the usual methods, he finds a new way in. <a href="~/car-locksmith/">See our car locksmith service</a>.</p>
 <h2>Trusted overseas — on land and at sea</h2>
 <p>That expertise has taken Uncle Thomas far beyond Singapore. He has been called in to open safes for multinational companies and on board ships and cruise liners, with jobs in Thailand, Malaysia, China, Hong Kong and more. In Singapore he has worked on safes for commercial offices, pawnshops, banks and government ministries.</p>
 <h2>Keeping up with digital locks</h2>

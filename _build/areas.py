@@ -46,7 +46,7 @@ dict(slug="bishan", name="Bishan", region="Central",
  access="For condos, please let the guardhouse know a locksmith is coming, or meet us at the drop-off point. For landed homes near Thomson, a quick message with the gate you're locked out of saves time.",
  faqs=[
   ("Can you get past my condo guardhouse in Bishan?", "We'll need you or management to let the guard know we're coming. Most condos simply ask for the unit number and your name."),
-  ("Do you open safes in Bishan homes?", "Yes. Uncle Thomas is a US-trained safesmith. WhatsApp a photo of the safe for a quote."),
+  ("Do you open safes in Bishan homes?", "Yes. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA). WhatsApp a photo of the safe for a quote."),
  ],
  nearby=["toa-payoh", "ang-mo-kio"]),
 
@@ -87,7 +87,7 @@ dict(slug="cbd-orchard", name="Orchard & CBD", region="Central",
 <p>Before you call, check the outside of the knob or lever for a small hole or slot. Many privacy locks have an emergency release there, meant for exactly this moment. If there isn't one, or it doesn't work, don't force the door: a shoulder or a screwdriver usually damages the frame, and the repair costs more than the call-out. Our guide to <a href="~/guides/room-door-locked-from-inside/">a room door locked from the inside</a> walks through the safe things to try. Still stuck? WhatsApp a photo of the lock to {PHONE} and we'll tell you what it will take.</p>
 
 <h2>Office safes, cash safes and hotel safes in the CBD</h2>
-<p>Safes are where the city work gets serious. Uncle Thomas trained as a safesmith in the United States and has opened safes for offices, pawnshops, hotels and banks, including safe deposit boxes and vault doors. We never name clients, and we work after hours so your business isn't disrupted. Companies get a proper invoice.</p>
+<p>Safes are where the city work gets serious. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and has opened safes for offices, pawnshops, hotels and banks, including safe deposit boxes and vault doors. We never name clients, and we work after hours so your business isn't disrupted. Companies get a proper invoice.</p>
 <p>Some safes can be opened and stay fully usable, like the Bumil keypad safe we opened through its override lock in the CBD this month. But when a safe's lock has failed, it usually has to be drilled, precisely and at the right point, and a new lock can often be fitted afterwards. We'll tell you which situation you're in, and the price, before we start. Safe opening starts from {P_SAFE}. See <a href="~/safe-opening/">safe opening</a>, <a href="~/commercial-safe-services/">commercial safe services</a> and <a href="~/hotel-safe-opening/">hotel safe opening</a>.</p>
 
 <h2>Gates, shutters and back-of-house doors</h2>
@@ -117,7 +117,7 @@ dict(slug="cbd-orchard", name="Orchard & CBD", region="Central",
  faqs=[
   ("How quickly can a locksmith reach Orchard Road?", "Orchard is a short drive from our usual base around Toa Payoh, so we usually arrive within {ARRIVAL}, day or night. Building access can add a few minutes, so let security know we're coming."),
   ("Can you open a locked bedroom door in an Orchard apartment without damage?", "Usually, yes. Most room door locks open without damage: this November Uncle Thomas had one open in under a minute. If the lock itself has broken, we fit a new lockset in the same visit."),
-  ("Do you open office safes in Raffles Place, Tanjong Pagar and Marina Bay?", "Yes, after hours too. Uncle Thomas is a US-trained safesmith who has opened safes for offices, pawnshops, hotels and banks. We need authorisation from the business, and we issue an invoice."),
+  ("Do you open office safes in Raffles Place, Tanjong Pagar and Marina Bay?", "Yes, after hours too. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and has opened safes for offices, pawnshops, hotels and banks. We need authorisation from the business, and we issue an invoice."),
   ("Can you come to our CBD office at night or on weekends?", "Yes. We work 24/7, and after-hours visits mean no disruption to your business. Please arrange building access with security."),
  ],
  nearby=["river-valley", "tanglin", "newton", "novena", "paterson", "bukit-merah"]),
@@ -246,7 +246,7 @@ dict(
 
 <h2>Safes, staff changes and discretion</h2>
 <p>Tanglin homes often keep more than one safe: a wall or floor safe in the master bedroom, a watch or jewellery safe in the dressing room, a document safe in the study. Most of our safe calls here come from one of two moments. Either nobody can remember a code, or the household has changed and a member of staff who knew the code has moved on. In the second case the safe still opens, and the fix is a <a href="~/safe-combination-change/">combination change</a> that only the family knows.</p>
-<p>Uncle Thomas trained as a safesmith in the United States and has opened safes for banks, hotels and offices, as well as on ships. That experience matters with expensive safes, which often have relockers that fire if a safe is attacked the wrong way. When a code is lost but the lock works, there's often a way in that leaves the safe as it was. When the lock has failed, drilling is usually the answer, at a precise point, and about 90% of drilled safes can be repaired. He works quietly, can come alone, and never discusses clients or what was inside. Safe opening starts from {P_SAFE}.</p>
+<p>Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and has opened safes for banks, hotels and offices, as well as on ships. That experience matters with expensive safes, which often have relockers that fire if a safe is attacked the wrong way. When a code is lost but the lock works, there's often a way in that leaves the safe as it was. When the lock has failed, drilling is usually the answer, at a precise point, and about 90% of drilled safes can be repaired. He works quietly, can come alone, and never discusses clients or what was inside. Safe opening starts from {P_SAFE}.</p>
 
 <h2>Gates and driveways</h2>
 <p>Heavy driveway gates take daily wear, and rain and heat get into every lock exposed to them. Watch for a key that turns only partway, a bolt that needs the gate lifted before it slides, or rust staining around the keyhole. Replace a failing gate lock before it seizes with the car on the wrong side. We open seized gate locks and fit replacements made for outdoor use.</p>
@@ -436,7 +436,7 @@ dict(
 <p>Many Sentosa Cove owners split the year between Singapore and elsewhere. While a house or apartment sits empty, digital lock batteries run down, safe batteries leak, and a code set a year ago is hard to recall. Before a long trip, replace the batteries in every digital lock and safe, test the backup keys, and leave a spare key with someone you trust in Singapore. If you've already come home to a dead lock, we open it, usually without damage, and replace the batteries. If a property manager needs to let us in while you're abroad, send your written authorisation and proof of ownership on WhatsApp first.</p>
 
 <h2>Safes at home and on board</h2>
-<p>Uncle Thomas trained as a safesmith in the United States and has opened safes on ships and cruise liners, so a safe on a yacht is familiar ground. Marine safes bring their own complications: tight cabinetry, salt-damaged keypads and owners who may be abroad. We work carefully around the joinery, and we need proof that the boat and safe are yours, or the owner's written authorisation. At home or afloat, the same honest rule applies. If a code is lost but the lock works, there's often a way in without damage; if the lock has failed, the safe usually has to be drilled, and about 90% of drilled safes can be repaired. Safe opening starts from {P_SAFE}.</p>
+<p>Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and has opened safes on ships and cruise liners, so a safe on a yacht is familiar ground. Marine safes bring their own complications: tight cabinetry, salt-damaged keypads and owners who may be abroad. We work carefully around the joinery, and we need proof that the boat and safe are yours, or the owner's written authorisation. At home or afloat, the same honest rule applies. If a code is lost but the lock works, there's often a way in without damage; if the lock has failed, the safe usually has to be drilled, and about 90% of drilled safes can be repaired. Safe opening starts from {P_SAFE}.</p>
 
 <h2>Getting to you on the island</h2>
 <p>We reach Sentosa Cove by road over the Sentosa Gateway. Estate security adds a step that doesn't exist elsewhere, so let the guardhouse or your condo's security know a locksmith is coming, and send a pinned location, especially for the island bungalows, which can be hard to find at night. For a boat, tell us the marina and berth, and let the marina office know. We work 24/7; nights, weekends and public holidays start from {P_AFTERHOURS}.</p>
@@ -607,7 +607,7 @@ dict(slug="pasir-ris", name="Pasir Ris", region="East",
  access="For chalets, tell us the chalet name and unit, and let the front desk know we're coming. For HDB flats, the block and Drive number is enough.",
  faqs=[
   ("Locked out of a chalet in Pasir Ris — can you help?", "Yes. We'll check your booking details with you and the operator before opening the door."),
-  ("Do you open room safes?", "Yes — Uncle Thomas is a US-trained safesmith. We'll confirm the safe is yours or that the operator authorises it."),
+  ("Do you open room safes?", "Yes — Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA). We'll confirm the safe is yours or that the operator authorises it."),
  ],
  nearby=["tampines"]),
 

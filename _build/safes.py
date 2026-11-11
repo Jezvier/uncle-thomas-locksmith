@@ -30,7 +30,7 @@ dict(
  title_exp="Safe Combination Change Singapore | Safe Lock Replacement",
  desc="Change your safe combination or replace a faulty safe lock in Singapore. Dial, keypad and key safes, homes and businesses. US-trained safesmith. Call 9224 9224.",
  h1="Safe Combination Change and Safe Lock Replacement",
- sub="Someone who knew the code has left, you've bought a second-hand safe, or the keypad is failing. Uncle Thomas, a US-trained safesmith, changes combinations and replaces safe locks on all types of safe.",
+ sub="Someone who knew the code has left, you've bought a second-hand safe, or the keypad is failing. Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA), changes combinations and replaces safe locks on all types of safe.",
  badges=["All safe types", "Homes & businesses", "Invoices for companies"],
  body="""
 <p><strong>The short answer:</strong> a safe's combination should change whenever you can't be sure who knows it. On an electronic safe that's usually quick. On a mechanical dial safe it's a precise job, because a mistake can lock you out of your own safe. If the lock itself is faulty, the better fix is a new lock.</p>
@@ -134,7 +134,7 @@ dict(
  sub="Uncle Thomas has worked on safes for commercial offices, pawnshops, banks and government ministries. One safesmith for opening, combination changes, new locks and new safes, with invoices for your accounts team.",
  badges=["Offices, banks & pawnshops", "Invoices issued", "24/7, discreet"],
  body="""
-<p><strong>The short answer:</strong> when a business safe won't open, the cost is usually the downtime: cash you can't bank, documents you can't reach, a counter you can't open. Uncle Thomas is a US-trained safesmith who has worked for commercial offices, pawnshops, banks and government ministries, and he's available 24/7, including before opening hours and after closing.</p>
+<p><strong>The short answer:</strong> when a business safe won't open, the cost is usually the downtime: cash you can't bank, documents you can't reach, a counter you can't open. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and has worked for commercial offices, pawnshops, banks and government ministries, and he's available 24/7, including before opening hours and after closing.</p>
 
 <h2>Who we work with</h2>
 <ul>
@@ -199,7 +199,7 @@ dict(
  sub="For hotels, serviced apartments and ships: when an in-room guest safe won't open and your own emergency tool can't help, Uncle Thomas can. 24/7, discreet, with invoices for your accounts team.",
  badges=["Guest safes, all brands", "24/7, discreet", "Invoices issued"],
  body="""
-<p><strong>The short answer:</strong> most hotel guest safes can be opened by the hotel itself, with a management code, a handheld emergency unit or an override key. When that fails, because the tool is missing or flat, the codes left with a former staff member, or the lock itself has failed, you need a safesmith. Uncle Thomas is US-trained, opens all safe types, and has opened guest safes for many hotels over the years, as well as safes on board ships and cruise liners.</p>
+<p><strong>The short answer:</strong> most hotel guest safes can be opened by the hotel itself, with a management code, a handheld emergency unit or an override key. When that fails, because the tool is missing or flat, the codes left with a former staff member, or the lock itself has failed, you need a safesmith. Uncle Thomas trained in the USA with ALOA and SAVTA, opens all safe types, and has opened guest safes for many hotels over the years, as well as safes on board ships and cruise liners.</p>
 
 <h2>How hotel safes are normally opened</h2>
 <p>In-room safes are built so the hotel can open them when a guest can't:</p>

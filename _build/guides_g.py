@@ -2,7 +2,7 @@
 How to choose a safe locksmith: targets "safe locksmith singapore" (not yet ranking) with an
 honest, clearly-ours buying guide. ALOA facts checked 4 Nov 2026 (ALOA Security Professionals
 Association, founded 1955 as the Associated Locksmiths of America, Dallas). Owner-confirmed:
-ALOA Fundamentals of Locksmithing (1999), a year of US safesmith training, trained in manipulation
+1999 LA locksmith convention: ALOA Fundamentals of Locksmithing + SAVTA safe combination lock and problem-lock classes; trained in manipulation
 of Group 2M combination locks, safes take 5 minutes to 5 hours, about 90% of drilled safes reusable.
 Never describes how to open a safe."""
 
@@ -20,7 +20,7 @@ dict(
 
 <h2>1. Ask about safe training, not just locksmithing</h2>
 <p>Safes are a separate trade from door locks. Ask the locksmith where they learned to open safes, how long they've been doing it, and what kinds of safes they open most.</p>
-<p>Uncle Thomas has been a locksmith since 1998. He spent a year in the United States training as a safesmith, and completed the Fundamentals of Locksmithing course with ALOA (the Associated Locksmiths of America, now the ALOA Security Professionals Association, the long-running US locksmith trade body) in 1999. He has opened safes for homes, offices, pawnshops, banks and government ministries, on ships and overseas. See <a href="~/about/">his story</a>.</p>
+<p>Uncle Thomas has been a locksmith since 1998. In 1999 he went to a locksmith convention in Los Angeles and took the Fundamentals of Locksmithing course with ALOA (the Associated Locksmiths of America, now the ALOA Security Professionals Association, the long-running US locksmith trade body), plus classes with its safe and vault arm, SAVTA (the Safe and Vault Technicians Association), in opening safe combination locks and in servicing and troubleshooting problem locks. He has opened safes for homes, offices, pawnshops, banks and government ministries, on ships and overseas. See <a href="~/about/">his story</a>.</p>
 
 <h2>2. Ask whether they'll try to open it without damage first</h2>
 <p>A good safesmith uses the least damaging method that will work, and tells you which one before starting:</p>

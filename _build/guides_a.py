@@ -150,7 +150,7 @@ dict(
  h1="Forgot Your Safe Box Password or Combination? What to Do",
  card="Lost the code or key to your safe? What to try, what not to do, and how a safesmith helps.",
  body="""
-<p>Forgetting a safe code happens more often than you'd think — after a long holiday, after inheriting a safe, when the person who set it has left the company, or when an electronic keypad suddenly stops accepting a code you're sure is right. Here's what Uncle Thomas, who trained in safesmithing in the United States and has opened safes on ships and across Asia, suggests you do.</p>
+<p>Forgetting a safe code happens more often than you'd think — after a long holiday, after inheriting a safe, when the person who set it has left the company, or when an electronic keypad suddenly stops accepting a code you're sure is right. Here's what Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA) and has opened safes on ships and across Asia, suggests you do.</p>
 
 <h2>First: what kind of safe is it?</h2>
 <p>The right approach depends on the lock:</p>
@@ -185,7 +185,7 @@ dict(
 </ul>
 
 <h2>6. Call a safesmith</h2>
-<p>A trained safesmith can usually open a safe with minimal damage, using methods matched to the lock type. Safes are a specialist field, and few locksmiths in Singapore have formal safe training. Uncle Thomas spent a year in the United States training in safesmithing, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong. See <a href="~/safe-opening/">safe opening in Singapore</a>, and if you're worried about damage, read <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
+<p>A trained safesmith can usually open a safe with minimal damage, using methods matched to the lock type. Safes are a specialist field, and few locksmiths in Singapore have formal safe training. Uncle Thomas trained in the USA in 1999 with ALOA and SAVTA, including SAVTA's classes in opening safe combination locks, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong. See <a href="~/safe-opening/">safe opening in Singapore</a>, and if you're worried about damage, read <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
 
 <h2>What to have ready</h2>
 <ul>

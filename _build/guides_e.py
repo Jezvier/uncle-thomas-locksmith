@@ -13,7 +13,7 @@ dict(
  card="When a safe can be opened and still work, when it has to be drilled, and what professional drilling really involves.",
  body="""
 <p>"Will you have to drill it?" is the first thing most people ask when their safe won't open. It's a fair worry. You bought the safe to protect something, and the idea of someone drilling into it sounds like the end of it.</p>
-<p>The honest answer from Uncle Thomas, who trained as a safesmith in the United States and has opened safes for homes, offices, pawnshops, banks and government ministries: <strong>it depends on why the safe won't open.</strong> A safe that's locked because the code or key is lost is a different problem from a safe whose lock has failed.</p>
+<p>The honest answer from Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA) and has opened safes for homes, offices, pawnshops, banks and government ministries: <strong>it depends on why the safe won't open.</strong> A safe that's locked because the code or key is lost is a different problem from a safe whose lock has failed.</p>
 
 <h2>When a safe can usually be opened without drilling</h2>
 <p>If the lock itself still works, there's often a way in that leaves the safe fully usable:</p>
@@ -78,7 +78,7 @@ dict(
  h1="How to Choose a Safe in Singapore: A Safesmith's Guide",
  card="Fire or burglary rating, keypad or dial, how big, and whether to bolt it down: what to check before you buy.",
  body="""
-<p>Most people choose a safe by price and size. A safesmith chooses one by what it has to stop. Uncle Thomas has opened safes of every type since he trained in the United States, so he's seen which ones hold up and which ones don't. Here's how to choose one that fits what you're protecting.</p>
+<p>Most people choose a safe by price and size. A safesmith chooses one by what it has to stop. Uncle Thomas has opened safes of every type since he trained with ALOA and SAVTA in the USA in 1999, so he's seen which ones hold up and which ones don't. Here's how to choose one that fits what you're protecting.</p>
 
 <h2>1. Start with what you're protecting</h2>
 <table class="price-table info-table"><thead><tr><th scope="col">You're keeping</th><th scope="col">The main threat</th><th scope="col">Look for</th></tr></thead><tbody>
@@ -192,7 +192,7 @@ dict(
 </ul>
 
 <h2>When to call a safe locksmith</h2>
-<p>Call if there's no external power point, the override key is lost or inside the safe, or fresh power doesn't help (which can mean the lock itself has failed). Uncle Thomas is a US-trained safesmith who opens every type of safe box across Singapore, 24/7. Send photos of the safe's front, keypad and brand label to {PHONE} and we'll tell you how we'd open it and the price before we come. Brand guides: <a href="~/safe-opening/yale/">Yale</a> · <a href="~/safe-opening/sentrysafe/">SentrySafe</a> · <a href="~/safe-opening/phoenix/">Phoenix</a> · <a href="~/safe-opening/godrej/">Godrej</a> · <a href="~/safe-opening/#brands">all brands</a>.</p>
+<p>Call if there's no external power point, the override key is lost or inside the safe, or fresh power doesn't help (which can mean the lock itself has failed). Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe box across Singapore, 24/7. Send photos of the safe's front, keypad and brand label to {PHONE} and we'll tell you how we'd open it and the price before we come. Brand guides: <a href="~/safe-opening/yale/">Yale</a> · <a href="~/safe-opening/sentrysafe/">SentrySafe</a> · <a href="~/safe-opening/phoenix/">Phoenix</a> · <a href="~/safe-opening/godrej/">Godrej</a> · <a href="~/safe-opening/#brands">all brands</a>.</p>
 <div class="callout navy"><p><strong>Safe box dead and no key?</strong> WhatsApp photos to {PHONE}. Price agreed before we come.</p></div>
 """,
  faqs=[
@@ -241,7 +241,7 @@ dict(
 <p>Call the hotel's front desk. Hotel safes have a master override that staff can use after checking you're the guest.</p>
 
 <h2>When to call a safe locksmith</h2>
-<p>If you've worked through these and the safe still won't open, call or WhatsApp {PHONE}. Uncle Thomas is a US-trained safesmith who opens every type of safe box in Singapore, 24/7, for homes and businesses. We check ownership, agree the price first, and tell you whether the safe will stay usable. See <a href="~/safe-opening/">safe opening</a>.</p>
+<p>If you've worked through these and the safe still won't open, call or WhatsApp {PHONE}. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe box in Singapore, 24/7, for homes and businesses. We check ownership, agree the price first, and tell you whether the safe will stay usable. See <a href="~/safe-opening/">safe opening</a>.</p>
 <div class="callout navy"><p><strong>Code right, door shut?</strong> WhatsApp photos of the safe to {PHONE}. We'll tell you what we think is wrong.</p></div>
 """,
  faqs=[
@@ -292,7 +292,7 @@ dict(
 </ul>
 
 <h2>How we help</h2>
-<p>Uncle Thomas, a US-trained safesmith, opens safes with lost keys for homes and businesses across Singapore, 24/7. We check proof of ownership, agree the price before we come, and can replace the lock afterwards. WhatsApp photos of the safe, the keyhole and the brand label to {PHONE}.</p>
+<p>Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA), opens safes with lost keys for homes and businesses across Singapore, 24/7. We check proof of ownership, agree the price before we come, and can replace the lock afterwards. WhatsApp photos of the safe, the keyhole and the brand label to {PHONE}.</p>
 <div class="callout navy"><p><strong>Lost the safe key?</strong> WhatsApp photos to {PHONE}. Price agreed before we come.</p></div>
 """,
  faqs=[
