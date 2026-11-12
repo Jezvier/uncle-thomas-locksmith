@@ -130,6 +130,9 @@ PHOTOS = {
     # key: (file name or None, alt text, caption) — or a LIST of those for a 2-column grid.
     # Files live in assets/photos/ (already edited: straightened, colour-corrected, 4:5 crop).
     "hero":       ("uncle-thomas-safe-dial-hero.jpg", "Uncle Thomas, Singapore safesmith, wearing a mask and turning the combination dial of a stainless steel safe with a dial tool", "Uncle Thomas working the combination dial of a safe"),
+    # Head-and-shoulders portrait (owner confirmed it's Uncle Thomas, 13 Nov 2026). The round
+    # avatar crops of it live in assets/img/uncle-thomas-face-v2-*.
+    "about_headshot": ("uncle-thomas-portrait.jpg", "Portrait of Uncle Thomas, Singapore locksmith and safesmith since 1998", "Uncle Thomas"),
     "about_portrait": ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
     "about_van":  ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),
     "about_tools": ("uncle-thomas-opening-office-safe.jpg", "Uncle Thomas working the dial of a combination lock on a filing safe", "Uncle Thomas working the dial of a combination safe"),
@@ -181,7 +184,13 @@ PHOTOS = {
         ("door-lock-cover-plate-hides-old-holes.jpg", "Stainless steel cover plate and new cylinder lock on a wooden door, hiding the holes from the old lock", "A cover plate neatly hides the old lock holes"),
     ],
     "car-locksmith/":             ('car-lockout-condo-carpark.jpg', "Uncle Thomas kneeling beside a dark car in a Woodlands carpark, opening the locked driver's door without damage", 'Uncle Thomas opening a locked car door (Woodlands)'),
+    # Broken key extraction job (owner confirmed 13 Nov 2026; place and date not given, so none stated).
+    "broken-key-extraction/": [
+        ("broken-key-extracted-piece.jpg", "The snapped tip of a key in a tin, next to the slim picks used to pull it out of the lock", "The snapped piece of key, out of the lock"),
+        ("broken-key-lock-cylinder.jpg", "Nelon key cylinder low down on a wooden door, with the broken key cleared from the keyway", "The lock it snapped in, keyway cleared"),
+    ],
     "lock-replacement/": [
+        ("new-lever-lockset-room-door.jpg", "New antique-bronze lever lockset with its keys, fitted to a light wood-grain room door", "New lever lockset fitted to a room door"),
         ("hdb-door-lock-replacement-before.jpg", "Damaged wooden main door with the old lock removed and splintered edge", "Before: damaged door, old lock removed"),
         ("hdb-door-lock-replacement-after.jpg", "New stainless steel lever handle and lock plate fitted on a wooden main door in Singapore", "After: new lever lock and cover plate"),
         ("rim-lock-replacement-before.jpg", "Old rusted rim lock on a white wooden door", "Before: old rusted rim lock"),

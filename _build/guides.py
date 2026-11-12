@@ -30,6 +30,12 @@ PUBLISHED.update({g["slug"]: "2026-10-29" for g in GUIDES_E + GUIDES_F})
 PUBLISHED.update({g["slug"]: "2026-11-04" for g in GUIDES_G})
 PUBLISHED.update({g["slug"]: "2026-11-06" for g in GUIDES_H})
 
+def _month_year(iso):
+    """'2026-11-01' -> 'November 2026' (the real date the guide last changed, never today's)."""
+    import datetime
+    return datetime.date.fromisoformat(iso).strftime("%B %Y")
+
+
 def _modified(path, slug):
     """Date the guide's content last changed (tracked by build.py in lastmod.json)."""
     import json, os
@@ -52,20 +58,32 @@ def build(x):
     nodes = x["page_schema"]("guides/", title, desc, crumbs, page_type="CollectionPage")
     x["render"]("guides/", title, desc, body, nodes, priority="0.6")
 
+    # Related guides (13 Nov 2026): guides listed under the same service page are siblings.
+    by_slug = {g["slug"]: g for g in GUIDES}
+    def related(slug, n=4):
+        out = []
+        for group in x["content"].SERVICE_GUIDES.values():
+            if slug in group:
+                out += [s for s in group if s != slug and s not in out and s in by_slug]
+        return [by_slug[s] for s in out[:n]]
+
     for g in GUIDES:
         path = f"guides/{g['slug']}/"
+        rel = related(g["slug"])
+        rel_html = ("<h2>Related guides</h2><ul class=\"guide-links\">" +
+                    "".join(f'<li><a href="~/guides/{r["slug"]}/">{r["h1"]}</a></li>' for r in rel) + "</ul>") if rel else ""
         crumbs = [("Home", ""), ("Guides", "guides/"), (g["short"], path)]
         assert len(g["title"]) <= 65, g["title"]
         body = (f'<section class="page-hero"><div class="container narrow">{_bc(crumbs)}<h1>{g["h1"]}</h1>'
-                f'<p class="meta-line">By <a href="~/about/">Uncle Thomas</a>, locksmith since {{FOUNDED}} · Updated {{MONTH_YEAR}}</p>'
+                f'<div class="hero-trust">{x["face_img"]()}<div class="hero-trust-txt"><p class="meta-line">By <a href="~/about/">Uncle Thomas</a>, locksmith since {{FOUNDED}} · Updated {_month_year(_modified(path, g["slug"]))}</p>{x["rating_chip"]()}</div></div>'
                 f'{x["cta_buttons"]("")}</div></section>'
-                f'<article class="section"><div class="container narrow prose">{g["body"]}</div></article>'
+                f'<article class="section"><div class="container narrow prose">{g["body"]}{rel_html}</div></article>'
                 f'<section class="section section-alt"><div class="container narrow">{x["faq_html"](g["faqs"], "Quick Answers")}</div></section>' +
                 x["cta_band"]())
         art = {"@type": "Article", "@id": C.SITE + "/" + path + "#article", "headline": g["h1"], "description": g["desc"],
                "author": {"@id": x["PERSON_ID"]}, "publisher": {"@id": x["BUSINESS_ID"]},
                "datePublished": PUBLISHED[g["slug"]], "dateModified": _modified(path, g["slug"]),
-               "mainEntityOfPage": C.SITE + "/" + path, "image": C.SITE + "/assets/img/og-v4.jpg", "inLanguage": "en-SG"}
+               "mainEntityOfPage": C.SITE + "/" + path, "image": C.SITE + "/assets/img/og/og-guides-v1.jpg", "inLanguage": "en-SG"}
         nodes = x["page_schema"](path, g["title"], g["desc"], crumbs, faqs=g["faqs"], extra=[art, x["person_node"]()])
         x["render"](path, g["title"], g["desc"], body, nodes, og_type="article", priority="0.6")
 

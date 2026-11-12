@@ -71,7 +71,7 @@ def _privacy(x):
                  "anonymous usage information such as pages visited and the type of device. You can block cookies in your browser.</p>"
                  if C.GA4_ID else
                  "<p>This website does not use advertising cookies. If we add website analytics, we'll update this notice.</p>")
-    body = (x["page_hero"](crumbs, "Privacy Notice", f"How {C.NAME} handles your personal data. Last updated {{MONTH_YEAR}}.") +
+    body = (x["page_hero"](crumbs, "Privacy Notice", f"How {C.NAME} handles your personal data.") +
             f'''<section class="section"><div class="container narrow prose">
 <h2>What we collect</h2>
 <p>When you call, WhatsApp or book a job, we collect only what we need to help you: your name, phone number, the address or location of the job, photos you choose to send, and details of the lock, safe or car.</p>

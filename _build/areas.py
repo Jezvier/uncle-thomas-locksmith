@@ -847,6 +847,15 @@ dict(slug="choa-chu-kang", name="Choa Chu Kang", region="West",
 
 TOWN_BY_SLUG = {t["slug"]: t for t in TOWNS}
 
+# Make "Also nearby" links two-way (13 Nov 2026): if Tanglin lists Holland Village, Holland
+# Village lists Tanglin too. Pages only one town pointed to (e.g. Sentosa Cove, River Valley)
+# were among the least-linked on the site. Slugs without a page (old Jurong) are skipped.
+for _t in TOWNS:
+    for _s in list(_t["nearby"]):
+        _o = TOWN_BY_SLUG.get(_s)
+        if _o and _t["slug"] not in _o["nearby"]:
+            _o["nearby"].append(_t["slug"])
+
 # Places covered without their own page yet (listed on the hub so every searcher sees coverage)
 OTHER_TOWNS = {
  "Central": ["Potong Pasir"],
@@ -892,14 +901,16 @@ def build(x):
         path = f"areas/{t['slug']}/"
         n = t["name"]
         crumbs = [("Home", ""), ("Areas", "areas/"), (n, path)]
-        title = t.get("title") or f"Locksmith {n} 24/7 | Safes, Cars & Digital Locks"
+        # Arrival time in the title (owner confirmed 25–30 min, 13 Nov 2026): the same pattern
+        # lifted the homepage's click-through for "locksmith near me".
+        title = t.get("title") or f"Locksmith {n} 24/7 | Arrives in 25–30 Min"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas Locksmith"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas"
-        desc = t.get("desc") or f"24/7 locksmith in {n}: safe opening, car lockouts, digital locks and door lockouts. Uncle Thomas sets off as soon as you call. Since 1998. Call 9224 9224."
+        desc = t.get("desc") or f"24/7 locksmith in {n}: safe opening, car lockouts, digital locks and door lockouts. Uncle Thomas usually arrives in 25–30 min. Since 1998. Call 9224 9224."
         if len(desc) > 158 and not t.get("desc"):
-            desc = f"24/7 locksmith in {n}: safes, cars, digital locks & lockouts. We set off as soon as you call. Since 1998. Call 9224 9224."
+            desc = f"24/7 locksmith in {n}: safes, cars, digital locks & lockouts. Usually there in 25–30 min. Since 1998. Call 9224 9224."
         facts = (f'<div class="facts"><div class="fact"><strong>Estates we cover</strong>{", ".join(t["estates"])}</div>'
                  f'<div class="fact"><strong>Landmarks</strong>{", ".join(t["landmarks"])}</div>'
                  f'<div class="fact"><strong>MRT / LRT</strong>{", ".join(t["mrt"])}</div>'

@@ -454,3 +454,38 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
 
 /* "Last updated" line (freshness for readers, search engines and AI answers) */
 .updated { text-align: center; color: var(--grey); font-size: .82rem; margin: 18px 0 22px; }
+
+/* ===== Trust row in every inner-page hero (13 Nov 2026): real face + Google rating near the call button ===== */
+.hero-trust { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; }
+.trust-face { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.18); display: block; }
+.hero-trust-txt { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
+.trust-name { font-weight: 700; font-size: .95rem; color: var(--navy); }
+.hero-trust .g-rating { margin: 0; min-height: 40px; padding: 4px 12px 4px 10px; }
+.hero-trust .meta-line { margin: 0; }
+@media (max-width: 639px) {
+  .page-hero .container > .hero-trust { order: 3; }
+}
+/* Homepage: Uncle Thomas's face is the trust signal on phones, so give it room */
+@media (max-width: 959px) {
+  .hero-lead picture { width: 72px; height: 72px; }
+  .hero-lead .hero-face { width: 72px; height: 72px; }
+}
+/* About page intro with the head-and-shoulders portrait */
+.about-intro { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: center; margin-bottom: 28px; }
+.about-intro .headshot { margin: 0; }
+.about-intro .headshot img { border-radius: 50%; aspect-ratio: 1; object-fit: cover; object-position: 50% 22%; width: 120px; height: 120px; }
+.about-intro .headshot figcaption { display: none; }
+.about-intro-text { margin: 0; font-size: 1.08rem; }
+@media (min-width: 640px) { .about-intro { grid-template-columns: 160px 1fr; } .about-intro .headshot img { width: 160px; height: 160px; } }
+/* Service tiles: sentence case reads friendlier than spaced capitals */
+.t-txt strong { text-transform: none; letter-spacing: 0; font-size: 1.05rem; }
+/* 44px tap targets for small inline links (reviews link, "More on <town>" job links) */
+.rv-foot a, .jobs li > a:last-child { display: inline-flex; align-items: center; min-height: 44px; padding: 0 4px; }
+.hero-trust picture { flex: none; width: 56px; height: 56px; }
+.hero-trust .g-rating span:last-child { white-space: nowrap; }
+.hero-trust .g-rating .stars { font-size: .9rem; }
+@media (max-width: 360px) { .hero-trust .g-rating { font-size: .82rem; gap: 6px; } }
+/* "Helpful guides" under service pages: full-width rows, easy to tap */
+.guide-links { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
+.guide-links a { display: flex; align-items: center; min-height: 48px; padding: 10px 14px; border: 1px solid #e6e6e6; border-radius: 10px; font-weight: 600; text-decoration: none; color: var(--navy); background: var(--white); }
+.guide-links a:hover { border-color: var(--yellow); }

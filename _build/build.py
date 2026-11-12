@@ -29,6 +29,7 @@ sys.path.insert(0, HERE)
 
 import config as C
 import content, areas, guides, brands, cars, zh, icons, pages_extra
+from og import og_image
 
 TODAY = date.today().isoformat()
 PAGES = []          # (path, priority) for sitemap
@@ -69,7 +70,7 @@ T = {
             coverage="Coverage", coverage_v="Islandwide Singapore", google="Find us on Google",
             f_services="Services", f_areas="Areas", f_guides="Guides", all_areas="All areas →",
             cta_title="Need a Locksmith Right Now?",
-            cta_lead="Call or WhatsApp Uncle Thomas — 24/7, islandwide. We set off as soon as you call.",
+            cta_lead="Call or WhatsApp Uncle Thomas — 24/7, islandwide. We usually arrive in {ARRIVAL}.",
             bottom="Singapore · 24/7 Emergency Locksmith", wa_link=C.WA_LINK, other_lang="中文"),
  "zh": dict(topbar_long=f"24小时紧急锁匠 · 全岛服务 · 自{C.FOUNDED}年",
             topbar_short=f"24小时 · 全岛 · 自{C.FOUNDED}年",
@@ -80,7 +81,7 @@ T = {
             coverage="服务范围", coverage_v="新加坡全岛", google="在 Google 上找到我们",
             f_services="服务", f_areas="地区", f_guides="指南", all_areas="所有地区 →",
             cta_title="现在需要锁匠吗？",
-            cta_lead="致电或 WhatsApp Uncle Thomas — 24小时，全岛服务。接到电话立即出发。",
+            cta_lead="致电或 WhatsApp Uncle Thomas — 24小时，全岛服务。通常25–30分钟内到达。",
             bottom="新加坡 · 24小时紧急锁匠", wa_link=C.WA_LINK_ZH, other_lang="English"),
 }
 
@@ -166,7 +167,7 @@ def person_node():
         "knowsAbout": ["Locksmithing", "Safesmithing", "Safe opening", "Safe combination change", "Digital locks", "Smart locks", "Car key fob cloning"],
         "worksFor": {"@id": BUSINESS_ID},
         "url": C.SITE + "/about/",
-        "image": (photo_schema("about_portrait") or {}).get("contentUrl", C.SITE + "/assets/img/logo-badge-v4-640.jpg"),
+        "image": (photo_schema("about_headshot") or photo_schema("about_portrait") or {}).get("contentUrl", C.SITE + "/assets/img/logo-badge-v4-640.jpg"),
     }
     return node
 
@@ -311,12 +312,41 @@ def breadcrumb_html(crumbs):
     return f'<nav class="breadcrumb" aria-label="Breadcrumb"><ol>{"".join(items)}</ol></nav>'
 
 
+FACE_IMG = ('<picture><source srcset="~/assets/img/uncle-thomas-face-v2-{s}.webp 1x, ~/assets/img/uncle-thomas-face-v2-{s2}.webp 2x" type="image/webp">'
+            '<img class="{cls}" src="~/assets/img/uncle-thomas-face-v2-{s}.jpg" width="{px}" height="{px}" alt="Uncle Thomas"{extra}></picture>')
+
+
+def face_img(px=56, cls="trust-face", eager=False):
+    """Round photo of Uncle Thomas (crops of the owner-confirmed portrait)."""
+    s = 112 if px <= 56 else 160
+    return FACE_IMG.format(s=s, s2=s * 2, px=px, cls=cls, extra=' fetchpriority="high"' if eager else ' decoding="async"')
+
+
+def rating_chip(lang="en"):
+    """Google rating pill, same numbers as the homepage (refreshed nightly from Google)."""
+    if not (C.GOOGLE_RATING and C.GOOGLE_REVIEW_COUNT):
+        return ""
+    r = float(C.GOOGLE_RATING)
+    pct = max(0, min(100, r / 5 * 100))
+    label = (f"Google <strong>{r:.1f}</strong> · {int(C.GOOGLE_REVIEW_COUNT)} 条评价" if lang == "zh"
+             else f"<strong>{r:.1f}</strong> on Google · {int(C.GOOGLE_REVIEW_COUNT)} reviews")
+    return (f'<a class="g-rating" href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener">'
+            f'<span class="stars" style="--pct:{pct:.0f}%" aria-hidden="true">★★★★★</span><span>{label}</span></a>')
+
+
+def hero_trust(lang="en"):
+    """Face + name + Google rating, shown in the first screen of every inner page."""
+    who = f"Uncle Thomas · 自{C.FOUNDED}年" if lang == "zh" else f"Uncle Thomas · since {C.FOUNDED}"
+    return (f'<div class="hero-trust">{face_img()}<div class="hero-trust-txt">'
+            f'<span class="trust-name">{who}</span>{rating_chip(lang)}</div></div>')
+
+
 def page_hero(crumbs, h1, sub, badges=None, lang="en"):
     b = ""
     if badges:
         b = '<ul class="badges">' + "".join(f"<li>{x}</li>" for x in badges) + "</ul>"
     return (f'<section class="page-hero"><div class="container">{breadcrumb_html(crumbs)}'
-            f'<h1>{h1}</h1><p class="hero-sub">{sub}</p>{cta_buttons(lang=lang)}{b}</div></section>')
+            f'<h1>{h1}</h1>{hero_trust(lang)}<p class="hero-sub">{sub}</p>{cta_buttons(lang=lang)}{b}</div></section>')
 
 
 NAV = {"en": [("Services", "services/"), ("Prices", "prices/"), ("Areas", "areas/"), ("Guides", "guides/"), ("About", "about/"), ("Contact", "contact/")],
@@ -462,13 +492,13 @@ def render(path, title, desc, body, schema_nodes, og_type="website", preload_img
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{C.SITE}/assets/img/og-v4.jpg">
+<meta property="og:image" content="{C.SITE}/{og_image(path)}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}">
-<meta name="twitter:image" content="{C.SITE}/assets/img/og-v4.jpg">
+<meta name="twitter:image" content="{C.SITE}/{og_image(path)}">
 <meta name="geo.region" content="SG">
 <meta name="geo.placename" content="Singapore">
 <link rel="icon" href="~/assets/img/favicon-v4.ico" sizes="48x48">
@@ -504,7 +534,7 @@ def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="Web
     nodes = [{"@type": page_type, "@id": abs_url(path) + "#webpage", "url": abs_url(path), "name": title,
               "description": desc, "inLanguage": lang, "isPartOf": {"@id": C.SITE + "/#website"},
               "about": {"@id": BUSINESS_ID}, "breadcrumb": {"@id": abs_url(path) + "#breadcrumb"},
-              "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/assets/img/og-v4.jpg"}}]
+              "primaryImageOfPage": {"@type": "ImageObject", "url": C.SITE + "/" + og_image(path)}}]
     bc = breadcrumb_node(crumbs); bc["@id"] = abs_url(path) + "#breadcrumb"
     nodes.append(bc)
     nodes.append(business_node())
@@ -691,10 +721,16 @@ https://:version.:project.pages.dev/*
 # Pages' default for everything else (HTML) is already "public, max-age=0,
 # must-revalidate". Don't set Cache-Control here: Cloudflare merges matching
 # rules, so it would clash with the long cache on /assets/* above.
+# Security headers. The Content-Security-Policy lists every outside host the pages use:
+# Google Analytics (googletagmanager / google-analytics), live Google reviews
+# (places.googleapis.com) and Cloudflare Web Analytics. Add a host here before using a new one.
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=31536000
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://static.cloudflareinsights.com; connect-src 'self' https://places.googleapis.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com https://cloudflareinsights.com; img-src 'self' data: https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://wa.me; object-src 'none'; upgrade-insecure-requests
 """
 
 
@@ -707,7 +743,8 @@ def main():
                breadcrumb_node=breadcrumb_node, faq_node=faq_node, offer_catalog=offer_catalog, esc=esc,
                areas=areas, guides=guides, content=content, brands=brands, cars=cars, abs_url=abs_url, zh_pages=list(zh.ZH_PAGES),
                BUSINESS_ID=BUSINESS_ID, PERSON_ID=PERSON_ID, photo=photo, photo_schema=photo_schema, photos_schema=photos_schema,
-               breadcrumb_html=breadcrumb_html, quote_form=quote_form)
+               breadcrumb_html=breadcrumb_html, quote_form=quote_form,
+               face_img=face_img, rating_chip=rating_chip, hero_trust=hero_trust)
     content.build(ctx)
     brands.build(ctx)
     import safe_brands

@@ -548,6 +548,28 @@ def pick_title(s_or_titles):
     return exp if C.TITLE_STYLE.upper().startswith("LEAD") else keep
 
 
+# Guides listed under each service page ("Helpful guides"), most useful first.
+SERVICE_GUIDES = {
+    "emergency-locksmith/": ["locked-out-of-hdb-flat", "room-door-locked-from-inside", "door-lock-jammed", "lost-house-key", "police-scdf-open-door"],
+    "digital-lock-opening/": ["digital-lock-battery-dead", "forgot-digital-lock-pin", "digital-lock-repair"],
+    "digital-lock-installation/": ["digital-vs-traditional-lock-hdb", "digital-lock-fire-rated-door-scdf", "smart-lock-for-hdb-gate", "digital-lock-repair"],
+    "hdb-gate-digital-lock/": ["smart-lock-for-hdb-gate", "hdb-gate-lock-types", "digital-vs-traditional-lock-hdb"],
+    "lock-replacement/": ["main-door-lock-types", "change-locks-new-home", "after-a-break-in", "landlord-tenant-lock-change", "lost-house-key"],
+    "hdb-main-door-lock-replacement/": ["main-door-lock-types", "after-a-break-in", "lost-house-key", "change-locks-new-home"],
+    "hdb-gate-lock-replacement/": ["hdb-gate-lock-types", "smart-lock-for-hdb-gate", "door-lock-jammed"],
+    "letterbox-lock-replacement/": ["lost-letterbox-key"],
+    "broken-key-extraction/": ["door-lock-jammed", "lost-house-key", "lost-letterbox-key"],
+    "safe-opening/": ["forgot-safe-combination", "safe-wont-open-correct-code", "safe-box-battery-dead", "lost-safe-key", "safe-drilling-explained", "how-to-choose-a-safe-locksmith", "opening-a-deceased-persons-safe"],
+    "safe-combination-change/": ["forgot-safe-combination", "safe-wont-open-correct-code"],
+    "safe-installation/": ["how-to-choose-a-safe-singapore", "how-to-choose-a-safe-locksmith"],
+    "commercial-safe-services/": ["how-to-choose-a-safe-locksmith", "safe-drilling-explained", "how-to-choose-a-safe-singapore"],
+    "hotel-safe-opening/": ["safe-box-battery-dead", "safe-drilling-explained"],
+    "car-locksmith/": ["keys-locked-in-car", "lost-car-key-fob", "car-key-fob-not-working"],
+    "car-key-duplicate/": ["lost-car-key-fob", "car-key-fob-not-working"],
+    "commercial-locksmith/": ["after-a-break-in", "how-to-choose-a-locksmith"],
+}
+
+
 def build_home(x):
     C_ = x["C"]
     hero_photo = x["photo"]("hero", eager=True, cls="photo hero-photo")
@@ -555,7 +577,10 @@ def build_home(x):
         hero_art = (hero_photo + '<picture><source srcset="~/assets/img/logo-badge-v4-320.webp 320w, ~/assets/img/logo-badge-v4-640.webp 640w" sizes="340px" type="image/webp">'
                     '<img src="~/assets/img/logo-badge-v4-640.jpg" alt="Uncle Thomas Locksmith mascot holding keys" width="340" height="340" fetchpriority="high"></picture>')
     else:
-        hero_art = hero_photo
+        # The hero photo only shows from 960px up. A 1x1 placeholder source for narrower
+        # screens stops phones downloading (and prioritising) an image they never display.
+        hero_art = hero_photo.replace("<picture>", '<picture><source media="(max-width: 959px)" '
+                                      'srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">', 1)
     if C_.GOOGLE_RATING and C_.GOOGLE_REVIEW_COUNT:
         r = float(C_.GOOGLE_RATING)
         pct = max(0, min(100, r / 5 * 100))
@@ -570,7 +595,7 @@ def build_home(x):
         f'<li>{j["date"]}, {j["text"]} <a href="~/areas/{j["area"]}/">More on {_towns.get(j["area"], "this area")} →</a></li>'
         for j in C_.JOBS[:6])
     work_section = "" if work.startswith("<!--") else f"""
-<section class="section section-alt" id="work">
+<section class="section" id="work">
   <div class="container">
     <h2 class="section-title">Recent Jobs Across Singapore</h2>
     <p class="section-lead">Real photos and jobs from Uncle Thomas: safes, cars, doors and digital locks.</p>
@@ -588,7 +613,7 @@ def build_home(x):
   <div class="container hero-inner">
     <div>
       <h1>24/7 Locksmith in Singapore</h1>
-      <p class="hero-lead"><picture><source srcset="~/assets/img/uncle-thomas-face-112.webp 1x, ~/assets/img/uncle-thomas-face-224.webp 2x" type="image/webp"><img class="hero-face" src="~/assets/img/uncle-thomas-face-112.jpg" srcset="~/assets/img/uncle-thomas-face-224.jpg 2x" width="56" height="56" alt="Uncle Thomas at work on a safe" fetchpriority="high"></picture><span>Led by <strong>Uncle Thomas</strong>: Singapore locksmith since {C_.FOUNDED}, safe and car specialist.</span></p>
+      <p class="hero-lead">{x["face_img"](72, cls="hero-face", eager=True)}<span>Led by <strong>Uncle Thomas</strong>: Singapore locksmith since {C_.FOUNDED}, safe and car specialist.</span></p>
       {rating_html}
       <ul class="hero-tiles">
         <li><a href="~/safe-opening/"><span class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="15" rx="2"/><circle cx="12" cy="11" r="3.5"/><path d="M12 7.5V9M12 13v1.5M8.5 11H10M14 11h1.5"/><path d="M6.5 18.5V21M17.5 18.5V21"/></svg></span><span class="t-txt"><strong>Safes</strong><span>All safes and bolts: combination dials and smart keypads</span></span><svg class="t-go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a></li>
@@ -617,14 +642,12 @@ def build_home(x):
     <h2 class="section-title">What Customers Say on Google</h2>
     <p class="section-lead"><span class="rv-score">{C_.GOOGLE_RATING:.1f}</span> <span class="rv-stars" aria-hidden="true">★★★★★</span> from {int(C_.GOOGLE_REVIEW_COUNT)} Google reviews</p>
     <div class="rv-list" id="g-reviews" data-place="{C_.PLACE_ID}" data-key="{C_.GOOGLE_BROWSER_KEY}" aria-live="polite"></div>
-    <div class="rv-cta"><p><strong>Had a job done by Uncle Thomas?</strong> A short review helps other people in Singapore find an honest locksmith.</p>
-      <a class="btn btn-call" href="{C_.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{icons.svg("star", cls="bi", fill=True)} Review us on Google</a></div>
     <p class="rv-foot"><a href="{C_.GOOGLE_PROFILE}" target="_blank" rel="noopener">Read all {int(C_.GOOGLE_REVIEW_COUNT)} reviews on Google</a></p>
     <p class="rv-attr">Reviews from Google</p>
   </div>
 </section>
-
-<section class="section" id="services">
+{work_section}
+<section class="section section-alt" id="services">
   <div class="container">
     <h2 class="section-title">Locksmith Services in Singapore</h2>
     <p class="section-lead">Doors, digital locks, safes and cars — for HDB flats, condos, landed homes, offices and shops.</p>
@@ -633,7 +656,7 @@ def build_home(x):
   </div>
 </section>
 
-<section class="section section-alt" id="how">
+<section class="section" id="how">
   <div class="container">
     <h2 class="section-title">How It Works</h2>
     <p class="section-lead">No surprises, no guesswork — just a locksmith who turns up and gets you back in.</p>
@@ -646,7 +669,7 @@ def build_home(x):
   </div>
 </section>
 
-<section class="section" id="pricing">
+<section class="section section-alt" id="pricing">
   <div class="container narrow">
     <h2 class="section-title">The Price Is Agreed Before We Start</h2>
     <p class="section-lead">No call-out tricks and no surprises at the door. Send a photo of the lock, and Uncle Thomas gives you a firm price before anyone sets off. The price we agree is the price you pay.</p>
@@ -668,23 +691,8 @@ def build_home(x):
   </div>
 </section>
 
-{work_section}
-<section class="section" id="why">
-  <div class="container">
-    <h2 class="section-title">Why Singapore Chooses Uncle Thomas</h2>
-    <p class="section-lead">What you get with every call.</p>
-    <div class="grid g3">
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("clock")}</span><h3>Immediate response</h3><p>We set off as soon as you call — day or night, weekends and public holidays.</p></div>
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("tag")}</span><h3>Price before work</h3><p>Upfront starting prices, and your final price confirmed before we touch the lock.</p></div>
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("shield")}</span><h3>Damage-free methods</h3><p>We open most doors, digital locks and cars without drilling or forcing.</p></div>
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("idcard")}</span><h3>We check ID before opening</h3><p>We check proof of residence or ownership — so no one can use a locksmith to get into your home.</p></div>
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("check")}</span><h3>No-expiry warranty</h3><p>Every lock replacement and installation is covered, with no expiry date.</p></div>
-      <div class="card svc"><span class="ico" aria-hidden="true">{icons.svg("award")}</span><h3>{C_.YEARS}+ years' experience</h3><p>From HDB gates to ship safes — there's very little Uncle Thomas hasn't opened.</p></div>
-    </div>
-  </div>
-</section>
 
-<section class="section section-alt" id="areas">
+<section class="section" id="areas">
   <div class="container narrow" style="text-align:center">
     <h2 class="section-title">Locksmith Near You — Islandwide</h2>
     <p class="section-lead">Wherever you are in Singapore, Uncle Thomas can reach you. Find your town:</p>
@@ -781,10 +789,21 @@ def build_services(x):
             for i, s in enumerate(SERVICES + SAFE_SERVICES + NICHE_SERVICES)]}])
     x["render"]("services/", title, desc, body, nodes, priority="0.8")
 
+    guide_by_slug = {g["slug"]: g for g in x["guides"].GUIDES}
+
+    def guides_html(path):
+        """'Helpful guides' list under a service page (SERVICE_GUIDES): spreads links to guides
+        that otherwise only the guides hub pointed to."""
+        gs = [guide_by_slug[g] for g in SERVICE_GUIDES.get(path, []) if g in guide_by_slug]
+        if not gs:
+            return ""
+        items = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["h1"]}</a></li>' for g in gs)
+        return f'<h2>Helpful guides</h2><ul class="guide-links">{items}</ul>'
+
     for s in SERVICES + SAFE_SERVICES + NICHE_SERVICES:
         crumbs = [("Home", ""), ("Services", "services/"), (s["short"], s["path"])]
         body = (x["page_hero"](crumbs, s["h1"], s["sub"], s["badges"]) +
-                f'<section class="section"><div class="container narrow prose">{s["body"]}{service_jobs_html(s["path"])}{x["photo"](s["path"])}</div></section>' +
+                f'<section class="section"><div class="container narrow prose">{s["body"]}{service_jobs_html(s["path"])}{x["photo"](s["path"])}{guides_html(s["path"])}</div></section>' +
                 f'<section class="section section-alt"><div class="container narrow">{x["faq_html"](s["faqs"])}</div></section>' +
                 x["cta_band"]() + related_html(s["path"]))
         pr = C_.price(s["path"])
@@ -827,7 +846,7 @@ def build_prices(x):
             "Clear starting prices for every service — and your final price confirmed before any work begins. No surprise charges at the door.",
             ["Price confirmed first", "No hidden fees", "No-expiry warranty"]) +
             f'''<section class="section"><div class="container narrow">{price_table()}
-<p class="price-foot">All prices in Singapore dollars. Last updated {{MONTH_YEAR}}.</p>
+<p class="price-foot">All prices in Singapore dollars.</p>
 <div class="prose" style="margin-top:36px">
 <h2>What affects the price?</h2>
 <ul>
@@ -860,6 +879,7 @@ def build_about(x):
             f"From a 1999 locksmith convention in Los Angeles to the \"Shifu\" other locksmiths call for help — the story behind Uncle Thomas Locksmith.",
             [f"Since {C_.FOUNDED}", "US-trained (ALOA & SAVTA)", "Team of four"]) +
             f'''<section class="section"><div class="container narrow prose">
+<div class="about-intro">{x["photo"]("about_headshot", cls="photo headshot")}<p class="about-intro-text"><strong>Uncle Thomas</strong> has been a locksmith in Singapore since {C_.FOUNDED}. Today he leads a team of four, and he still personally handles the toughest jobs.</p></div>
 {x["photo"]("about_portrait")}
 <h2>Where it started: Los Angeles, 1999</h2>
 <p>Uncle Thomas has been a locksmith in Singapore since {C_.FOUNDED}. In 1999 he flew to Los Angeles for a locksmith convention, and while he was there he signed up for classes with two American trade associations:</p>
@@ -892,7 +912,7 @@ def build_about(x):
 <p>See all our <a href="~/services/">locksmith services</a>.</p>
 <div class="photo-grid">{x["photo"]("about_van")}{x["photo"]("about_tools")}</div>
 </div></section>''' + x["cta_band"]("Talk to Uncle Thomas", "Locked out, or planning a lock change? Call or WhatsApp — 24/7, islandwide."))
-    imgs = [x["photo_schema"](k) for k in ("about_portrait", "about_van", "about_tools")]
+    imgs = [x["photo_schema"](k) for k in ("about_headshot", "about_portrait", "about_van", "about_tools")]
     nodes = x["page_schema"]("about/", title, desc, crumbs, page_type="AboutPage", extra=[x["person_node"]()] + imgs)
     nodes[0]["mainEntity"] = {"@id": x["PERSON_ID"]}
     x["render"]("about/", title, desc, body, nodes, priority="0.7")
