@@ -826,7 +826,9 @@ def main():
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                 'xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' + "\n".join(entries) + "\n</urlset>\n")
     with open(os.path.join(ROOT, "robots.txt"), "w") as f:
-        f.write(f"User-agent: *\nAllow: /\n\nSitemap: {C.SITE}/sitemap.xml\n")
+        # Content-Signal (contentsignals.org): yes to search results and to AI answers that quote
+        # and link the site; no preference stated for AI training (owner hasn't decided).
+        f.write(f"User-agent: *\nContent-Signal: search=yes, ai-input=yes\nAllow: /\n\nSitemap: {C.SITE}/sitemap.xml\n")
 
     with open(os.path.join(ROOT, "site.webmanifest"), "w") as f:
         json.dump({"name": C.NAME, "short_name": "Uncle Thomas", "start_url": "./", "display": "standalone",
@@ -864,10 +866,13 @@ def main():
         lines.append(f"- UEN: {C.UEN}")
     if C.EMAIL:
         lines.append(f"- Email: {C.EMAIL}")
-    lines += ["", "## Recent jobs (real, owner-confirmed)"] + [f"- {j['date']}, {j['text']}" for j in C.JOBS]
+    # Every list item under an H2 links to a page (llmstxt.org format): jobs -> the town page.
+    lines += ["", "## Recent jobs (real, owner-confirmed)"] + [
+        f"- [{j['date']}]({abs_url('areas/' + j['area'] + '/')}): {j['text']}" for j in C.JOBS]
     lines += ["", "## Prices (from)"]
     for label, p, price, note in C.PRICES:
-        lines.append(f"- {label}: {'S$' + str(price) if isinstance(price, int) else price}")
+        amount = "from S$" + str(price) if isinstance(price, int) else price
+        lines.append(f"- [{label}]({abs_url(p or 'prices/')}): {amount}")
     groups = [("Main pages", lambda p: p.count("/") <= 1 and not p.startswith(("areas", "guides", "zh"))),
               ("Digital lock brands", lambda p: p.startswith("digital-lock-opening/") and p.count("/") == 2),
               ("Car brands", lambda p: p.startswith("car-locksmith/") and p.count("/") == 2),
