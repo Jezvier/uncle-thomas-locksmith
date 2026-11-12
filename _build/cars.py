@@ -7,6 +7,7 @@ types vary by model and year. We are independent and not affiliated with any bra
 """
 import unicodedata, re
 import config as C
+import brand_extra
 
 
 def slug(name):
@@ -265,9 +266,9 @@ def build(x):
 <p>Most {n} fobs take a 3V coin cell (often CR2032 or CR2025): copy the type printed on the old one and fit the new cell the same way up. Not working after the swap? See <a href="~/guides/car-key-fob-not-working/">key fob not working after a battery change</a>; if the backup start above works, the {n} fob itself is fine.</p>
 <h2>{n} spare key</h2>
 <p>Down to one {n} key? We clone {n} remote key fobs from a working key, after checking your NRIC against the log card. We don't clone smart (keyless) keys. Cloning costs S$100–S$1,000 depending on the car, so WhatsApp {{PHONE}} the model, year and a key photo to confirm first.</p>
-<h2>Tips for {n} owners</h2>
+{brand_extra.sections_html("car", n)}<h2>Tips for {n} owners</h2>
 <ul>{"".join(f"<li>{t}</li>" for t in b["tips"])}</ul>
-<p>Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>
+<p>Independent locksmith, not affiliated with {n}. <a href="~/prices/">All prices</a>.</p>{_sources_html(n)}
 <p>Related: {others} · <a href="~/car-key-duplicate/">spare key fob cloning</a> · <a href="~/car-locksmith/">all car brands</a></p>
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +
@@ -444,3 +445,12 @@ DEADFOB.update({
 })
 RELATED.update({"BYD": ["MG", "Hyundai", "Kia"], "MG": ["BYD", "Hyundai", "Kia"], "Mini": ["BMW", "Volkswagen", "Audi"],
                 "Skoda": ["Volkswagen", "Audi", "Hyundai"], "Peugeot": ["Volkswagen", "Skoda", "Volvo"], "Suzuki": ["Toyota", "Honda", "Mazda"]})
+
+
+def _sources_html(n):
+    src = brand_extra.sources("car", n)
+    if not src:
+        return ""
+    return ('<p class="note"><strong>Sources:</strong> ' +
+            " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{t}</a>' for t, u in src) +
+            ". Checked November 2026. Keys vary by model and year: always check your own handbook.</p>")

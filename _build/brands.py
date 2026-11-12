@@ -12,6 +12,7 @@ We are independent and not affiliated with any brand.
 Only brands in config.BRAND_PAGES are built.
 """
 import config as C
+import brand_extra
 
 # kind: "digital" for keypad digital door locks, "smart" for app-first smart locks.
 DATA = {
@@ -414,6 +415,7 @@ def build(x):
         near = [o for o in BRANDS[i + 1:] + BRANDS[:i] if o["kind"] == b["kind"]][:4] + [o for o in BRANDS[i + 1:] + BRANDS[:i] if o["kind"] != b["kind"]][:1]
         others = " · ".join(f'<a href="~/digital-lock-opening/{o["slug"]}/">{o["name"]}</a>' for o in near)
         src = ""
+        b = dict(b, sources=b["sources"] + brand_extra.sources("lock", n))
         if b["sources"]:
             src = ('<p class="note"><strong>Sources:</strong> ' +
                    " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{t}</a>' for t, u in b["sources"]) +
@@ -446,7 +448,7 @@ def build(x):
 <h2>{n} {k} not working? Common problems</h2>
 {table}
 <p>{b["quirk"]}</p>
-<h2>A typical {n} call</h2>
+{brand_extra.sections_html("lock", n)}<h2>A typical {n} call</h2>
 <p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
 <h2>What's different about {n} locks</h2>
 <p>{FEATURE.get(n, "")}</p>

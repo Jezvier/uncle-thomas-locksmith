@@ -9,6 +9,7 @@ Uchida, Leeco and Premier have no manuals online; their pages give general advic
 Factory default codes are deliberately NOT published, even where manuals show them.
 Independent: not affiliated with any brand.
 """
+import brand_extra
 import re as _re
 import unicodedata as _u
 
@@ -258,6 +259,7 @@ def build(x):
         near = (BRANDS[i + 1:] + BRANDS[:i])[:5]
         others = " · ".join(f'<a href="~/safe-opening/{o["slug"]}/">{o["name"]}</a>' for o in near)
         src = ""
+        b = dict(b, sources=b["sources"] + brand_extra.sources("safe", n))
         if b["sources"]:
             src = ('<p class="note"><strong>Sources:</strong> ' +
                    " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{t}</a>' for t, u in b["sources"]) +
@@ -279,7 +281,7 @@ def build(x):
 <p>{b["code"]}</p>
 <h2>{n} safe won't open with the correct code?</h2>
 <p>{b["quirk"]} More causes: <a href="~/guides/safe-wont-open-correct-code/">safe won't open with the correct code</a>.</p>
-<h2>A typical {n} call</h2>
+{brand_extra.sections_html("safe", n)}<h2>A typical {n} call</h2>
 <p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
 {pic}{recent}
 <h2>When to call a safe locksmith</h2>
