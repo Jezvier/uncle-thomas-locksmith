@@ -131,7 +131,7 @@ PHOTOS = {
     # Files live in assets/photos/ (already edited: straightened, colour-corrected, 4:5 crop).
     "hero":       ("uncle-thomas-safe-dial-hero.jpg", "Uncle Thomas, Singapore safesmith, wearing a mask and turning the combination dial of a stainless steel safe with a dial tool", "Uncle Thomas working the combination dial of a safe"),
     # Head-and-shoulders portrait (owner confirmed it's Uncle Thomas, 13 Nov 2026). The round
-    # avatar crops of it live in assets/img/uncle-thomas-face-v2-*.
+    # avatar crops of it live in assets/img/uncle-thomas-face-v3-*.
     "about_headshot": ("uncle-thomas-portrait.jpg", "Portrait of Uncle Thomas, Singapore locksmith and safesmith since 1998", "Uncle Thomas"),
     "about_portrait": ("uncle-thomas-safesmith-combination-safe.jpg", "Uncle Thomas, Singapore locksmith and safesmith, opening a combination lock on an office safe cabinet", "Uncle Thomas at work on a combination safe"),
     "about_van":  ("locksmith-fitting-new-door-lock-hdb.jpg", "Locksmith from Uncle Thomas's team fitting a new lock to a main door, with the floor covered to protect the home", "Our team fitting a new main door lock, floor covered first"),

@@ -312,8 +312,8 @@ def breadcrumb_html(crumbs):
     return f'<nav class="breadcrumb" aria-label="Breadcrumb"><ol>{"".join(items)}</ol></nav>'
 
 
-FACE_IMG = ('<picture><source srcset="~/assets/img/uncle-thomas-face-v2-{s}.webp 1x, ~/assets/img/uncle-thomas-face-v2-{s2}.webp 2x" type="image/webp">'
-            '<img class="{cls}" src="~/assets/img/uncle-thomas-face-v2-{s}.jpg" width="{px}" height="{px}" alt="Uncle Thomas"{extra}></picture>')
+FACE_IMG = ('<picture><source srcset="~/assets/img/uncle-thomas-face-v3-{s}.webp 1x, ~/assets/img/uncle-thomas-face-v3-{s2}.webp 2x" type="image/webp">'
+            '<img class="{cls}" src="~/assets/img/uncle-thomas-face-v3-{s}.jpg" width="{px}" height="{px}" alt="Uncle Thomas"{extra}></picture>')
 
 
 def face_img(px=56, cls="trust-face", eager=False):

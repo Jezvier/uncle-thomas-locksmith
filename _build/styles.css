@@ -473,7 +473,7 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
 /* About page intro with the head-and-shoulders portrait */
 .about-intro { display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: center; margin-bottom: 28px; }
 .about-intro .headshot { margin: 0; }
-.about-intro .headshot img { border-radius: 50%; aspect-ratio: 1; object-fit: cover; object-position: 50% 22%; width: 120px; height: 120px; }
+.about-intro .headshot img { border-radius: 50%; aspect-ratio: 1; object-fit: cover; object-position: 50% 50%; width: 120px; height: 120px; }
 .about-intro .headshot figcaption { display: none; }
 .about-intro-text { margin: 0; font-size: 1.08rem; }
 @media (min-width: 640px) { .about-intro { grid-template-columns: 160px 1fr; } .about-intro .headshot img { width: 160px; height: 160px; } }

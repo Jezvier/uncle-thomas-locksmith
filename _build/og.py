@@ -31,6 +31,10 @@ SECTIONS = {
     "safes":   ("Safe Opening", "in Singapore", "All safe types · Code changes · Installs", "uncle-thomas-safe-dial-tool.jpg"),
     "cars":    ("Car Locksmith", "in Singapore", "Car lockouts · Key fob cloning · 24/7", "car-lockout-condo-carpark.jpg"),
     "digital": ("Digital Lock", "Opening, 24/7", "All digital & smart lock brands", "kaadas-digital-lock-gate-and-door.jpg"),
+    # TODO(human): this is the share image for the 11 door and lock pages (emergency lockout, lock
+    # replacement, HDB gate, letterbox...), the ones most often forwarded in WhatsApp groups. Line 1
+    # is red, line 2 black; each fits about 18 characters. Keep it, or write the two lines Thomas
+    # would say himself, then run: python _build/og.py
     "doors":   ("Locked Out?", "24/7 Locksmith", "Doors · Gates · Lock changes · Islandwide", "orchard-room-door-open-under-a-minute.jpg"),
     "guides":  ("Locksmith Guides", "by Uncle Thomas", "Practical advice from a locksmith since 1998", "uncle-thomas-safesmith-combination-safe.jpg"),
     "areas":   ("Locksmith Near You", "Every Town, 24/7", "Usually there in 25–30 minutes", "locksmith-fitting-new-door-lock-hdb.jpg"),
