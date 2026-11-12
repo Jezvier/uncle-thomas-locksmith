@@ -44,7 +44,7 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - Owner opt-out from Google Analytics: open any page once with `?notrack=1` on each of the owner's devices (`?notrack=0` undoes it). (No GA internal-traffic IP rule is set: the tag settings window could not be opened from here.)
 - `script.js` is cache-busted by a hash of its contents, so script changes reach visitors immediately.
 - Google Cloud is on a free trial ending Jan 2027: the owner must upgrade (expected S$0) to keep reviews and rating updating.
-- The owner has said changes can go live without asking first. Still: build, check for broken links and errors, then push.
+- The owner has said changes can go live without asking first. Still: build, check for broken links and errors, then push. (Leong, who maintains the site, prefers to review locally and approve before pushing: see the end of this file.)
 
 ## Checks before pushing
 - Brand-page `sources` must open: some sites (HDB, manualslib, seam.co, eBay) refuse scripts and look broken from a shell, so confirm a dead link in a browser before replacing it. Encode spaces in URLs as %20.
@@ -57,3 +57,26 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - Already confirmed and live (config.py): arrival time (`ARRIVAL`, use the placeholder, never hard-code it), PayNow, languages, team names, GA4. Still waiting on the owner: insurance, photo of the van, a business email (Cloudflare Email Routing).
 - `<!-- FILL -->` reminders are stripped from the published pages; search the source for FILL to see what's missing.
 - Ongoing: add real reviews and jobs as they come in; one new useful guide a month; only change a page's sitemap `lastmod` when the page changes.
+
+## Changes on 13 Nov 2026 (SEO / click-through / UI pass, done in Claude Code)
+- **Trust row on every inner page and guide:** `hero_trust()` in `build.py` (inside `page_hero()`) shows Uncle Thomas's face + "since 1998" + the Google rating pill (`rating_chip()`, same nightly numbers as the homepage). Guides show it in their byline.
+- **Portrait:** owner-confirmed head-and-shoulders photo `assets/photos/uncle-thomas-portrait.jpg` (slot `about_headshot`, also the Person schema image). Round avatars are `assets/img/uncle-thomas-face-v3-{112,160,224,320}.{webp,jpg}`; the source photo's head fills the frame, so the avatar canvas has a feathered wall-colour extension. Bump the version if the art changes.
+- **New photos:** broken key extraction (2, slot `broken-key-extraction/`) and a new lever lockset (first in `lock-replacement/`). Owner confirmed the jobs but not the place/date, so captions state neither.
+- **Arrival time hard-coded as "25–30 Min/min/minutes"** (too long as the `{ARRIVAL}` token in titles). If the arrival time ever changes, update ALL of: `areas.py` default town title + descriptions, `content.py` homepage title/description, `og.py` (areas section + town images, then re-run og.py), the zh `cta_lead` in `build.py`. The `{ARRIVAL}` token covers the rest.
+- **Brand pages:** `_build/brand_extra.py` adds two sourced sections each to the 17 least original brand pages (cars: Volvo, Mini, Peugeot, Mitsubishi, Skoda, Subaru, Porsche, Audi, Mazda, Suzuki; locks: Yew, Ezviz, Lenovo, Solity; safes: Booil, Phoenix, Godrej). Sources render on each page. Yew, Booil and Suzuki have no reliable manual online, so their text is general advice only. All brand groups are now ≥55% unique (cars 60%, locks 61%, safes 62% mean).
+- **Share images:** `_build/og.py` makes 1200×630 images per section and per town into `assets/img/og/` (run by hand: `python _build/og.py`, then commit). `og_image(path)` picks one per page; others keep `og-v4.jpg`. Bump `OG_VERSION` when art changes.
+- **Internal links:** "Also nearby" area links are made two-way at import time in `areas.py`; `SERVICE_GUIDES` in `content.py` adds "Helpful guides" to service pages, and every guide gets "Related guides" from the same groups.
+- **Homepage:** removed the "Why Singapore Chooses Uncle Thomas" section (every card repeated the trust strip, How It Works, pricing or Shifu sections); Recent Jobs moved right after reviews; no "Review us on Google" button there (it's in the footer, About and `/review`). The hero photo is skipped on phones (1×1 placeholder `<source>` under 960px). Live reviews (unchanged loader, 3 newest ≥4★) are a swipeable row on phones, 5-line clamp, 3 columns on desktop. They only load on the real domain and only when the section is on screen (not on localhost, not in a hidden/background tab).
+- **Dates:** guide bylines use the real last-modified date (`_month_year(_modified())`), not the current month. Prices/privacy no longer stamp "{MONTH_YEAR}".
+- **Headers** (`HEADERS` in build.py): CSP, X-Frame-Options, Permissions-Policy. The CSP allows only Google Analytics, places.googleapis.com and Cloudflare Web Analytics: add a host there before using any new outside script, font, image or API, or it will be blocked. It also blocks `eval`.
+- **AI search:** `robots.txt` has `Content-Signal: search=yes, ai-input=yes` (no AI-training preference: owner's call). Every job/price line in `llms.txt` links to its page.
+- **CSS added at the end of styles.css:** trust row, About intro, sentence-case service tiles, 44px tap targets, guide link lists, compact reviews, centred last photo in odd-numbered grids.
+
+## Working on this from Leong's Windows PC
+- Build with `PYTHONUTF8=1 python _build/build.py` (Windows' default encoding breaks the build otherwise). Pillow is installed for the user.
+- Local preview: `python -m http.server 8080` in the repo root (Claude Code launch config "site").
+- Push from an interactive terminal (Git Credential Manager opens a GitHub sign-in in the browser); pushes from a background shell hang.
+- Never run audit crawlers with the repo as the working directory: one wrote an `html/` folder of page snapshots that was committed by mistake on 13 Nov (removed before publishing).
+- Search Console API: connected via gcloud Application Default Credentials on the owner-side Google account (quota project `project-0aceddbd-70bf-4e58-b4d`). The Cloud org blocks service-account key files by policy: don't create keys. An empty service account `seo-reader` exists in that project (unused).
+- Leong prefers to preview changes locally and approve before anything is pushed to `main`, even though the owner allows direct publishing.
+- Baseline before these changes (Search Console, 16 Oct–10 Nov 2026): 6,532 impressions, 93 clicks, CTR 1.42%; "locksmith punggol" pos 13.8, "locksmith singapore" pos 27.7.
