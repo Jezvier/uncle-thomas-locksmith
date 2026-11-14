@@ -80,3 +80,9 @@ Read this first. It replaces the "How to edit" notes in README.md wherever they 
 - Search Console API: connected via gcloud Application Default Credentials on the owner-side Google account (quota project `project-0aceddbd-70bf-4e58-b4d`). The Cloud org blocks service-account key files by policy: don't create keys. An empty service account `seo-reader` exists in that project (unused).
 - Leong prefers to preview changes locally and approve before anything is pushed to `main`, even though the owner allows direct publishing.
 - Baseline before these changes (Search Console, 16 Oct–10 Nov 2026): 6,532 impressions, 93 clicks, CTR 1.42%; "locksmith punggol" pos 13.8, "locksmith singapore" pos 27.7.
+
+## Claude Code plugins (added 14 Nov 2026)
+- `.claude/settings.json` enables three plugins for everyone who opens this repo in Claude Code (cloud sessions and Leong's PC): **modern-web-guidance** (Google Chrome's web best practices), **claude-seo** (`/seo` audits, schema, local SEO, GEO) and **claude-mem** (memory between sessions). Claude Code asks to trust/install them on first open.
+- claude-mem keeps its memory on the machine it runs on (`~/.claude-mem`). On Leong's PC it carries over; cloud sessions start from a fresh container, so it remembers nothing there between sessions. Disable it with `/plugin` if its hooks slow things down.
+- claude-seo's optional live-data extensions (Search Console, DataForSEO, etc.) need their own keys: keep them out of the repo (hard rule 4).
+- These files are not deployed: the Cloudflare upload only sends `dist/`.
