@@ -3,7 +3,8 @@
     "modern-web-guidance@googlechrome": true,
     "claude-seo@agricidaniel-claude-seo": true,
     "claude-mem@thedotmack": true,
-    "superpowers@superpowers-marketplace": true
+    "superpowers@superpowers-marketplace": true,
+    "facebook-skills@facebook-skills": true
   },
   "extraKnownMarketplaces": {
     "googlechrome": {
@@ -28,6 +29,12 @@
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "facebook-skills": {
+      "source": {
+        "source": "github",
+        "repo": "sergebulaev/facebook-skills"
       }
     }
   }
