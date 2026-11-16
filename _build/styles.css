@@ -502,3 +502,12 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
   .photo-grid > :last-child:nth-child(odd):not(:first-child) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); }
   .work-grid .photo-grid > :last-child:nth-child(odd) { grid-column: auto; justify-self: stretch; width: auto; }
 }
+/* Homepage "For HDB flats" link row under the service cards */
+.hdb-links { margin: 18px 0 0; font-size: .98rem; line-height: 2; }
+.hdb-links a { white-space: nowrap; }
+/* Trust row on narrow phones: the rating pill must stay inside the 20px page margin (17 Nov 2026 review) */
+@media (max-width: 420px) {
+  .hero-trust .g-rating { font-size: .8rem; gap: 5px; padding: 4px 10px 4px 8px; }
+  .hero-trust .g-rating .stars { font-size: .78rem; letter-spacing: 0; }
+  .hero-trust-txt { min-width: 0; flex: 1; }
+}

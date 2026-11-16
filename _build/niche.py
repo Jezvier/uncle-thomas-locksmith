@@ -96,6 +96,17 @@ dict(
 </ul>
 <p>Comparing options? Read <a href="~/guides/hdb-gate-lock-types/">HDB gate lock types</a>.</p>
 
+<h2>Gate lock stiff or stuck? Try this first</h2>
+<p>Not every stiff gate lock needs replacing. Before you call:</p>
+<ul>
+<li><strong>Lift or push the gate while turning the key.</strong> If the key turns easily that way, the gate has dropped on its hinges and the bolt is rubbing the frame. The lock may be fine; the bolt and frame need realigning.</li>
+<li><strong>Use a dry lock lubricant</strong> (graphite powder or a PTFE lock spray) in the keyhole, then work the key a few times. Avoid cooking oil or thick grease: they collect grit and make a gate lock worse over time.</li>
+<li><strong>Don't force the key.</strong> A key that bends or snaps in the cylinder turns a stiff lock into a lockout. If it won't turn, stop and send us a photo. Key already broken? See <a href="~/broken-key-extraction/">broken key extraction</a>.</li>
+</ul>
+<p>If the cylinder is rusted through, the bolt is bent, or the lock moves on the gate, replacement is the reliable fix.</p>
+<!-- FILL: real HDB gate jobs (town, month, what was fitted) and photos of finished gate locks for this page. Add them to config.JOBS / config.PHOTOS["hdb-gate-lock-replacement/"]. -->
+<!-- FILL: the 2-3 gate locks Uncle Thomas fits most often (brand/model) with an installed "from" price for each, to show as a short comparison list. Owner to confirm before publishing. -->
+
 <h2>Built for Singapore's weather</h2>
 <p>Gate locks sit in the corridor, so we look for locks and finishes that cope with rain and humidity. Wipe the keypad dry after heavy rain or corridor washing, and change digital gate lock batteries together with the door lock's.</p>
 
@@ -435,6 +446,10 @@ dict(
 <li><strong>You've already bought one.</strong> Send us the model and photos of your gate before the visit, so we can check it suits your gate's frame.</li>
 </ul>
 <p>We fit every brand, including """ + ", ".join(C.DIGITAL_LOCK_BRANDS) + """.</p>
+
+<h2>Bought a gate lock on Lazada, Shopee or in a shop?</h2>
+<p>Many people buy the lock first and look for someone to fit it afterwards. That's fine: we install locks you've bought. To avoid a wasted visit, WhatsApp us three things before we come: the model name (or the listing link), a photo of your gate's lock edge, and a photo from the inside. We check that the lock suits your gate's frame and that the inside release won't be easy to reach through the bars, then confirm the installation price. If the lock doesn't suit your gate, we'll tell you before you've paid for a visit.</p>
+<!-- FILL: the digital gate locks Uncle Thomas supplies most often (brand/model, e.g. a matching gate + door set) with a "supplied and installed from" price for each, plus photos of real gate installations. Owner to confirm before publishing. -->
 
 <h2>Gate lock vs main door lock</h2>
 <p>They look alike, but a gate lock faces different conditions and rules:</p>

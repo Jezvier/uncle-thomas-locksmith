@@ -82,6 +82,7 @@ dict(
  card="Hook bolts, padlocks, rim locks and digital gate locks — how they work and how they fail.",
  body="""
 <p>Most HDB flats have a metal gate in front of the main door, and the lock on that gate takes a beating: it's exposed to rain, corridor washing, sun and daily use. Knowing which type of gate lock you have helps you look after it, explain a problem to a locksmith, and choose the right replacement. Here are the types Uncle Thomas sees most often.</p>
+<p>Need the lock changed rather than identified? See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a> (from {P_REPLACE}, supply and installation) or, to go keyless, <a href="~/hdb-gate-digital-lock/">digital lock for HDB gate</a>.</p>
 
 <h2>1. Mortise hook-bolt gate locks</h2>
 <p>A very common HDB gate lock. The lock body sits inside a metal box welded to the gate, and a curved hook bolt swings out to catch the frame. You lock and unlock it with a key from outside and a key or thumb-turn from inside.</p>
@@ -130,7 +131,7 @@ dict(
 <p>HDB doesn't require a permit to replace a main entrance gate, but the <a href="https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/renovation/guidelines/building-works" target="_blank" rel="noopener">HDB renovation guidelines</a> say the new gate must keep the original width, number of panels and swing, must not block the escape route, and along a common corridor must leave at least 0.6m to the parapet wall. Replacing the lock on an existing gate is generally a routine job.</p>
 
 <h2>What it costs</h2>
-<p>With Uncle Thomas, gate lock replacement includes supply and installation, every replacement has our no-expiry warranty, and you get the price before we start. See the full <a href="~/prices/">price list</a> and <a href="~/lock-replacement/">lock replacement</a>.</p>
+<p>With Uncle Thomas, gate lock replacement includes supply and installation, every replacement has our no-expiry warranty, and you get the price before we start. See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>, <a href="~/hdb-gate-digital-lock/">digital lock for HDB gate</a> and the full <a href="~/prices/">price list</a>.</p>
 
 <div class="callout navy"><p><strong>Gate lock stuck or worn?</strong> Send a photo to {PHONE} and we'll tell you what it is and what it'll cost.</p></div>
 """,

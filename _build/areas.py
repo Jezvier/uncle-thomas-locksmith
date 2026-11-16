@@ -895,6 +895,11 @@ def build(x):
     x["render"]("areas/", title, desc, body, nodes, priority="0.8")
 
     svc_pills = "".join(f'<li><a href="~/{s["path"]}">{s["short"]}</a></li>' for s in content.SERVICES)
+    # HDB gate services (13 Nov 2026 review: these pages had almost no internal links). Shown on
+    # every town with HDB estates; the mostly-private towns below keep the standard list.
+    low_hdb = {"cbd-orchard", "newton", "paterson", "tanglin", "sentosa-cove", "river-valley"}
+    gate_pills = ('<li><a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a></li>'
+                  '<li><a href="~/hdb-gate-digital-lock/">Digital lock for HDB gate</a></li>')
 
     # ---- town pages ----
     for t in TOWNS:
@@ -945,7 +950,7 @@ def build(x):
 <h2>Getting to you in {n}</h2>
 <p>{t["access"]} Locked out right now? Here's <a href="~/guides/locked-out-of-hdb-flat/">what to do while you wait</a>.</p>
 <h2>Services in {n}</h2>
-<ul class="link-pills">{svc_pills}</ul>
+<ul class="link-pills">{svc_pills}{"" if t["slug"] in low_hdb else gate_pills}</ul>
 {"<p>Also nearby: " + near_html + ".</p>" if near_html else ""}
 </div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, f"{n} Locksmith FAQs")}</div></section>''' +

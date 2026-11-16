@@ -652,6 +652,7 @@ def build_home(x):
     <h2 class="section-title">Locksmith Services in Singapore</h2>
     <p class="section-lead">Doors, digital locks, safes and cars — for HDB flats, condos, landed homes, offices and shops.</p>
     <div class="grid g4">{service_cards()}</div>
+    <p class="hdb-links"><strong>For HDB flats:</strong> <a href="~/hdb-main-door-lock-replacement/">main door lock replacement</a> · <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a> · <a href="~/hdb-gate-digital-lock/">digital lock for HDB gate</a> · <a href="~/letterbox-lock-replacement/">letterbox locks</a></p>
     <p class="note">We specialise in opening and replacing locks. We do <strong>not</strong> offer key duplication, key cutting or lock repair. The one exception: we clone car key fobs.</p>
   </div>
 </section>
@@ -772,6 +773,8 @@ def build_services(x):
 <tr><td>Buying a safe, or need one installed</td><td><a href="~/safe-installation/">Safe installation &amp; advice</a></td></tr>
 <tr><td>A safe at your office, shop, pawnshop or bank</td><td><a href="~/commercial-safe-services/">Commercial safe services</a></td></tr>
 <tr><td>Keys locked in the car, or need a spare key fob</td><td><a href="~/car-locksmith/">Car locksmith &amp; key fobs</a></td></tr>
+<tr><td>HDB gate lock rusty, stiff or broken</td><td><a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a></td></tr>
+<tr><td>Want a digital lock on your HDB gate</td><td><a href="~/hdb-gate-digital-lock/">Digital lock for HDB gate</a></td></tr>
 <tr><td>Lost your letterbox key</td><td><a href="~/letterbox-lock-replacement/">Letterbox lock</a></td></tr>
 <tr><td>Office, shop, warehouse or vessel</td><td><a href="~/commercial-locksmith/">Commercial locksmith</a></td></tr>
 </tbody></table>

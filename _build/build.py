@@ -416,7 +416,7 @@ def footer_html(lang="en"):
         <li><a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{"给我们留下 Google 评价" if lang == "zh" else "Leave us a Google review"}</a></li>
       </ul>
     </div>
-    <details class="m-fold fgroup" open><summary><h2>{t["f_services"]}</h2></summary><ul>{svc}<li><a href="~/prices/">Prices</a></li></ul></details>
+    <details class="m-fold fgroup" open><summary><h2>{t["f_services"]}</h2></summary><ul>{svc}<li><a href="~/hdb-gate-lock-replacement/">{"组屋铁门锁（英文）" if lang == "zh" else "HDB gate locks"}</a></li><li><a href="~/hdb-gate-digital-lock/">{"组屋铁门电子锁（英文）" if lang == "zh" else "Digital lock for HDB gate"}</a></li><li><a href="~/prices/">Prices</a></li></ul></details>
     <details class="m-fold fgroup" open><summary><h2>{t["f_areas"]}</h2></summary><ul>{towns}<li><a href="~/areas/">{t["all_areas"]}</a></li></ul></details>
     <details class="m-fold fgroup" open><summary><h2>{t["f_guides"]}</h2></summary><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/contact/">Contact</a></li><li><a href="~/privacy/">Privacy</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></details>
   </div>

@@ -116,12 +116,13 @@ dict(
 dict(
  slug="smart-lock-for-hdb-gate",
  short="Smart lock for an HDB gate",
- title="Choosing a Digital or Smart Lock for Your HDB Gate (2026)",
+ title="Which Smart Lock Fits Your HDB Gate? Rim vs Mortise (2026)",
  desc="A digital or smart lock for your HDB gate? Rim vs mortise, weatherproofing, power, matching gate and door sets, and what to check before you buy.",
- h1="Choosing a Digital or Smart Lock for Your HDB Gate",
+ h1="Which Digital or Smart Lock Fits Your HDB Gate?",
  card="Rim or mortise, weatherproofing, power and matching sets: what to check before you buy a gate lock.",
  body="""
 <p>A digital or smart lock on your HDB gate means no more fumbling for keys with shopping bags in hand. But a gate lock lives a tougher life than a door lock: it's outside, it gets wet, and it takes knocks. Choosing the right one saves you a lot of trouble later. Here's what Uncle Thomas looks at before recommending a gate lock.</p>
+<div class="callout"><p><strong>Want one fitted?</strong> Uncle Thomas supplies and installs a <a href="~/hdb-gate-digital-lock/">digital lock for your HDB gate</a>, or fits the one you bought, with installation from {P_DIGITAL_INSTALL} and a no-expiry warranty.</p></div>
 
 <h2>Rim lock or mortise lock?</h2>
 <ul>
