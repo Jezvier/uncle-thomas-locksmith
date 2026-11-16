@@ -54,7 +54,7 @@ dict(
 <div class="callout"><p><strong>Why we ask for ID:</strong> {ID_POLICY} It protects you — a locksmith who opens any door without checking is a risk to everyone.</p></div>
 
 <h2>How much does an emergency locksmith cost in Singapore?</h2>
-<p>The price depends on the lock type, the time of day and whether a part needs replacing. We always confirm it with you before we start, and the price we agree is the price you pay. See the <a href="~/prices/">price list</a>.</p>
+<p>An emergency lockout with Uncle Thomas starts from {P_LOCKOUT} between 9am and 6pm, and from {P_AFTERHOURS} after hours, at weekends and on public holidays. The final price depends on the lock type, the time of day and whether a part needs replacing. We always confirm it with you before we start, and the price we agree is the price you pay. See the <a href="~/prices/">price list</a>.</p>
 
 <h2>Islandwide, 24 hours a day</h2>
 <p>We cover every part of Singapore, from <a href="~/areas/woodlands/">Woodlands</a> to <a href="~/areas/tampines/">Tampines</a> and <a href="~/areas/cbd-orchard/">Orchard</a> to <a href="~/areas/toa-payoh/">Toa Payoh</a>. See <a href="~/areas/">all the areas we serve</a>.</p>
@@ -382,10 +382,10 @@ dict(
 dict(
  path="letterbox-lock-replacement/", short="Letterbox lock", icon="mailbox",
  card="Lost your letterbox key? We open and replace HDB and condo letterbox locks.",
- title="Letterbox Lock Replacement Singapore | HDB & Condo",
+ title="Letterbox Lock & Key Replacement Singapore | HDB & Condo",
  title_exp="Letterbox Lock Replacement Singapore | Since 1998",
- desc="Lost your HDB or condo letterbox key? Uncle Thomas opens and replaces letterbox locks islandwide, with a no-expiry warranty. Call 9224 9224.",
- h1="Letterbox Lock Replacement in Singapore",
+ desc="Lost your HDB or condo letterbox key, or the lock is broken? Uncle Thomas replaces letterbox locks with new keys islandwide, no-expiry warranty. Call 9224 9224.",
+ h1="Letterbox Lock and Key Replacement in Singapore",
  sub="Lost the key to your HDB or condo letterbox, or the lock is broken? We open it and fit a new lock with new keys — quickly, with proof of residence checked first.",
  badges=["Price agreed first", "HDB & condo", "No-expiry warranty"],
  body="""
@@ -681,7 +681,7 @@ def build_home(x):
 <section class="section shifu" id="shifu">
   <div class="container">
     <h2 class="section-title">Led by Singapore's Locksmith "Shifu"</h2>
-    <p class="section-lead">Uncle Thomas has been opening locks in Singapore since {C_.FOUNDED}. Today other locksmiths call him "Shifu" — the master they turn to when a job gets difficult.</p>
+    <p class="section-lead">{C_.NAME} (registered with ACRA as {C_.LEGAL_NAME}, UEN {C_.UEN}, and listed on Google Maps as "{C_.GBP_NAME}") is led by Uncle Thomas, who has been opening locks in Singapore since {C_.FOUNDED}. Today other locksmiths call him "Shifu" — the master they turn to when a job gets difficult.</p>
     <div class="shifu-grid">
       <div class="shifu-item"><strong>Trained in the USA</strong><p>Took ALOA and SAVTA courses in Los Angeles in 1999: locksmithing, safe combination locks and problem locks.</p></div>
       <div class="shifu-item"><strong>A first in 2000</strong><p>One of the first in Singapore to open BMWs and VW Beetles, with tools he made himself.</p></div>
@@ -831,7 +831,7 @@ def build_services(x):
 # PRICES
 # ======================================================================
 PRICE_FAQS = [
-  ("Why do locksmith prices vary so much in Singapore?", "Mainly because of the lock type, the time of day, whether a part needs replacing, and how the price is quoted. Some locksmiths advertise a very low call-out fee and add charges at the door. We give you the price before we start."),
+  ("Why do locksmith prices vary so much in Singapore?", "Locksmith prices in Singapore vary mainly because of the lock type, the time of day, whether a part needs replacing, and how the price is quoted. Some locksmiths advertise a very low call-out fee and add charges at the door. We give you the price before we start."),
   ("Is there a call-out or transport fee?", "Our prices are quoted for the job at your location. We'll tell you the total before we set off, so you won't be surprised by extra fees."),
   ("Do you charge more after midnight or on public holidays?", "Lockouts start from {P_LOCKOUT} from 9am to 6pm and from {P_AFTERHOURS} after hours, weekends and public holidays."),
   ("What if you can't open the lock?", "We'll explain the options — such as replacing the lock — and the price, and only go ahead with your agreement."),

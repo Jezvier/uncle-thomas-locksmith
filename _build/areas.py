@@ -871,14 +871,14 @@ def build(x):
 
     # ---- hub ----
     crumbs = [("Home", ""), ("Areas", "areas/")]
-    title = "Locksmith Near Me Singapore | Every Town, 24/7"
+    title = "Areas We Serve | Locksmith in Every Singapore Town, 24/7"
     desc = "Need a locksmith near you? Uncle Thomas covers every town in Singapore 24/7 — Toa Payoh, Ang Mo Kio, Tampines, Jurong, Woodlands and more. Call 9224 9224."
     cards = []
     for r in regions:
         linked = "".join(f'<a href="~/areas/{t["slug"]}/">{t["name"]}</a>' for t in TOWNS if t["region"] == r)
         other = "".join(f"<span>{n}</span>" for n in OTHER_TOWNS.get(r, []))
         cards.append(f'<div class="card area-card"><h3>{r}</h3><div class="town-links">{linked}{other}</div></div>')
-    body = (x["page_hero"](crumbs, "Locksmith Near Me — Every Town in Singapore",
+    body = (x["page_hero"](crumbs, "Locksmith in Every Town in Singapore",
             "Wherever you are on the island, Uncle Thomas and his team can reach you — 24 hours a day, including weekends and public holidays.",
             ["24/7 islandwide", "We set off immediately", "Since 1998"]) +
             f'''<section class="section"><div class="container"><h2 class="section-title">Areas We Serve</h2>
@@ -913,9 +913,10 @@ def build(x):
             title = f"Locksmith {n} 24/7 | Uncle Thomas Locksmith"
         if len(title) > 60:
             title = f"Locksmith {n} 24/7 | Uncle Thomas"
-        desc = t.get("desc") or f"24/7 locksmith in {n}: safe opening, car lockouts, digital locks and door lockouts. Uncle Thomas usually arrives in 25–30 min. Since 1998. Call 9224 9224."
+        rated = f" Rated {float(C.GOOGLE_RATING):.1f} on Google." if C.GOOGLE_RATING else ""
+        desc = t.get("desc") or f"24/7 locksmith in {n}: lockouts, digital locks, safes and cars. Usually there in 25–30 min.{rated} Since 1998. Call 9224 9224."
         if len(desc) > 158 and not t.get("desc"):
-            desc = f"24/7 locksmith in {n}: safes, cars, digital locks & lockouts. Usually there in 25–30 min. Since 1998. Call 9224 9224."
+            desc = f"24/7 locksmith in {n}: lockouts, digital locks, safes and cars. Usually there in 25–30 min.{rated} Call 9224 9224."
         facts = (f'<div class="facts"><div class="fact"><strong>Estates we cover</strong>{", ".join(t["estates"])}</div>'
                  f'<div class="fact"><strong>Landmarks</strong>{", ".join(t["landmarks"])}</div>'
                  f'<div class="fact"><strong>MRT / LRT</strong>{", ".join(t["mrt"])}</div>'

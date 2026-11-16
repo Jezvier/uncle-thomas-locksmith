@@ -213,9 +213,9 @@ dict(
 # ---------------------------------------------------------------------------
 dict(
  slug="locksmith-cost-singapore", short="Locksmith cost in Singapore",
- title="How Much Does a Locksmith Cost in Singapore? (2026 Guide)",
- desc="How much does a locksmith cost in Singapore in 2026? Typical prices for lockouts, digital locks, car lockouts, lock changes, letterboxes and safes.",
- h1="How Much Does a Locksmith Cost in Singapore? (2026)",
+ title="What Affects Locksmith Cost in Singapore? (2026 Guide)",
+ desc="Why locksmith prices in Singapore vary: time of day, lock type, digital vs mechanical, damage-free opening vs drilling, and how to avoid surprise charges.",
+ h1="What Affects the Cost of a Locksmith in Singapore?",
  card="Typical 2026 prices for every common locksmith job — and what makes a price go up.",
  body="""
 <p>Locksmith prices in Singapore can seem confusing: one advert says "from $39", another "from $90", and the final bill can be very different from either. This guide explains what locksmith jobs typically cost in 2026, what changes the price, and how to make sure you pay a fair amount. For our exact rates, see our <a href="~/prices/">price list</a>.</p>

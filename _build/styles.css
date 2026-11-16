@@ -511,3 +511,10 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
   .hero-trust .g-rating .stars { font-size: .78rem; letter-spacing: 0; }
   .hero-trust-txt { min-width: 0; flex: 1; }
 }
+/* Mobile polish (17 Nov 2026 visual review): bigger tap areas on small links, no body text under 16px */
+.rv-card figcaption a { display: inline-block; padding: 12px 0; margin: -12px 0; }
+.hero-trust .meta-line a { display: inline-block; padding: 10px 0; margin: -10px 0; }
+@media (max-width: 639px) {
+  .footer .contact-list li { font-size: 1rem; }
+  .hero-trust .meta-line { font-size: 1rem; }
+}

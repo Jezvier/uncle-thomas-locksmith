@@ -132,10 +132,10 @@ dict(
 dict(
  path="car-key-duplicate/", short="Car key duplicate", icon="car",
  card="Down to one car key? We clone a spare key fob for all major car brands from your working key.",
- title="Car Key Duplicate Singapore | Spare Key Fob Cloning",
+ title="Car Key Fob Duplicate Singapore | Spare Remote Key Cloning",
  title_exp="Car Key Duplicate & Spare Key Fob Singapore | All Brands",
- desc="Need a spare or duplicate car key in Singapore? We clone key fobs for all major car brands from your working key, after checking ID against the log card.",
- h1="Car Key Duplicate: Spare Key Fob Cloning in Singapore",
+ desc="Need a duplicate car key fob in Singapore? We clone remote key fobs for all major brands from your working key, after an ID check. We don't cut metal keys.",
+ h1="Car Key Fob Duplicate: Spare Remote Key Cloning in Singapore",
  sub="Bought a used car with one key, or worried about losing your only fob? Uncle Thomas clones a spare key fob from your working key, for all major car brands, without a trip to the dealer.",
  badges=["All major brands", "Remote keys", "S$100–S$1,000"],
  body="""

@@ -17,7 +17,7 @@ https://:version.:project.pages.dev/*
   Cache-Control: public, max-age=86400
 
 /script.js
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=31536000, immutable
 
 # Build sources and notes are uploaded too: keep them out of Google.
 /_build/*

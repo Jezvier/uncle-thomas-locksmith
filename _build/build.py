@@ -113,6 +113,18 @@ def business_node(full=False):
         node["legalName"] = C.LEGAL_NAME
     if getattr(C, "ALT_NAMES", None):
         node["alternateName"] = C.ALT_NAMES
+    # Identity details on EVERY page (17 Nov 2026 schema review: inner pages carried a 14-property
+    # stub that conflicted with the homepage's full node). The long lists (towns, offer catalogue,
+    # photos) stay on the homepage only.
+    node.update({
+        "description": C.DESCRIPTION,
+        "foundingDate": str(C.FOUNDED),
+        "founder": {"@id": PERSON_ID},
+        "sameAs": C.SAME_AS,
+        "hasMap": C.GOOGLE_MAPS_URL,
+        "contactPoint": {"@type": "ContactPoint", "telephone": C.PHONE_E164, "contactType": "customer service",
+                         "areaServed": "SG", "availableLanguage": C.LANGUAGES},
+    })
     if full:
         node.update({
             "description": C.DESCRIPTION,
@@ -706,7 +718,7 @@ https://:version.:project.pages.dev/*
   Cache-Control: public, max-age=86400
 
 /script.js
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=31536000, immutable
 
 # Build sources and notes are uploaded too: keep them out of Google.
 /_build/*
@@ -803,10 +815,21 @@ def main():
                     seen.append(m)
             imgs = "".join(f"<image:image><image:loc>{C.SITE}/assets/img/photos/{m}</image:loc></image:image>" for m in seen)
             mm = re.search(r"<main.*?</main>", page_html, flags=re.S)
-            digest = hashlib.md5((mm.group(0) if mm else page_html).encode()).hexdigest()
+            body_html = mm.group(0) if mm else page_html
+            # The Google rating and review count change every night (update-rating workflow) and sit
+            # inside <main> (trust row, homepage reviews). They are not a content update, so they are
+            # left out of the hash ("v2:" hashes, 17 Nov 2026). Old plain hashes are migrated without
+            # moving the date when the page is otherwise unchanged.
+            stable = re.sub(r'<div class="hero-trust">.*?</div></div>', "", body_html, flags=re.S)
+            stable = re.sub(r'<a class="g-rating".*?</a>', "", stable, flags=re.S)
+            stable = re.sub(r'class="rv-score">[^<]*', 'class="rv-score">', stable)
+            stable = re.sub(r"\b\d+(\.\d+)?(?= Google reviews| reviews on Google| reviews\b)", "N", stable)
+            digest = "v2:" + hashlib.md5(stable.encode()).hexdigest()
+            legacy = hashlib.md5(body_html.encode()).hexdigest()
             old = lm.get(p or "/")
-            if old and old.get("hash") == digest:
+            if old and old.get("hash") in (digest, legacy):
                 lastmod = old["date"]
+                lm[p or "/"] = {"hash": digest, "date": old["date"]}
             else:
                 lm[p or "/"] = {"hash": digest, "date": TODAY}
             # Freshness for search engines and AI answers: same date as the sitemap, added after

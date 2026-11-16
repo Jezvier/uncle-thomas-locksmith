@@ -235,18 +235,26 @@ def pills_html():
     return '<ul class="link-pills">' + "".join(f'<li><a href="~/safe-opening/{b["slug"]}/">{b["name"]}{"" if b["name"].lower().endswith("safe") else " safe"}</a></li>' for b in BRANDS) + '</ul>'
 
 
+# 17 Nov 2026: Yale safe searches are "battery dead (no key)" and "how to get into a Yale safe
+# when the battery is dead" (Search Console), so the title leads with that.
+TITLE_OVERRIDE = {"Yale": "Yale Safe Battery Dead or Won't Open? How to Get In"}
+DESC_OVERRIDE = {"Yale": "Yale safe battery dead, no override key, or won't open with the correct code? How a 9V battery can wake some models, what to try next, and 24/7 safe opening."}
+
+
 def build(x):
     C_ = x["C"]
     for b in BRANDS:
         n = b["name"]
         path = f"safe-opening/{b['slug']}/"
-        title = _fit(f"{n} Safe Forgot Password, Battery Dead or Won't Open?",
+        # Titles matched to real Search Console queries where a brand has enough data.
+        title = TITLE_OVERRIDE.get(n) or _fit(f"{n} Safe Forgot Password, Battery Dead or Won't Open?",
                      f"{n} Safe: Forgot Code, Battery Dead, Won't Open",
                      f"{n} Safe Forgot Code or Won't Open?")
         h1 = f"{n} Safe Forgot Password, Battery Dead or Won't Open?"
         desc = _fit(f"{n} safe box forgot password, battery dead or won't open with the correct code? Override key, batteries and code reset explained, plus 24/7 safe opening in Singapore.",
                     f"{n} safe box forgot password, battery dead or won't open? Override key, batteries and code reset explained, plus 24/7 safe opening in Singapore.",
                     f"{n} safe won't open? Batteries, override key and code reset explained, plus 24/7 safe opening in Singapore.", limit=160)
+        desc = DESC_OVERRIDE.get(n, desc)
         crumbs = [("Home", ""), ("Services", "services/"), ("Safe opening", "safe-opening/"), (n, path)]
         faqs = b["faqs"] + [
             (f"Can a locksmith open a {n} safe?", f"Yes. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
