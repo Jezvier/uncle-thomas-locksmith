@@ -12,7 +12,7 @@ dict(
  card="Lock acting up? What you can fix yourself, when repair isn't worth paying for, and what to do if you're locked out.",
  body="""
 <p>If you searched for <strong>digital lock repair</strong>, your lock is probably doing something it shouldn't: a dead keypad, a fingerprint reader that's stopped working, a handle that spins, or a lock that beeps but won't open. This guide covers what you can safely fix yourself, when a repair makes sense, and when replacing the lock is the better deal. It applies to smart locks too.</p>
-<p>A note on us: Uncle Thomas Locksmith doesn't do repairs. We <a href="~/digital-lock-opening/">open faulty digital and smart locks</a>, and if a lock is beyond saving we <a href="~/digital-lock-installation/">replace it</a> with a no-expiry installation warranty. So we have no reason to talk you into a repair you don't need.</p>
+<p>A note on us: Uncle Thomas Locksmith repairs a lock only when it's worth it. We <a href="~/digital-lock-opening/">open faulty digital and smart locks</a>, and if a lock is beyond saving we <a href="~/digital-lock-installation/">replace it</a> with a no-expiry warranty on the lock and installation. Send a photo and we'll tell you which makes sense, and quote before we come.</p>
 
 <h2>First: are you locked out right now?</h2>
 <p>If you're outside and the lock won't open, getting in comes first. Try the quick checks in our guide <a href="~/guides/digital-lock-battery-dead/">digital lock battery dead or won't open</a>: emergency power, the backup key and waiting out a wrong-code lockout. If none of them work, call or WhatsApp {PHONE}. We open digital and smart locks of every brand, 24/7, damage-free wherever possible.</p>
@@ -38,7 +38,7 @@ dict(
 
 <h2>Repair or replace: how to decide</h2>
 <p>A repair makes sense when the lock is fairly new and the fault is a single, available part, especially if it's still under the manufacturer's warranty. In that case, contact the brand or the shop that sold it first, because a third party opening the lock can void the warranty.</p>
-<p>Replacing makes more sense when the lock is out of warranty, parts are hard to get, or the repair cost comes close to a new lock. A new lock also resets the clock on reliability: new batteries, new motor, new keypad, and a fresh warranty. With us, that's labour from <strong>{P_DIGITAL_INSTALL}</strong> plus the lock, and the installation is covered by our warranty with no expiry date.</p>
+<p>Replacing makes more sense when the lock is out of warranty, parts are hard to get, or the repair cost comes close to a new lock. A new lock also resets the clock on reliability: new batteries, new motor, new keypad, and a fresh warranty. With us, that's labour from <strong>{P_DIGITAL_INSTALL}</strong> plus the lock, and the lock and installation are covered by our warranty with no expiry date.</p>
 
 <h2>What not to do</h2>
 <ul>
@@ -49,7 +49,7 @@ dict(
 <div class="callout navy"><p>Locked out by a faulty digital or smart lock? Call or WhatsApp {PHONE}, 24/7. We open it first, then give you honest options.</p></div>
 """,
  faqs=[
-  ("Do you repair digital locks?", "No. We open faulty digital and smart locks, and if a lock can't be saved we replace it, with a no-expiry installation warranty. For warranty repairs, contact the brand or the shop that sold the lock."),
+  ("Do you repair digital locks?", "It depends on the lock and the fault: send a photo and we'll quote. We open faulty digital and smart locks, and if a lock can't be saved we replace it, with a no-expiry warranty on the lock and installation. For repairs under the maker's warranty, contact the brand or the shop that sold the lock."),
   ("Is it worth repairing an old digital lock?", "Often not. If the lock is out of warranty, parts are hard to find, or the repair costs close to a new lock, replacing it is usually the better value."),
   ("My digital lock beeps but won't open. Is it broken?", "Check the batteries first. If fresh batteries don't help and the motor runs but the bolt doesn't move, the lock body has likely failed. Don't force the handle; call us."),
   ("Can you open a smart lock that's not working?", "Yes. We open digital and smart locks of every brand, 24/7, damage-free wherever possible."),
@@ -184,7 +184,7 @@ dict(
 <p>If the key is locked inside the car, that's a lockout, not a lost key. We open cars of all major brands without damage. See <a href="~/car-locksmith/">car locksmith</a>.</p>
 
 <h2>3. Do you still have a working key?</h2>
-<p>If you still have one working key, this is the best time to get a spare made. We clone remote car key fobs, copying your working key so you have a backup (we don't clone smart keyless keys). See <a href="~/car-key-duplicate/">spare car key fob cloning</a> for prices and what to send us. It's usually faster and cheaper than waiting for a new key from the dealer.</p>
+<p>If you still have one working key, this is the best time to get a spare made. We clone car key fobs, remote and smart (keyless), copying your working key so you have a backup. See <a href="~/car-key-duplicate/">spare car key fob cloning</a> for prices and what to send us. It's usually faster and cheaper than waiting for a new key from the dealer.</p>
 <p>If you've lost <strong>every</strong> key, the options depend on your car's make, model and year. Call or WhatsApp {PHONE} with the details and we'll tell you honestly what's possible.</p>
 
 <h2>4. Think about security</h2>

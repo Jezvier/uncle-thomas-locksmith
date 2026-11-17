@@ -176,7 +176,7 @@ dict(
 </ul>
 
 <h2>How we help</h2>
-<p>Uncle Thomas installs digital and smart locks of every brand on HDB, condo and landed home doors, with a no-expiry installation warranty. If you've bought a lock already, WhatsApp {PHONE} a photo of your door edge, the door's label and the lock's certificate, and we'll tell you whether it fits before you book. See <a href="~/digital-lock-installation/">digital and smart lock installation</a>.</p>
+<p>Uncle Thomas installs digital and smart locks of every brand on HDB, condo and landed home doors, with a no-expiry warranty on the lock and installation. If you've bought a lock already, WhatsApp {PHONE} a photo of your door edge, the door's label and the lock's certificate, and we'll tell you whether it fits before you book. See <a href="~/digital-lock-installation/">digital and smart lock installation</a>.</p>
 <p><em>This guide summarises public guidance from SCDF and HDB as of October 2026. Rules can change, so check the linked SCDF page for the latest requirements.</em></p>
 """,
  faqs=[

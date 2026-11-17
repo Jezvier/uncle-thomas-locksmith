@@ -412,7 +412,7 @@ def build(x):
         faqs = b["faqs"] + [
             (f"How do I change the password on {C.a_(n)} {k}?", _strip(b["pin"])),
             (f"How much does it cost to open {C.a_(n)} {k}?", "Digital lock emergency opening is from {P_DIGITAL_OPEN}; the exact price depends on the model and what's wrong. We confirm it before we come: WhatsApp a photo of the lock (front and inside if possible) to {PHONE}."),
-            (f"Do you repair {n} {k}s?", f"No, we don't do repairs. We open the lock, and if it's faulty we can replace it. For warranty repairs, contact {n} or your retailer."),
+            (f"Do you repair {n} {k}s?", f"It depends on the lock and the fault: WhatsApp a photo and we'll quote. If a repair isn't worth it, we can replace it. For repairs under the maker's warranty, contact {n} or your retailer first."),
         ]
         jobs = getattr(C_, "BRAND_JOBS", {}).get(n, [])
         recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)

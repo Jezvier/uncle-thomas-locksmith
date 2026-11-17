@@ -1,11 +1,11 @@
 {
 "/": {
 "date": "2026-11-17",
-"hash": "v2:23e43b3bf5a1a578e89c2ec6d2de897e"
+"hash": "v2:cc7ec462fc815741e60e013cf5a48245"
 },
 "about/": {
-"date": "2026-11-15",
-"hash": "v2:1a504c658aa8b72ea94bd577933dfda5"
+"date": "2026-11-17",
+"hash": "v2:3c1305199bc94b9f44b914c61c971918"
 },
 "areas/": {
 "date": "2026-11-17",
@@ -13,55 +13,55 @@
 },
 "areas/ang-mo-kio/": {
 "date": "2026-11-17",
-"hash": "v2:da01a168866e0b6cda95d2f79a84703b"
+"hash": "v2:414b56f78628cf43ea9a22f16fa0ac35"
 },
 "areas/bedok/": {
 "date": "2026-11-17",
-"hash": "v2:92dda595352e81dff7fced14f6dc7792"
+"hash": "v2:6ff3dedf67d24864ff4b88bcee3b0a40"
 },
 "areas/bishan/": {
 "date": "2026-11-17",
-"hash": "v2:bf1662e254799dce4bbc6d65aaffc978"
+"hash": "v2:fe4db7634c7baae1c3b5a4992eb42231"
 },
 "areas/bukit-batok/": {
 "date": "2026-11-17",
-"hash": "v2:b015d82d1dba123a29f4759e3345c0ce"
+"hash": "v2:c4f35814cd80df029c364f3869abcdd2"
 },
 "areas/bukit-merah/": {
 "date": "2026-11-17",
-"hash": "v2:42a82944a332846746f0d6572137785b"
+"hash": "v2:61f395bb156a6e8d62f481f3da015a43"
 },
 "areas/bukit-panjang/": {
 "date": "2026-11-17",
-"hash": "v2:4f43f5dddce7a490dfe3fe05bcf4cb06"
+"hash": "v2:fb03cf0fe0e078a3e660eb4fbd3c2d44"
 },
 "areas/bukit-timah/": {
 "date": "2026-11-17",
-"hash": "v2:a3c9d6ff65810aebce43416de26979ff"
+"hash": "v2:fb7cdb218d42e87211ed0c3ed093ccf2"
 },
 "areas/cbd-orchard/": {
-"date": "2026-11-15",
-"hash": "v2:0a70740f90a2630df5bd04b21ce15052"
+"date": "2026-11-17",
+"hash": "v2:3f2a8f1701b2e3cb94ca6b7ec09c7c5b"
 },
 "areas/choa-chu-kang/": {
 "date": "2026-11-17",
-"hash": "v2:e9aaa0cdbf43e92a147110cc6ff17973"
+"hash": "v2:e8f714ef2f0ca7ba778ab00f2b28a70d"
 },
 "areas/clementi/": {
 "date": "2026-11-17",
-"hash": "v2:42adf5dc79bd78887fac005d0d1fb6bc"
+"hash": "v2:fa4ee8cdf95e79fc64530f2a821a278c"
 },
 "areas/geylang/": {
 "date": "2026-11-17",
-"hash": "v2:e00cf33f892979ccf440ff49d21dbf68"
+"hash": "v2:916f22883babeecc392115d68e16a857"
 },
 "areas/holland-village/": {
 "date": "2026-11-17",
-"hash": "v2:9a277a6c226bac54c506861907242d8d"
+"hash": "v2:590df4901ce53e46b21b1d76b940b9a2"
 },
 "areas/hougang/": {
 "date": "2026-11-17",
-"hash": "v2:b55bdbba2c3bde43005a5734bdcaedba"
+"hash": "v2:05c7e6378201e579968cfcdd1082556c"
 },
 "areas/jurong/": {
 "date": "2026-10-29",
@@ -69,75 +69,75 @@
 },
 "areas/kallang-whampoa/": {
 "date": "2026-11-17",
-"hash": "v2:556a182b7f9d159d9dbfa53dd364b09b"
+"hash": "v2:d4c7d6514059a781e5a526b90ce99685"
 },
 "areas/marine-parade/": {
 "date": "2026-11-17",
-"hash": "v2:2114ff018ebdb89cc01beb5597bfaf4d"
+"hash": "v2:e9656688378bbce08338b2f70ee6d2d8"
 },
 "areas/newton/": {
-"date": "2026-11-15",
-"hash": "v2:8a608f2160d08b30ffe085ab8793827a"
+"date": "2026-11-17",
+"hash": "v2:3429c5d58fab3206196c37289f84d2d3"
 },
 "areas/novena/": {
 "date": "2026-11-17",
-"hash": "v2:5704e7ec5144e9d6847c7d82e924d6f5"
+"hash": "v2:99e2c028f65e8fc61b9154aee0c795bf"
 },
 "areas/pasir-ris/": {
 "date": "2026-11-17",
-"hash": "v2:c3b53375c22b3f3af1ff3680481cb5bf"
+"hash": "v2:0d24aee4e2db07849c9e942353f6d71b"
 },
 "areas/paterson/": {
-"date": "2026-11-15",
-"hash": "v2:3c546474f858fb76a8f2ea84ce6c0de7"
+"date": "2026-11-17",
+"hash": "v2:c5482107cc822254eb823b882cb5df71"
 },
 "areas/punggol/": {
 "date": "2026-11-17",
-"hash": "v2:0ed70207a67c5a8668ad49c88fb2b98e"
+"hash": "v2:0cfdfc1a34937762bf164ff72213e6b2"
 },
 "areas/queenstown/": {
 "date": "2026-11-17",
-"hash": "v2:f255a59353bf726c1a0d91e998c4a4fd"
+"hash": "v2:a82867bc63cae050bc35ca18cecbe7b3"
 },
 "areas/river-valley/": {
-"date": "2026-11-15",
-"hash": "v2:bf6967ace78eab84b23f963934d021f1"
+"date": "2026-11-17",
+"hash": "v2:07671f1d886a5aa6eb9435f642246f5f"
 },
 "areas/sembawang/": {
 "date": "2026-11-17",
-"hash": "v2:e980c85387a3fd4dbd6a337241d70603"
+"hash": "v2:bc89b4be448fd777c3bb8759b4224ca9"
 },
 "areas/sengkang/": {
 "date": "2026-11-17",
-"hash": "v2:61d7bbe666a7914ea5deb66e555c87bf"
+"hash": "v2:6ae960efd101179212d5e8c9b726d555"
 },
 "areas/sentosa-cove/": {
-"date": "2026-11-15",
-"hash": "v2:68cf7bb4a4ab0281f1eb67d4dd4b334f"
+"date": "2026-11-17",
+"hash": "v2:0271f3020fd00eebd0ba15435cdadd76"
 },
 "areas/serangoon/": {
 "date": "2026-11-17",
-"hash": "v2:d6548de25c98b27e258d1a6b58cc74c1"
+"hash": "v2:66c2eb469f68d70cce00a892e3e01897"
 },
 "areas/tampines/": {
 "date": "2026-11-17",
-"hash": "v2:158d85b0d2901fc8082eed64331ed939"
+"hash": "v2:e2b7481a79e8ac0191c0f0a16202af3e"
 },
 "areas/tanglin/": {
-"date": "2026-11-15",
-"hash": "v2:0754b2abf68d717da9b4913bd7629ece"
+"date": "2026-11-17",
+"hash": "v2:eb52c263abe161199668a3147c6d0755"
 },
 "areas/toa-payoh/": {
 "date": "2026-11-17",
-"hash": "v2:e0d36870bc46f9d0c676c92d2ac91c6c"
+"hash": "v2:32e704f033edae4c42f0e9a52efb277e"
 },
 "areas/woodlands/": {
 "date": "2026-11-17",
-"hash": "v2:ab6b924bf3529ccbc9d09b83471d3cb4"
+"hash": "v2:81c0dcb557d92b1bf65d6f414c94344d"
 },
 "areas/yishun/": {
 "date": "2026-11-17",
-"hash": "v2:ac00a9b981fdcec6dc7eb1eb784077b5"
+"hash": "v2:42da7e7f67c56d74ec4788d75dbe0489"
 },
 "broken-key-extraction/": {
 "date": "2026-11-15",
@@ -149,103 +149,103 @@
 },
 "car-key-duplicate/": {
 "date": "2026-11-17",
-"hash": "v2:171aed3b404c2f3971895b5cc5bf5334"
+"hash": "v2:f09c089e35b18dce48b25128f8318fff"
 },
 "car-locksmith/": {
 "date": "2026-11-17",
-"hash": "v2:a93bd3f080e49de8e9e01e48580023c6"
+"hash": "v2:547259835228791b3f6490460e5680d4"
 },
 "car-locksmith/audi/": {
 "date": "2026-11-17",
-"hash": "v2:1547605a3827373d0bd428eb18823d99"
+"hash": "v2:2ffc7fba82e28a1822b2142976782050"
 },
 "car-locksmith/bmw/": {
-"date": "2026-11-15",
-"hash": "v2:a4f57f85fbe6d32b9eb0a3a439472407"
+"date": "2026-11-17",
+"hash": "v2:e3f9d0f9cb2693338abf71205672f1a0"
 },
 "car-locksmith/byd/": {
-"date": "2026-11-15",
-"hash": "v2:3542e22c80673d33767b85115ed4cdc8"
+"date": "2026-11-17",
+"hash": "v2:283825ba57ea98f88b1e6d78bbeff228"
 },
 "car-locksmith/honda/": {
-"date": "2026-11-15",
-"hash": "v2:e3518e01757301652e995cbfa052aca0"
+"date": "2026-11-17",
+"hash": "v2:ebce3316662d1e634eff25967ae955a6"
 },
 "car-locksmith/hyundai/": {
-"date": "2026-11-15",
-"hash": "v2:2b2579ead82e10b7e372a352067c51c3"
+"date": "2026-11-17",
+"hash": "v2:7e5ce323a8f92ced6a60013455a1231c"
 },
 "car-locksmith/kia/": {
-"date": "2026-11-15",
-"hash": "v2:9f33fe260481869043d6bf7fd578a570"
+"date": "2026-11-17",
+"hash": "v2:5a6c33aac57ae1c3e41ad85bf7fbc5b4"
 },
 "car-locksmith/land-rover/": {
-"date": "2026-11-15",
-"hash": "v2:527af0cec25c9d2e091e47e35619bf0e"
+"date": "2026-11-17",
+"hash": "v2:6a2e7a88ce63111260cab8d9629566c3"
 },
 "car-locksmith/lexus/": {
-"date": "2026-11-15",
-"hash": "v2:d76b97109b1e5ff4c6db2f816c686916"
+"date": "2026-11-17",
+"hash": "v2:2bcd21c48da9a43f8ee84bb2a3421d96"
 },
 "car-locksmith/mazda/": {
-"date": "2026-11-15",
-"hash": "v2:8c8da46bb64f3c7898539c2c24623d0b"
+"date": "2026-11-17",
+"hash": "v2:ed77877c673cfeba4576feff8c0b6032"
 },
 "car-locksmith/mercedes-benz/": {
-"date": "2026-11-15",
-"hash": "v2:78e813839537235c403454a63f7d323f"
+"date": "2026-11-17",
+"hash": "v2:91cf291f0b3236aeaa2787f272e6d32c"
 },
 "car-locksmith/mg/": {
 "date": "2026-11-17",
-"hash": "v2:10d2c15a08cb3f9a604832d5acd4f13c"
+"hash": "v2:5583bcea6a21c9d0df3b85f050f74bbc"
 },
 "car-locksmith/mini/": {
-"date": "2026-11-15",
-"hash": "v2:d1c48aefba18042c803c3bb6745765c6"
+"date": "2026-11-17",
+"hash": "v2:c92ae3cf85223afa165d7b6e67cf02ad"
 },
 "car-locksmith/mitsubishi/": {
-"date": "2026-11-15",
-"hash": "v2:952f79d2aa21182f5a968b72f8365f86"
+"date": "2026-11-17",
+"hash": "v2:b5f5c87dccc83fff17b889d711bd4256"
 },
 "car-locksmith/nissan/": {
-"date": "2026-11-15",
-"hash": "v2:dea4f2935203083727bf9795afb6674b"
+"date": "2026-11-17",
+"hash": "v2:ca5368e55021412024632ca90b6cd8ae"
 },
 "car-locksmith/peugeot/": {
-"date": "2026-11-15",
-"hash": "v2:cf3bbe617d12e65629e222a965e02d37"
+"date": "2026-11-17",
+"hash": "v2:563fafaccbf8a79fdc93a54efea0f3cb"
 },
 "car-locksmith/porsche/": {
-"date": "2026-11-15",
-"hash": "v2:a46855993bb804023916f524a1d30968"
+"date": "2026-11-17",
+"hash": "v2:4ea15cb4268dfed2542cae12820fca05"
 },
 "car-locksmith/skoda/": {
-"date": "2026-11-15",
-"hash": "v2:33f3c34ab8352c815bd1ef562875edd4"
+"date": "2026-11-17",
+"hash": "v2:aa36f4bc0c562421c89b465175d81962"
 },
 "car-locksmith/subaru/": {
-"date": "2026-11-15",
-"hash": "v2:bae7181527b35994d14b50a9edb3f63c"
+"date": "2026-11-17",
+"hash": "v2:006ff0ea40f1b61471f98c47f5f345cc"
 },
 "car-locksmith/suzuki/": {
-"date": "2026-11-15",
-"hash": "v2:dc062eb456953346785983f50b0c20ff"
+"date": "2026-11-17",
+"hash": "v2:9a0ef2cbc483ce0a0f602e7ad09b27d5"
 },
 "car-locksmith/toyota/": {
-"date": "2026-11-15",
-"hash": "v2:f5e2b4e5865747a10a047e3bdee4c9d2"
+"date": "2026-11-17",
+"hash": "v2:7a232d6507c3f084c85ea29e309e1827"
 },
 "car-locksmith/volkswagen/": {
-"date": "2026-11-15",
-"hash": "v2:176bf8451704b57b888077c8b3e4e72a"
+"date": "2026-11-17",
+"hash": "v2:2f1ac53053bdecdb2b36613c8a2510a8"
 },
 "car-locksmith/volvo/": {
-"date": "2026-11-15",
-"hash": "v2:d061a9b2f6d04072d9e0ce1aebc5f0b3"
+"date": "2026-11-17",
+"hash": "v2:cfbabb404c59218147425a8fffc64f1e"
 },
 "commercial-locksmith/": {
-"date": "2026-11-15",
-"hash": "v2:f26a3498a60841e73fa0e45ef1748d9d"
+"date": "2026-11-17",
+"hash": "v2:9f77878f7c27e562206f676e2edcb890"
 },
 "commercial-safe-services/": {
 "date": "2026-11-15",
@@ -257,95 +257,95 @@
 },
 "digital-lock-installation/": {
 "date": "2026-11-17",
-"hash": "v2:bdabe447dffadea8d2bde5f99e45e84d"
+"hash": "v2:0b03aa3834392186e5594f101927ad5f"
 },
 "digital-lock-opening/": {
 "date": "2026-11-17",
-"hash": "v2:85cffbf6d1723aca372b14c75e6b8371"
+"hash": "v2:7c37b7bb3ca821589d5cc08d5cd4e8eb"
 },
 "digital-lock-opening/aqara/": {
 "date": "2026-11-17",
-"hash": "v2:a633af2f741e8cd8894fc65b644eb58a"
+"hash": "v2:ccb65b76290b6ea75cca9ec53ff38702"
 },
 "digital-lock-opening/eufy/": {
 "date": "2026-11-17",
-"hash": "v2:953b2e9398ab59100999ec500031547a"
+"hash": "v2:29d80cf3a148a05bdf3ffc425b712432"
 },
 "digital-lock-opening/ezviz/": {
 "date": "2026-11-17",
-"hash": "v2:fe36776a4e8d80a2e7cf4dc6a5505bd6"
+"hash": "v2:af44679f0b48bf3167de5c1c27fe4388"
 },
 "digital-lock-opening/gateman/": {
 "date": "2026-11-17",
-"hash": "v2:3078976bd0431efda8bd80424e819b7f"
+"hash": "v2:ef06ffa71cfac1071b035c539aed6b52"
 },
 "digital-lock-opening/hafele/": {
 "date": "2026-11-17",
-"hash": "v2:bc0324e8fe13e225db4c4db3fa1a6e44"
+"hash": "v2:59dd617f9a5df0c736dcd9741b18a349"
 },
 "digital-lock-opening/igloohome/": {
 "date": "2026-11-17",
-"hash": "v2:ac1e979446092e322f9d42449feb5e33"
+"hash": "v2:d519f7a14fcebc1d18b2dc98d6591460"
 },
 "digital-lock-opening/kaadas/": {
 "date": "2026-11-17",
-"hash": "v2:a1aa757cc22478f1420c7fe591169e14"
+"hash": "v2:dd95d278532a6c106c9c48a9331f1f8e"
 },
 "digital-lock-opening/lenovo/": {
 "date": "2026-11-17",
-"hash": "v2:4e0046def793a1fb42b3eafeb9efc304"
+"hash": "v2:73f795aee5e7fcaab63c8aaf5d4dc3a1"
 },
 "digital-lock-opening/lockly/": {
 "date": "2026-11-17",
-"hash": "v2:9c5f39338d41636174ba501ff7d6c59c"
+"hash": "v2:8e56e53a52422e8fdebbe6bddb041fdc"
 },
 "digital-lock-opening/philips/": {
 "date": "2026-11-17",
-"hash": "v2:578526ec3258b06dfe80a1760f225027"
+"hash": "v2:6bf68541070542f4e316b2bd83926bd0"
 },
 "digital-lock-opening/prism/": {
 "date": "2026-11-17",
-"hash": "v2:15c4ebbfd1017b049d5380adaad453b8"
+"hash": "v2:48706e06deea400d651fddc5070f5970"
 },
 "digital-lock-opening/samsung/": {
 "date": "2026-11-17",
-"hash": "v2:eeb5080ac743dcd7478c5633bf6ae56f"
+"hash": "v2:5683034d116b9b8ea04aedb8bfcd8f2b"
 },
 "digital-lock-opening/schlage/": {
 "date": "2026-11-17",
-"hash": "v2:fcbfd7524f1b1bedb4eddea71a8f8dde"
+"hash": "v2:7de568a3fd862e7f4f1646f613e17e9e"
 },
 "digital-lock-opening/solity/": {
 "date": "2026-11-17",
-"hash": "v2:3d29400a5bc4a8c34e715fd4425ca53d"
+"hash": "v2:48ca76d3739d7ddf05d7e73290cbccf3"
 },
 "digital-lock-opening/tapo/": {
 "date": "2026-11-17",
-"hash": "v2:354a7fadd0337acb4052c9cf38570a83"
+"hash": "v2:bb24737ba40f5405f8620df2ca870c9e"
 },
 "digital-lock-opening/xiaomi/": {
 "date": "2026-11-17",
-"hash": "v2:059e6558bdb60f1071606cd852722fc5"
+"hash": "v2:30548d4c1d0ae3eb8d45c7325c2e1b5c"
 },
 "digital-lock-opening/yale/": {
 "date": "2026-11-17",
-"hash": "v2:c8801ea31b98fcfb22c2fe13752d5160"
+"hash": "v2:1fafea209c7ce907eeb2f9c36078e611"
 },
 "digital-lock-opening/yew/": {
 "date": "2026-11-17",
-"hash": "v2:99eab48a3aeff39f59f42a6f6a2815c1"
+"hash": "v2:c5ecba11a35dcb2713bf87fef36a9cce"
 },
 "digital-lock-opening/zigbang/": {
 "date": "2026-11-17",
-"hash": "v2:e5c968f3b2e287fbea70839dfb00b474"
+"hash": "v2:461cd962e96b8c4dfcd90aa006c14f43"
 },
 "emergency-locksmith/": {
 "date": "2026-11-17",
 "hash": "v2:59cc72774393d78d38b33476123de85d"
 },
 "glass-door-lock/": {
-"date": "2026-11-15",
-"hash": "v2:13cbf712beded40a2bb11f9fa330cf0a"
+"date": "2026-11-17",
+"hash": "v2:5b01d980c29c8b40d2a805c361946a3d"
 },
 "guides/": {
 "date": "2026-11-17",
@@ -364,24 +364,24 @@
 "hash": "v2:560f44a457357d96244eed2b41b716e5"
 },
 "guides/digital-lock-battery-dead/": {
-"date": "2026-11-15",
-"hash": "v2:671e8831e01a84bc5b017127cb4f3262"
+"date": "2026-11-17",
+"hash": "v2:9edabc48b9c5f6c50a700cebbf15565a"
 },
 "guides/digital-lock-fire-rated-door-scdf/": {
 "date": "2026-11-17",
-"hash": "v2:d5e171f1bf2b885214207dce08b383c8"
+"hash": "v2:7c0b1782f97f3dc302d0aa1327607985"
 },
 "guides/digital-lock-repair/": {
-"date": "2026-11-15",
-"hash": "v2:20cbb82917ab6d6f6aceb6af6b84cd57"
+"date": "2026-11-17",
+"hash": "v2:50b71f456736c8b855c3bfdedba1f0b3"
 },
 "guides/digital-vs-traditional-lock-hdb/": {
 "date": "2026-11-17",
 "hash": "v2:61d2f8e3a6d57dbef4eadba85a1223be"
 },
 "guides/door-lock-jammed/": {
-"date": "2026-11-15",
-"hash": "v2:3f61d1a32086d3d1b726e1228f30d084"
+"date": "2026-11-17",
+"hash": "v2:c90643b7076d21253a2fd99c6d832f40"
 },
 "guides/forgot-digital-lock-pin/": {
 "date": "2026-11-15",
@@ -425,7 +425,7 @@
 },
 "guides/lost-car-key-fob/": {
 "date": "2026-11-17",
-"hash": "v2:dfabc06756d5859621168a531f7bea9c"
+"hash": "v2:94e967cbc37c66d96b750a889dd1a239"
 },
 "guides/lost-house-key/": {
 "date": "2026-11-15",
@@ -473,15 +473,15 @@
 },
 "hdb-gate-digital-lock/": {
 "date": "2026-11-17",
-"hash": "v2:1f9e0b119cb068a22d5c996850b52491"
+"hash": "v2:9a165bc594e3167c81c2adeac14636d1"
 },
 "hdb-gate-lock-replacement/": {
 "date": "2026-11-17",
-"hash": "v2:7efc1197d1c0f9d4e0de86d8f88c168c"
+"hash": "v2:33a166317e0b09e418a8566a450ce9e7"
 },
 "hdb-main-door-lock-replacement/": {
-"date": "2026-11-15",
-"hash": "v2:f79177687bcbf24508f74dadcd68928a"
+"date": "2026-11-17",
+"hash": "v2:91b7d90eea3fe0e7a53ee7f133f10f84"
 },
 "hotel-safe-opening/": {
 "date": "2026-11-15",
@@ -489,11 +489,11 @@
 },
 "letterbox-lock-replacement/": {
 "date": "2026-11-17",
-"hash": "v2:5e1693a8349650df1b6a3bb3f522dc5b"
+"hash": "v2:6b2fda52fd1ef150d936cf46a083480d"
 },
 "lock-replacement/": {
-"date": "2026-11-15",
-"hash": "v2:aa628d417085f24ad83732a70b5e0af8"
+"date": "2026-11-17",
+"hash": "v2:ea263202c2936361c931c28950ca8b39"
 },
 "padlock-cutting/": {
 "date": "2026-11-15",
@@ -501,7 +501,7 @@
 },
 "prices/": {
 "date": "2026-11-17",
-"hash": "v2:a1536c1cc59929ed7bdb788fcfc9ce17"
+"hash": "v2:aefc42f6b971519b9269bad871fd7132"
 },
 "privacy/": {
 "date": "2026-11-17",
@@ -585,31 +585,31 @@
 },
 "services/": {
 "date": "2026-11-17",
-"hash": "v2:e71d831d40a0345ae38512525438def1"
+"hash": "v2:74f6983d8d2f1d65959449b879753e00"
 },
 "zh/": {
-"date": "2026-11-13",
-"hash": "v2:eaf7269391d51f200880142b8053d8df"
+"date": "2026-11-17",
+"hash": "v2:a26026e48c9580339d6f68c500928592"
 },
 "zh/car-locksmith/": {
-"date": "2026-11-15",
-"hash": "v2:af5baecc4e70d35d770516331ef36048"
+"date": "2026-11-17",
+"hash": "v2:54f4eb695994564b19414bb79f9509bc"
 },
 "zh/digital-lock-opening/": {
-"date": "2026-11-15",
-"hash": "v2:f43a215041e1f071a51d195fe9a19da3"
+"date": "2026-11-17",
+"hash": "v2:9744ee12a83802694abdcab73c2eb55b"
 },
 "zh/emergency-locksmith/": {
-"date": "2026-11-15",
-"hash": "v2:71ad65259fded43d0707a009198d7b64"
+"date": "2026-11-17",
+"hash": "v2:d7b84f9eb36905c5dbec18d58aa21069"
 },
 "zh/lock-replacement/": {
-"date": "2026-11-15",
-"hash": "v2:00d7e7644ea5885b5ed3c110aa0a0a45"
+"date": "2026-11-17",
+"hash": "v2:c012f901c9b539230a3a9c03f9978ebd"
 },
 "zh/prices/": {
-"date": "2026-11-15",
-"hash": "v2:6ed59c390c7c355ecfcc1c0069ffb5bd"
+"date": "2026-11-17",
+"hash": "v2:a081b6fcbcf890f0dda09a030a97885f"
 },
 "zh/safe-opening/": {
 "date": "2026-11-15",

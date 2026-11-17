@@ -944,7 +944,7 @@ def build(x):
 <h2>Lock tips for {n} homes and businesses</h2>
 <p>{LOCAL_NOTES.get(t["slug"], "")}</p>
 <h2>A typical call in {n}</h2>
-<p>{TYPICAL.get(t["slug"], "")}</p>
+<p>An example of the kind of call we often get in {n}, not a specific job: {TYPICAL.get(t["slug"], "")}</p>
 <h2>Jobs we often do in {n}</h2>
 <ul>{jobs}</ul>
 {recent_html}

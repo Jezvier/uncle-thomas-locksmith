@@ -95,7 +95,7 @@ dict(
 </ul>
 
 <h2>When to call</h2>
-<p>If you're locked out, locked in, or the lock won't turn with gentle pressure, call or WhatsApp {PHONE}, 24/7. We open the door, damage-free wherever possible, and replace the jammed lock in the same visit if it's worn out. We don't repair locks: a new lock is more reliable and comes with our no-expiry warranty. See <a href="~/hdb-main-door-lock-replacement/">HDB main door lock replacement</a> and <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>.</p>
+<p>If you're locked out, locked in, or the lock won't turn with gentle pressure, call or WhatsApp {PHONE}, 24/7. We open the door, damage-free wherever possible, and replace the jammed lock in the same visit if it's worn out. Some locks can be repaired, depending on the fault; if not, a new lock is more reliable and comes with our no-expiry warranty. See <a href="~/hdb-main-door-lock-replacement/">HDB main door lock replacement</a> and <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>.</p>
 <div class="callout navy"><p><strong>Lock jammed?</strong> Don't force it. Call or WhatsApp {PHONE}, 24/7.</p></div>
 """,
  faqs=[

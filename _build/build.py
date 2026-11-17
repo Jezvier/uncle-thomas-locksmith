@@ -432,6 +432,7 @@ def footer_html(lang="en"):
         <li><span class="lbl">{t["coverage"]}:</span> {t["coverage_v"]}</li>
         <li><a href="{C.GOOGLE_PROFILE}" target="_blank" rel="noopener" class="g-link">{icons.svg("star", cls="bi bi-star", fill=True)} {t["google"]}</a></li>
         <li><a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{"给我们留下 Google 评价" if lang == "zh" else "Leave us a Google review"}</a></li>
+        <li><a href="{C.FACEBOOK_URL}" target="_blank" rel="noopener me">{"Facebook 专页" if lang == "zh" else "Facebook Page"}</a></li>
       </ul>
     </div>
     <details class="m-fold fgroup" open><summary><h2>{t["f_services"]}</h2></summary><ul>{svc}<li><a href="~/hdb-main-door-lock-replacement/">{"组屋大门锁（英文）" if lang == "zh" else "HDB main door locks"}</a></li><li><a href="~/hdb-gate-lock-replacement/">{"组屋铁门锁（英文）" if lang == "zh" else "HDB gate locks"}</a></li><li><a href="~/hdb-gate-digital-lock/">{"组屋铁门电子锁（英文）" if lang == "zh" else "Digital lock for HDB gate"}</a></li><li><a href="~/{loc("prices/", lang)}">{t["prices"]}</a></li></ul></details>
@@ -880,13 +881,13 @@ def main():
              f"- Founded: {C.FOUNDED}. Lead locksmith: Uncle Thomas, known in the trade as \"Shifu\", with a small team.",
              "- Uncle Thomas has opened safes on ships and overseas (Thailand, Malaysia, China, Hong Kong) and developed his own methods for opening digital locks. Training: in 1999, at a locksmith convention in Los Angeles, took ALOA (Associated Locksmiths of America) Fundamentals of Locksmithing and SAVTA (Safe and Vault Technicians Association) classes in opening safe combination locks and servicing and troubleshooting problem locks. Trained in safe manipulation of Group 2M combination locks. In 2000, one of the first locksmiths in Singapore to open BMWs and Volkswagen Beetles, with tools he made himself.",
              "- Specialises in safes (home and office) and cars. Team: Thomas, Ong, Melvin, Andrew. Languages: English, Mandarin, Malay, Hokkien, Cantonese.",
-             f"- Usually arrives within {C.TOKENS['ARRIVAL']}, any time, any distance. Payment by PayNow; invoice for every job. Turns down no jobs except key duplication and key cutting.",
-             "- Car key fob cloning: remote keys only (not smart/keyless keys), S$100–S$1,000 depending on the car.",
+             f"- Usually arrives within {C.TOKENS['ARRIVAL']}, day or night. Payment by PayNow; invoice for every job. Turns down no jobs except key duplication and key cutting.",
+             "- Car key fob cloning: remote and smart (keyless) keys, from a working key, S$100–S$1,000 depending on the car.",
              "- Checks NRIC, Singpass or other ID, plus proof of residence or ownership, before opening any door, car or safe.",
              "- Safe opening: trained in safe manipulation (Group 2M combination locks) to open safes without drilling; a safe takes 5 minutes to 5 hours; about 90% of drilled safes can be repaired and reused.",
              "- Focus areas: Orchard, Tanglin, Newton, Paterson, River Valley, Bukit Timah, Holland Village, Sentosa Cove and the CBD, plus all of Singapore.",
-             "- Warranty on every lock replacement and installation, with no expiry date.",
-             "- Does NOT offer key duplication, key cutting or lock repair. Only exception: clones remote car key fobs (all major brands; not smart keyless keys).",
+             "- Warranty on every lock replacement and installation, covering both the lock and the installation, with no expiry date.",
+             "- Does NOT offer key duplication or key cutting. Only exception: clones car key fobs (remote and smart keys, all major brands). Lock repair depends on the lock and fault: quoted from a photo.",
              "- Also: broken key extraction; padlock opening and cutting; roller shutter locks; glass door and sliding door locks; cabinet, drawer and locker locks.",
              "- Safes: opens all safe types; changes combinations; replaces safe locks; recommends and installs safes (doesn't sell safes). Has worked for commercial offices, pawnshops, banks and government ministries. Issues invoices to companies."]
     lines.append(f"- Names: trading as {C.NAME}; registered with ACRA as {getattr(C, 'LEGAL_NAME', C.NAME)}; "

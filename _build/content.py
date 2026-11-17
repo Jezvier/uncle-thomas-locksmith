@@ -10,9 +10,9 @@ BRANDS = ", ".join(C.DIGITAL_LOCK_BRANDS)
 
 ID_POLICY = ("For your security, we check ID before every job — your NRIC, Singpass or other ID proof — "
              "and proof of residence or ownership, for example NRIC with your address, a tenancy agreement or utility bill, or the car's log card.")
-WARRANTY = "Every lock replacement and installation comes with our warranty — with no expiry date."
-NO_REPAIR = ("We don't do lock repairs, key duplication or key cutting (the one exception is remote car key fobs, which we clone). "
-             "If a lock is faulty, we open it and replace it, so the problem doesn't come back.")
+WARRANTY = "Every lock replacement and installation comes with our warranty, covering both the lock and our installation, with no expiry date."
+NO_REPAIR = ("We don't do key duplication or key cutting (the one exception is car key fobs, which we clone). "
+             "Whether a faulty lock can be repaired depends on the lock and the fault: send a photo and we'll quote. If a repair isn't worth it, we replace the lock, so the problem doesn't come back.")
 
 # ======================================================================
 # SERVICES
@@ -111,7 +111,7 @@ dict(
   ("Can you open a digital lock without damaging it?", "In most cases, yes. Uncle Thomas has developed his own damage-free techniques. If a lock is completely broken we'll explain the options before doing anything."),
   ("Which digital lock and smart lock brands do you open?", "All brands — including " + ", ".join(C.DIGITAL_LOCK_BRANDS) + "."),
   ("My digital lock battery is flat. What should I do?", "Most digital locks have an emergency power point (often a 9V battery terminal) or a backup key. If those don't work, call or WhatsApp {PHONE} and we'll open it for you."),
-  ("Do you repair digital locks?", "No — we don't do repairs. We open the lock, and if it's faulty we can replace it with a new one, covered by our no-expiry installation warranty."),
+  ("Do you repair digital locks?", "It depends on the lock and the fault. WhatsApp a photo of the lock (front and inside) and we'll tell you whether it's worth repairing and quote before we come. If it isn't, we replace it with a new one, covered by our no-expiry warranty on the lock and installation."),
   ("Is a smart lock different from a digital lock?", "A smart lock is a digital lock that also connects to an app, Wi-Fi or a smart home hub. Both run on batteries and can lock you out in the same ways, and we open both."),
   ("How much does it cost to open a digital lock?", "From {P_DIGITAL_OPEN}. Send a photo on WhatsApp for an exact price before we come."),
  ],
@@ -168,7 +168,7 @@ dict(
   ("Can you install a lock I bought online?", "Yes. Send us a photo of the lock and your door first so we can confirm it will fit."),
   ("How long does installation take?", "Most installations are completed in one visit. We test every function and set up your codes and fingerprints before we leave."),
   ("Is there a warranty?", "Yes — every installation comes with our warranty, with no expiry date."),
-  ("Do you repair digital locks?", "No, we don't do repairs. If an existing lock is faulty we can replace it with a new one."),
+  ("Do you repair digital locks?", "It depends on the lock and the fault: send a photo and we'll quote. If a repair isn't worth it, we replace the lock with a new one."),
  ],
 ),
 # ----------------------------------------------------------------------
@@ -303,7 +303,7 @@ dict(
 <p>We use professional car entry tools that open the door without damaging the paintwork, rubber seals or windows. It's much cheaper than breaking a window, and safer than trying a coat hanger yourself, which can damage the door's wiring and airbag sensors.</p>
 
 <h3>2. Car key fob cloning (spare key)</h3>
-<p>Down to your last key fob? A spare from the dealer can take time and cost a lot. Uncle Thomas clones remote car key fobs, so you have a working spare. It's the one kind of key we copy. We don't clone smart (keyless) keys. Cloning costs S$100–S$1,000 depending on the car and takes from a few minutes to a few hours, so call or WhatsApp to check yours first. We don't cut or copy house keys.</p>
+<p>Down to your last key fob? A spare from the dealer can take time and cost a lot. Uncle Thomas clones car key fobs, remote and smart (keyless), so you have a working spare. It's the one kind of key we copy. Cloning costs S$100–S$1,000 depending on the car and takes from a few minutes to a few hours, so call or WhatsApp to check yours first. We don't cut or copy house keys.</p>
 <ul>
 <li>Spare key fob for your car, so one lost key doesn't leave you stranded.</li>
 <li>Replacement fob for family members or a second driver.</li>
@@ -325,7 +325,7 @@ dict(
  faqs=[
   ("Can you open my car without damaging it?", "Yes. We use non-destructive car entry tools that don't damage the paint, seals or windows."),
   ("Which cars can you open?", "All major makes and models, including Toyota, Honda, Mercedes-Benz, BMW, Audi, Volkswagen, Mazda, Lexus, Land Rover, Hyundai, Kia, Nissan, Porsche, Volvo, Mitsubishi and Subaru, plus vans and light commercial vehicles. Not sure about yours? Call or WhatsApp to check."),
-  ("Can you make a spare car key fob?", "Yes, for remote key fobs on all major brands. We don't clone smart (keyless) keys. It costs S$100–S$1,000 depending on the car; send us the make, model, year and a photo of the key for a quote."),
+  ("Can you make a spare car key fob?", "Yes, for remote and smart (keyless) key fobs on all major brands. It costs S$100–S$1,000 depending on the car; send us the make, model, year and a photo of the key for a quote."),
   ("Do you cut house keys too?", "No. Car key fobs are the only keys we copy. We don't do house key cutting or duplication."),
   ("How much is a car lockout?", "From {P_CAR}. Spare key fob cloning is {P_FOB}, depending on the car. We'll confirm the price before we set off."),
  ],
@@ -364,7 +364,7 @@ dict(
 
 <div class="callout navy"><p><strong>Our warranty:</strong> {WARRANTY}</p></div>
 
-<h2>Replace, don't repair</h2>
+<h2>Repair or replace?</h2>
 <p>{NO_REPAIR} A new lock is usually more reliable, often not much more expensive than a repair, and comes with our warranty.</p>
 
 <h2>Price</h2>
@@ -519,7 +519,7 @@ HOME_FAQS = [
   ("Do you check that I live there before opening the door?", "Yes. " + ID_POLICY + " It's how we keep every home safe."),
   ("Which areas in Singapore do you cover?", "All of Singapore — Central, East, West, North and North-East. See <a href=\"~/areas/\">areas we serve</a>."),
   ("Is there a warranty?", WARRANTY),
-  ("Do you do key duplication or lock repairs?", "No key duplication, key cutting or lock repairs. That's the only work we turn down: the one exception is remote car key fobs, which we clone for all major car brands. Otherwise we specialise in opening doors, digital and smart locks, safes and cars, and in lock replacement and installation. Faulty locks are replaced, not repaired."),
+  ("Do you do key duplication or lock repairs?", "No key duplication or key cutting. That's the only work we turn down: the one exception is car key fobs, remote and smart, which we clone for all major car brands. Lock repairs depend on the lock and the fault: send a photo and we'll quote, or recommend a replacement if a repair isn't worth it. Otherwise we specialise in opening doors, digital and smart locks, safes and cars, and in lock replacement and installation."),
 ]
 
 
@@ -903,14 +903,14 @@ def build_about(x):
 <p>In the trade, Uncle Thomas is known as the "Shifu" — the master other locksmiths turn to when a job gets difficult. Today he leads a team of four locksmiths, Thomas, Ong, Melvin and Andrew, and he still personally handles the toughest jobs.</p>
 <h2>How we work</h2>
 <ul>
-<li><strong>24/7, islandwide</strong> — we set off as soon as you call and usually arrive within 25–30 minutes, any distance, any time.</li>
+<li><strong>24/7, islandwide</strong> — we set off as soon as you call and usually arrive within 25–30 minutes, day or night.</li>
 <li><strong>Every job, day or night</strong> — the only work we turn down is key duplication and key cutting.</li>
 <li><strong>Languages</strong> — English, Mandarin, Malay, Hokkien and Cantonese.</li>
 <li><strong>Payment</strong> — PayNow, with an invoice for every job.</li>
 <li><strong>Price before work</strong> — <a href="~/prices/">upfront starting prices</a>, and your final price confirmed before we begin.</li>
 <li><strong>ID verified</strong> — {ID_POLICY}</li>
 <li><strong>Warranty</strong> — {WARRANTY}</li>
-<li><strong>Specialists</strong> — safes and cars first, then doors and digital locks, and lock replacement and installation. We don't do lock repairs, key duplication or key cutting, except cloning remote car key fobs.</li>
+<li><strong>Specialists</strong> — safes and cars first, then doors and digital locks, and lock replacement and installation. We don't do key duplication or key cutting, except cloning car key fobs. Lock repairs are quoted case by case.</li>
 </ul>
 <p>See all our <a href="~/services/">locksmith services</a>.</p>
 <div class="photo-grid">{x["photo"]("about_van")}{x["photo"]("about_tools")}</div>

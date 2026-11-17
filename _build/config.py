@@ -58,7 +58,8 @@ ALT_NAMES = ["Thomas Locksmith"]
 GA4_ID = "G-DSL14WM5HH"
 
 # Add Facebook / Instagram / Carousell / directory profile URLs here as you create them.
-SAME_AS = [GOOGLE_PROFILE]
+FACEBOOK_URL = "https://www.facebook.com/thomaslocksmith/"   # confirmed 17 Nov 2026
+SAME_AS = [GOOGLE_PROFILE, FACEBOOK_URL]
 LANGUAGES = ["English", "Mandarin", "Malay", "Hokkien", "Cantonese"]   # confirmed by owner 31 Oct 2026 ("all languages")
 TEAM = ["Thomas", "Ong", "Melvin", "Andrew"]   # confirmed 31 Oct 2026
 PAYMENT = "PayNow"   # confirmed 31 Oct 2026
@@ -253,7 +254,7 @@ PRICES = [
     ("Digital lock emergency opening", "digital-lock-opening/", 150, "All brands"),
     ("Digital lock installation (labour)", "digital-lock-installation/", 150, "Lock supplied by you or us"),
     ("Car lockout (non-destructive)", "car-locksmith/", 80, "All makes and models"),
-    ("Car key fob cloning (spare key)", "car-locksmith/", "S$100–S$1,000", "Remote keys; depends on the car, call to enquire"),
+    ("Car key fob cloning (spare key)", "car-locksmith/", "S$100–S$1,000", "Remote and smart keys; depends on the car, call to enquire"),
     ("Main door / gate lock replacement (supply + install)", "lock-replacement/", 100, "Warranty included"),
     ("Letterbox lock replacement", "letterbox-lock-replacement/", 60, "HDB & condo letterboxes"),
     ("Safe opening", "safe-opening/", 120, "All safe types; exact price confirmed from photos"),

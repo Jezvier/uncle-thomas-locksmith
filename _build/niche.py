@@ -54,7 +54,7 @@ dict(
 <div class="callout navy"><p><strong>Our warranty:</strong> every lock replacement and installation comes with our warranty, with no expiry date.</p></div>
 
 <h2>Locked out with a broken lock?</h2>
-<p>We open the door first, then replace the lock in the same visit if it needs it. We don't repair locks: a faulty lock is replaced, so the problem doesn't come back. See <a href="~/emergency-locksmith/">emergency locksmith</a>.</p>
+<p>We open the door first, then repair or replace the lock in the same visit if it needs it. Whether a repair is worth it depends on the lock and the fault; we quote before we start. See <a href="~/emergency-locksmith/">emergency locksmith</a>.</p>
 
 <p>Doing the gate as well? See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>, or find out which metal gate lock you have in our <a href="~/guides/hdb-gate-lock-types/">guide to HDB gate lock types</a>.</p>
 """,
@@ -124,7 +124,7 @@ dict(
  faqs=[
   ("How much does it cost to replace an HDB gate lock?", "From {P_REPLACE}, including the new lock and installation, with a no-expiry warranty. We confirm the price from photos before we come."),
   ("Can you put a digital lock on my HDB gate?", "Yes. We install digital gate locks of every brand, and can match them to your door lock."),
-  ("My gate lock is rusty and hard to turn. Can you repair it?", "We don't repair locks. A rusty gate lock is best replaced, so it doesn't jam with you outside."),
+  ("My gate lock is rusty and hard to turn. Can you repair it?", "It depends on how far the rust has gone: send a photo and we'll quote. A badly rusted gate lock is best replaced, so it doesn't jam with you outside."),
   ("Why won't my HDB gate bolt slot in properly?", "Often the gate has dropped slightly on its hinges, so the bolt no longer lines up. If the lock itself is worn, replacing it fixes the problem."),
  ],
 ),
@@ -137,14 +137,14 @@ dict(
  desc="Need a duplicate car key fob in Singapore? We clone remote key fobs for all major brands from your working key, after an ID check. We don't cut metal keys.",
  h1="Car Key Fob Duplicate: Spare Remote Key Cloning in Singapore",
  sub="Bought a used car with one key, or worried about losing your only fob? Uncle Thomas clones a spare key fob from your working key, for all major car brands, without a trip to the dealer.",
- badges=["All major brands", "Remote keys", "S$100–S$1,000"],
+ badges=["All major brands", "Remote and smart keys", "S$100–S$1,000"],
  body="""
-<p><strong>The short answer:</strong> if you still have one working remote key, we can clone a spare key fob for all major car brands. We don't clone smart (keyless) keys. Cloning costs S$100–S$1,000 depending on the car and takes from a few minutes to a few hours. WhatsApp {PHONE} the car's make, model, year and a photo of your key, and we'll confirm and quote before you book.</p>
+<p><strong>The short answer:</strong> if you still have one working key, remote or smart (keyless), we can clone a spare key fob for all major car brands. Cloning costs S$100–S$1,000 depending on the car and takes from a few minutes to a few hours. WhatsApp {PHONE} the car's make, model, year and a photo of your key, and we'll confirm and quote before you book.</p>
 
 <h2>Duplicate vs replacement: which do you need?</h2>
 <table class="price-table info-table"><thead><tr><th scope="col">Your situation</th><th scope="col">What you need</th><th scope="col">Who can help</th></tr></thead><tbody>
-<tr><td>You have one working remote key and want a spare</td><td>A duplicate (cloned) key fob</td><td>Us: we clone it from your working key.</td></tr>
-<tr><td>Your car uses a smart (keyless) key</td><td>A new smart key programmed to the car</td><td>Usually the dealer: we don't clone smart keys.</td></tr>
+<tr><td>You have one working key (remote or smart) and want a spare</td><td>A duplicate (cloned) key fob</td><td>Us: we clone it from your working key.</td></tr>
+<tr><td>You've lost every key</td><td>A new key programmed to the car</td><td>Usually the dealer: we clone from a working key.</td></tr>
 <tr><td>Your key works but the remote buttons don't</td><td>Usually just a new battery</td><td>See <a href="~/guides/car-key-fob-not-working/">key fob not working</a>.</td></tr>
 <tr><td>Every key is lost or dead</td><td>A replacement key programmed to the car</td><td>Usually the dealer. If you're locked out meanwhile, we can open the car.</td></tr>
 </tbody></table>
@@ -345,7 +345,7 @@ dict(
 <p>Sliding doors to balconies, patios and shop fronts use hook locks and latches built into the frame. Over time they stop catching, the key stops turning, or the door locks and won't release. We open stuck sliding doors and replace the lock or latch.</p>
 
 <h2>Why replace, not repair</h2>
-<p>We don't repair locks. A worn glass door or sliding door lock is replaced with a new one, so the problem doesn't come back, with our no-expiry warranty.</p>
+<p>Some glass door and sliding door locks can be repaired, depending on the fault: send a photo and we'll quote. A badly worn lock is replaced with a new one, so the problem doesn't come back, with our no-expiry warranty.</p>
 
 <h2>For businesses</h2>
 <p>We work 24/7 so you can open on time, confirm authorisation from the business first, and issue invoices. See <a href="~/commercial-locksmith/">commercial locksmith</a>.</p>
@@ -473,7 +473,7 @@ dict(
 <div class="callout navy"><p><strong>Our warranty:</strong> every lock we install comes with our warranty, with no expiry date.</p></div>
 
 <h2>Locked out at the gate?</h2>
-<p>Flat batteries, or a keypad that stopped responding after rain? We open digital gate locks of every brand: see <a href="~/digital-lock-opening/">digital lock opening</a>. If the lock has failed, we replace it in the same visit. We don't repair locks.</p>
+<p>Flat batteries, or a keypad that stopped responding after rain? We open digital gate locks of every brand: see <a href="~/digital-lock-opening/">digital lock opening</a>. If the lock has failed, we repair or replace it in the same visit, depending on the fault, and quote before we start.</p>
 
 <p>Still deciding which lock to buy? Read <a href="~/guides/smart-lock-for-hdb-gate/">choosing a digital or smart lock for your HDB gate</a>. Changing a mechanical gate lock instead? See <a href="~/hdb-gate-lock-replacement/">HDB gate lock replacement</a>.</p>
 """,
