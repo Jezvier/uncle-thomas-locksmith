@@ -460,7 +460,7 @@ dict(
 </ul>
 
 <h2>HDB rules</h2>
-<p>Changing the lock on your existing gate is a routine job. If you're replacing the whole gate at the same time, the <a href="https://www.hdb.gov.sg/cs/infoweb/residential/living-in-an-hdb-flat/renovation/guidelines/building-works" target="_blank" rel="noopener">HDB renovation guidelines</a> say the new gate must keep the original width, number of panels and swing, must not block the escape route, and along a common corridor must leave at least 0.6m to the parapet wall. Renting? Ask your landlord before changing any lock.</p>
+<p>Changing the lock on your existing gate is a routine job. If you're replacing the whole gate at the same time, the <a href="https://www.hdb.gov.sg/managing-my-home/renovation-and-maintenance/renovation/renovation-guidelines/building-works" target="_blank" rel="noopener">HDB renovation guidelines</a> say the new gate must keep the original width, number of panels and swing, must not block the escape route, and along a common corridor must leave at least 0.6m to the parapet wall. Renting? Ask your landlord before changing any lock.</p>
 
 <h2>How it works</h2>
 <ol>
