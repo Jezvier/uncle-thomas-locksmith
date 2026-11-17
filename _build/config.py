@@ -31,8 +31,8 @@ WA_LINK = "https://wa.me/6592249224?text=" + quote(WA_MESSAGE)
 WA_MESSAGE_ZH = "你好 Uncle Thomas，我需要锁匠。我的位置：___ 。锁的类型/照片：___"
 WA_LINK_ZH = "https://wa.me/6592249224?text=" + quote(WA_MESSAGE_ZH)
 
-# FILL: business email (e.g. info@singapore-locksmiths.com). None = no email shown anywhere.
-EMAIL = None
+# Business email (owner, 17 Nov 2026): shown quietly in the footer and on Contact, for corporate enquiries.
+EMAIL = "thomaslocksmith@hotmail.com"
 # FILL: full Google Maps URL of the business profile
 #   (Google Maps → your business → Share → Copy link, or the https://www.google.com/maps/place/... URL).
 #   Until filled, the short share link below is used.

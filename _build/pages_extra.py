@@ -20,8 +20,8 @@ def _contact(x):
     desc = ("Contact Uncle Thomas Locksmith, 24/7 islandwide Singapore. Call or WhatsApp 9224 9224 for lockouts, "
             "digital and smart locks, safes, cars and lock changes.")
     crumbs = [("Home", ""), ("Contact", path)]
-    email_row = (f'<li>{icons.svg("mailbox", cls="bi")} <span><strong>Email:</strong> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a> '
-                 f'(for non-urgent questions)</span></li>') if C.EMAIL else ""
+    email_row = (f'<li>{icons.svg("mailbox", cls="bi")} <span><strong>Email:</strong> <!--email_off--><a href="mailto:{C.EMAIL}">{C.EMAIL}</a><!--/email_off--> '
+                 f'(for corporate and non-urgent enquiries)</span></li>') if C.EMAIL else ""
     uen = f"{C.LEGAL_NAME} (UEN {C.UEN}), registered in Singapore since {C.FOUNDED}" if C.UEN else f"Since {C.FOUNDED}"
     body = (x["page_hero"](crumbs, "Contact Uncle Thomas Locksmith",
             "The fastest way to reach us is a call or a WhatsApp message, 24 hours a day, including weekends and public holidays.",

@@ -417,7 +417,7 @@ def footer_html(lang="en"):
     svc = "".join(f'<li><a href="~/{loc(s["path"], lang)}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
     towns = "".join(f'<li><a href="~/areas/{a["slug"]}/">Locksmith {a["name"]}</a></li>' for a in areas.TOWNS[:8])
     gd = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["short"]}</a></li>' for g in guides.GUIDES[:6])
-    email = (f'<li><span class="lbl">{t["email"]}:</span> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></li>'
+    email = (f'<li><span class="lbl">{t["email"]}:</span> <!--email_off--><a href="mailto:{C.EMAIL}">{C.EMAIL}</a><!--/email_off--></li>'
              if C.EMAIL else "<!-- FILL: business email in _build/config.py -->")
     uen = f' · {getattr(C, "LEGAL_NAME", C.NAME)} (UEN {C.UEN})' if C.UEN else "<!-- FILL: ACRA UEN in _build/config.py -->"
     return f'''<footer class="footer">
