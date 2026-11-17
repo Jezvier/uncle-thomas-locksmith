@@ -325,45 +325,45 @@ EXTRA = {
 },
 
 "safe": {
+"Eagle": dict(sections=[
+ ("Two passcodes: who should hold the second?",
+  "<p>The YES-M020's lock takes two independent passcodes, which is more useful than it sounds. Give the second code to the one other "
+  "person who'd need the safe if you couldn't open it yourself: a spouse, an adult child or a business partner. Write it down for them "
+  "only, never on or near the safe.</p>"
+  "<p>The two codes also make a forgotten code less of a crisis: if one person forgets theirs, the other can still open the door. Test "
+  "both codes with the door open whenever either one is changed.</p>"),
+ ], sources=[]),
 "Godrej": dict(sections=[
  ("Godrej's own advice on keys and batteries",
   "<p>Godrej says the emergency keys are for two situations only, a forgotten user code or completely drained batteries, and should be "
   "kept hidden somewhere else in your home, never inside the locker. For a locker with dead batteries, Godrej's support page gives two ways "
-  "in: connect the external battery adapter (sold as an accessory for some models) or use the emergency override keys.</p>"
-  "<p>On some Godrej models the codes are stored in memory that survives a flat battery, so new batteries alone may bring the locker back "
-  "with your old code. Godrej also recommends a fresh alkaline battery of the type your model specifies: some take a 9V, others AA cells.</p>"),
+  "in: connect the external battery adapter supplied with the locker, or use the emergency override keys.</p>"
+  "<p>The batteries sit behind a cover on the back panel, held by a Philips screw, and Godrej specifies 1.5V AA alkaline cells. Four wrong codes in a row show HOLD15 on the display: the keypad waits 15 minutes, but the override keys still work.</p>"),
  ("Forgotten code and lost key",
   "<p>If both the code and the override key are gone, Godrej asks owners to contact its service team with the product details. In "
   "Singapore, where many Godrej lockers were bought overseas or second-hand, the quicker route is usually a safe locksmith. We open it, "
   "and if the lock can be reset you keep using the locker.</p>"),
- ], sources=[("Godrej support: weak or dead batteries", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/what-can-i-do-if-the-batteries-are-weak-or-dead"),
-             ("Godrej support: where to keep the keys", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/where-do-i-keep-my-keys-after-i-have-installed-the-locker"),
+ ], sources=[("Godrej support: which batteries to use", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/which-batteries-should-i-use-for-my-locker"), ("Godrej support: replacing batteries", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/how-do-i-replace-batteries"), ("Godrej support: error codes", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/what-do-error-codes-indicate"), ("Godrej support: forgotten password", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/i-have-forgotten-my-password-how-do-i-open-the-locker"), ("Godrej support: where to keep the keys", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/where-do-i-keep-my-keys-after-i-have-installed-the-locker"),
              ("Godrej support: forgotten password and lost key", "https://www.godrejenterprises.com/support/locks-and-security/home-security/common-problems/i-have-forgotten-my-password-and-i-lost-the-mechanical-key-how-do-i-open-the-locker")]),
 "Booil": dict(sections=[
- ("Booil fire safes and fire-resistant cabinets",
+ ("Booil fire safes: why prying doesn't work",
   "<p>Fire-resistant safes are built differently from burglary safes: the walls are packed with insulating material that keeps the "
   "inside cool in a fire, and the door closes tight against its seals. That's why a jammed fire safe can't simply be pried open, and why "
-  "drilling one is careful work. The hole has to go in the right spot and be sealed afterwards so the fire protection isn't lost. Many "
-  "fire-resistant filing cabinets have one lock at the top that secures every drawer together.</p>"),
+  "drilling one is careful work. The hole has to go in the right spot and be sealed afterwards so the fire protection isn't lost.</p>"),
  ("Battery first, override key second",
   "<p>On many digital safes the override key lock hides behind a small cover near the keypad. So the order matters: try fresh alkaline "
   "batteries if the compartment is on the outside, then the override key, then call us. Keep the override key outside the safe: a key "
   "locked inside is the most common way a simple battery problem turns into a drilling job.</p>"),
  ], sources=[]),
 "Phoenix": dict(sections=[
- ("Other Phoenix models",
-  "<p>Phoenix makes many electronic safes, and the details change from model to model. On the SS0935E series, the mechanical override "
-  "sits under the brass Phoenix nameplate. On models such as the DS2503K, two AA batteries sit in an internal compartment, so the low-battery "
-  "beep is your warning to change them while you can still open the door. And on some Phoenix locks, removing the batteries deletes the user "
-  "codes, so be ready to set your code again after a battery change.</p>"
-  "<p>Some Phoenix models also have a <em>super code</em> that resets the lock to factory settings. If yours has one, it's in the paperwork "
-  "that came with the safe. Keep that paperwork anywhere except inside the safe.</p>"),
- ("Lost the Phoenix override key?",
-  "<p>Phoenix supplies replacement keys through its support team and dealers, usually against the safe's serial number, so note the serial "
-  "now while the safe is open. If it's already locked and the key is gone, we can open it.</p>"),
- ], sources=[("Phoenix SS0935E series manual", "https://manuals.online/phoenix/safe/ss0935e-series/user-manual/t4lg"),
-             ("Phoenix DS2503K manual", "https://www.notice-facile.com/en/manual/1568643/phoenix+ds2503k"),
-             ("Phoenix DS4651E manual", "https://www.notice-facile.com/en/manual/1568595/phoenix+ds4651e")]),
+ ("Before your Phoenix safe locks you out",
+  "<p>Phoenix makes many electronic safes, and battery position, emergency key slot and code steps change from model to model. While "
+  "the safe is open, note the model and serial number, find where the batteries and emergency key go, and keep the paperwork that came "
+  "with the safe somewhere other than inside it. That paperwork is what you, Phoenix or a locksmith will need if the code or key goes "
+  "missing.</p>"
+  "<p>If the code and the key are both gone, don't drill or pry it yourself: send us photos of the front and the label and we'll quote "
+  "before we come.</p>"),
+ ], sources=[]),
 },
 }
 
