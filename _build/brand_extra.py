@@ -15,6 +15,125 @@ online, so their sections are practical, clearly general advice.
 
 EXTRA = {
 "car": {
+"Mercedes-Benz": dict(sections=[
+ ("Mercedes-Benz key battery: CR2032 or CR2025",
+  "<p>The battery depends on the generation. The current <strong>GLC (X254)</strong> manual calls for a <strong>CR2032</strong>; the "
+  "<strong>W205 C-Class</strong> (2015 on) takes a <strong>CR2025</strong>. Read the old cell before buying.</p>"
+  "<p>The GLC manual's test for a weak battery: press a button, and if the key's indicator lamp doesn't light up, the battery is weak. "
+  "A spare key you rarely use can have KEYLESS-GO switched off to save its battery, which is worth doing for the one kept at home.</p>"),
+ ], sources=[
+  ("Mercedes-Benz GLC (X254) operator's manual 2024 (Mercedes-Benz Canada)", "https://www.mercedes-benz.ca/content/dam/mb-nafta/ca/owners/operators-manual/2024/GLCSUV_254_ENG.pdf"),
+  ("Mercedes-Benz C-Class (W205) operator's manual 2015 (Mercedes-Benz Canada)", "https://www.mercedes-benz.ca/content/dam/mb-nafta/ca/owners/operators-manual/2015/operators-manual/2015_C-Class_SHORT_P205000213_EdD.pdf")]),
+"BMW": dict(sections=[
+ ("BMW Digital Key: handy, but keep a physical spare",
+  "<p>BMW says that with Digital Key Plus the car recognises your phone as you approach and unlocks, starts with the phone in your "
+  "pocket, and locks itself when you walk away. Depending on the model and phone, up to 18 keys can be shared.</p>"
+  "<p>That's convenient until the phone is flat or left inside the car. A physical key at home is still the simplest backup, and if "
+  "you're down to one, we can clone it before it becomes urgent. BMW's handbooks are online by VIN, so look up your own model's "
+  "emergency key and weak-key steps once, while everything works.</p>"),
+ ], sources=[("BMW Digital Key (BMW Canada)", "https://www.bmw.ca/en/digital-services/bmw-digital-key.html")]),
+"Volkswagen": dict(sections=[
+ ("Volkswagen key battery: watch the indicator lamp",
+  "<p>The Tiguan owner's manual doesn't name a battery type; it just calls it a button cell, so read the number on the old one before "
+  "you buy. What it does give is a clear test: <strong>if the indicator lamp in the key doesn't flash when you press a button, the "
+  "cell needs replacing</strong>.</p>"
+  "<p>If you leave it too late, the flat-battery start above still works on Keyless Access cars: brake, press start, then hold the key "
+  "to the right of the steering column trim.</p>"),
+ ], sources=[("Volkswagen Tiguan owner's manual, edition 11.2021 (Volkswagen India)", "https://www.volkswagen.co.in/idhub/content/dam/onehub_pkw/importers/in/pdf/Tiguan-User-Manual.pdf")]),
+"Land Rover": dict(sections=[
+ ("Land Rover keys: CR2032, the Activity Key and keys locked in",
+  "<p>Both the Discovery Sport and Defender handbooks call for a <strong>CR2032</strong>, and the instrument panel shows a warning when "
+  "the smart key battery needs replacing.</p>"
+  "<p>Two Land Rover features change how lockouts happen. The <strong>Activity Key</strong> is a wristband waterproof to 40 m for "
+  "sport and the beach: once it's activated, <strong>any smart key left inside the car is disabled</strong>, so the car stays secure "
+  "with your fob in the glovebox. And a smart key left inside when you close the luggage compartment with the alarm armed is "
+  "deactivated too. If you're locked out with the key inside, we check the log card and open the car without damage.</p>"),
+ ], sources=[
+  ("Land Rover Discovery Sport (2023) handbook: smart key", "https://www.ownerinfo.landrover.com/document/3A/2023/1665395/proc/G2818154/G2904727"),
+  ("Land Rover Defender (2024) handbook: smart key", "https://www.ownerinfo.landrover.com/document/3E/2024/1697590/proc/G3244912/G3359301")]),
+"Toyota": dict(sections=[
+ ("Toyota key battery: CR2450 or CR2032",
+  "<p>Toyota's 2025 Corolla owner's manual lists two batteries: <strong>a CR2450 for smart keys</strong> (Smart Entry & Start) and "
+  "<strong>a CR2032 for keys without it</strong>. Read the number on the old cell before you buy. The manual's first sign of a weak "
+  "battery is a shorter range: you have to get closer to the car before it responds.</p>"
+  "<p>One feature worth knowing: Toyota's <strong>battery-saving mode</strong> stops the key listening for the car's signal, which "
+  "cuts battery drain if you keep the key near the front door at home.</p>"),
+ ], sources=[
+  ("Toyota 2025 Corolla owner's manual: key battery", "https://www.toyota.com/content/dam/toyotaowners/digital-owners-manual-v2/en/om02688u/chapter/ch06se030409.html"),
+  ("Toyota 2025 Corolla owner's manual: if the key doesn't work", "https://www.toyota.com/content/dam/toyotaowners/digital-owners-manual-v2/en/om02688u/chapter/ch07se020409.html"),
+  ("Toyota 2025 Corolla owner's manual: battery-saving mode", "https://www.toyota.com/content/dam/toyotaowners/digital-owners-manual-v2/en/om02688u/chapter/ch03se020403.html")]),
+"Honda": dict(sections=[
+ ("Honda keyless remote battery: CR2032",
+  "<p>Honda's Civic e:HEV owner's manual specifies a <strong>CR2032</strong> lithium cell and puts its life at <strong>about two "
+  "years</strong>. Its test is simple: if the remote's indicator light doesn't come on when you press a button, replace the battery. "
+  "Until you do, the weak-battery start above still works.</p>"),
+ ], sources=[
+  ("Honda Civic e:HEV owner's manual: keyless remote battery", "https://manuals.honda.co.uk/civicehev/2026/HTMLtemplate/106962046-93568.html"),
+  ("Honda Civic e:HEV owner's manual: if the remote battery is weak", "https://manuals.honda.co.uk/civicehev/2026/HTMLtemplate/106962046-18683.html"),
+  ("Honda Civic e:HEV owner's manual: locking from outside", "https://manuals.honda.co.uk/civicehev/2026/HTMLtemplate/106962046-120103.html")]),
+"Lexus": dict(sections=[
+ ("Lexus key battery and the low-battery alarm",
+  "<p>The 2025 ES owner's manual takes a <strong>CR2032</strong>, and Lexus's support site lists the same cell for the 2019 ES, NX "
+  "and RX. Lexus also gives you a warning most brands don't: when the key battery gets low, <strong>an alarm sounds in the cabin "
+  "when you switch the engine off</strong>.</p>"
+  "<p>If your Lexus came with a card key, its battery is different: the manual says it's available only from Lexus dealers, so don't "
+  "leave the card's battery to the last minute.</p>"),
+ ], sources=[
+  ("Lexus 2025 ES owner's manual: key battery", "https://www.lexus.com/content/dam/lexus/drivers/documents/digital-owners-manual-v2/en/om06308u/chapter/ch06se030409.html"),
+  ("Lexus 2025 ES owner's manual: if the key doesn't work", "https://www.lexus.com/content/dam/lexus/drivers/documents/digital-owners-manual-v2/en/om06308u/chapter/ch07se020410.html"),
+  ("Lexus support: key battery sizes by model", "https://support.lexus.com/s/article/What-size-battery-is-8347")]),
+"Nissan": dict(sections=[
+ ("Nissan Intelligent Key battery: CR2032",
+  "<p>Nissan's 2024 X-Trail owner's manual specifies a <strong>CR2032</strong> (or equivalent). You get a warning before it dies: "
+  "the dashboard shows a key battery low message while the key still works, which is the moment to change it.</p>"
+  "<p>If the warning is ignored, the dead-battery steps above still get you started: touch the key to the switch, wait for the chime, "
+  "and press within 10 seconds.</p>"),
+ ], sources=[
+  ("Nissan X-Trail (2024) owner's manual: Intelligent Key battery", "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/xtrail/0t33/e1/2024/intelligent-key-battery-1.shtml"),
+  ("Nissan X-Trail (2024) owner's manual: if the key battery is discharged", "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/xtrail/0t33/e1/2024/intelligent-key-battery-discharge-1.shtml"),
+  ("Nissan X-Trail (2024) owner's manual: mechanical key", "https://www.nissan.co.uk/owners/car-repair/car-owner-manual/manuals/iom/xtrail/0t33/e1/2024/mechanical-key-1.shtml")]),
+"Hyundai": dict(sections=[
+ ("Ioniq 5: flush handles and the NFC card key",
+  "<p>The Ioniq 5's door handles sit flush with the body, so the keyhole isn't visible. Hyundai's manual says to <strong>press the "
+  "front part of the handle</strong> so the rear part comes out, then use the mechanical key from the smart key. Once inside, press "
+  "the start button directly with the smart key.</p>"
+  "<p>Many Ioniq 5s also came with an <strong>NFC key card</strong>: hold it to the centre of the door handle to lock or unlock. "
+  "Keep it in your wallet, and the smart key's <strong>CR2032</strong> battery stops being a single point of failure.</p>"),
+ ], sources=[
+  ("Hyundai Ioniq 5 (2022) owner's manual: convenience features", "https://manuals.hyundai.co.uk/umanuals/ioniq-5/ioniq-5-2022-convenience-features.pdf"),
+  ("Hyundai Ioniq 5 quick reference guide: NFC key card", "https://owners.hyundaiusa.com/content/dam/hyundai/us/myhyundai/manuals/glovebox-manual/2022/ioniq5/2022-Ioniq-5-Quick-Reference-Guide.pdf"),
+  ("Hyundai Elantra owner's manual (Hyundai India)", "https://www.hyundai.com/content/dam/hyundai/in/en/data/connect-to-service/owners-manual/elantra.pdf")]),
+"Kia": dict(sections=[
+ ("What Kia Singapore says to do when the key battery dies",
+  "<p>Kia Singapore publishes the steps itself. To get in: take the mechanical key out of the smart key and use it to <strong>remove "
+  "the keyhole cover on the driver's door handle</strong>, then unlock. On flush handles, press the front of the handle to expose the "
+  "keyhole. To start: sit in the driver's seat, brake, and <strong>press ENGINE START/STOP directly with the smart key</strong>.</p>"
+  "<p>The EV6 manual adds that the mechanical key opens the driver's door only, and that the key takes a <strong>CR2032</strong>.</p>"),
+ ], sources=[
+  ("Kia Singapore: unlocking your car when the smart key battery is dead", "https://www.kia.com/sg/owners/owner-resources/quick-tips/breakdowns-and-accidents/unlocking-your-car-when-smart-key-battery-is-dead.html"),
+  ("Kia Singapore: starting your car when the smart key battery is dead", "https://www.kia.com/sg/owners/owner-resources/quick-tips/breakdowns-and-accidents/starting-your-car-when-smart-key-battery-is-dead.html"),
+  ("Kia EV6 owner's manual: key battery", "https://ownersmanual.kia.com/full_webhelp/CV1/2023/en_GB/topics/t00145.html")]),
+"BYD": dict(sections=[
+ ("BYD Atto 3: card, phone and the no-power mode sign",
+  "<p>The Atto 3 handbook lists the full key set: an electronic smart key with a mechanical key inside, plus (on equipped cars) a "
+  "Bluetooth digital key and an NFC card. The card works at the <strong>NFC sign on the driver's side mirror</strong>, held within "
+  "about 2 cm for a second or two, and inside the car it authorises starting.</p>"
+  "<p>When the smart key's battery runs low, the car says so: <em>Smart key power is low. Please replace the battery as soon as "
+  "possible.</em> BYD's manuals don't name the cell and send you to a BYD dealer to change it, so book that when the message appears.</p>"),
+ ], sources=[
+  ("BYD Atto 3 owner's manual (byd.com)", "https://www.byd.com/material/BYD%20ATTO3%202022%20Owner's%20Manual-20251004-EN.pdf"),
+  ("BYD Atto 3 owner's handbook 2025 (BYD Australia)", "https://bydautomotive.com.au/brochures/BYD-ATTO-3-Owners-Handbook-2025.pdf"),
+  ("BYD digital key (byd.com)", "https://www.byd.com/eu/ownership/byd-digital-key")]),
+"MG": dict(sections=[
+ ("MG4 and ZS EV: the backup key and the cup-holder start",
+  "<p>MG's manuals are clear about the mechanical key: <strong>each smart key holds one, it opens the driver's door, and it can't "
+  "start the car</strong>. The driver's lock hides under a trim cover that has to come off first. On the ZS EV, once you've unlocked "
+  "with the mechanical key, power the car on within 15 seconds or the alarm goes off.</p>"
+  "<p>To start with a weak key, MG's alternative starting procedure puts the key in a backup position with the buttons facing up. On "
+  "the ZS EV that's <strong>the centre console cup holder</strong>. Both cars take a <strong>CR2032</strong>.</p>"),
+ ], sources=[
+  ("MG4 EV owner's manual (MG Europe)", "https://cdn.mgmotor.eu/manuals/EU-MG4-MY23_Owner-Manual-20230907_compressed.pdf"),
+  ("MG ZS EV owner's manual (MG Europe)", "https://cdn.mgmotor.eu/manuals/1.-ZS-EV_Owners-Manual.pdf")]),
 "Volvo": dict(sections=[
  ("Volvo key fob battery: a CR2430, not a CR2032",
   "<p>Most car keys on this site take a CR2032, but Volvo's own support pages list a <strong>CR2430, 3V</strong> cell for the remote key "
