@@ -53,7 +53,7 @@ def _contact(x):
 <p>Islandwide, 24 hours a day. Most jobs are around Toa Payoh and Ang Mo Kio, but we cover every town, from <a href="~/areas/woodlands/">Woodlands</a> to <a href="~/areas/tampines/">Tampines</a> and <a href="~/areas/cbd-orchard/">Orchard</a>. We come to you; there's no walk-in shop. See <a href="~/areas/">all areas</a>.</p>
 
 <h2>Before we open anything</h2>
-<p>We check proof of residence or ownership before opening any door, car or safe, for example your NRIC with your address, a tenancy agreement or the vehicle log card. It protects you and your home.</p>
+<p>We check proof of residence or ownership before opening any door, car or safe, for example your NRIC with your address, a tenancy agreement or the vehicle log card on OneMotoring. It protects you and your home.</p>
 
 <h2>Business details</h2>
 <p>{uen}. Trading as {C.NAME}.</p>

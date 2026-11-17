@@ -34,7 +34,7 @@ dict(
 </ul>
 
 <h2>What professional drilling actually is</h2>
-<p>It isn't cutting the door open. A trained safesmith drills a <strong>small hole at a precise point</strong>, chosen for that safe and lock, to reach the lock mechanism and open it. Better safes are designed against this: they have hardened plates to stop drills, and <strong>relockers</strong>, hidden extra bolts that fire if the safe is attacked, locking it permanently shut. Knowing where those are, and how to work around them, is exactly what safesmith training is for.</p>
+<p>It isn't cutting the door open. A trained safesmith drills a <strong>small hole at a precise point</strong>, chosen for that safe and lock, to reach the lock mechanism and open it. Better safes are designed against this: they have hardened plates to stop drills, and <strong>relockers</strong>, hidden extra bolts that fire if the safe is attacked, locking the bolts in place. Knowing where those are, and how to work around them, is exactly what safesmith training is for.</p>
 <p>Once the door is open, the old lock comes out. On many safes a <strong>new lock</strong> can then be fitted, and the safe goes back into use. For a small, light safe, buying a new safe can sometimes cost less than refitting the old one. A good safesmith tells you which before starting, not after.</p>
 
 <h2>Why you should never drill a safe yourself</h2>
@@ -169,15 +169,15 @@ dict(
 <p>Many safes have two small metal contacts on the outside, often under the keypad or dial, for exactly this situation. Hold a 9V battery against them, wake the keypad, and enter your code while the battery stays in place. Yale's Fire Safe works this way: its terminals are underneath the dial. Some brands, such as Godrej, supply an external battery adapter instead, so check the box the safe came in.</p>
 
 <h2>3. Use the override (emergency) key</h2>
-<p>Most home safes come with an override key for when the electronics fail. It's usually hidden behind a cover or plug near the keypad or handle. On SentrySafe models such as the X125, it's behind the cover between the knob and keypad; on Phoenix models such as the SS0300E, it's under the grey plug at the bottom of the keypad. Turn the key and hold it while you turn the handle.</p>
-<p>Not every safe has one. Yale's Fire Safe and several Burg-Wächter ranges (Home Safe, Cityline, Karat and others) have no mechanical override at all.</p>
+<p>Most home safes come with an override key for when the electronics fail. It's usually hidden behind a cover or plug near the keypad or handle. On SentrySafe models such as the X125, it's behind the cover between the knob and keypad; on other makes it's often under a plug or cover on the keypad, so check your manual. Turn the key and hold it while you turn the handle.</p>
+<p>Not every safe has one. Yale's Fire Safe has no override key, and Burg-Wächter says its Home Safe, Combi Line and Karat ranges generally have no mechanical emergency lock.</p>
 
 <h2>4. If the keypad lights up but the door won't open</h2>
 <p>Weak batteries can light the keypad and beep normally, yet not have enough power to move the bolt. If your safe accepts the code but stays shut, treat it as a battery problem first. More causes in <a href="~/guides/safe-wont-open-correct-code/">safe won't open with the correct code</a>.</p>
 
 <h2>Which batteries, and how often?</h2>
 <ul>
-<li><strong>Most home safes take four AA alkaline batteries</strong> (SentrySafe X-series, Phoenix SS0300E, many Honeywell and Eagle models). Some take a 9V or a different number, so check yours.</li>
+<li><strong>Most home safes take four AA alkaline batteries</strong> (SentrySafe X-series, many Honeywell and Eagle models). Some take a 9V or a different number, so check yours.</li>
 <li><strong>Use alkaline, not rechargeable.</strong> Rechargeables run at a lower voltage and can leak.</li>
 <li><strong>Replace them once a year</strong>, or at the first low-battery warning (often a red light or a beep when you press a key). Don't wait for the safe to die.</li>
 <li><strong>Replace them all at once.</strong> Mixing old and new shortens their life.</li>
@@ -223,7 +223,7 @@ dict(
 <p>Many electronic safes only release for a few seconds after a correct code. Enter the code, then turn the handle straight away, in the right direction.</p>
 
 <h2>4. A wrong-code lockout</h2>
-<p>After several wrong entries, many safes ignore all codes for a while, even the right one. Honeywell's 5100-series safes lock for five minutes after three wrong codes (the 2605 fire safe for 15); some Diplomat models lock after three. Wait the full time, then enter the code once, slowly.</p>
+<p>After several wrong entries, many safes ignore all codes for a while, even the right one. Honeywell's 5100-series safes lock for five minutes after three wrong codes (the 2605 fire safe for 15). Wait the full time, then enter the code once, slowly.</p>
 
 <h2>5. A changed or partly saved code</h2>
 <p>If someone recently changed the code, it may not have saved properly. On many safes a failed code change ends with several beeps or a flashing light. Try the old code too, and ask whoever last changed it.</p>
@@ -341,7 +341,7 @@ dict(
 </ul>
 
 <h2>When to call</h2>
-<p>If your only working key has stopped working, get a spare made while you still have one that works: we clone key fobs for all major brands from a working key, after checking your NRIC against the car's log card. If you're locked out, we open cars without damage, 24/7 islandwide. Call or WhatsApp {PHONE}.</p>
+<p>If your only working key has stopped working, get a spare made while you still have one that works: we clone key fobs for all major brands from a working key, after checking your NRIC against the car's log card on OneMotoring. If you're locked out, we open cars without damage, 24/7 islandwide. Call or WhatsApp {PHONE}.</p>
 <div class="callout navy"><p><strong>Down to one key?</strong> WhatsApp {PHONE} your car's model, year and a photo of the key for a spare.</p></div>
 """,
  faqs=[

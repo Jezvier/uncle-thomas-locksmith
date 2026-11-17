@@ -14,6 +14,7 @@ from guides_h import GUIDES_H
 
 GUIDES = GUIDES_A + GUIDES_B + GUIDES_C + GUIDES_D + GUIDES_E + GUIDES_F + GUIDES_G + GUIDES_H
 from guides_extra import EXTRA, TAKEAWAYS, MORE_FAQS
+from guides_sources import GUIDE_SOURCES
 for _g in GUIDES:
     _extra = EXTRA.get(_g["slug"], "")
     if _extra:
@@ -72,18 +73,26 @@ def build(x):
         rel = related(g["slug"])
         rel_html = ("<h2>Related guides</h2><ul class=\"guide-links\">" +
                     "".join(f'<li><a href="~/guides/{r["slug"]}/">{r["h1"]}</a></li>' for r in rel) + "</ul>") if rel else ""
+        # Outside sources (17 Nov 2026 audit: 20 of 30 guides cited none). Kept in guides_sources.py so the
+        # guide text files only change when the text does.
+        srcs = GUIDE_SOURCES.get(g["slug"], [])
+        src_html = ('<p class="note"><strong>Sources:</strong> ' +
+                    " · ".join(f'<a href="{u}" target="_blank" rel="noopener">{t}</a>' for t, u in srcs) +
+                    ".</p>") if srcs else ""
         crumbs = [("Home", ""), ("Guides", "guides/"), (g["short"], path)]
         assert len(g["title"]) <= 65, g["title"]
         body = (f'<section class="page-hero"><div class="container narrow">{_bc(crumbs)}<h1>{g["h1"]}</h1>'
                 f'<div class="hero-trust">{x["face_img"]()}<div class="hero-trust-txt"><p class="meta-line">By <a href="~/about/">Uncle Thomas</a>, locksmith since {{FOUNDED}} · Updated {_month_year(_modified(path, g["slug"]))}</p>{x["rating_chip"]()}</div></div>'
                 f'{x["cta_buttons"]("")}</div></section>'
-                f'<article class="section"><div class="container narrow prose">{g["body"]}{rel_html}</div></article>'
+                f'<article class="section"><div class="container narrow prose">{g["body"]}{src_html}{rel_html}</div></article>'
                 f'<section class="section section-alt"><div class="container narrow">{x["faq_html"](g["faqs"], "Quick Answers")}</div></section>' +
                 x["cta_band"]())
         art = {"@type": "Article", "@id": C.SITE + "/" + path + "#article", "headline": g["h1"], "description": g["desc"],
                "author": {"@id": x["PERSON_ID"]}, "publisher": {"@id": x["BUSINESS_ID"]},
                "datePublished": PUBLISHED[g["slug"]], "dateModified": _modified(path, g["slug"]),
                "mainEntityOfPage": C.SITE + "/" + path, "image": C.SITE + "/assets/img/og/og-guides-v1.jpg", "inLanguage": "en-SG"}
+        if srcs:
+            art["citation"] = [u for t, u in srcs]
         nodes = x["page_schema"](path, g["title"], g["desc"], crumbs, faqs=g["faqs"], extra=[art, x["person_node"]()])
         x["render"](path, g["title"], g["desc"], body, nodes, og_type="article", priority="0.6")
 

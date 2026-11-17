@@ -149,7 +149,7 @@ dict(
 <p>Either way, we tell you which case you're in, and the price, before we start. Safe opening starts from {P_SAFE}. If the safe holds something you need for a trip, say so when you call. See <a href="~/safe-opening/">safe opening</a> and <a href="~/guides/forgot-safe-combination/">forgot your safe combination</a>.</p>
 
 <h2>Cars in condo basements</h2>
-<p>Newton's condo carparks are deep, and phone signal down there is often poor, so many owners call us from the lift lobby. Send the carpark level, lot number and car model, and let the guardhouse know a locksmith is coming. We open cars of all major brands with non-destructive tools, from {P_CAR}, after checking your NRIC against the log card. If one remote key is shared between two drivers, a cloned spare fob stops it happening again: see <a href="~/car-key-duplicate/">spare car key fob</a>.</p>
+<p>Newton's condo carparks are deep, and phone signal down there is often poor, so many owners call us from the lift lobby. Send the carpark level, lot number and car model, and let the guardhouse know a locksmith is coming. We open cars of all major brands with non-destructive tools, from {P_CAR}, after checking your NRIC against the log card on OneMotoring. If one remote key is shared between two drivers, a cloned spare fob stops it happening again: see <a href="~/car-key-duplicate/">spare car key fob</a>.</p>
 
 <h2>Getting in at night</h2>
 <p>Newton is one of the closest areas to our usual base around Toa Payoh, a short run down Thomson Road or the CTE, so late-night jobs here move quickly. The slow part is usually the gate. Tell the guardhouse your unit and that a locksmith is expected, and have ID showing your address ready. Daytime lockouts start from {P_LOCKOUT}; nights, weekends and public holidays from {P_AFTERHOURS}.</p>
@@ -294,7 +294,7 @@ dict(
 <p>On the safe itself: an old dial lock in working order can sometimes be opened by manipulation, by feel and sound, without leaving a mark. Uncle Thomas is trained in that technique for high-security combination locks, and a job can take anywhere from 5 minutes to 5 hours. If the lock has failed, drilling is usually needed, and about 90% of drilled safes can be repaired and used again. Safe opening starts from {P_SAFE}.</p>
 
 <h2>School runs and car lockouts</h2>
-<p>With so many schools along Bukit Timah and Dunearn Road, drop-off and pick-up are when car lockouts happen: keys left inside while a child is helped out, a smart key dropped into a bag that ends up in the boot. Tell us the school or carpark and the car model. We open cars of all major brands without damage, from {P_CAR}, after checking the log card. For families sharing one remote key between two drivers, a cloned spare fob is the lasting fix; see <a href="~/car-key-duplicate/">spare car key fob</a>.</p>
+<p>With so many schools along Bukit Timah and Dunearn Road, drop-off and pick-up are when car lockouts happen: keys left inside while a child is helped out, a smart key dropped into a bag that ends up in the boot. Tell us the school or carpark and the car model. We open cars of all major brands without damage, from {P_CAR}, after checking the log card on OneMotoring. For families sharing one remote key between two drivers, a cloned spare fob is the lasting fix; see <a href="~/car-key-duplicate/">spare car key fob</a>.</p>
 """,
  estates=["Sixth Avenue", "King Albert Park", "Coronation Road", "Hillcrest", "Swiss Club Road", "Cluny"],
  landmarks=["Bukit Timah Nature Reserve", "Beauty World", "Cluny Court", "Botanic Gardens"],
@@ -302,7 +302,7 @@ dict(
  buildings=[
   ("Bungalows and landed homes", "Several locks per property and heavy driveway gates that take a lot of wear. We open, replace or rekey them so one set of keys works the way you want."),
   ("Home safes", "Bedroom, study and wardrobe safes are common here. Uncle Thomas opens every type of safe, and when drilling is needed, about 90% of drilled safes can be repaired and used again."),
-  ("Family cars", "Car lockouts in driveways, school carparks and condo basements. We open cars without damage after checking the log card."),
+  ("Family cars", "Car lockouts in driveways, school carparks and condo basements. We open cars without damage after checking the log card on OneMotoring."),
  ],
  jobs=["Home safe opening and combination changes", "Driveway and side gate lock replacement", "Car lockouts at home and at school pick-up", "Rekeying a whole house after moving in"],
  access="Bukit Timah's landed streets can be hard to find at night, so a pinned location on WhatsApp helps. Tell us which gate to come to.",
@@ -705,7 +705,7 @@ dict(slug="punggol", name="Punggol", region="North-East",
  faqs=[
   ("The digital lock that came with my Punggol BTO keeps failing. Can you replace it?", "Yes. We open it if you're locked out, then recommend and install a reliable replacement with our no-expiry warranty."),
   ("Do you cover Punggol Point and Northshore?", "Yes, all of Punggol, 24/7."),
-  ("I'm locked out of my car in a Punggol carpark. How fast can you come?", "Usually within {ARRIVAL}, and on a recent Punggol job we arrived within 15. We check the log card before opening the car."),
+  ("I'm locked out of my car in a Punggol carpark. How fast can you come?", "Usually within {ARRIVAL}, and on a recent Punggol job we arrived within 15. We check the log card on OneMotoring before opening the car."),
  ],
  nearby=["sengkang", "hougang", "pasir-ris"]),
 
@@ -1008,7 +1008,7 @@ EXTRA_FAQS = {
 "holland-village": ("Do you serve Chip Bee Gardens and Leedon Park?", "Yes. We cover all the landed estates and condos around Holland Village, 24/7."),
 "river-valley": ("How quickly can you get to Robertson Quay at night?", "River Valley is close to the city, so we usually arrive within {ARRIVAL}, any time."),
 "sentosa-cove": ("Do you come to Sentosa Cove at night?", "Yes, 24/7. Let estate security know we're coming so we can get to you quickly."),
-"newton": ("Can you open my car in a Newton condo carpark?", "Yes. Tell us the carpark level, lot number and car model, and let the guardhouse know. We open cars without damage after checking the log card."),
+"newton": ("Can you open my car in a Newton condo carpark?", "Yes. Tell us the carpark level, lot number and car model, and let the guardhouse know. We open cars without damage after checking the log card on OneMotoring."),
 "paterson": ("Do you work with condo management in Paterson?", "Yes. We coordinate with the concierge or management office, and check proof of residence or ownership before opening anything."),
 "toa-payoh": ("Can you replace the lock on an old timber door in Toa Payoh?", "Yes. Older timber doors often have mortise locks set into the door edge. We'll fit a replacement that suits the existing cut-out where possible, so the door doesn't need extra work."),
 "bishan": ("Do you serve landed homes near Upper Thomson?", "Yes. We handle main gates, side gates and front doors on landed homes in Bishan and Thomson, including homes with several locks on one entrance."),

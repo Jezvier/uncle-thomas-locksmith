@@ -195,7 +195,7 @@ dict(
 <li><strong>Dealer:</strong> genuine new keys, but it can take time and usually costs more.</li>
 <li><strong>Locksmith cloning:</strong> a copy of your working key, often done quickly. Ideal for a spare.</li>
 </ul>
-<p>Either way, you'll need to show that the car is yours, for example your NRIC and the vehicle log card.</p>
+<p>Either way, you'll need to show that the car is yours, for example your NRIC and the vehicle log card on OneMotoring.</p>
 
 <h2>Brands we work with</h2>
 <p>All major brands, including Toyota, Honda, Mercedes-Benz, BMW, Audi, Volkswagen, Mazda, Lexus, Land Rover, Hyundai, Kia, Nissan, Porsche, Volvo, Mitsubishi and Subaru. Find your brand on our <a href="~/car-locksmith/">car locksmith page</a>.</p>
@@ -212,7 +212,7 @@ dict(
   ("Can you make a spare car key fob from my existing key?", "Yes. We clone car key fobs for all major brands. Send your car's make, model, year and a photo of the key for a quote."),
   ("I've lost all my car keys. Can you help?", "It depends on the make, model and year. Call or WhatsApp us with the details and we'll tell you honestly what's possible."),
   ("Is a locksmith cheaper than the dealer for a spare key?", "Often yes, and usually faster. We give you a price before you book."),
-  ("What do I need to show to get a car key cloned?", "Proof the car is yours, such as your NRIC and the vehicle log card."),
+  ("What do I need to show to get a car key cloned?", "Proof the car is yours, such as your NRIC and the vehicle log card on OneMotoring."),
  ],
 ),
 ]

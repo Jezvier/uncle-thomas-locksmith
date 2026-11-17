@@ -4,7 +4,7 @@ EXTRA = {
 "locked-out-of-hdb-flat": """
 <h2>Special situations</h2>
 <h3>A child is locked inside</h3>
-<p>Keep talking to the child calmly through the door so they stay near it and don't panic. If they're very young, can't follow instructions, or there's any risk (a stove, a window, medicine within reach), call 995. Otherwise call a locksmith and tell them a child is inside — we'll treat it as urgent.</p>
+<p>Keep talking to the child calmly through the door so they stay near it and don't panic. If there's any risk to the child's safety (a stove, a window, medicine within reach, or they're too young to follow instructions), call 995. Otherwise call a locksmith and tell them a child is inside — we'll treat it as urgent.</p>
 <h3>Bedroom or toilet door locked from inside</h3>
 <p>Most interior doors use privacy locks with an emergency release on the outside — often a small slot or hole. If you can't find it or it doesn't work, a locksmith can usually open it in minutes without damage.</p>
 <h3>Key snapped in the lock</h3>

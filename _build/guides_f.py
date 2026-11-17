@@ -190,7 +190,7 @@ dict(
 </ol>
 
 <h2>Upgrade at the same time?</h2>
-<p>Moving in is a natural time to switch to a digital lock, so there are no keys to lose or hand over. If your main door is fire-rated, the digital lock must be SCDF-certified: see <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>. Not sure which type you want? Read <a href="~/guides/main-door-lock-types/">main door lock types explained</a>.</p>
+<p>Moving in is a natural time to switch to a digital lock, so there are no keys to lose or hand over. If your main door is fire-rated, the digital lock must be certified for fire resistance, rated at least as high as the door: see <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>. Not sure which type you want? Read <a href="~/guides/main-door-lock-types/">main door lock types explained</a>.</p>
 
 <h2>What it costs</h2>
 <p>Main door and gate lock replacement starts from {P_REPLACE} per lock, and letterbox locks from {P_LETTERBOX}, including the lock and installation. Every lock comes with our no-expiry warranty, and we confirm the price before we come. WhatsApp {PHONE} photos of your locks for a quote.</p>
@@ -237,7 +237,7 @@ dict(
 
 <h2>What matters on an HDB main door</h2>
 <ul>
-<li><strong>Fire-rated doors:</strong> many HDB main doors are fire-rated, with a door closer you shouldn't remove. A digital lock on a fire-rated door must be SCDF-certified: see <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>.</li>
+<li><strong>Fire-rated doors:</strong> many HDB main doors are fire-rated, with a door closer you shouldn't remove. A digital lock on a fire-rated door must be certified for fire resistance (SCDF's rule since March 2024; SCDF itself doesn't certify products): see <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>.</li>
 <li><strong>Fit the existing cut-out:</strong> a lock that suits your door's current holes keeps the door intact. Extra holes can be hidden with a cover plate.</li>
 <li><strong>Match the gate:</strong> door and gate together decide how secure (and how convenient) your entrance is. See <a href="~/guides/hdb-gate-lock-types/">HDB gate lock types</a>.</li>
 </ul>
@@ -250,7 +250,7 @@ dict(
   ("What is a mortise lock?", "A lock whose body sits inside a pocket cut into the edge of the door, usually with lever handles and a key cylinder. It's very common on HDB and condo main doors."),
   ("Is a mortise lock better than a rim lock?", "A mortise lock is hidden inside the door, neater and harder to attack, but needs a thick enough door. A rim lock suits gates and doors where a mortise won't fit."),
   ("Mortise lock or deadbolt: which is more secure?", "Many mortise locks include a deadbolt. A deadbolt, separate or built in, makes a door much harder to force than a spring latch alone."),
-  ("Which lock is best for an HDB main door?", "Usually a quality mortise lockset with a deadbolt, or an SCDF-certified digital lock with a mechanical backup if the door is fire-rated."),
+  ("Which lock is best for an HDB main door?", "Usually a quality mortise lockset with a deadbolt, or, if the door is fire-rated, a digital lock certified for fire resistance with a mechanical backup."),
  ],
 ),
 # ----------------------------------------------------------------------

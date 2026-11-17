@@ -1,11 +1,11 @@
 {
 "/": {
 "date": "2026-11-17",
-"hash": "v2:cc7ec462fc815741e60e013cf5a48245"
+"hash": "v2:641a98c1a790e848a1d4ff30c43a6559"
 },
 "about/": {
 "date": "2026-11-17",
-"hash": "v2:3c1305199bc94b9f44b914c61c971918"
+"hash": "v2:df9828e71a86ae627488c4c72d0861ba"
 },
 "areas/": {
 "date": "2026-11-17",
@@ -37,7 +37,7 @@
 },
 "areas/bukit-timah/": {
 "date": "2026-11-17",
-"hash": "v2:fb7cdb218d42e87211ed0c3ed093ccf2"
+"hash": "v2:c3f4697a9d9125c1ba95966a90249c18"
 },
 "areas/cbd-orchard/": {
 "date": "2026-11-17",
@@ -77,7 +77,7 @@
 },
 "areas/newton/": {
 "date": "2026-11-17",
-"hash": "v2:3429c5d58fab3206196c37289f84d2d3"
+"hash": "v2:46be9ea8a17e6f69c59588cb5c63721e"
 },
 "areas/novena/": {
 "date": "2026-11-17",
@@ -93,7 +93,7 @@
 },
 "areas/punggol/": {
 "date": "2026-11-17",
-"hash": "v2:0cfdfc1a34937762bf164ff72213e6b2"
+"hash": "v2:3c7554b69c9fd365b5bdbcef58b2b663"
 },
 "areas/queenstown/": {
 "date": "2026-11-17",
@@ -149,11 +149,11 @@
 },
 "car-key-duplicate/": {
 "date": "2026-11-17",
-"hash": "v2:f09c089e35b18dce48b25128f8318fff"
+"hash": "v2:e83d770f045fdc019d5c157f1256f31e"
 },
 "car-locksmith/": {
 "date": "2026-11-17",
-"hash": "v2:547259835228791b3f6490460e5680d4"
+"hash": "v2:4933f68aae69eba88e658adac953ca8d"
 },
 "car-locksmith/audi/": {
 "date": "2026-11-17",
@@ -181,15 +181,15 @@
 },
 "car-locksmith/land-rover/": {
 "date": "2026-11-17",
-"hash": "v2:3af0b6f6280cfd85fdef299eb7aab838"
+"hash": "v2:be9922d75d4468f51b2858d73374f790"
 },
 "car-locksmith/lexus/": {
 "date": "2026-11-17",
-"hash": "v2:e390ee4da4bc28705cb31b550f27842d"
+"hash": "v2:73845e75bba8e760ecdd932e3a9b92a9"
 },
 "car-locksmith/mazda/": {
 "date": "2026-11-17",
-"hash": "v2:3ae6c9faef18776536be670544a93231"
+"hash": "v2:6a324a932f46041919263b1bb366de89"
 },
 "car-locksmith/mercedes-benz/": {
 "date": "2026-11-17",
@@ -213,11 +213,11 @@
 },
 "car-locksmith/peugeot/": {
 "date": "2026-11-17",
-"hash": "v2:6302612745e4701a55944019fffae79e"
+"hash": "v2:8309e097dc1fcc8a7c52bec8a650fc49"
 },
 "car-locksmith/porsche/": {
 "date": "2026-11-17",
-"hash": "v2:46bb055c913a07f5842142ea5d350d85"
+"hash": "v2:de147a944931c0b62904c6f0925caea6"
 },
 "car-locksmith/skoda/": {
 "date": "2026-11-17",
@@ -252,8 +252,8 @@
 "hash": "v2:d3765b0327153c9185234761d12ec11b"
 },
 "contact/": {
-"date": "2026-11-15",
-"hash": "v2:b6d33ee9aba3492864bf4d7d7eeae069"
+"date": "2026-11-17",
+"hash": "v2:73d469e644e8a5697c938c6d41c78423"
 },
 "digital-lock-installation/": {
 "date": "2026-11-17",
@@ -261,7 +261,7 @@
 },
 "digital-lock-opening/": {
 "date": "2026-11-17",
-"hash": "v2:7c37b7bb3ca821589d5cc08d5cd4e8eb"
+"hash": "v2:3f7c7ec2fab5ebe036d7b69a68678160"
 },
 "digital-lock-opening/aqara/": {
 "date": "2026-11-17",
@@ -341,7 +341,7 @@
 },
 "emergency-locksmith/": {
 "date": "2026-11-17",
-"hash": "v2:59cc72774393d78d38b33476123de85d"
+"hash": "v2:b6eb115538eabdf56371331545fde6ae"
 },
 "glass-door-lock/": {
 "date": "2026-11-17",
@@ -356,24 +356,24 @@
 "hash": "v2:47efbd68d8127d56e81dccaad845e42d"
 },
 "guides/car-key-fob-not-working/": {
-"date": "2026-11-15",
-"hash": "v2:7a09bd31d44f8cad59c7796b09067bad"
+"date": "2026-11-17",
+"hash": "v2:b6fca8ded73b2b701ab817fa0bcb30fd"
 },
 "guides/change-locks-new-home/": {
-"date": "2026-11-15",
-"hash": "v2:560f44a457357d96244eed2b41b716e5"
+"date": "2026-11-17",
+"hash": "v2:923d999a43a7b879074d34b175122fcc"
 },
 "guides/digital-lock-battery-dead/": {
 "date": "2026-11-17",
-"hash": "v2:9edabc48b9c5f6c50a700cebbf15565a"
+"hash": "v2:99b2f61aa6b467b09af6c05ff49f634c"
 },
 "guides/digital-lock-fire-rated-door-scdf/": {
 "date": "2026-11-17",
-"hash": "v2:7c0b1782f97f3dc302d0aa1327607985"
+"hash": "v2:e60cfd9b793097db11fd999b96be002d"
 },
 "guides/digital-lock-repair/": {
 "date": "2026-11-17",
-"hash": "v2:50b71f456736c8b855c3bfdedba1f0b3"
+"hash": "v2:c899ed93b13374a1819e452c6a07f0a6"
 },
 "guides/digital-vs-traditional-lock-hdb/": {
 "date": "2026-11-17",
@@ -381,27 +381,27 @@
 },
 "guides/door-lock-jammed/": {
 "date": "2026-11-17",
-"hash": "v2:c90643b7076d21253a2fd99c6d832f40"
+"hash": "v2:ea8e8d3702662a9f9c87d6eaad40dae8"
 },
 "guides/forgot-digital-lock-pin/": {
-"date": "2026-11-15",
-"hash": "v2:bc3fa6e0ec0a8681b5d1a0741a567432"
+"date": "2026-11-17",
+"hash": "v2:4f0f349a6fe4be1a33fb04d63eab17b2"
 },
 "guides/forgot-safe-combination/": {
-"date": "2026-11-15",
-"hash": "v2:1ac7744236ee7eb9f790429293360a46"
+"date": "2026-11-17",
+"hash": "v2:ffd903b8db94fcd6073ce0b4fe6ba3e8"
 },
 "guides/hdb-gate-lock-types/": {
 "date": "2026-11-17",
 "hash": "v2:093623fcde0b02a549d2a6dcf6f30c4e"
 },
 "guides/how-to-choose-a-locksmith/": {
-"date": "2026-11-15",
-"hash": "v2:9bd72d84eab50a0f5d97720b7aa61368"
+"date": "2026-11-17",
+"hash": "v2:d223f41877e2d69a3a1d7e3d19f5b23a"
 },
 "guides/how-to-choose-a-safe-locksmith/": {
-"date": "2026-11-15",
-"hash": "v2:e6f29ebe199de28ff735048c09380b48"
+"date": "2026-11-17",
+"hash": "v2:a00af5bba204939c235aa081245014fa"
 },
 "guides/how-to-choose-a-safe-singapore/": {
 "date": "2026-11-15",
@@ -416,32 +416,32 @@
 "hash": "v2:e9de5672a3d9647347e4cdfacae7b4e1"
 },
 "guides/locked-out-of-hdb-flat/": {
-"date": "2026-11-15",
-"hash": "v2:5c499113e5dc0a185666226a9fb28cea"
+"date": "2026-11-17",
+"hash": "v2:db8d15aa957448531ae3afff3c9e78ce"
 },
 "guides/locksmith-cost-singapore/": {
 "date": "2026-11-17",
-"hash": "v2:02ddf5b6b596936ec864cd306c09b1ec"
+"hash": "v2:726be10eeb4a6eb021428cd1594cfe96"
 },
 "guides/lost-car-key-fob/": {
 "date": "2026-11-17",
-"hash": "v2:94e967cbc37c66d96b750a889dd1a239"
+"hash": "v2:c498deee494227adf2661a172ad6aaa1"
 },
 "guides/lost-house-key/": {
-"date": "2026-11-15",
-"hash": "v2:21dd96bf7989dbc91e0cd0e5fcf36b89"
+"date": "2026-11-17",
+"hash": "v2:834d44f99ea0350d209d5443c78aaf56"
 },
 "guides/lost-letterbox-key/": {
 "date": "2026-11-15",
 "hash": "v2:e200f0bd98a9ddb1c84c6c96c892fa8f"
 },
 "guides/lost-safe-key/": {
-"date": "2026-11-15",
-"hash": "v2:5fe06a7d7e5fec316b6ae2ad1905cedb"
+"date": "2026-11-17",
+"hash": "v2:f236c3438e395d4e525373e7ae8f9775"
 },
 "guides/main-door-lock-types/": {
-"date": "2026-11-15",
-"hash": "v2:4673eadca3dae36f2720d1172a07ee2f"
+"date": "2026-11-17",
+"hash": "v2:5f2708e34bca411e96a8b981083ef111"
 },
 "guides/opening-a-deceased-persons-safe/": {
 "date": "2026-11-15",
@@ -453,27 +453,27 @@
 },
 "guides/room-door-locked-from-inside/": {
 "date": "2026-11-17",
-"hash": "v2:784a729d1d1c12ff4de0ccd1e0f756b5"
+"hash": "v2:bc02b6b9313e416bab4ab48cd42f18db"
 },
 "guides/safe-box-battery-dead/": {
-"date": "2026-11-15",
-"hash": "v2:67c83363bfc75b36d901af39e45e3e8d"
+"date": "2026-11-17",
+"hash": "v2:568313c027350e66b069519d5c26fb2b"
 },
 "guides/safe-drilling-explained/": {
-"date": "2026-11-15",
-"hash": "v2:2f51e745181829a9e0ab428239ceff04"
+"date": "2026-11-17",
+"hash": "v2:82aab03b9f93f7621610459a187f9d05"
 },
 "guides/safe-wont-open-correct-code/": {
-"date": "2026-11-15",
-"hash": "v2:f0c8c666397560d8dc04aa74591de781"
+"date": "2026-11-17",
+"hash": "v2:6f042a6f0c24544a5718cf385a5ffb64"
 },
 "guides/smart-lock-for-hdb-gate/": {
 "date": "2026-11-17",
-"hash": "v2:7cd32913c06cfaa4d30600a99787c0b6"
+"hash": "v2:4ec58c9ff0b57ce63b03affb9df00a61"
 },
 "hdb-gate-digital-lock/": {
 "date": "2026-11-17",
-"hash": "v2:9a165bc594e3167c81c2adeac14636d1"
+"hash": "v2:5e9705b187ea69f6e2cba2c7b79f9e7f"
 },
 "hdb-gate-lock-replacement/": {
 "date": "2026-11-17",
@@ -481,7 +481,7 @@
 },
 "hdb-main-door-lock-replacement/": {
 "date": "2026-11-17",
-"hash": "v2:91b7d90eea3fe0e7a53ee7f133f10f84"
+"hash": "v2:67ef8f81c1681a36c254f515536e6022"
 },
 "hotel-safe-opening/": {
 "date": "2026-11-15",
@@ -489,7 +489,7 @@
 },
 "letterbox-lock-replacement/": {
 "date": "2026-11-17",
-"hash": "v2:6b2fda52fd1ef150d936cf46a083480d"
+"hash": "v2:728c1bda0c0d37b50455fc0cf4d15130"
 },
 "lock-replacement/": {
 "date": "2026-11-17",
@@ -573,7 +573,7 @@
 },
 "safe-opening/sentrysafe/": {
 "date": "2026-11-17",
-"hash": "v2:2b368728d6609d0629d12aa74201e4c7"
+"hash": "v2:1160a6f4b00e1473d9605fcb96deb461"
 },
 "safe-opening/uchida/": {
 "date": "2026-11-17",

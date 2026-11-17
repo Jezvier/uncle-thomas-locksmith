@@ -234,7 +234,7 @@ dict(
 <p>These are starting prices. Your final price is confirmed before any work begins.</p>
 
 <h2>What the wider market charges</h2>
-<p>Published starting prices from Singapore locksmiths in 2026 generally put a standard daytime lockout somewhere around S$80–S$90, with after-hours lockouts higher. Some locksmiths advertise much lower "call-out" or "from" prices; these often don't include the actual work. Digital lock opening, safes and lock replacements typically cost more than a basic lockout. Prices change, so always confirm with the locksmith you call.</p>
+<p>Published starting prices vary a lot between Singapore locksmiths, and after-hours work usually costs more. Some locksmiths advertise much lower "call-out" or "from" prices; these often don't include the actual work. Digital lock opening, safes and lock replacements typically cost more than a basic lockout. Prices change, so always confirm with the locksmith you call.</p>
 
 <h2>What makes a locksmith price go up?</h2>
 <h3>1. Time of day</h3>
@@ -269,12 +269,12 @@ dict(
 </ol>
 
 <h2>Does insurance cover locksmith costs?</h2>
-<p>Many home insurance policies in Singapore cover replacing locks and keys, either as a standard benefit or an optional add-on, typically up to S$500–S$1,000. Check your policy, and keep the locksmith's receipt in case you need to claim.</p>
+<p>Some home insurance policies cover replacing locks and keys, as a standard benefit or an optional add-on, with limits that vary by insurer. Check your policy wording, and keep the locksmith's receipt in case you need to claim. If a bill is ever disputed, that receipt is also what CASE or the Small Claims Tribunals will ask for.</p>
 
 <div class="callout navy"><p><strong>Our promise:</strong> the price we agree is the price you pay. Call or WhatsApp {PHONE}, 24/7. <a href="~/prices/">See the full price list</a>.</p></div>
 """,
  faqs=[
-  ("How much is a locksmith in Singapore for a lockout?", "Uncle Thomas charges from {P_LOCKOUT} for a daytime lockout and from {P_AFTERHOURS} after hours, weekends and public holidays. Published market prices generally start around S$80–S$90."),
+  ("How much is a locksmith in Singapore for a lockout?", "Uncle Thomas charges from {P_LOCKOUT} for a daytime lockout and from {P_AFTERHOURS} after hours, weekends and public holidays. Other locksmiths' prices vary, so compare the total for the job."),
   ("Why do locksmiths charge more at night?", "After-hours work means the locksmith is on call around the clock. Most locksmiths in Singapore charge a higher rate for nights, weekends and public holidays."),
   ("Is there a call-out fee?", "We quote the job at your location and tell you the total before we set off, so you won't be surprised by extra fees."),
   ("How much does it cost to change a lock in Singapore?", "With us, main door or gate lock replacement starts from {P_REPLACE} including supply and installation, with a no-expiry warranty."),

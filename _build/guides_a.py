@@ -185,7 +185,7 @@ dict(
 </ul>
 
 <h2>6. Call a safesmith</h2>
-<p>A trained safesmith can usually open a safe with minimal damage, using methods matched to the lock type. Safes are a specialist field, and few locksmiths in Singapore have formal safe training. Uncle Thomas trained in the USA in 1999 with ALOA and SAVTA, including SAVTA's classes in opening safe combination locks, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong. See <a href="~/safe-opening/">safe opening in Singapore</a>, and if you're worried about damage, read <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
+<p>A trained safesmith can usually open a safe with minimal damage, using methods matched to the lock type. Safes are a specialist field, so ask any locksmith what safe training they have. Uncle Thomas trained in the USA in 1999 with ALOA and SAVTA, including SAVTA's classes in opening safe combination locks, and has since been called to open safes for multinational companies, on board ships and cruise liners, and in Thailand, Malaysia, China and Hong Kong. See <a href="~/safe-opening/">safe opening in Singapore</a>, and if you're worried about damage, read <a href="~/guides/safe-drilling-explained/">does my safe need drilling?</a></p>
 
 <h2>What to have ready</h2>
 <ul>
@@ -230,7 +230,7 @@ dict(
 <p>Write down or screenshot the price you were quoted. If it changes at your door, you have something to point to.</p>
 
 <h2>2. Be careful with very low advertised prices</h2>
-<p>An advert that seems far cheaper than everyone else can be a sign of bait pricing: a low "call-out" or "starting" price that grows with extra charges once the locksmith arrives — "special tools", "after-hours surcharge", "high-security lock". Compare a few locksmiths' published prices. In 2026, published prices for a standard daytime lockout in Singapore generally start from around S$80–S$90, with higher rates after hours. Ours are on our <a href="~/prices/">prices page</a> and explained in our <a href="~/guides/locksmith-cost-singapore/">locksmith cost guide</a>.</p>
+<p>An advert that seems far cheaper than everyone else can be a sign of bait pricing: a low "call-out" or "starting" price that grows with extra charges once the locksmith arrives — "special tools", "after-hours surcharge", "high-security lock". Compare a few locksmiths' published prices, and compare the total for the whole job, not the headline figure. Ours are on our <a href="~/prices/">prices page</a> and explained in our <a href="~/guides/locksmith-cost-singapore/">locksmith cost guide</a>.</p>
 
 <h2>3. Check real, recent reviews</h2>
 <p>Look at the locksmith's Google reviews. Focus on recent ones, and on reviews that mention <strong>price and honesty</strong>, not just speed. A few bad reviews among many good ones is normal; repeated complaints about prices changing on site are a red flag. Check that the business name on the reviews matches the one you're calling.</p>
@@ -280,7 +280,7 @@ dict(
 <div class="callout navy"><p><strong>Uncle Thomas Locksmith:</strong> price before work, ID verified, damage-free first, and a no-expiry warranty. Call or WhatsApp {PHONE}, 24/7. <a href="~/about/">Meet Uncle Thomas</a>.</p></div>
 """,
  faqs=[
-  ("What's a fair price for a locksmith in Singapore?", "For a standard daytime lockout, published prices in 2026 generally start from around S$80–S$90, with higher rates after hours. Digital locks, safes and replacements cost more. Always confirm the total before work begins."),
+  ("What's a fair price for a locksmith in Singapore?", "Published prices vary widely, and a low headline price can grow at the door. Compare the total for the whole job: digital locks, safes and replacements cost more than a basic lockout. Always confirm the total before work begins."),
   ("Should a locksmith ask for my ID?", "Yes. Checking proof of residence or ownership is a sign of a trustworthy locksmith."),
   ("Do locksmiths in Singapore need a licence?", "No. Locksmithing isn't a licensed trade in Singapore, so there's no official register. Check the business's ACRA registration (UEN), its reviews and its published prices instead."),
   ("Is drilling the lock ever necessary?", "Sometimes — for broken lock bodies or some high-security locks. But most standard lockouts can be opened without drilling. Ask why before agreeing."),

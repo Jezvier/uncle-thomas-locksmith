@@ -9,7 +9,7 @@ import icons
 BRANDS = ", ".join(C.DIGITAL_LOCK_BRANDS)
 
 ID_POLICY = ("For your security, we check ID before every job — your NRIC, Singpass or other ID proof — "
-             "and proof of residence or ownership, for example NRIC with your address, a tenancy agreement or utility bill, or the car's log card.")
+             "and proof of residence or ownership, for example NRIC with your address, a tenancy agreement or utility bill, or the car's log card on OneMotoring.")
 WARRANTY = "Every lock replacement and installation comes with our warranty, covering both the lock and our installation, with no expiry date."
 NO_REPAIR = ("We don't do key duplication or key cutting (the one exception is car key fobs, which we clone). "
              "Whether a faulty lock can be repaired depends on the lock and the fault: send a photo and we'll quote. If a repair isn't worth it, we replace the lock, so the problem doesn't come back.")
@@ -317,7 +317,7 @@ dict(
 {CAR_BRAND_LINKS}
 <p>Also: {CAR_BRANDS_MORE} and more. Not sure about your model? Call or WhatsApp {PHONE} to check.</p>
 
-<div class="callout"><p><strong>Proof of ownership:</strong> Before unlocking a car or cloning a key, we check that the car is yours, for example your NRIC against the vehicle log card, or a rental or company car agreement.</p></div>
+<div class="callout"><p><strong>Proof of ownership:</strong> Before unlocking a car or cloning a key, we check that the car is yours, for example your NRIC against the vehicle log card on OneMotoring, or a rental or company car agreement.</p></div>
 
 <h2>Price</h2>
 <p>Car lockouts are from {P_CAR}. Spare key fob cloning is {P_FOB}, depending on the make, model and key type. WhatsApp {PHONE} your location, car model and a photo of the key, and we'll confirm the exact price before we set off. See all <a href="~/prices/">prices</a>.</p>

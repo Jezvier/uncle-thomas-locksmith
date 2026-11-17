@@ -41,7 +41,7 @@ dict(
 <p>Not sure which lock you have? Read <a href="~/guides/main-door-lock-types/">main door lock types explained</a>, or just send us a photo.</p>
 
 <h2>Fire-rated doors: keep the door intact</h2>
-<p>HDB says its fire-rated entrance doors are fitted with a door closer, a self-closing device that keeps the door shut in a fire, and that you shouldn't remove it. When we change a lock, we choose one that suits your door's existing cut-out, so we don't weaken the door. If the old lock left extra holes, a stainless cover plate hides them neatly. Fitting a digital lock on a fire-rated door? Since 1 March 2024, SCDF requires it to be certified: see <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>.</p>
+<p>HDB says its fire-rated entrance doors are fitted with a door closer, a self-closing device that keeps the door shut in a fire, and that you shouldn't remove it. When we change a lock, we choose one that suits your door's existing cut-out, so we don't weaken the door. If the old lock left extra holes, a stainless cover plate hides them neatly; on a fire-rated door we avoid making new ones. Fitting a digital lock on a fire-rated door? Since 1 March 2024, SCDF requires it to be certified: see <a href="~/guides/digital-lock-fire-rated-door-scdf/">digital locks on fire-rated doors</a>.</p>
 
 <h2>How it works</h2>
 <ol>
@@ -60,8 +60,8 @@ dict(
 """,
  faqs=[
   ("How much does it cost to change an HDB main door lock?", "From {P_REPLACE}, including the new lock and installation, with a no-expiry warranty. The price depends on the lock you choose, and we confirm it before we come."),
-  ("Will a new lock fit my HDB door's existing holes?", "We choose a lock that suits your door's cut-out. If the old lock left extra holes, a stainless cover plate hides them neatly."),
-  ("Can you change the lock on a fire-rated HDB main door?", "Yes. We keep the door intact and leave the door closer in place. For digital locks on fire-rated doors, the lock must be SCDF-certified."),
+  ("Will a new lock fit my HDB door's existing holes?", "We choose a lock that suits your door's cut-out. If the old lock left extra holes, a stainless cover plate hides them neatly; on a fire-rated door we avoid making new ones."),
+  ("Can you change the lock on a fire-rated HDB main door?", "Yes. We keep the door intact and leave the door closer in place. For digital locks on fire-rated doors, the lock must be certified for fire resistance, rated at least as high as the door."),
   ("Do you repair HDB door locks?", "No. We replace faulty locks with new ones, which are more reliable and come with our no-expiry warranty."),
   ("Can you change the lock the same day?", "Often, yes. WhatsApp photos of your lock to {PHONE} and we'll tell you when we can come."),
  ],
@@ -159,7 +159,7 @@ dict(
 <h2>What we need</h2>
 <ol>
 <li><strong>Your working key</strong> and the car.</li>
-<li><strong>Your NRIC and the car's log card.</strong> We check they match before cloning any key: it protects you, and every car owner.</li>
+<li><strong>Your NRIC and the car's log card on OneMotoring.</strong> We check they match before cloning any key: it protects you, and every car owner.</li>
 <li><strong>The make, model and year</strong>, sent first on WhatsApp with a photo of the key, so we can confirm we can clone it.</li>
 </ol>
 
@@ -171,7 +171,7 @@ dict(
 <p>Car key fob cloning is the one key service we offer. We don't duplicate or cut house, gate or letterbox keys: if those are lost, we <a href="~/lock-replacement/">replace the lock</a> and give you new keys.</p>
 """,
  faqs=[
-  ("Can you duplicate a car key in Singapore without going to the dealer?", "Yes, if you have a working key. We clone key fobs for all major car brands after checking your NRIC against the log card."),
+  ("Can you duplicate a car key in Singapore without going to the dealer?", "Yes, if you have a working key. We clone key fobs for all major car brands after checking your NRIC against the log card on OneMotoring."),
   ("How much is a spare car key in Singapore?", "It depends on the make, model and key type, so it's quoted per car. WhatsApp {PHONE} the details and a photo of the key."),
   ("I lost all my car keys. Can you make a new one?", "We clone from a working key. If every key is lost, the dealer is usually the route. If you're locked out meanwhile, we can open the car without damage."),
   ("Which car brands can you clone keys for?", "All major car brands. Send us the make, model, year and a photo of the key to confirm."),
@@ -481,7 +481,7 @@ dict(
   ("How much does it cost to install a digital lock on an HDB gate?", "Installation starts from {P_DIGITAL_INSTALL}. If we supply the lock, its price is added and you get one total before we come. WhatsApp photos of your gate to {PHONE} for an exact quote."),
   ("Can you supply the digital lock for my gate?", "Yes. Tell us your budget and the features you want, and we'll recommend a gate lock that suits your gate. We can also fit one you've already bought."),
   ("Can my HDB gate take a digital lock?", "Most HDB metal gates can take a rim digital lock, and some can take a mortise lock. Send us photos of your gate so we can confirm before you buy."),
-  ("Does a digital lock on an HDB gate need SCDF certification?", "SCDF's certification rule covers digital locks on fire-rated doors. If you're fitting a matching gate and door set, the main door lock is the one to check."),
+  ("Does a digital lock on an HDB gate need fire certification?", "SCDF's rule on fire-resistance certification covers digital locks on fire-rated doors. If you're fitting a matching gate and door set, the main door lock is the one to check."),
   ("Will rain damage a digital gate lock?", "Rain and corridor washing are the main reasons gate locks fail. Choose a model sold for gates, with its water resistance stated, and wipe the keypad dry after heavy rain."),
   ("Is there a warranty?", "Yes. Every installation comes with our warranty, with no expiry date."),
  ],

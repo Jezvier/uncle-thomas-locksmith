@@ -180,7 +180,7 @@ dict(
 <p><em>This guide summarises public guidance from SCDF and HDB as of October 2026. Rules can change, so check the linked SCDF page for the latest requirements.</em></p>
 """,
  faqs=[
-  ("Do digital locks on HDB doors need SCDF certification?", "If the door is a fire door, yes. Since 1 March 2024, SCDF requires digital locks installed on fire doors to be certified for fire resistance, with a rating at least equal to the door's and a mechanical fail-safe."),
+  ("Do digital locks on HDB doors need fire certification?", "If the door is a fire door, yes. Since 1 March 2024, SCDF requires digital locks installed on fire doors to be certified for fire resistance, with a rating at least equal to the door's and a mechanical fail-safe."),
   ("Do I have to replace a digital lock I installed before March 2024?", "No. SCDF doesn't require existing uncertified locks on residential fire doors to be replaced, but it encourages homeowners to switch to a certified one."),
   ("How do I know if my main door is fire-rated?", "Look for a label on the door edge near the hinges, and a door closer at the top. HDB residents can also check with HDB, and condo residents with management."),
   ("What test standards should a fire-rated digital lock meet?", "SCDF lists SS 332 or EN 1634-1. Check the standard on the lock's Certificate of Conformity."),

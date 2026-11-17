@@ -47,7 +47,7 @@ EXTRA = {
   "<p>Two Land Rover features change how lockouts happen. The <strong>Activity Key</strong> is a wristband waterproof to 40 m for "
   "sport and the beach: once it's activated, <strong>any smart key left inside the car is disabled</strong>, so the car stays secure "
   "with your fob in the glovebox. And a smart key left inside when you close the luggage compartment with the alarm armed is "
-  "deactivated too. If you're locked out with the key inside, we check the log card and open the car without damage.</p>"),
+  "deactivated too. If you're locked out with the key inside, we check the log card on OneMotoring and open the car without damage.</p>"),
  ], sources=[
   ("Land Rover Discovery Sport (2023) handbook: smart key", "https://www.ownerinfo.landrover.com/document/3A/2023/1665395/proc/G2818154/G2904727"),
   ("Land Rover Defender (2024) handbook: smart key", "https://www.ownerinfo.landrover.com/document/3E/2024/1697590/proc/G3244912/G3359301")]),
@@ -175,7 +175,7 @@ EXTRA = {
  ("Locked out of a Peugeot",
   "<p>The big boots of the 3008 and 5008 are easy places to leave a key while loading. If the car has locked with the key inside, don't try "
   "a wire hanger down the window seal: modern doors are full of wiring for the windows, mirrors and locks. We open the door with "
-  "non-destructive tools, check the log card against your NRIC, and you're on your way.</p>"),
+  "non-destructive tools, check the log card on OneMotoring against your NRIC, and you're on your way.</p>"),
  ], sources=[("Peugeot 508 handbook: key battery", "https://www.manualslib.com/manual/1215410/Peugeot-508.html?page=259"),
              ("Peugeot 2008 handbook: remote control", "https://manualslib.com/manual/919944/Peugeot-2008.html?page=55")]),
 "Mitsubishi": dict(sections=[
@@ -221,7 +221,7 @@ EXTRA = {
   "+ side up; if the cover won't close, the cell is the wrong way round. If your key doesn't open this way, don't force it: check the handbook.</p>"),
  ("Locked out of a Porsche",
   "<p>Tight panel gaps and expensive paint are exactly why the wedge-and-rod tricks from online videos are a bad idea on a Porsche. We use "
-  "non-destructive entry tools made for modern cars, and we check the log card and your NRIC before we start.</p>"),
+  "non-destructive entry tools made for modern cars, and we check the log card on OneMotoring and your NRIC before we start.</p>"),
  ], sources=[("Porsche key battery replacement guide (YOUCANIC)", "https://www.youcanic.com/porsche-key-fob-battery-replacement/")]),
 "Audi": dict(sections=[
  ("Audi key battery: CR2032",
@@ -243,7 +243,7 @@ EXTRA = {
   "<p>The manual's sign of a dead key battery: the buttons do nothing and the key's operation indicator light doesn't flash.</p>"),
  ("Mazda lockouts at the void deck",
   "<p>CX-5s and Mazda3s are family cars, and family drop-offs are where keys get left inside: the key goes on the seat while a pram comes "
-  "out of the boot. We check the log card against your NRIC and open the door without damage.</p>"),
+  "out of the boot. We check the log card on OneMotoring against your NRIC and open the door without damage.</p>"),
  ], sources=[("Mazda CX-5 owner's manual: key battery replacement", "https://www.mazdausa.com/static/manuals/2020/cx-5/contents/07031300.html")]),
 "Suzuki": dict(sections=[
  ("Suzuki key battery",
