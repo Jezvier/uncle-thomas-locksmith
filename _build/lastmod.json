@@ -265,79 +265,79 @@
 },
 "digital-lock-opening/aqara/": {
 "date": "2026-11-17",
-"hash": "v2:ccb65b76290b6ea75cca9ec53ff38702"
+"hash": "v2:925df793dfa1fba52ff692d01d9b881e"
 },
 "digital-lock-opening/eufy/": {
 "date": "2026-11-17",
-"hash": "v2:29d80cf3a148a05bdf3ffc425b712432"
+"hash": "v2:7b9ca7649070f7ccbd46ae42fc8997ff"
 },
 "digital-lock-opening/ezviz/": {
 "date": "2026-11-17",
-"hash": "v2:af44679f0b48bf3167de5c1c27fe4388"
+"hash": "v2:016931ad7da3ff0238a1a0362fd45b3a"
 },
 "digital-lock-opening/gateman/": {
 "date": "2026-11-17",
-"hash": "v2:ef06ffa71cfac1071b035c539aed6b52"
+"hash": "v2:9d1559ffca589e64734f219f1f4c9b87"
 },
 "digital-lock-opening/hafele/": {
 "date": "2026-11-17",
-"hash": "v2:59dd617f9a5df0c736dcd9741b18a349"
+"hash": "v2:b2d14cba5be9918898fe07e631d27531"
 },
 "digital-lock-opening/igloohome/": {
 "date": "2026-11-17",
-"hash": "v2:d519f7a14fcebc1d18b2dc98d6591460"
+"hash": "v2:deec887839b6bd534a2f0ecdfb7c72ae"
 },
 "digital-lock-opening/kaadas/": {
 "date": "2026-11-17",
-"hash": "v2:dd95d278532a6c106c9c48a9331f1f8e"
+"hash": "v2:43ff8341fdf21ea4d69e921e91c180f6"
 },
 "digital-lock-opening/lenovo/": {
 "date": "2026-11-17",
-"hash": "v2:73f795aee5e7fcaab63c8aaf5d4dc3a1"
+"hash": "v2:5a7bc6e6081de980bb5bdc57c6d97866"
 },
 "digital-lock-opening/lockly/": {
 "date": "2026-11-17",
-"hash": "v2:8e56e53a52422e8fdebbe6bddb041fdc"
+"hash": "v2:998eb347e3f5664b2d7e21cc338d5796"
 },
 "digital-lock-opening/philips/": {
 "date": "2026-11-17",
-"hash": "v2:6bf68541070542f4e316b2bd83926bd0"
+"hash": "v2:404cb19e9e394c6fe512d1c502617f70"
 },
 "digital-lock-opening/prism/": {
 "date": "2026-11-17",
-"hash": "v2:48706e06deea400d651fddc5070f5970"
+"hash": "v2:42a9fc383393e67d83ad0a915df48a16"
 },
 "digital-lock-opening/samsung/": {
 "date": "2026-11-17",
-"hash": "v2:5683034d116b9b8ea04aedb8bfcd8f2b"
+"hash": "v2:5c9abbcdf7e04af5ad7440dc3486d520"
 },
 "digital-lock-opening/schlage/": {
 "date": "2026-11-17",
-"hash": "v2:7de568a3fd862e7f4f1646f613e17e9e"
+"hash": "v2:07ee8d1b3f82d0bb3246f59728fd6cea"
 },
 "digital-lock-opening/solity/": {
 "date": "2026-11-17",
-"hash": "v2:48ca76d3739d7ddf05d7e73290cbccf3"
+"hash": "v2:c7dc19676764529c8c000655175e542e"
 },
 "digital-lock-opening/tapo/": {
 "date": "2026-11-17",
-"hash": "v2:bb24737ba40f5405f8620df2ca870c9e"
+"hash": "v2:7d42926b342d04e9cf2c6305852404ef"
 },
 "digital-lock-opening/xiaomi/": {
 "date": "2026-11-17",
-"hash": "v2:30548d4c1d0ae3eb8d45c7325c2e1b5c"
+"hash": "v2:c744378f31eda07a455bb0c63a68559f"
 },
 "digital-lock-opening/yale/": {
 "date": "2026-11-17",
-"hash": "v2:1fafea209c7ce907eeb2f9c36078e611"
+"hash": "v2:536fe2d85c7d6f5b0b7b6382f760a20a"
 },
 "digital-lock-opening/yew/": {
 "date": "2026-11-17",
-"hash": "v2:c5ecba11a35dcb2713bf87fef36a9cce"
+"hash": "v2:811ca67bdfd46d4cd83ba7f2f74da0e8"
 },
 "digital-lock-opening/zigbang/": {
 "date": "2026-11-17",
-"hash": "v2:461cd962e96b8c4dfcd90aa006c14f43"
+"hash": "v2:70dd0493ab9c4cd7c6afe56269c9538d"
 },
 "emergency-locksmith/": {
 "date": "2026-11-17",

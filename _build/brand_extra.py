@@ -260,12 +260,12 @@ EXTRA = {
 
 "lock": {
 "Yew": dict(sections=[
- ("Living with a rechargeable Yew lock",
+ ("If your Yew lock is rechargeable",
   "<p>Rechargeable locks change the routine: instead of buying AA batteries, you bring the battery pack to a socket. A full charge lasts "
   "a long time, which makes it easy to forget, so tie it to something you already do, like charging the door and gate locks together on "
   "the first weekend of every other month, or the day either lock first warns you.</p>"
-  "<p>Keep a USB-C cable and a small power bank somewhere outside the flat: the car, your office drawer or a family member's place. With a "
-  "USB-C emergency port, that's the difference between getting in within two minutes and waiting for a locksmith.</p>"),
+  "<p>Keep the right cable and a small power bank somewhere outside the flat: the car, your office drawer or a family member's place. With an "
+  "emergency power port, that's the difference between getting in within two minutes and waiting for a locksmith.</p>"),
  ("Yew door and gate sets: two locks, two batteries",
   "<p>A matched set is still two separate locks, each with its own battery, users and settings. Add fingerprints and codes to both, not "
   "just the door lock, or a family member who can open the door may still be stuck at the gate. If only one of the pair stops responding, "
@@ -276,31 +276,29 @@ EXTRA = {
   "<p>EZVIZ says the DL50FVS stores up to 50 faces, recognises a face in under 1.5 seconds, and reads faces between about 1.2 and 2 metres "
   "off the ground, so young children may need a fingerprint or code instead. It's designed to reject photos and "
   "videos of a face.</p>"
-  "<p>Wi-Fi and video cost battery: EZVIZ notes that staying online shortens battery life, and its support pages suggest turning on "
+  "<p>Wi-Fi and video cost battery: EZVIZ says a Wi-Fi connection may reduce battery life, and its support pages suggest turning on "
   "<em>Power-saving Mode</em> under the lock's Settings → Battery in the app if a charge isn't lasting.</p>"),
  ("Which DL50FVS do you have?",
   "<p>EZVIZ sells the DL50FVS with different lock bodies (for example the 5085 and 6068 versions) and as a <em>Plus</em> model, and the "
   "specifications differ between them. The lock body number matters if the lock ever needs replacing, so note it from the box when it's "
   "installed. The versions we checked all list a USB-C emergency port and a mechanical emergency key with a C-grade cylinder.</p>"),
  ], sources=[("EZVIZ DL50FVS (5085) product page", "https://www.ezviz.com/eu/product/DL50FVS-%285085%29/351275"),
-             ("EZVIZ DL50FVS support and FAQ", "https://support.ezviz.com/product/dl50fvs/55733")]),
+             ("EZVIZ DL50FVS support and FAQ", "https://support.ezviz.com/product/dl50fvs/55733"),
+             ("EZVIZ DL50FVS (6068) product page", "https://www.ezviz.com/eu/product/DL50FVS-%286068%29/351273"),
+             ("EZVIZ DL50FVS Plus product page", "https://www.ezviz.com/product/DL50FVS-Plus/77729")]),
 "Lenovo": dict(sections=[
  ("Which Lenovo smart lock is it?",
-  "<p>Lenovo has sold several smart locks, including the E2, U1, X3, X5 and X5 Max, and they don't all work the same way. The model name is "
+  "<p>Lenovo has sold several smart locks, and they don't all work the same way. The model name is "
   "usually on the inside unit or the battery cover. Note it down now: it's the first thing we, or Lenovo, will ask.</p>"
-  "<p>On the U1, if the battery is flat and there's no brass key to hand, the manual says you can power the lock from outside with a power "
-  "bank or a 5V/1A supply, then unlock as normal. The X3 manual adds the step people skip: once you're in on emergency power, replace the "
-  "batteries straight away.</p>"),
- ("Two-step unlocking on Lenovo locks",
-  "<p>Some Lenovo models, like the U1, can be set to need two methods together, such as fingerprint plus PIN, before the door opens. It's "
+  ""),
+ ("If your lock needs two methods together",
+  "<p>Some smart locks can be set to need two methods together, such as fingerprint plus PIN, before the door opens. It's "
   "more secure, but it doubles the ways to get stuck: a cut finger or a forgotten PIN keeps you out. If you use it, enrol at least one other "
   "household member and keep the mechanical key somewhere outside the home.</p>"),
- ], sources=[("Lenovo Smart Lock U1 user manual", "https://manuals.online/lenovo/door-lock/smart-lock-u1/user-manual/pkqv"),
-             ("Lenovo X3 smart lock user manual", "https://manuals.plus/m/bbadcd7444f788abef3350e92fc16322edd7cfca8272dca6e5508a6371b56e1a"),
-             ("Lenovo X5 Max smart lock user manual", "https://manuals.plus/m/aa1e0d61aedc918df3c60b0329e2971df9c31cd04b5866bb426adf4773ec5701")]),
+ ], sources=[]),
 "Solity": dict(sections=[
- ("Using a 9V battery on a Solity lock",
-  "<p>Solity's guidance for a lock with flat batteries: hold a 9V battery against the external emergency power terminal and, while it's "
+ ("Using emergency power on a Solity lock",
+  "<p>If your model has a 9V terminal, hold a fresh battery to it and, while it's "
   "touching, enter your password. Use a fresh <strong>alkaline</strong> 9V; a tired or rechargeable one may not have enough power to drive "
   "the motor. Where the terminal sits depends on the model, so find yours before you need it.</p>"
   "<p>Once you're in, the 9V has done its job. Replace all the main batteries from inside straight away, or the lock will be dead again the "
@@ -308,7 +306,7 @@ EXTRA = {
  ("A Solity on the door, another on the gate?",
   "<p>Many Singapore homes pair a push-pull lock on the main door with a rim lock on the gate. They're separate locks with separate "
   "batteries: when one warns you, check the other on the same day, and keep a spare 9V where you can reach it from outside.</p>"),
- ], sources=[("Solity manuals and FAQ", "https://manuals.plus/category/solity")]),
+ ], sources=[]),
 },
 
 "safe": {
