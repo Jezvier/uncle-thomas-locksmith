@@ -138,7 +138,7 @@ DATA = {
  reset="Follow Häfele's reset steps for your model, from inside. Do it when you move in, so no previous owner or contractor code still works.",
  lockout="If a code you know is right keeps failing, stop after a couple of tries and use another enrolled method or the key.",
  quirk="If your lock was installed during a renovation, the admin PIN or app account may still be under the contractor's details. Ask them to hand it over so you can manage it yourself.",
- sources=[("TheSmartLocal: digital locks in Singapore (Häfele EL9000)", "https://thesmartlocal.com/read/digital-locks-singapore/")],
+ sources=[],
  faqs=[("My Häfele lock was installed by my contractor and I don't know the master PIN. Can you help?", "If you're locked out, yes, we'll open it. For the master PIN, ask your contractor or Häfele first."),
        ("How do I power a Häfele lock with flat batteries?", "Many models take emergency power through USB or battery contacts on the outside. Check your manual for your model.")]),
 

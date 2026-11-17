@@ -270,6 +270,21 @@ EXTRA = {
   "<p>A matched set is still two separate locks, each with its own battery, users and settings. Add fingerprints and codes to both, not "
   "just the door lock, or a family member who can open the door may still be stuck at the gate. If only one of the pair stops responding, "
   "it's nearly always that lock's own battery rather than a fault with the set.</p>"),
+ ("When someone moves out: clear both locks",
+  "<p>A door-and-gate set means two lists of fingerprints and codes. When a tenant, a helper or a contractor stops needing access, "
+  "delete their fingerprints and codes from <strong>both</strong> locks on the same day: it's easy to clear the door and forget the "
+  "gate, which still lets them through the first barrier. If you don't know how to delete users on your model, the manual for your model "
+  "number has the steps; if you can't find it, a reset from inside and re-enrolling everyone is the clean option.</p>"),
+ ], sources=[]),
+"Gateman": dict(sections=[
+ ("Is your old Gateman worth keeping?",
+  "<p>Many Gateman locks in Singapore are older units that have been on the same door for years. Older digital locks rarely fail without warning, "
+  "and the signs are easy to spot: the motor hums before it turns, keypad buttons need a hard press, a fresh set of batteries runs down "
+  "sooner than it used to, or the latch catches on the strike plate. One of these on its own may just need new batteries; two or more "
+  "usually means the lock is near the end.</p>"
+  "<p>Replacing it on a weekday costs the same as replacing it after it fails at night, minus the lockout. If you replace it, note what's "
+  "on the door now: a new lock needs to fit the existing cut-out, or the door has to be modified. Send us a photo of the front and inside "
+  "and we'll tell you which locks fit. See <a href=\"~/digital-lock-installation/\">digital lock installation</a>.</p>"),
  ], sources=[]),
 "Ezviz": dict(sections=[
  ("EZVIZ DL50FVS face recognition in practice",
