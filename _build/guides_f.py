@@ -34,7 +34,7 @@ dict(
 </ul>
 
 <h2>4. Call a locksmith</h2>
-<p>If there's no emergency release, it doesn't work, or the lock has broken inside, call or WhatsApp {PHONE}, 24/7. Uncle Thomas opens room and toilet doors without damage wherever possible, anywhere in Singapore. Afterwards, we can fit a new privacy lock with a working emergency release, so it doesn't happen again: see <a href="~/lock-replacement/">lock replacement</a>.</p>
+<p>If there's no emergency release, it doesn't work, or the lock has broken inside, call or WhatsApp {PHONE}, 24/7 (see our <a href="~/emergency-locksmith/">emergency lockout service</a>). Uncle Thomas opens room and toilet doors without damage wherever possible, anywhere in Singapore. Afterwards, we can fit a new privacy lock with a working emergency release, so it doesn't happen again: see <a href="~/lock-replacement/">lock replacement</a>.</p>
 
 <h2>How to stop it happening again</h2>
 <ul>

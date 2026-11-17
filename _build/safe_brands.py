@@ -10,6 +10,7 @@ Factory default codes are deliberately NOT published, even where manuals show th
 Independent: not affiliated with any brand.
 """
 import brand_extra
+import config as C
 import re as _re
 import unicodedata as _u
 
@@ -257,8 +258,8 @@ def build(x):
         desc = DESC_OVERRIDE.get(n, desc)
         crumbs = [("Home", ""), ("Services", "services/"), ("Safe opening", "safe-opening/"), (n, path)]
         faqs = b["faqs"] + [
-            (f"Can a locksmith open a {n} safe?", f"Yes. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
-            (f"How much does it cost to open a {n} safe in Singapore?", "With us, safe opening starts from {P_SAFE}; the exact price depends on the model, the lock and what's wrong. WhatsApp photos of the safe's front, keypad or dial and brand label to {PHONE} for a price before we come."),
+            (f"Can a locksmith open {C.a_(n)} safe?", f"Yes. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe, including {n}. We check proof of ownership first, and agree the price before we come."),
+            (f"How much does it cost to open {C.a_(n)} safe in Singapore?", "With us, safe opening starts from {P_SAFE}; the exact price depends on the model, the lock and what's wrong. WhatsApp photos of the safe's front, keypad or dial and brand label to {PHONE} for a price before we come."),
         ]
         jobs = getattr(C_, "BRAND_JOBS", {}).get(f"safe:{n}", [])   # real jobs only (config.JOBS)
         recent = "".join(f'<div class="callout"><p><strong>Recent job:</strong> {j}</p></div>' for j in jobs)
@@ -276,7 +277,7 @@ def build(x):
                 f"Forgot the code, batteries dead, lost the override key, or the {n} safe box won't open even with the right code: what to try first, and how Uncle Thomas, who trained in safe opening in the USA (ALOA and SAVTA), can open it.",
                 ["US-trained (ALOA & SAVTA)", "24/7 islandwide", "Ownership checked"]) +
                 f'''<section class="section"><div class="container narrow prose">
-<p><strong>The short answer:</strong> {_strip(b["battery"]).split(". ")[0]}. {_strip(b["key"]).split(". ")[0]}. If neither works, don't force the handle: call or WhatsApp {{PHONE}}.</p>
+<p><strong>The short answer:</strong> {_strip(b["battery"]).split(". ")[0].rstrip(".")}. {_strip(b["key"]).split(". ")[0].rstrip(".")}. If neither works, don't force the handle: call or WhatsApp {{PHONE}}.</p>
 <h2>{n} safes in Singapore</h2>
 <p>{b["about"]}</p>
 <h2>{n} safe battery dead? How to open it</h2>
@@ -285,7 +286,7 @@ def build(x):
 <p>{b["key"]}</p>
 <h2>Forgot the password on your {n} safe box?</h2>
 <p>{b["forgot"]}</p>
-<h2>How to change or reset the code on a {n} safe</h2>
+<h2>How to change or reset the code on {C.a_(n)} safe</h2>
 <p>{b["code"]}</p>
 <h2>{n} safe won't open with the correct code?</h2>
 <p>{b["quirk"]} More causes: <a href="~/guides/safe-wont-open-correct-code/">safe won't open with the correct code</a>.</p>

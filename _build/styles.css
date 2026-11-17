@@ -387,7 +387,7 @@ a.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 /* ===== Phone-first fixes (29 Oct 2026): 44px tap targets, 15px+ text, call buttons right under the H1 ===== */
 .menu-btn { flex-shrink: 0; }
 .header-call { min-height: 44px; }
-.topbar .lang-switch { padding: 11px 10px; margin: -11px 0; }
+.topbar .lang-switch { padding: 11px 10px; margin: -11px 0; min-width: 44px; text-align: center; }
 .g-rating { min-height: 44px; }
 .prose .contact-big { margin-left: 0; }
 .hero-face { display: none; }
@@ -460,7 +460,7 @@ details.m-fold > summary::-webkit-details-marker { display: none; }
 .trust-face { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex-shrink: 0; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.18); display: block; }
 .hero-trust-txt { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; min-width: 0; }
 .trust-name { font-weight: 700; font-size: .95rem; color: var(--navy); }
-.hero-trust .g-rating { margin: 0; min-height: 40px; padding: 4px 12px 4px 10px; }
+.hero-trust .g-rating { margin: 0; min-height: 44px; padding: 4px 12px 4px 10px; }
 .hero-trust .meta-line { margin: 0; }
 @media (max-width: 639px) {
   .page-hero .container > .hero-trust { order: 3; }

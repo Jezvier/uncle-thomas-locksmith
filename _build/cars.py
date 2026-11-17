@@ -242,7 +242,7 @@ def build(x):
             desc = f"{n} locksmith in Singapore: car unlocking without damage and {n} key fob cloning, 24/7 islandwide. Call 9224 9224."
         faqs = b["faqs"] + [
             (f"My {n} key fob battery is dead. How do I start the car?", DEADFOB[n]["start"]),
-            (f"How much does it cost to unlock a {n}?", "Car lockouts start from {P_CAR}. We confirm the price before we set off."),
+            (f"How much does it cost to unlock {C.a_(n)}?", "Car lockouts start from {P_CAR}. We confirm the price before we set off."),
             (f"How much is a spare {n} key fob?", "It depends on the model and key type. WhatsApp {PHONE} the model, year and a photo of your key for a price."),
         ]
         jobs = getattr(C, "BRAND_JOBS", {}).get(n, [])
@@ -277,9 +277,13 @@ def build(x):
                "name": f"{n} car locksmith: unlocking and key fob cloning, Singapore", "serviceType": "Car locksmith",
                "description": desc, "provider": {"@id": x["BUSINESS_ID"]},
                "areaServed": {"@type": "Country", "name": "Singapore"}, "url": C.SITE + "/" + path,
-               "brand": {"@type": "Brand", "name": n},
-               "offers": {"@type": "Offer", "priceCurrency": "SGD",
-                          "priceSpecification": {"@type": "PriceSpecification", "minPrice": 100, "priceCurrency": "SGD"}}}
+               # "about", not "brand": Service.brand would claim a tie to the carmaker.
+               "about": {"@type": "Brand", "name": n},
+               # Two offers, matching the page: lockout from P_CAR, fob cloning S$100–S$1,000.
+               "offers": [{"@type": "Offer", "name": f"{n} car lockout (non-destructive)", "priceCurrency": "SGD",
+                           "priceSpecification": {"@type": "PriceSpecification", "minPrice": int(C.TOKENS["P_CAR"][2:]), "priceCurrency": "SGD"}},
+                          {"@type": "Offer", "name": f"{n} spare key fob cloning", "priceCurrency": "SGD",
+                           "priceSpecification": {"@type": "PriceSpecification", "minPrice": 100, "maxPrice": 1000, "priceCurrency": "SGD"}}]}
         nodes = x["page_schema"](path, title, desc, crumbs, faqs=faqs, extra=[svc])
         x["render"](path, title, desc, body, nodes, priority="0.7")
 

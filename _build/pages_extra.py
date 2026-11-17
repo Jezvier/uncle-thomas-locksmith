@@ -95,7 +95,7 @@ def _privacy(x):
 {analytics}
 
 <h2>Your rights</h2>
-<p>Under Singapore's Personal Data Protection Act (PDPA), you can ask what personal data we hold about you, ask us to correct it, or withdraw consent for how we use it. Email <a href="mailto:thomaslocksmith@hotmail.com">thomaslocksmith@hotmail.com</a> or call {C.PHONE}.</p>
+<p>Under Singapore's Personal Data Protection Act (PDPA), you can ask what personal data we hold about you, ask us to correct it, or withdraw consent for how we use it. Email <!--email_off--><a href="mailto:thomaslocksmith@hotmail.com">thomaslocksmith@hotmail.com</a><!--/email_off--> or call {C.PHONE}.</p>
 </div></section>''')
     nodes = x["page_schema"](path, title, desc, crumbs)
     x["render"](path, title, desc, body, nodes, priority="0.2")

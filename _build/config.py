@@ -263,6 +263,16 @@ LOWEST_PRICE = min(p[2] for p in PRICES if isinstance(p[2], int))
 PRICE_RANGE = f"From S${LOWEST_PRICE}"
 
 
+# Brand names said with a vowel sound take "an" ("an Audi", "an MG"). Eufy ("yoo-fee"),
+# Honda, Häfele and Honeywell keep "a".
+AN_BRANDS = {"Audi", "MG", "Aqara", "Ezviz", "Igloohome", "Eagle", "Uchida"}
+
+
+def a_(name):
+    """'a Yale' / 'an Audi': the right article before a brand name."""
+    return ("an " if name in AN_BRANDS else "a ") + name
+
+
 def price(path):
     """'from' price for a page path, e.g. price('car-locksmith/') -> 'S$100'; None if quoted."""
     for label, p, pr, note in PRICES:

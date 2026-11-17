@@ -119,7 +119,8 @@ def business_node(full=False):
     node.update({
         "description": C.DESCRIPTION,
         "foundingDate": str(C.FOUNDED),
-        "founder": {"@id": PERSON_ID},
+        # Named inline so the reference resolves on every page (full Person node lives on /about/).
+        "founder": {"@type": "Person", "@id": PERSON_ID, "name": "Uncle Thomas", "url": C.SITE + "/about/"},
         "sameAs": C.SAME_AS,
         "hasMap": C.GOOGLE_MAPS_URL,
         "contactPoint": {"@type": "ContactPoint", "telephone": C.PHONE_E164, "contactType": "customer service",
@@ -362,7 +363,12 @@ def page_hero(crumbs, h1, sub, badges=None, lang="en"):
 
 
 NAV = {"en": [("Services", "services/"), ("Prices", "prices/"), ("Areas", "areas/"), ("Guides", "guides/"), ("About", "about/"), ("Contact", "contact/")],
-       "zh": [("首页", "zh/"), ("紧急开锁", "zh/emergency-locksmith/"), ("价格", "prices/"), ("关于", "about/")]}
+       "zh": [("首页", "zh/"), ("紧急开锁", "zh/emergency-locksmith/"), ("价格", "zh/prices/"), ("关于", "about/")]}
+
+
+def loc(p, lang):
+    """On Chinese pages, link to the Chinese version of a page when one exists."""
+    return "zh/" + p if lang == "zh" and (p in zh.ZH_PAGES or p == "emergency-locksmith/") else p
 
 
 def header_html(path, lang="en", alt_path=None):
@@ -371,7 +377,7 @@ def header_html(path, lang="en", alt_path=None):
     for label, p in NAV[lang]:
         cur = ' aria-current="page"' if path == p or (path.startswith(p) and p not in ("", "zh/")) else ""
         nav.append(f'<a href="~/{p}"{cur}>{label}</a>')
-    svc = "".join(f'<li><a href="~/{s["path"]}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
+    svc = "".join(f'<li><a href="~/{loc(s["path"], lang)}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
     switch = f' · <a class="lang-switch" href="~/{alt_path}" hreflang="{"zh-SG" if lang == "en" else "en-SG"}">{t["other_lang"]}</a>' if alt_path is not None else ""
     home = "~/zh/" if lang == "zh" else "~/"
     zh_items = ('<li><a href="~/zh/">中文首页</a></li><li><a href="~/zh/emergency-locksmith/">紧急开锁</a></li>'
@@ -395,7 +401,7 @@ def header_html(path, lang="en", alt_path=None):
       <li><a href="~/">{"English home" if lang == "zh" else t["home"]}</a></li>{zh_items}
       <li class="sub">{t["services"]}</li>{svc}
       <li class="sub">{t["more"]}</li>
-      <li><a href="~/prices/">{t["prices"]}</a></li>
+      <li><a href="~/{loc("prices/", lang)}">{t["prices"]}</a></li>
       <li><a href="~/areas/">{t["areas"]}</a></li>
       <li><a href="~/guides/">{t["guides"]}</a></li>
       <li><a href="~/about/">{t["about"]}</a></li>
@@ -408,7 +414,7 @@ def header_html(path, lang="en", alt_path=None):
 
 def footer_html(lang="en"):
     t = T[lang]
-    svc = "".join(f'<li><a href="~/{s["path"]}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
+    svc = "".join(f'<li><a href="~/{loc(s["path"], lang)}">{zh.ZH_NAMES.get(s["path"], s["short"]) if lang == "zh" else s["short"]}</a></li>' for s in content.SERVICES)
     towns = "".join(f'<li><a href="~/areas/{a["slug"]}/">Locksmith {a["name"]}</a></li>' for a in areas.TOWNS[:8])
     gd = "".join(f'<li><a href="~/guides/{g["slug"]}/">{g["short"]}</a></li>' for g in guides.GUIDES[:6])
     email = (f'<li><span class="lbl">{t["email"]}:</span> <a href="mailto:{C.EMAIL}">{C.EMAIL}</a></li>'
@@ -428,7 +434,7 @@ def footer_html(lang="en"):
         <li><a href="{C.GOOGLE_REVIEW_URL}" target="_blank" rel="noopener">{"给我们留下 Google 评价" if lang == "zh" else "Leave us a Google review"}</a></li>
       </ul>
     </div>
-    <details class="m-fold fgroup" open><summary><h2>{t["f_services"]}</h2></summary><ul>{svc}<li><a href="~/hdb-gate-lock-replacement/">{"组屋铁门锁（英文）" if lang == "zh" else "HDB gate locks"}</a></li><li><a href="~/hdb-gate-digital-lock/">{"组屋铁门电子锁（英文）" if lang == "zh" else "Digital lock for HDB gate"}</a></li><li><a href="~/prices/">Prices</a></li></ul></details>
+    <details class="m-fold fgroup" open><summary><h2>{t["f_services"]}</h2></summary><ul>{svc}<li><a href="~/hdb-main-door-lock-replacement/">{"组屋大门锁（英文）" if lang == "zh" else "HDB main door locks"}</a></li><li><a href="~/hdb-gate-lock-replacement/">{"组屋铁门锁（英文）" if lang == "zh" else "HDB gate locks"}</a></li><li><a href="~/hdb-gate-digital-lock/">{"组屋铁门电子锁（英文）" if lang == "zh" else "Digital lock for HDB gate"}</a></li><li><a href="~/{loc("prices/", lang)}">{t["prices"]}</a></li></ul></details>
     <details class="m-fold fgroup" open><summary><h2>{t["f_areas"]}</h2></summary><ul>{towns}<li><a href="~/areas/">{t["all_areas"]}</a></li></ul></details>
     <details class="m-fold fgroup" open><summary><h2>{t["f_guides"]}</h2></summary><ul>{gd}<li><a href="~/guides/">All guides →</a></li><li><a href="~/about/">About Uncle Thomas</a></li><li><a href="~/contact/">Contact</a></li><li><a href="~/privacy/">Privacy</a></li><li><a href="~/zh/" hreflang="zh-SG">中文</a></li></ul></details>
   </div>
@@ -550,6 +556,8 @@ def page_schema(path, title, desc, crumbs, extra=None, faqs=None, page_type="Web
     bc = breadcrumb_node(crumbs); bc["@id"] = abs_url(path) + "#breadcrumb"
     nodes.append(bc)
     nodes.append(business_node())
+    if path:  # the homepage carries the full WebSite node; other pages name it so isPartOf resolves
+        nodes.append({"@type": "WebSite", "@id": C.SITE + "/#website", "url": C.SITE + "/", "name": C.NAME})
     if faqs:
         nodes.append(faq_node(faqs))
     if extra:

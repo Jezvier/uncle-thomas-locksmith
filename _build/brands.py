@@ -193,8 +193,8 @@ DATA = {
  reset="The S-6800 reset must be done in safety mode with the batteries partly removed and the manager code, and it deletes every code, card and fingerprint. Follow the manual exactly, from inside.",
  lockout="On the S-6800, three wrong PINs suspend the lock and sound a loud alarm for 3 minutes. Pressing the manual lock button inside stops the alarm.",
  quirk="The S-6800 has a privacy switch on the inside unit (red is on, green is off). With privacy on, the door won't open from outside even with a valid PIN or card, though the mechanical key still works.",
- sources=[("Schlage S-6800 manual (Allegion Singapore)", "https://dev-cs-allegion-comsg.allegion.com/content/dam/allegion-singapore/schlage-landing-page-and-products/brochures-and-instructions/S-6800_manual_English_Jun17.pdf"),
-          ("Schlage Asia FAQ", "https://dev-cs-schlagelocks-asia.allegion.com/en/help-centre/faq.html")],
+ sources=[("Schlage S-6800 manual (Allegion Singapore)", "https://allegion.com.sg/content/dam/allegion-singapore/schlage-landing-page-and-products/brochures-and-instructions/S-6800_manual_English_Jun17.pdf"),
+          ("Schlage Asia FAQ", "https://schlage-locks.asia/en/help-centre/faq.html")],
  faqs=[("How do I open a Schlage digital lock with a dead battery?", "On the S-6800, open the cover under the front handle and touch a 9V battery to the terminals, then use your PIN, card or fingerprint. The override key slot is behind the same cover."),
        ("Why is my Schlage lock alarming after wrong codes?", "On the S-6800, three wrong PINs trigger a 3-minute alarm and lockout. Press the manual lock button inside to stop it, or wait it out."),
        ("What batteries does a Schlage S-6800 take?", "Eight AA alkaline batteries. Schlage advises against rechargeables.")]),
@@ -363,10 +363,15 @@ EM = {
  "Schlage": "open the cover under the front handle and touch a 9V battery to the terminals",
  "Eufy": "plug a power bank into the charging port on the bottom of the lock",
  "Tapo": "power it from a power bank through the USB-C port outside",
- "Prism+": "use the physical key, then recharge the battery over USB-C",
+ "Prism+": "use the physical key",
  "Ezviz": "plug a power bank into the USB-C emergency port",
  "Lockly": "hold a 9V battery to the backup contacts at the bottom of the outside unit",
  "Yew": "plug a power bank into the USB-C emergency port",
+}
+
+# What to do once inside, when it isn't "replace the batteries" (rechargeable locks).
+AFTER_FLAT = {
+ "Prism+": "Then recharge the lock's built-in battery over USB-C.",
 }
 
 
@@ -405,8 +410,8 @@ def build(x):
         path = f"digital-lock-opening/{b['slug']}/"
         crumbs = [("Home", ""), ("Services", "services/"), ("Digital lock opening", "digital-lock-opening/"), (n, path)]
         faqs = b["faqs"] + [
-            (f"How do I change the password on a {n} {k}?", _strip(b["pin"])),
-            (f"How much does it cost to open a {n} {k}?", "It depends on the model and what's wrong. We confirm the price before we come: WhatsApp a photo of the lock (front and inside if possible) to {PHONE}."),
+            (f"How do I change the password on {C.a_(n)} {k}?", _strip(b["pin"])),
+            (f"How much does it cost to open {C.a_(n)} {k}?", "Digital lock emergency opening is from {P_DIGITAL_OPEN}; the exact price depends on the model and what's wrong. We confirm it before we come: WhatsApp a photo of the lock (front and inside if possible) to {PHONE}."),
             (f"Do you repair {n} {k}s?", f"No, we don't do repairs. We open the lock, and if it's faulty we can replace it. For warranty repairs, contact {n} or your retailer."),
         ]
         jobs = getattr(C_, "BRAND_JOBS", {}).get(n, [])
@@ -422,7 +427,7 @@ def build(x):
                    ". Checked October 2026. Features vary by model: always check your lock's own manual.</p>")
         e = EM.get(n, "use your lock's emergency power point")
         table = f'''<table class="price-table info-table"><thead><tr><th scope="col">Your {n} lock</th><th scope="col">Likely cause</th><th scope="col">What to do</th></tr></thead><tbody>
-<tr><td>Keypad completely dark</td><td>Batteries flat</td><td>From outside, {e}. Then replace the batteries from inside.</td></tr>
+<tr><td>Keypad completely dark</td><td>Batteries flat</td><td>From outside, {e}. {AFTER_FLAT.get(n, "Then replace the batteries from inside.")}</td></tr>
 <tr><td>Accepts the code but the latch won't turn</td><td>Weak batteries, or a mechanical fault in the lock body</td><td>Try emergency power once. Don't force the handle: that's how lock bodies break.</td></tr>
 <tr><td>Refuses a code you know is right</td><td>Privacy mode set from inside, or the wrong-code lockout</td><td>{_first(b["lockout"])}</td></tr>
 <tr><td>App shows offline or can't connect</td><td>Wi-Fi, hub or Bluetooth</td><td>Use the keypad or fingerprint at the door: the {n} lock works without the app.</td></tr>
@@ -440,9 +445,9 @@ def build(x):
 <p>{b["key"]}</p>
 <h2>{n} {k} battery replacement</h2>
 <p>{b["battery"]}</p>
-<h2>How to change the password on a {n} {k}</h2>
+<h2>How to change the password on {C.a_(n)} {k}</h2>
 <p>{b["pin"]}</p>
-<h2>How to reset a {n} {k}</h2>
+<h2>How to reset {C.a_(n)} {k}</h2>
 <p>{b["reset"]}</p>
 <p>{b["lockout"]}</p>
 <h2>{n} {k} not working? Common problems</h2>

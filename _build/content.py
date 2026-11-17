@@ -63,7 +63,7 @@ dict(
  faqs=[
   ("How fast can an emergency locksmith reach me?", "We set off as soon as you call, 24/7, and usually arrive within 25–30 minutes. Far areas and heavy traffic can take longer, and we'll give you an honest estimate on the phone."),
   ("Will you damage my door?", "We use damage-free methods wherever possible, and most lockouts are opened without any damage. If a lock can't be opened cleanly, we explain the options and price before doing anything."),
-  ("What do I need to show before you open the door?", "Proof that you live there — for example your NRIC with the address, a tenancy agreement or a utility bill. This protects you and your home."),
+  ("What do I need to show before you open the door?", "Proof that you live there — for example your NRIC with the address, a tenancy agreement or a utility bill. If your ID is locked inside, tell us when you call: we open the door and check it with you in person before we leave. This protects you and your home."),
   ("Do you charge more at night?", "Lockouts start from {P_LOCKOUT} from 9am to 6pm and from {P_AFTERHOURS} after hours, weekends and public holidays. You'll always know the price before we start."),
   ("Do you open locks for tenants?", "Yes — as long as you can show you live there, for example with a tenancy agreement or a letter with your name and the address."),
  ],
@@ -103,7 +103,7 @@ dict(
 <div class="callout"><p>{NO_REPAIR} Searching for <strong>digital lock repair</strong>? Read <a href="~/guides/digital-lock-repair/">fix, replace or just get in</a> first.</p></div>
 
 <h2>What it costs</h2>
-<p>The price depends on the brand, model and fault. WhatsApp a photo of the lock (front and inside if possible) to {PHONE} and we'll give you a firm price before we come. See all <a href="~/prices/">prices</a>.</p>
+<p>Digital lock emergency opening is from {P_DIGITAL_OPEN}. The exact price depends on the brand, model and fault: WhatsApp a photo of the lock (front and inside if possible) to {PHONE} and we'll give you a firm price before we come. See all <a href="~/prices/">prices</a>.</p>
 
 <div class="callout"><p><strong>Security first:</strong> {ID_POLICY}</p></div>
 """,
@@ -159,7 +159,7 @@ dict(
 <div class="callout navy"><p><strong>Our warranty:</strong> {WARRANTY}</p></div>
 
 <h2>Price</h2>
-<p>The total depends on the door, whether old locks need removing, and whether you supply the lock. See the full <a href="~/prices/">price list</a>.</p>
+<p>Installation labour is from {P_DIGITAL_INSTALL}. The total depends on the door, whether old locks need removing, and whether you supply the lock. See the full <a href="~/prices/">price list</a>.</p>
 <p>Choosing a lock for your gate? Read <a href="~/guides/smart-lock-for-hdb-gate/">choosing a digital or smart lock for your HDB gate</a>. Locked out of a digital lock right now? Go to <a href="~/digital-lock-opening/">digital lock opening</a>.</p>
 """,
  faqs=[
@@ -320,14 +320,14 @@ dict(
 <div class="callout"><p><strong>Proof of ownership:</strong> Before unlocking a car or cloning a key, we check that the car is yours, for example your NRIC against the vehicle log card, or a rental or company car agreement.</p></div>
 
 <h2>Price</h2>
-<p>Car lockouts and key fob cloning are quoted per car, because it depends on the make, model and key type. WhatsApp {PHONE} your location, car model and a photo of the key, and we'll confirm the price before we set off. See all <a href="~/prices/">prices</a>.</p>
+<p>Car lockouts are from {P_CAR}. Spare key fob cloning is {P_FOB}, depending on the make, model and key type. WhatsApp {PHONE} your location, car model and a photo of the key, and we'll confirm the exact price before we set off. See all <a href="~/prices/">prices</a>.</p>
 """,
  faqs=[
   ("Can you open my car without damaging it?", "Yes. We use non-destructive car entry tools that don't damage the paint, seals or windows."),
   ("Which cars can you open?", "All major makes and models, including Toyota, Honda, Mercedes-Benz, BMW, Audi, Volkswagen, Mazda, Lexus, Land Rover, Hyundai, Kia, Nissan, Porsche, Volvo, Mitsubishi and Subaru, plus vans and light commercial vehicles. Not sure about yours? Call or WhatsApp to check."),
   ("Can you make a spare car key fob?", "Yes, for remote key fobs on all major brands. We don't clone smart (keyless) keys. It costs S$100–S$1,000 depending on the car; send us the make, model, year and a photo of the key for a quote."),
   ("Do you cut house keys too?", "No. Car key fobs are the only keys we copy. We don't do house key cutting or duplication."),
-  ("How much is a car lockout?", "From {P_CAR}. Key fob cloning is quoted per car. We'll confirm the price before we set off."),
+  ("How much is a car lockout?", "From {P_CAR}. Spare key fob cloning is {P_FOB}, depending on the car. We'll confirm the price before we set off."),
  ],
 ),
 # ----------------------------------------------------------------------

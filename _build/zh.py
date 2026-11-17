@@ -205,9 +205,9 @@ def build(x):
             band(lang="zh"))
     svc = {"@type": "Service", "@id": C.SITE + "/" + path + "#service", "name": "紧急开锁 — 新加坡",
            "serviceType": "Emergency locksmith", "description": desc, "provider": {"@id": x["BUSINESS_ID"]},
-           "areaServed": {"@type": "Country", "name": "Singapore"}, "url": C.SITE + "/" + path, "inLanguage": "zh-SG",
+           "areaServed": {"@type": "Country", "name": "Singapore"}, "url": C.SITE + "/" + path,
            "offers": {"@type": "Offer", "priceCurrency": "SGD",
-                      "priceSpecification": {"@type": "PriceSpecification", "minPrice": 80, "priceCurrency": "SGD"}}}
+                      "priceSpecification": {"@type": "PriceSpecification", "minPrice": 70, "priceCurrency": "SGD"}}}
     nodes = x["page_schema"](path, title, desc, crumbs, faqs=EMERGENCY_FAQS, extra=[svc], lang="zh-SG")
     x["render"](path, title, desc, body, nodes, priority="0.7", lang="zh",
                 alternates={"en-SG": "emergency-locksmith/", "zh-SG": path})
@@ -407,7 +407,7 @@ def build_more(x):
                 x["cta_band"](lang="zh"))
         svc = {"@type": "Service", "@id": C.SITE + "/" + path + "#service", "name": d["h1"],
                "serviceType": d["svc"], "description": d["desc"], "provider": {"@id": x["BUSINESS_ID"]},
-               "areaServed": {"@type": "Country", "name": "Singapore"}, "url": C.SITE + "/" + path, "inLanguage": "zh-SG"}
+               "areaServed": {"@type": "Country", "name": "Singapore"}, "url": C.SITE + "/" + path}
         if d["minp"]:
             svc["offers"] = {"@type": "Offer", "priceCurrency": "SGD",
                              "priceSpecification": {"@type": "PriceSpecification", "minPrice": d["minp"], "priceCurrency": "SGD"}}

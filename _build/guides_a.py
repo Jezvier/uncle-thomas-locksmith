@@ -346,7 +346,7 @@ dict(
 <li><strong>Everyone safe, just locked out</strong> → a locksmith.</li>
 <li><strong>Unsure about someone's safety</strong> → 995 first, locksmith second.</li>
 </ul>
-<p>Related: <a href="~/guides/locked-out-of-hdb-flat/">locked out of your HDB flat — what to do</a>.</p>
+<p>Related: <a href="~/guides/locked-out-of-hdb-flat/">locked out of your HDB flat — what to do</a> · <a href="~/emergency-locksmith/">24/7 emergency lockout service</a>.</p>
 
 <div class="callout navy"><p><strong>Everyone safe, but locked out?</strong> Call or WhatsApp Uncle Thomas on {PHONE} — 24/7, islandwide.</p></div>
 """,
