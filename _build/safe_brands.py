@@ -292,7 +292,7 @@ def build(x):
 <p>This is the kind of {n} call we often get: {SCENARIO.get(n, "")}</p>
 {pic}{recent}
 <h2>When to call a safe locksmith</h2>
-<p>Call or WhatsApp {{PHONE}}, 24/7: safe opening from {{P_SAFE}}, priced from photos of the front and brand label, ownership checked first. More: <a href="~/safe-opening/">safe opening</a> · <a href="~/safe-combination-change/">lock replacement</a> · <a href="~/guides/safe-drilling-explained/">drilling explained</a>. Not affiliated with {n}.</p>
+<p>Call or WhatsApp {{PHONE}}, 24/7: safe opening from {{P_SAFE}}, priced from photos of the front and brand label, ownership checked first. More: <a href="~/safe-opening/">safe opening</a> · <a href="~/safe-combination-change/">lock replacement</a> · <a href="~/safe-installation/">safe installation</a> · <a href="~/guides/safe-drilling-explained/">drilling explained</a>. Not affiliated with {n}.</p>
 {src}
 <p>Other safe brands: {others} · <a href="~/safe-opening/#brands">all safe brands</a></p>
 </div></section>

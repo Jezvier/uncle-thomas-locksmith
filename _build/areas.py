@@ -930,7 +930,7 @@ def build(x):
         near = [TOWN_BY_SLUG[s] for s in t["nearby"] if s in TOWN_BY_SLUG]
         near_html = " and ".join(f'<a href="~/areas/{m["slug"]}/">{m["name"]}</a>' for m in near)
         faqs = list(t["faqs"]) + ([EXTRA_FAQS[t["slug"]]] if t["slug"] in EXTRA_FAQS else []) + [
-            (f"How much does a locksmith in {n} cost?", "The same as anywhere in Singapore: it depends on the lock and the time of day, and we confirm the price before we start. See our <a href=\"~/prices/\">price list</a>."),
+            (f"How much does a locksmith in {n} cost?", "The same as anywhere in Singapore: lockouts start from {P_LOCKOUT} (9am–6pm) and {P_AFTERHOURS} after hours, weekends and public holidays, and we confirm the price before we start. See our <a href=\"~/prices/\">price list</a>."),
         ]
         body = (x["page_hero"](crumbs, t.get("h1") or f"Locksmith in {n} — 24/7 Emergency Service",
                 f"Locked out in {n}? {t['intro']}", ["24/7 incl. public holidays", "Since 1998", "We check ID before opening"]) +

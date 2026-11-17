@@ -123,7 +123,8 @@ EXTRA = {
  ], sources=[
   ("BYD Atto 3 owner's manual (byd.com)", "https://www.byd.com/material/BYD%20ATTO3%202022%20Owner's%20Manual-20251004-EN.pdf"),
   ("BYD Atto 3 owner's handbook 2025 (BYD Australia)", "https://bydautomotive.com.au/brochures/BYD-ATTO-3-Owners-Handbook-2025.pdf"),
-  ("BYD digital key (byd.com)", "https://www.byd.com/eu/ownership/byd-digital-key")]),
+  ("BYD digital key (byd.com)", "https://www.byd.com/eu/ownership/byd-digital-key"),
+  ("LTA data: monthly new registration of cars by make (data.gov.sg)", "https://data.gov.sg/datasets/d_d3f4d708e1d0a37b4365414e2fad3a07/view")]),
 "MG": dict(sections=[
  ("MG4 and ZS EV: the backup key and the cup-holder start",
   "<p>MG's manuals are clear about the mechanical key: <strong>each smart key holds one, it opens the driver's door, and it can't "

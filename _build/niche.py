@@ -181,8 +181,8 @@ dict(
 ]
 
 RELATED = {
+ "commercial-locksmith/": ["roller-shutter-lock/", "glass-door-lock/", "cabinet-lock/", "padlock-cutting/", "commercial-safe-services/", "hotel-safe-opening/"],
  "hdb-main-door-lock-replacement/": ["hdb-gate-lock-replacement/", "lock-replacement/", "digital-lock-installation/", "emergency-locksmith/", "letterbox-lock-replacement/", "digital-lock-opening/"],
- "hdb-gate-lock-replacement/": ["hdb-main-door-lock-replacement/", "lock-replacement/", "digital-lock-installation/", "emergency-locksmith/", "letterbox-lock-replacement/", "digital-lock-opening/"],
  "car-key-duplicate/": ["car-locksmith/", "emergency-locksmith/", "lock-replacement/", "digital-lock-opening/", "safe-opening/", "commercial-locksmith/"],
 }
 
@@ -402,10 +402,10 @@ dict(
 
 RELATED.update({
  "broken-key-extraction/": ["emergency-locksmith/", "lock-replacement/", "hdb-gate-lock-replacement/", "padlock-cutting/", "cabinet-lock/", "letterbox-lock-replacement/"],
- "padlock-cutting/": ["hdb-gate-lock-replacement/", "roller-shutter-lock/", "broken-key-extraction/", "lock-replacement/", "commercial-locksmith/", "emergency-locksmith/"],
+ "padlock-cutting/": ["hdb-gate-lock-replacement/", "roller-shutter-lock/", "broken-key-extraction/", "cabinet-lock/", "glass-door-lock/", "commercial-locksmith/"],
  "roller-shutter-lock/": ["commercial-locksmith/", "padlock-cutting/", "broken-key-extraction/", "glass-door-lock/", "commercial-safe-services/", "cabinet-lock/"],
- "glass-door-lock/": ["commercial-locksmith/", "roller-shutter-lock/", "lock-replacement/", "cabinet-lock/", "emergency-locksmith/", "digital-lock-installation/"],
- "cabinet-lock/": ["commercial-locksmith/", "broken-key-extraction/", "safe-opening/", "glass-door-lock/", "lock-replacement/", "padlock-cutting/"],
+ "glass-door-lock/": ["commercial-locksmith/", "roller-shutter-lock/", "cabinet-lock/", "padlock-cutting/", "lock-replacement/", "digital-lock-installation/"],
+ "cabinet-lock/": ["commercial-locksmith/", "broken-key-extraction/", "safe-installation/", "glass-door-lock/", "roller-shutter-lock/", "padlock-cutting/"],
 })
 
 # ----------------------------------------------------------------------
@@ -490,5 +490,5 @@ dict(
 
 RELATED.update({
  "hdb-gate-digital-lock/": ["hdb-gate-lock-replacement/", "digital-lock-installation/", "digital-lock-opening/", "hdb-main-door-lock-replacement/", "lock-replacement/", "emergency-locksmith/"],
- "hdb-gate-lock-replacement/": ["hdb-gate-digital-lock/", "hdb-main-door-lock-replacement/", "lock-replacement/", "digital-lock-installation/", "emergency-locksmith/", "digital-lock-opening/"],
+ "hdb-gate-lock-replacement/": ["hdb-gate-digital-lock/", "hdb-main-door-lock-replacement/", "lock-replacement/", "digital-lock-installation/", "padlock-cutting/", "digital-lock-opening/"],
 })

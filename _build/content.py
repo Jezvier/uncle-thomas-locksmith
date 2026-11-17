@@ -861,7 +861,7 @@ def build_prices(x):
 <h2>How to get an exact price in one minute</h2>
 <p>WhatsApp a photo of the lock (outside and inside if possible) and your location to <a href="{C_.WA_LINK}" target="_blank" rel="noopener">{C_.PHONE}</a>. We'll reply with a firm price — before anyone sets off.</p>
 <h2>How to avoid being overcharged by a locksmith</h2>
-<p>Most complaints about locksmiths in Singapore are about prices that change once the locksmith arrives. Always ask for the total price before work starts, and be careful of very low "from" prices in adverts. Read our guide: <a href="~/guides/how-to-choose-a-locksmith/">how to choose a locksmith in Singapore and avoid overcharging</a>.</p>
+<p>A common complaint about locksmiths is a price that changes once the locksmith arrives. Always ask for the total price before work starts, and be careful of very low "from" prices in adverts. Read our guide: <a href="~/guides/how-to-choose-a-locksmith/">how to choose a locksmith in Singapore and avoid overcharging</a>.</p>
 <div class="callout navy"><p><strong>Our promise:</strong> the price we agree is the price you pay. {WARRANTY}</p></div>
 </div></div></section>
 <section class="section section-alt"><div class="container narrow">{x["faq_html"](faqs, "Price Questions")}</div></section>''' +
