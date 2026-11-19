@@ -175,10 +175,10 @@ dict(
 dict(
  path="safe-opening/", short="Safe opening", icon="safe",
  card="Forgotten combination or faulty safe? Opened by a US-trained safesmith who has worked on ships and across Asia.",
- title="Safe Locksmith Singapore | Safe Box Opening From S$120",
- title_exp="Safe Locksmith Singapore | Safe Box Opening by a Safesmith",
+ title="Safe Opening Singapore | Safe Locksmith From S$120",
+ title_exp="Safe Opening Singapore | Safe Box Locksmith, Safesmith",
  desc="Safe box forgot password, battery dead or lost key? A US-trained safesmith opens all safe types in Singapore from S$120, homes and businesses, 24/7.",
- h1="Safe Locksmith Singapore: Safe and Safe Box Opening, 24/7",
+ h1="Safe Opening Singapore: Safe Locksmith for Safes and Safe Boxes, 24/7",
  sub="Forgotten combination, lost key, dead keypad or a jammed bolt. Uncle Thomas trained in safe opening in the USA (ALOA and SAVTA) and opens every type of safe, for homes, offices, pawnshops, banks and government agencies.",
  badges=["US-trained (ALOA & SAVTA)", "All safe types", "Discreet, 24/7"],
  body="""
