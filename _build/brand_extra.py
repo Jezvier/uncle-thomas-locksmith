@@ -206,15 +206,17 @@ EXTRA = {
  ], sources=[("Škoda Octavia manual: changing the remote battery", "https://www.manualslib.com/manual/1259664/Skoda-Octavia.html?page=301")]),
 "Subaru": dict(sections=[
  ("Subaru key battery",
-  "<p>Forester keys of the 2014 to 2018 generation take a <strong>CR2032</strong>, but other Subaru keys use a CR2025 or CR1620, so read "
-  "the old cell first. On most recent Subaru keys, hold the release on the back and pull out the emergency key; that opens a gap where the "
-  "case splits. Subaru dealers suggest wrapping the screwdriver tip in tape so you don't crack the plastic.</p>"
+  "<p>Subaru keys don't all take the same cell. Subaru's 2010 Forester manual specifies a <strong>CR2025</strong> for that remote, and "
+  "other keys use different cells, so read the old one and fit the same type: the manual warns that the wrong battery is an explosion risk. "
+  "Open the case with a small flat-head screwdriver, keep dust, oil and water out, and don't damage the circuit board.</p>"
+  "<p>The early sign of a weak cell is range: you have to stand closer before the remote works. On remotes like the 2010 Forester's, "
+  "press the lock or unlock button six times after the swap so the remote re-syncs with the car.</p>"
   "<p>New cell and it still won't work? After a Singapore downpour, water damage is the usual suspect, and a soaked key can fail for good. "
   "That's when a cloned spare earns its keep.</p>"),
  ("A Subaru habit worth building",
   "<p>Many Forester, XV and WRX owners have Keyless Access with push-button start, so the key rarely leaves a pocket or bag. Keep it in the "
   "same pocket every time, and never put it down in the boot or on a seat while loading: that's how most Subaru lockouts start.</p>"),
- ], sources=[("Subaru dealer guide: changing the key battery", "https://www.subarusouthtampa.com/service/service-and-parts-tips/how-to-change-battery-subaru-key-fob/")]),
+ ], sources=[("Subaru Canada: 2010 Forester owner's manual (Keys and doors: replacing the battery)", "https://www.subaru.ca/content/7907/Media/General/download/Manuals/English/MSA5M1003A_Forester_OM.pdf")]),
 "Porsche": dict(sections=[
  ("Porsche key battery: CR2032",
   "<p>The car-shaped Porsche key used on the Macan, Cayenne, Panamera and 911 takes a single <strong>CR2032</strong>. Turn the key over, "
